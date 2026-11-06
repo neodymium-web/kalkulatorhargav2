@@ -1,3 +1,4 @@
+import styles from '../ui/layout.module.css'
 import type { CalculatorViewProps } from './views'
 
 export function HppMethodology({ formulaVersion }: CalculatorViewProps) {
@@ -15,6 +16,6 @@ export function HppMethodology({ formulaVersion }: CalculatorViewProps) {
     <h3>Apakah hasil ini sama dengan harga pokok penjualan?</h3>
     <p>Hasil menunjukkan biaya unit yang diproduksi. Harga pokok penjualan juga memperhitungkan
       persediaan awal dan akhir untuk menentukan biaya barang yang terjual.</p>
-    <p className="version">Versi rumus {formulaVersion}</p>
+    <p className={styles.version}>Versi rumus {formulaVersion}</p>
   </>
 }

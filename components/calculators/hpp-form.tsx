@@ -1,40 +1,41 @@
 'use client'
 
-import { useState, type FormEvent } from 'react'
+import { useId, useState, type FormEvent } from 'react'
 import { calculateHpp, costs } from '../../lib/hpp'
+import { CalculatorForm, ResultPanel } from '../ui/calculator'
+import { Input } from '../ui/controls'
+import styles from '../ui/calculator.module.css'
 
 const currency = new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', maximumFractionDigits: 0 })
 const fields = [...costs, ['units', 'Jumlah unit']] as const
 
 export function HppForm() {
+  const id = useId()
+  const hintId = `${id}-hint`
   const [result, setResult] = useState<ReturnType<typeof calculateHpp>>()
+  const errors = result?.success === false ? result.errors : undefined
+  const invalidFields = errors ? fields.flatMap(([name, label]) =>
+    errors[name]?.length ? [{ id: `${id}-${name}`, label }] : [],
+  ) : undefined
+
   function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
     setResult(calculateHpp(Object.fromEntries(new FormData(event.currentTarget))))
   }
-  return <div className="calculator">
-    <form className="entry" onSubmit={submit} onChange={() => setResult(undefined)}>
-      <h2>Biaya satu kali produksi</h2>
-      <p id="input-hint">Masukkan rupiah bulat tanpa titik atau koma. Isi 0 jika biaya tidak ada.</p>
-      {fields.map(([name, label]) => {
-        const error = result?.success === false ? result.errors[name]?.[0] : undefined
-        return <div className="field" key={name}>
-          <label htmlFor={name}>{label}{name !== 'units' && ' (Rp)'}</label>
-          <input id={name} name={name} inputMode="numeric" aria-invalid={Boolean(error)}
-            aria-describedby={error ? `${name}-error` : name === 'units' ? undefined : 'input-hint'} />
-          {error && <p className="error" id={`${name}-error`}>{error}</p>}
-        </div>
-      })}
-      <button type="submit">Hitung HPP</button>
-    </form>
-    <section className="result" aria-labelledby="result-title">
-      <h2 id="result-title">Hasil perhitungan</h2>
-      <div aria-live="polite">
-        {result?.success ? <dl>
-          <dt>HPP per unit</dt><dd>{currency.format(result.perUnit)}</dd>
-          <dt>Total biaya produksi</dt><dd>{currency.format(result.total)}</dd>
-        </dl> : <p>{result ? 'Periksa kolom yang ditandai.' : 'Isi biaya dan jumlah unit untuk melihat hasil.'}</p>}
-      </div>
-    </section>
+
+  return <div className={styles.grid}>
+    <CalculatorForm title="Biaya satu kali produksi"
+      hint="Masukkan rupiah bulat tanpa titik atau koma. Isi 0 jika biaya tidak ada."
+      hintId={hintId} submitLabel="Hitung HPP" invalidFields={invalidFields}
+      onSubmit={submit} onChange={() => setResult(undefined)}>
+      {fields.map(([name, label]) => <Input key={name} id={`${id}-${name}`} name={name}
+        label={name === 'units' ? label : `${label} (Rp)`} inputMode="numeric"
+        aria-describedby={name === 'units' ? undefined : hintId} error={errors?.[name]?.[0]} />)}
+    </CalculatorForm>
+    {result?.success ? <ResultPanel
+      result={{ label: 'HPP per unit', value: currency.format(result.perUnit) }}
+      details={[{ label: 'Total biaya produksi', value: currency.format(result.total) }]}
+      assumptions="Perhitungan memakai satu batch dengan unit sejenis. HPP per unit dibulatkan ke rupiah terdekat."
+    /> : <ResultPanel message={result ? 'Periksa kolom yang ditandai.' : 'Isi biaya dan jumlah unit untuk melihat hasil.'} />}
   </div>
 }

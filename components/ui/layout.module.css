@@ -1,0 +1,13 @@
+.container {
+  width: min(calc(100% - var(--gutter) * 2), var(--container-max));
+  margin-inline: auto;
+}
+
+.page { padding-block: var(--space-8); }
+.intro { margin-top: var(--space-3); max-width: var(--measure-prose); color: var(--text-secondary); }
+.section { margin-top: var(--space-8); }
+
+.methodology { max-width: var(--measure-prose); margin-block: var(--space-8); }
+.methodology p { margin-top: var(--space-2); }
+.methodology h3 { margin-top: var(--space-5); }
+.version { color: var(--text-secondary); font: var(--text-small) var(--font-ui); }

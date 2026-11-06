@@ -1,0 +1,43 @@
+.button, .input {
+  font: inherit;
+  border-radius: var(--radius-control);
+  min-height: var(--control-size);
+}
+
+.button {
+  padding: var(--space-2) var(--space-4);
+  font-weight: var(--weight-label);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background-color var(--motion-fast) var(--motion-ease);
+}
+
+.primary { color: var(--text-on-action); background: var(--action-primary); }
+.primary:hover { background: var(--action-hover); }
+.primary:active { background: var(--action-active); }
+.secondary { color: var(--action-hover); background: var(--surface-page); border-color: var(--border-control); }
+.text { color: var(--action-hover); background: transparent; text-decoration: underline; }
+.secondary:hover, .text:hover { background: var(--surface-subtle); }
+.secondary:active, .text:active { background: var(--surface-disabled); }
+.button:disabled { color: var(--text-secondary); background: var(--surface-disabled); cursor: default; }
+
+.label { display: block; margin-bottom: var(--space-1); font-weight: var(--weight-label); }
+.input {
+  width: 100%;
+  min-width: 0;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--border-control);
+  background: var(--surface-page);
+  color: var(--text-primary);
+}
+.input::placeholder { color: var(--text-secondary); opacity: 1; }
+.input[aria-invalid=true] { border-color: var(--text-error); }
+.input:disabled { background: var(--surface-disabled); color: var(--text-secondary); }
+.hint, .error { margin-top: var(--space-2); font: var(--text-small) var(--font-ui); }
+.hint { color: var(--text-secondary); }
+.error {
+  color: var(--text-error);
+  background: var(--surface-error);
+  padding: var(--space-2);
+  border-radius: var(--radius-control);
+}
