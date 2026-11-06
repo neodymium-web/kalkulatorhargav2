@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="id">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Preview sistem desain KalkulatorHarga</title>
+<style>
+:root {
+  --surface-page: #fff;
+  --surface-subtle: #f8fafc;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --border-subtle: #e2e8f0;
+  --border-control: #64748b;
+  --action-primary: #2563eb;
+  --action-hover: #1d4ed8;
+  --action-active: #1e40af;
+  --text-on-action: #fff;
+  --focus-ring: #2563eb;
+  --focus-offset: 3px;
+  --text-error: #991b1b;
+  --surface-error: #fef2f2;
+  --text-success: #166534;
+  --surface-success: #f0fdf4;
+  --surface-disabled: #f1f5f9;
+  --font-ui: system-ui, sans-serif;
+  --text-small: 0.875rem/1.5;
+  --text-body: 1rem/1.5;
+  --text-section: 1.25rem/1.3;
+  --text-title: clamp(1.875rem, 4vw, 3rem);
+  --text-result: clamp(1.5rem, 3.5vw, 2.5rem);
+  --space-1: .25rem;
+  --space-2: .5rem;
+  --space-3: .75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --radius-control: .5rem;
+  --radius-panel: .75rem;
+  --target-min: 2.75rem;
+  --control-size: 3rem;
+  --container-max: 75rem;
+  --measure-prose: 65ch;
+  --motion-fast: 120ms;
+  --motion-ease: ease-out;
+  --gutter: clamp(var(--space-3), calc(7.2727vw - .7045rem), var(--space-4));
+  --listing-columns: 1;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0; background: var(--surface-page); color: var(--text-primary); font: var(--text-body) var(--font-ui); }
+h1, h2, p, dl, dd { margin: 0; }
+h1 { font-size: var(--text-title); line-height: 1.1; font-weight: 750; letter-spacing: -.04em; }
+h2 { font: 650 var(--text-section) var(--font-ui); }
+a { color: var(--action-primary); text-underline-offset: .2em; }
+:focus-visible { outline: 3px solid var(--focus-ring); outline-offset: var(--focus-offset); }
+.wrap { width: min(calc(100% - var(--gutter) * 2), var(--container-max)); margin-inline: auto; }
+.site-header { border-bottom: 1px solid var(--border-subtle); }
+.site-header nav { display: flex; justify-content: space-between; align-items: center; gap: var(--space-4); min-height: var(--space-16); }
+.brand { font-weight: 800; color: var(--text-primary); text-decoration: none; }
+.brand span { color: var(--action-primary); }
+.site-header a, .crumb a, .category-link { display: inline-flex; align-items: center; min-height: var(--target-min); }
+.skip { position: absolute; inset-inline-start: var(--space-4); inset-block-start: var(--space-2); background: var(--surface-page); padding: var(--space-2); }
+.skip:not(:focus) { clip-path: inset(50%); width: 1px; height: 1px; overflow: hidden; }
+.hero { padding-block: var(--space-12); background: var(--surface-subtle); border-bottom: 1px solid var(--border-subtle); }
+.intro { margin-top: var(--space-3); color: var(--text-secondary); max-width: var(--measure-prose); }
+.search { margin-top: var(--space-6); max-width: 40rem; }
+label { display: block; margin-bottom: var(--space-1); font-weight: 650; }
+input, button { min-height: var(--control-size); border-radius: var(--radius-control); font: inherit; }
+input { width: 100%; padding: var(--space-2) var(--space-3); border: 1px solid var(--border-control); background: var(--surface-page); color: var(--text-primary); }
+input[aria-invalid=true] { border-color: var(--text-error); }
+button { background: var(--action-primary); color: var(--text-on-action); border: 0; padding-inline: var(--space-4); font-weight: 700; cursor: pointer; transition: background-color var(--motion-fast) var(--motion-ease); }
+button:hover { background: var(--action-hover); }
+button:active { background: var(--action-active); }
+button:disabled { background: var(--surface-disabled); color: var(--text-secondary); cursor: default; }
+@media (prefers-reduced-motion: reduce) { button { transition: none; } }
+.content { padding-block: var(--space-8); }
+.listing { display: grid; grid-template-columns: repeat(var(--listing-columns), minmax(0, 1fr)); gap: var(--space-4); list-style: none; padding: 0; margin: var(--space-4) 0 0; }
+.card { display: block; padding: var(--space-4); border: 1px solid var(--border-subtle); border-radius: var(--radius-panel); min-height: var(--target-min); text-decoration: none; }
+.card:hover strong { text-decoration: underline; }
+.card span { display: block; color: var(--text-secondary); margin-top: var(--space-1); }
+.categories, .tools { margin-top: var(--space-8); }
+.crumb { display: flex; align-items: center; flex-wrap: wrap; gap: var(--space-2); font: var(--text-small) var(--font-ui); margin-bottom: var(--space-3); }
+.crumb > * + *::before { content: '/'; margin-right: var(--space-2); color: var(--text-secondary); }
+.calculator { display: grid; gap: var(--space-4); margin-top: var(--space-6); align-items: start; }
+.panel { border: 1px solid var(--border-subtle); border-radius: var(--radius-panel); padding: var(--space-4); min-width: 0; }
+.hint, .error { color: var(--text-secondary); font: var(--text-small) var(--font-ui); margin-top: var(--space-2); }
+.error { color: var(--text-error); background: var(--surface-error); padding: var(--space-2); border-radius: var(--radius-control); }
+.field { margin-block: var(--space-4); }
+.panel button { width: 100%; }
+.result { background: var(--surface-subtle); }
+.result dl { margin-top: var(--space-4); font-variant-numeric: tabular-nums; }
+.result dd { font-size: var(--text-result); font-weight: 750; line-height: 1.15; overflow-wrap: anywhere; margin-top: var(--space-1); }
+.result .secondary { border-top: 1px solid var(--border-subtle); padding-top: var(--space-3); margin-top: var(--space-4); }
+.result .secondary dd { font-size: 1.25rem; }
+.method { max-width: var(--measure-prose); margin-top: var(--space-8); }
+.method p { margin-top: var(--space-2); }
+.site-footer { border-top: 1px solid var(--border-subtle); padding-block: var(--space-4); color: var(--text-secondary); font: var(--text-small) var(--font-ui); }
+@media (min-width: 48rem) {
+  :root { --gutter: var(--space-6); --listing-columns: 2; }
+  .calculator { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-6); }
+  .panel { padding: var(--space-6); }
+  .panel button { width: auto; }
+}
+@media (min-width: 64rem) {
+  :root { --gutter: var(--space-8); --listing-columns: 3; }
+  .calculator { grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); }
+}
+@media (min-width: 90rem) { .calculator { gap: var(--space-8); } }
+.preview-bar { background: var(--text-primary); color: var(--surface-page); }
+.preview-bar .wrap { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; column-gap: var(--space-4); }
+.preview-bar small { font-size: .875rem; padding-block: var(--space-2); }
+.preview-bar a { color: inherit; display: inline-flex; align-items: center; min-height: var(--target-min); }
+.identity { display: inline-grid; grid-template-columns: repeat(2, 3px); gap: 3px; align-items: center; margin-right: 8px; vertical-align: middle; }
+.identity::before, .identity::after { content: ''; height: 14px; background: var(--action-primary); }
+.identity::after { height: 8px; }
+.eyebrow { color: var(--action-hover); font: 700 var(--text-small) var(--font-ui); margin-bottom: var(--space-2); }
+.category-links, .state-links { display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-4); margin-top: var(--space-2); }
+.state-links a { display: inline-flex; align-items: center; min-height: var(--target-min); }
+.state-links [aria-current] { font-weight: 750; color: var(--text-primary); }
+.listing .card { height: 100%; }
+.card strong { display: block; overflow-wrap: anywhere; }
+.card .card-category { color: var(--text-secondary); font: var(--text-small) var(--font-ui); margin: 0 0 var(--space-2); }
+.fixture-card { background: var(--surface-page); }
+.empty-search { margin-top: var(--space-4); padding: var(--space-4); border: 1px solid var(--border-subtle); border-radius: var(--radius-panel); }
+.empty-search p { margin-block: var(--space-2); }
+.result .primary { border-inline-start: 3px solid var(--action-primary); padding-inline-start: var(--space-3); }
+.assumptions { color: var(--text-secondary); margin-top: var(--space-4); font: var(--text-small) var(--font-ui); }
+.status { margin-top: var(--space-3); padding: var(--space-2) var(--space-3); border-radius: var(--radius-control); }
+.status-invalid { color: var(--text-error); background: var(--surface-error); }
+.status-success { color: var(--text-success); background: var(--surface-success); }
+.secondary-button { background: var(--surface-page); color: var(--action-hover); border: 1px solid var(--border-control); }
+.secondary-button:hover, .secondary-button:active { background: var(--surface-subtle); }
+.text-button { background: transparent; color: var(--action-hover); text-decoration: underline; }
+.text-button:hover, .text-button:active { background: var(--surface-subtle); }
+.specimen-grid { display: grid; gap: var(--space-4); margin-top: var(--space-6); }
+.specimen-grid .panel > * + * { margin-top: var(--space-3); }
+.specimen-grid .panel button { width: auto; }
+.specimen-grid .panel > code { display: block; overflow-wrap: anywhere; color: var(--text-secondary); }
+.swatches { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.swatch { padding: var(--space-2); border: 1px solid var(--border-subtle); border-radius: var(--radius-control); }
+.swatch.subtle { background: var(--surface-subtle); }
+.swatch.action { background: var(--action-primary); color: var(--text-on-action); }
+.focus-sample { outline: 3px solid var(--focus-ring); outline-offset: var(--focus-offset); }
+@media (min-width: 48rem) { .specimen-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+</style>
+<body>
+<a class="skip" href="#konten">Langsung ke konten</a>
+<aside class="preview-bar" aria-label="Keterangan preview">
+  <div class="wrap"><small>Preview desain · Isi ilustratif</small><a href="?page=specimens">Spesimen komponen</a></div>
+</aside>
+<header class="site-header">
+  <nav class="wrap" aria-label="Navigasi utama">
+    <a class="brand" href="?page=home"><i class="identity" aria-hidden="true"></i>Kalkulator<span>Harga</span></a>
+    <a href="?page=category">Bisnis</a>
+  </nav>
+</header>
+<main id="konten">
+  <div data-page="home">
+    <section class="hero">
+      <div class="wrap">
+        <p class="eyebrow">Direktori</p><h1>Temukan kalkulator yang Anda perlukan</h1>
+        <p class="intro">Cari berdasarkan kebutuhan, misalnya biaya produksi, cicilan, atau konversi satuan.</p>
+        <div class="search" role="search">
+          <label for="query">Cari kalkulator</label>
+          <input id="query" type="search" placeholder="Contoh: biaya produksi">
+        </div>
+      </div>
+    </section>
+    <div class="wrap content">
+      <section class="categories">
+        <h2>Jelajahi kategori</h2>
+        <nav class="category-links" aria-label="Kategori pada preview">
+          <a class="category-link" href="?page=category">Bisnis</a>
+          <a class="category-link" href="?page=home&amp;category=Marketplace">Marketplace</a>
+          <a class="category-link" href="?page=home&amp;category=Keuangan">Keuangan</a>
+          <a class="category-link" href="?page=home&amp;category=Sehari-hari">Sehari-hari</a>
+        </nav>
+      </section>
+      <section class="tools">
+        <h2 id="discovery-title">Pilihan kalkulator</h2>
+        <p class="hint" id="search-status" role="status"></p>
+        <ul class="listing" id="home-list"></ul>
+        <div class="empty-search" id="search-empty" hidden>
+          <strong>Tidak ada kalkulator yang cocok.</strong>
+          <p>Coba kata kunci seperti HPP, cicilan, atau diskon.</p>
+          <button type="button" class="secondary-button" id="clear-query">Hapus pencarian</button>
+        </div>
+        <a class="category-link" href="?page=home&amp;state=zero">Lihat contoh hasil kosong</a>
+      </section>
+    </div>
+  </div>
+  <div class="wrap content" data-page="category" hidden>
+    <nav class="crumb" aria-label="Jejak navigasi"><a href="?page=home">Beranda</a><span aria-current="page">Bisnis</span></nav>
+    <h1>Kalkulator bisnis</h1>
+    <p class="intro">Hitung biaya, harga jual, dan target penjualan untuk usaha Anda.</p>
+    <section class="tools">
+      <h2>Kalkulator tersedia</h2>
+      <p class="hint">Contoh susunan kategori dengan delapan alat.</p>
+      <ul class="listing" id="business-list"></ul>
+    </section>
+  </div>
+  <div class="wrap content" data-page="hpp" hidden>
+    <nav class="crumb" aria-label="Jejak navigasi"><a href="?page=home">Beranda</a><a href="?page=category">Bisnis</a><span aria-current="page">Kalkulator HPP</span></nav>
+    <h1>Kalkulator HPP</h1>
+    <p class="intro">Hitung total biaya produksi dan harga pokok produksi per unit.</p>
+    <nav class="state-links" aria-label="State contoh HPP">
+      <a href="?page=hpp&amp;state=empty">Awal</a>
+      <a href="?page=hpp&amp;state=valid">Hasil</a>
+      <a href="?page=hpp&amp;state=invalid">Kesalahan</a>
+      <a href="?page=hpp&amp;state=pending">Menunggu</a>
+    </nav>
+    <div class="calculator">
+      <section class="panel" aria-labelledby="form-heading">
+        <h2 id="form-heading">Biaya satu kali produksi</h2>
+        <p class="status status-invalid" id="error-summary" role="alert" hidden><strong>Periksa satu kolom.</strong> <a href="#units">Jumlah unit</a> harus lebih dari nol.</p>
+        <p class="hint" id="format">Masukkan rupiah bulat tanpa titik atau koma. Isi 0 jika biaya tidak ada.</p>
+        <div class="field"><label for="materials">Bahan baku (Rp)</label><input id="materials" inputmode="numeric" aria-describedby="format" value="120000"></div>
+        <div class="field"><label for="labor">Tenaga kerja langsung (Rp)</label><input id="labor" inputmode="numeric" aria-describedby="format" value="60000"></div>
+        <div class="field"><label for="overhead">Overhead produksi (Rp)</label><input id="overhead" inputmode="numeric" aria-describedby="format" value="20000"></div>
+        <div class="field"><label for="units">Jumlah unit</label><input id="units" inputmode="numeric" value="50"><p id="units-error" class="error" hidden>Jumlah unit harus lebih dari nol.</p></div>
+        <button type="button" id="calculate-preview" aria-describedby="preview-form-note">Hitung HPP</button>
+        <p class="hint" id="preview-form-note">Pilih state di atas untuk meninjau tampilan.</p>
+      </section>
+      <section class="panel result" aria-labelledby="result-heading">
+        <h2 id="result-heading">Hasil perhitungan</h2>
+        <dl id="result-values">
+          <div class="primary"><dt>HPP per unit</dt><dd>Rp 4.000</dd></div>
+          <div class="secondary"><dt>Total biaya produksi</dt><dd>Rp 200.000</dd></div>
+        </dl>
+        <p id="result-message" class="hint" role="status" hidden></p>
+        <p class="assumptions" id="assumptions">Contoh untuk 50 unit sejenis dalam satu batch. HPP per unit dibulatkan ke rupiah terdekat.</p>
+      </section>
+    </div>
+    <article class="method">
+      <h2>Cara menghitung HPP</h2>
+      <p>Jumlahkan bahan baku, tenaga kerja langsung, dan overhead produksi. Bagi total biaya dengan jumlah unit yang selesai diproduksi.</p>
+    </article>
+  </div>
+  <div class="wrap content" data-page="specimens" hidden>
+    <p class="eyebrow">Sistem desain</p>
+    <h1>Spesimen komponen</h1>
+    <p class="intro">Perbandingan varian, state dan token pada ukuran yang sama.</p>
+    <div class="specimen-grid">
+      <section class="panel">
+        <h2>Tipografi dan permukaan</h2><code>--text-title · --text-body · --surface-subtle</code>
+        <p style="font-size:var(--text-title);font-weight:750;line-height:1.1">Hitung biaya produksi</p>
+        <p>Label ringkas dan angka dengan lebar digit tetap.</p>
+        <div class="swatches"><span class="swatch">Kanvas</span><span class="swatch subtle">Panel</span><span class="swatch action">Aksi</span></div>
+      </section>
+      <section class="panel">
+        <h2>Button</h2><code>--action-primary · --target-min · --focus-ring</code>
+        <div class="state-links"><button type="button">Utama</button><button type="button" class="secondary-button">Sekunder</button><button type="button" class="text-button">Teks</button></div>
+        <div class="state-links"><button type="button" class="focus-sample">Fokus</button><button type="button" disabled>Nonaktif</button><button type="button" disabled>Menunggu…</button></div>
+      </section>
+      <section class="panel">
+        <h2>Input dan CalculatorField</h2><code>--control-size · --border-control · --text-error</code>
+        <div><label for="spec-rp">Biaya bahan (Rp)</label><input id="spec-rp" value="120000" inputmode="numeric"></div>
+        <div><label for="spec-unit">Jumlah unit</label><input id="spec-unit" value="0" inputmode="numeric" aria-invalid="true" aria-describedby="spec-error"><p id="spec-error" class="error">Jumlah unit harus lebih dari nol.</p></div>
+        <div><label for="spec-disabled">Tarif referensi</label><input id="spec-disabled" value="Belum tersedia" disabled></div>
+      </section>
+      <section class="panel">
+        <h2>Search dan Card</h2><code>--radius-control · --radius-panel · --text-secondary</code>
+        <div><label for="spec-search">Cari kalkulator</label><input id="spec-search" value="hpp" type="search"></div>
+        <a class="card" href="?page=hpp"><strong>Kalkulator HPP</strong><span>Biaya produksi per unit</span></a>
+        <a class="card" href="?page=category"><strong>Bisnis</strong><span>Biaya, harga, dan penjualan</span></a>
+      </section>
+      <section class="panel">
+        <h2>CalculatorForm dan ResultPanel</h2><code>--text-result · --surface-success · --surface-error</code>
+        <p class="status status-invalid">Periksa jumlah unit sebelum menghitung.</p>
+        <div class="panel result"><p>Hasil awal</p><p class="hint">Isi biaya dan jumlah unit untuk melihat hasil.</p></div>
+        <div class="panel result"><p class="status status-success">Perhitungan selesai</p><dl><div class="primary"><dt>HPP per unit</dt><dd>Rp 4.000</dd></div></dl></div>
+        <p class="hint">Susun vertikal di bawah 768 px. Angka panjang dapat membungkus.</p>
+      </section>
+      <section class="panel">
+        <h2>Breadcrumb dan navigasi</h2><code>--target-min · --space-2 · --text-small</code>
+        <nav class="crumb" aria-label="Contoh jejak navigasi"><a href="?page=home">Beranda</a><a href="?page=category">Bisnis</a><span aria-current="page">Kalkulator HPP</span></nav>
+        <p class="hint">Tautan dan item aktif membungkus dalam urutan DOM.</p>
+        <nav class="category-links" aria-label="Contoh navigasi situs"><a class="category-link" href="?page=home">KalkulatorHarga</a><a class="category-link" href="?page=category" aria-current="page">Bisnis</a></nav>
+      </section>
+    </div>
+  </div>
+</main>
+<footer class="wrap site-footer">KalkulatorHarga · Preview desain</footer>
+<script>
+const params = new URLSearchParams(location.search)
+const page = ['home', 'category', 'hpp', 'specimens'].includes(params.get('page')) ? params.get('page') : 'home'
+for (const section of document.querySelectorAll('[data-page]')) section.hidden = section.dataset.page !== page
+const state = params.get('state')
+const business = [
+  ['Kalkulator HPP', 'Biaya produksi satu batch dan biaya per unit.', 'Bisnis', 'hpp'],
+  ['Harga Jual untuk Target Margin', 'Cari harga jual dari HPP dan margin target.', 'Bisnis'],
+  ['Margin Laba', 'Hitung laba dan margin dari harga jual aktual.', 'Bisnis'],
+  ['Markup', 'Hitung persentase kenaikan atas biaya.', 'Bisnis'],
+  ['Titik Impas Penjualan (BEP)', 'Cari jumlah unit agar pendapatan menutup biaya.', 'Bisnis'],
+  ['Target Penjualan untuk Mencapai Laba yang Diinginkan', 'Ubah target laba menjadi jumlah unit penjualan.', 'Bisnis'],
+  ['Biaya Bahan Makanan per Porsi', 'Bagi biaya resep sesuai jumlah porsi.', 'Bisnis'],
+  ['Titik Pemesanan Ulang Stok', 'Tentukan stok minimum sebelum pesan ulang.', 'Bisnis'],
+]
+const discovery = [
+  ...business.slice(0, 5),
+  ['Biaya Admin TikTok Shop', 'Simulasikan potongan dan dana cair penjual.', 'Marketplace'],
+  ['Cicilan Anuitas', 'Perkirakan angsuran tetap dari pokok dan tenor.', 'Keuangan'],
+  ['Target Tabungan', 'Cari setoran bulanan untuk mencapai target.', 'Keuangan'],
+  ['Diskon Bertahap', 'Hitung harga akhir setelah beberapa potongan.', 'Sehari-hari'],
+  ['Konversi Satuan Panjang', 'Ubah ukuran dari satu satuan ke satuan lain.', 'Sehari-hari'],
+]
+function showCards(list, tools) {
+  list.replaceChildren(...tools.map(([title, description, category, link]) => {
+    const item = document.createElement('li')
+    const card = document.createElement(link ? 'a' : 'article')
+    card.className = 'card'
+    if (link) card.href = '?page=' + link
+    else card.classList.add('fixture-card')
+    for (const [tag, value, className] of [['span', category, 'card-category'], ['strong', title, ''], ['span', description, '']]) {
+      const element = document.createElement(tag)
+      element.textContent = value
+      element.className = className
+      card.append(element)
+    }
+    item.append(card)
+    return item
+  }))
+}
+if (page === 'home') {
+  const query = document.querySelector('#query')
+  const list = document.querySelector('#home-list')
+  const title = document.querySelector('#discovery-title')
+  const status = document.querySelector('#search-status')
+  const empty = document.querySelector('#search-empty')
+  function renderSearch() {
+    const value = query.value.trim().toLocaleLowerCase('id')
+    const matches = discovery.filter(tool => value.split(/\s+/).every(term => tool.slice(0, 3).join(' ').toLocaleLowerCase('id').includes(term)))
+    document.querySelector('.categories').hidden = Boolean(value)
+    title.textContent = value ? 'Hasil pencarian' : 'Pilihan kalkulator'
+    status.textContent = value ? matches.length + ' hasil untuk “' + query.value.trim() + '”' : 'Contoh pilihan dari beberapa kategori.'
+    empty.hidden = matches.length > 0
+    list.hidden = matches.length === 0
+    showCards(list, matches)
+  }
+  query.value = state === 'zero' ? 'jadwal kereta' : params.get('category') || ''
+  query.addEventListener('input', renderSearch)
+  document.querySelector('#clear-query').addEventListener('click', () => {
+    query.value = ''
+    renderSearch()
+    query.focus()
+  })
+  renderSearch()
+}
+if (page === 'category') showCards(document.querySelector('#business-list'), business)
+if (page === 'hpp') {
+  const selected = ['empty', 'invalid', 'pending'].includes(state) ? state : 'valid'
+  document.querySelector('.state-links a[href$="state=' + selected + '"]').setAttribute('aria-current', 'true')
+}
+if (page === 'hpp' && ['empty', 'invalid', 'pending'].includes(state)) {
+  document.querySelector('#result-values').hidden = true
+  const message = document.querySelector('#result-message')
+  message.hidden = false
+  document.querySelector('#assumptions').hidden = true
+  message.textContent = {
+    invalid: 'Periksa jumlah unit sebelum menghitung.',
+    empty: 'Isi biaya dan jumlah unit untuk melihat hasil.',
+    pending: 'Perhitungan sedang diproses.',
+  }[state]
+  const units = document.querySelector('#units')
+  if (state === 'invalid') {
+    units.value = '0'
+    units.setAttribute('aria-invalid', 'true')
+    units.setAttribute('aria-describedby', 'units-error')
+    document.querySelector('#units-error').hidden = false
+    document.querySelector('#error-summary').hidden = false
+  } else if (state === 'pending') {
+    const button = document.querySelector('#calculate-preview')
+    button.disabled = true
+    button.textContent = 'Menghitung…'
+    document.querySelector('.result').setAttribute('aria-busy', 'true')
+  } else {
+    for (const input of document.querySelectorAll('[data-page="hpp"] input')) input.value = ''
+  }
+}
+</script>
+</body>
+</html>
