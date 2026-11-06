@@ -62,8 +62,13 @@ for (const scenario of scenarios) {
       await expect(field).toHaveAccessibleDescription(new RegExp(scenario.error.replace(/\.$/, '')))
       await expect(page.getByRole('form').getByRole('alert')).toBeVisible()
     } else {
-      await expect(results).toContainText('Target tidak dapat dicapai')
-      await expect(results.getByText(scenario.noSolution!, { exact: true })).toBeVisible()
+      const announcement = results.locator('[aria-live="polite"]')
+      const answers = announcement.locator('dl > div')
+      await expect(answers).toHaveCount(2)
+      await expect(answers.nth(0).locator('dd')).toHaveText('Target tidak dapat dicapai')
+      await expect(answers.nth(1).locator('dt')).toHaveText('Kontribusi per unit')
+      await expect(answers.nth(1).locator('dd')).toHaveText(scenario.noSolution!)
+      await page.screenshot({ path: info.outputPath(`${scenario.slug}-tidak-tercapai.jpg`), fullPage: true, quality: 70 })
       await expect(results.getByText(scenario.expected, { exact: true })).toHaveCount(0)
     }
   })

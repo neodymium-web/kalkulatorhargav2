@@ -94,3 +94,15 @@ it.each([
     expect(engine({ ...input, [key]: value })).toMatchObject({ success: false, errors: { [key]: expect.any(Array) } })
   }
 })
+
+it('matches the independently calculated examples in the verification record', () => {
+  const sale = { price: '64000', cost: '50000' }
+  const volume = { price: '45000', variable: '33000', fixed: '83500' }
+  expect(calculateSellingPrice({ cost: '7350', margin: '18' })).toMatchObject({ values: { minimum: 8964n } })
+  expect(calculateGrossMargin(sale)).toMatchObject({ values: { profit: 14000n, percent: 2188n } })
+  expect(calculateMarkup(sale)).toMatchObject({ values: { difference: 14000n, percent: 2800n } })
+  expect(calculateBreakEven(volume)).toMatchObject({ values: { units: 7n, contribution: 12000n } })
+  expect(calculateProfitTarget({ ...volume, target: '25000' })).toMatchObject({ values: { units: 10n, contribution: 12000n } })
+  expect(calculateBreakEven({ ...volume, price: '33000' })).toMatchObject({ values: { units: null, contribution: 0n } })
+  expect(calculateProfitTarget({ ...volume, price: '32999', target: '25000' })).toMatchObject({ values: { units: null, contribution: -1n } })
+})

@@ -25,3 +25,7 @@ Jika sumber belum terverifikasi, kedaluwarsa, atau tidak mencakup transaksi peng
 - Uji batas pergantian tanggal, kategori, potongan gabungan, serta skenario tanpa snapshot.
 - Periksa form dan hasil agar sumber resmi dan input manual terlihat jelas.
 - Tinjau sitemap, canonical, dan perilaku rute sebelum mengubah status terbit.
+
+## Verifikasi rumus batch bisnis
+
+Lihat [catatan verifikasi rumus](BUSINESS_FORMULA_VERIFICATION.md) untuk sumber, asumsi, pembulatan, dan contoh uji independen kelima alat.

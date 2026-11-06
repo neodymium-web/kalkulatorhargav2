@@ -48,13 +48,16 @@ export function BusinessForm({ slug }: { slug: BusinessSlug }) {
   }
 
   const values = result?.success ? result.values : undefined
-  const [primary, ...details] = values ? tool.outputFields.flatMap(field => {
+  const outputs = values ? tool.outputFields.flatMap(field => {
     const value = values[field.id]
     return value === null ? [] : [{ label: field.label, value: formatValue(value, field.unit) }]
   }) : []
   const unreachable = values?.units === null
+  const [primary, ...details] = unreachable
+    ? [{ label: slug === 'bep' ? 'Titik impas' : 'Target laba', value: 'Target tidak dapat dicapai' }, ...outputs]
+    : outputs
   const explanation = unreachable
-    ? 'Target tidak dapat dicapai karena kontribusi per unit nol atau negatif. Naikkan harga jual atau kurangi biaya variabel.'
+    ? 'Kontribusi per unit nol atau negatif. Naikkan harga jual atau kurangi biaya variabel.'
     : assumptions[slug]
 
   return <div className={styles.grid}>
