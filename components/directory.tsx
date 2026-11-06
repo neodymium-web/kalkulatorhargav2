@@ -2,18 +2,14 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { calculators, type Calculator } from '../lib/registry'
+import { searchDirectory, type DirectoryEntry } from '../lib/directory'
 
-export function Directory({ searchable = false, tools = calculators }: {
+export function Directory({ searchable = false, tools }: {
   searchable?: boolean
-  tools?: readonly Calculator[]
+  tools: readonly DirectoryEntry[]
 }) {
   const [query, setQuery] = useState('')
-  const terms = query.toLocaleLowerCase('id').trim().split(/\s+/)
-  const matches = tools.filter(tool => {
-    const haystack = [tool.name, tool.category.name, tool.description, ...tool.keywords].join(' ').toLocaleLowerCase('id')
-    return terms.every(term => haystack.includes(term))
-  })
+  const matches = searchDirectory(tools, query)
 
   return (
     <section aria-labelledby="directory-title">

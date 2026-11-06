@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, type FormEvent } from 'react'
-import { calculateHpp, costs } from '../../../lib/hpp'
+import { calculateHpp, costs } from '../../lib/hpp'
 
 const currency = new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', maximumFractionDigits: 0 })
 const fields = [...costs, ['units', 'Jumlah unit']] as const

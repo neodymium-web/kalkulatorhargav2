@@ -1,14 +1,7 @@
-import { CalculatorPage } from '../../../components/calculator-page'
-import { formulaVersion } from '../../../lib/hpp'
-import { calculators } from '../../../lib/registry'
-import { pageMetadata } from '../../../lib/seo'
-import { HppForm } from './form'
+import type { CalculatorViewProps } from './views'
 
-const [tool] = calculators
-export const metadata = pageMetadata(tool.name, tool.description, tool.path)
-
-export default function Hpp() {
-  return <CalculatorPage tool={tool} methodology={<>
+export function HppMethodology({ formulaVersion }: CalculatorViewProps) {
+  return <>
     <h2>Cara menghitung HPP</h2>
     <p>Total biaya produksi = bahan baku + tenaga kerja langsung + overhead produksi.</p>
     <p>HPP per unit = total biaya produksi ÷ jumlah unit yang selesai diproduksi.</p>
@@ -23,7 +16,5 @@ export default function Hpp() {
     <p>Hasil menunjukkan biaya unit yang diproduksi. Harga pokok penjualan juga memperhitungkan
       persediaan awal dan akhir untuk menentukan biaya barang yang terjual.</p>
     <p className="version">Versi rumus {formulaVersion}</p>
-  </>}>
-    <HppForm />
-  </CalculatorPage>
+  </>
 }

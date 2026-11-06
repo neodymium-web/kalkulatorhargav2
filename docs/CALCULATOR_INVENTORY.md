@@ -1,0 +1,161 @@
+# Inventaris 100 kalkulator
+
+Inventaris ini menetapkan usulan slug dan intent untuk setiap alat. HPP sudah terbit. Baris berstatus ide belum memiliki rute publik. ID untuk setiap ide memakai awalan `calc-` dan slug yang disepakati di sini. Setelah implementasi, simpan ID saat mengubah nama tampilan atau URL.
+
+Tingkat 1 memakai rumus langsung. Tingkat 2 melibatkan beberapa mode, jadwal, satuan, atau kebijakan pembulatan. Tingkat 3 membutuhkan aturan bertanggal, pencarian solusi, atau verifikasi domain yang lebih ketat. Kolom sumber menjelaskan kebutuhan tarif dinamis. Tanda “—” berarti alat tidak memerlukan data tarif eksternal. Input manual berasal dari pengguna dan ditampilkan sebagai asumsi.
+
+
+## bisnis
+
+| ID | Slug | Canonical usulan | Intent | Kategori | Input | Output | Rumus atau mesin | Tingkat | Status | Sumber dinamis | Monetisasi |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| production-cost | hpp | /kalkulator/hpp | Biaya produksi satu batch per unit | bisnis | Bahan, tenaga kerja, overhead, unit | Total biaya dan HPP per unit | Jumlah biaya dibagi unit, pembulatan rupiah | 1 | published | — | — |
+| calc-harga-jual | harga-jual | /kalkulator/harga-jual | Harga jual untuk margin target | bisnis | HPP, margin target | Harga jual minimum | HPP ÷ (1 − margin) | 1 | idea | — | — |
+| calc-margin-laba | margin-laba | /kalkulator/margin-laba | Margin dari harga jual aktual | bisnis | Harga jual, biaya | Laba dan margin | Laba ÷ harga jual | 1 | idea | — | — |
+| calc-markup | markup | /kalkulator/markup | Persentase markup atas biaya | bisnis | Harga jual, biaya | Markup | Laba ÷ biaya | 1 | idea | — | — |
+| calc-bep | bep | /kalkulator/bep | Jumlah unit agar usaha impas | bisnis | Biaya tetap, harga, biaya variabel/unit | Unit impas | Pembulatan ke atas biaya tetap ÷ kontribusi/unit | 1 | idea | — | — |
+| calc-target-laba | target-laba | /kalkulator/target-laba | Target unit untuk laba tertentu | bisnis | Biaya tetap, kontribusi/unit, target laba | Unit penjualan | Pembulatan ke atas (biaya tetap + laba) ÷ kontribusi | 1 | idea | — | — |
+| calc-harga-pokok-penjualan | harga-pokok-penjualan | /kalkulator/harga-pokok-penjualan | Biaya barang terjual selama periode | bisnis | Persediaan awal, pembelian bersih, persediaan akhir | Harga pokok penjualan | Awal + pembelian − akhir | 1 | idea | — | — |
+| calc-food-cost | food-cost | /kalkulator/food-cost | Biaya bahan makanan per porsi | bisnis | Harga kemasan, pemakaian tiap bahan, hasil porsi | Biaya resep dan per porsi | Jumlah biaya bahan proporsional ÷ porsi | 2 | idea | — | — |
+| calc-yield-bahan | yield-bahan | /kalkulator/yield-bahan | Susut saat menyiapkan bahan | bisnis | Berat kotor, berat bersih | Persentase hasil dan susut | Berat bersih ÷ berat kotor | 1 | idea | — | — |
+| calc-harga-borongan | harga-borongan | /kalkulator/harga-borongan | Harga penawaran proyek jasa | bisnis | Jam, tarif tenaga kerja, bahan, overhead, laba target | Harga penawaran | Jumlah biaya langsung dan overhead + laba | 1 | idea | — | — |
+| calc-tarif-freelance | tarif-freelance | /kalkulator/tarif-freelance | Tarif per jam agar menutup biaya tahunan | bisnis | Target penghasilan, biaya tahunan, jam tertagih | Tarif minimum per jam | Kebutuhan tahunan ÷ jam tertagih | 1 | idea | — | — |
+| calc-penyusutan-garis-lurus | penyusutan-garis-lurus | /kalkulator/penyusutan-garis-lurus | Penyusutan aset per tahun | bisnis | Harga aset, nilai residu, umur | Penyusutan tahunan | Selisih nilai ÷ umur | 1 | idea | — | — |
+| calc-perputaran-persediaan | perputaran-persediaan | /kalkulator/perputaran-persediaan | Kecepatan penjualan stok | bisnis | Harga pokok penjualan, stok awal dan akhir dalam rupiah | Perputaran dan hari persediaan | Harga pokok penjualan ÷ stok rata-rata | 1 | idea | — | — |
+| calc-reorder-point | reorder-point | /kalkulator/reorder-point | Stok minimum untuk pesan ulang | bisnis | Permintaan harian, lead time, stok aman | Titik pemesanan ulang | Permintaan × lead time + stok aman | 1 | idea | — | — |
+| calc-eoq | eoq | /kalkulator/eoq | Ukuran pemesanan stok ekonomis | bisnis | Permintaan tahunan, biaya pesan, biaya simpan/unit | Unit per pesanan | Akar dari 2 × permintaan × biaya pesan ÷ biaya simpan | 2 | idea | — | — |
+| calc-arus-kas | arus-kas | /kalkulator/arus-kas | Saldo kas setelah penerimaan dan pengeluaran | bisnis | Saldo awal, kas masuk, kas keluar | Arus bersih dan saldo akhir | Masuk − keluar, tambah saldo awal | 1 | idea | — | — |
+| calc-runway-kas | runway-kas | /kalkulator/runway-kas | Berapa bulan kas usaha bertahan | bisnis | Kas, pengeluaran dan penerimaan bulanan | Runway | Kas ÷ burn bersih jika positif | 1 | idea | — | — |
+| calc-payback-period | payback-period | /kalkulator/payback-period | Kapan modal proyek kembali | bisnis | Investasi awal, arus kas per periode | Periode balik modal | Akumulasi arus kas hingga menutup investasi | 2 | idea | — | — |
+| calc-utilisasi-kapasitas | utilisasi-kapasitas | /kalkulator/utilisasi-kapasitas | Persentase kapasitas produksi terpakai | bisnis | Output aktual, kapasitas maksimum | Utilisasi | Aktual ÷ kapasitas | 1 | idea | — | — |
+| calc-biaya-layanan | biaya-layanan | /kalkulator/biaya-layanan | Alokasi biaya usaha jasa per transaksi | bisnis | Biaya bulanan, transaksi, biaya variabel/transaksi | Biaya per transaksi | Biaya tetap ÷ transaksi + biaya variabel | 1 | idea | — | — |
+
+## marketplace
+
+| ID | Slug | Canonical usulan | Intent | Kategori | Input | Output | Rumus atau mesin | Tingkat | Status | Sumber dinamis | Monetisasi |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| calc-tiktok | tiktok | /kalkulator/tiktok | Dana bersih penjual TikTok Shop per pesanan | marketplace | Harga, kuantitas, kategori, diskon penjual, komponen biaya | Rincian potongan dan dana bersih | Settlement berdasarkan dasar biaya tiap komponen | 3 | idea | Resmi atau input penjual | — |
+| calc-shopee | shopee | /kalkulator/shopee | Dana bersih penjual Shopee per pesanan | marketplace | Harga, kuantitas, kategori, program, komponen biaya | Rincian potongan dan dana bersih | Settlement sesuai program dan dasar biaya Shopee | 3 | idea | Resmi atau input penjual | — |
+| calc-tokopedia | tokopedia | /kalkulator/tokopedia | Dana bersih penjual Tokopedia per pesanan | marketplace | Harga, kuantitas, kategori, program, komponen biaya | Rincian potongan dan dana bersih | Settlement sesuai kanal Tokopedia dan dasar biaya berlaku | 3 | idea | Resmi atau input penjual | — |
+| calc-lazada | lazada | /kalkulator/lazada | Dana bersih penjual Lazada per pesanan | marketplace | Harga, kategori, program, diskon penjual, komponen biaya | Rincian potongan dan dana bersih | Settlement sesuai program Lazada dan dasar biaya berlaku | 3 | idea | Resmi atau input penjual | — |
+| calc-blibli | blibli | /kalkulator/blibli | Dana bersih penjual Blibli per pesanan | marketplace | Harga, kategori, komisi kontrak, biaya lain | Rincian potongan dan dana bersih | Penjualan bersih dikurangi komisi dan biaya kontrak | 3 | idea | Resmi atau input penjual | — |
+| calc-harga-jual-marketplace | harga-jual-marketplace | /kalkulator/harga-jual-marketplace | Harga listing agar target dana bersih tercapai | marketplace | Dana target, diskon, persentase dan biaya tetap | Harga listing minimum | Balikkan fungsi settlement dan bulatkan ke atas | 2 | idea | Input penjual | — |
+| calc-banding-biaya-marketplace | banding-biaya-marketplace | /kalkulator/banding-biaya-marketplace | Bandingkan settlement beberapa kanal | marketplace | Harga, diskon dan biaya setiap kanal | Selisih dana bersih antar kanal | Hitung settlement tiap skenario dengan input yang sama | 2 | idea | Input penjual | — |
+| calc-promo-seller | promo-seller | /kalkulator/promo-seller | Dampak diskon yang dibagi dengan platform | marketplace | Harga, diskon, porsi penjual | Potongan yang ditanggung penjual | Diskon × porsi penjual | 1 | idea | — | — |
+| calc-subsidi-ongkir | subsidi-ongkir | /kalkulator/subsidi-ongkir | Biaya ongkir yang ditanggung penjual | marketplace | Ongkir, subsidi platform, pembayaran pembeli | Beban ongkir penjual | Ongkir − subsidi − pembayaran pembeli | 1 | idea | — | — |
+| calc-berat-volumetrik | berat-volumetrik | /kalkulator/berat-volumetrik | Berat tagihan berdasarkan ukuran paket | marketplace | Dimensi, berat aktual, pembagi kurir | Berat volumetrik dan berat tagihan | Maksimum berat aktual dan volume ÷ pembagi | 2 | idea | Input kurir | — |
+| calc-biaya-kemasan | biaya-kemasan | /kalkulator/biaya-kemasan | Biaya bahan kemasan per paket | marketplace | Harga grosir, isi, pemakaian, susut | Total biaya kemasan/paket | Jumlah biaya unit tiap bahan disesuaikan susut | 1 | idea | — | Tautan bahan kemasan dengan pengungkapan afiliasi |
+| calc-biaya-retur | biaya-retur | /kalkulator/biaya-retur | Ekspektasi biaya retur per pesanan | marketplace | Tingkat retur, biaya per retur, nilai barang pulih | Biaya retur ekspektasian | Peluang retur × biaya bersih per retur | 1 | idea | — | — |
+| calc-kerugian-cod | kerugian-cod | /kalkulator/kerugian-cod | Beban pesanan COD yang gagal diterima | marketplace | Jumlah pesanan, tingkat gagal, biaya gagal | Perkiraan kerugian | Jumlah × tingkat gagal × biaya gagal | 1 | idea | — | — |
+| calc-roas | roas | /kalkulator/roas | Pendapatan yang diatribusikan per rupiah iklan | marketplace | Pendapatan atribusi, belanja iklan | ROAS | Pendapatan ÷ iklan | 1 | idea | — | — |
+| calc-roas-impas | roas-impas | /kalkulator/roas-impas | Ambang ROAS agar iklan tidak merugi | marketplace | Pendapatan sebelum iklan, kontribusi sebelum iklan | ROAS impas | Pendapatan ÷ kontribusi | 1 | idea | — | — |
+| calc-acos | acos | /kalkulator/acos | Persentase biaya iklan terhadap penjualan | marketplace | Belanja iklan, penjualan atribusi | ACOS | Iklan ÷ penjualan atribusi | 1 | idea | — | — |
+| calc-konversi-toko | konversi-toko | /kalkulator/konversi-toko | Porsi kunjungan toko yang membeli | marketplace | Kunjungan, jumlah pembelian | Tingkat konversi | Pembelian ÷ kunjungan | 1 | idea | — | — |
+| calc-nilai-pesanan-rata-rata | nilai-pesanan-rata-rata | /kalkulator/nilai-pesanan-rata-rata | Rata-rata nilai pesanan toko | marketplace | Pendapatan dan jumlah pesanan | AOV | Pendapatan ÷ pesanan | 1 | idea | — | — |
+| calc-bundel-produk | bundel-produk | /kalkulator/bundel-produk | Kontribusi paket gabungan produk | marketplace | Biaya tiap produk, jumlah, harga paket, biaya transaksi | Laba kontribusi paket | Harga paket − biaya seluruh isi dan transaksi | 1 | idea | — | — |
+| calc-stok-cover | stok-cover | /kalkulator/stok-cover | Hari stok tersisa menurut laju penjualan | marketplace | Stok siap jual, penjualan rata-rata harian | Hari cakupan | Stok ÷ penjualan harian | 1 | idea | — | — |
+
+## keuangan
+
+| ID | Slug | Canonical usulan | Intent | Kategori | Input | Output | Rumus atau mesin | Tingkat | Status | Sumber dinamis | Monetisasi |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| calc-bunga-sederhana | bunga-sederhana | /kalkulator/bunga-sederhana | Bunga tanpa kapitalisasi | keuangan | Pokok, suku bunga, durasi | Bunga dan saldo akhir | Pokok × tingkat × durasi | 1 | idea | Input pengguna | — |
+| calc-bunga-majemuk | bunga-majemuk | /kalkulator/bunga-majemuk | Pertumbuhan saldo dengan kapitalisasi | keuangan | Pokok, tingkat, frekuensi, durasi | Saldo dan pertumbuhan | Pokok × (1 + tingkat/frekuensi) pangkat jumlah periode | 2 | idea | Input pengguna | — |
+| calc-cicilan-anuitas | cicilan-anuitas | /kalkulator/cicilan-anuitas | Angsuran tetap dengan bunga atas saldo | keuangan | Pokok, bunga, tenor | Angsuran dan jadwal amortisasi | Rumus anuitas dengan cabang bunga nol | 2 | idea | Input pengguna | — |
+| calc-cicilan-flat | cicilan-flat | /kalkulator/cicilan-flat | Angsuran dengan bunga atas pokok awal | keuangan | Pokok, bunga flat, tenor | Angsuran dan total bunga | Pokok ÷ tenor + bunga atas pokok awal | 2 | idea | Input pengguna | — |
+| calc-bunga-efektif-pinjaman | bunga-efektif-pinjaman | /kalkulator/bunga-efektif-pinjaman | Biaya pinjaman tersirat dari arus kas aktual | keuangan | Dana cair bersih, pembayaran dan tanggal | Tingkat efektif tahunan | Cari akar nilai kini bersih nol berdasarkan tanggal | 3 | idea | Input pengguna | — |
+| calc-kpr | kpr | /kalkulator/kpr | Simulasi rumah dengan fase fixed dan floating | keuangan | Harga rumah, DP, tenor, bunga per fase, biaya awal | Angsuran per fase dan dana awal | Amortisasi dengan hitung ulang di awal fase | 3 | idea | Input pengguna | Rujukan produk pembiayaan dengan pengungkapan afiliasi |
+| calc-pelunasan-dipercepat | pelunasan-dipercepat | /kalkulator/pelunasan-dipercepat | Dampak tambahan pembayaran pokok | keuangan | Jadwal pinjaman, tambahan, penalti kontrak | Hemat bunga dan tenor baru | Bandingkan amortisasi dasar dan skenario pembayaran | 3 | idea | Input pengguna | — |
+| calc-refinancing | refinancing | /kalkulator/refinancing | Waktu balik biaya pindah pinjaman | keuangan | Sisa saldo, jadwal lama, penawaran baru, biaya pindah | Selisih arus kas dan bulan impas | Bandingkan kumulatif biaya dua jadwal | 3 | idea | Input pengguna | — |
+| calc-rasio-cicilan | rasio-cicilan | /kalkulator/rasio-cicilan | Porsi pendapatan untuk membayar utang | keuangan | Pendapatan dan cicilan bulanan | Rasio cicilan | Total cicilan ÷ pendapatan | 1 | idea | — | — |
+| calc-target-tabungan | target-tabungan | /kalkulator/target-tabungan | Setoran bulanan untuk mencapai tujuan | keuangan | Target, saldo awal, tingkat, bulan | Setoran per bulan | Balikkan nilai masa depan anuitas | 2 | idea | Input pengguna | — |
+| calc-dana-darurat | dana-darurat | /kalkulator/dana-darurat | Kebutuhan cadangan pengeluaran | keuangan | Pengeluaran wajib, bulan cadangan, saldo saat ini | Target dan kekurangan dana | Pengeluaran × bulan − saldo tersedia | 1 | idea | — | — |
+| calc-deposito | deposito | /kalkulator/deposito | Hasil deposito setelah potongan | keuangan | Pokok, tenor, bunga, pajak dan biaya | Bunga bersih dan saldo jatuh tempo | Bunga prorata dikurangi potongan input | 2 | idea | Input pengguna | Rujukan produk dengan pengungkapan afiliasi |
+| calc-imbal-hasil-investasi | imbal-hasil-investasi | /kalkulator/imbal-hasil-investasi | Laba relatif investasi tanpa arus kas antara | keuangan | Modal, nilai akhir, biaya | Return bersih | Laba bersih ÷ modal | 1 | idea | — | — |
+| calc-cagr | cagr | /kalkulator/cagr | Pertumbuhan rata-rata tahunan geometris | keuangan | Nilai awal, nilai akhir, tahun | CAGR | (Akhir ÷ awal) pangkat 1/tahun − 1 | 1 | idea | — | — |
+| calc-nilai-kini | nilai-kini | /kalkulator/nilai-kini | Nilai sekarang dari satu pembayaran mendatang | keuangan | Pembayaran masa depan, diskonto, periode | Nilai sekarang | Pembayaran ÷ (1 + diskonto) pangkat periode | 2 | idea | Input pengguna | — |
+| calc-npv | npv | /kalkulator/npv | Nilai proyek dengan arus kas banyak periode | keuangan | Arus kas berurutan, tingkat diskonto | Nilai kini bersih | Jumlah arus kas yang didiskonto per periode | 2 | idea | Input pengguna | — |
+| calc-inflasi | inflasi | /kalkulator/inflasi | Perkiraan perubahan daya beli | keuangan | Harga awal, asumsi inflasi, tahun | Harga ekuivalen dan daya beli | Majemukkan asumsi inflasi dan balik untuk daya beli | 2 | idea | Input pengguna | — |
+| calc-rata-rata-beli-saham | rata-rata-beli-saham | /kalkulator/rata-rata-beli-saham | Harga pokok rata-rata transaksi beli saham | keuangan | Harga, lot, jumlah lembar/lot dan biaya | Harga rata-rata per lembar | Total biaya beli ÷ lembar | 2 | idea | Input pengguna | — |
+| calc-untung-rugi-saham | untung-rugi-saham | /kalkulator/untung-rugi-saham | Laba bersih ketika menjual saham | keuangan | Harga beli dan jual, lembar, biaya dan pajak input | Laba bersih dan persentase | Dana jual bersih − biaya perolehan | 2 | idea | Input pengguna | — |
+| calc-kurs-mata-uang | kurs-mata-uang | /kalkulator/kurs-mata-uang | Konversi valuta menurut kurs yang diketahui | keuangan | Nominal, kurs, biaya dan arah | Nominal hasil dan biaya | Kali atau bagi kurs sesuai arah lalu terapkan biaya | 2 | idea | Input pengguna | — |
+
+## pajak
+
+| ID | Slug | Canonical usulan | Intent | Kategori | Input | Output | Rumus atau mesin | Tingkat | Status | Sumber dinamis | Monetisasi |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| calc-ppn | ppn | /kalkulator/ppn | PPN dan pemisahan harga termasuk pajak | pajak | Harga, dasar pengenaan, tarif, mode termasuk pajak | Dasar dan PPN | Kalikan tarif efektif atau balikkan harga bruto | 3 | idea | Resmi atau input pengguna | — |
+| calc-pph-21-bulanan | pph-21-bulanan | /kalkulator/pph-21-bulanan | Pemotongan PPh 21 pegawai pada masa reguler | pajak | Bruto, kategori, masa dan tabel versi | Potongan bulanan | Pilih bracket efektif yang sesuai masa | 3 | idea | Resmi | — |
+| calc-pph-21-rekonsiliasi | pph-21-rekonsiliasi | /kalkulator/pph-21-rekonsiliasi | Selisih PPh 21 pegawai pada masa akhir | pajak | Bruto tahun, pengurang, status, potongan sebelumnya | Pajak setahun dan selisih pemotongan | Hitung progresif atas dasar kena pajak dan kurangi pemotongan | 3 | idea | Resmi | — |
+| calc-pph-final-umkm | pph-final-umkm | /kalkulator/pph-final-umkm | PPh final omzet usaha sesuai kelayakan | pajak | Omzet per bulan, tipe wajib pajak, masa kelayakan | Dasar dan pajak per masa | Terapkan batas dan tarif versi pada omzet yang memenuhi syarat | 3 | idea | Resmi | — |
+| calc-pph-23 | pph-23 | /kalkulator/pph-23 | Potongan PPh 23 transaksi jasa atau penghasilan lain | pajak | Jenis transaksi, dasar potong, identitas dan masa | Potongan dan dana dibayar | Pilih tarif dan dasar sesuai klasifikasi yang berlaku | 3 | idea | Resmi | — |
+| calc-pph-4-ayat-2-sewa | pph-4-ayat-2-sewa | /kalkulator/pph-4-ayat-2-sewa | Potongan final sewa tanah atau bangunan | pajak | Nilai sewa, komponen terkait dan masa | Pajak final sewa | Dasar sewa yang memenuhi cakupan × tarif versi | 3 | idea | Resmi | — |
+| calc-gross-up-pajak | gross-up-pajak | /kalkulator/gross-up-pajak | Nilai bruto agar penerimaan bersih tercapai | pajak | Target bersih, tarif potong input | Bruto dan potongan | Target ÷ (1 − tarif) untuk tarif tunggal | 2 | idea | Input pengguna | — |
+| calc-pajak-impor | pajak-impor | /kalkulator/pajak-impor | Simulasi bea dan pajak barang impor | pajak | Nilai barang, pengiriman, asuransi, kurs dan komponen tarif | Rincian biaya impor | Urutkan bea dan pajak sesuai basis per komponen | 3 | idea | Resmi atau input pengguna | — |
+| calc-bphtb | bphtb | /kalkulator/bphtb | Estimasi BPHTB untuk perolehan properti | pajak | Wilayah, tanggal, nilai, jenis perolehan | Dasar kena dan estimasi BPHTB | Kurangi batas regional lalu kalikan tarif daerah | 3 | idea | Resmi | — |
+| calc-pbb-p2 | pbb-p2 | /kalkulator/pbb-p2 | Estimasi PBB properti per tahun | pajak | Wilayah, tahun, NJOP, penggunaan dan pengurang | Estimasi PBB tahunan | Terapkan dasar dan tarif daerah menurut tahun | 3 | idea | Resmi | — |
+
+## media-sosial
+
+| ID | Slug | Canonical usulan | Intent | Kategori | Input | Output | Rumus atau mesin | Tingkat | Status | Sumber dinamis | Monetisasi |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| calc-engagement-rate | engagement-rate | /kalkulator/engagement-rate | Interaksi sebagai porsi jangkauan atau pengikut | media-sosial | Suka, komentar, simpan, bagikan, denominator pilihan | Persentase engagement dan basis | Jumlah interaksi ÷ denominator | 1 | idea | — | — |
+| calc-pertumbuhan-pengikut | pertumbuhan-pengikut | /kalkulator/pertumbuhan-pengikut | Perubahan pengikut antara dua tanggal | media-sosial | Jumlah awal, akhir dan durasi | Perubahan bersih dan laju | Selisih ÷ awal dengan penanganan nol | 1 | idea | — | — |
+| calc-cpm | cpm | /kalkulator/cpm | Harga iklan per seribu impresi | media-sosial | Biaya iklan, impresi | CPM | Biaya ÷ impresi × 1.000 | 1 | idea | — | — |
+| calc-cpc | cpc | /kalkulator/cpc | Harga iklan per klik | media-sosial | Biaya iklan, klik | CPC | Biaya ÷ klik | 1 | idea | — | — |
+| calc-cpa | cpa | /kalkulator/cpa | Harga iklan per akuisisi | media-sosial | Biaya iklan, akuisisi | CPA | Biaya ÷ akuisisi | 1 | idea | — | — |
+| calc-ctr | ctr | /kalkulator/ctr | Porsi impresi iklan yang menghasilkan klik | media-sosial | Klik, impresi | CTR | Klik ÷ impresi | 1 | idea | — | — |
+| calc-estimasi-youtube | estimasi-youtube | /kalkulator/estimasi-youtube | Estimasi pendapatan kreator dengan RPM sendiri | media-sosial | Tayangan monetisasi sesuai basis RPM, RPM | Estimasi pendapatan | Tayangan ÷ 1.000 × RPM | 2 | idea | Input kreator | — |
+| calc-estimasi-tiktok-kreator | estimasi-tiktok-kreator | /kalkulator/estimasi-tiktok-kreator | Estimasi pendapatan program kreator TikTok | media-sosial | Tayangan memenuhi syarat, RPM asumsi, mata uang | Estimasi pendapatan program | Tayangan memenuhi syarat ÷ 1.000 × RPM | 2 | idea | Input kreator | — |
+| calc-tarif-endorsement | tarif-endorsement | /kalkulator/tarif-endorsement | Harga penawaran sponsor per konten | media-sosial | Biaya produksi, jam, hak penggunaan, margin | Tarif konten dan hak pakai | Biaya dan hak pakai ditambah target laba | 2 | idea | — | — |
+| calc-waktu-tonton | waktu-tonton | /kalkulator/waktu-tonton | Total jam tonton dari durasi rata-rata | media-sosial | Jumlah tayangan, menit tonton rata-rata | Jam tonton | Tayangan × menit ÷ 60 | 1 | idea | — | — |
+
+## sehari-hari
+
+| ID | Slug | Canonical usulan | Intent | Kategori | Input | Output | Rumus atau mesin | Tingkat | Status | Sumber dinamis | Monetisasi |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| calc-diskon | diskon | /kalkulator/diskon | Harga sesudah potongan tunggal atau bertahap | sehari-hari | Harga awal dan daftar diskon | Harga akhir dan penghematan | Kalikan faktor sisa tiap tahap | 1 | idea | — | — |
+| calc-harga-per-satuan | harga-per-satuan | /kalkulator/harga-per-satuan | Bandingkan harga kemasan berbeda ukuran | sehari-hari | Harga dan kuantitas tiap kemasan, satuan | Harga per satuan setara | Normalisasi unit lalu bagi harga dengan kuantitas | 2 | idea | — | — |
+| calc-bagi-tagihan | bagi-tagihan | /kalkulator/bagi-tagihan | Tagihan per orang dari item dan biaya bersama | sehari-hari | Item per orang, pajak dan biaya bersama, metode alokasi | Tagihan per orang | Jumlah item ditambah alokasi biaya dengan rekonsiliasi pembulatan | 2 | idea | — | — |
+| calc-persen | persen | /kalkulator/persen | Hitung bagian dari jumlah atau persentase dari rasio | sehari-hari | Jumlah dan bagian atau persen | Nilai bagian atau persentase | Perkalian atau pembagian berdasarkan mode | 1 | idea | — | — |
+| calc-perubahan-persen | perubahan-persen | /kalkulator/perubahan-persen | Persentase naik atau turun terhadap awal | sehari-hari | Nilai awal dan akhir | Selisih absolut dan relatif | (Akhir − awal) ÷ awal | 1 | idea | — | — |
+| calc-selisih-tanggal | selisih-tanggal | /kalkulator/selisih-tanggal | Jarak hari antara dua tanggal | sehari-hari | Tanggal awal, akhir dan mode inklusif | Hari kalender | Selisih tanggal kalender dengan aturan inklusif | 2 | idea | — | — |
+| calc-hari-kerja | hari-kerja | /kalkulator/hari-kerja | Jumlah hari kerja dalam rentang tanggal | sehari-hari | Tanggal, pola akhir pekan, daftar libur input | Jumlah hari kerja | Hitung hari terjadwal di luar tanggal libur | 2 | idea | Input pengguna | — |
+| calc-usia | usia | /kalkulator/usia | Umur dalam tahun, bulan, dan hari kalender | sehari-hari | Tanggal lahir dan tanggal acuan | Usia kalender | Kurangi tanggal dengan aturan akhir bulan eksplisit | 2 | idea | — | — |
+| calc-durasi-kerja | durasi-kerja | /kalkulator/durasi-kerja | Total jam kerja setelah jeda | sehari-hari | Mulai, selesai, jeda dan hari berakhir | Durasi bersih | Selisih waktu lintas tengah malam dikurangi jeda | 2 | idea | — | — |
+| calc-konsumsi-bbm | konsumsi-bbm | /kalkulator/konsumsi-bbm | Estimasi bensin dan biaya perjalanan | sehari-hari | Jarak, efisiensi, harga per liter | Liter dan biaya | Jarak ÷ efisiensi × harga untuk biaya | 1 | idea | Input pengguna | — |
+| calc-biaya-listrik | biaya-listrik | /kalkulator/biaya-listrik | Perkiraan biaya pemakaian perangkat | sehari-hari | Watt, jam, jumlah, tarif input | kWh dan biaya | Watt × jam × jumlah ÷ 1.000 lalu kalikan tarif | 2 | idea | Input pengguna | — |
+| calc-biaya-air | biaya-air | /kalkulator/biaya-air | Estimasi tagihan air bertingkat | sehari-hari | Volume, blok tarif daerah dan biaya tetap input | Rincian biaya per blok | Alokasikan volume ke blok lalu jumlahkan biaya | 2 | idea | Input pengguna | — |
+| calc-kebutuhan-cat | kebutuhan-cat | /kalkulator/kebutuhan-cat | Jumlah cat untuk permukaan dan lapisan | sehari-hari | Luas, area bukaan, lapisan, daya sebar, ukuran kemasan | Liter dan jumlah kemasan | Luas bersih × lapisan ÷ daya sebar | 2 | idea | — | Tautan bahan sesuai hasil, dengan pengungkapan afiliasi |
+| calc-kebutuhan-keramik | kebutuhan-keramik | /kalkulator/kebutuhan-keramik | Jumlah dus keramik untuk ruangan | sehari-hari | Luas lantai, ukuran ubin, cadangan, isi dus | Ubin dan dus | Luas dengan cadangan ÷ luas ubin, bulatkan ke atas | 2 | idea | — | — |
+| calc-volume-beton | volume-beton | /kalkulator/volume-beton | Volume pengecoran untuk beberapa bentuk | sehari-hari | Dimensi, bentuk elemen, cadangan | Volume beton | Jumlah volume geometris × faktor cadangan | 2 | idea | — | — |
+| calc-skala-denah | skala-denah | /kalkulator/skala-denah | Konversi jarak gambar ke ukuran sebenarnya | sehari-hari | Jarak, rasio skala, satuan dan arah | Jarak hasil | Kalikan atau bagi rasio setelah normalisasi satuan | 1 | idea | — | — |
+| calc-konversi-panjang | konversi-panjang | /kalkulator/konversi-panjang | Konversi satuan panjang | sehari-hari | Angka dan satuan asal dan tujuan | Panjang hasil | Konversi melalui meter | 1 | idea | — | — |
+| calc-konversi-berat | konversi-berat | /kalkulator/konversi-berat | Konversi satuan massa | sehari-hari | Angka dan satuan asal dan tujuan | Massa hasil | Konversi melalui kilogram | 1 | idea | — | — |
+| calc-konversi-suhu | konversi-suhu | /kalkulator/konversi-suhu | Konversi Celsius, Fahrenheit dan Kelvin | sehari-hari | Suhu dan skala asal dan tujuan | Suhu hasil | Transformasi linear dengan batas nol mutlak | 1 | idea | — | — |
+| calc-kecepatan-rata-rata | kecepatan-rata-rata | /kalkulator/kecepatan-rata-rata | Kecepatan dari jarak dan waktu perjalanan | sehari-hari | Jarak, durasi dan satuan | Kecepatan rata-rata | Jarak ÷ durasi dalam satuan terpilih | 1 | idea | — | — |
+
+## Pemisahan intent dan canonical
+
+Setiap baris menetapkan satu canonical untuk hasil yang dicari. Judul, contoh, input, dan tautan internal perlu mencerminkan pembeda di bawah saat alat diterbitkan. Gunakan mode atau kata kunci tambahan di halaman yang sama jika variasinya hanya berbeda istilah.
+
+| Kelompok rawan tumpang tindih | Keputusan |
+| --- | --- |
+| HPP, harga pokok penjualan, food cost, biaya layanan, dan harga per satuan | Pertahankan `/kalkulator/hpp` untuk biaya produksi batch. Harga pokok penjualan memakai mutasi persediaan, food cost merinci bahan resep, biaya layanan mengalokasikan biaya per transaksi, dan harga per satuan membandingkan kemasan. |
+| Harga jual, markup, margin, gross-up, harga listing marketplace | Gunakan basis yang disebut di judul. Harga jual mencari harga dari target margin, margin membagi laba dengan penjualan, markup membaginya dengan biaya. Gross-up pajak mencari bruto dari potongan tunggal. Harga listing marketplace membalikkan settlement dari dana target. Bagikan aritmetika invers jika cocok. |
+| BEP, target laba, payback, refinancing, runway | BEP mencari volume impas, target laba mencari volume untuk laba positif, payback mencari waktu pengembalian investasi, refinancing membandingkan dua pinjaman, dan runway mengukur umur cadangan kas. Target laba nol mengikuti engine BEP dan dapat ditautkan ke halaman BEP. |
+| TikTok Shop, Tokopedia, Shopee, Lazada, Blibli dan perbandingan kanal | Pertahankan `/kalkulator/tiktok` untuk dana bersih penjual. Bagikan komponen settlement, tetapi terbitkan halaman per kanal hanya setelah basis potongan dan alur input berbeda bisa dibuktikan. Perbandingan menjalankan beberapa skenario berdampingan. Jika TikTok Shop dan Tokopedia akhirnya memakai aturan dan alur identik, satukan perhitungan pada canonical yang sudah ada dan evaluasi entri Tokopedia sebelum publikasi. |
+| TikTok Shop, estimasi TikTok kreator, estimasi YouTube | Intent penjual ada di `/kalkulator/tiktok`. Dua estimasi kreator dapat berbagi mesin RPM, dengan basis tayangan serta asumsi yang relevan untuk program masing-masing. Jika keduanya hanya berbeda nama, konsolidasikan ke satu alat RPM dan revisi inventaris sebelum penerbitan. |
+| ROAS, ACOS, ROAS impas, CPM, CPC, CPA, CTR, konversi toko | Bagikan operasi rasio. ROAS mengukur pendapatan per biaya, ACOS menyajikan porsi belanja iklan, dan ROAS impas mencari ambang berbasis kontribusi. CPM, CPC, dan CPA memiliki denominator berbeda. CTR berakhir di klik iklan, konversi toko berakhir di pembelian. |
+| Bunga sederhana, deposito, majemuk, target tabungan, inflasi | Bagikan operasi bunga dan nilai masa depan. Deposito merinci hasil bersih sampai jatuh tempo. Target tabungan mencari besar setoran. Inflasi mengubah harga dan daya beli. |
+| Anuitas, flat, bunga efektif pinjaman, KPR, pelunasan dipercepat | Pisahkan jadwal angsuran tetap, bunga pokok awal, tingkat efektif tersirat, pergantian fase KPR, dan dampak tambahan pokok. KPR dan pelunasan memakai ulang amortisasi. |
+| Return investasi, CAGR, laba saham, NPV, nilai kini | Return mengukur kenaikan bersih, CAGR menahunkannya, laba saham memakai lot dan biaya transaksi, NPV mendiskonto banyak arus kas, dan nilai kini mendiskonto satu pembayaran. Bagikan fungsi diskonto. |
+| PPh 21 bulanan dan rekonsiliasi | Canonical bulanan menangani potongan masa reguler. Canonical rekonsiliasi menangani pajak tahunan dan selisih pada masa akhir. PPN termasuk dan di luar harga tetap dua mode di satu halaman. |
+| Persen, perubahan persen, pertumbuhan pengikut, engagement, diskon | Persen mengubah rasio menjadi bagian atau sebaliknya. Perubahan persen punya nilai awal dan akhir. Pertumbuhan pengikut memakai mesin perubahan yang sama dengan input dan output metrik pengikut. Engagement membagi interaksi dengan basis terpilih. Diskon menangani harga dan urutan potongan. |
+| Selisih tanggal, hari kerja, usia dan durasi kerja | Bagikan primitif kalender bila sesuai. Selisih tanggal menghitung hari kalender, hari kerja mengecualikan jadwal libur, usia menyajikan periode kalender, dan durasi kerja mengolah jam serta jeda. |
+| Stok cover, perputaran stok, reorder point dan EOQ | Pisahkan cakupan stok harian, perputaran berdasarkan nilai periode, ambang pemesanan, dan ukuran pesanan ekonomis. |
+| Harga borongan, tarif freelance, endorsement | Borongan menghitung biaya dan laba satu proyek. Tarif freelance mengalokasikan kebutuhan tahunan ke jam tertagih. Endorsement memasukkan hak penggunaan konten. Bagikan fungsi penjumlahan biaya bila sesuai. |
+| Retur dan gagal COD | Retur memakai biaya bersih setelah pemulihan barang. COD memakai kegagalan serah terima. Bagikan fungsi biaya ekspektasian. |
+| Konversi satuan, berat volumetrik dan skala denah | Satu canonical per dimensi untuk seluruh pasangan unit. Berat volumetrik menerapkan pembagi kurir dan membandingkan berat aktual. Skala denah menerapkan rasio gambar. |
+
+Sebelum cutover, cocokkan usulan ini dengan peta URL, kueri, dan intent situs lama. Audit baseline tetap mengikuti jadwal pada spesifikasi produk. Belum ada pengalihan URL pada tahap inventaris.
