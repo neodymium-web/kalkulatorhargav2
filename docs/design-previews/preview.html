@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="id">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Preview sistem desain KalkulatorHarga</title>
+<style>
+:root {
+  --surface-page: #fff;
+  --surface-subtle: #f8fafc;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --border-subtle: #e2e8f0;
+  --border-control: #64748b;
+  --action-primary: #2563eb;
+  --action-hover: #1d4ed8;
+  --action-active: #1e40af;
+  --text-on-action: #fff;
+  --focus-ring: #2563eb;
+  --focus-offset: 3px;
+  --text-error: #991b1b;
+  --surface-error: #fef2f2;
+  --text-success: #166534;
+  --surface-success: #f0fdf4;
+  --surface-disabled: #f1f5f9;
+  --font-ui: system-ui, sans-serif;
+  --text-small: 0.875rem/1.5;
+  --text-body: 1rem/1.5;
+  --text-section: 1.25rem/1.3;
+  --text-title: clamp(1.875rem, 4vw, 3rem);
+  --text-result: clamp(1.5rem, 3.5vw, 2.5rem);
+  --space-1: .25rem;
+  --space-2: .5rem;
+  --space-3: .75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --radius-control: .5rem;
+  --radius-panel: .75rem;
+  --target-min: 2.75rem;
+  --control-size: 3rem;
+  --container-max: 75rem;
+  --measure-prose: 65ch;
+  --motion-fast: 120ms;
+  --motion-ease: ease-out;
+  --gutter: clamp(var(--space-3), calc(7.2727vw - .7045rem), var(--space-4));
+  --listing-columns: 1;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0; background: var(--surface-page); color: var(--text-primary); font: var(--text-body) var(--font-ui); }
+h1, h2, p, dl, dd { margin: 0; }
+h1 { font-size: var(--text-title); line-height: 1.1; font-weight: 750; letter-spacing: -.04em; }
+h2 { font: 650 var(--text-section) var(--font-ui); }
+a { color: var(--action-primary); text-underline-offset: .2em; }
+:focus-visible { outline: 3px solid var(--focus-ring); outline-offset: var(--focus-offset); }
+.wrap { width: min(calc(100% - var(--gutter) * 2), var(--container-max)); margin-inline: auto; }
+.site-header { border-bottom: 1px solid var(--border-subtle); }
+.site-header nav { display: flex; justify-content: space-between; align-items: center; gap: var(--space-4); min-height: var(--space-16); }
+.brand { font-weight: 800; color: var(--text-primary); text-decoration: none; }
+.brand span { color: var(--action-primary); }
+.site-header a, .crumb a, .category-link { display: inline-flex; align-items: center; min-height: var(--target-min); }
+.skip { position: absolute; inset-inline-start: var(--space-4); inset-block-start: var(--space-2); background: var(--surface-page); padding: var(--space-2); }
+.skip:not(:focus) { clip-path: inset(50%); width: 1px; height: 1px; overflow: hidden; }
+.hero { padding-block: var(--space-12); background: var(--surface-subtle); border-bottom: 1px solid var(--border-subtle); }
+.intro { margin-top: var(--space-3); color: var(--text-secondary); max-width: var(--measure-prose); }
+.search { margin-top: var(--space-6); max-width: 40rem; }
+label { display: block; margin-bottom: var(--space-1); font-weight: 650; }
+input, button { min-height: var(--control-size); border-radius: var(--radius-control); font: inherit; }
+input { width: 100%; padding: var(--space-2) var(--space-3); border: 1px solid var(--border-control); background: var(--surface-page); color: var(--text-primary); }
+input[aria-invalid=true] { border-color: var(--text-error); }
+button { background: var(--action-primary); color: var(--text-on-action); border: 0; padding-inline: var(--space-4); font-weight: 700; cursor: pointer; transition: background-color var(--motion-fast) var(--motion-ease); }
+button:hover { background: var(--action-hover); }
+button:active { background: var(--action-active); }
+button:disabled { background: var(--surface-disabled); color: var(--text-secondary); cursor: default; }
+@media (prefers-reduced-motion: reduce) { button { transition: none; } }
+.content { padding-block: var(--space-8); }
+.listing { display: grid; grid-template-columns: repeat(var(--listing-columns), minmax(0, 1fr)); gap: var(--space-4); list-style: none; padding: 0; margin: var(--space-4) 0 0; }
+.card { display: block; padding: var(--space-4); border: 1px solid var(--border-subtle); border-radius: var(--radius-panel); min-height: var(--target-min); text-decoration: none; }
+.card:hover strong { text-decoration: underline; }
+.card span { display: block; color: var(--text-secondary); margin-top: var(--space-1); }
+.categories, .tools { margin-top: var(--space-8); }
+.crumb { display: flex; align-items: center; flex-wrap: wrap; gap: var(--space-2); font: var(--text-small) var(--font-ui); margin-bottom: var(--space-3); }
+.crumb > * + *::before { content: '/'; margin-right: var(--space-2); color: var(--text-secondary); }
+.calculator { display: grid; gap: var(--space-4); margin-top: var(--space-6); align-items: start; }
+.panel { border: 1px solid var(--border-subtle); border-radius: var(--radius-panel); padding: var(--space-4); min-width: 0; }
+.hint, .error { color: var(--text-secondary); font: var(--text-small) var(--font-ui); margin-top: var(--space-2); }
+.error { color: var(--text-error); background: var(--surface-error); padding: var(--space-2); border-radius: var(--radius-control); }
+.field { margin-block: var(--space-4); }
+.panel button { width: 100%; }
+.result { background: var(--surface-subtle); }
+.result dl { margin-top: var(--space-4); font-variant-numeric: tabular-nums; }
+.result dd { font-size: var(--text-result); font-weight: 750; line-height: 1.15; overflow-wrap: anywhere; margin-top: var(--space-1); }
+.result .secondary { border-top: 1px solid var(--border-subtle); padding-top: var(--space-3); margin-top: var(--space-4); }
+.result .secondary dd { font-size: 1.25rem; }
+.method { max-width: var(--measure-prose); margin-top: var(--space-8); }
+.method p { margin-top: var(--space-2); }
+.site-footer { border-top: 1px solid var(--border-subtle); padding-block: var(--space-4); color: var(--text-secondary); font: var(--text-small) var(--font-ui); }
+@media (min-width: 48rem) {
+  :root { --gutter: var(--space-6); --listing-columns: 2; }
+  .calculator { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-6); }
+  .panel { padding: var(--space-6); }
+  .panel button { width: auto; }
+}
+@media (min-width: 64rem) {
+  :root { --gutter: var(--space-8); --listing-columns: 3; }
+  .calculator { grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); }
+}
+@media (min-width: 90rem) { .calculator { gap: var(--space-8); } }
+</style>
+<body>
+<a class="skip" href="#konten">Langsung ke konten</a>
+<header class="site-header">
+  <nav class="wrap" aria-label="Navigasi utama">
+    <a class="brand" href="?page=home">Kalkulator<span>Harga</span></a>
+    <a href="?page=category">Bisnis</a>
+  </nav>
+</header>
+<main id="konten">
+  <div data-page="home">
+    <section class="hero">
+      <div class="wrap">
+        <h1>Direktori kalkulator</h1>
+        <p class="intro">Temukan alat hitung untuk kebutuhan bisnis Anda.</p>
+        <div class="search" role="search">
+          <label for="query">Cari kalkulator</label>
+          <input id="query" type="search" placeholder="Contoh: biaya produksi">
+        </div>
+      </div>
+    </section>
+    <div class="wrap content">
+      <h2>Kalkulator tersedia</h2>
+      <ul class="listing"><li><a class="card" href="?page=hpp"><strong>Kalkulator HPP</strong><span>Hitung total biaya produksi dan harga pokok produksi per unit.</span></a></li></ul>
+      <section class="categories">
+        <h2>Jelajahi kategori</h2>
+        <a class="category-link" href="?page=category">Bisnis</a>
+      </section>
+    </div>
+  </div>
+  <div class="wrap content" data-page="category" hidden>
+    <nav class="crumb" aria-label="Jejak navigasi"><a href="?page=home">Beranda</a><span aria-current="page">Bisnis</span></nav>
+    <h1>Kalkulator bisnis</h1>
+    <p class="intro">Hitung biaya produksi untuk mengetahui modal per unit.</p>
+    <section class="tools">
+      <h2>Kalkulator tersedia</h2>
+      <ul class="listing"><li><a class="card" href="?page=hpp"><strong>Kalkulator HPP</strong><span>Hitung total biaya produksi dan harga pokok produksi per unit.</span></a></li></ul>
+    </section>
+  </div>
+  <div class="wrap content" data-page="hpp" hidden>
+    <nav class="crumb" aria-label="Jejak navigasi"><a href="?page=home">Beranda</a><a href="?page=category">Bisnis</a><span aria-current="page">Kalkulator HPP</span></nav>
+    <h1>Kalkulator HPP</h1>
+    <p class="intro">Hitung total biaya produksi dan harga pokok produksi per unit.</p>
+    <div class="calculator">
+      <section class="panel" aria-labelledby="form-heading">
+        <h2 id="form-heading">Biaya satu kali produksi</h2>
+        <p class="hint" id="format">Masukkan rupiah bulat tanpa titik atau koma. Isi 0 jika biaya tidak ada.</p>
+        <div class="field"><label for="materials">Bahan baku (Rp)</label><input id="materials" inputmode="numeric" aria-describedby="format" value="120000"></div>
+        <div class="field"><label for="labor">Tenaga kerja langsung (Rp)</label><input id="labor" inputmode="numeric" aria-describedby="format" value="60000"></div>
+        <div class="field"><label for="overhead">Overhead produksi (Rp)</label><input id="overhead" inputmode="numeric" aria-describedby="format" value="20000"></div>
+        <div class="field"><label for="units">Jumlah unit</label><input id="units" inputmode="numeric" value="50"><p id="units-error" class="error" hidden>Jumlah unit harus lebih dari nol.</p></div>
+        <button type="button">Hitung HPP</button>
+      </section>
+      <section class="panel result" aria-labelledby="result-heading">
+        <h2 id="result-heading">Hasil perhitungan</h2>
+        <dl id="result-values">
+          <div><dt>HPP per unit</dt><dd>Rp 4.000</dd></div>
+          <div class="secondary"><dt>Total biaya produksi</dt><dd>Rp 200.000</dd></div>
+        </dl>
+        <p id="result-message" class="hint" hidden></p>
+      </section>
+    </div>
+    <article class="method">
+      <h2>Cara menghitung HPP</h2>
+      <p>Jumlahkan bahan baku, tenaga kerja langsung, dan overhead produksi. Bagi total biaya dengan jumlah unit yang selesai diproduksi.</p>
+    </article>
+  </div>
+</main>
+<footer class="wrap site-footer">KalkulatorHarga · Preview desain</footer>
+<script>
+const params = new URLSearchParams(location.search)
+const page = ['home', 'category', 'hpp'].includes(params.get('page')) ? params.get('page') : 'home'
+for (const section of document.querySelectorAll('[data-page]')) section.hidden = section.dataset.page !== page
+const state = params.get('state')
+if (page === 'hpp' && ['empty', 'invalid'].includes(state)) {
+  document.querySelector('#result-values').hidden = true
+  const message = document.querySelector('#result-message')
+  message.hidden = false
+  message.textContent = state === 'invalid' ? 'Periksa jumlah unit sebelum menghitung.' : 'Isi biaya dan jumlah unit untuk melihat hasil.'
+  const units = document.querySelector('#units')
+  if (state === 'invalid') {
+    units.value = '0'
+    units.setAttribute('aria-invalid', 'true')
+    units.setAttribute('aria-describedby', 'units-error')
+    document.querySelector('#units-error').hidden = false
+  } else {
+    for (const input of document.querySelectorAll('[data-page="hpp"] input')) input.value = ''
+  }
+}
+</script>
+</body>
+</html>
