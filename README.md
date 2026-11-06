@@ -9,3 +9,21 @@ SEO-first, utility-first Indonesian calculator platform built with Next.js and T
 - Do not connect the existing production domain until migration review and explicit approval.
 
 See `AGENTS.md` for engineering rules and `docs/` for project specifications.
+
+## Local development
+
+Use Node.js 22. Run `npm ci` and `npm run dev`, then open http://localhost:3000.
+
+Run the same checks as CI:
+
+```sh
+npm run typecheck
+npm test
+npm run build
+npx playwright install chromium
+npm run e2e
+```
+
+Playwright starts the local production build on port 3100 and saves desktop and mobile screenshots in `test-results/`.
+
+Indexing is disabled by default. Only set `SITE_INDEXABLE=true` at build time for an approved production cutover. Vercel preview and development builds ignore that opt-in.

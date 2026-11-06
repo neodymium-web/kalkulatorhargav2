@@ -17,7 +17,6 @@ jobs:
   quality:
     name: Typecheck, tests, build
     runs-on: ubuntu-latest
-    if: ${{ hashFiles('package.json') != '' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -32,9 +31,19 @@ jobs:
       - name: Typecheck
         run: npm run typecheck
       - name: Unit tests
-        run: npm test -- --run
+        run: npm test
       - name: Production build
         run: npm run build
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Browser smoke tests
+        run: npm run e2e
+      - name: Upload browser evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: browser-evidence
+          path: test-results/
   project-metadata:
     name: Policy files
     runs-on: ubuntu-latest
