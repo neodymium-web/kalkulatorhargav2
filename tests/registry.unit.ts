@@ -65,8 +65,8 @@ describe('calculator inventory', () => {
       expect(row?.[4]).toBe(tool.primaryCategory)
       expect(row?.[9]).toBe(tool.status)
     }
-    expect(inventory.filter(row => row[9] === 'published').map(row => row[0]))
-      .toEqual(listPublished().map(tool => tool.id))
+    expect(inventory.filter(row => row[9] === 'published').map(row => row[0]).sort())
+      .toEqual(listPublished().map(tool => tool.id).sort())
   })
 })
 

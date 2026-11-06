@@ -2,6 +2,9 @@ import type { ComponentType } from 'react'
 import { businessTools, type BusinessSlug } from '../../lib/business/tools'
 import { BusinessForm } from './business-form'
 import { BusinessMethodology } from './business-methodology'
+import { operationTools, type OperationSlug } from '../../lib/operations/tools'
+import { OperationsForm } from './operations-form'
+import { OperationsMethodology } from './operations-methodology'
 import { HppForm } from './hpp-form'
 import { HppMethodology } from './hpp'
 
@@ -14,6 +17,13 @@ export const views: Readonly<Record<string, CalculatorView | undefined>> = {
     const view: CalculatorView = {
       Form: () => <BusinessForm slug={slug} />,
       Methodology: ({ formulaVersion }) => <BusinessMethodology slug={slug} formulaVersion={formulaVersion} />,
+    }
+    return [slug, view]
+  })),
+  ...Object.fromEntries((Object.keys(operationTools) as OperationSlug[]).map(slug => {
+    const view: CalculatorView = {
+      Form: () => <OperationsForm slug={slug} />,
+      Methodology: ({ formulaVersion }) => <OperationsMethodology slug={slug} formulaVersion={formulaVersion} />,
     }
     return [slug, view]
   })),
