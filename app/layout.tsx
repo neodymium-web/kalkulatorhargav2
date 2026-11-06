@@ -1,6 +1,10 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
+import { SiteHeader } from '../components/site-header'
+import { listCategoryHubs } from '../lib/registry'
+import layout from '../components/ui/layout.module.css'
+import styles from '../components/site-header.module.css'
 import { canonicalOrigin, indexable } from '../lib/seo'
+import './tokens.css'
 import './style.css'
 
 export const metadata: Metadata = {
@@ -13,13 +17,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="id">
       <body>
-        <a className="skip" href="#konten">Langsung ke konten</a>
-        <header className="site-header"><nav className="wrap" aria-label="Navigasi utama">
-          <Link href="/" className="brand">Kalkulator<span>Harga</span></Link>
-          <Link href="/bisnis">Bisnis</Link>
-        </nav></header>
-        <main id="konten">{children}</main>
-        <footer className="wrap site-footer">KalkulatorHarga</footer>
+        <SiteHeader hubs={listCategoryHubs()} />
+        <main id="konten" tabIndex={-1}>{children}</main>
+        <footer className={`${layout.container} ${styles.footer}`}>KalkulatorHarga</footer>
       </body>
     </html>
   )

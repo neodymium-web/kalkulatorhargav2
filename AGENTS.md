@@ -11,6 +11,8 @@ Build an Indonesian, SEO-first, utility-first platform with exactly 100 genuinel
 - If an issue contains ambiguous fee/rate data, implement a clearly marked source-verified data workflow instead of inventing a figure.
 
 ## Required stack
+
+- Follow `docs/DESIGN_SYSTEM.md` for every UI contribution and reuse the patterns in `docs/UI_COMPONENTS.md`.
 - Next.js App Router + React + TypeScript, strict mode.
 - Shared design tokens and reusable accessible UI components; Tailwind CSS and shadcn/ui may be introduced as the consistent design system.
 - Pure, testable TypeScript calculator engines; Zod schemas for input validation.

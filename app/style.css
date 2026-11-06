@@ -1,60 +1,15 @@
-:root {
-  --paper: #fff;
-  --surface: #f8fafc;
-  --ink: #0f172a;
-  --muted: #475569;
-  --line: #e2e8f0;
-  --input-line: #64748b;
-  --accent: #2563eb;
-  --error: #a52222;
-  --measure: 75rem;
-  --radius: 0.5rem;
-}
 * { box-sizing: border-box; }
-body { margin: 0; background: var(--paper); color: var(--ink); font: 1rem/1.55 system-ui, sans-serif; }
-a { color: var(--accent); text-underline-offset: 0.2em; }
-:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
-.wrap { width: min(calc(100% - 2rem), var(--measure)); margin-inline: auto; }
-.site-header { border-bottom: 1px solid var(--line); }
-.site-header nav { min-height: 4rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
-.site-header a, .breadcrumb a, .categories a { display: inline-flex; align-items: center; min-height: 44px; }
-.brand { color: var(--ink); font-weight: 800; text-decoration: none; }
-.brand span { color: var(--accent); }
-.page { padding-block: clamp(1.5rem, 4vw, 3.5rem); }
-.home { padding-top: clamp(2.5rem, 7vw, 6rem); }
-h1, h2, h3, p { margin: 0; }
-h1 { font-size: clamp(2rem, 5.5vw, 4rem); line-height: 1.08; letter-spacing: -0.045em; }
-h2 { font-size: 1.25rem; line-height: 1.25; }
-h3 { font-size: 1.05rem; }
-.intro { color: var(--muted); margin: 0.75rem 0 1.75rem; max-width: 60ch; }
-.search { max-width: 40rem; margin-bottom: 2rem; }
-label { display: block; font-weight: 650; margin-bottom: 0.25rem; }
-input, button { font: inherit; border-radius: var(--radius); min-height: 44px; }
-input { width: 100%; background: var(--paper); color: var(--ink); border: 1px solid var(--input-line); padding: 0.5rem 0.75rem; }
-input[aria-invalid=true] { border-color: var(--error); }
-button { background: var(--accent); color: var(--paper); border: 0; padding: 0.5rem 1rem; font-weight: 700; cursor: pointer; }
-.directory { list-style: none; padding: 0; margin: 0.75rem 0 0; max-width: 40rem; }
-.directory a { display: block; border: 1px solid var(--line); border-radius: var(--radius); padding: 1rem; background: var(--surface); text-decoration: none; }
-.directory a:hover strong { text-decoration: underline; }
-.directory span { display: block; color: var(--muted); }
-.categories { margin-top: 2rem; }
-.breadcrumb { display: flex; align-items: center; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.5rem; font-size: 0.9rem; }
-.breadcrumb > * + *::before { content: '/'; color: var(--muted); margin-right: 0.5rem; }
-.calculator { display: grid; gap: 1rem; max-width: 62rem; }
-.entry, .result { padding: clamp(1rem, 3vw, 1.5rem); border: 1px solid var(--line); border-radius: var(--radius); min-width: 0; }
-.entry > p, .result p { margin-top: 0.5rem; color: var(--muted); }
-.field { margin-block: 1rem; }
-.error { color: var(--error); margin-top: 0.25rem; }
-.result { background: var(--surface); }
-.result dl { margin-bottom: 0; font-variant-numeric: tabular-nums; }
-.result dd { margin: 0 0 0.75rem; font-weight: 750; font-size: clamp(1.25rem, 3vw, 2rem); overflow-wrap: anywhere; }
-.methodology { margin-block: 2rem; max-width: 65ch; }
-.methodology p { margin-top: 0.5rem; }
-.methodology h3 { margin-top: 1.25rem; }
-.version, .site-footer { color: var(--muted); font-size: 0.875rem; }
-.site-footer { border-top: 1px solid var(--line); padding-block: 1rem; }
-.sr-only, .skip:not(:focus) { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
-.skip:focus { position: absolute; top: 0.5rem; left: 1rem; background: var(--paper); padding: 0.5rem; z-index: 1; }
-@media (min-width: 48rem) {
-  .calculator { grid-template-columns: 1.25fr 1fr; align-items: start; }
+
+body {
+  margin: 0;
+  background: var(--surface-page);
+  color: var(--text-primary);
+  font: var(--text-body) var(--font-ui);
 }
+
+h1, h2, h3, p, dl, dd { margin: 0; }
+h1 { font-size: var(--text-title); line-height: 1.1; font-weight: var(--weight-title); letter-spacing: -.04em; }
+h2 { font: var(--weight-label) var(--text-section) var(--font-ui); }
+h3 { font-size: 1.0625rem; }
+a { color: var(--action-primary); text-underline-offset: .2em; }
+:focus-visible { outline: var(--focus-width) solid var(--focus-ring); outline-offset: var(--focus-offset); }

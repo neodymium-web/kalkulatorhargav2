@@ -1,3 +1,4 @@
+import styles from '../../components/ui/layout.module.css'
 import { Breadcrumb } from '../../components/breadcrumb'
 import { Directory } from '../../components/directory'
 import { listCategory } from '../../lib/registry'
@@ -10,10 +11,10 @@ const business = categories.bisnis
 export const metadata = pageMetadata('Kalkulator Bisnis', 'Temukan alat hitung biaya produksi untuk usaha Anda.', business.hub)
 
 export default function Business() {
-  return <div className="wrap page">
+  return <div className={`${styles.container} ${styles.page}`}>
     <Breadcrumb current={business.name} />
     <h1>Kalkulator bisnis</h1>
-    <p className="intro">Hitung biaya produksi untuk mengetahui modal per unit.</p>
-    <Directory tools={listCategory('bisnis').map(directoryEntry)} />
+    <p className={styles.intro}>Hitung biaya produksi untuk mengetahui modal per unit.</p>
+    <div className={styles.section}><Directory tools={listCategory('bisnis').map(directoryEntry)} /></div>
   </div>
 }
