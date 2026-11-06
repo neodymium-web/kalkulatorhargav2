@@ -51,7 +51,7 @@ test('blocks preview indexing and lists only published URLs', async ({ request }
 test('keeps the HPP canonical and returns 404 for unpublished calculators', async ({ page, request }) => {
   await page.goto('/kalkulator/hpp')
   await expect(page.locator('link[rel=canonical]')).toHaveAttribute('href', 'https://kalkulatorharga.com/kalkulator/hpp')
-  for (const slug of ['tiktok', 'shopee', 'tidak-ada']) {
+  for (const slug of ['tiktok', 'tiktok-shop', 'estimasi-tiktok-kreator', 'shopee', 'tidak-ada']) {
     expect((await request.get(`/kalkulator/${slug}`)).status()).toBe(404)
   }
 })

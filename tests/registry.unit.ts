@@ -17,8 +17,8 @@ const hpp = listPublished()[0]
 const draft: CalculatorDefinition = {
   ...hpp,
   id: 'calc-tiktok',
-  slug: 'tiktok',
-  path: '/kalkulator/tiktok',
+  slug: 'tiktok-shop',
+  path: '/kalkulator/tiktok-shop',
   primaryCategory: 'marketplace',
   secondaryCategories: ['bisnis'],
   status: 'draft',
@@ -42,7 +42,20 @@ describe('calculator inventory', () => {
       expect(row[2]).toBe(`/kalkulator/${row[1]}`)
       expect(Object.hasOwn(categories, row[4])).toBe(true)
     }
-    expect(inventory.find(row => row[1] === 'tiktok')?.[2]).toBe('/kalkulator/tiktok')
+  })
+
+  it('reserves the existing TikTok canonicals for distinct creator and seller intents', () => {
+    const creator = inventory.find(row => row[0] === 'calc-estimasi-tiktok-kreator')
+    const seller = inventory.find(row => row[0] === 'calc-tiktok')
+    expect(creator?.slice(1, 5)).toEqual([
+      'tiktok', '/kalkulator/tiktok', expect.stringMatching(/penghasilan.*engagement.*endorse/), 'media-sosial',
+    ])
+    expect(seller?.slice(1, 5)).toEqual([
+      'tiktok-shop', '/kalkulator/tiktok-shop', expect.stringMatching(/TikTok Shop.*dana cair.*penjual/), 'marketplace',
+    ])
+    expect(creator?.[9]).toBe('idea')
+    expect(seller?.[9]).toBe('idea')
+    expect(inventory.some(row => row[1] === 'estimasi-tiktok-kreator')).toBe(false)
   })
 
   it('keeps the registry aligned with the proposed canonical and status', () => {
