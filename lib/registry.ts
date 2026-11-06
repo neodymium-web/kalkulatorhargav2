@@ -1,5 +1,6 @@
 import { categories, type CategoryId } from './categories'
 import { calculateHpp, formulaVersion } from './hpp'
+import { businessTools, type BusinessSlug } from './business/tools'
 
 type SchemaField = {
   id: string
@@ -43,6 +44,19 @@ export type CalculatorDefinition = CalculatorRecord & (
 
 export type PublishedCalculator = Extract<CalculatorDefinition, { status: 'published' }>
 
+const businessDefinitions = (Object.keys(businessTools) as BusinessSlug[]).map((slug): PublishedCalculator => {
+  const { title, description, keywords, inputFields, outputFields, engine, formulaVersion, testCases } = businessTools[slug]
+  const [first, ...rest] = testCases
+  const testReference = (name: string) => ({ file: 'tests/business.unit.ts', name })
+  return {
+    id: `calc-${slug}`, slug, path: `/kalkulator/${slug}`,
+    primaryCategory: 'bisnis', secondaryCategories: [],
+    metadata: { locale: 'id-ID', title, description, keywords },
+    inputFields, outputFields, officialSources: [], status: 'published',
+    implementation: { engine, formulaVersion, testCases: [testReference(first), ...rest.map(testReference)] },
+  }
+})
+
 export const definitions: readonly CalculatorDefinition[] = [{
   id: 'production-cost',
   slug: 'hpp',
@@ -78,7 +92,7 @@ export const definitions: readonly CalculatorDefinition[] = [{
       { file: 'tests/hpp.unit.ts', name: 'rejects invalid cost %s' },
     ],
   },
-}]
+}, ...businessDefinitions]
 
 export function listPublished(records = definitions): PublishedCalculator[] {
   return records.filter(tool => tool.status === 'published')

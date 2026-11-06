@@ -1,6 +1,6 @@
 # Inventaris 100 kalkulator
 
-Inventaris ini menetapkan usulan slug dan intent untuk setiap alat. HPP sudah terbit. Baris berstatus ide belum memiliki rute publik. ID untuk ide memakai awalan `calc-`. ID TikTok yang sudah dicatat tetap mengikuti alatnya saat slug dikoreksi. Setelah implementasi, simpan ID saat mengubah nama tampilan atau URL.
+Inventaris ini menetapkan usulan slug dan intent untuk setiap alat. HPP dan lima alat bisnis pertama sudah terbit. Baris berstatus ide belum memiliki rute publik. ID untuk ide memakai awalan `calc-`. ID TikTok yang sudah dicatat tetap mengikuti alatnya saat slug dikoreksi. Setelah implementasi, simpan ID saat mengubah nama tampilan atau URL.
 
 Tingkat 1 memakai rumus langsung. Tingkat 2 melibatkan beberapa mode, jadwal, satuan, atau kebijakan pembulatan. Tingkat 3 membutuhkan aturan bertanggal, pencarian solusi, atau verifikasi domain yang lebih ketat. Kolom sumber menjelaskan kebutuhan tarif dinamis. Tanda “—” berarti alat tidak memerlukan data tarif eksternal. Input manual berasal dari pengguna dan ditampilkan sebagai asumsi.
 
@@ -10,11 +10,11 @@ Tingkat 1 memakai rumus langsung. Tingkat 2 melibatkan beberapa mode, jadwal, sa
 | ID | Slug | Canonical usulan | Intent | Kategori | Input | Output | Rumus atau mesin | Tingkat | Status | Sumber dinamis | Monetisasi |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | production-cost | hpp | /kalkulator/hpp | Biaya produksi satu batch per unit | bisnis | Bahan, tenaga kerja, overhead, unit | Total biaya dan HPP per unit | Jumlah biaya dibagi unit, pembulatan rupiah | 1 | published | — | — |
-| calc-harga-jual | harga-jual | /kalkulator/harga-jual | Harga jual untuk margin target | bisnis | HPP, margin target | Harga jual minimum | HPP ÷ (1 − margin) | 1 | idea | — | — |
-| calc-margin-laba | margin-laba | /kalkulator/margin-laba | Margin dari harga jual aktual | bisnis | Harga jual, biaya | Laba dan margin | Laba ÷ harga jual | 1 | idea | — | — |
-| calc-markup | markup | /kalkulator/markup | Persentase markup atas biaya | bisnis | Harga jual, biaya | Markup | Laba ÷ biaya | 1 | idea | — | — |
-| calc-bep | bep | /kalkulator/bep | Jumlah unit agar usaha impas | bisnis | Biaya tetap, harga, biaya variabel/unit | Unit impas | Pembulatan ke atas biaya tetap ÷ kontribusi/unit | 1 | idea | — | — |
-| calc-target-laba | target-laba | /kalkulator/target-laba | Target unit untuk laba tertentu | bisnis | Biaya tetap, kontribusi/unit, target laba | Unit penjualan | Pembulatan ke atas (biaya tetap + laba) ÷ kontribusi | 1 | idea | — | — |
+| calc-harga-jual | harga-jual | /kalkulator/harga-jual | Harga jual untuk margin target | bisnis | HPP, margin target | Harga jual minimum | HPP ÷ (1 − margin) | 1 | published | — | — |
+| calc-margin-laba | margin-laba | /kalkulator/margin-laba | Margin dari harga jual aktual | bisnis | Harga jual, biaya | Laba dan margin | Laba ÷ harga jual | 1 | published | — | — |
+| calc-markup | markup | /kalkulator/markup | Persentase markup atas biaya | bisnis | Harga jual, biaya | Markup | Laba ÷ biaya | 1 | published | — | — |
+| calc-bep | bep | /kalkulator/bep | Jumlah unit agar usaha impas | bisnis | Biaya tetap, harga, biaya variabel/unit | Unit impas | Pembulatan ke atas biaya tetap ÷ kontribusi/unit | 1 | published | — | — |
+| calc-target-laba | target-laba | /kalkulator/target-laba | Target unit untuk laba tertentu | bisnis | Biaya tetap, harga jual/unit, biaya variabel/unit, target laba | Unit penjualan | Pembulatan ke atas (biaya tetap + laba) ÷ kontribusi | 1 | published | — | — |
 | calc-harga-pokok-penjualan | harga-pokok-penjualan | /kalkulator/harga-pokok-penjualan | Biaya barang terjual selama periode | bisnis | Persediaan awal, pembelian bersih, persediaan akhir | Harga pokok penjualan | Awal + pembelian − akhir | 1 | idea | — | — |
 | calc-food-cost | food-cost | /kalkulator/food-cost | Biaya bahan makanan per porsi | bisnis | Harga kemasan, pemakaian tiap bahan, hasil porsi | Biaya resep dan per porsi | Jumlah biaya bahan proporsional ÷ porsi | 2 | idea | — | — |
 | calc-yield-bahan | yield-bahan | /kalkulator/yield-bahan | Susut saat menyiapkan bahan | bisnis | Berat kotor, berat bersih | Persentase hasil dan susut | Berat bersih ÷ berat kotor | 1 | idea | — | — |

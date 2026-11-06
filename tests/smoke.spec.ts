@@ -68,6 +68,11 @@ test('blocks preview indexing and lists only published URLs', async ({ request }
     '<loc>https://kalkulatorharga.com/</loc>',
     '<loc>https://kalkulatorharga.com/bisnis</loc>',
     '<loc>https://kalkulatorharga.com/kalkulator/hpp</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/harga-jual</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/margin-laba</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/markup</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/bep</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/target-laba</loc>',
   ])
 })
 
