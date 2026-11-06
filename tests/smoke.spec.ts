@@ -73,6 +73,11 @@ test('blocks preview indexing and lists only published URLs', async ({ request }
     '<loc>https://kalkulatorharga.com/kalkulator/markup</loc>',
     '<loc>https://kalkulatorharga.com/kalkulator/bep</loc>',
     '<loc>https://kalkulatorharga.com/kalkulator/target-laba</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/harga-pokok-penjualan</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/yield-bahan</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/penyusutan-garis-lurus</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/arus-kas</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/utilisasi-kapasitas</loc>',
   ])
 })
 

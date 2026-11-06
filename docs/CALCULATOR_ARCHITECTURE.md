@@ -29,3 +29,5 @@ Jika sumber belum terverifikasi, kedaluwarsa, atau tidak mencakup transaksi peng
 ## Verifikasi rumus batch bisnis
 
 Lihat [catatan verifikasi rumus](BUSINESS_FORMULA_VERIFICATION.md) untuk sumber, asumsi, pembulatan, dan contoh uji independen kelima alat.
+
+Lihat juga [verifikasi batch operasional](BATCH_2_FORMULA_VERIFICATION.md).

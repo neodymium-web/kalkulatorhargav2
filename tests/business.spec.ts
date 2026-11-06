@@ -74,12 +74,13 @@ for (const scenario of scenarios) {
   })
 }
 
-test('lists and finds all six published calculators and reflows at each design width', async ({ page, isMobile }) => {
-  const slugs = ['hpp', ...scenarios.map(tool => tool.slug)]
+test('lists and finds published business calculators and reflows at each design width', async ({ page, isMobile }) => {
+  const slugs = ['hpp', ...scenarios.map(tool => tool.slug), 'harga-pokok-penjualan', 'yield-bahan',
+    'penyusutan-garis-lurus', 'arus-kas', 'utilisasi-kapasitas']
   for (const path of ['/', '/bisnis']) {
     await page.goto(path)
     const listing = page.getByRole('region', { name: 'Kalkulator tersedia' })
-    await expect(listing.getByRole('link')).toHaveCount(6)
+    await expect(listing.getByRole('link')).toHaveCount(11)
     for (const slug of slugs) await expect(listing.locator(`a[href="/kalkulator/${slug}"]`)).toBeVisible()
   }
   await page.goto('/')
