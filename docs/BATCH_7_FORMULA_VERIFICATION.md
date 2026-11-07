@@ -58,6 +58,8 @@ Contoh independen:
 1. P=Rp1.000,r=12%,n=3: i=1%; A=1.000×0,01×1,01³/(1,01³−1)=Rp340,022111… sehingga C=Rp341. Bulan 1: bunga10, pokok331, bayar341, sisa669. Bulan 2: bunga halfUp(6,69)=7, pokok334, bayar341, sisa335. Bulan 3: bunga halfUp(3,35)=3, pokok335, bayar338, sisa0. Total bunga20; pembayaran1.020; **bukan 341×3=1.023**.
 2. P=Rp1.000,r=0,n=3: C=334; pembayaran334,334,332; bunga0; total1.000; penutup332. P=Rp1,r=100%,n=600: C=1, bunga pertama halfUp(1/12)=0, lunas pada bulan1; seluruh baris berikutnya0. P=0 memberi seluruh hasil dan jadwal0. n=0 invalid.
 
+Kasus pembulatan ekstrem yang juga diuji: P=Rp9,r=100%,n=600. Acuan Rp1; bunga bulanan halfUp(9/12)=Rp1, sehingga pokok tidak turun pada 599 bulan pertama. Bulan600 membayar Rp10, termasuk pokok9 dan bunga1. Total bunga600 dan pembayaran609. Karena pembayaran penutup bisa lebih besar dari acuan pada konvensi rupiah ini, hasil memberi peringatan eksplisit. Ini alasan tambahan untuk memakai jadwal, bukan acuan×tenor atau menganggap hasil sama dengan tagihan suatu bank.
+
 ## Cicilan Flat
 
 Intent: bunga atas **pokok awal**, tanpa penurunan dasar bunga. Dengan r flat tahunan, n bulan: pokok ideal/bulan=P/n; bunga ideal/bulan=Pr/12; total bunga nominal=Prn/12. Tarif flat tidak setara dengan tarif efektif saldo menurun dengan angka persen yang sama. Tidak ada konversi ekuivalen atau APR/IRR pada alat ini.

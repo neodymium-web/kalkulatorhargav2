@@ -1,0 +1,22 @@
+.schedule {
+  margin-top: var(--space-6);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-panel);
+  padding: var(--space-4);
+  min-width: 0;
+}
+.schedule summary {
+  cursor: pointer;
+  min-height: var(--target-min);
+  padding-block: var(--space-2);
+  font-weight: var(--weight-label);
+}
+.hint { color: var(--text-secondary); font: var(--text-small) var(--font-ui); margin-block: var(--space-2) var(--space-4); }
+.scroll { overflow: auto; max-height: 32rem; }
+.schedule table { border-collapse: collapse; width: 100%; min-width: 40rem; font-variant-numeric: var(--numeric-variant); }
+.schedule caption { text-align: start; font-weight: var(--weight-label); padding-bottom: var(--space-3); }
+.schedule th, .schedule td { text-align: end; padding: var(--space-3); white-space: nowrap; border-bottom: 1px solid var(--border-subtle); }
+.schedule thead, .schedule tfoot { background: var(--surface-subtle); }
+.schedule tfoot { font-weight: var(--weight-label); }
+.schedule th:first-child { text-align: start; }
+@media (min-width: 48rem) { .schedule { padding: var(--space-6); } }
