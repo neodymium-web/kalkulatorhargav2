@@ -401,7 +401,7 @@ describe('validation and catalogue', () => {
         expect(engine(input).success).toBe(false)
   })
   it('publishes exactly five new utilities without expanding the canonical inventory', () => {
-    expect(listPublished()).toHaveLength(81)
+    expect(listPublished()).toHaveLength(86)
     expect(listCategory('keuangan')).toHaveLength(20)
     expect(
       listCategory('keuangan')
@@ -409,7 +409,7 @@ describe('validation and catalogue', () => {
         .map((tool) => tool.slug),
     ).toEqual(['nilai-kini', 'npv', 'inflasi', 'rata-rata-beli-saham', 'untung-rugi-saham'])
     expect(listCategory('bisnis')).toHaveLength(20)
-    expect(listCategory('marketplace')).toHaveLength(11)
-    expect(sitemapPaths()).toHaveLength(87)
+    expect(listCategory('marketplace')).toHaveLength(16)
+    expect(sitemapPaths()).toHaveLength(92)
   })
 })

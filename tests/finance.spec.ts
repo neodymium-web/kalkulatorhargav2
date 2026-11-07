@@ -221,7 +221,7 @@ test('finance hub, navigation, search, sitemap and unpublished boundaries', asyn
     ).toBeVisible()
   }
   const xml = await (await request.get('/sitemap.xml')).text()
-  expect(xml.match(/<loc>/g)).toHaveLength(87)
+  expect(xml.match(/<loc>/g)).toHaveLength(92)
   expect(xml).toContain('<loc>https://kalkulatorharga.com/keuangan</loc>')
   for (const { slug } of scenarios)
     expect(xml).toContain(`<loc>https://kalkulatorharga.com/kalkulator/${slug}</loc>`)

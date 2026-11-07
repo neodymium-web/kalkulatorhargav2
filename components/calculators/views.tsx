@@ -1,3 +1,6 @@
+import { economicsTools, type EconomicsSlug } from '../../lib/marketplace-economics/tools'
+import { EconomicsForm } from './economics-form'
+import { EconomicsMethodology } from './economics-methodology'
 import { unitsTools, type UnitsSlug } from '../../lib/units-scale/tools'
 import { UnitsForm } from './units-form'
 import { UnitsMethodology } from './units-methodology'
@@ -164,6 +167,13 @@ export const views: Readonly<Record<string, CalculatorView | undefined>> = {
     const view: CalculatorView = {
       Form: () => <UnitsForm slug={slug} />,
       Methodology: ({ formulaVersion }) => <UnitsMethodology slug={slug} formulaVersion={formulaVersion} />,
+    }
+    return [slug, view]
+  })),
+  ...Object.fromEntries((Object.keys(economicsTools) as EconomicsSlug[]).map(slug => {
+    const view: CalculatorView = {
+      Form: () => <EconomicsForm slug={slug} />,
+      Methodology: ({ formulaVersion }) => <EconomicsMethodology slug={slug} formulaVersion={formulaVersion} />,
     }
     return [slug, view]
   })),

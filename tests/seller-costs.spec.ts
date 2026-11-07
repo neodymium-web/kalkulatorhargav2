@@ -91,7 +91,7 @@ test('packaging rows preserve input and focus; exact batch total', async ({ page
 })
 test('seller tools are discoverable and responsive', async ({ page, isMobile }) => {
   await page.goto('/marketplace')
-  await expect(page.getByRole('region', { name: 'Kalkulator tersedia' }).getByRole('link')).toHaveCount(11)
+  await expect(page.getByRole('region', { name: 'Kalkulator tersedia' }).getByRole('link')).toHaveCount(12)
   for (const { slug } of scenarios) {
     await page.goto('/')
     await page.getByRole('searchbox').fill(slug.replaceAll('-', ' '))
