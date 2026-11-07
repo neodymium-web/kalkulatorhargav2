@@ -72,7 +72,7 @@ test('discovers the batch and reflows five design widths', async ({ page, isMobi
   await page.goto('/bisnis')
   const listing = page.getByRole('region', { name: 'Kalkulator tersedia' })
   await listing.getByRole('button', { name: 'Muat lebih banyak' }).click()
-  await expect(listing.getByRole('link')).toHaveCount(16)
+  await expect(listing.getByRole('link')).toHaveCount(20)
   for (const { slug } of scenarios) await expect(listing.locator(`a[href="/kalkulator/${slug}"]`)).toBeVisible()
   if (isMobile) return
   for (const width of [320, 375, 768, 1024, 1440]) {

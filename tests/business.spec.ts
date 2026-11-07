@@ -81,7 +81,7 @@ test('lists and finds published business calculators and reflows at each design 
     await page.goto(path)
     const listing = page.getByRole('region', { name: 'Kalkulator tersedia' })
     if (path === '/bisnis') await listing.getByRole('button', { name: 'Muat lebih banyak' }).click()
-    await expect(listing.getByRole('link')).toHaveCount(path === '/' ? 12 : 16)
+    await expect(listing.getByRole('link')).toHaveCount(path === '/' ? 12 : 20)
     for (const slug of slugs) await expect(listing.locator(`a[href="/kalkulator/${slug}"]`)).toBeVisible()
   }
   await page.goto('/')
