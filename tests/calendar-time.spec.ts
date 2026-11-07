@@ -104,15 +104,15 @@ test('plain dates and shifts remain invariant in opposite timezone browser conte
     await page.goto('http://127.0.0.1:3100/kalkulator/durasi-kerja'); await fill(page, { start: '01:00', end: '04:00', endDay: 'same-day', break: '0' }); await submit(page); await expect(result(page).locator('dd').first()).toHaveText('3 jam 0 menit'); await context.close()
   }
 })
-test('ten everyday tools hub search sitemap sources 404 and staging protections', async ({ page, request, isMobile }, info) => {
+test('fifteen everyday tools hub search sitemap sources 404 and staging protections', async ({ page, request, isMobile }, info) => {
   await page.setViewportSize({ width: isMobile ? 375 : 1440, height: 900 }); await page.goto('/sehari-hari')
-  const listing = page.getByRole('region', { name: 'Kalkulator tersedia' }); await expect(listing.getByRole('link')).toHaveCount(10); await expect(listing.getByRole('button')).toHaveCount(0)
+  const listing = page.getByRole('region', { name: 'Kalkulator tersedia' }); await expect(listing.getByRole('link')).toHaveCount(12); await listing.getByRole('button', { name: 'Muat lebih banyak' }).press('Enter'); await expect(listing.getByRole('link')).toHaveCount(15); await expect(listing.getByRole('button')).toHaveCount(0)
   await expect(page.locator('link[rel=canonical]')).toHaveAttribute('href', 'https://kalkulatorharga.com/sehari-hari'); await expect(page.getByRole('navigation', { name: 'Navigasi utama' }).getByRole('link')).toHaveCount(6)
-  await page.screenshot({ path: info.outputPath('sehari-hari-10-alat.jpg'), quality: 75, fullPage: true })
+  await page.screenshot({ path: info.outputPath('sehari-hari-15-alat.jpg'), quality: 75, fullPage: true })
   for (const f of fixtures) { await page.goto('/'); await page.getByRole('searchbox').fill(f.title); await expect(page.getByRole('region', { name: 'Hasil pencarian' }).locator(`a[href="/kalkulator/${f.slug}"]`)).toBeVisible(); const r = await request.get(`/kalkulator/${f.slug}`); expect(r.headers()['x-robots-tag']).toBe('noindex, nofollow'); const html = await r.text(); expect(html).toContain('Presisi dan pembulatan'); expect(html).toContain('Sumber dan konvensi model') }
-  const xml = await (await request.get('/sitemap.xml')).text(); expect(xml.match(/<loc>/g)).toHaveLength(77)
+  const xml = await (await request.get('/sitemap.xml')).text(); expect(xml.match(/<loc>/g)).toHaveLength(82)
   for (const f of fixtures) expect(xml).toContain(`/kalkulator/${f.slug}</loc>`)
-  for (const slug of ['ppn', 'shopee', 'tiktok-shop', 'biaya-listrik', 'biaya-air']) { expect((await request.get(`/kalkulator/${slug}`)).status()).toBe(404); expect(xml).not.toContain(`/kalkulator/${slug}</loc>`); await page.goto('/'); await page.getByRole('searchbox').fill(slug.replaceAll('-', ' ')); await expect(page.locator(`a[href="/kalkulator/${slug}"]`)).toHaveCount(0) }
+  for (const slug of ['ppn', 'shopee', 'tiktok-shop', 'skala-denah', 'konversi-panjang']) { expect((await request.get(`/kalkulator/${slug}`)).status()).toBe(404); expect(xml).not.toContain(`/kalkulator/${slug}</loc>`); await page.goto('/'); await page.getByRole('searchbox').fill(slug.replaceAll('-', ' ')); await expect(page.locator(`a[href="/kalkulator/${slug}"]`)).toHaveCount(0) }
   expect(await (await request.get('/robots.txt')).text()).toContain('Disallow: /')
 })
 test('calendar forms holiday table and large fuel output fit all five widths', async ({ page, isMobile }) => {

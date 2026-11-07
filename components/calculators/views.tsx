@@ -1,3 +1,6 @@
+import { materialsTools, type MaterialsSlug } from '../../lib/utilities-materials/tools'
+import { MaterialsForm } from './materials-form'
+import { MaterialsMethodology } from './materials-methodology'
 import { calendarTools, type CalendarSlug } from '../../lib/calendar-time/tools'
 import { CalendarForm } from './calendar-form'
 import { CalendarMethodology } from './calendar-methodology'
@@ -144,6 +147,13 @@ export const views: Readonly<Record<string, CalculatorView | undefined>> = {
     const view: CalculatorView = {
       Form: () => <CalendarForm slug={slug} />,
       Methodology: ({ formulaVersion }) => <CalendarMethodology slug={slug} formulaVersion={formulaVersion} />,
+    }
+    return [slug, view]
+  })),
+  ...Object.fromEntries((Object.keys(materialsTools) as MaterialsSlug[]).map(slug => {
+    const view: CalculatorView = {
+      Form: () => <MaterialsForm slug={slug} />,
+      Methodology: ({ formulaVersion }) => <MaterialsMethodology slug={slug} formulaVersion={formulaVersion} />,
     }
     return [slug, view]
   })),

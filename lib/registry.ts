@@ -1,3 +1,5 @@
+import { materialsTools, type MaterialsSlug, type MaterialsTool } from './utilities-materials/tools'
+import { materialsSources } from './utilities-materials/sources'
 import { calendarTools, type CalendarSlug, type CalendarTool } from './calendar-time/tools'
 import { calendarSources } from './calendar-time/sources'
 import { everydayTools, type EverydaySlug, type EverydayTool } from './everyday/tools'
@@ -239,6 +241,17 @@ const calendarDefinitions = (Object.keys(calendarTools) as CalendarSlug[]).map((
   }
 })
 
+const materialsDefinitions = (Object.keys(materialsTools) as MaterialsSlug[]).map((slug): PublishedCalculator => {
+  const tool: MaterialsTool = materialsTools[slug]
+  return {
+    id: `calc-${slug}`, slug, path: `/kalkulator/${slug}`, primaryCategory: 'sehari-hari', secondaryCategories: [],
+    metadata: { locale: 'id-ID', title: tool.title, description: tool.description, keywords: tool.keywords },
+    inputFields: [...tool.inputFields, ...(tool.rows ? [{ id: tool.rows, label: tool.rowConfig?.label ?? 'Baris', type: 'array' as const }] : [])],
+    outputFields: tool.outputFields, officialSources: tool.sources.map(id => ({ ...materialsSources[id], verifiedAt: '2026-11-07' })), status: 'published',
+    implementation: { engine: tool.engine, formulaVersion: '1.0.0', testCases: [{ file: 'tests/utilities-materials.unit.ts', name: tool.testCase }] },
+  }
+})
+
 export const definitions: readonly CalculatorDefinition[] = [{
   id: 'production-cost',
   slug: 'hpp',
@@ -274,7 +287,7 @@ export const definitions: readonly CalculatorDefinition[] = [{
       { file: 'tests/hpp.unit.ts', name: 'rejects invalid cost %s' },
     ],
   },
-}, ...businessDefinitions, ...operationDefinitions, ...stockServiceDefinitions, ...batchFourDefinitions, ...metricDefinitions, ...sellerDefinitions, ...financeDefinitions, ...investmentDefinitions, ...valuationDefinitions, ...scenarioDefinitions, ...socialDefinitions, ...creatorDefinitions, ...everydayDefinitions, ...calendarDefinitions]
+}, ...businessDefinitions, ...operationDefinitions, ...stockServiceDefinitions, ...batchFourDefinitions, ...metricDefinitions, ...sellerDefinitions, ...financeDefinitions, ...investmentDefinitions, ...valuationDefinitions, ...scenarioDefinitions, ...socialDefinitions, ...creatorDefinitions, ...everydayDefinitions, ...calendarDefinitions, ...materialsDefinitions]
 
 export function listPublished(records = definitions): PublishedCalculator[] {
   return records.filter(tool => tool.status === 'published')
