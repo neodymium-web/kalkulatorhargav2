@@ -57,7 +57,11 @@ export const calculatePromo = run(
         buyer: (v.price - v.discount) * 100n,
         proceeds: v.price * 100n - burden,
       },
-      tiny: v.discount * v.share > 0n && burden === 0n ? ['burden'] : [],
+      tiny: [
+        ...(v.discount * v.share > 0n && burden === 0n ? ['burden'] : []),
+        ...(v.discount * (10000n - v.share) > 0n && v.discount * 100n === burden ? ['platform'] : []),
+        ...(v.price * 10000n > v.discount * v.share && v.price * 100n === burden ? ['proceeds'] : []),
+      ],
     }
   },
 )

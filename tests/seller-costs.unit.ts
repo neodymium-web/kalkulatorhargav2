@@ -35,6 +35,10 @@ describe('seller costs', () => {
     expect(values(calculatePromo({price:'100',discount:'20',share:'100'}))).toEqual({burden:2000n,platform:0n,buyer:8000n,proceeds:8000n})
     expect(calculatePromo({price:'100',discount:'20',share:'100.01'}).success).toBe(false)
   })
+  it('marks tiny positive platform funding and proceeds instead of displaying zero', () => {
+    const result = calculatePromo({ price: '1', discount: '1', share: '99.99' })
+    expect(result.success && result.tiny).toEqual(['platform', 'proceeds'])
+  })
   it('shipping rejects overfunding', () => {
     expect(values(calculateShipping({ actual: '20000', buyer: '5000', credit: '10000' })).seller).toBe(
       500000n,
