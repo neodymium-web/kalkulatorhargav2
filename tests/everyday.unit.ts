@@ -184,10 +184,10 @@ describe('everyday malformed input and caps', () => {
     expect(formatEveryday(500000n, 'quantity3')).toBe('500')
   })
   it('retains original everyday IDs with twenty tools five hubs and 87 sitemap URLs', () => {
-    expect(listPublished()).toHaveLength(81); expect(listCategory('sehari-hari')).toHaveLength(20); expect(listCategoryHubs()).toHaveLength(5); expect(sitemapPaths()).toHaveLength(87)
-    for (const [category, count] of [['bisnis', 20], ['marketplace', 11], ['keuangan', 20], ['media-sosial', 10]] as const) expect(listCategory(category)).toHaveLength(count)
+    expect(listPublished()).toHaveLength(86); expect(listCategory('sehari-hari')).toHaveLength(20); expect(listCategoryHubs()).toHaveLength(5); expect(sitemapPaths()).toHaveLength(92)
+    for (const [category, count] of [['bisnis', 20], ['marketplace', 16], ['keuangan', 20], ['media-sosial', 10]] as const) expect(listCategory(category)).toHaveLength(count)
     const rows = readFileSync(new URL('../docs/CALCULATOR_INVENTORY.md', import.meta.url), 'utf8').split('\n').filter(l => /^\| (production-cost|calc-)/.test(l)).map(l => l.split('|').map(x => x.trim()))
-    expect(rows).toHaveLength(100); expect(new Set(rows.map(r => r[1])).size).toBe(100); expect(rows.filter(r => r[10] === 'published')).toHaveLength(81)
+    expect(rows).toHaveLength(100); expect(new Set(rows.map(r => r[1])).size).toBe(100); expect(rows.filter(r => r[10] === 'published')).toHaveLength(86)
     for (const slug of ['diskon', 'harga-per-satuan', 'bagi-tagihan', 'persen', 'perubahan-persen']) expect(findPublished(slug)?.id).toBe(`calc-${slug}`)
     for (const slug of ['ppn', 'shopee', 'tiktok-shop', 'pph-final-umkm']) expect(findPublished(slug)).toBeUndefined()
   })

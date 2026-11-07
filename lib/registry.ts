@@ -1,3 +1,5 @@
+import { economicsTools, type EconomicsSlug, type EconomicsTool } from './marketplace-economics/tools'
+import { economicsSources } from './marketplace-economics/sources'
 import { unitsTools, type UnitsSlug, type UnitsTool } from './units-scale/tools'
 import { unitsSources } from './units-scale/sources'
 import { materialsTools, type MaterialsSlug, type MaterialsTool } from './utilities-materials/tools'
@@ -30,7 +32,7 @@ import { businessTools, type BusinessSlug } from './business/tools'
 type SchemaField = {
   id: string
   label: string
-  type: 'integer' | 'decimal' | 'date' | 'time' | 'choice' | 'array'
+  type: 'integer' | 'decimal' | 'date' | 'time' | 'choice' | 'array' | 'text'
   unit?: string
 }
 
@@ -265,6 +267,18 @@ const unitsDefinitions = (Object.keys(unitsTools) as UnitsSlug[]).map((slug): Pu
   }
 })
 
+const economicsDefinitions = (Object.keys(economicsTools) as EconomicsSlug[]).map((slug): PublishedCalculator => {
+  const tool: EconomicsTool = economicsTools[slug]
+  return {
+    id: `calc-${slug}`, slug, path: `/kalkulator/${slug}`, primaryCategory: 'marketplace', secondaryCategories: [],
+    metadata: { locale: 'id-ID', title: tool.title, description: tool.description, keywords: tool.keywords },
+    inputFields: [...tool.inputFields, ...(tool.rows ? [{ id: tool.rows, label: tool.rowConfig!.label, type: 'array' as const }] : [])],
+    outputFields: [{ id: 'primary', label: 'Hasil skenario', type: 'decimal' }],
+    officialSources: tool.sources.map(source => ({ ...economicsSources[source], verifiedAt: '2026-11-07' })), status: 'published',
+    implementation: { engine: tool.engine, formulaVersion: '1.0.0', testCases: [{ file: 'tests/marketplace-economics.unit.ts', name: tool.testCase }] },
+  }
+})
+
 export const definitions: readonly CalculatorDefinition[] = [{
   id: 'production-cost',
   slug: 'hpp',
@@ -300,7 +314,7 @@ export const definitions: readonly CalculatorDefinition[] = [{
       { file: 'tests/hpp.unit.ts', name: 'rejects invalid cost %s' },
     ],
   },
-}, ...businessDefinitions, ...operationDefinitions, ...stockServiceDefinitions, ...batchFourDefinitions, ...metricDefinitions, ...sellerDefinitions, ...financeDefinitions, ...investmentDefinitions, ...valuationDefinitions, ...scenarioDefinitions, ...socialDefinitions, ...creatorDefinitions, ...everydayDefinitions, ...calendarDefinitions, ...materialsDefinitions, ...unitsDefinitions]
+}, ...businessDefinitions, ...operationDefinitions, ...stockServiceDefinitions, ...batchFourDefinitions, ...metricDefinitions, ...sellerDefinitions, ...financeDefinitions, ...investmentDefinitions, ...valuationDefinitions, ...scenarioDefinitions, ...socialDefinitions, ...creatorDefinitions, ...everydayDefinitions, ...calendarDefinitions, ...materialsDefinitions, ...unitsDefinitions, ...economicsDefinitions]
 
 export function listPublished(records = definitions): PublishedCalculator[] {
   return records.filter(tool => tool.status === 'published')

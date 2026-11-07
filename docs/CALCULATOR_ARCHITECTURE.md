@@ -57,3 +57,5 @@ Lihat [verifikasi kalender Gregorian, hari kerja, usia, shift dan BBM](BATCH_14_
 Lihat [verifikasi listrik, air progresif, cat, keramik dan beton](BATCH_15_FORMULA_VERIFICATION.md), termasuk konservasi blok air, ceiling dari pecahan asli dan batas galat pendekatan π.
 
 Lihat [verifikasi skala, satuan panjang/massa, suhu dan kecepatan](BATCH_16_FORMULA_VERIFICATION.md), termasuk faktor eksak, invers pecahan, batas nol mutlak dan durasi elapsed.
+
+Batch 17 memisahkan ledger settlement manual, pembalikan harga, ranking kanal, kontribusi bundel dan status stok pada lib/marketplace-economics. Lihat [verifikasi rumus](BATCH_17_FORMULA_VERIFICATION.md); tidak menerbitkan tarif kontrak marketplace.

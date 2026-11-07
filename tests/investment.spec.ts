@@ -221,7 +221,7 @@ test('expanded finance hub and search retain published-only SEO and staging prot
     ).toBeVisible()
   }
   const xml = await (await request.get('/sitemap.xml')).text()
-  expect(xml.match(/<loc>/g)).toHaveLength(87)
+  expect(xml.match(/<loc>/g)).toHaveLength(92)
   for (const { slug } of scenarios)
     expect(xml).toContain(`<loc>https://kalkulatorharga.com/kalkulator/${slug}</loc>`)
   for (const slug of ['tiktok-shop', 'shopee']) {

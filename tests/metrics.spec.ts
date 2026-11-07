@@ -62,7 +62,7 @@ test('lists only published Marketplace tools and searches the metrics across res
   await page.setViewportSize(isMobile ? { width: 375, height: 820 } : { width: 1440, height: 900 })
   await page.goto('/marketplace')
   const listing = page.getByRole('region', { name: 'Kalkulator tersedia' })
-  await expect(listing.getByRole('link')).toHaveCount(11)
+  await expect(listing.getByRole('link')).toHaveCount(12)
   for (const { slug } of scenarios) await expect(listing.locator(`a[href="/kalkulator/${slug}"]`)).toBeVisible()
   await page.screenshot({ path: info.outputPath('marketplace.jpg'), fullPage: true, quality: 70 })
   await page.goto('/')
