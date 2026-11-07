@@ -8,7 +8,7 @@ export type StructuredTool = {
   inputFields: readonly BatchField[]
   rowFields?: readonly BatchField[]
   rows?: string
-  rowConfig?: { name: string; label: string; startIndex?: number; max: number; limitLabel?: string }
+  rowConfig?: { name: string; label: string; startIndex?: number; max: number; min?: number; limitLabel?: string }
   hint: string
 }
 type Control = BatchField & { name: string; htmlId: string }
@@ -50,8 +50,9 @@ export function StructuredForm({
 }) {
   const id = useId()
   const hintId = `${id}-hint`
-  const [rows, setRows] = useState([0])
-  const nextRowId = useRef(1)
+  const rowMinimum = tool.rowConfig?.min ?? 1
+  const [rows, setRows] = useState(() => Array.from({ length: rowMinimum }, (_, index) => index))
+  const nextRowId = useRef(rowMinimum)
   const focusTarget = useRef<string | null>(null)
   const isFood = tool.rows !== 'flows'
   const rowName = tool.rowConfig?.name ?? (isFood ? 'bahan' : 'periode')
@@ -142,7 +143,7 @@ export function StructuredForm({
               <Button
                 className={styles.remove}
                 variant="text"
-                disabled={rows.length === 1}
+                disabled={rows.length <= rowMinimum}
                 onClick={() => removeRow(index)}
               >
                 Hapus {rowName} {index + rowStart}

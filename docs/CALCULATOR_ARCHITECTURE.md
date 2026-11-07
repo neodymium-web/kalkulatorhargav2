@@ -49,3 +49,5 @@ Lihat juga [verifikasi pinjaman bertanggal, KPR, pelunasan, refinancing dan kurs
 Lihat juga [verifikasi engagement, pertumbuhan pengikut dan biaya iklan](BATCH_11_FORMULA_VERIFICATION.md).
 
 Lihat [verifikasi CTR, model RPM, empat modul TikTok, pricing dan waktu](BATCH_12_FORMULA_VERIFICATION.md).
+
+Lihat [verifikasi diskon, unit price, alokasi tagihan dan persen](BATCH_13_FORMULA_VERIFICATION.md).

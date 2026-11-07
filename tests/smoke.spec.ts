@@ -70,6 +70,7 @@ test('blocks preview indexing and lists only published URLs', async ({ request }
     '<loc>https://kalkulatorharga.com/marketplace</loc>',
     '<loc>https://kalkulatorharga.com/keuangan</loc>',
     '<loc>https://kalkulatorharga.com/media-sosial</loc>',
+    '<loc>https://kalkulatorharga.com/sehari-hari</loc>',
     '<loc>https://kalkulatorharga.com/kalkulator/hpp</loc>',
     '<loc>https://kalkulatorharga.com/kalkulator/harga-jual</loc>',
     '<loc>https://kalkulatorharga.com/kalkulator/margin-laba</loc>',
@@ -131,6 +132,11 @@ test('blocks preview indexing and lists only published URLs', async ({ request }
     '<loc>https://kalkulatorharga.com/kalkulator/tiktok</loc>',
     '<loc>https://kalkulatorharga.com/kalkulator/tarif-endorsement</loc>',
     '<loc>https://kalkulatorharga.com/kalkulator/waktu-tonton</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/diskon</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/harga-per-satuan</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/bagi-tagihan</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/persen</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/perubahan-persen</loc>',
   ])
 })
 

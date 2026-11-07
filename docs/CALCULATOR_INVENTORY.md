@@ -1,6 +1,6 @@
 # Inventaris 100 kalkulator
 
-Inventaris ini menetapkan usulan slug dan intent untuk setiap alat. Sebanyak 61 kalkulator sudah terbit. Baris berstatus ide belum memiliki rute publik. ID untuk ide memakai awalan `calc-`. ID TikTok yang sudah dicatat tetap mengikuti alatnya saat slug dikoreksi. Setelah implementasi, simpan ID saat mengubah nama tampilan atau URL.
+Inventaris ini menetapkan usulan slug dan intent untuk setiap alat. Sebanyak 66 kalkulator sudah terbit. Baris berstatus ide belum memiliki rute publik. ID untuk ide memakai awalan `calc-`. ID TikTok yang sudah dicatat tetap mengikuti alatnya saat slug dikoreksi. Setelah implementasi, simpan ID saat mengubah nama tampilan atau URL.
 
 Tingkat 1 memakai rumus langsung. Tingkat 2 melibatkan beberapa mode, jadwal, satuan, atau kebijakan pembulatan. Tingkat 3 membutuhkan aturan bertanggal, pencarian solusi, atau verifikasi domain yang lebih ketat. Kolom sumber menjelaskan kebutuhan tarif dinamis. Tanda “—” berarti alat tidak memerlukan data tarif eksternal. Input manual berasal dari pengguna dan ditampilkan sebagai asumsi.
 
@@ -114,11 +114,11 @@ Tingkat 1 memakai rumus langsung. Tingkat 2 melibatkan beberapa mode, jadwal, sa
 
 | ID | Slug | Canonical usulan | Intent | Kategori | Input | Output | Rumus atau mesin | Tingkat | Status | Sumber dinamis | Monetisasi |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| calc-diskon | diskon | /kalkulator/diskon | Harga sesudah potongan tunggal atau bertahap | sehari-hari | Harga awal dan daftar diskon | Harga akhir dan penghematan | Kalikan faktor sisa tiap tahap | 1 | idea | — | — |
-| calc-harga-per-satuan | harga-per-satuan | /kalkulator/harga-per-satuan | Bandingkan harga kemasan berbeda ukuran | sehari-hari | Harga dan kuantitas tiap kemasan, satuan | Harga per satuan setara | Normalisasi unit lalu bagi harga dengan kuantitas | 2 | idea | — | — |
-| calc-bagi-tagihan | bagi-tagihan | /kalkulator/bagi-tagihan | Tagihan per orang dari item dan biaya bersama | sehari-hari | Item per orang, pajak dan biaya bersama, metode alokasi | Tagihan per orang | Jumlah item ditambah alokasi biaya dengan rekonsiliasi pembulatan | 2 | idea | — | — |
-| calc-persen | persen | /kalkulator/persen | Hitung bagian dari jumlah atau persentase dari rasio | sehari-hari | Jumlah dan bagian atau persen | Nilai bagian atau persentase | Perkalian atau pembagian berdasarkan mode | 1 | idea | — | — |
-| calc-perubahan-persen | perubahan-persen | /kalkulator/perubahan-persen | Persentase naik atau turun terhadap awal | sehari-hari | Nilai awal dan akhir | Selisih absolut dan relatif | (Akhir − awal) ÷ awal | 1 | idea | — | — |
+| calc-diskon | diskon | /kalkulator/diskon | Harga sesudah potongan tunggal atau bertahap | sehari-hari | Harga awal dan daftar diskon | Harga akhir dan penghematan | Kalikan faktor sisa tiap tahap | 1 | published | — | — |
+| calc-harga-per-satuan | harga-per-satuan | /kalkulator/harga-per-satuan | Bandingkan harga kemasan berbeda ukuran | sehari-hari | Harga dan kuantitas tiap kemasan, satuan | Harga per satuan setara | Normalisasi unit lalu bagi harga dengan kuantitas | 2 | published | — | — |
+| calc-bagi-tagihan | bagi-tagihan | /kalkulator/bagi-tagihan | Tagihan per orang dari item dan biaya bersama | sehari-hari | Subtotal semua item per orang, service dan pajak nominal, metode alokasi | Tagihan per orang | Jumlah item ditambah alokasi biaya dengan rekonsiliasi pembulatan | 2 | published | — | — |
+| calc-persen | persen | /kalkulator/persen | Hitung bagian dari jumlah atau persentase dari rasio | sehari-hari | Jumlah dan bagian atau persen | Nilai bagian atau persentase | Perkalian atau pembagian berdasarkan mode | 1 | published | — | — |
+| calc-perubahan-persen | perubahan-persen | /kalkulator/perubahan-persen | Persentase naik atau turun terhadap awal | sehari-hari | Nilai awal dan akhir | Selisih absolut dan relatif | (Akhir − awal) ÷ awal | 1 | published | — | — |
 | calc-selisih-tanggal | selisih-tanggal | /kalkulator/selisih-tanggal | Jarak hari antara dua tanggal | sehari-hari | Tanggal awal, akhir dan mode inklusif | Hari kalender | Selisih tanggal kalender dengan aturan inklusif | 2 | idea | — | — |
 | calc-hari-kerja | hari-kerja | /kalkulator/hari-kerja | Jumlah hari kerja dalam rentang tanggal | sehari-hari | Tanggal, pola akhir pekan, daftar libur input | Jumlah hari kerja | Hitung hari terjadwal di luar tanggal libur | 2 | idea | Input pengguna | — |
 | calc-usia | usia | /kalkulator/usia | Umur dalam tahun, bulan, dan hari kalender | sehari-hari | Tanggal lahir dan tanggal acuan | Usia kalender | Kurangi tanggal dengan aturan akhir bulan eksplisit | 2 | idea | — | — |
