@@ -1,6 +1,6 @@
 # Inventaris 100 kalkulator
 
-Inventaris ini menetapkan usulan slug dan intent untuk setiap alat. Sebanyak 56 kalkulator sudah terbit. Baris berstatus ide belum memiliki rute publik. ID untuk ide memakai awalan `calc-`. ID TikTok yang sudah dicatat tetap mengikuti alatnya saat slug dikoreksi. Setelah implementasi, simpan ID saat mengubah nama tampilan atau URL.
+Inventaris ini menetapkan usulan slug dan intent untuk setiap alat. Sebanyak 61 kalkulator sudah terbit. Baris berstatus ide belum memiliki rute publik. ID untuk ide memakai awalan `calc-`. ID TikTok yang sudah dicatat tetap mengikuti alatnya saat slug dikoreksi. Setelah implementasi, simpan ID saat mengubah nama tampilan atau URL.
 
 Tingkat 1 memakai rumus langsung. Tingkat 2 melibatkan beberapa mode, jadwal, satuan, atau kebijakan pembulatan. Tingkat 3 membutuhkan aturan bertanggal, pencarian solusi, atau verifikasi domain yang lebih ketat. Kolom sumber menjelaskan kebutuhan tarif dinamis. Tanda “—” berarti alat tidak memerlukan data tarif eksternal. Input manual berasal dari pengguna dan ditampilkan sebagai asumsi.
 
@@ -104,11 +104,11 @@ Tingkat 1 memakai rumus langsung. Tingkat 2 melibatkan beberapa mode, jadwal, sa
 | calc-cpm | cpm | /kalkulator/cpm | Harga iklan per seribu impresi | media-sosial | Biaya iklan, impresi | CPM | Biaya ÷ impresi × 1.000 | 1 | published | — | — |
 | calc-cpc | cpc | /kalkulator/cpc | Harga iklan per klik | media-sosial | Biaya iklan, klik | CPC | Biaya ÷ klik | 1 | published | — | — |
 | calc-cpa | cpa | /kalkulator/cpa | Harga iklan per akuisisi | media-sosial | Biaya iklan, akuisisi | CPA | Biaya ÷ akuisisi | 1 | published | — | — |
-| calc-ctr | ctr | /kalkulator/ctr | Porsi impresi iklan yang menghasilkan klik | media-sosial | Klik, impresi | CTR | Klik ÷ impresi | 1 | idea | — | — |
-| calc-estimasi-youtube | estimasi-youtube | /kalkulator/estimasi-youtube | Estimasi pendapatan kreator dengan RPM sendiri | media-sosial | Tayangan monetisasi sesuai basis RPM, RPM | Estimasi pendapatan | Tayangan ÷ 1.000 × RPM | 2 | idea | Input kreator | — |
-| calc-estimasi-tiktok-kreator | tiktok | /kalkulator/tiktok | Kalkulator Kreator TikTok untuk penghasilan, engagement, rate card endorse dan analitik akun | media-sosial | Pengikut, tayangan, interaksi, jumlah video, RPM asumsi, pendapatan sponsor, affiliate dan gift, kisaran tarif, slot sponsor dan metrik akun pembanding | Rincian estimasi penghasilan, engagement per pengikut dan tayangan, rate card dan perbandingan akun | Jumlahkan sumber penghasilan, bagi interaksi menurut basis, hitung kisaran sponsor dan bandingkan metrik akun | 3 | idea | Input kreator. Verifikasi sumber benchmark jika ditampilkan | — |
-| calc-tarif-endorsement | tarif-endorsement | /kalkulator/tarif-endorsement | Harga penawaran sponsor per konten | media-sosial | Biaya produksi, jam, hak penggunaan, margin | Tarif konten dan hak pakai | Biaya dan hak pakai ditambah target laba | 2 | idea | — | — |
-| calc-waktu-tonton | waktu-tonton | /kalkulator/waktu-tonton | Total jam tonton dari durasi rata-rata | media-sosial | Jumlah tayangan, menit tonton rata-rata | Jam tonton | Tayangan × menit ÷ 60 | 1 | idea | — | — |
+| calc-ctr | ctr | /kalkulator/ctr | Porsi impresi iklan yang menghasilkan klik | media-sosial | Klik, impresi | CTR | Klik ÷ impresi | 1 | published | — | — |
+| calc-estimasi-youtube | estimasi-youtube | /kalkulator/estimasi-youtube | Estimasi pendapatan kreator dengan RPM sendiri | media-sosial | Total tayangan video non-Shorts sesuai basis RPM, RPM asumsi | Estimasi pendapatan | Tayangan ÷ 1.000 × RPM | 2 | published | Input kreator | — |
+| calc-estimasi-tiktok-kreator | tiktok | /kalkulator/tiktok | Kalkulator Kreator TikTok untuk penghasilan, engagement, rate card endorse dan analitik akun | media-sosial | Pengikut, tayangan, interaksi, jumlah video, RPM asumsi, pendapatan sponsor, affiliate dan gift, kisaran tarif, slot sponsor dan metrik akun pembanding | Rincian estimasi penghasilan, engagement per pengikut dan tayangan, rate card dan perbandingan akun | Jumlahkan sumber penghasilan, bagi interaksi menurut basis, hitung kisaran sponsor dan bandingkan metrik akun | 3 | published | Input kreator. Verifikasi sumber benchmark jika ditampilkan | — |
+| calc-tarif-endorsement | tarif-endorsement | /kalkulator/tarif-endorsement | Harga penawaran sponsor per konten | media-sosial | Biaya produksi, jam, hak penggunaan, margin | Tarif konten dan hak pakai | Biaya dan hak pakai ditambah target laba | 2 | published | — | — |
+| calc-waktu-tonton | waktu-tonton | /kalkulator/waktu-tonton | Total jam tonton dari durasi rata-rata | media-sosial | Jumlah tayangan, menit tonton rata-rata | Jam tonton | Tayangan × menit ÷ 60 | 1 | published | — | — |
 
 ## sehari-hari
 
@@ -162,7 +162,7 @@ Sebelum cutover, cocokkan usulan ini dengan peta URL, kueri, dan intent situs la
 
 ## Paritas migrasi TikTok
 
-[Halaman kreator saat ini](https://www.kalkulatorharga.com/kalkulator/tiktok) dan [halaman seller saat ini](https://www.kalkulatorharga.com/kalkulator/tiktok-shop) sudah melayani dua intent berbeda. Pemetaan ini mengganti slug pada dua entri yang ada, sehingga jumlah alat tetap 100. Kedua entri tetap berstatus ide di aplikasi baru.
+[Halaman kreator saat ini](https://www.kalkulatorharga.com/kalkulator/tiktok) dan [halaman seller saat ini](https://www.kalkulatorharga.com/kalkulator/tiktok-shop) sudah melayani dua intent berbeda. Pemetaan ini mengganti slug pada dua entri yang ada, sehingga jumlah alat tetap 100. Kreator sudah terbit dengan empat modul manual di aplikasi baru; seller tetap berstatus ide. Cutover dan pencarian username tidak termasuk implementasi ini.
 
 Sebelum cutover, uji alur kreator dari input manual atau pencarian profil publik berdasarkan username, jika akses tersebut dapat dipertahankan, sampai hasil penghasilan bulanan per sumber, engagement per pengikut dan tayangan, rentang rate card dan kuota sponsor, serta perbandingan akun. Input manual harus tetap berfungsi saat pencarian tidak tersedia. Tinjau metodologi, pembanding akun, benchmark, dan tautan panduan `/kalkulator/tiktok/panduan` dalam peta migrasi. Verifikasi data benchmark sebelum menampilkannya dan labeli RPM serta tarif endorse yang dimasukkan pengguna sebagai asumsi. Panduan tetap dipetakan sebagai konten pendamping, tanpa menambah entri kalkulator.
 

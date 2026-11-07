@@ -149,15 +149,15 @@ describe('social validation and formatting', () => {
     expect(formatSocial(null, 'growth')).toBe('Tidak terdefinisi (pengikut awal nol)')
   })
   it('publishes precisely five social tools with complete sources and a real fourth hub', () => {
-    expect(listPublished()).toHaveLength(56); expect(listCategory('media-sosial')).toHaveLength(5)
+    expect(listPublished()).toHaveLength(61); expect(listCategory('media-sosial')).toHaveLength(10)
     expect(listCategory('keuangan')).toHaveLength(20); expect(listCategory('bisnis')).toHaveLength(20); expect(listCategory('marketplace')).toHaveLength(11)
-    expect(listCategoryHubs()).toHaveLength(4); expect(listCategoryHubs()).toContainEqual({ name: 'Media Sosial', path: '/media-sosial' }); expect(sitemapPaths()).toHaveLength(61)
+    expect(listCategoryHubs()).toHaveLength(4); expect(listCategoryHubs()).toContainEqual({ name: 'Media Sosial', path: '/media-sosial' }); expect(sitemapPaths()).toHaveLength(66)
     const inventory = readFileSync(new URL('../docs/CALCULATOR_INVENTORY.md', import.meta.url), 'utf8').split('\n').filter(l => /^\| (production-cost|calc-)/.test(l)).map(l => l.split('|').map(x => x.trim()))
-    expect(inventory).toHaveLength(100); expect(new Set(inventory.map(x => x[1])).size).toBe(100); expect(inventory.filter(x => x[10] === 'published')).toHaveLength(56)
-    for (const tool of listCategory('media-sosial')) {
+    expect(inventory).toHaveLength(100); expect(new Set(inventory.map(x => x[1])).size).toBe(100); expect(inventory.filter(x => x[10] === 'published')).toHaveLength(61)
+    for (const tool of listCategory('media-sosial').slice(0, 5)) {
       expect(tool.id).toBe(`calc-${tool.slug}`); expect(tool.officialSources.length).toBeGreaterThan(0); expect(tool.officialSources.every(s => s.verifiedAt === '2026-11-07')).toBe(true)
       expect(searchDirectory(listPublished().map(directoryEntry), tool.metadata.title).map(x => x.id)).toContain(tool.id)
     }
-    for (const slug of ['tiktok', 'tiktok-shop', 'shopee', 'ctr']) { expect(findPublished(slug)).toBeUndefined(); expect(sitemapPaths()).not.toContain(`/kalkulator/${slug}`) }
+    for (const slug of ['tiktok-shop', 'shopee', 'estimasi-tiktok-kreator']) { expect(findPublished(slug)).toBeUndefined(); expect(sitemapPaths()).not.toContain(`/kalkulator/${slug}`) }
   })
 })

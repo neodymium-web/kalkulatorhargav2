@@ -172,8 +172,8 @@ describe('Batch 10 independent fixtures',()=>{
  it('signed formats and units preserve negative and tiny direction',()=>{
   expect(formatScenario(-100000n,'rate')).toBe('−10,0000%');expect(formatScenario(0n,'rate',undefined,'negative')).toContain('negatif');expect(formatScenario(657n,'target','USD')).toBe('USD6,57');expect(formatScenario(0n,'target','USD','positive')).toBe('<USD0,01 (positif)')
  })
- it('publishes exactly five existing IDs with 56 tools 20 finance and 61 sitemap URLs',()=>{
-  expect(listPublished()).toHaveLength(56);expect(listCategory('keuangan')).toHaveLength(20);expect(listCategory('bisnis')).toHaveLength(20);expect(listCategory('marketplace')).toHaveLength(11);expect(sitemapPaths()).toHaveLength(61)
-  expect(new Set(listPublished().map(x=>x.id)).size).toBe(56)
+ it('publishes exactly five existing IDs with 61 tools 20 finance and 66 sitemap URLs',()=>{
+  expect(listPublished()).toHaveLength(61);expect(listCategory('keuangan')).toHaveLength(20);expect(listCategory('bisnis')).toHaveLength(20);expect(listCategory('marketplace')).toHaveLength(11);expect(sitemapPaths()).toHaveLength(66)
+  expect(new Set(listPublished().map(x=>x.id)).size).toBe(61)
  })
 })
