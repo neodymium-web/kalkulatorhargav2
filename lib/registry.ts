@@ -1,3 +1,5 @@
+import { creatorTools, type CreatorSlug, type CreatorTool } from './creator-analytics/tools'
+import { creatorSources } from './creator-analytics/sources'
 import { socialTools, type SocialSlug, type SocialTool } from './social-metrics/tools'
 import { socialSources } from './social-metrics/sources'
 import { scenarioTools, type ScenarioSlug, type ScenarioTool } from './loan-scenarios/tools'
@@ -198,6 +200,18 @@ const socialDefinitions = (Object.keys(socialTools) as SocialSlug[]).map((slug):
   }
 })
 
+const creatorDefinitions = (Object.keys(creatorTools) as CreatorSlug[]).map((slug): PublishedCalculator => {
+  const tool: CreatorTool = creatorTools[slug]
+  return {
+    id: slug === 'tiktok' ? 'calc-estimasi-tiktok-kreator' : `calc-${slug}`, slug, path: `/kalkulator/${slug}`,
+    primaryCategory: 'media-sosial', secondaryCategories: [],
+    metadata: { locale: 'id-ID', title: tool.title, description: tool.description, keywords: tool.keywords },
+    inputFields: [...(slug === 'tiktok' ? [{ id: 'mode', label: 'Modul kreator', type: 'choice' as const }] : []), ...tool.inputFields], outputFields: tool.outputFields,
+    officialSources: tool.sources.map(id => ({ ...creatorSources[id], verifiedAt: '2026-11-07' })), status: 'published',
+    implementation: { engine: tool.engine, formulaVersion: '1.0.0', testCases: [{ file: 'tests/creator-analytics.unit.ts', name: tool.testCase }] },
+  }
+})
+
 export const definitions: readonly CalculatorDefinition[] = [{
   id: 'production-cost',
   slug: 'hpp',
@@ -233,7 +247,7 @@ export const definitions: readonly CalculatorDefinition[] = [{
       { file: 'tests/hpp.unit.ts', name: 'rejects invalid cost %s' },
     ],
   },
-}, ...businessDefinitions, ...operationDefinitions, ...stockServiceDefinitions, ...batchFourDefinitions, ...metricDefinitions, ...sellerDefinitions, ...financeDefinitions, ...investmentDefinitions, ...valuationDefinitions, ...scenarioDefinitions, ...socialDefinitions]
+}, ...businessDefinitions, ...operationDefinitions, ...stockServiceDefinitions, ...batchFourDefinitions, ...metricDefinitions, ...sellerDefinitions, ...financeDefinitions, ...investmentDefinitions, ...valuationDefinitions, ...scenarioDefinitions, ...socialDefinitions, ...creatorDefinitions]
 
 export function listPublished(records = definitions): PublishedCalculator[] {
   return records.filter(tool => tool.status === 'published')

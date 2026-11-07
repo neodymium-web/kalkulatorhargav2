@@ -113,19 +113,19 @@ test('social hub navigation category search sitemap and unpublished protections'
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('Kalkulator media sosial')
   await expect(page.locator('link[rel=canonical]')).toHaveAttribute('href', 'https://kalkulatorharga.com/media-sosial')
   const listing = page.getByRole('region', { name: 'Kalkulator tersedia' })
-  await expect(listing.getByRole('link')).toHaveCount(5); await expect(listing.getByRole('button', { name: 'Muat lebih banyak' })).toHaveCount(0)
+  await expect(listing.getByRole('link')).toHaveCount(10); await expect(listing.getByRole('button', { name: 'Muat lebih banyak' })).toHaveCount(0)
   for (const f of fixtures) await expect(listing.locator(`a[href="/kalkulator/${f.slug}"]`)).toBeVisible()
   await page.screenshot({ path: info.outputPath('media-sosial-hub.jpg'), fullPage: true, quality: 75 })
   const hubResponse = await request.get('/media-sosial'); expect(hubResponse.headers()['x-robots-tag']).toBe('noindex, nofollow')
   for (const query of ['media sosial', ...fixtures.map(f => f.title)]) {
     await page.goto('/'); await page.getByRole('searchbox').fill(query)
-    if (query === 'media sosial') { await expect(page.getByRole('status')).toHaveText('5 kalkulator ditemukan'); await expect(page.getByRole('region', { name: 'Hasil pencarian' }).getByRole('link')).toHaveCount(5) }
+    if (query === 'media sosial') { await expect(page.getByRole('status')).toHaveText('10 kalkulator ditemukan'); await expect(page.getByRole('region', { name: 'Hasil pencarian' }).getByRole('link')).toHaveCount(10) }
     else { const f = fixtures.find(f => f.title === query)!; await expect(page.getByRole('region', { name: 'Hasil pencarian' }).locator(`a[href="/kalkulator/${f.slug}"]`)).toBeVisible() }
   }
-  const xml = await (await request.get('/sitemap.xml')).text(); expect(xml.match(/<loc>/g)).toHaveLength(61)
+  const xml = await (await request.get('/sitemap.xml')).text(); expect(xml.match(/<loc>/g)).toHaveLength(66)
   expect(xml).toContain('<loc>https://kalkulatorharga.com/media-sosial</loc>')
   for (const f of fixtures) expect(xml).toContain(`/kalkulator/${f.slug}</loc>`)
-  for (const slug of ['tiktok', 'tiktok-shop', 'shopee', 'ctr', 'estimasi-youtube']) {
+  for (const slug of ['tiktok-shop', 'shopee', 'estimasi-tiktok-kreator']) {
     expect((await request.get(`/kalkulator/${slug}`)).status()).toBe(404); expect(xml).not.toContain(`/kalkulator/${slug}</loc>`)
     await page.goto('/'); await page.getByRole('searchbox').fill(slug.replaceAll('-', ' ')); await expect(page.locator(`a[href="/kalkulator/${slug}"]`)).toHaveCount(0)
   }
@@ -172,6 +172,6 @@ test('social methodology examples sources FAQs and hub are server rendered', asy
       expect(await page.locator('article a[href^="https://"]').count()).toBeGreaterThanOrEqual(1)
       await expect(page.getByRole('navigation', { name: 'Jejak navigasi' }).getByRole('link', { name: 'Media Sosial' })).toBeVisible()
     }
-    await page.goto('/media-sosial'); await expect(page.getByRole('region', { name: 'Kalkulator tersedia' }).getByRole('link')).toHaveCount(5)
+    await page.goto('/media-sosial'); await expect(page.getByRole('region', { name: 'Kalkulator tersedia' }).getByRole('link')).toHaveCount(10)
   } finally { await context.close() }
 })

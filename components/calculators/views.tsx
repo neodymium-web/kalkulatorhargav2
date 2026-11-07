@@ -1,3 +1,6 @@
+import { creatorTools, type CreatorSlug } from '../../lib/creator-analytics/tools'
+import { CreatorForm } from './creator-form'
+import { CreatorMethodology } from './creator-methodology'
 import { socialTools, type SocialSlug } from '../../lib/social-metrics/tools'
 import { SocialForm } from './social-form'
 import { SocialMethodology } from './social-methodology'
@@ -114,6 +117,13 @@ export const views: Readonly<Record<string, CalculatorView | undefined>> = {
     const view: CalculatorView = {
       Form: () => <SocialForm slug={slug} />,
       Methodology: ({ formulaVersion }) => <SocialMethodology slug={slug} formulaVersion={formulaVersion} />,
+    }
+    return [slug, view]
+  })),
+  ...Object.fromEntries((Object.keys(creatorTools) as CreatorSlug[]).map(slug => {
+    const view: CalculatorView = {
+      Form: () => <CreatorForm slug={slug} />,
+      Methodology: ({ formulaVersion }) => <CreatorMethodology slug={slug} formulaVersion={formulaVersion} />,
     }
     return [slug, view]
   })),

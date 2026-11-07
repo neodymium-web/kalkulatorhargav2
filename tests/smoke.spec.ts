@@ -10,7 +10,7 @@ test('finds the published calculator from the homepage and business hub', async 
   await expect(page.getByRole('link', { name: 'Langsung ke konten' })).toBeFocused()
   await page.keyboard.press('Enter')
   await expect(page.getByRole('main')).toBeFocused()
-  await search.fill('tiktok')
+  await search.fill('jadwal kereta')
   await expect(page.getByText('Coba kata kunci lain', { exact: false })).toBeVisible()
   await expect(page.getByRole('status')).toHaveText('0 kalkulator ditemukan')
   await expect(page.getByRole('navigation', { name: 'Kategori kalkulator' })).toHaveCount(0)
@@ -126,13 +126,18 @@ test('blocks preview indexing and lists only published URLs', async ({ request }
     '<loc>https://kalkulatorharga.com/kalkulator/cpm</loc>',
     '<loc>https://kalkulatorharga.com/kalkulator/cpc</loc>',
     '<loc>https://kalkulatorharga.com/kalkulator/cpa</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/ctr</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/estimasi-youtube</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/tiktok</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/tarif-endorsement</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/waktu-tonton</loc>',
   ])
 })
 
 test('keeps the HPP canonical and returns 404 for unpublished calculators', async ({ page, request }) => {
   await page.goto('/kalkulator/hpp')
   await expect(page.locator('link[rel=canonical]')).toHaveAttribute('href', 'https://kalkulatorharga.com/kalkulator/hpp')
-  for (const slug of ['tiktok', 'tiktok-shop', 'estimasi-tiktok-kreator', 'shopee', 'tidak-ada']) {
+  for (const slug of ['tiktok-shop', 'estimasi-tiktok-kreator', 'shopee', 'tidak-ada']) {
     expect((await request.get(`/kalkulator/${slug}`)).status()).toBe(404)
   }
 })

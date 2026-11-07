@@ -82,7 +82,7 @@ D=konten (1–1000); C=biayaproduksi/konten; h=jam/konten (2desimal); w=kompensa
 V=views pada populasi/periode yang sama dengan average minutes a. Menit total M=V*a; jam total H=M/60. Dua output dibulatkan sendiri dari ledger rasional yang sama, bukanjam=menittampilan/60 atau sebaliknya. Bukan qualifying public watch hours atau reward-qualified time.
 
 1. V1000,a1,5menit ->M1500,00,H25,00. V3,a0,1 ->M0,30,H0,005 ->H0,01. Jangan menolak durasi yang melebihi panjangvideo bila laporan mencakup replay; definisi rata-rata harus konsisten.
-2. V1,a0,0001 ->M0,0001,H1/600000, keduanya positif di bawah0,01. V0 ataua0 ->M=H0. Vmaks,a999999,9999 ->M9.999.999.998.999.000.000,0001 dan H=M/60, BigInt di atas safeinteger, tidakoverflow. Menit7desimal/durasi1.000.000 invalid sesuai batas.
+2. V1,a0,0001 ->M0,0001,H1/600000, keduanya positif di bawah0,01. V0 ataua0 ->M=H0. Vmaks,a999999,9999 ->M9.999.999.998.999.000.000,0001 dan H=M/60, BigInt di atas safeinteger, tidakoverflow. Menitlebih4desimal/durasi1.000.000 invalid sesuai batas.
 
 ## Gate
 
