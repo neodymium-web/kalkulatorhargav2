@@ -122,7 +122,7 @@ test('social hub navigation category search sitemap and unpublished protections'
     if (query === 'media sosial') { await expect(page.getByRole('status')).toHaveText('10 kalkulator ditemukan'); await expect(page.getByRole('region', { name: 'Hasil pencarian' }).getByRole('link')).toHaveCount(10) }
     else { const f = fixtures.find(f => f.title === query)!; await expect(page.getByRole('region', { name: 'Hasil pencarian' }).locator(`a[href="/kalkulator/${f.slug}"]`)).toBeVisible() }
   }
-  const xml = await (await request.get('/sitemap.xml')).text(); expect(xml.match(/<loc>/g)).toHaveLength(77)
+  const xml = await (await request.get('/sitemap.xml')).text(); expect(xml.match(/<loc>/g)).toHaveLength(82)
   expect(xml).toContain('<loc>https://kalkulatorharga.com/media-sosial</loc>')
   for (const f of fixtures) expect(xml).toContain(`/kalkulator/${f.slug}</loc>`)
   for (const slug of ['tiktok-shop', 'shopee', 'estimasi-tiktok-kreator']) {

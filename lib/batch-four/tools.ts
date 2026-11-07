@@ -9,6 +9,7 @@ export type BatchField = {
   unit?: string
   options?: readonly { value: string; label: string }[]
   signed?: boolean
+  visibleWhen?: { field: string; value: string }
 }
 export type BatchTool = {
   title: string

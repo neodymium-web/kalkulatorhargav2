@@ -13,7 +13,7 @@ export type StructuredTool = {
 }
 type Control = BatchField & { name: string; htmlId: string }
 
-function Field({ field, error, hintId }: { field: Control; error?: string; hintId: string }) {
+function Field({ field, error, hintId, onChoice }: { field: Control; error?: string; hintId: string; onChoice?: (value: string) => void }) {
   const props = {
     id: field.htmlId,
     name: field.name,
@@ -22,7 +22,7 @@ function Field({ field, error, hintId }: { field: Control; error?: string; hintI
     error,
   }
   return field.options ? (
-    <Select {...props} defaultValue="">
+    <Select {...props} defaultValue="" onChange={onChoice ? event => onChoice(event.target.value) : undefined}>
       <option value="" disabled>
         Pilih {field.label.toLocaleLowerCase('id')}
       </option>
@@ -53,6 +53,8 @@ export function StructuredForm({
   const rowMinimum = tool.rowConfig?.min ?? 1
   const [rows, setRows] = useState(() => Array.from({ length: rowMinimum }, (_, index) => index))
   const nextRowId = useRef(rowMinimum)
+  const [rowChoices, setRowChoices] = useState<Record<number, Record<string, string>>>({})
+  const conditionalRows = tool.rowFields?.some(field => field.visibleWhen)
   const focusTarget = useRef<string | null>(null)
   const isFood = tool.rows !== 'flows'
   const rowName = tool.rowConfig?.name ?? (isFood ? 'bahan' : 'periode')
@@ -66,7 +68,7 @@ export function StructuredForm({
     htmlId: `${id}-${field.id}`,
   }))
   const rowControls = rows.map((rowId, index) =>
-    (tool.rowFields ?? []).map((field) => ({
+    (tool.rowFields ?? []).filter(field => !field.visibleWhen || rowChoices[rowId]?.[field.visibleWhen.field] === field.visibleWhen.value).map((field) => ({
       ...field,
       summaryLabel: `${field.label}, ${rowName} ${index + rowStart}`,
       name: `${tool.rows}.${index}.${field.id}`,
@@ -98,6 +100,9 @@ export function StructuredForm({
     const next = remaining[Math.min(index, remaining.length - 1)]
     focusTarget.current = next === undefined ? addId : `${id}-row-${next}-${tool.rowFields![0].id}`
     onChange()
+    if (conditionalRows) setRowChoices(previous => {
+      const copy = { ...previous }; delete copy[rows[index]]; return copy
+    })
     setRows(remaining)
   }
 
@@ -137,7 +142,8 @@ export function StructuredForm({
               </legend>
               <div className={styles.rowFields}>
                 {fields.map((field) => (
-                  <Field key={field.id} field={field} error={errors?.[field.name]?.[0]} hintId={hintId} />
+                  <Field key={field.id} field={field} error={errors?.[field.name]?.[0]} hintId={hintId}
+                    onChoice={conditionalRows && field.options ? value => setRowChoices(previous => ({ ...previous, [rows[index]]: { ...previous[rows[index]], [field.id]: value } })) : undefined} />
                 ))}
               </div>
               <Button
