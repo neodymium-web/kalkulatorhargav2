@@ -1,3 +1,6 @@
+import { scenarioTools, type ScenarioSlug } from '../../lib/loan-scenarios/tools'
+import { ScenarioForm } from './scenario-form'
+import { ScenarioMethodology } from './scenario-methodology'
 import { sellerTools, type SellerSlug } from '../../lib/seller-costs/tools'
 import { financeTools, type FinanceSlug } from '../../lib/finance/tools'
 import { FinanceForm } from './finance-form'
@@ -94,6 +97,13 @@ export const views: Readonly<Record<string, CalculatorView | undefined>> = {
     const view: CalculatorView = {
       Form: () => <ValuationForm slug={slug} />,
       Methodology: ({ formulaVersion }) => <ValuationMethodology slug={slug} formulaVersion={formulaVersion} />,
+    }
+    return [slug, view]
+  })),
+  ...Object.fromEntries((Object.keys(scenarioTools) as ScenarioSlug[]).map(slug => {
+    const view: CalculatorView = {
+      Form: () => <ScenarioForm slug={slug} />,
+      Methodology: ({ formulaVersion }) => <ScenarioMethodology slug={slug} formulaVersion={formulaVersion} />,
     }
     return [slug, view]
   })),

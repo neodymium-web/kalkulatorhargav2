@@ -209,7 +209,7 @@ test('finance hub, navigation, search, sitemap and unpublished boundaries', asyn
   const listing = page.getByRole('region', { name: 'Kalkulator tersedia' })
   await expect(listing.getByRole('link')).toHaveCount(12)
   await listing.getByRole('button', { name: 'Muat lebih banyak' }).click()
-  await expect(listing.getByRole('link')).toHaveCount(15)
+  await expect(listing.getByRole('link')).toHaveCount(20)
   for (const { slug } of scenarios)
     await expect(listing.locator(`a[href="/kalkulator/${slug}"]`)).toBeVisible()
   await page.screenshot({ path: info.outputPath('keuangan.jpg'), fullPage: true, quality: 75 })
@@ -221,11 +221,11 @@ test('finance hub, navigation, search, sitemap and unpublished boundaries', asyn
     ).toBeVisible()
   }
   const xml = await (await request.get('/sitemap.xml')).text()
-  expect(xml.match(/<loc>/g)).toHaveLength(50)
+  expect(xml.match(/<loc>/g)).toHaveLength(55)
   expect(xml).toContain('<loc>https://kalkulatorharga.com/keuangan</loc>')
   for (const { slug } of scenarios)
     expect(xml).toContain(`<loc>https://kalkulatorharga.com/kalkulator/${slug}</loc>`)
-  for (const slug of ['kpr', 'tiktok', 'tiktok-shop', 'shopee', 'bunga-efektif-pinjaman']) {
+  for (const slug of ['tiktok', 'tiktok-shop', 'shopee']) {
     expect((await request.get(`/kalkulator/${slug}`)).status()).toBe(404)
     expect(xml).not.toContain(`/kalkulator/${slug}</loc>`)
   }

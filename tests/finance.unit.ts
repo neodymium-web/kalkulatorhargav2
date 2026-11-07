@@ -294,8 +294,8 @@ describe('finance validation and publication', () => {
     expect(calculateDebtRatio({ income: '100', debt: '-1' }).success).toBe(false)
   })
   it('retains the first finance batch in the expanded published hub', () => {
-    expect(listPublished()).toHaveLength(46)
-    expect(listCategory('keuangan')).toHaveLength(15)
+    expect(listPublished()).toHaveLength(51)
+    expect(listCategory('keuangan')).toHaveLength(20)
     expect(listCategory('keuangan').slice(0, 5).map((tool) => tool.slug)).toEqual([
       'bunga-sederhana',
       'bunga-majemuk',
@@ -305,8 +305,8 @@ describe('finance validation and publication', () => {
     ])
     expect(listCategory('bisnis')).toHaveLength(20)
     expect(listCategory('marketplace')).toHaveLength(11)
-    expect(sitemapPaths()).toHaveLength(50)
+    expect(sitemapPaths()).toHaveLength(55)
     expect(sitemapPaths()).toContain('/keuangan')
-    expect(sitemapPaths()).not.toContain('/kalkulator/kpr')
+    expect(sitemapPaths()).toContain('/kalkulator/kpr')
   })
 })

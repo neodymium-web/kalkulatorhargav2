@@ -3,7 +3,7 @@ import { pageMetadata } from '../../lib/seo'
 
 export const metadata = pageMetadata(
   'Kalkulator Keuangan',
-  'Hitung bunga, cicilan, tabungan, nilai kini, NPV, inflasi, dan biaya saham dengan asumsi serta pembulatan yang jelas.',
+  'Hitung bunga, KPR, pelunasan, refinancing, kurs manual, tabungan, nilai kini dan saham dengan asumsi serta pembulatan yang jelas.',
   '/keuangan',
 )
 
@@ -12,7 +12,7 @@ export default function Keuangan() {
     <CategoryPage
       categoryId="keuangan"
       title="Kalkulator keuangan"
-      description="Rencanakan tabungan dan pembayaran utang, nilai arus kas, serta tinjau daya beli dan biaya saham melalui simulasi dengan batas yang jelas."
+      description="Bandingkan cicilan KPR dan skenario pinjaman, konversikan kurs manual, rencanakan tabungan, serta nilai arus kas dan saham dengan asumsi yang jelas."
     />
   )
 }

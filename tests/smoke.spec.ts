@@ -115,6 +115,11 @@ test('blocks preview indexing and lists only published URLs', async ({ request }
     '<loc>https://kalkulatorharga.com/kalkulator/inflasi</loc>',
     '<loc>https://kalkulatorharga.com/kalkulator/rata-rata-beli-saham</loc>',
     '<loc>https://kalkulatorharga.com/kalkulator/untung-rugi-saham</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/bunga-efektif-pinjaman</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/kpr</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/pelunasan-dipercepat</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/refinancing</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/kurs-mata-uang</loc>',
   ])
 })
 
