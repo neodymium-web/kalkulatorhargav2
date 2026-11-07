@@ -69,6 +69,7 @@ test('blocks preview indexing and lists only published URLs', async ({ request }
     '<loc>https://kalkulatorharga.com/bisnis</loc>',
     '<loc>https://kalkulatorharga.com/marketplace</loc>',
     '<loc>https://kalkulatorharga.com/keuangan</loc>',
+    '<loc>https://kalkulatorharga.com/pajak</loc>',
     '<loc>https://kalkulatorharga.com/media-sosial</loc>',
     '<loc>https://kalkulatorharga.com/sehari-hari</loc>',
     '<loc>https://kalkulatorharga.com/kalkulator/hpp</loc>',
@@ -157,6 +158,11 @@ test('blocks preview indexing and lists only published URLs', async ({ request }
     '<loc>https://kalkulatorharga.com/kalkulator/banding-biaya-marketplace</loc>',
     '<loc>https://kalkulatorharga.com/kalkulator/bundel-produk</loc>',
     '<loc>https://kalkulatorharga.com/kalkulator/stok-cover</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/ppn</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/pph-23</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/pph-4-ayat-2-sewa</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/gross-up-pajak</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/pph-final-umkm</loc>',
   ])
 })
 

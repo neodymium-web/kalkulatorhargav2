@@ -2,7 +2,7 @@ export const categories = {
   bisnis: { name: 'Bisnis', hub: '/bisnis' },
   marketplace: { name: 'Marketplace', hub: '/marketplace' },
   keuangan: { name: 'Keuangan', hub: '/keuangan' },
-  pajak: { name: 'Pajak', hub: null },
+  pajak: { name: 'Pajak', hub: '/pajak' },
   'media-sosial': { name: 'Media Sosial', hub: '/media-sosial' },
   'sehari-hari': { name: 'Sehari-hari', hub: '/sehari-hari' },
 } as const

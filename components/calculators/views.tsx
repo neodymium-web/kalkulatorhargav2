@@ -1,3 +1,6 @@
+import { taxTools, type TaxSlug } from '../../lib/tax/tools'
+import { TaxForm } from './tax-form'
+import { TaxMethodology } from './tax-methodology'
 import { economicsTools, type EconomicsSlug } from '../../lib/marketplace-economics/tools'
 import { EconomicsForm } from './economics-form'
 import { EconomicsMethodology } from './economics-methodology'
@@ -175,6 +178,10 @@ export const views: Readonly<Record<string, CalculatorView | undefined>> = {
       Form: () => <EconomicsForm slug={slug} />,
       Methodology: ({ formulaVersion }) => <EconomicsMethodology slug={slug} formulaVersion={formulaVersion} />,
     }
+    return [slug, view]
+  })),
+  ...Object.fromEntries((Object.keys(taxTools) as TaxSlug[]).map(slug => {
+    const view: CalculatorView = { Form: () => <TaxForm slug={slug} />, Methodology: ({ formulaVersion }) => <TaxMethodology slug={slug} formulaVersion={formulaVersion} /> }
     return [slug, view]
   })),
 }
