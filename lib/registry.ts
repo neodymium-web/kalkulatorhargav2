@@ -3,6 +3,7 @@ import { calculateHpp, formulaVersion } from './hpp'
 import { operationTools, type OperationSlug } from './operations/tools'
 import { stockServiceTools, type StockServiceSlug } from './stock-services/tools'
 import { batchFourTools, type BatchSlug, type BatchTool } from './batch-four/tools'
+import { metricTools, type MetricSlug } from './marketplace-metrics/tools'
 import { businessTools, type BusinessSlug } from './business/tools'
 
 type SchemaField = {
@@ -104,6 +105,20 @@ const batchFourDefinitions = (Object.keys(batchFourTools) as BatchSlug[]).map((s
   }
 })
 
+const metricDefinitions = (Object.keys(metricTools) as MetricSlug[]).map((slug): PublishedCalculator => {
+  const { title, description, keywords, inputFields, outputFields, engine, testCase } = metricTools[slug]
+  return {
+    id: `calc-${slug}`, slug, path: `/kalkulator/${slug}`,
+    primaryCategory: 'marketplace', secondaryCategories: [],
+    metadata: { locale: 'id-ID', title, description, keywords },
+    inputFields, outputFields, officialSources: [], status: 'published',
+    implementation: {
+      engine, formulaVersion: '1.0.0',
+      testCases: [{ file: 'tests/metrics.unit.ts', name: testCase }],
+    },
+  }
+})
+
 export const definitions: readonly CalculatorDefinition[] = [{
   id: 'production-cost',
   slug: 'hpp',
@@ -139,7 +154,7 @@ export const definitions: readonly CalculatorDefinition[] = [{
       { file: 'tests/hpp.unit.ts', name: 'rejects invalid cost %s' },
     ],
   },
-}, ...businessDefinitions, ...operationDefinitions, ...stockServiceDefinitions, ...batchFourDefinitions]
+}, ...businessDefinitions, ...operationDefinitions, ...stockServiceDefinitions, ...batchFourDefinitions, ...metricDefinitions]
 
 export function listPublished(records = definitions): PublishedCalculator[] {
   return records.filter(tool => tool.status === 'published')
