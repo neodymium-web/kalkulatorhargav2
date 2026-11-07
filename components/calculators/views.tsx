@@ -1,3 +1,6 @@
+import { calendarTools, type CalendarSlug } from '../../lib/calendar-time/tools'
+import { CalendarForm } from './calendar-form'
+import { CalendarMethodology } from './calendar-methodology'
 import { everydayTools, type EverydaySlug } from '../../lib/everyday/tools'
 import { EverydayForm } from './everyday-form'
 import { EverydayMethodology } from './everyday-methodology'
@@ -134,6 +137,13 @@ export const views: Readonly<Record<string, CalculatorView | undefined>> = {
     const view: CalculatorView = {
       Form: () => <EverydayForm slug={slug} />,
       Methodology: ({ formulaVersion }) => <EverydayMethodology slug={slug} formulaVersion={formulaVersion} />,
+    }
+    return [slug, view]
+  })),
+  ...Object.fromEntries((Object.keys(calendarTools) as CalendarSlug[]).map(slug => {
+    const view: CalculatorView = {
+      Form: () => <CalendarForm slug={slug} />,
+      Methodology: ({ formulaVersion }) => <CalendarMethodology slug={slug} formulaVersion={formulaVersion} />,
     }
     return [slug, view]
   })),

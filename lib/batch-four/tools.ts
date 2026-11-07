@@ -5,7 +5,7 @@ import {
 export type BatchField = {
   id: string
   label: string
-  type: 'integer' | 'decimal' | 'choice' | 'date'
+  type: 'integer' | 'decimal' | 'choice' | 'date' | 'time'
   unit?: string
   options?: readonly { value: string; label: string }[]
   signed?: boolean
