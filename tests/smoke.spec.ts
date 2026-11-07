@@ -67,6 +67,7 @@ test('blocks preview indexing and lists only published URLs', async ({ request }
   expect((await sitemap.text()).match(/<loc>[^<]+<\/loc>/g)).toEqual([
     '<loc>https://kalkulatorharga.com/</loc>',
     '<loc>https://kalkulatorharga.com/bisnis</loc>',
+    '<loc>https://kalkulatorharga.com/marketplace</loc>',
     '<loc>https://kalkulatorharga.com/kalkulator/hpp</loc>',
     '<loc>https://kalkulatorharga.com/kalkulator/harga-jual</loc>',
     '<loc>https://kalkulatorharga.com/kalkulator/margin-laba</loc>',
@@ -83,6 +84,11 @@ test('blocks preview indexing and lists only published URLs', async ({ request }
     '<loc>https://kalkulatorharga.com/kalkulator/runway-kas</loc>',
     '<loc>https://kalkulatorharga.com/kalkulator/biaya-layanan</loc>',
     '<loc>https://kalkulatorharga.com/kalkulator/tarif-freelance</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/food-cost</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/harga-borongan</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/eoq</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/payback-period</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/berat-volumetrik</loc>',
   ])
 })
 

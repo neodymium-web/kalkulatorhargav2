@@ -2,12 +2,13 @@ import { categories, type CategoryId } from './categories'
 import { calculateHpp, formulaVersion } from './hpp'
 import { operationTools, type OperationSlug } from './operations/tools'
 import { stockServiceTools, type StockServiceSlug } from './stock-services/tools'
+import { batchFourTools, type BatchSlug, type BatchTool } from './batch-four/tools'
 import { businessTools, type BusinessSlug } from './business/tools'
 
 type SchemaField = {
   id: string
   label: string
-  type: 'integer' | 'decimal' | 'date' | 'choice'
+  type: 'integer' | 'decimal' | 'date' | 'choice' | 'array'
   unit?: string
 }
 
@@ -87,6 +88,22 @@ const stockServiceDefinitions = (Object.keys(stockServiceTools) as StockServiceS
   }
 })
 
+const batchFourDefinitions = (Object.keys(batchFourTools) as BatchSlug[]).map((slug): PublishedCalculator => {
+  const tool: BatchTool = batchFourTools[slug]
+  const { title, description, category, keywords, inputFields, outputFields, engine, testCase } = tool
+  return {
+    id: `calc-${slug}`, slug, path: `/kalkulator/${slug}`,
+    primaryCategory: category, secondaryCategories: [],
+    metadata: { locale: 'id-ID', title, description, keywords },
+    inputFields: [...inputFields, ...(tool.rows ? [{ id: tool.rows, label: tool.rows === 'ingredients' ? 'Bahan resep' : 'Arus kas per periode', type: 'array' as const }] : [])],
+    outputFields, officialSources: [], status: 'published',
+    implementation: {
+      engine, formulaVersion: '1.0.0',
+      testCases: [{ file: 'tests/batch-four.unit.ts', name: testCase }],
+    },
+  }
+})
+
 export const definitions: readonly CalculatorDefinition[] = [{
   id: 'production-cost',
   slug: 'hpp',
@@ -122,7 +139,7 @@ export const definitions: readonly CalculatorDefinition[] = [{
       { file: 'tests/hpp.unit.ts', name: 'rejects invalid cost %s' },
     ],
   },
-}, ...businessDefinitions, ...operationDefinitions, ...stockServiceDefinitions]
+}, ...businessDefinitions, ...operationDefinitions, ...stockServiceDefinitions, ...batchFourDefinitions]
 
 export function listPublished(records = definitions): PublishedCalculator[] {
   return records.filter(tool => tool.status === 'published')
