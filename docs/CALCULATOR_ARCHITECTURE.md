@@ -37,3 +37,5 @@ Lihat juga [verifikasi batch persediaan, kas, dan jasa](BATCH_3_FORMULA_VERIFICA
 Lihat juga [verifikasi batch resep, proyek, persediaan, investasi, dan paket](BATCH_4_FORMULA_VERIFICATION.md).
 
 Lihat juga [verifikasi metrik iklan dan konversi](BATCH_5_FORMULA_VERIFICATION.md).
+
+Lihat juga [verifikasi bunga, cicilan, dan rasio cicilan](BATCH_7_FORMULA_VERIFICATION.md), termasuk konvensi pembulatan dan rekonsiliasi jadwal rupiah.

@@ -118,7 +118,7 @@ test('serves the Marketplace hub and published batch with canonical and staging 
   await page.screenshot({ path: info.outputPath('marketplace.jpg'), fullPage: true, quality: 70 })
   const sitemap = await request.get('/sitemap.xml')
   const xml = await sitemap.text()
-  expect(xml.match(/<loc>/g)).toHaveLength(34)
+  expect(xml.match(/<loc>/g)).toHaveLength(40)
   expect(xml).toContain('<loc>https://kalkulatorharga.com/marketplace</loc>')
   for (const slug of slugs) expect(xml).toContain(`<loc>https://kalkulatorharga.com/kalkulator/${slug}</loc>`)
   for (const slug of ['tiktok', 'tiktok-shop', 'shopee']) expect((await request.get(`/kalkulator/${slug}`)).status()).toBe(404)
