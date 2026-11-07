@@ -46,7 +46,7 @@ export const operationTools = {
     ],
     outputFields: [decimal('yield', 'Yield bahan', '%'), decimal('loss', 'Susut berat'), decimal('lossPercent', 'Persentase susut', '%')],
     engine: calculateYield,
-    hint: 'Pilih g atau kg dengan mengetik satuannya. Gunakan satu batch dan maksimal tiga angka desimal.',
+    hint: 'Pilih gram atau kilogram. Gunakan satu batch dan maksimal tiga angka desimal.',
     assumption: 'Yield dan persen susut masing-masing dibulatkan ke dua desimal.',
     testCase: 'calculates yield and exact loss in the selected weight unit',
   },

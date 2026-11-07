@@ -31,3 +31,5 @@ Jika sumber belum terverifikasi, kedaluwarsa, atau tidak mencakup transaksi peng
 Lihat [catatan verifikasi rumus](BUSINESS_FORMULA_VERIFICATION.md) untuk sumber, asumsi, pembulatan, dan contoh uji independen kelima alat.
 
 Lihat juga [verifikasi batch operasional](BATCH_2_FORMULA_VERIFICATION.md).
+
+Lihat juga [verifikasi batch persediaan, kas, dan jasa](BATCH_3_FORMULA_VERIFICATION.md).

@@ -4,7 +4,7 @@ import { useId, useState, type FormEvent } from 'react'
 import type { OperationResult } from '../../lib/operations/engines'
 import { operationTools, type OperationSlug, type OperationTool } from '../../lib/operations/tools'
 import { CalculatorForm, ResultPanel } from '../ui/calculator'
-import { Input } from '../ui/controls'
+import { Input, Select } from '../ui/controls'
 import styles from '../ui/calculator.module.css'
 
 const integer = new Intl.NumberFormat('id-ID')
@@ -47,7 +47,14 @@ export function OperationsForm({ slug }: { slug: OperationSlug }) {
   return <div className={styles.grid}>
     <CalculatorForm title="Data perhitungan" hint={tool.hint} hintId={hintId} submitLabel="Hitung"
       invalidFields={invalidFields} onSubmit={submit} onChange={() => setResult(undefined)}>
-      {fields.map(field => <Input key={field.id} id={field.htmlId} name={field.id} label={field.fullLabel}
+      {fields.map(field => slug === 'yield-bahan' && field.id === 'unit'
+        ? <Select key={field.id} id={field.htmlId} name="unit" label={field.fullLabel}
+            defaultValue="" aria-describedby={hintId} error={errors?.[field.id]?.[0]}>
+            <option value="" disabled>Pilih satuan</option>
+            <option value="g">Gram (g)</option>
+            <option value="kg">Kilogram (kg)</option>
+          </Select>
+        : <Input key={field.id} id={field.htmlId} name={field.id} label={field.fullLabel}
         type={field.type === 'date' ? 'date' : 'text'}
         inputMode={slug === 'arus-kas' && field.id === 'opening' ? 'text'
           : field.type === 'decimal' ? 'decimal' : field.type === 'integer' ? 'numeric' : undefined}

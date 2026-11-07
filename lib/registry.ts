@@ -1,6 +1,7 @@
 import { categories, type CategoryId } from './categories'
 import { calculateHpp, formulaVersion } from './hpp'
 import { operationTools, type OperationSlug } from './operations/tools'
+import { stockServiceTools, type StockServiceSlug } from './stock-services/tools'
 import { businessTools, type BusinessSlug } from './business/tools'
 
 type SchemaField = {
@@ -72,6 +73,20 @@ const operationDefinitions = (Object.keys(operationTools) as OperationSlug[]).ma
   }
 })
 
+const stockServiceDefinitions = (Object.keys(stockServiceTools) as StockServiceSlug[]).map((slug): PublishedCalculator => {
+  const { title, description, keywords, inputFields, outputFields, engine, testCase } = stockServiceTools[slug]
+  return {
+    id: `calc-${slug}`, slug, path: `/kalkulator/${slug}`,
+    primaryCategory: 'bisnis', secondaryCategories: [],
+    metadata: { locale: 'id-ID', title, description, keywords },
+    inputFields, outputFields, officialSources: [], status: 'published',
+    implementation: {
+      engine, formulaVersion: '1.0.0',
+      testCases: [{ file: 'tests/stock-services.unit.ts', name: testCase }],
+    },
+  }
+})
+
 export const definitions: readonly CalculatorDefinition[] = [{
   id: 'production-cost',
   slug: 'hpp',
@@ -107,7 +122,7 @@ export const definitions: readonly CalculatorDefinition[] = [{
       { file: 'tests/hpp.unit.ts', name: 'rejects invalid cost %s' },
     ],
   },
-}, ...businessDefinitions, ...operationDefinitions]
+}, ...businessDefinitions, ...operationDefinitions, ...stockServiceDefinitions]
 
 export function listPublished(records = definitions): PublishedCalculator[] {
   return records.filter(tool => tool.status === 'published')

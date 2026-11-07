@@ -78,6 +78,11 @@ test('blocks preview indexing and lists only published URLs', async ({ request }
     '<loc>https://kalkulatorharga.com/kalkulator/penyusutan-garis-lurus</loc>',
     '<loc>https://kalkulatorharga.com/kalkulator/arus-kas</loc>',
     '<loc>https://kalkulatorharga.com/kalkulator/utilisasi-kapasitas</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/perputaran-persediaan</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/reorder-point</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/runway-kas</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/biaya-layanan</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/tarif-freelance</loc>',
   ])
 })
 
