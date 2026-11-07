@@ -8,6 +8,7 @@ export type StructuredTool = {
   inputFields: readonly BatchField[]
   rowFields?: readonly BatchField[]
   rows?: string
+  rowConfig?: { name: string; label: string; startIndex?: number; max: number; limitLabel?: string }
   hint: string
 }
 type Control = BatchField & { name: string; htmlId: string }
@@ -52,6 +53,11 @@ export function StructuredForm({
   const [rows, setRows] = useState([0])
   const nextRowId = useRef(1)
   const focusTarget = useRef<string | null>(null)
+  const isFood = tool.rows !== 'flows'
+  const rowName = tool.rowConfig?.name ?? (isFood ? 'bahan' : 'periode')
+  const rowLabel = tool.rowConfig?.label ?? (isFood ? 'Bahan' : 'Periode')
+  const rowStart = tool.rowConfig?.startIndex ?? 1
+  const rowLimit = tool.rowConfig?.max ?? (isFood ? 100 : 120)
   const controls = tool.inputFields.map((field) => ({
     ...field,
     summaryLabel: field.label,
@@ -61,7 +67,7 @@ export function StructuredForm({
   const rowControls = rows.map((rowId, index) =>
     (tool.rowFields ?? []).map((field) => ({
       ...field,
-      summaryLabel: `${field.label}, ${tool.rows !== 'flows' ? 'bahan' : 'periode'} ${index + 1}`,
+      summaryLabel: `${field.label}, ${rowName} ${index + rowStart}`,
       name: `${tool.rows}.${index}.${field.id}`,
       htmlId: `${id}-row-${rowId}-${field.id}`,
     })),
@@ -71,9 +77,6 @@ export function StructuredForm({
         errors[field.name]?.length ? [{ id: field.htmlId, label: field.summaryLabel }] : [],
       )
     : undefined
-  const isFood = tool.rows !== 'flows'
-  const rowName = isFood ? 'bahan' : 'periode'
-  const rowLimit = isFood ? 100 : 120
   const addId = `${id}-add`
 
   useEffect(() => {
@@ -129,7 +132,7 @@ export function StructuredForm({
           {rowControls.map((fields, index) => (
             <fieldset key={rows[index]} className={styles.row}>
               <legend>
-                {isFood ? 'Bahan' : 'Periode'} {index + 1}
+                {rowLabel} {index + rowStart}
               </legend>
               <div className={styles.rowFields}>
                 {fields.map((field) => (
@@ -142,7 +145,7 @@ export function StructuredForm({
                 disabled={rows.length === 1}
                 onClick={() => removeRow(index)}
               >
-                Hapus {rowName} {index + 1}
+                Hapus {rowName} {index + rowStart}
               </Button>
             </fieldset>
           ))}
@@ -150,7 +153,7 @@ export function StructuredForm({
             Tambah {rowName}
           </Button>
           <p className={styles.hint}>
-            Maksimal {rowLimit} {rowName}.
+            Maksimal {rowLimit} {tool.rowConfig?.limitLabel ?? rowName}.
           </p>
         </>
       )}

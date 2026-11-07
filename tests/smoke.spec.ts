@@ -110,6 +110,11 @@ test('blocks preview indexing and lists only published URLs', async ({ request }
     '<loc>https://kalkulatorharga.com/kalkulator/deposito</loc>',
     '<loc>https://kalkulatorharga.com/kalkulator/imbal-hasil-investasi</loc>',
     '<loc>https://kalkulatorharga.com/kalkulator/cagr</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/nilai-kini</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/npv</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/inflasi</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/rata-rata-beli-saham</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/untung-rugi-saham</loc>',
   ])
 })
 
