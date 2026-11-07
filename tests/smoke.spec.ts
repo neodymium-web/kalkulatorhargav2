@@ -89,6 +89,11 @@ test('blocks preview indexing and lists only published URLs', async ({ request }
     '<loc>https://kalkulatorharga.com/kalkulator/eoq</loc>',
     '<loc>https://kalkulatorharga.com/kalkulator/payback-period</loc>',
     '<loc>https://kalkulatorharga.com/kalkulator/berat-volumetrik</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/roas</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/roas-impas</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/acos</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/konversi-toko</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/nilai-pesanan-rata-rata</loc>',
   ])
 })
 

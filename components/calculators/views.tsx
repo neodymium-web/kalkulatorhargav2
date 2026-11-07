@@ -11,6 +11,9 @@ import { StockServicesMethodology } from './stock-services-methodology'
 import { batchFourTools, type BatchSlug } from '../../lib/batch-four/tools'
 import { BatchFourForm } from './batch-four-form'
 import { BatchFourMethodology } from './batch-four-methodology'
+import { metricTools, type MetricSlug } from '../../lib/marketplace-metrics/tools'
+import { MetricsForm } from './metrics-form'
+import { MetricsMethodology } from './metrics-methodology'
 import { HppForm } from './hpp-form'
 import { HppMethodology } from './hpp'
 
@@ -44,6 +47,13 @@ export const views: Readonly<Record<string, CalculatorView | undefined>> = {
     const view: CalculatorView = {
       Form: () => <BatchFourForm slug={slug} />,
       Methodology: ({ formulaVersion }) => <BatchFourMethodology slug={slug} formulaVersion={formulaVersion} />,
+    }
+    return [slug, view]
+  })),
+  ...Object.fromEntries((Object.keys(metricTools) as MetricSlug[]).map(slug => {
+    const view: CalculatorView = {
+      Form: () => <MetricsForm slug={slug} />,
+      Methodology: ({ formulaVersion }) => <MetricsMethodology slug={slug} formulaVersion={formulaVersion} />,
     }
     return [slug, view]
   })),

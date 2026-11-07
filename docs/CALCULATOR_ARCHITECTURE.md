@@ -35,3 +35,5 @@ Lihat juga [verifikasi batch operasional](BATCH_2_FORMULA_VERIFICATION.md).
 Lihat juga [verifikasi batch persediaan, kas, dan jasa](BATCH_3_FORMULA_VERIFICATION.md).
 
 Lihat juga [verifikasi batch resep, proyek, persediaan, investasi, dan paket](BATCH_4_FORMULA_VERIFICATION.md).
+
+Lihat juga [verifikasi metrik iklan dan konversi](BATCH_5_FORMULA_VERIFICATION.md).

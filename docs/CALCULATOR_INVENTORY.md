@@ -1,6 +1,6 @@
 # Inventaris 100 kalkulator
 
-Inventaris ini menetapkan usulan slug dan intent untuk setiap alat. Sebanyak 21 kalkulator sudah terbit. Baris berstatus ide belum memiliki rute publik. ID untuk ide memakai awalan `calc-`. ID TikTok yang sudah dicatat tetap mengikuti alatnya saat slug dikoreksi. Setelah implementasi, simpan ID saat mengubah nama tampilan atau URL.
+Inventaris ini menetapkan usulan slug dan intent untuk setiap alat. Sebanyak 26 kalkulator sudah terbit. Baris berstatus ide belum memiliki rute publik. ID untuk ide memakai awalan `calc-`. ID TikTok yang sudah dicatat tetap mengikuti alatnya saat slug dikoreksi. Setelah implementasi, simpan ID saat mengubah nama tampilan atau URL.
 
 Tingkat 1 memakai rumus langsung. Tingkat 2 melibatkan beberapa mode, jadwal, satuan, atau kebijakan pembulatan. Tingkat 3 membutuhkan aturan bertanggal, pencarian solusi, atau verifikasi domain yang lebih ketat. Kolom sumber menjelaskan kebutuhan tarif dinamis. Tanda “—” berarti alat tidak memerlukan data tarif eksternal. Input manual berasal dari pengguna dan ditampilkan sebagai asumsi.
 
@@ -47,11 +47,11 @@ Tingkat 1 memakai rumus langsung. Tingkat 2 melibatkan beberapa mode, jadwal, sa
 | calc-biaya-kemasan | biaya-kemasan | /kalkulator/biaya-kemasan | Biaya bahan kemasan per paket | marketplace | Harga grosir, isi, pemakaian, susut | Total biaya kemasan/paket | Jumlah biaya unit tiap bahan disesuaikan susut | 1 | idea | — | Tautan bahan kemasan dengan pengungkapan afiliasi |
 | calc-biaya-retur | biaya-retur | /kalkulator/biaya-retur | Ekspektasi biaya retur per pesanan | marketplace | Tingkat retur, biaya per retur, nilai barang pulih | Biaya retur ekspektasian | Peluang retur × biaya bersih per retur | 1 | idea | — | — |
 | calc-kerugian-cod | kerugian-cod | /kalkulator/kerugian-cod | Beban pesanan COD yang gagal diterima | marketplace | Jumlah pesanan, tingkat gagal, biaya gagal | Perkiraan kerugian | Jumlah × tingkat gagal × biaya gagal | 1 | idea | — | — |
-| calc-roas | roas | /kalkulator/roas | Pendapatan yang diatribusikan per rupiah iklan | marketplace | Pendapatan atribusi, belanja iklan | ROAS | Pendapatan ÷ iklan | 1 | idea | — | — |
-| calc-roas-impas | roas-impas | /kalkulator/roas-impas | Ambang ROAS agar iklan tidak merugi | marketplace | Pendapatan sebelum iklan, kontribusi sebelum iklan | ROAS impas | Pendapatan ÷ kontribusi | 1 | idea | — | — |
-| calc-acos | acos | /kalkulator/acos | Persentase biaya iklan terhadap penjualan | marketplace | Belanja iklan, penjualan atribusi | ACOS | Iklan ÷ penjualan atribusi | 1 | idea | — | — |
-| calc-konversi-toko | konversi-toko | /kalkulator/konversi-toko | Porsi kunjungan toko yang membeli | marketplace | Kunjungan, jumlah pembelian | Tingkat konversi | Pembelian ÷ kunjungan | 1 | idea | — | — |
-| calc-nilai-pesanan-rata-rata | nilai-pesanan-rata-rata | /kalkulator/nilai-pesanan-rata-rata | Rata-rata nilai pesanan toko | marketplace | Pendapatan dan jumlah pesanan | AOV | Pendapatan ÷ pesanan | 1 | idea | — | — |
+| calc-roas | roas | /kalkulator/roas | Pendapatan yang diatribusikan per rupiah iklan | marketplace | Pendapatan atribusi, belanja iklan | ROAS | Pendapatan ÷ iklan | 1 | published | — | — |
+| calc-roas-impas | roas-impas | /kalkulator/roas-impas | Ambang ROAS agar iklan tidak merugi | marketplace | Pendapatan sebelum iklan, kontribusi sebelum iklan | ROAS impas | Pendapatan ÷ kontribusi | 1 | published | — | — |
+| calc-acos | acos | /kalkulator/acos | Persentase biaya iklan terhadap penjualan | marketplace | Belanja iklan, penjualan atribusi | ACOS | Iklan ÷ penjualan atribusi | 1 | published | — | — |
+| calc-konversi-toko | konversi-toko | /kalkulator/konversi-toko | Porsi kunjungan toko yang membeli | marketplace | Total kunjungan, kunjungan yang menghasilkan pembelian | Tingkat konversi | Kunjungan membeli ÷ seluruh kunjungan | 1 | published | — | — |
+| calc-nilai-pesanan-rata-rata | nilai-pesanan-rata-rata | /kalkulator/nilai-pesanan-rata-rata | Rata-rata nilai pesanan toko | marketplace | Pendapatan dan jumlah pesanan | AOV | Pendapatan ÷ pesanan | 1 | published | — | — |
 | calc-bundel-produk | bundel-produk | /kalkulator/bundel-produk | Kontribusi paket gabungan produk | marketplace | Biaya tiap produk, jumlah, harga paket, biaya transaksi | Laba kontribusi paket | Harga paket − biaya seluruh isi dan transaksi | 1 | idea | — | — |
 | calc-stok-cover | stok-cover | /kalkulator/stok-cover | Hari stok tersisa menurut laju penjualan | marketplace | Stok siap jual, penjualan rata-rata harian | Hari cakupan | Stok ÷ penjualan harian | 1 | idea | — | — |
 
