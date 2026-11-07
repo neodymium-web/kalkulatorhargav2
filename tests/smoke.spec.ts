@@ -94,6 +94,11 @@ test('blocks preview indexing and lists only published URLs', async ({ request }
     '<loc>https://kalkulatorharga.com/kalkulator/acos</loc>',
     '<loc>https://kalkulatorharga.com/kalkulator/konversi-toko</loc>',
     '<loc>https://kalkulatorharga.com/kalkulator/nilai-pesanan-rata-rata</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/promo-seller</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/subsidi-ongkir</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/biaya-kemasan</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/biaya-retur</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/kerugian-cod</loc>',
   ])
 })
 

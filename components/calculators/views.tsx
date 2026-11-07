@@ -1,3 +1,6 @@
+import { sellerTools, type SellerSlug } from '../../lib/seller-costs/tools'
+import { SellerForm } from './seller-form'
+import { SellerMethodology } from './seller-methodology'
 import type { ComponentType } from 'react'
 import { businessTools, type BusinessSlug } from '../../lib/business/tools'
 import { BusinessForm } from './business-form'
@@ -54,6 +57,13 @@ export const views: Readonly<Record<string, CalculatorView | undefined>> = {
     const view: CalculatorView = {
       Form: () => <MetricsForm slug={slug} />,
       Methodology: ({ formulaVersion }) => <MetricsMethodology slug={slug} formulaVersion={formulaVersion} />,
+    }
+    return [slug, view]
+  })),
+  ...Object.fromEntries((Object.keys(sellerTools) as SellerSlug[]).map(slug => {
+    const view: CalculatorView = {
+      Form: () => <SellerForm slug={slug} />,
+      Methodology: ({ formulaVersion }) => <SellerMethodology slug={slug} formulaVersion={formulaVersion} />,
     }
     return [slug, view]
   })),

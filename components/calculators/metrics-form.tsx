@@ -39,7 +39,7 @@ export function MetricsForm({ slug }: { slug: MetricSlug }) {
     label: field.label,
     value: result.values[field.id] === null
       ? result.status === 'no-finite-roas' ? 'Tidak ada ROAS impas berhingga' : 'ACOS tidak terdefinisi'
-      : format(result.values[field.id]!, field.unit),
+      : field.id === 'margin' && result.values.contribution! > 0n && result.values.margin === 0n ? '<0,01%' : format(result.values[field.id]!, field.unit),
   })) : []
   const explanation = result?.success && result.status === 'no-finite-roas'
     ? 'Kontribusi sebelum iklan nol atau negatif. Perbaiki harga atau biaya variabel agar margin kontribusi positif.'

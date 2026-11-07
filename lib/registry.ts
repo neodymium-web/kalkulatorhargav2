@@ -1,3 +1,4 @@
+import { sellerTools, type SellerSlug, type SellerTool } from './seller-costs/tools'
 import { categories, type CategoryId } from './categories'
 import { calculateHpp, formulaVersion } from './hpp'
 import { operationTools, type OperationSlug } from './operations/tools'
@@ -119,6 +120,17 @@ const metricDefinitions = (Object.keys(metricTools) as MetricSlug[]).map((slug):
   }
 })
 
+const sellerDefinitions = (Object.keys(sellerTools) as SellerSlug[]).map((slug): PublishedCalculator => {
+  const tool: SellerTool = sellerTools[slug]
+  return {
+    id: `calc-${slug}`, slug, path: `/kalkulator/${slug}`, primaryCategory: 'marketplace', secondaryCategories: [],
+    metadata: { locale: 'id-ID', title: tool.title, description: tool.description, keywords: tool.keywords },
+    inputFields: [...tool.inputFields, ...(tool.rows ? [{ id: tool.rows, label: 'Bahan kemasan', type: 'array' as const }] : [])],
+    outputFields: tool.outputFields, officialSources: [{title: slug === 'biaya-kemasan' ? 'BCcampus: Yield Testing' : slug === 'promo-seller' || slug === 'subsidi-ongkir' ? 'TikTok Shop: Co-funded Campaign (Brazil; conceptual only)' : 'OpenStax: Expected value', url: slug === 'biaya-kemasan' ? 'https://opentextbc.ca/basickitchenandfoodservicemanagement/chapter/yield-testing/' : slug === 'promo-seller' || slug === 'subsidi-ongkir' ? 'https://seller-br.tiktok.com/university/essay?knowledge_id=2569565069149953&lang=en' : 'https://openstax.org/books/introductory-statistics-2e/pages/4-2-mean-or-expected-value-and-standard-deviation',verifiedAt:'2026-11-07'}], status:'published',
+    implementation: { engine: tool.engine, formulaVersion:'1.0.0', testCases:[{file:'tests/seller-costs.unit.ts',name:tool.testCase}] },
+  }
+})
+
 export const definitions: readonly CalculatorDefinition[] = [{
   id: 'production-cost',
   slug: 'hpp',
@@ -154,7 +166,7 @@ export const definitions: readonly CalculatorDefinition[] = [{
       { file: 'tests/hpp.unit.ts', name: 'rejects invalid cost %s' },
     ],
   },
-}, ...businessDefinitions, ...operationDefinitions, ...stockServiceDefinitions, ...batchFourDefinitions, ...metricDefinitions]
+}, ...businessDefinitions, ...operationDefinitions, ...stockServiceDefinitions, ...batchFourDefinitions, ...metricDefinitions, ...sellerDefinitions]
 
 export function listPublished(records = definitions): PublishedCalculator[] {
   return records.filter(tool => tool.status === 'published')
