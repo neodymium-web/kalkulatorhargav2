@@ -1,3 +1,5 @@
+import { scenarioTools, type ScenarioSlug, type ScenarioTool } from './loan-scenarios/tools'
+import { scenarioSources } from './loan-scenarios/sources'
 import { sellerTools, type SellerSlug, type SellerTool } from './seller-costs/tools'
 import { financeTools, type FinanceSlug, type FinanceTool } from './finance/tools'
 import { financeSources } from './finance/sources'
@@ -172,6 +174,17 @@ const valuationDefinitions = (Object.keys(valuationTools) as ValuationSlug[]).ma
   }
 })
 
+const scenarioDefinitions = (Object.keys(scenarioTools) as ScenarioSlug[]).map((slug): PublishedCalculator => {
+  const tool: ScenarioTool = scenarioTools[slug]
+  return {
+    id: `calc-${slug}`, slug, path: `/kalkulator/${slug}`, primaryCategory: 'keuangan', secondaryCategories: [],
+    metadata: { locale: 'id-ID', title: tool.title, description: tool.description, keywords: tool.keywords },
+    inputFields: [...tool.inputFields, ...(tool.rows ? [{ id: tool.rows, label: 'Pembayaran bertanggal', type: 'array' as const }] : [])],
+    outputFields: tool.outputFields, officialSources: tool.sources.map(id => ({ ...scenarioSources[id], verifiedAt: '2026-11-07' })), status: 'published',
+    implementation: { engine: tool.engine, formulaVersion: '1.0.0', testCases: [{ file: 'tests/loan-scenarios.unit.ts', name: tool.testCase }] },
+  }
+})
+
 export const definitions: readonly CalculatorDefinition[] = [{
   id: 'production-cost',
   slug: 'hpp',
@@ -207,7 +220,7 @@ export const definitions: readonly CalculatorDefinition[] = [{
       { file: 'tests/hpp.unit.ts', name: 'rejects invalid cost %s' },
     ],
   },
-}, ...businessDefinitions, ...operationDefinitions, ...stockServiceDefinitions, ...batchFourDefinitions, ...metricDefinitions, ...sellerDefinitions, ...financeDefinitions, ...investmentDefinitions, ...valuationDefinitions]
+}, ...businessDefinitions, ...operationDefinitions, ...stockServiceDefinitions, ...batchFourDefinitions, ...metricDefinitions, ...sellerDefinitions, ...financeDefinitions, ...investmentDefinitions, ...valuationDefinitions, ...scenarioDefinitions]
 
 export function listPublished(records = definitions): PublishedCalculator[] {
   return records.filter(tool => tool.status === 'published')

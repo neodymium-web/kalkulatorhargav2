@@ -43,3 +43,5 @@ Lihat juga [verifikasi bunga, cicilan, dan rasio cicilan](BATCH_7_FORMULA_VERIFI
 Lihat juga [verifikasi tabungan, cadangan, deposito, ROI dan CAGR](BATCH_8_FORMULA_VERIFICATION.md), termasuk bukti setoran minimum dan pembulatan akar bertanda.
 
 Lihat juga [verifikasi nilai kini, NPV, inflasi dan saham](BATCH_9_FORMULA_VERIFICATION.md), termasuk arus kas bertanda serta biaya perolehan multi-transaksi.
+
+Lihat juga [verifikasi pinjaman bertanggal, KPR, pelunasan, refinancing dan kurs](BATCH_10_FORMULA_VERIFICATION.md).

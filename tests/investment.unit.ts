@@ -354,8 +354,8 @@ describe('validation and publication', () => {
         expect(engine(input).success).toBe(false)
   })
   it('publishes exactly the additional five investment tools while retaining all earlier tools', () => {
-    expect(listPublished()).toHaveLength(46)
-    expect(listCategory('keuangan')).toHaveLength(15)
+    expect(listPublished()).toHaveLength(51)
+    expect(listCategory('keuangan')).toHaveLength(20)
     expect(
       listCategory('keuangan')
         .slice(5, 10)
@@ -363,6 +363,6 @@ describe('validation and publication', () => {
     ).toEqual(['target-tabungan', 'dana-darurat', 'deposito', 'imbal-hasil-investasi', 'cagr'])
     expect(listCategory('bisnis')).toHaveLength(20)
     expect(listCategory('marketplace')).toHaveLength(11)
-    expect(sitemapPaths()).toHaveLength(50)
+    expect(sitemapPaths()).toHaveLength(55)
   })
 })
