@@ -1,6 +1,6 @@
 # Inventaris 100 kalkulator
 
-Inventaris ini menetapkan usulan slug dan intent untuk setiap alat. HPP dan sepuluh alat bisnis sudah terbit. Baris berstatus ide belum memiliki rute publik. ID untuk ide memakai awalan `calc-`. ID TikTok yang sudah dicatat tetap mengikuti alatnya saat slug dikoreksi. Setelah implementasi, simpan ID saat mengubah nama tampilan atau URL.
+Inventaris ini menetapkan usulan slug dan intent untuk setiap alat. HPP dan lima belas alat bisnis sudah terbit. Baris berstatus ide belum memiliki rute publik. ID untuk ide memakai awalan `calc-`. ID TikTok yang sudah dicatat tetap mengikuti alatnya saat slug dikoreksi. Setelah implementasi, simpan ID saat mengubah nama tampilan atau URL.
 
 Tingkat 1 memakai rumus langsung. Tingkat 2 melibatkan beberapa mode, jadwal, satuan, atau kebijakan pembulatan. Tingkat 3 membutuhkan aturan bertanggal, pencarian solusi, atau verifikasi domain yang lebih ketat. Kolom sumber menjelaskan kebutuhan tarif dinamis. Tanda “—” berarti alat tidak memerlukan data tarif eksternal. Input manual berasal dari pengguna dan ditampilkan sebagai asumsi.
 
@@ -19,16 +19,16 @@ Tingkat 1 memakai rumus langsung. Tingkat 2 melibatkan beberapa mode, jadwal, sa
 | calc-food-cost | food-cost | /kalkulator/food-cost | Biaya bahan makanan per porsi | bisnis | Harga kemasan, pemakaian tiap bahan, hasil porsi | Biaya resep dan per porsi | Jumlah biaya bahan proporsional ÷ porsi | 2 | idea | — | — |
 | calc-yield-bahan | yield-bahan | /kalkulator/yield-bahan | Susut saat menyiapkan bahan | bisnis | Berat kotor, berat bersih | Persentase hasil dan susut | Berat bersih ÷ berat kotor | 1 | published | — | — |
 | calc-harga-borongan | harga-borongan | /kalkulator/harga-borongan | Harga penawaran proyek jasa | bisnis | Jam, tarif tenaga kerja, bahan, overhead, laba target | Harga penawaran | Jumlah biaya langsung dan overhead + laba | 1 | idea | — | — |
-| calc-tarif-freelance | tarif-freelance | /kalkulator/tarif-freelance | Tarif per jam agar menutup biaya tahunan | bisnis | Target penghasilan, biaya tahunan, jam tertagih | Tarif minimum per jam | Kebutuhan tahunan ÷ jam tertagih | 1 | idea | — | — |
+| calc-tarif-freelance | tarif-freelance | /kalkulator/tarif-freelance | Tarif per jam agar menutup biaya tahunan | bisnis | Target penghasilan, biaya tahunan, jam tertagih | Tarif minimum per jam | Kebutuhan tahunan ÷ jam tertagih | 1 | published | — | — |
 | calc-penyusutan-garis-lurus | penyusutan-garis-lurus | /kalkulator/penyusutan-garis-lurus | Penyusutan aset per tahun | bisnis | Harga aset, nilai residu, umur | Penyusutan tahunan | Selisih nilai ÷ umur | 1 | published | — | — |
-| calc-perputaran-persediaan | perputaran-persediaan | /kalkulator/perputaran-persediaan | Kecepatan penjualan stok | bisnis | Harga pokok penjualan, stok awal dan akhir dalam rupiah | Perputaran dan hari persediaan | Harga pokok penjualan ÷ stok rata-rata | 1 | idea | — | — |
-| calc-reorder-point | reorder-point | /kalkulator/reorder-point | Stok minimum untuk pesan ulang | bisnis | Permintaan harian, lead time, stok aman | Titik pemesanan ulang | Permintaan × lead time + stok aman | 1 | idea | — | — |
+| calc-perputaran-persediaan | perputaran-persediaan | /kalkulator/perputaran-persediaan | Kecepatan penjualan stok | bisnis | Harga pokok penjualan, stok awal dan akhir dalam rupiah | Perputaran dan hari persediaan | Harga pokok penjualan ÷ stok rata-rata | 1 | published | — | — |
+| calc-reorder-point | reorder-point | /kalkulator/reorder-point | Stok minimum untuk pesan ulang | bisnis | Permintaan harian, lead time, stok aman | Titik pemesanan ulang | Permintaan × lead time + stok aman | 1 | published | — | — |
 | calc-eoq | eoq | /kalkulator/eoq | Ukuran pemesanan stok ekonomis | bisnis | Permintaan tahunan, biaya pesan, biaya simpan/unit | Unit per pesanan | Akar dari 2 × permintaan × biaya pesan ÷ biaya simpan | 2 | idea | — | — |
 | calc-arus-kas | arus-kas | /kalkulator/arus-kas | Saldo kas setelah penerimaan dan pengeluaran | bisnis | Saldo awal, kas masuk, kas keluar | Arus bersih dan saldo akhir | Masuk − keluar, tambah saldo awal | 1 | published | — | — |
-| calc-runway-kas | runway-kas | /kalkulator/runway-kas | Berapa bulan kas usaha bertahan | bisnis | Kas, pengeluaran dan penerimaan bulanan | Runway | Kas ÷ burn bersih jika positif | 1 | idea | — | — |
+| calc-runway-kas | runway-kas | /kalkulator/runway-kas | Berapa bulan kas usaha bertahan | bisnis | Kas, pengeluaran dan penerimaan bulanan | Runway | Kas ÷ burn bersih jika positif | 1 | published | — | — |
 | calc-payback-period | payback-period | /kalkulator/payback-period | Kapan modal proyek kembali | bisnis | Investasi awal, arus kas per periode | Periode balik modal | Akumulasi arus kas hingga menutup investasi | 2 | idea | — | — |
 | calc-utilisasi-kapasitas | utilisasi-kapasitas | /kalkulator/utilisasi-kapasitas | Persentase kapasitas produksi terpakai | bisnis | Output aktual, kapasitas maksimum | Utilisasi | Aktual ÷ kapasitas | 1 | published | — | — |
-| calc-biaya-layanan | biaya-layanan | /kalkulator/biaya-layanan | Alokasi biaya usaha jasa per transaksi | bisnis | Biaya bulanan, transaksi, biaya variabel/transaksi | Biaya per transaksi | Biaya tetap ÷ transaksi + biaya variabel | 1 | idea | — | — |
+| calc-biaya-layanan | biaya-layanan | /kalkulator/biaya-layanan | Alokasi biaya usaha jasa per transaksi | bisnis | Biaya bulanan, transaksi, biaya variabel/transaksi | Biaya per transaksi | Biaya tetap ÷ transaksi + biaya variabel | 1 | published | — | — |
 
 ## marketplace
 

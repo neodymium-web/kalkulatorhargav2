@@ -5,6 +5,9 @@ import { BusinessMethodology } from './business-methodology'
 import { operationTools, type OperationSlug } from '../../lib/operations/tools'
 import { OperationsForm } from './operations-form'
 import { OperationsMethodology } from './operations-methodology'
+import { stockServiceTools, type StockServiceSlug } from '../../lib/stock-services/tools'
+import { StockServicesForm } from './stock-services-form'
+import { StockServicesMethodology } from './stock-services-methodology'
 import { HppForm } from './hpp-form'
 import { HppMethodology } from './hpp'
 
@@ -24,6 +27,13 @@ export const views: Readonly<Record<string, CalculatorView | undefined>> = {
     const view: CalculatorView = {
       Form: () => <OperationsForm slug={slug} />,
       Methodology: ({ formulaVersion }) => <OperationsMethodology slug={slug} formulaVersion={formulaVersion} />,
+    }
+    return [slug, view]
+  })),
+  ...Object.fromEntries((Object.keys(stockServiceTools) as StockServiceSlug[]).map(slug => {
+    const view: CalculatorView = {
+      Form: () => <StockServicesForm slug={slug} />,
+      Methodology: ({ formulaVersion }) => <StockServicesMethodology slug={slug} formulaVersion={formulaVersion} />,
     }
     return [slug, view]
   })),

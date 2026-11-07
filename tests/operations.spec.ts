@@ -44,7 +44,9 @@ for (const scenario of scenarios) {
     const live = page.getByRole('region', { name: 'Hasil perhitungan' }).locator('[aria-live="polite"]')
     await expect(live).toContainText('Isi semua kolom')
     for (const [label, value] of Object.entries(scenario.inputs)) {
-      await page.getByLabel(label, { exact: true }).fill(value)
+      const field = page.getByLabel(label, { exact: true })
+      if (label === 'Satuan berat') await field.selectOption(value)
+      else await field.fill(value)
     }
     const field = page.getByLabel(scenario.invalidLabel, { exact: true })
     await page.getByRole('button', { name: 'Hitung', exact: true }).press('Enter')
