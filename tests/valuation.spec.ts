@@ -290,7 +290,7 @@ test('finance pagination exposes all twenty tools and protects SEO boundaries', 
     ).toBeVisible()
   }
   const xml = await (await request.get('/sitemap.xml')).text()
-  expect(xml.match(/<loc>/g)).toHaveLength(82)
+  expect(xml.match(/<loc>/g)).toHaveLength(87)
   for (const { slug } of scenarios) expect(xml).toContain(`/kalkulator/${slug}</loc>`)
   for (const slug of ['tiktok-shop', 'shopee']) {
     expect((await request.get(`/kalkulator/${slug}`)).status()).toBe(404)

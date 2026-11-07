@@ -210,11 +210,11 @@ describe('strict bounds malformed input and catalog', () => {
     expect(formatCalendar(0n, 'liters', true)).toBe('<0,0001 L (positif)'); expect(formatCalendar(0n, 'IDR', true)).toBe('Rp0 (estimasi positif <Rp0,50)')
     expect(formatCalendar(150000000n, 'km')).toBe('150,000000 km'); expect(formatCalendar(13500n, 'IDR-per-L')).toBe('Rp13.500/L')
   })
-  it('publishes five existing IDs with 76 tools fifteen everyday and 82 sitemap URLs', () => {
-    expect(listPublished()).toHaveLength(76); expect(listCategory('sehari-hari')).toHaveLength(15); expect(listCategoryHubs()).toHaveLength(5); expect(sitemapPaths()).toHaveLength(82)
+  it('publishes five existing IDs with 81 tools twenty everyday and 87 sitemap URLs', () => {
+    expect(listPublished()).toHaveLength(81); expect(listCategory('sehari-hari')).toHaveLength(20); expect(listCategoryHubs()).toHaveLength(5); expect(sitemapPaths()).toHaveLength(87)
     for (const slug of ['selisih-tanggal', 'hari-kerja', 'usia', 'durasi-kerja', 'konsumsi-bbm']) expect(findPublished(slug)?.id).toBe(`calc-${slug}`)
-    for (const slug of ['ppn', 'shopee', 'tiktok-shop', 'skala-denah', 'konversi-panjang']) expect(findPublished(slug)).toBeUndefined()
+    for (const slug of ['ppn', 'shopee', 'tiktok-shop', 'pph-final-umkm', 'pph-21-bulanan']) expect(findPublished(slug)).toBeUndefined()
     const rows = readFileSync(new URL('../docs/CALCULATOR_INVENTORY.md', import.meta.url), 'utf8').split('\n').filter(l => /^\| (production-cost|calc-)/.test(l)).map(l => l.split('|').map(x => x.trim()))
-    expect(rows).toHaveLength(100); expect(new Set(rows.map(r => r[1])).size).toBe(100); expect(rows.filter(r => r[10] === 'published')).toHaveLength(76)
+    expect(rows).toHaveLength(100); expect(new Set(rows.map(r => r[1])).size).toBe(100); expect(rows.filter(r => r[10] === 'published')).toHaveLength(81)
   })
 })

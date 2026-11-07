@@ -147,6 +147,11 @@ test('blocks preview indexing and lists only published URLs', async ({ request }
     '<loc>https://kalkulatorharga.com/kalkulator/kebutuhan-cat</loc>',
     '<loc>https://kalkulatorharga.com/kalkulator/kebutuhan-keramik</loc>',
     '<loc>https://kalkulatorharga.com/kalkulator/volume-beton</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/skala-denah</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/konversi-panjang</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/konversi-berat</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/konversi-suhu</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/kecepatan-rata-rata</loc>',
   ])
 })
 

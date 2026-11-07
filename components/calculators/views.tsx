@@ -1,3 +1,6 @@
+import { unitsTools, type UnitsSlug } from '../../lib/units-scale/tools'
+import { UnitsForm } from './units-form'
+import { UnitsMethodology } from './units-methodology'
 import { materialsTools, type MaterialsSlug } from '../../lib/utilities-materials/tools'
 import { MaterialsForm } from './materials-form'
 import { MaterialsMethodology } from './materials-methodology'
@@ -154,6 +157,13 @@ export const views: Readonly<Record<string, CalculatorView | undefined>> = {
     const view: CalculatorView = {
       Form: () => <MaterialsForm slug={slug} />,
       Methodology: ({ formulaVersion }) => <MaterialsMethodology slug={slug} formulaVersion={formulaVersion} />,
+    }
+    return [slug, view]
+  })),
+  ...Object.fromEntries((Object.keys(unitsTools) as UnitsSlug[]).map(slug => {
+    const view: CalculatorView = {
+      Form: () => <UnitsForm slug={slug} />,
+      Methodology: ({ formulaVersion }) => <UnitsMethodology slug={slug} formulaVersion={formulaVersion} />,
     }
     return [slug, view]
   })),
