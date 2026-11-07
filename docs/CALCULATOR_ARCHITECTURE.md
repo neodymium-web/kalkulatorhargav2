@@ -41,3 +41,5 @@ Lihat juga [verifikasi metrik iklan dan konversi](BATCH_5_FORMULA_VERIFICATION.m
 Lihat juga [verifikasi bunga, cicilan, dan rasio cicilan](BATCH_7_FORMULA_VERIFICATION.md), termasuk konvensi pembulatan dan rekonsiliasi jadwal rupiah.
 
 Lihat juga [verifikasi tabungan, cadangan, deposito, ROI dan CAGR](BATCH_8_FORMULA_VERIFICATION.md), termasuk bukti setoran minimum dan pembulatan akar bertanda.
+
+Lihat juga [verifikasi nilai kini, NPV, inflasi dan saham](BATCH_9_FORMULA_VERIFICATION.md), termasuk arus kas bertanda serta biaya perolehan multi-transaksi.

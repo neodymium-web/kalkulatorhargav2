@@ -3,6 +3,8 @@ import { financeTools, type FinanceSlug, type FinanceTool } from './finance/tool
 import { financeSources } from './finance/sources'
 import { investmentTools, type InvestmentSlug, type InvestmentTool } from './investment/tools'
 import { investmentSources } from './investment/sources'
+import { valuationTools, type ValuationSlug, type ValuationTool } from './valuation/tools'
+import { valuationSources } from './valuation/sources'
 import { categories, type CategoryId } from './categories'
 import { calculateHpp, formulaVersion } from './hpp'
 import { operationTools, type OperationSlug } from './operations/tools'
@@ -159,6 +161,17 @@ const investmentDefinitions = (Object.keys(investmentTools) as InvestmentSlug[])
   }
 })
 
+const valuationDefinitions = (Object.keys(valuationTools) as ValuationSlug[]).map((slug): PublishedCalculator => {
+  const tool: ValuationTool = valuationTools[slug]
+  return {
+    id: `calc-${slug}`, slug, path: `/kalkulator/${slug}`, primaryCategory: 'keuangan', secondaryCategories: [],
+    metadata: { locale: 'id-ID', title: tool.title, description: tool.description, keywords: tool.keywords },
+    inputFields: [...tool.inputFields, ...(tool.rows ? [{ id: tool.rows, label: tool.rows === 'cashflows' ? 'Arus kas tahunan' : 'Transaksi beli', type: 'array' as const }] : [])],
+    outputFields: tool.outputFields, officialSources: tool.sources.map(id => ({ ...valuationSources[id], verifiedAt: '2026-11-07' })), status: 'published',
+    implementation: { engine: tool.engine, formulaVersion: '1.0.0', testCases: [{ file: 'tests/valuation.unit.ts', name: tool.testCase }] },
+  }
+})
+
 export const definitions: readonly CalculatorDefinition[] = [{
   id: 'production-cost',
   slug: 'hpp',
@@ -194,7 +207,7 @@ export const definitions: readonly CalculatorDefinition[] = [{
       { file: 'tests/hpp.unit.ts', name: 'rejects invalid cost %s' },
     ],
   },
-}, ...businessDefinitions, ...operationDefinitions, ...stockServiceDefinitions, ...batchFourDefinitions, ...metricDefinitions, ...sellerDefinitions, ...financeDefinitions, ...investmentDefinitions]
+}, ...businessDefinitions, ...operationDefinitions, ...stockServiceDefinitions, ...batchFourDefinitions, ...metricDefinitions, ...sellerDefinitions, ...financeDefinitions, ...investmentDefinitions, ...valuationDefinitions]
 
 export function listPublished(records = definitions): PublishedCalculator[] {
   return records.filter(tool => tool.status === 'published')

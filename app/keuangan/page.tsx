@@ -3,7 +3,7 @@ import { pageMetadata } from '../../lib/seo'
 
 export const metadata = pageMetadata(
   'Kalkulator Keuangan',
-  'Hitung bunga, cicilan, target tabungan, dana darurat, deposito, ROI, dan CAGR dengan asumsi dan pembulatan yang jelas.',
+  'Hitung bunga, cicilan, tabungan, nilai kini, NPV, inflasi, dan biaya saham dengan asumsi serta pembulatan yang jelas.',
   '/keuangan',
 )
 
@@ -12,7 +12,7 @@ export default function Keuangan() {
     <CategoryPage
       categoryId="keuangan"
       title="Kalkulator keuangan"
-      description="Tinjau bunga dan cicilan, rencanakan tabungan serta cadangan, lalu hitung deposito dan imbal hasil investasi dengan batas model yang jelas."
+      description="Rencanakan tabungan dan pembayaran utang, nilai arus kas, serta tinjau daya beli dan biaya saham melalui simulasi dengan batas yang jelas."
     />
   )
 }

@@ -203,7 +203,9 @@ test('expanded finance hub and search retain published-only SEO and staging prot
     'https://kalkulatorharga.com/keuangan',
   )
   const listing = page.getByRole('region', { name: 'Kalkulator tersedia' })
-  await expect(listing.getByRole('link')).toHaveCount(10)
+  await expect(listing.getByRole('link')).toHaveCount(12)
+  await listing.getByRole('button', { name: 'Muat lebih banyak' }).click()
+  await expect(listing.getByRole('link')).toHaveCount(15)
   for (const { slug } of scenarios)
     await expect(listing.locator(`a[href="/kalkulator/${slug}"]`)).toBeVisible()
   await page.screenshot({
@@ -219,7 +221,7 @@ test('expanded finance hub and search retain published-only SEO and staging prot
     ).toBeVisible()
   }
   const xml = await (await request.get('/sitemap.xml')).text()
-  expect(xml.match(/<loc>/g)).toHaveLength(45)
+  expect(xml.match(/<loc>/g)).toHaveLength(50)
   for (const { slug } of scenarios)
     expect(xml).toContain(`<loc>https://kalkulatorharga.com/kalkulator/${slug}</loc>`)
   for (const slug of ['kpr', 'bunga-efektif-pinjaman', 'tiktok', 'tiktok-shop', 'shopee']) {
