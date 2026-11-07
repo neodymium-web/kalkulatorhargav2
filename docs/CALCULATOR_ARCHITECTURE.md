@@ -55,3 +55,5 @@ Lihat [verifikasi diskon, unit price, alokasi tagihan dan persen](BATCH_13_FORMU
 Lihat [verifikasi kalender Gregorian, hari kerja, usia, shift dan BBM](BATCH_14_FORMULA_VERIFICATION.md), termasuk bukti ordinal integer, anniversary asli dan pembulatan biaya dari rasio eksak.
 
 Lihat [verifikasi listrik, air progresif, cat, keramik dan beton](BATCH_15_FORMULA_VERIFICATION.md), termasuk konservasi blok air, ceiling dari pecahan asli dan batas galat pendekatan π.
+
+Lihat [verifikasi skala, satuan panjang/massa, suhu dan kecepatan](BATCH_16_FORMULA_VERIFICATION.md), termasuk faktor eksak, invers pecahan, batas nol mutlak dan durasi elapsed.

@@ -123,16 +123,16 @@ test('percent mode keyboard focus resets and signed tiny and zero basis output',
 })
 test('everyday hub search sitemap SSR sources and staging protections', async ({ page, request, isMobile }, info) => {
   await page.setViewportSize({ width: isMobile ? 375 : 1440, height: 900 }); const response = await page.goto('/sehari-hari'); expect(response?.headers()['x-robots-tag']).toBe('noindex, nofollow')
-  const listing = page.getByRole('region', { name: 'Kalkulator tersedia' }); await expect(listing.getByRole('link')).toHaveCount(12); await listing.getByRole('button', { name: 'Muat lebih banyak' }).press('Enter'); await expect(listing.getByRole('link')).toHaveCount(15)
+  const listing = page.getByRole('region', { name: 'Kalkulator tersedia' }); await expect(listing.getByRole('link')).toHaveCount(12); await listing.getByRole('button', { name: 'Muat lebih banyak' }).press('Enter'); await expect(listing.getByRole('link')).toHaveCount(20)
   await expect(page.getByRole('navigation', { name: 'Navigasi utama' }).getByRole('link')).toHaveCount(6)
   await page.screenshot({ path: info.outputPath('sehari-hari-hub.jpg'), fullPage: true, quality: 75 })
   for (const f of fixtures.filter(x => !x.mode)) {
     await page.goto('/'); await page.getByRole('searchbox').fill(f.title); await expect(page.getByRole('region', { name: 'Hasil pencarian' }).locator(`a[href="/kalkulator/${f.slug}"]`)).toBeVisible()
     const html = await (await request.get(`/kalkulator/${f.slug}`)).text(); expect(html).toContain(`<title>${f.title} | KalkulatorHarga</title>`); expect(html).toContain('Sumber rumus'); expect(html).toContain('Presisi dan pembulatan')
   }
-  const xml = await (await request.get('/sitemap.xml')).text(); expect(xml.match(/<loc>/g)).toHaveLength(82); expect(xml).toContain('/sehari-hari</loc>')
+  const xml = await (await request.get('/sitemap.xml')).text(); expect(xml.match(/<loc>/g)).toHaveLength(87); expect(xml).toContain('/sehari-hari</loc>')
   for (const f of fixtures) expect(xml).toContain(`/kalkulator/${f.slug}</loc>`)
-  for (const slug of ['ppn', 'shopee', 'tiktok-shop', 'skala-denah']) { expect((await request.get(`/kalkulator/${slug}`)).status()).toBe(404); expect(xml).not.toContain(`/kalkulator/${slug}</loc>`) }
+  for (const slug of ['ppn', 'shopee', 'tiktok-shop', 'pph-final-umkm']) { expect((await request.get(`/kalkulator/${slug}`)).status()).toBe(404); expect(xml).not.toContain(`/kalkulator/${slug}</loc>`) }
   expect(await (await request.get('/robots.txt')).text()).toContain('Disallow: /')
 })
 test('everyday forms tables and hub fit five widths and large result', async ({ page, isMobile }) => {

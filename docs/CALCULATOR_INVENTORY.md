@@ -1,6 +1,6 @@
 # Inventaris 100 kalkulator
 
-Inventaris ini menetapkan usulan slug dan intent untuk setiap alat. Sebanyak 76 kalkulator sudah terbit. Baris berstatus ide belum memiliki rute publik. ID untuk ide memakai awalan `calc-`. ID TikTok yang sudah dicatat tetap mengikuti alatnya saat slug dikoreksi. Setelah implementasi, simpan ID saat mengubah nama tampilan atau URL.
+Inventaris ini menetapkan usulan slug dan intent untuk setiap alat. Sebanyak 81 kalkulator sudah terbit. Baris berstatus ide belum memiliki rute publik. ID untuk ide memakai awalan `calc-`. ID TikTok yang sudah dicatat tetap mengikuti alatnya saat slug dikoreksi. Setelah implementasi, simpan ID saat mengubah nama tampilan atau URL.
 
 Tingkat 1 memakai rumus langsung. Tingkat 2 melibatkan beberapa mode, jadwal, satuan, atau kebijakan pembulatan. Tingkat 3 membutuhkan aturan bertanggal, pencarian solusi, atau verifikasi domain yang lebih ketat. Kolom sumber menjelaskan kebutuhan tarif dinamis. Tanda “—” berarti alat tidak memerlukan data tarif eksternal. Input manual berasal dari pengguna dan ditampilkan sebagai asumsi.
 
@@ -129,11 +129,11 @@ Tingkat 1 memakai rumus langsung. Tingkat 2 melibatkan beberapa mode, jadwal, sa
 | calc-kebutuhan-cat | kebutuhan-cat | /kalkulator/kebutuhan-cat | Jumlah cat untuk permukaan dan lapisan | sehari-hari | Luas, bukaan, lapisan, daya sebar, cadangan, kemasan | Liter dan jumlah kemasan | Luas bersih × lapisan ÷ daya sebar | 2 | published | — | Tautan bahan sesuai hasil, dengan pengungkapan afiliasi |
 | calc-kebutuhan-keramik | kebutuhan-keramik | /kalkulator/kebutuhan-keramik | Jumlah dus keramik untuk ruangan | sehari-hari | Luas lantai, ukuran ubin, cadangan, isi dus | Ubin dan dus | Luas dengan cadangan ÷ luas ubin, bulatkan ke atas | 2 | published | — | — |
 | calc-volume-beton | volume-beton | /kalkulator/volume-beton | Volume pengecoran untuk beberapa bentuk | sehari-hari | Dimensi, bentuk, jumlah per elemen, cadangan | Volume beton | Jumlah volume geometris × faktor cadangan | 2 | published | — | — |
-| calc-skala-denah | skala-denah | /kalkulator/skala-denah | Konversi jarak gambar ke ukuran sebenarnya | sehari-hari | Jarak, rasio skala, satuan dan arah | Jarak hasil | Kalikan atau bagi rasio setelah normalisasi satuan | 1 | idea | — | — |
-| calc-konversi-panjang | konversi-panjang | /kalkulator/konversi-panjang | Konversi satuan panjang | sehari-hari | Angka dan satuan asal dan tujuan | Panjang hasil | Konversi melalui meter | 1 | idea | — | — |
-| calc-konversi-berat | konversi-berat | /kalkulator/konversi-berat | Konversi satuan massa | sehari-hari | Angka dan satuan asal dan tujuan | Massa hasil | Konversi melalui kilogram | 1 | idea | — | — |
-| calc-konversi-suhu | konversi-suhu | /kalkulator/konversi-suhu | Konversi Celsius, Fahrenheit dan Kelvin | sehari-hari | Suhu dan skala asal dan tujuan | Suhu hasil | Transformasi linear dengan batas nol mutlak | 1 | idea | — | — |
-| calc-kecepatan-rata-rata | kecepatan-rata-rata | /kalkulator/kecepatan-rata-rata | Kecepatan dari jarak dan waktu perjalanan | sehari-hari | Jarak, durasi dan satuan | Kecepatan rata-rata | Jarak ÷ durasi dalam satuan terpilih | 1 | idea | — | — |
+| calc-skala-denah | skala-denah | /kalkulator/skala-denah | Konversi jarak gambar ke ukuran sebenarnya | sehari-hari | Jarak, rasio skala, satuan dan arah | Jarak hasil | Kalikan atau bagi rasio setelah normalisasi satuan | 1 | published | — | — |
+| calc-konversi-panjang | konversi-panjang | /kalkulator/konversi-panjang | Konversi satuan panjang | sehari-hari | Angka dan satuan asal dan tujuan | Panjang hasil | Konversi melalui meter | 1 | published | — | — |
+| calc-konversi-berat | konversi-berat | /kalkulator/konversi-berat | Konversi satuan massa | sehari-hari | Angka dan satuan asal dan tujuan | Massa hasil | Konversi melalui kilogram | 1 | published | — | — |
+| calc-konversi-suhu | konversi-suhu | /kalkulator/konversi-suhu | Konversi Celsius, Fahrenheit dan Kelvin | sehari-hari | Suhu dan skala asal dan tujuan | Suhu hasil | Transformasi linear dengan batas nol mutlak | 1 | published | — | — |
+| calc-kecepatan-rata-rata | kecepatan-rata-rata | /kalkulator/kecepatan-rata-rata | Kecepatan dari jarak dan waktu perjalanan | sehari-hari | Jarak, durasi dan satuan | Kecepatan rata-rata | Jarak ÷ durasi dalam satuan terpilih | 1 | published | — | — |
 
 ## Pemisahan intent dan canonical
 
