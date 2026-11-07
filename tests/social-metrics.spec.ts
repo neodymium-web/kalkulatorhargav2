@@ -122,7 +122,7 @@ test('social hub navigation category search sitemap and unpublished protections'
     if (query === 'media sosial') { await expect(page.getByRole('status')).toHaveText('10 kalkulator ditemukan'); await expect(page.getByRole('region', { name: 'Hasil pencarian' }).getByRole('link')).toHaveCount(10) }
     else { const f = fixtures.find(f => f.title === query)!; await expect(page.getByRole('region', { name: 'Hasil pencarian' }).locator(`a[href="/kalkulator/${f.slug}"]`)).toBeVisible() }
   }
-  const xml = await (await request.get('/sitemap.xml')).text(); expect(xml.match(/<loc>/g)).toHaveLength(66)
+  const xml = await (await request.get('/sitemap.xml')).text(); expect(xml.match(/<loc>/g)).toHaveLength(72)
   expect(xml).toContain('<loc>https://kalkulatorharga.com/media-sosial</loc>')
   for (const f of fixtures) expect(xml).toContain(`/kalkulator/${f.slug}</loc>`)
   for (const slug of ['tiktok-shop', 'shopee', 'estimasi-tiktok-kreator']) {
@@ -144,7 +144,7 @@ test('five social forms results hub and navigation fit all design widths', async
       expect(form && panel && (width < 768 ? panel.y > form.y : panel.x > form.x && panel.y === form.y)).toBe(true)
     }
     await page.goto('/media-sosial'); expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true)
-    await expect(page.getByRole('navigation', { name: 'Navigasi utama' }).getByRole('link')).toHaveCount(5)
+    await expect(page.getByRole('navigation', { name: 'Navigasi utama' }).getByRole('link')).toHaveCount(6)
   }
 })
 test('maximum social values and negative subprecision fit 320px', async ({ page }, info) => {

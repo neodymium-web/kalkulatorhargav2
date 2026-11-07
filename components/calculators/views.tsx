@@ -1,3 +1,6 @@
+import { everydayTools, type EverydaySlug } from '../../lib/everyday/tools'
+import { EverydayForm } from './everyday-form'
+import { EverydayMethodology } from './everyday-methodology'
 import { creatorTools, type CreatorSlug } from '../../lib/creator-analytics/tools'
 import { CreatorForm } from './creator-form'
 import { CreatorMethodology } from './creator-methodology'
@@ -124,6 +127,13 @@ export const views: Readonly<Record<string, CalculatorView | undefined>> = {
     const view: CalculatorView = {
       Form: () => <CreatorForm slug={slug} />,
       Methodology: ({ formulaVersion }) => <CreatorMethodology slug={slug} formulaVersion={formulaVersion} />,
+    }
+    return [slug, view]
+  })),
+  ...Object.fromEntries((Object.keys(everydayTools) as EverydaySlug[]).map(slug => {
+    const view: CalculatorView = {
+      Form: () => <EverydayForm slug={slug} />,
+      Methodology: ({ formulaVersion }) => <EverydayMethodology slug={slug} formulaVersion={formulaVersion} />,
     }
     return [slug, view]
   })),

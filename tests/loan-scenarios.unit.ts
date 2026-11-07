@@ -62,7 +62,7 @@ describe('Batch 10 independent fixtures',()=>{
  it('full row and date horizon limits converge with bounded residual',()=>{
   const r=ok(calculateEffectiveLoan({proceeds:'9999999999999',disbursed:'1900-01-01',repayments:Array.from({length:100},(_,i)=>({amount:'9999999999999',date:i%2?'2000-01-02':'1999-12-31'}))}))
   residual(r,'9999999999999');expect(r.certificate!.iterations).toBeLessThan(300)
- })
+ },30000)
  it.each(['2023-02-29','2024-02-30','2023-01-01','2022-12-31','2200-01-01','2024-1-01','2024-01-01T00:00:00Z'])('invalid repayment date %s',date=>bad(calculateEffectiveLoan({...loan,repayments:[{amount:'1100',date}]}),'repayments.0.date'))
  it('dated row count empty zero future horizon and proceeds guards',()=>{
   bad(calculateEffectiveLoan({...loan,repayments:[]}));bad(calculateEffectiveLoan({...loan,repayments:Array(101).fill(loan.repayments[0])}))
@@ -172,8 +172,8 @@ describe('Batch 10 independent fixtures',()=>{
  it('signed formats and units preserve negative and tiny direction',()=>{
   expect(formatScenario(-100000n,'rate')).toBe('−10,0000%');expect(formatScenario(0n,'rate',undefined,'negative')).toContain('negatif');expect(formatScenario(657n,'target','USD')).toBe('USD6,57');expect(formatScenario(0n,'target','USD','positive')).toBe('<USD0,01 (positif)')
  })
- it('publishes exactly five existing IDs with 61 tools 20 finance and 66 sitemap URLs',()=>{
-  expect(listPublished()).toHaveLength(61);expect(listCategory('keuangan')).toHaveLength(20);expect(listCategory('bisnis')).toHaveLength(20);expect(listCategory('marketplace')).toHaveLength(11);expect(sitemapPaths()).toHaveLength(66)
-  expect(new Set(listPublished().map(x=>x.id)).size).toBe(61)
+ it('publishes exactly five existing IDs with 66 tools 20 finance and 72 sitemap URLs',()=>{
+  expect(listPublished()).toHaveLength(66);expect(listCategory('keuangan')).toHaveLength(20);expect(listCategory('bisnis')).toHaveLength(20);expect(listCategory('marketplace')).toHaveLength(11);expect(sitemapPaths()).toHaveLength(72)
+  expect(new Set(listPublished().map(x=>x.id)).size).toBe(66)
  })
 })

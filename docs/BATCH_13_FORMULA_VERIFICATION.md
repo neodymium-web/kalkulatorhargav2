@@ -46,7 +46,7 @@ Input s_i subtotal semua item milik orangi (sudah dijumlah pengguna), sharedF=se
 
 Exactquota x_i=F*w_i/W. Ambil a_i=floor(x_i), remainder r_i=(F*w_i) mod W. R=F−sum a_i integer0<=R<n. Urutkan remainder terbesar, tie dipecah urutan visual Orang1…n; tambahRp1 padaRbaristeratas. Extrae_i=a_i+bonus_i; share_i=s_i+e_i. Karena sum w_i=W, sum x_i=F sehingga jumlah tambahan unit tepatR dan sum shares=S+F secara eksak. Setiap e_i adalahfloor/ceilquota dannonnegatif; galatkurangdariRp1, tidak ada uang hilang/duplikat. Service dan tax digabung lalu dialokasikan **sekali**, tidak dibulatkan masing-masing.
 
-Urutan visual adalah aturan tie, bukan identitas nama. UI menyimpan key/ID baris stabil ketika tambah/hapus agar nilai/fokus tidak tertukar. Mengubah urutan input dapat memindahkan bonusRp1 saat remainder seri; jika tidak seri, memindah orang beserta subtotal mempertahankan bagiannya. Tidak ada drag-sort tersembunyi. Alokasi diulang dari input, bukan hasil tampilan lama.
+Urutan visual adalah aturan tie, bukan identitas nama. UI menyimpan key/ID baris stabil ketika tambah/hapus agar nilai/fokus tidak tertukar. Mengubah urutan input dapat memindahkan alokasi sisa Rp1 saat remainder seri; jika tidak seri, memindah orang beserta subtotal mempertahankan bagiannya. Tidak ada drag-sort tersembunyi. Alokasi diulang dari input, bukan hasil tampilan lama.
 
 1. Subtotal10000,20000,30000;service3,tax4,F7,prop: quota7/6,7/3,7/2,floor1,2,3; sisa1 keorang3,extras1,2,4. Shares10001,20002,30004;S60000,F7,grand60007 dan totalteralokasi60007;selisihrekonsiliasi0.
 2. Subtotal10000,20000,30000;F10,equal:quota10/3masing-masing,extras4,3,3. Shares10004,20003,30003,grand60010,total60010,selisih0. Dua orangsubtotal0,0,F1,equal ->shares1,0 sesuaiurutanties.
