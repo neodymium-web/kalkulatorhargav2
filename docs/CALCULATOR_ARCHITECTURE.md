@@ -45,3 +45,5 @@ Lihat juga [verifikasi tabungan, cadangan, deposito, ROI dan CAGR](BATCH_8_FORMU
 Lihat juga [verifikasi nilai kini, NPV, inflasi dan saham](BATCH_9_FORMULA_VERIFICATION.md), termasuk arus kas bertanda serta biaya perolehan multi-transaksi.
 
 Lihat juga [verifikasi pinjaman bertanggal, KPR, pelunasan, refinancing dan kurs](BATCH_10_FORMULA_VERIFICATION.md).
+
+Lihat juga [verifikasi engagement, pertumbuhan pengikut dan biaya iklan](BATCH_11_FORMULA_VERIFICATION.md).
