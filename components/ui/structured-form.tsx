@@ -33,7 +33,7 @@ function Field({ field, error, hintId }: { field: Control; error?: string; hintI
       ))}
     </Select>
   ) : (
-    <Input {...props} type={field.type === 'date' ? 'date' : 'text'} inputMode={field.type === 'date' ? undefined : field.signed ? 'text' : field.type === 'decimal' ? 'decimal' : 'numeric'} />
+    <Input {...props} type={field.type === 'date' || field.type === 'time' ? field.type : 'text'} inputMode={field.type === 'date' || field.type === 'time' ? undefined : field.signed ? 'text' : field.type === 'decimal' ? 'decimal' : 'numeric'} />
   )
 }
 
