@@ -105,6 +105,11 @@ test('blocks preview indexing and lists only published URLs', async ({ request }
     '<loc>https://kalkulatorharga.com/kalkulator/cicilan-anuitas</loc>',
     '<loc>https://kalkulatorharga.com/kalkulator/cicilan-flat</loc>',
     '<loc>https://kalkulatorharga.com/kalkulator/rasio-cicilan</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/target-tabungan</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/dana-darurat</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/deposito</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/imbal-hasil-investasi</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/cagr</loc>',
   ])
 })
 

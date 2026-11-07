@@ -207,7 +207,7 @@ test('finance hub, navigation, search, sitemap and unpublished boundaries', asyn
     page.getByRole('navigation', { name: 'Navigasi utama' }).getByRole('link', { name: 'Keuangan' }),
   ).toHaveAttribute('aria-current', 'page')
   const listing = page.getByRole('region', { name: 'Kalkulator tersedia' })
-  await expect(listing.getByRole('link')).toHaveCount(5)
+  await expect(listing.getByRole('link')).toHaveCount(10)
   for (const { slug } of scenarios)
     await expect(listing.locator(`a[href="/kalkulator/${slug}"]`)).toBeVisible()
   await page.screenshot({ path: info.outputPath('keuangan.jpg'), fullPage: true, quality: 75 })
@@ -219,7 +219,7 @@ test('finance hub, navigation, search, sitemap and unpublished boundaries', asyn
     ).toBeVisible()
   }
   const xml = await (await request.get('/sitemap.xml')).text()
-  expect(xml.match(/<loc>/g)).toHaveLength(40)
+  expect(xml.match(/<loc>/g)).toHaveLength(45)
   expect(xml).toContain('<loc>https://kalkulatorharga.com/keuangan</loc>')
   for (const { slug } of scenarios)
     expect(xml).toContain(`<loc>https://kalkulatorharga.com/kalkulator/${slug}</loc>`)
