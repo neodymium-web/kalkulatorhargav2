@@ -69,6 +69,7 @@ test('blocks preview indexing and lists only published URLs', async ({ request }
     '<loc>https://kalkulatorharga.com/bisnis</loc>',
     '<loc>https://kalkulatorharga.com/marketplace</loc>',
     '<loc>https://kalkulatorharga.com/keuangan</loc>',
+    '<loc>https://kalkulatorharga.com/media-sosial</loc>',
     '<loc>https://kalkulatorharga.com/kalkulator/hpp</loc>',
     '<loc>https://kalkulatorharga.com/kalkulator/harga-jual</loc>',
     '<loc>https://kalkulatorharga.com/kalkulator/margin-laba</loc>',
@@ -120,6 +121,11 @@ test('blocks preview indexing and lists only published URLs', async ({ request }
     '<loc>https://kalkulatorharga.com/kalkulator/pelunasan-dipercepat</loc>',
     '<loc>https://kalkulatorharga.com/kalkulator/refinancing</loc>',
     '<loc>https://kalkulatorharga.com/kalkulator/kurs-mata-uang</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/engagement-rate</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/pertumbuhan-pengikut</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/cpm</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/cpc</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/cpa</loc>',
   ])
 })
 

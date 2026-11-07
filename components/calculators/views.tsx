@@ -1,3 +1,6 @@
+import { socialTools, type SocialSlug } from '../../lib/social-metrics/tools'
+import { SocialForm } from './social-form'
+import { SocialMethodology } from './social-methodology'
 import { scenarioTools, type ScenarioSlug } from '../../lib/loan-scenarios/tools'
 import { ScenarioForm } from './scenario-form'
 import { ScenarioMethodology } from './scenario-methodology'
@@ -104,6 +107,13 @@ export const views: Readonly<Record<string, CalculatorView | undefined>> = {
     const view: CalculatorView = {
       Form: () => <ScenarioForm slug={slug} />,
       Methodology: ({ formulaVersion }) => <ScenarioMethodology slug={slug} formulaVersion={formulaVersion} />,
+    }
+    return [slug, view]
+  })),
+  ...Object.fromEntries((Object.keys(socialTools) as SocialSlug[]).map(slug => {
+    const view: CalculatorView = {
+      Form: () => <SocialForm slug={slug} />,
+      Methodology: ({ formulaVersion }) => <SocialMethodology slug={slug} formulaVersion={formulaVersion} />,
     }
     return [slug, view]
   })),

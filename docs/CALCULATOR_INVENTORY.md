@@ -1,6 +1,6 @@
 # Inventaris 100 kalkulator
 
-Inventaris ini menetapkan usulan slug dan intent untuk setiap alat. Sebanyak 51 kalkulator sudah terbit. Baris berstatus ide belum memiliki rute publik. ID untuk ide memakai awalan `calc-`. ID TikTok yang sudah dicatat tetap mengikuti alatnya saat slug dikoreksi. Setelah implementasi, simpan ID saat mengubah nama tampilan atau URL.
+Inventaris ini menetapkan usulan slug dan intent untuk setiap alat. Sebanyak 56 kalkulator sudah terbit. Baris berstatus ide belum memiliki rute publik. ID untuk ide memakai awalan `calc-`. ID TikTok yang sudah dicatat tetap mengikuti alatnya saat slug dikoreksi. Setelah implementasi, simpan ID saat mengubah nama tampilan atau URL.
 
 Tingkat 1 memakai rumus langsung. Tingkat 2 melibatkan beberapa mode, jadwal, satuan, atau kebijakan pembulatan. Tingkat 3 membutuhkan aturan bertanggal, pencarian solusi, atau verifikasi domain yang lebih ketat. Kolom sumber menjelaskan kebutuhan tarif dinamis. Tanda “—” berarti alat tidak memerlukan data tarif eksternal. Input manual berasal dari pengguna dan ditampilkan sebagai asumsi.
 
@@ -99,11 +99,11 @@ Tingkat 1 memakai rumus langsung. Tingkat 2 melibatkan beberapa mode, jadwal, sa
 
 | ID | Slug | Canonical usulan | Intent | Kategori | Input | Output | Rumus atau mesin | Tingkat | Status | Sumber dinamis | Monetisasi |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| calc-engagement-rate | engagement-rate | /kalkulator/engagement-rate | Interaksi sebagai porsi jangkauan atau pengikut | media-sosial | Suka, komentar, simpan, bagikan, denominator pilihan | Persentase engagement dan basis | Jumlah interaksi ÷ denominator | 1 | idea | — | — |
-| calc-pertumbuhan-pengikut | pertumbuhan-pengikut | /kalkulator/pertumbuhan-pengikut | Perubahan pengikut antara dua tanggal | media-sosial | Jumlah awal, akhir dan durasi | Perubahan bersih dan laju | Selisih ÷ awal dengan penanganan nol | 1 | idea | — | — |
-| calc-cpm | cpm | /kalkulator/cpm | Harga iklan per seribu impresi | media-sosial | Biaya iklan, impresi | CPM | Biaya ÷ impresi × 1.000 | 1 | idea | — | — |
-| calc-cpc | cpc | /kalkulator/cpc | Harga iklan per klik | media-sosial | Biaya iklan, klik | CPC | Biaya ÷ klik | 1 | idea | — | — |
-| calc-cpa | cpa | /kalkulator/cpa | Harga iklan per akuisisi | media-sosial | Biaya iklan, akuisisi | CPA | Biaya ÷ akuisisi | 1 | idea | — | — |
+| calc-engagement-rate | engagement-rate | /kalkulator/engagement-rate | Interaksi sebagai porsi jangkauan atau pengikut | media-sosial | Suka, komentar, simpan, bagikan, denominator pilihan | Persentase engagement dan basis | Jumlah interaksi ÷ denominator | 1 | published | — | — |
+| calc-pertumbuhan-pengikut | pertumbuhan-pengikut | /kalkulator/pertumbuhan-pengikut | Perubahan pengikut antara dua snapshot | media-sosial | Jumlah pengikut awal dan akhir | Perubahan bersih dan persentase terhadap awal | Selisih ÷ awal dengan penanganan nol | 1 | published | — | — |
+| calc-cpm | cpm | /kalkulator/cpm | Harga iklan per seribu impresi | media-sosial | Biaya iklan, impresi | CPM | Biaya ÷ impresi × 1.000 | 1 | published | — | — |
+| calc-cpc | cpc | /kalkulator/cpc | Harga iklan per klik | media-sosial | Biaya iklan, klik | CPC | Biaya ÷ klik | 1 | published | — | — |
+| calc-cpa | cpa | /kalkulator/cpa | Harga iklan per akuisisi | media-sosial | Biaya iklan, akuisisi | CPA | Biaya ÷ akuisisi | 1 | published | — | — |
 | calc-ctr | ctr | /kalkulator/ctr | Porsi impresi iklan yang menghasilkan klik | media-sosial | Klik, impresi | CTR | Klik ÷ impresi | 1 | idea | — | — |
 | calc-estimasi-youtube | estimasi-youtube | /kalkulator/estimasi-youtube | Estimasi pendapatan kreator dengan RPM sendiri | media-sosial | Tayangan monetisasi sesuai basis RPM, RPM | Estimasi pendapatan | Tayangan ÷ 1.000 × RPM | 2 | idea | Input kreator | — |
 | calc-estimasi-tiktok-kreator | tiktok | /kalkulator/tiktok | Kalkulator Kreator TikTok untuk penghasilan, engagement, rate card endorse dan analitik akun | media-sosial | Pengikut, tayangan, interaksi, jumlah video, RPM asumsi, pendapatan sponsor, affiliate dan gift, kisaran tarif, slot sponsor dan metrik akun pembanding | Rincian estimasi penghasilan, engagement per pengikut dan tayangan, rate card dan perbandingan akun | Jumlahkan sumber penghasilan, bagi interaksi menurut basis, hitung kisaran sponsor dan bandingkan metrik akun | 3 | idea | Input kreator. Verifikasi sumber benchmark jika ditampilkan | — |
