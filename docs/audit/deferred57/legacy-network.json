@@ -1,0 +1,26 @@
+[
+  {
+    "path": "/kalkulator/emas",
+    "url": "https://www.kalkulatorharga.com/kalkulator/emas",
+    "status": 200,
+    "observedAtUtc": "2026-11-08T15:09:06.504346+00:00",
+    "sha256": "aec3f3e1d273cfecd5b63c5aad7ee1fb432ff0e1a189bd151b1bd2ee19219800",
+    "bytes": 110193
+  },
+  {
+    "path": "/kalkulator/tiktok/benchmark",
+    "url": "https://www.kalkulatorharga.com/kalkulator/tiktok/benchmark",
+    "status": 200,
+    "observedAtUtc": "2026-11-08T15:09:10.057509+00:00",
+    "sha256": "ff0cabbe16c1983fe1625bcd8d57b3c12354fafd1fb611b6b1f1345e2e1d32be",
+    "bytes": 57868
+  },
+  {
+    "path": "/bandingkan",
+    "url": "https://www.kalkulatorharga.com/bandingkan",
+    "status": 200,
+    "observedAtUtc": "2026-11-08T15:09:11.280515+00:00",
+    "sha256": "761173c11b69fffd69b0dcc5817cb516651e4de15e34b7c2ed41aa5d6d1ee60e",
+    "bytes": 32768
+  }
+]

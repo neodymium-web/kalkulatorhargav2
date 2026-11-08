@@ -1,3 +1,4 @@
+import { supplementalPaths } from '../lib/supplemental/routes'
 import { legacyPaths } from '../lib/legacy/routes'
 import {it,expect} from 'vitest'
 import {readFileSync} from 'node:fs'
@@ -16,7 +17,7 @@ it('allows only validated one-hop review fixtures',()=>{
 it('keeps the original brand favicon as a multi-size ICO',()=>{const b=readFileSync('app/favicon.ico');expect([...b.subarray(0,4)]).toEqual([0,0,1,0]);expect(b.readUInt16LE(4)).toBe(3)})
 it('approved metadata changes add whitespace only',()=>{const changes=JSON.parse(readFileSync('docs/audit/cutover/metadata-copy-changes.json','utf8'));expect(changes).toHaveLength(7);for(const x of changes)expect(x.after.replace(/\s/g,'')).toBe(x.before.replace(/\s/g,''))})
 it('maps exactly 107 unique v2 URLs and preserves distinct TikTok search intent',()=>{
- const rows=readCsv('docs/audit/cutover-url-map.csv');expect(rows).toHaveLength(107 + legacyPaths.length);expect(rows.slice(0,107).map((r:{v2_route:string})=>r.v2_route).sort()).toEqual([...catalogue.paths].sort())
+ const rows=readCsv('docs/audit/cutover-url-map.csv');expect(rows).toHaveLength(107 + legacyPaths.length + supplementalPaths.length);expect(rows.slice(0,107).map((r:{v2_route:string})=>r.v2_route).sort()).toEqual([...catalogue.paths].sort())
  for(const path of ['/kalkulator/tiktok','/kalkulator/tiktok-shop']){const r=rows.find((r:{v2_route:string})=>r.v2_route===path);expect(r.action).toBe('preserve');expect(r.legacy_equivalent).toBe('https://www.kalkulatorharga.com'+path)}
  const legacy=readCsv('docs/audit/legacy-url-inventory.csv');expect(legacy).toHaveLength(37);expect(legacy.filter((r:{mapping_decision:string})=>r.mapping_decision==='manual-review')).toHaveLength(25);expect(legacy.every((r:{evidence_time_utc:string})=>r.evidence_time_utc.includes('2026-11-08'))).toBe(true)
 })

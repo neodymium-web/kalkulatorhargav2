@@ -1,3 +1,4 @@
+import { supplementalPaths } from '../lib/supplemental/routes'
 import { describe, it, expect } from 'vitest'
 import { createHash } from 'node:crypto'
 import { readFileSync } from 'node:fs'
@@ -28,21 +29,21 @@ describe('independent legacy source inventory and explicit dispositions', () => 
   })
   it('preserves 100 calculator records and adds only actual archives to 107 baseline URLs', () => {
     expect(listPublished()).toHaveLength(100); expect(listCategoryHubs()).toHaveLength(6); expect(sitemapPaths()).toHaveLength(107)
-    expect(legacyPages).toHaveLength(22); expect(legacyPaths).toHaveLength(22); expect(new Set([...sitemapPaths(),...legacyPaths]).size).toBe(129)
+    expect(legacyPages).toHaveLength(22); expect(legacyPaths).toHaveLength(22); expect(new Set([...sitemapPaths(),...legacyPaths,...supplementalPaths]).size).toBe(131)
     const before=readCsv('docs/audit/legacy55/cutover-url-map-before.csv'),after=readCsv('docs/audit/cutover-url-map.csv')
-    expect(before).toHaveLength(107);expect(after.slice(0,107)).toEqual(before);expect(after.slice(107).map((r:{v2_route:string})=>r.v2_route).sort()).toEqual([...legacyPaths].sort())
+    expect(before).toHaveLength(107);expect(after.slice(0,107)).toEqual(before);expect(after.slice(107,129).map((r:{v2_route:string})=>r.v2_route).sort()).toEqual([...legacyPaths].sort())
     const decisions=readCsv('docs/audit/legacy-page-decisions.csv'),parity=readCsv('docs/audit/legacy-content-parity.csv')
     expect(decisions).toHaveLength(25);expect(parity).toHaveLength(25);expect(new Set(decisions.map((r:{path:string})=>r.path)).size).toBe(25)
-    expect(parity.filter((r:{outcome:string})=>r.outcome==='BLOCKED')).toHaveLength(3)
+    expect(parity.filter((r:{outcome:string})=>r.outcome==='BLOCKED')).toHaveLength(1)
     expect(canonicalOrigin).toBe('https://kalkulatorharga.com');expect(indexable).toBe(false)
     expect(readFileSync('next.config.ts','utf8')).not.toMatch(/redirects\s*\(/)
   })
-  it('resolves only archive links locally without implying calculator feature parity', () => {
+  it('resolves supported paths locally and suppresses unsupported legacy presets', () => {
     expect(legacyLink('/blog/fee-shopee-2026')).toBe('/blog/fee-shopee-2026')
-    expect(legacyLink('/kalkulator/emas')).toBe('https://www.kalkulatorharga.com/kalkulator/emas')
-    expect(legacyLink('/kalkulator/tiktok')).toBe('https://www.kalkulatorharga.com/kalkulator/tiktok')
-    expect(legacyLink('/kalkulator/tiktok-shop')).toBe('https://www.kalkulatorharga.com/kalkulator/tiktok-shop')
-    expect(legacyLink('/?marketplace=shopee')).toBe('https://www.kalkulatorharga.com/?marketplace=shopee')
+    expect(legacyLink('/kalkulator/emas')).toBe('/kalkulator/emas')
+    expect(legacyLink('/kalkulator/tiktok')).toBe('/kalkulator/tiktok')
+    expect(legacyLink('/kalkulator/tiktok-shop')).toBe('/kalkulator/tiktok-shop')
+    expect(legacyLink('/?marketplace=shopee')).toBeUndefined()
     for(const href of ['javascript:alert(1)','data:text/html,alert(1)','vbscript:alert(1)','file:///tmp/x'])expect(legacyLink(href)).toBeUndefined()
   })
 })

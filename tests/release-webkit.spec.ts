@@ -18,3 +18,15 @@ for(const source of legacySources.filter(p=>!(p.path in deferred)))test(`WebKit 
  expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBe(await page.evaluate(()=>innerWidth));expect(errors).toEqual([])
  await page.screenshot({path:info.outputPath('legacy-webkit.jpg'),fullPage:true,scale:'css',quality:70})
 })
+
+import{goldFixture,scenarioFixture,comparisonPlatforms,fillFields,addManualFees}from'./deferred-browser-helpers'
+test('WebKit manual gold oracle and stale quote suppress amounts',async({page},info)=>{
+ await page.goto('/kalkulator/emas');const form=page.getByRole('form');await fillFields(form,goldFixture);await form.getByRole('button',{name:'Hitung emas',exact:true}).click();await expect(page.getByRole('region',{name:'Hasil perhitungan',exact:true}).locator('dd').first()).toHaveText('Rp 6.720.000')
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBe(await page.evaluate(()=>innerWidth));await page.screenshot({path:info.outputPath('gold-webkit.jpg'),fullPage:true,scale:'css',quality:70})
+ await fillFields(form,{asOf:'2026-11-09'});await form.getByRole('button',{name:'Hitung emas',exact:true}).click();await expect(page.getByRole('region',{name:'Hasil perhitungan',exact:true})).toContainText('kedaluwarsa');await expect(page.getByRole('table')).toHaveCount(0)
+})
+test('WebKit manual four-channel ledger and ranking invalidation',async({page},info)=>{
+ await page.goto('/bandingkan');for(const name of comparisonPlatforms){const form=page.getByRole('form',{name:`Skenario ${name}`,exact:true});await fillFields(form,scenarioFixture);await addManualFees(form);await form.getByRole('button',{name:'Hitung',exact:true}).click()}
+ const region=page.getByRole('region',{name:'Perbandingan empat kanal'});await expect(region.getByRole('table')).toBeVisible();await expect(region).toContainText('Rp 89.500');expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBe(await page.evaluate(()=>innerWidth))
+ await page.screenshot({path:info.outputPath('comparison-webkit.jpg'),fullPage:true,scale:'css',quality:70});await fillFields(page.getByRole('form',{name:'Skenario Shopee',exact:true}),{taxScope:'unknown'});await expect(region.getByRole('table')).toHaveCount(0);await expect(region).toContainText('UNKNOWN')
+})

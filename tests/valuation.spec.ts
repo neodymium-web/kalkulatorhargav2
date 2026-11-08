@@ -1,3 +1,4 @@
+import { supplementalPaths } from '../lib/supplemental/routes'
 import { legacyPaths } from '../lib/legacy/routes'
 import { expect, test, type Page } from '@playwright/test'
 type Scenario = {
@@ -291,7 +292,7 @@ test('finance pagination exposes all twenty tools and protects SEO boundaries', 
     ).toBeVisible()
   }
   const xml = await (await request.get('/sitemap.xml')).text()
-  expect(xml.match(/<loc>/g)).toHaveLength(107 + legacyPaths.length)
+  expect(xml.match(/<loc>/g)).toHaveLength(107 + legacyPaths.length + supplementalPaths.length)
   for (const { slug } of scenarios) expect(xml).toContain(`/kalkulator/${slug}</loc>`)
   for (const slug of ['kalkulator-tidak-ada']) {
     expect((await request.get(`/kalkulator/${slug}`)).status()).toBe(404)

@@ -1,3 +1,4 @@
+import { supplementalPaths } from '../lib/supplemental/routes'
 import { legacyPaths } from '../lib/legacy/routes'
 import {test,expect,type Page} from '@playwright/test'
 const umkm:Record<string,string>={year:'2026',month:'5',registration:'2026-04-22',taxpayer:'individual',income:'business',eligibility:'confirmed',aggregation:'confirmed',wpTurnoverScope:'all-businesses',priorRelatedTurnover:'0',currentRelatedTurnover:'530000000',history:'clean',...Object.fromEntries(Array.from({length:12},(_,i)=>[`months.${i}.turnover`,i===3?'480000000':i===4?'50000000':'0']))}
@@ -58,7 +59,7 @@ test('UMKM errors focus exact month aggregation and invalid input retain data',a
 test('tax hub navigation canonical search sitemap and staged unpublished boundaries',async({page,request,isMobile},info)=>{
  await page.setViewportSize({width:isMobile?375:1440,height:900});const response=await page.goto('/pajak');expect(response?.headers()['x-robots-tag']).toBe('noindex, nofollow');await expect(page.locator('link[rel=canonical]')).toHaveAttribute('href','https://kalkulatorharga.com/pajak');await expect(page.getByRole('navigation',{name:'Navigasi utama'}).getByRole('link',{name:'Pajak'})).toHaveAttribute('aria-current','page');await expect(page.getByRole('region',{name:'Kalkulator tersedia'}).getByRole('link')).toHaveCount(10);await page.screenshot({path:info.outputPath('pajak-lima-alat.jpg'),quality:75,fullPage:true})
  for(const f of fixtures){await page.goto('/');await page.getByRole('searchbox').fill(f.title);await expect(page.getByRole('region',{name:'Hasil pencarian'}).locator(`a[href="/kalkulator/${f.slug}"]`)).toBeVisible()}
- const xml=await(await request.get('/sitemap.xml')).text();expect(xml.match(/<loc>/g)).toHaveLength(107 + legacyPaths.length);expect(xml).toContain('/pajak</loc>');for(const f of fixtures)expect(xml).toContain(`/kalkulator/${f.slug}</loc>`)
+ const xml=await(await request.get('/sitemap.xml')).text();expect(xml.match(/<loc>/g)).toHaveLength(107 + legacyPaths.length + supplementalPaths.length);expect(xml).toContain('/pajak</loc>');for(const f of fixtures)expect(xml).toContain(`/kalkulator/${f.slug}</loc>`)
  for(const slug of ['kalkulator-tidak-ada']){expect((await request.get(`/kalkulator/${slug}`)).status()).toBe(404);expect(xml).not.toContain(`/kalkulator/${slug}</loc>`);await page.getByRole('searchbox').fill(slug);await expect(page.locator(`a[href="/kalkulator/${slug}"]`)).toHaveCount(0)}expect(await(await request.get('/robots.txt')).text()).toContain('Disallow: /')
 })
 test('tax five widths max figures unsupported status source cards and fiscal table fit',async({page})=>{

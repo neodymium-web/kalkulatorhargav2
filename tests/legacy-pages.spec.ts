@@ -1,10 +1,11 @@
+import { supplementalPaths } from '../lib/supplemental/routes'
 import { test, expect, type Page } from '@playwright/test'
 import { readFileSync, writeFileSync } from 'node:fs'
 import sources from '../docs/audit/legacy55/source-pages.json'
-import blocked from '../docs/audit/legacy55/blocked.json'
+import { deferredPaths } from '../lib/supplemental/routes'
 import { legacyPaths } from '../lib/legacy/routes'
 const catalogue=JSON.parse(readFileSync('docs/audit/catalogue.json','utf8'))
-const paths=[...catalogue.paths,...legacyPaths]
+const paths=[...catalogue.paths,...legacyPaths,...supplementalPaths]
 const normalize=(s:string)=>s.replace(/\s+/g,' ').trim()
 async function accessibility(page:Page) {
   await page.addScriptTag({path:require.resolve('axe-core/axe.min.js')})
@@ -16,7 +17,8 @@ async function accessibility(page:Page) {
 for(const source of sources)test(`legacy disposition and independent source text ${source.path}`,async({page,request,isMobile},info)=>{
   const response=await request.get(source.path,{maxRedirects:0})
   writeFileSync(info.outputPath('legacy-outcome.json'),JSON.stringify({path:source.path,status:response.status(),observedAtUtc:new Date().toISOString()}))
-  if(source.path in blocked){expect(response.status()).toBe(404);expect(paths).not.toContain(source.path);return}
+  if((supplementalPaths as readonly string[]).includes(source.path)){expect(response.status()).toBe(200);expect(paths).toContain(source.path);return}
+  if((deferredPaths as readonly string[]).includes(source.path)){expect(response.status()).toBe(404);expect(paths).not.toContain(source.path);return}
   expect(response.status()).toBe(200);expect(response.headers()['x-robots-tag']).toBe('noindex, nofollow')
   const errors:string[]=[],external:string[]=[];page.on('pageerror',e=>errors.push(e.message));page.on('request',r=>{if(!r.url().startsWith('http://127.0.0.1:3100/'))external.push(r.url())})
   await page.setViewportSize({width:isMobile?375:1440,height:900});await page.goto(source.path)
@@ -35,12 +37,12 @@ for(const source of sources)test(`legacy disposition and independent source text
   await page.screenshot({path:info.outputPath('legacy-full.jpg'),fullPage:true,scale:'css',quality:70});await page.evaluate(async()=>{scrollTo(0,0);await document.fonts.ready;await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(()=>resolve(null)))) });await page.screenshot({path:info.outputPath('legacy-viewport.jpg'),scale:'css',quality:80})
   expect(errors).toEqual([]);expect(external).toEqual([])
 })
-test('blog and every inherited archive work without JS and preserve external legacy feature destinations',async({browser},info)=>{
+test('blog and inherited archives work without JS and link to supported manual alternatives',async({browser},info)=>{
   const context=await browser.newContext({javaScriptEnabled:false}),page=await context.newPage()
   await page.goto('http://127.0.0.1:3100/');await page.locator('footer a[href="/blog"]').press('Enter');await expect(page).toHaveURL(/\/blog$/)
   const nav=page.getByRole('navigation',{name:'Arsip legacy yang tersedia'});await expect(nav.getByRole('link')).toHaveCount(22)
   for(const path of legacyPaths){await page.goto('http://127.0.0.1:3100'+path);await expect(page.locator('main h1')).toHaveCount(1);expect(normalize(await page.locator('[data-legacy-source]').evaluate(el=>{const copy=el.cloneNode(true)as HTMLElement;copy.querySelectorAll('[data-legacy-annotation]').forEach(n=>n.remove());return copy.textContent??''}))).toBe(normalize(sources.find(p=>p.path===path)!.text.replaceAll('Ruang iklan','')))}
-  await page.goto('http://127.0.0.1:3100/blog/kalkulator-average-down-saham-harga-rata-rata');await expect(page.locator('[data-legacy-source] a[href="https://www.kalkulatorharga.com/kalkulator/emas"]')).toHaveCount(1)
+  await page.goto('http://127.0.0.1:3100/blog/kalkulator-average-down-saham-harga-rata-rata');await expect(page.locator('[data-legacy-source] a[href="/kalkulator/emas"]')).toHaveCount(1)
   await page.screenshot({path:info.outputPath('legacy-nojs.jpg'),fullPage:true,scale:'css',quality:70});await context.close()
 })
 test('archive tables support keyboard scrolling and text resizing without clipping',async({page})=>{
