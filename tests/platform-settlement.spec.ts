@@ -1,3 +1,4 @@
+import { legacyPaths } from '../lib/legacy/routes'
 import { test, expect, type Page } from '@playwright/test'
 import { platformFixture, percentFee, fixedFee } from './platform-settlement-fixtures'
 const platforms = [['shopee', 'Shopee'], ['tiktok-shop', 'TikTok Shop'], ['tokopedia', 'Tokopedia'], ['lazada', 'Lazada']] as const
@@ -62,7 +63,7 @@ test('100 searchable calculators 20 Marketplace and 107 URLs preserve creator in
   for (const [slug, name] of platforms) await expect(page.locator(`main a[href="/kalkulator/${slug}"]`).first()).toContainText(name)
   await page.screenshot({ path: info.outputPath('marketplace-20.jpg'), quality: 75, fullPage: true })
   await page.goto('/kalkulator/banding-biaya-marketplace'); for (const [slug] of platforms) await expect(page.locator(`main a[href="/kalkulator/${slug}"]`).first()).toBeVisible()
-  const xml = await (await request.get('/sitemap.xml')).text(); expect(xml.match(/<loc>/g)).toHaveLength(107); for (const [slug] of platforms) expect(xml).toContain(`/kalkulator/${slug}</loc>`)
+  const xml = await (await request.get('/sitemap.xml')).text(); expect(xml.match(/<loc>/g)).toHaveLength(107 + legacyPaths.length); for (const [slug] of platforms) expect(xml).toContain(`/kalkulator/${slug}</loc>`)
   await page.goto('/'); for (const [slug] of platforms) { await page.getByRole('searchbox').fill(slug.replaceAll('-', ' ')); await expect(page.locator(`a[href="/kalkulator/${slug}"]`)).toBeVisible() }
   await page.goto('/kalkulator/tiktok'); await expect(page.getByRole('heading', { level: 1 })).toContainText('Kreator'); expect((await request.get('/kalkulator/kalkulator-tidak-ada')).status()).toBe(404); expect(await (await request.get('/robots.txt')).text()).toContain('Disallow: /')
 })

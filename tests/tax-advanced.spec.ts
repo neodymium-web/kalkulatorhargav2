@@ -1,3 +1,4 @@
+import { legacyPaths } from '../lib/legacy/routes'
 import {test,expect,type Page} from '@playwright/test'
 import {monthlyFixture as m,annualFixture as a,importFixture as i,bphtbFixture as b,pbbFixture as p} from './tax-advanced-fixtures'
 const fixtures=[
@@ -80,7 +81,7 @@ test('Batch19 five widths large results and source tables fit without clipping',
 test('Batch19 hub search sitemap107 unknown route and staging boundaries',async({page,request,isMobile},info)=>{
  await page.setViewportSize({width:isMobile?375:1440,height:900});await page.goto('/pajak');await expect(page.getByRole('region',{name:'Kalkulator tersedia'}).getByRole('link')).toHaveCount(10);await page.screenshot({path:info.outputPath('pajak-sepuluh-alat.jpg'),quality:75,fullPage:true})
  for(const f of fixtures){await page.goto('/');await page.getByRole('searchbox').fill(f.title);await expect(page.getByRole('region',{name:'Hasil pencarian'}).locator(`a[href="/kalkulator/${f.slug}"]`)).toBeVisible()}
- const xml=await(await request.get('/sitemap.xml')).text();expect(xml.match(/<loc>/g)).toHaveLength(107);for(const f of fixtures)expect(xml).toContain(`/kalkulator/${f.slug}</loc>`)
+ const xml=await(await request.get('/sitemap.xml')).text();expect(xml.match(/<loc>/g)).toHaveLength(107 + legacyPaths.length);for(const f of fixtures)expect(xml).toContain(`/kalkulator/${f.slug}</loc>`)
  for(const slug of ['kalkulator-tidak-ada']){expect((await request.get(`/kalkulator/${slug}`)).status()).toBe(404);expect(xml).not.toContain(`/kalkulator/${slug}</loc>`);await page.getByRole('searchbox').fill(slug);await expect(page.locator(`a[href="/kalkulator/${slug}"]`)).toHaveCount(0)}expect(await(await request.get('/robots.txt')).text()).toContain('Disallow: /')
 })
 test('Batch19 legal methods dates limits full TER source tables and FAQs SSR without JavaScript',async({browser})=>{

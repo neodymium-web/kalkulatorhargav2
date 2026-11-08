@@ -1,0 +1,252 @@
+[
+  {
+    "path": "/kalkulator/tiktok/benchmark",
+    "url": "https://www.kalkulatorharga.com/kalkulator/tiktok/benchmark",
+    "finalUrl": "https://www.kalkulatorharga.com/kalkulator/tiktok/benchmark",
+    "status": 200,
+    "observedAtUtc": "2026-11-08T11:29:51.357559+00:00",
+    "sha256": "ff0cabbe16c1983fe1625bcd8d57b3c12354fafd1fb611b6b1f1345e2e1d32be",
+    "bytes": 57868,
+    "contentType": "text/html; charset=utf-8"
+  },
+  {
+    "path": "/kalkulator/tiktok/panduan",
+    "url": "https://www.kalkulatorharga.com/kalkulator/tiktok/panduan",
+    "finalUrl": "https://www.kalkulatorharga.com/kalkulator/tiktok/panduan",
+    "status": 200,
+    "observedAtUtc": "2026-11-08T11:29:51.923191+00:00",
+    "sha256": "ce20585d1e67bb74303e98e9233d95fbde67744e9f8ad419b95df0d219d5ab11",
+    "bytes": 43907,
+    "contentType": "text/html; charset=utf-8"
+  },
+  {
+    "path": "/kalkulator/emas",
+    "url": "https://www.kalkulatorharga.com/kalkulator/emas",
+    "finalUrl": "https://www.kalkulatorharga.com/kalkulator/emas",
+    "status": 200,
+    "observedAtUtc": "2026-11-08T11:29:52.786057+00:00",
+    "sha256": "aec3f3e1d273cfecd5b63c5aad7ee1fb432ff0e1a189bd151b1bd2ee19219800",
+    "bytes": 110193,
+    "contentType": "text/html; charset=utf-8"
+  },
+  {
+    "path": "/biaya-admin-marketplace",
+    "url": "https://www.kalkulatorharga.com/biaya-admin-marketplace",
+    "finalUrl": "https://www.kalkulatorharga.com/biaya-admin-marketplace",
+    "status": 200,
+    "observedAtUtc": "2026-11-08T11:29:53.662149+00:00",
+    "sha256": "e6e9271c0a576daed0d850a63db4da97ecad73544a948a029f9e333b3be2cfe5",
+    "bytes": 86927,
+    "contentType": "text/html; charset=utf-8"
+  },
+  {
+    "path": "/bandingkan",
+    "url": "https://www.kalkulatorharga.com/bandingkan",
+    "finalUrl": "https://www.kalkulatorharga.com/bandingkan",
+    "status": 200,
+    "observedAtUtc": "2026-11-08T11:29:54.508747+00:00",
+    "sha256": "761173c11b69fffd69b0dcc5817cb516651e4de15e34b7c2ed41aa5d6d1ee60e",
+    "bytes": 32768,
+    "contentType": "text/html; charset=utf-8"
+  },
+  {
+    "path": "/update-tarif",
+    "url": "https://www.kalkulatorharga.com/update-tarif",
+    "finalUrl": "https://www.kalkulatorharga.com/update-tarif",
+    "status": 200,
+    "observedAtUtc": "2026-11-08T11:29:55.331625+00:00",
+    "sha256": "fc89021584bce2cd65ae3f85ff5e78d5d3944cbef525be3fad0e0bed74fa1007",
+    "bytes": 40345,
+    "contentType": "text/html; charset=utf-8"
+  },
+  {
+    "path": "/blog",
+    "url": "https://www.kalkulatorharga.com/blog",
+    "finalUrl": "https://www.kalkulatorharga.com/blog",
+    "status": 200,
+    "observedAtUtc": "2026-11-08T11:29:56.433453+00:00",
+    "sha256": "0e25365e3b91be874b74a1d52bc3836792e6b8c239bb36e75bd7d99af6af4875",
+    "bytes": 46104,
+    "contentType": "text/html; charset=utf-8"
+  },
+  {
+    "path": "/metodologi",
+    "url": "https://www.kalkulatorharga.com/metodologi",
+    "finalUrl": "https://www.kalkulatorharga.com/metodologi",
+    "status": 200,
+    "observedAtUtc": "2026-11-08T11:29:57.260312+00:00",
+    "sha256": "84ce8cf7241bf709689db1b9a99d33f47db21d1c9329b8d62768f415c3a546ca",
+    "bytes": 37568,
+    "contentType": "text/html; charset=utf-8"
+  },
+  {
+    "path": "/redaksi",
+    "url": "https://www.kalkulatorharga.com/redaksi",
+    "finalUrl": "https://www.kalkulatorharga.com/redaksi",
+    "status": 200,
+    "observedAtUtc": "2026-11-08T11:29:58.114650+00:00",
+    "sha256": "c6895eab04c83ea4a2991018c9b2342103419e0f3cbd4c634a4258dab1228454",
+    "bytes": 28787,
+    "contentType": "text/html; charset=utf-8"
+  },
+  {
+    "path": "/kebijakan-editorial",
+    "url": "https://www.kalkulatorharga.com/kebijakan-editorial",
+    "finalUrl": "https://www.kalkulatorharga.com/kebijakan-editorial",
+    "status": 200,
+    "observedAtUtc": "2026-11-08T11:29:59.772753+00:00",
+    "sha256": "da3ba4be923d8ca8c6b7896f673027c9bf9d54ffa405b874761580805bf2350c",
+    "bytes": 28721,
+    "contentType": "text/html; charset=utf-8"
+  },
+  {
+    "path": "/disclaimer",
+    "url": "https://www.kalkulatorharga.com/disclaimer",
+    "finalUrl": "https://www.kalkulatorharga.com/disclaimer",
+    "status": 200,
+    "observedAtUtc": "2026-11-08T11:30:00.633048+00:00",
+    "sha256": "c48dc519a89d747b66e095fce08db12eb4247de4b7a050e6c266e6281c118086",
+    "bytes": 24061,
+    "contentType": "text/html; charset=utf-8"
+  },
+  {
+    "path": "/blog/menghitung-margin-marketplace",
+    "url": "https://www.kalkulatorharga.com/blog/menghitung-margin-marketplace",
+    "finalUrl": "https://www.kalkulatorharga.com/blog/menghitung-margin-marketplace",
+    "status": 200,
+    "observedAtUtc": "2026-11-08T11:30:01.583129+00:00",
+    "sha256": "3e44a569d13b8e1f893a617a338a1cb219bf2bc0908c675dbd79637d6ab277db",
+    "bytes": 29013,
+    "contentType": "text/html; charset=utf-8"
+  },
+  {
+    "path": "/blog/strategi-naikkan-profit",
+    "url": "https://www.kalkulatorharga.com/blog/strategi-naikkan-profit",
+    "finalUrl": "https://www.kalkulatorharga.com/blog/strategi-naikkan-profit",
+    "status": 200,
+    "observedAtUtc": "2026-11-08T11:30:02.433519+00:00",
+    "sha256": "f31cb7a4a3d650e1fc790c7860035c42873b9033dd43669a12b3f00e86413320",
+    "bytes": 28310,
+    "contentType": "text/html; charset=utf-8"
+  },
+  {
+    "path": "/blog/biaya-admin-marketplace",
+    "url": "https://www.kalkulatorharga.com/blog/biaya-admin-marketplace",
+    "finalUrl": "https://www.kalkulatorharga.com/blog/biaya-admin-marketplace",
+    "status": 200,
+    "observedAtUtc": "2026-11-08T11:30:03.377554+00:00",
+    "sha256": "5258f31937d25499e54ccc8c925513cd1aa50a934de40cac5d4df387fc652aa5",
+    "bytes": 29769,
+    "contentType": "text/html; charset=utf-8"
+  },
+  {
+    "path": "/blog/fee-shopee-2026",
+    "url": "https://www.kalkulatorharga.com/blog/fee-shopee-2026",
+    "finalUrl": "https://www.kalkulatorharga.com/blog/fee-shopee-2026",
+    "status": 200,
+    "observedAtUtc": "2026-11-08T11:30:04.203356+00:00",
+    "sha256": "e46b5354ca4fd2d30787ab2b48e0211590721b65578a322fb73b3605f21a0f77",
+    "bytes": 29688,
+    "contentType": "text/html; charset=utf-8"
+  },
+  {
+    "path": "/blog/lazada-marketplace-vs-lazmall",
+    "url": "https://www.kalkulatorharga.com/blog/lazada-marketplace-vs-lazmall",
+    "finalUrl": "https://www.kalkulatorharga.com/blog/lazada-marketplace-vs-lazmall",
+    "status": 200,
+    "observedAtUtc": "2026-11-08T11:30:05.412121+00:00",
+    "sha256": "04413205a5235c8e94fe0987f3e0e9a744b8a0b914b1747879ac9a28882efc73",
+    "bytes": 29769,
+    "contentType": "text/html; charset=utf-8"
+  },
+  {
+    "path": "/blog/pph-22-marketplace",
+    "url": "https://www.kalkulatorharga.com/blog/pph-22-marketplace",
+    "finalUrl": "https://www.kalkulatorharga.com/blog/pph-22-marketplace",
+    "status": 200,
+    "observedAtUtc": "2026-11-08T11:30:06.773349+00:00",
+    "sha256": "97e6760a06b82a84a439c6c201cc4fcbd5e9b11e9509ba6021ec5ff311907c80",
+    "bytes": 29020,
+    "contentType": "text/html; charset=utf-8"
+  },
+  {
+    "path": "/blog/gratis-ongkir-xtra-shopee-2026",
+    "url": "https://www.kalkulatorharga.com/blog/gratis-ongkir-xtra-shopee-2026",
+    "finalUrl": "https://www.kalkulatorharga.com/blog/gratis-ongkir-xtra-shopee-2026",
+    "status": 200,
+    "observedAtUtc": "2026-11-08T11:30:07.588817+00:00",
+    "sha256": "c73897b4d1b2487669bd437b544d4fe5b4593041e98372714ce189fda8d445e6",
+    "bytes": 30868,
+    "contentType": "text/html; charset=utf-8"
+  },
+  {
+    "path": "/blog/tokopedia-tiktok-shop-komisi-dinamis",
+    "url": "https://www.kalkulatorharga.com/blog/tokopedia-tiktok-shop-komisi-dinamis",
+    "finalUrl": "https://www.kalkulatorharga.com/blog/tokopedia-tiktok-shop-komisi-dinamis",
+    "status": 200,
+    "observedAtUtc": "2026-11-08T11:30:08.401119+00:00",
+    "sha256": "2ece386ccb9d4d9895738e5a4e3b2880440318741294e1587279c689e4b7fad0",
+    "bytes": 29970,
+    "contentType": "text/html; charset=utf-8"
+  },
+  {
+    "path": "/blog/harga-jual-minimum-marketplace",
+    "url": "https://www.kalkulatorharga.com/blog/harga-jual-minimum-marketplace",
+    "finalUrl": "https://www.kalkulatorharga.com/blog/harga-jual-minimum-marketplace",
+    "status": 200,
+    "observedAtUtc": "2026-11-08T11:30:09.254290+00:00",
+    "sha256": "012d7c39a5364d9e6fa8ee80b74914b3731fe4c6d5c466d96e8c35ca4eee577c",
+    "bytes": 29283,
+    "contentType": "text/html; charset=utf-8"
+  },
+  {
+    "path": "/blog/kalkulator-vs-spreadsheet",
+    "url": "https://www.kalkulatorharga.com/blog/kalkulator-vs-spreadsheet",
+    "finalUrl": "https://www.kalkulatorharga.com/blog/kalkulator-vs-spreadsheet",
+    "status": 200,
+    "observedAtUtc": "2026-11-08T11:30:10.587467+00:00",
+    "sha256": "e24a8db66861d72127a53185511572f66388727514e67e1ae7725cca92744e37",
+    "bytes": 29315,
+    "contentType": "text/html; charset=utf-8"
+  },
+  {
+    "path": "/blog/cek-dana-cair-shopee",
+    "url": "https://www.kalkulatorharga.com/blog/cek-dana-cair-shopee",
+    "finalUrl": "https://www.kalkulatorharga.com/blog/cek-dana-cair-shopee",
+    "status": 200,
+    "observedAtUtc": "2026-11-08T11:30:11.469268+00:00",
+    "sha256": "4eddfd6315504d08cffa8baf8c9bfa030f792cd706dcf8ecd1290bf66899f5fd",
+    "bytes": 29117,
+    "contentType": "text/html; charset=utf-8"
+  },
+  {
+    "path": "/blog/memilih-marketplace-untuk-mulai-jual",
+    "url": "https://www.kalkulatorharga.com/blog/memilih-marketplace-untuk-mulai-jual",
+    "finalUrl": "https://www.kalkulatorharga.com/blog/memilih-marketplace-untuk-mulai-jual",
+    "status": 200,
+    "observedAtUtc": "2026-11-08T11:30:12.302672+00:00",
+    "sha256": "1fc6c21cd300baa4aee21dd1f73f2b279fa84c545076fdb374d3547ca96a0a0e",
+    "bytes": 29447,
+    "contentType": "text/html; charset=utf-8"
+  },
+  {
+    "path": "/blog/engagement-rate-tiktok-2026",
+    "url": "https://www.kalkulatorharga.com/blog/engagement-rate-tiktok-2026",
+    "finalUrl": "https://www.kalkulatorharga.com/blog/engagement-rate-tiktok-2026",
+    "status": 200,
+    "observedAtUtc": "2026-11-08T11:30:13.170254+00:00",
+    "sha256": "91cbe383f85faf79e77d2fee8f84853da4495ebfad807c7f5b3e9f141824c9e6",
+    "bytes": 32278,
+    "contentType": "text/html; charset=utf-8"
+  },
+  {
+    "path": "/blog/kalkulator-average-down-saham-harga-rata-rata",
+    "url": "https://www.kalkulatorharga.com/blog/kalkulator-average-down-saham-harga-rata-rata",
+    "finalUrl": "https://www.kalkulatorharga.com/blog/kalkulator-average-down-saham-harga-rata-rata",
+    "status": 200,
+    "observedAtUtc": "2026-11-08T11:30:14.003151+00:00",
+    "sha256": "9d3fb0da6e84877c05400430539a003f67332e2dd64c4d9a357791ef0fa429dc",
+    "bytes": 41424,
+    "contentType": "text/html; charset=utf-8"
+  }
+]

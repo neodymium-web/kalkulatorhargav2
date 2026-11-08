@@ -1,0 +1,25 @@
+// Published inherited archives, separate from the 100 calculator registry.
+export const legacyPaths = [
+  "/kalkulator/tiktok/panduan",
+  "/biaya-admin-marketplace",
+  "/update-tarif",
+  "/blog",
+  "/metodologi",
+  "/redaksi",
+  "/kebijakan-editorial",
+  "/disclaimer",
+  "/blog/menghitung-margin-marketplace",
+  "/blog/strategi-naikkan-profit",
+  "/blog/biaya-admin-marketplace",
+  "/blog/fee-shopee-2026",
+  "/blog/lazada-marketplace-vs-lazmall",
+  "/blog/pph-22-marketplace",
+  "/blog/gratis-ongkir-xtra-shopee-2026",
+  "/blog/tokopedia-tiktok-shop-komisi-dinamis",
+  "/blog/harga-jual-minimum-marketplace",
+  "/blog/kalkulator-vs-spreadsheet",
+  "/blog/cek-dana-cair-shopee",
+  "/blog/memilih-marketplace-untuk-mulai-jual",
+  "/blog/engagement-rate-tiktok-2026",
+  "/blog/kalkulator-average-down-saham-harga-rata-rata"
+] as const

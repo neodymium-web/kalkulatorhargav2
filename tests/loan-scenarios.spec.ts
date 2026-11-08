@@ -1,3 +1,4 @@
+import { legacyPaths } from '../lib/legacy/routes'
 import { test, expect, type Page } from '@playwright/test'
 type Fixture = { slug: string; title: string; inputs: Record<string,string>; primary: string; detail: string; invalid: string; bad: string; table?: string }
 const fixtures: Fixture[] = [
@@ -118,7 +119,7 @@ test('finance twenty tools pagination search sitemap and staging protections',as
  for(const f of fixtures)await expect(listing.locator(`a[href="/kalkulator/${f.slug}"]`)).toBeVisible()
  await page.screenshot({path:info.outputPath('keuangan-20-alat.jpg'),fullPage:true,quality:75})
  for(const f of fixtures){await page.goto('/');await page.getByRole('searchbox').fill(f.title);await expect(page.getByRole('region',{name:'Hasil pencarian'}).locator(`a[href="/kalkulator/${f.slug}"]`)).toBeVisible()}
- const xml=await(await request.get('/sitemap.xml')).text();expect(xml.match(/<loc>/g)).toHaveLength(107)
+ const xml=await(await request.get('/sitemap.xml')).text();expect(xml.match(/<loc>/g)).toHaveLength(107 + legacyPaths.length)
  for(const f of fixtures)expect(xml).toContain(`/kalkulator/${f.slug}</loc>`)
  for(const slug of ['kalkulator-tidak-ada']){expect((await request.get(`/kalkulator/${slug}`)).status()).toBe(404);expect(xml).not.toContain(`/kalkulator/${slug}</loc>`);await page.goto('/');await page.getByRole('searchbox').fill(slug.replaceAll('-',' '));await expect(page.locator(`a[href="/kalkulator/${slug}"]`)).toHaveCount(0)}
  expect((await(await request.get('/robots.txt')).text())).toContain('Disallow: /')

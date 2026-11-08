@@ -19,7 +19,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <body>
         <SiteHeader hubs={listCategoryHubs()} />
         <main id="konten" tabIndex={-1}>{children}</main>
-        <footer className={`${layout.container} ${styles.footer}`}>KalkulatorHarga</footer>
+        <footer className={`${layout.container} ${styles.footer}`}>KalkulatorHarga · <a href="/blog">Arsip catatan seller (perlu review)</a></footer>
       </body>
     </html>
   )

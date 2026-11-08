@@ -1,3 +1,4 @@
+import { legacyPaths } from '../lib/legacy/routes'
 import { expect, test } from '@playwright/test'
 
 test('finds the published calculator from the homepage and business hub', async ({ page }, info) => {
@@ -172,6 +173,7 @@ test('blocks preview indexing and lists only published URLs', async ({ request }
     '<loc>https://kalkulatorharga.com/kalkulator/tiktok-shop</loc>',
     '<loc>https://kalkulatorharga.com/kalkulator/tokopedia</loc>',
     '<loc>https://kalkulatorharga.com/kalkulator/lazada</loc>',
+    ...legacyPaths.map(path => `<loc>https://kalkulatorharga.com${path}</loc>`),
   ])
 })
 

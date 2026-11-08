@@ -60,7 +60,36 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: browser-evidence
-          path: test-results/
+          path: |
+            test-results/
+            !test-results/audit-lab/**
+            !test-results/cutover-lab/**
+            !test-results/release-audit-*/**
+      - name: Upload calculator desktop evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: calculator-desktop-evidence
+          path: |
+            test-results/release-audit-*-desktop/
+            test-results/commit.json
+      - name: Upload calculator mobile evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: calculator-mobile-evidence
+          path: |
+            test-results/release-audit-*-mobile/
+            test-results/commit.json
+      - name: Upload performance evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: performance-evidence
+          path: |
+            test-results/audit-lab/
+            test-results/cutover-lab/
+            test-results/commit.json
   project-metadata:
     name: Policy files
     runs-on: ubuntu-latest

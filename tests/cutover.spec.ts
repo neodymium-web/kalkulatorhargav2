@@ -1,18 +1,19 @@
+import { legacyPaths } from '../lib/legacy/routes'
 import {test,expect} from '@playwright/test'
 import {readFileSync,writeFileSync} from 'node:fs'
 import {createServer} from 'node:http'
 const catalogue=JSON.parse(readFileSync('docs/audit/catalogue.json','utf8'))
 const {validate}=require('../scripts/migration/redirect-fixture.cjs')
 const {readCsv}=require('../scripts/migration/csv.cjs')
-test('SSR breadth-first traversal from root alone reaches all 107 pages without sitemap or executing their JS',async({page,request},info)=>{
+test('SSR breadth-first traversal from root alone reaches all 107 original pages plus published inherited archives without sitemap or executing their JS',async({page,request},info)=>{
  const pending=['/'],seen=new Set<string>(),rows=[]
  while(pending.length){const path=pending.shift()!;if(seen.has(path))continue;seen.add(path)
  const response=await request.get(path,{maxRedirects:0});expect(response.status(),path).toBe(200);const html=await response.text()
  const r=await page.evaluate(html=>{const d=new DOMParser().parseFromString(html,'text/html');return {title:d.title,h1:[...d.querySelectorAll('main h1')].map(n=>n.textContent),links:[...d.querySelectorAll('a[href]')].map(n=>n.getAttribute('href')!) }},html)
  expect(r.h1).toHaveLength(1);rows.push({path,status:response.status(),...r})
- for(const href of r.links)if(href.startsWith('/')&&!href.startsWith('//')){const target=href.split(/[?#]/)[0]||'/';expect(catalogue.paths,`${path}→${target}`).toContain(target);if(!seen.has(target))pending.push(target)}
+ for(const href of r.links)if(href.startsWith('/')&&!href.startsWith('//')){const target=href.split(/[?#]/)[0]||'/';expect([...catalogue.paths, ...legacyPaths],`${path}→${target}`).toContain(target);if(!seen.has(target))pending.push(target)}
  }
- expect([...seen].sort()).toEqual([...catalogue.paths].sort());expect(seen.size).toBe(107)
+ expect([...seen].sort()).toEqual([...catalogue.paths, ...legacyPaths].sort());expect(seen.size).toBe(107 + legacyPaths.length)
  writeFileSync(info.outputPath('ssr-graph.json'),JSON.stringify({method:'BFS, root seed only, raw HTML parsed inertly; no sitemap seeds',rows},null,2))
 })
 test('security headers favicon robots and proposed legacy redirects remain safe',async({request})=>{
@@ -20,7 +21,7 @@ test('security headers favicon robots and proposed legacy redirects remain safe'
  const r=await request.get(path,{maxRedirects:0});expect(r.status()).toBe(200);const h=r.headers();expect(h['x-robots-tag']).toBe('noindex, nofollow');expect(h['referrer-policy']).toBe('strict-origin-when-cross-origin');expect(h['x-content-type-options']).toBe('nosniff');expect(h['content-security-policy-report-only']).toContain("object-src 'none'");expect(h['content-security-policy']).toBeUndefined()
  if(path==='/favicon.ico'){expect(h['content-type']).toMatch(/image\/(x-icon|vnd.microsoft.icon)/);const b=await r.body();expect([...b.subarray(0,4)]).toEqual([0,0,1,0])}
  if(path==='/robots.txt')expect(await r.text()).toContain('Disallow: /')
- if(path==='/sitemap.xml')expect([...(await r.text()).matchAll(/<loc>/g)]).toHaveLength(107)
+ if(path==='/sitemap.xml')expect([...(await r.text()).matchAll(/<loc>/g)]).toHaveLength(107 + legacyPaths.length)
  }
  for(const path of ['/kalkulator','/kalkulator/saham/average'])expect((await request.get(path,{maxRedirects:0})).status()).toBe(404)
 })

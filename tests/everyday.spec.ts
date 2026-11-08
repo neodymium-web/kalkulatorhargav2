@@ -1,3 +1,4 @@
+import { legacyPaths } from '../lib/legacy/routes'
 import { test, expect, type Page } from '@playwright/test'
 type Fixture = { slug: string; title: string; inputs: Record<string, string>; primary: string; invalid: string; bad: string; mode?: string; add?: string }
 const fixtures: Fixture[] = [
@@ -130,7 +131,7 @@ test('everyday hub search sitemap SSR sources and staging protections', async ({
     await page.goto('/'); await page.getByRole('searchbox').fill(f.title); await expect(page.getByRole('region', { name: 'Hasil pencarian' }).locator(`a[href="/kalkulator/${f.slug}"]`)).toBeVisible()
     const html = await (await request.get(`/kalkulator/${f.slug}`)).text(); expect(html).toContain(`<title>${f.title} | KalkulatorHarga</title>`); expect(html).toContain('Sumber rumus'); expect(html).toContain('Presisi dan pembulatan')
   }
-  const xml = await (await request.get('/sitemap.xml')).text(); expect(xml.match(/<loc>/g)).toHaveLength(107); expect(xml).toContain('/sehari-hari</loc>')
+  const xml = await (await request.get('/sitemap.xml')).text(); expect(xml.match(/<loc>/g)).toHaveLength(107 + legacyPaths.length); expect(xml).toContain('/sehari-hari</loc>')
   for (const f of fixtures) expect(xml).toContain(`/kalkulator/${f.slug}</loc>`)
   for (const slug of ['kalkulator-tidak-ada']) { expect((await request.get(`/kalkulator/${slug}`)).status()).toBe(404); expect(xml).not.toContain(`/kalkulator/${slug}</loc>`) }
   expect(await (await request.get('/robots.txt')).text()).toContain('Disallow: /')
