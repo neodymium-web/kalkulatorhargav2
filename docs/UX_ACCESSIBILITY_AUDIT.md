@@ -8,6 +8,8 @@ axe-core4.14.0:110scan pada31halaman sampel awal dan24state hasil, masing-masing
 
 WebKit11alur dengan emulated iPhone13 lulus: HPP,KPR,TikTok kreator,bagi tagihan,usia,TER,impor dan4platform. Ini WebKit desktop dengan emulasi, bukan iOS/Safari di iPhone fisik. Chromium mobile memakai emulasi Android; Android nyata belum diuji. Perbedaan date picker lokal/perangkat masih memerlukan smoke test pemilik sebelum launch.
 
+Run CI pertama meluluskan699Playwright dan seluruh assertion WebKit, tetapi4capture fullpage seller gagal karena DPR3 menghasilkan gambar di atas batas32767piksel renderer Linux. Capture WebKit memakai `scale:'css'` pada revisi berikutnya: seluruh halaman tetap diambil, tidak di-crop, tidak mengubah viewport/DPR aplikasi, assertion atau timeout. Dimensi CSS/DPR dilampirkan dalam artifact agar penyesuaian capture dapat diperiksa. Screenshot Chromium desktop/mobile tetap seperti semula. Hasil run awal yang gagal tidak disebut CI sukses.
+
 ## Inspeksi visual yang benar-benar dilakukan
 
 [Indeks62inspeksi](audit/SCREENSHOT_INDEX.md) dan [JSON/hash](audit/screenshot-index.json) mencakup homepage+6hub+24alat, masing-masing desktop1440/mobile375. Sampel: Bisnis3,Keuangan3,MediaSosial2,Seharihari2,Pajak10,Marketplace4. Prioritas legal/settlement,baris dinamis,kalender dan jadwal. Original initial/result fullpage serta critical viewport/panel tersimpan dalam browser-evidence. Review sheet menggabungkan piksel screenshot asli, bukan mockup. Viewport/panel dibaca untuk hasil/label/clip, fullpage thumbnail untuk struktur; tidak semua teks kecil sepanjang fullpage dibaca manual.

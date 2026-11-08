@@ -55,6 +55,8 @@ Oracle: `python3 scripts/audit/oracles.py`, `python3 scripts/audit/stress.py`, l
 
 Awalnya harness mendeteksi deviasi oracle unit-price,PromoSeller,statusunknownPPh23 serta perbandingan Fraction; diselidiki dan dikoreksi sesuai kontrak terdokumentasi. Fix AR-001 versi awal menambah wrapper setelah hidrasi sehingga tesgroup lama gagal; wrapper kemudian dibatasi sebelum hidrasi,semuaassertion lama tetap. Hasil final di atas berasal dari rerun; tidak mengklaim semua percobaan pertama hijau.
 
+CI pertama pada91ba33f meluluskan699Playwright/1skip, tetapi4capture WebKit seller melampaui batas32767piksel renderer Linux padaDPR3. Capture kemudian disimpan fullpage pada skalaCSS, dengan lampiran dimensi; tidak mengubah assertion,timeout atau viewport aplikasi. CI final harus mengulang semua tahap pada SHA revisi, bukan hanya mengandalkan run pertama.
+
 ## Matriks cakupan100/100 final
 
 | ID | Route | Kategori | Oracle baseline/edge | HTTP/SSR | Reflow | Workflow |
