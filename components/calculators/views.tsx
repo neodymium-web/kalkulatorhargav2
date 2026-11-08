@@ -1,3 +1,6 @@
+import { platformTools, type PlatformSlug } from '../../lib/platform-settlement/tools'
+import { PlatformForm } from './platform-form'
+import { PlatformMethodology } from './platform-methodology'
 import {advancedTools,type AdvancedSlug} from '../../lib/tax-advanced/tools'
 import {AdvancedTaxForm} from './advanced-tax-form'
 import {AdvancedTaxMethodology} from './advanced-tax-methodology'
@@ -190,5 +193,9 @@ export const views: Readonly<Record<string, CalculatorView | undefined>> = {
   ...Object.fromEntries((Object.keys(advancedTools) as AdvancedSlug[]).map(slug => {
     const view: CalculatorView = { Form: () => <AdvancedTaxForm slug={slug} />, Methodology: ({formulaVersion}) => <AdvancedTaxMethodology slug={slug} formulaVersion={formulaVersion} /> }
     return [slug,view]
+  })),
+  ...Object.fromEntries((Object.keys(platformTools) as PlatformSlug[]).map(slug => {
+    const view: CalculatorView = { Form: () => <PlatformForm slug={slug} />, Methodology: ({ formulaVersion }) => <PlatformMethodology slug={slug} formulaVersion={formulaVersion} /> }
+    return [slug, view]
   })),
 }

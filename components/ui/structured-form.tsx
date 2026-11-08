@@ -68,7 +68,11 @@ export function StructuredForm({
     htmlId: `${id}-${field.id}`,
   }))
   const rowControls = rows.map((rowId, index) =>
-    (tool.rowFields ?? []).filter(field => !field.visibleWhen || rowChoices[rowId]?.[field.visibleWhen.field] === field.visibleWhen.value).map((field) => ({
+    (tool.rowFields ?? []).filter(function visible(field): boolean {
+      if (!field.visibleWhen) return true
+      const parent = tool.rowFields?.find(f => f.id === field.visibleWhen!.field)
+      return rowChoices[rowId]?.[field.visibleWhen.field] === field.visibleWhen.value && (!parent || visible(parent))
+    }).map((field) => ({
       ...field,
       summaryLabel: `${field.label}, ${rowName} ${index + rowStart}`,
       name: `${tool.rows}.${index}.${field.id}`,
@@ -143,7 +147,12 @@ export function StructuredForm({
               <div className={styles.rowFields}>
                 {fields.map((field) => (
                   <Field key={field.id} field={field} error={errors?.[field.name]?.[0]} hintId={hintId}
-                    onChoice={conditionalRows && field.options ? value => setRowChoices(previous => ({ ...previous, [rows[index]]: { ...previous[rows[index]], [field.id]: value } })) : undefined} />
+                    onChoice={conditionalRows && field.options ? value => setRowChoices(previous => {
+                      const choices = { ...previous[rows[index]], [field.id]: value }
+                      const clearChildren = (parent: string) => { for (const child of tool.rowFields ?? []) if (child.visibleWhen?.field === parent) { delete choices[child.id]; clearChildren(child.id) } }
+                      clearChildren(field.id)
+                      return { ...previous, [rows[index]]: choices }
+                    }) : undefined} />
                 ))}
               </div>
               {!tool.rowConfig?.fixed && <Button

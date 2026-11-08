@@ -130,9 +130,9 @@ test('everyday hub search sitemap SSR sources and staging protections', async ({
     await page.goto('/'); await page.getByRole('searchbox').fill(f.title); await expect(page.getByRole('region', { name: 'Hasil pencarian' }).locator(`a[href="/kalkulator/${f.slug}"]`)).toBeVisible()
     const html = await (await request.get(`/kalkulator/${f.slug}`)).text(); expect(html).toContain(`<title>${f.title} | KalkulatorHarga</title>`); expect(html).toContain('Sumber rumus'); expect(html).toContain('Presisi dan pembulatan')
   }
-  const xml = await (await request.get('/sitemap.xml')).text(); expect(xml.match(/<loc>/g)).toHaveLength(103); expect(xml).toContain('/sehari-hari</loc>')
+  const xml = await (await request.get('/sitemap.xml')).text(); expect(xml.match(/<loc>/g)).toHaveLength(107); expect(xml).toContain('/sehari-hari</loc>')
   for (const f of fixtures) expect(xml).toContain(`/kalkulator/${f.slug}</loc>`)
-  for (const slug of [ 'shopee', 'tiktok-shop']) { expect((await request.get(`/kalkulator/${slug}`)).status()).toBe(404); expect(xml).not.toContain(`/kalkulator/${slug}</loc>`) }
+  for (const slug of ['kalkulator-tidak-ada']) { expect((await request.get(`/kalkulator/${slug}`)).status()).toBe(404); expect(xml).not.toContain(`/kalkulator/${slug}</loc>`) }
   expect(await (await request.get('/robots.txt')).text()).toContain('Disallow: /')
 })
 test('everyday forms tables and hub fit five widths and large result', async ({ page, isMobile }) => {

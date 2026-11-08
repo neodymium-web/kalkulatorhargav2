@@ -168,13 +168,17 @@ test('blocks preview indexing and lists only published URLs', async ({ request }
     '<loc>https://kalkulatorharga.com/kalkulator/pajak-impor</loc>',
     '<loc>https://kalkulatorharga.com/kalkulator/bphtb</loc>',
     '<loc>https://kalkulatorharga.com/kalkulator/pbb-p2</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/shopee</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/tiktok-shop</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/tokopedia</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/lazada</loc>',
   ])
 })
 
 test('keeps the HPP canonical and returns 404 for unpublished calculators', async ({ page, request }) => {
   await page.goto('/kalkulator/hpp')
   await expect(page.locator('link[rel=canonical]')).toHaveAttribute('href', 'https://kalkulatorharga.com/kalkulator/hpp')
-  for (const slug of ['tiktok-shop', 'estimasi-tiktok-kreator', 'shopee', 'tidak-ada']) {
+  for (const slug of ['kalkulator-tidak-ada']) {
     expect((await request.get(`/kalkulator/${slug}`)).status()).toBe(404)
   }
 })
