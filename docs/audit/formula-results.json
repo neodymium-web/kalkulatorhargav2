@@ -1,0 +1,5389 @@
+[
+  {
+    "id": "production-cost",
+    "slug": "hpp",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "total": "1019",
+      "perUnit": "146"
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "units": [
+          "Jumlah unit harus lebih dari nol."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-harga-jual",
+    "slug": "harga-jual",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "minimum": "1112"
+      }
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "margin": [
+          "Margin target harus kurang dari 100%."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-margin-laba",
+    "slug": "margin-laba",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "profit": "-74",
+        "percent": "-5401"
+      }
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "price": [
+          "Harga jual harus lebih dari nol untuk menghitung margin."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-markup",
+    "slug": "markup",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "difference": "74",
+        "percent": "5401"
+      }
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "cost": [
+          "Biaya per unit harus lebih dari nol untuk menghitung markup."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-bep",
+    "slug": "bep",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "contribution": "14",
+        "units": "8"
+      }
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "price": [
+          "Masukkan rupiah bulat hingga 13 digit tanpa pemisah."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-target-laba",
+    "slug": "target-laba",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "contribution": "14",
+        "units": "11"
+      }
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "target": [
+          "Masukkan rupiah bulat hingga 13 digit tanpa pemisah."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-harga-pokok-penjualan",
+    "slug": "harga-pokok-penjualan",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "cogs": "879",
+        "available": "1090"
+      }
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "closing": [
+          "Persediaan akhir tidak boleh melebihi barang tersedia."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-yield-bahan",
+    "slug": "yield-bahan",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "unit": "kg",
+      "values": {
+        "yield": "8167",
+        "loss": "1375",
+        "lossPercent": "1833"
+      }
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "gross": [
+          "Berat kotor harus lebih dari nol."
+        ],
+        "net": [
+          "Berat bersih tidak boleh melebihi berat kotor."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-penyusutan-garis-lurus",
+    "slug": "penyusutan-garis-lurus",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "annual": "162",
+        "base": "1136"
+      }
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "years": [
+          "Umur manfaat harus lebih dari nol tahun."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-arus-kas",
+    "slug": "arus-kas",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "closing": "-131",
+        "net": "-58"
+      },
+      "warning": "Peringatan: saldo akhir negatif."
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "end": [
+          "Tanggal akhir harus sama dengan atau setelah tanggal awal."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-utilisasi-kapasitas",
+    "slug": "utilisasi-kapasitas",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "utilization": "12000"
+      },
+      "warning": "Produksi melampaui kapasitas acuan."
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "capacity": [
+          "Kapasitas acuan harus lebih dari nol."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-perputaran-persediaan",
+    "slug": "perputaran-persediaan",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "turnover": "218",
+        "days": "1332",
+        "average": "35700"
+      }
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "closing": [
+          "Rata-rata persediaan harus lebih dari nol."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-reorder-point",
+    "slug": "reorder-point",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "reorder": "11"
+      }
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "lead": [
+          "Masukkan angka nonnegatif hingga tiga desimal."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-runway-kas",
+    "slug": "runway-kas",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "months": "468",
+        "burn": "216"
+      }
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "cash": [
+          "Masukkan rupiah utuh nonnegatif hingga 13 digit."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-biaya-layanan",
+    "slug": "biaya-layanan",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "cost": "73",
+        "allocation": "60",
+        "total": "1234"
+      }
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "transactions": [
+          "Transaksi tertagih harus lebih dari nol."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-tarif-freelance",
+    "slug": "tarif-freelance",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "hourly": "73",
+        "requirement": "1248"
+      }
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "hours": [
+          "Jam tertagih harus lebih dari nol."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-food-cost",
+    "slug": "food-cost",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "total": "93",
+        "perServing": "14"
+      }
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "servings": [
+          "Jumlah porsi harus lebih dari nol."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-harga-borongan",
+    "slug": "harga-borongan",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "quote": "831",
+        "cost": "730",
+        "labor": "446"
+      }
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "hours": [
+          "Masukkan angka nonnegatif hingga tiga desimal."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-eoq",
+    "slug": "eoq",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "quantity": "30",
+        "ordering": "167",
+        "holding": "165"
+      }
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "holding": [
+          "Biaya simpan harus lebih dari nol."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-payback-period",
+    "slug": "payback-period",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "payback": "282",
+        "cumulative": "125"
+      },
+      "period": "bulan"
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "flows": [
+          "Tambahkan minimal satu periode."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-berat-volumetrik",
+    "slug": "berat-volumetrik",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "volumetric": "2424200",
+        "comparison": "2424200"
+      }
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "divisor": [
+          "Nilai harus lebih dari nol."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-roas",
+    "slug": "roas",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "roas": "390"
+      }
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "spend": [
+          "Biaya iklan harus lebih dari nol agar ROAS terdefinisi."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-roas-impas",
+    "slug": "roas-impas",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "threshold": "198",
+        "contribution": "626",
+        "margin": "5061"
+      }
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "revenue": [
+          "Pendapatan harus lebih dari nol untuk model ROAS impas."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-acos",
+    "slug": "acos",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "acos": "2563"
+      }
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "revenue": [
+          "Masukkan rupiah utuh nonnegatif hingga 13 digit."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-konversi-toko",
+    "slug": "konversi-toko",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "conversion": "1241"
+      }
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "visits": [
+          "Total kunjungan harus lebih dari nol."
+        ],
+        "purchasing": [
+          "Kunjungan yang membeli tidak boleh melebihi total kunjungan."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-nilai-pesanan-rata-rata",
+    "slug": "nilai-pesanan-rata-rata",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "aov": "7276"
+      }
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "orders": [
+          "Jumlah pesanan harus lebih dari nol."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-promo-seller",
+    "slug": "promo-seller",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "burden": "7913",
+        "platform": "13187",
+        "buyer": "102600",
+        "proceeds": "115787"
+      },
+      "tiny": []
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "discount": [
+          "Diskon tidak boleh melebihi harga awal."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-subsidi-ongkir",
+    "slug": "subsidi-ongkir",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "seller": "5300",
+        "actual": "13700",
+        "buyer": "3100",
+        "credit": "5300"
+      }
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "credit": [
+          "Pembayaran pembeli dan subsidi melebihi ongkir aktual. Periksa cakupan biayanya."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-biaya-kemasan",
+    "slug": "biaya-kemasan",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "per": "2324",
+        "total": "39514"
+      },
+      "tiny": []
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "shipments": [
+          "Harus lebih dari nol."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-biaya-retur",
+    "slug": "biaya-retur",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "per": "769",
+        "net": "10600",
+        "total": "13065"
+      },
+      "tiny": []
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "recovery": [
+          "Pemulihan tidak boleh melebihi kerugian bruto."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-kerugian-cod",
+    "slug": "kerugian-cod",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "total": "16885",
+        "failures": "12325",
+        "per": "993"
+      },
+      "tiny": []
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "rate": [
+          "Persentase harus antara 0 dan 100%."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-bunga-sederhana",
+    "slug": "bunga-sederhana",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "interest": "52",
+        "future": "1289"
+      },
+      "notes": []
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "months": [
+          "Maksimal 1.200 periode."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-bunga-majemuk",
+    "slug": "bunga-majemuk",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "future": "1403",
+        "interest": "166",
+        "periodic": "18125",
+        "effective": "74495",
+        "duration": "21"
+      },
+      "notes": [],
+      "tiny": []
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "frequency": [
+          "Pilih frekuensi kapitalisasi."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-cicilan-anuitas",
+    "slug": "cicilan-anuitas",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "total": "1265",
+        "interest": "28",
+        "first": "182",
+        "last": "173",
+        "lastMonth": "7",
+        "standard": "182"
+      },
+      "schedule": [
+        {
+          "month": 1,
+          "payment": "182",
+          "principal": "175",
+          "interest": "7",
+          "balance": "1062"
+        },
+        {
+          "month": 2,
+          "payment": "182",
+          "principal": "176",
+          "interest": "6",
+          "balance": "886"
+        },
+        {
+          "month": 3,
+          "payment": "182",
+          "principal": "177",
+          "interest": "5",
+          "balance": "709"
+        },
+        {
+          "month": 4,
+          "payment": "182",
+          "principal": "178",
+          "interest": "4",
+          "balance": "531"
+        },
+        {
+          "month": 5,
+          "payment": "182",
+          "principal": "179",
+          "interest": "3",
+          "balance": "352"
+        },
+        {
+          "month": 6,
+          "payment": "182",
+          "principal": "180",
+          "interest": "2",
+          "balance": "172"
+        },
+        {
+          "month": 7,
+          "payment": "173",
+          "principal": "172",
+          "interest": "1",
+          "balance": "0"
+        }
+      ],
+      "notes": []
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "months": [
+          "Tenor harus 1\u2013600 bulan utuh."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-cicilan-flat",
+    "slug": "cicilan-flat",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "total": "1289",
+        "interest": "52",
+        "first": "183",
+        "last": "184",
+        "lastMonth": "7"
+      },
+      "schedule": [
+        {
+          "month": 1,
+          "payment": "183",
+          "principal": "176",
+          "interest": "7",
+          "balance": "1061"
+        },
+        {
+          "month": 2,
+          "payment": "185",
+          "principal": "177",
+          "interest": "8",
+          "balance": "884"
+        },
+        {
+          "month": 3,
+          "payment": "184",
+          "principal": "177",
+          "interest": "7",
+          "balance": "707"
+        },
+        {
+          "month": 4,
+          "payment": "184",
+          "principal": "176",
+          "interest": "8",
+          "balance": "531"
+        },
+        {
+          "month": 5,
+          "payment": "184",
+          "principal": "177",
+          "interest": "7",
+          "balance": "354"
+        },
+        {
+          "month": 6,
+          "payment": "185",
+          "principal": "177",
+          "interest": "8",
+          "balance": "177"
+        },
+        {
+          "month": 7,
+          "payment": "184",
+          "principal": "177",
+          "interest": "7",
+          "balance": "0"
+        }
+      ],
+      "notes": []
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "months": [
+          "Tenor harus 1\u2013600 bulan utuh."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-rasio-cicilan",
+    "slug": "rasio-cicilan",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "ratio": "2563",
+        "remaining": "920"
+      },
+      "tiny": []
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "income": [
+          "Pendapatan bersih harus lebih dari nol."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-target-tabungan",
+    "slug": "target-tabungan",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "payment": "25000",
+        "deposits": "175000",
+        "startingGrowth": "1365",
+        "allGrowth": "4569",
+        "future": "211269",
+        "surplus": "169"
+      },
+      "precision": {}
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "months": [
+          "Durasi harus 1\u2013600 bulan utuh."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-dana-darurat",
+    "slug": "dana-darurat",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "target": "2219",
+        "gap": "1606",
+        "surplus": "0",
+        "coverage": "193"
+      },
+      "precision": {},
+      "notes": []
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "months": [
+          "Durasi harus 1\u20131.200 bulan utuh."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-deposito",
+    "slug": "deposito",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "maturity": "1277",
+        "gross": "52",
+        "withholding": "9",
+        "fees": "3",
+        "net": "40"
+      },
+      "notes": []
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "fees": [
+          "Biaya melebihi pokok dan bunga setelah potongan. Saldo jatuh tempo negatif tidak didukung model ini."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-imbal-hasil-investasi",
+    "slug": "imbal-hasil-investasi",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "gain": "-223",
+        "roi": "-1803"
+      },
+      "status": "negative-return",
+      "precision": {}
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "initial": [
+          "Modal awal harus lebih dari nol."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-cagr",
+    "slug": "cagr",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "cagr": "200000"
+      },
+      "precision": {}
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "years": [
+          "Masukkan 1\u2013100 tahun selesai."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-nilai-kini",
+    "slug": "nilai-kini",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "present": "100272",
+        "future": "123700",
+        "difference": "23428"
+      },
+      "precision": {}
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "years": [
+          "Maksimal 100 tahun; nol tahun diperbolehkan."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-npv",
+    "slug": "npv",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "npv": "-3005",
+        "initial": "-123700",
+        "nominal": "10700"
+      },
+      "precision": {},
+      "breakdown": [
+        {
+          "period": 0,
+          "flow": "-1237",
+          "present": "-123700"
+        },
+        {
+          "period": 1,
+          "flow": "611",
+          "present": "56970"
+        },
+        {
+          "period": 2,
+          "flow": "733",
+          "present": "63725"
+        }
+      ],
+      "status": "negative-npv"
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "cashflows": [
+          "Isi minimal arus kas tahun 0."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-inflasi",
+    "slug": "inflasi",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "future": "152602",
+        "purchasing": "100272",
+        "increase": "28902",
+        "loss": "23428"
+      },
+      "precision": {}
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "rate": [
+          "Masukkan persen tahunan dengan maksimal empat desimal."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-rata-rata-beli-saham",
+    "slug": "rata-rata-beli-saham",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "average": "1597",
+        "cost": "798500",
+        "gross": "797500",
+        "fees": "1000",
+        "shares": "500",
+        "lots": "5",
+        "perLot": "159700"
+      },
+      "precision": {}
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "purchases": [
+          "Isi minimal satu transaksi."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-untung-rugi-saham",
+    "slug": "untung-rugi-saham",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "profit": "-46200",
+        "roi": "-1160",
+        "acquisition": "398200",
+        "grossSale": "352500",
+        "sellingCosts": "500",
+        "netSale": "352000",
+        "shares": "300"
+      },
+      "precision": {}
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "lots": [
+          "Jumlah harus berupa bilangan bulat positif."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-bunga-efektif-pinjaman",
+    "slug": "bunga-efektif-pinjaman",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "effective": "100243",
+        "proceeds": "1237",
+        "total": "1361",
+        "difference": "124"
+      },
+      "dated": [
+        {
+          "date": "2026-01-01",
+          "days": 365,
+          "amount": "1361"
+        }
+      ],
+      "certificate": {
+        "annualFactor": "1.1002425222312045270816491511721907841552142279708973322555725942634612594295912",
+        "dailyDiscount": "0.9997383064935865304471989740309782909352482769817177225118192596297799554279767",
+        "residual": "1.302431973006993975886e-55",
+        "iterations": 195
+      },
+      "notes": [
+        "ACT/365 fixed. Residu PV internal \u2264Rp0,00000001; tingkat tampilan empat desimal dibulatkan dan tidak dipakai menguji residu. Ini yield arus kas peminjam, bukan APR/EIR wajib regulator."
+      ]
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "repayments.0.date": [
+          "Pembayaran harus setelah pencairan, maksimal 36.525 hari kemudian."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-kpr",
+    "slug": "kpr",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "principal": "1237",
+        "phaseOne": "182",
+        "phaseTwo": "184",
+        "switchBalance": "886",
+        "interest": "43",
+        "total": "1280",
+        "upfront": "317",
+        "outlay": "1597",
+        "last": "180",
+        "lastMonth": "7"
+      },
+      "schedules": [
+        {
+          "title": "KPR dua fase",
+          "rows": [
+            {
+              "month": 1,
+              "payment": "182",
+              "principal": "175",
+              "interest": "7",
+              "balance": "1062",
+              "ordinary": "182",
+              "extra": "0",
+              "fee": "0"
+            },
+            {
+              "month": 2,
+              "payment": "182",
+              "principal": "176",
+              "interest": "6",
+              "balance": "886",
+              "ordinary": "182",
+              "extra": "0",
+              "fee": "0"
+            },
+            {
+              "month": 3,
+              "payment": "184",
+              "principal": "174",
+              "interest": "10",
+              "balance": "712",
+              "ordinary": "184",
+              "extra": "0",
+              "fee": "0"
+            },
+            {
+              "month": 4,
+              "payment": "184",
+              "principal": "176",
+              "interest": "8",
+              "balance": "536",
+              "ordinary": "184",
+              "extra": "0",
+              "fee": "0"
+            },
+            {
+              "month": 5,
+              "payment": "184",
+              "principal": "178",
+              "interest": "6",
+              "balance": "358",
+              "ordinary": "184",
+              "extra": "0",
+              "fee": "0"
+            },
+            {
+              "month": 6,
+              "payment": "184",
+              "principal": "180",
+              "interest": "4",
+              "balance": "178",
+              "ordinary": "184",
+              "extra": "0",
+              "fee": "0"
+            },
+            {
+              "month": 7,
+              "payment": "180",
+              "principal": "178",
+              "interest": "2",
+              "balance": "0",
+              "ordinary": "180",
+              "extra": "0",
+              "fee": "0"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Fase kedua adalah asumsi tingkat nominal tahunan tetap untuk sisa tenor, bukan ramalan floating rate bank. Biaya awal dibayar tunai. Acuan fase yang tidak ada bernilai Rp0."
+      ]
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "down": [
+          "DP tidak boleh melebihi harga rumah."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-pelunasan-dipercepat",
+    "slug": "pelunasan-dipercepat",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "standard": "182",
+        "baseInterest": "28",
+        "interest": "23",
+        "saved": "5",
+        "penalty": "7",
+        "net": "-2",
+        "extra": "211",
+        "total": "1267",
+        "baselineTotal": "1265",
+        "lastMonth": "6",
+        "monthsSaved": "1"
+      },
+      "schedules": [
+        {
+          "title": "Tanpa tambahan",
+          "rows": [
+            {
+              "month": 1,
+              "payment": "182",
+              "principal": "175",
+              "interest": "7",
+              "balance": "1062",
+              "ordinary": "182",
+              "extra": "0",
+              "fee": "0"
+            },
+            {
+              "month": 2,
+              "payment": "182",
+              "principal": "176",
+              "interest": "6",
+              "balance": "886",
+              "ordinary": "182",
+              "extra": "0",
+              "fee": "0"
+            },
+            {
+              "month": 3,
+              "payment": "182",
+              "principal": "177",
+              "interest": "5",
+              "balance": "709",
+              "ordinary": "182",
+              "extra": "0",
+              "fee": "0"
+            },
+            {
+              "month": 4,
+              "payment": "182",
+              "principal": "178",
+              "interest": "4",
+              "balance": "531",
+              "ordinary": "182",
+              "extra": "0",
+              "fee": "0"
+            },
+            {
+              "month": 5,
+              "payment": "182",
+              "principal": "179",
+              "interest": "3",
+              "balance": "352",
+              "ordinary": "182",
+              "extra": "0",
+              "fee": "0"
+            },
+            {
+              "month": 6,
+              "payment": "182",
+              "principal": "180",
+              "interest": "2",
+              "balance": "172",
+              "ordinary": "182",
+              "extra": "0",
+              "fee": "0"
+            },
+            {
+              "month": 7,
+              "payment": "173",
+              "principal": "172",
+              "interest": "1",
+              "balance": "0",
+              "ordinary": "173",
+              "extra": "0",
+              "fee": "0"
+            }
+          ]
+        },
+        {
+          "title": "Dengan tambahan dan penalti",
+          "rows": [
+            {
+              "month": 1,
+              "ordinary": "182",
+              "extra": "0",
+              "fee": "0",
+              "payment": "182",
+              "principal": "175",
+              "interest": "7",
+              "balance": "1062"
+            },
+            {
+              "month": 2,
+              "ordinary": "182",
+              "extra": "211",
+              "fee": "7",
+              "payment": "400",
+              "principal": "387",
+              "interest": "6",
+              "balance": "675"
+            },
+            {
+              "month": 3,
+              "ordinary": "182",
+              "extra": "0",
+              "fee": "0",
+              "payment": "182",
+              "principal": "178",
+              "interest": "4",
+              "balance": "497"
+            },
+            {
+              "month": 4,
+              "ordinary": "182",
+              "extra": "0",
+              "fee": "0",
+              "payment": "182",
+              "principal": "179",
+              "interest": "3",
+              "balance": "318"
+            },
+            {
+              "month": 5,
+              "ordinary": "182",
+              "extra": "0",
+              "fee": "0",
+              "payment": "182",
+              "principal": "180",
+              "interest": "2",
+              "balance": "138"
+            },
+            {
+              "month": 6,
+              "ordinary": "139",
+              "extra": "0",
+              "fee": "0",
+              "payment": "139",
+              "principal": "138",
+              "interest": "1",
+              "balance": "0"
+            },
+            {
+              "month": 7,
+              "ordinary": "0",
+              "extra": "0",
+              "fee": "0",
+              "payment": "0",
+              "principal": "0",
+              "interest": "0",
+              "balance": "0"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Acuan cicilan dipertahankan. Tambahan sekali sesudah cicilan biasa di bulan pilihan, dibatasi sisa pokok. Penalti nominal dibayar sekali dan tidak mengurangi pokok. Hemat neto dapat negatif."
+      ]
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "eventMonth": [
+          "Bulan tambahan tidak boleh melewati tenor."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-refinancing",
+    "slug": "refinancing",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "oldStandard": "185",
+        "newStandard": "182",
+        "oldInterest": "56",
+        "newInterest": "28",
+        "cost": "11",
+        "oldTotal": "1293",
+        "newTotal": "1276",
+        "net": "17",
+        "horizon": "7"
+      },
+      "comparison": [
+        {
+          "month": 0,
+          "old": "0",
+          "next": "11",
+          "cumulative": "-11"
+        },
+        {
+          "month": 1,
+          "old": "185",
+          "next": "182",
+          "cumulative": "-8"
+        },
+        {
+          "month": 2,
+          "old": "185",
+          "next": "182",
+          "cumulative": "-5"
+        },
+        {
+          "month": 3,
+          "old": "185",
+          "next": "182",
+          "cumulative": "-2"
+        },
+        {
+          "month": 4,
+          "old": "185",
+          "next": "182",
+          "cumulative": "1"
+        },
+        {
+          "month": 5,
+          "old": "185",
+          "next": "182",
+          "cumulative": "4"
+        },
+        {
+          "month": 6,
+          "old": "185",
+          "next": "182",
+          "cumulative": "7"
+        },
+        {
+          "month": 7,
+          "old": "183",
+          "next": "173",
+          "cumulative": "17"
+        }
+      ],
+      "firstCrossing": 4,
+      "permanentCrossing": 4,
+      "schedules": [
+        {
+          "title": "Pinjaman lama",
+          "rows": [
+            {
+              "month": 1,
+              "payment": "185",
+              "principal": "171",
+              "interest": "14",
+              "balance": "1066",
+              "ordinary": "185",
+              "extra": "0",
+              "fee": "0"
+            },
+            {
+              "month": 2,
+              "payment": "185",
+              "principal": "173",
+              "interest": "12",
+              "balance": "893",
+              "ordinary": "185",
+              "extra": "0",
+              "fee": "0"
+            },
+            {
+              "month": 3,
+              "payment": "185",
+              "principal": "175",
+              "interest": "10",
+              "balance": "718",
+              "ordinary": "185",
+              "extra": "0",
+              "fee": "0"
+            },
+            {
+              "month": 4,
+              "payment": "185",
+              "principal": "177",
+              "interest": "8",
+              "balance": "541",
+              "ordinary": "185",
+              "extra": "0",
+              "fee": "0"
+            },
+            {
+              "month": 5,
+              "payment": "185",
+              "principal": "179",
+              "interest": "6",
+              "balance": "362",
+              "ordinary": "185",
+              "extra": "0",
+              "fee": "0"
+            },
+            {
+              "month": 6,
+              "payment": "185",
+              "principal": "181",
+              "interest": "4",
+              "balance": "181",
+              "ordinary": "185",
+              "extra": "0",
+              "fee": "0"
+            },
+            {
+              "month": 7,
+              "payment": "183",
+              "principal": "181",
+              "interest": "2",
+              "balance": "0",
+              "ordinary": "183",
+              "extra": "0",
+              "fee": "0"
+            }
+          ]
+        },
+        {
+          "title": "Pinjaman baru",
+          "rows": [
+            {
+              "month": 1,
+              "payment": "182",
+              "principal": "175",
+              "interest": "7",
+              "balance": "1062",
+              "ordinary": "182",
+              "extra": "0",
+              "fee": "0"
+            },
+            {
+              "month": 2,
+              "payment": "182",
+              "principal": "176",
+              "interest": "6",
+              "balance": "886",
+              "ordinary": "182",
+              "extra": "0",
+              "fee": "0"
+            },
+            {
+              "month": 3,
+              "payment": "182",
+              "principal": "177",
+              "interest": "5",
+              "balance": "709",
+              "ordinary": "182",
+              "extra": "0",
+              "fee": "0"
+            },
+            {
+              "month": 4,
+              "payment": "182",
+              "principal": "178",
+              "interest": "4",
+              "balance": "531",
+              "ordinary": "182",
+              "extra": "0",
+              "fee": "0"
+            },
+            {
+              "month": 5,
+              "payment": "182",
+              "principal": "179",
+              "interest": "3",
+              "balance": "352",
+              "ordinary": "182",
+              "extra": "0",
+              "fee": "0"
+            },
+            {
+              "month": 6,
+              "payment": "182",
+              "principal": "180",
+              "interest": "2",
+              "balance": "172",
+              "ordinary": "182",
+              "extra": "0",
+              "fee": "0"
+            },
+            {
+              "month": 7,
+              "payment": "173",
+              "principal": "172",
+              "interest": "1",
+              "balance": "0",
+              "ordinary": "173",
+              "extra": "0",
+              "fee": "0"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Biaya pindah dibayar tunai di bulan 0. Impas memakai kumulatif kas tanpa diskonto sampai kedua pinjaman selesai, dengan pembayaran nol setelah lunas. Crossing sementara dapat hilang; angsuran lebih kecil tidak selalu menghemat biaya seumur pinjaman."
+      ]
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "newMonths": [
+          "Tenor harus 1\u2013600 bulan."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-kurs-mata-uang",
+    "slug": "kurs-mata-uang",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "gross": "208437",
+        "fee": "317",
+        "net": "208120"
+      },
+      "unit": "IDR",
+      "notes": [
+        "Kurs manual 1 USD = X IDR. Biaya dalam mata uang keluaran. Gross dibulatkan ke rupiah utuh, lalu biaya dikurangi agar rincian cocok.  Tidak ada kurs langsung atau jaminan nilai transaksi bank."
+      ]
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "rate": [
+          "Kurs harus lebih dari nol."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-engagement-rate",
+    "slug": "engagement-rate",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "rate": "1956",
+        "interactions": "62",
+        "denominator": "317"
+      },
+      "basis": "reach",
+      "overBasis": false
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "denominator": [
+          "Pembagi harus lebih dari nol agar hasil terdefinisi."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-pertumbuhan-pengikut",
+    "slug": "pertumbuhan-pengikut",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "rate": "-3344",
+        "change": "-106",
+        "start": "317",
+        "end": "211"
+      }
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "start": [
+          "Masukkan bilangan bulat nonnegatif hingga 13 digit, tanpa pemisah ribuan."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-cpm",
+    "slug": "cpm",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "cost": "37293",
+        "spend": "1237",
+        "events": "3317"
+      }
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "impressions": [
+          "Pembagi harus lebih dari nol agar hasil terdefinisi."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-cpc",
+    "slug": "cpc",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "cost": "390",
+        "spend": "1237",
+        "events": "317"
+      }
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "clicks": [
+          "Pembagi harus lebih dari nol agar hasil terdefinisi."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-cpa",
+    "slug": "cpa",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "cost": "7276",
+        "spend": "1237",
+        "events": "17"
+      },
+      "action": "lead"
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "acquisitions": [
+          "Pembagi harus lebih dari nol agar hasil terdefinisi."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-ctr",
+    "slug": "ctr",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "rate": "536",
+        "clicks": "17",
+        "impressions": "317"
+      },
+      "precision": {},
+      "notes": [
+        "Klik dan impresi adalah event, bukan orang unik. CTR tidak menunjukkan profit atau konversi."
+      ]
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "impressions": [
+          "Impresi harus lebih dari nol."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-estimasi-youtube",
+    "slug": "estimasi-youtube",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "income": "45526",
+        "views": "3317",
+        "rpm": "13725"
+      },
+      "precision": {},
+      "notes": [
+        "Simulasi total tayangan video non-Shorts \u00d7 RPM kreator asumsi per 1.000 total tayangan. Jangan memakai hanya monetized playbacks. Tanpa tarif, share revenue tambahan, kelayakan atau payout resmi."
+      ]
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "views": [
+          "Masukkan hitungan utuh nonnegatif hingga 13 digit."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-estimasi-tiktok-kreator",
+    "slug": "tiktok",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "platform": "45526",
+        "total": "47776",
+        "sponsor": "1725",
+        "affiliate": "375",
+        "gift": "150"
+      },
+      "precision": {},
+      "notes": [
+        "Platform selalu model RPM hipotetis; sumber lain adalah asumsi neto Anda. Total gabungan bukan payout terverifikasi.",
+        "Gunakan satu periode pelaporan. Semua komponen neto setelah fee langsung masing-masing sumber, sebelum pajak pribadi dan biaya produksi umum. Sumber sponsor/affiliate/gift tidak boleh sudah tercakup dalam RPM. Jika views tidak dibayar, isi RPM 0; tidak ada penentuan kelayakan akun atau wilayah."
+      ]
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "mode": [
+          "Pilih modul kreator yang tersedia."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-tarif-endorsement",
+    "slug": "tarif-endorsement",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "effective": "1751",
+        "quote": "734",
+        "productionQuote": "701",
+        "base": "57825",
+        "labor": "11625",
+        "rights": "33",
+        "profit": "12275"
+      },
+      "precision": {},
+      "notes": [
+        "Penawaran seluruh paket: komponen produksi minimum dibulatkan ke atas ke rupiah, lalu hak pakai terpisah ditambahkan tanpa margin. Margin efektif hanya atas komponen produksi dan tidak terdefinisi jika komponen itu nol. Model biaya internal, bukan harga pasar, tarif per follower, atau laba setelah pajak."
+      ]
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "margin": [
+          "Margin harus 0 hingga kurang dari 100%."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-waktu-tonton",
+    "slug": "waktu-tonton",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "hours": "1453",
+        "minutes": "87175"
+      },
+      "precision": {},
+      "notes": [
+        "Menit dan jam dibulatkan sendiri dari ledger waktu yang sama. Gunakan views dan durasi rata-rata pada periode/populasi yang sama. Ini estimasi waktu tonton, bukan jam publik YPP atau waktu yang memenuhi rewards. Durasi replay tidak dipotong otomatis."
+      ]
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "minutes": [
+          "Maksimal 6 digit bulat dan 4 desimal nonnegatif."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-diskon",
+    "slug": "diskon",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "final": "1004",
+        "saved": "233",
+        "original": "1237",
+        "modelPercent": "1884",
+        "cashPercent": "1884"
+      },
+      "precision": {},
+      "stages": [
+        {
+          "rate": "125000",
+          "factor": "875000",
+          "model": "108238"
+        },
+        {
+          "rate": "72500",
+          "factor": "811563",
+          "model": "100390"
+        }
+      ],
+      "notes": [
+        "Harga cash dibulatkan sekali ke rupiah setelah semua faktor diskon. Penghematan kas = harga awal \u2212 cash. Potongan model dari faktor dapat berbeda dari potongan kas setelah pembulatan; harga awal nol membuat potongan kas tidak terdefinisi. Rincian tahap hanya tampilan, tidak dipakai menghitung tahap berikutnya."
+      ]
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "discounts": [
+          "Isi satu tahap diskon."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-harga-per-satuan",
+    "slug": "harga-per-satuan",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "minimum": "42200",
+        "maximum": "54800",
+        "saving": "2299"
+      },
+      "precision": {},
+      "packages": [
+        {
+          "price": "137",
+          "quantity": "250000",
+          "unit": "g",
+          "unitPrice": "54800",
+          "saving": "0",
+          "cheapest": false
+        },
+        {
+          "price": "211",
+          "quantity": "500",
+          "unit": "kg",
+          "unitPrice": "42200",
+          "saving": "2299",
+          "cheapest": true
+        }
+      ],
+      "winners": [
+        1
+      ],
+      "roundedTie": false,
+      "comparisonUnit": "kg",
+      "notes": [
+        "Harga setara per kg. Semua pemenang biaya satuan eksak ditampilkan; bukan penilaian kualitas atau kebutuhan.",
+        "Penghematan relatif memakai harga satuan tertinggi sebagai basis. Jika semua harga nol, persentasenya tidak terdefinisi."
+      ]
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "packages": [
+          "Minimal dua kemasan."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-bagi-tagihan",
+    "slug": "bagi-tagihan",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "grand": "683",
+        "subtotal": "665",
+        "shared": "18",
+        "service": "7",
+        "tax": "11",
+        "allocated": "683",
+        "difference": "0"
+      },
+      "precision": {},
+      "people": [
+        {
+          "subtotal": "137",
+          "extra": "4",
+          "total": "141"
+        },
+        {
+          "subtotal": "211",
+          "extra": "6",
+          "total": "217"
+        },
+        {
+          "subtotal": "317",
+          "extra": "8",
+          "total": "325"
+        }
+      ],
+      "notes": [
+        "Mode proporsional hanya membagi biaya bersama. Setiap orang tetap membayar subtotal itemnya sendiri.",
+        "Satu baris adalah subtotal seluruh item orang tersebut, bukan daftar atau item berbagi. Service/pajak nominal digabung sekali. Sisa rupiah memakai largest remainder dengan tie urutan Orang 1, 2, dan seterusnya. Mengubah urutan saat seri dapat memindahkan alokasi sisa Rp1."
+      ]
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "people": [
+          "Minimal dua orang."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-persen",
+    "slug": "persen",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "result": "240188"
+      },
+      "precision": {},
+      "notes": [
+        "Mode X% dari N: hasil empat desimal dari pecahan eksak, tanpa batas 100% untuk persen umum. Tanda negatif mengikuti perkalian biasa."
+      ]
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "percent": [
+          "Masukkan angka bertanda, maksimal 9 digit bulat dan 4 desimal."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-perubahan-persen",
+    "slug": "perubahan-persen",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "percent": "-334385",
+        "change": "-106000000",
+        "previous": "317000000",
+        "current": "211000000"
+      },
+      "precision": {},
+      "notes": [
+        "Nilai awal/akhir nonnegatif, hingga enam desimal. Delta eksak; persentase empat desimal terhadap awal. Awal nol membuat persen tidak terdefinisi tetapi delta dan nilai akhir tetap tersedia."
+      ]
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "previous": [
+          "Masukkan angka nonnegatif, maksimal 13 digit bulat dan 6 desimal."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-selisih-tanggal",
+    "slug": "selisih-tanggal",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "days": "4",
+        "elapsed": "4",
+        "weeks": "0",
+        "remainder": "4"
+      },
+      "notes": [
+        "Awal tidak dihitung, akhir dihitung. Tanggal sama menghasilkan 0 hari.",
+        "Minggu penuh dan sisa menguraikan jumlah hari menurut mode. Kalender Gregorian proleptik; tanpa waktu, zona waktu atau DST."
+      ]
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "end": [
+          "Tanggal akhir tidak boleh sebelum tanggal awal."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-hari-kerja",
+    "slug": "hari-kerja",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "workdays": "4",
+        "total": "7",
+        "scheduled": "5",
+        "qualifying": "1",
+        "unique": "1",
+        "duplicates": "0",
+        "weekendHolidays": "0",
+        "outside": "0"
+      },
+      "holidays": [
+        {
+          "date": "2024-02-29",
+          "weekday": 3,
+          "status": "working"
+        }
+      ],
+      "notes": [
+        "Rentang inklusif. Pola mingguan mengikuti pilihan Anda, bukan ketentuan kerja resmi. Libur eksplisit dideduplikasi; hanya tanggal dalam rentang yang tadinya hari kerja mengurangi hasil.",
+        "Tanggal di luar rentang dan pada hari libur mingguan dihitung terpisah. Tidak ada data hari libur nasional atau cuti bersama otomatis."
+      ]
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "end": [
+          "Tanggal akhir tidak boleh sebelum tanggal awal."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-usia",
+    "slug": "usia",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "years": "24",
+        "months": "0",
+        "days": "1",
+        "totalMonths": "288",
+        "totalDays": "8767"
+      },
+      "anniversary": "2024-02-29",
+      "notes": [
+        "Anniversary bulan penuh terakhir: 2024-02-29. Hari setelah anniversary dihitung eksak.",
+        "Bulan penuh dihitung dari tanggal lahir asli dengan clamp akhir bulan. Lahir 29 Februari mencapai anniversary pada 28 Februari di tahun biasa. Ini konvensi kalender, bukan penetapan usia hukum."
+      ]
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "reference": [
+          "Tanggal acuan tidak boleh sebelum tanggal lahir."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-durasi-kerja",
+    "slug": "durasi-kerja",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "net": "413",
+        "decimalHours": "68833",
+        "gross": "450",
+        "break": "37"
+      },
+      "notes": [
+        "Akhir pada hari berikutnya dipilih eksplisit. Satu pergantian tanggal mengizinkan hingga 47 jam 59 menit.",
+        "Jam dinding dan jeda menit, bukan durasi realtime pada transisi DST. Tidak menghitung upah, lembur atau hak ketenagakerjaan. Jam desimal dibulatkan sekali ke empat desimal."
+      ]
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "break": [
+          "Jeda tidak boleh melebihi durasi kotor shift."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-konsumsi-bbm",
+    "slug": "konsumsi-bbm",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "liters": "99818",
+        "cost": "12348",
+        "distance": "137250000",
+        "efficiency": "13750000",
+        "price": "1237"
+      },
+      "tiny": {},
+      "notes": [
+        "Jarak total dan efisiensi km/L adalah asumsi Anda. Estimasi liter empat desimal dan biaya rupiah utuh dibulatkan setengah ke atas langsung dari pecahan eksak; biaya tidak dihitung dari liter tampilan.",
+        "Harga Rp/L diisi manual, bukan tarif terkini. Kondisi kendaraan, beban, lalu lintas, pembelian pompa dan tol dapat membuat biaya aktual berbeda. Tidak ada integrasi peta atau penggandaan pulang-pergi."
+      ]
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "efficiency": [
+          "Efisiensi km/L harus lebih dari nol."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-biaya-listrik",
+    "slug": "biaya-listrik",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "energy": "525428",
+        "cost": "72259"
+      },
+      "tiny": {},
+      "exact": {
+        "energy": {
+          "n": "210171",
+          "d": "4000"
+        },
+        "cost": {
+          "n": "1156150671",
+          "d": "16000"
+        }
+      },
+      "notes": [
+        "Daya W adalah per perangkat; jam adalah jam pemakaian per hari. Energi dan biaya dihitung dari pecahan asli, bukan kWh tampilan.",
+        "Tarif Rp/kWh diisi manual. Daya nominal/rata-rata, duty cycle dan meter aktual dapat berbeda. Tidak menambahkan pajak, admin, minimum tagihan, konversi VA atau efisiensi otomatis."
+      ]
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "hours": [
+          "Jam per hari harus 0\u201324."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-biaya-air",
+    "slug": "biaya-air",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "bill": "23271",
+        "usage": "13750000",
+        "variable": "229538750000000",
+        "fixed": "317",
+        "totalExact": "232708750000000"
+      },
+      "tiny": {},
+      "exact": {
+        "bill": {
+          "n": "186167",
+          "d": "8"
+        }
+      },
+      "tiers": [
+        {
+          "lower": "0",
+          "upper": "7000000",
+          "rate": "12372500",
+          "volume": "7000000",
+          "cost": "86607500000000"
+        },
+        {
+          "lower": "7000000",
+          "upper": null,
+          "rate": "21175000",
+          "volume": "6750000",
+          "cost": "142931250000000"
+        }
+      ],
+      "notes": [
+        "Volume dialokasikan progresif: hanya konsumsi dalam tiap blok yang memakai tarifnya. Biaya tetap ditambahkan sekali, lalu total dibulatkan ke rupiah.",
+        "Volume, tarif dan biaya blok ditampilkan eksak hingga enam, empat dan sepuluh desimal. Jumlah biaya blok = biaya variabel sebelum pembulatan. Tidak ada tarif PDAM/PAM, pajak atau kebijakan wilayah otomatis."
+      ]
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "tiers": [
+          "Minimal dua blok tarif."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-kebutuhan-cat",
+    "slug": "kebutuhan-cat",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "theory": "318667",
+        "required": "342567",
+        "leftover": "7433",
+        "net": "119500000",
+        "packages": "14",
+        "purchased": "35000000"
+      },
+      "tiny": {},
+      "exact": {
+        "theory": {
+          "n": "478",
+          "d": "15"
+        },
+        "required": {
+          "n": "10277",
+          "d": "300"
+        },
+        "leftover": {
+          "n": "223",
+          "d": "300"
+        }
+      },
+      "notes": [
+        "Satu produk dengan daya sebar yang sama pada semua lapisan. Bukaan dikurangi lebih dulu, lalu lapisan dan cadangan diterapkan.",
+        "Jumlah kemasan adalah ceiling dari liter eksak sebelum pembulatan tampilan. Pembelian dikurangi kebutuhan bercadangan memberi sisa model. Daya sebar/ukuran kemasan adalah asumsi Anda; kondisi permukaan dan teknik pengecatan dapat berbeda."
+      ]
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "coverage": [
+          "Nilai harus lebih dari nol."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-kebutuhan-keramik",
+    "slug": "kebutuhan-keramik",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "tileArea": "713",
+        "purchaseArea": "149730",
+        "quota": "2073107",
+        "required": "208",
+        "boxes": "30",
+        "purchased": "210",
+        "surplus": "2"
+      },
+      "tiny": {},
+      "exact": {
+        "tileArea": {
+          "n": "713",
+          "d": "10000"
+        },
+        "purchaseArea": {
+          "n": "14973",
+          "d": "1000"
+        },
+        "quota": {
+          "n": "295625",
+          "d": "1426"
+        }
+      },
+      "notes": [
+        "Luas lantai m\u00b2 diisi langsung. Dimensi ubin dalam cm; luas ubin = panjang \u00d7 lebar \u00f7 10.000 m\u00b2. Ubin tidak harus persegi.",
+        "Bulatkan kebutuhan ubin ke atas dari rasio asli, kemudian bulatkan dus ke atas dari jumlah ubin utuh. Surplus dihitung terhadap kebutuhan ubin bercadangan. Cadangan bukan pengoptimal pola, arah, nat atau bentuk ruangan."
+      ]
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "perBox": [
+          "Nilai harus 1\u201310000."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-volume-beton",
+    "slug": "volume-beton",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "values": {
+        "base": "21328",
+        "reserve": "1600",
+        "total": "22928"
+      },
+      "tiny": {},
+      "exact": {
+        "base": {
+          "n": "273",
+          "d": "128"
+        },
+        "reserve": {
+          "n": "819",
+          "d": "5120"
+        },
+        "total": {
+          "n": "11739",
+          "d": "5120"
+        }
+      },
+      "elements": [
+        {
+          "shape": "prism",
+          "count": "3",
+          "volume": "21328",
+          "tiny": false,
+          "exact": {
+            "n": "273",
+            "d": "128"
+          }
+        }
+      ],
+      "notes": [
+        "Semua volume baris dijumlah dari pecahan asli, lalu cadangan diterapkan. Jumlah volume baris tampilan bisa berbeda dari total karena pembulatan empat desimal.",
+        "Estimasi volume bruto, tanpa desain campuran, konversi sak, kapasitas truk atau minimum pembelian. Pengukuran dan kondisi lokasi harus dinilai terpisah; hasil bukan penilaian kecukupan struktur."
+      ]
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "elements": [
+          "Minimal satu elemen."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-skala-denah",
+    "slug": "skala-denah",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "exact": {
+        "n": "39",
+        "d": "16"
+      },
+      "unit": "m",
+      "base": {
+        "n": "39",
+        "d": "16"
+      },
+      "baseUnit": "m",
+      "label": "Jarak sebenarnya",
+      "notes": [
+        "Skala 1:N adalah rasio panjang, bukan luas atau volume. Ukuran fisik cetakan/render harus mengikuti skala tersebut; tidak ada koreksi pembesaran atau proyeksi peta.",
+        "Pecahan eksak ditampilkan sebelum pembulatan. Hasil desimal terbatas tidak dijanjikan lossless jika disalin menjadi input konversi berikutnya."
+      ],
+      "digits": 6,
+      "converted": "2437500",
+      "baseValue": "2437500",
+      "scale": "75"
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "scale": [
+          "N harus 1\u20131000000000."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-konversi-panjang",
+    "slug": "konversi-panjang",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "exact": {
+        "n": "4953",
+        "d": "50"
+      },
+      "unit": "cm",
+      "base": {
+        "n": "4953",
+        "d": "5000"
+      },
+      "baseUnit": "m",
+      "label": "Panjang dalam satuan tujuan",
+      "notes": [
+        "Panjang fisik nonnegatif. Inch, foot, yard dan mile adalah international; tidak memakai survey foot atau nautical mile. Faktor konversi eksak tidak menambah ketelitian pengukuran.",
+        "Pecahan eksak ditampilkan sebelum pembulatan. Hasil desimal terbatas tidak dijanjikan lossless jika disalin menjadi input konversi berikutnya."
+      ],
+      "digits": 6,
+      "converted": "99060000",
+      "baseValue": "990600"
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "value": [
+          "Isi angka nonnegatif hingga 13 digit bulat dan 6 desimal, tanpa pemisah ribuan."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-konversi-berat",
+    "slug": "konversi-berat",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "exact": {
+        "n": "589670081",
+        "d": "400000000"
+      },
+      "unit": "kg",
+      "base": {
+        "n": "589670081",
+        "d": "400000000"
+      },
+      "baseUnit": "kg",
+      "label": "Massa dalam satuan tujuan",
+      "notes": [
+        "Berat sehari-hari di sini berarti massa, bukan gaya gravitasi/newton. Ton adalah ton metrik; oz/lb adalah avoirdupois, bukan troy atau fluid ounce. Tidak memakai massa jenis atau volume.",
+        "Pecahan eksak ditampilkan sebelum pembulatan. Hasil desimal terbatas tidak dijanjikan lossless jika disalin menjadi input konversi berikutnya."
+      ],
+      "digits": 9,
+      "converted": "1474175203",
+      "baseValue": "1474175203"
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "value": [
+          "Isi angka nonnegatif hingga 13 digit bulat dan 6 desimal, tanpa pemisah ribuan."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-konversi-suhu",
+    "slug": "konversi-suhu",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "exact": {
+        "n": "-40",
+        "d": "1"
+      },
+      "unit": "\u00b0F",
+      "base": {
+        "n": "4663",
+        "d": "20"
+      },
+      "baseUnit": "K",
+      "label": "Suhu absolut dalam skala tujuan",
+      "notes": [
+        "Input diperiksa terhadap nol mutlak sebelum pembulatan: C \u2265 \u2212273,15; F \u2265 \u2212459,67; K \u2265 0. Celsius/Fahrenheit negatif yang sah tetap diterima. Ini suhu absolut, bukan selisih suhu.",
+        "Transformasi memakai faktor dan offset rasional eksak. Enam desimal dibulatkan setengah menjauh dari nol; nilai negatif sangat kecil tetap mempertahankan arah.",
+        "Pecahan eksak ditampilkan sebelum pembulatan. Hasil desimal terbatas tidak dijanjikan lossless jika disalin menjadi input konversi berikutnya."
+      ],
+      "digits": 6,
+      "converted": "-40000000",
+      "baseValue": "233150000"
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "value": [
+          "Suhu C tidak boleh di bawah nol mutlak (\u2212273,15 \u00b0C)."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-kecepatan-rata-rata",
+    "slug": "kecepatan-rata-rata",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "exact": {
+        "n": "329400",
+        "d": "5489"
+      },
+      "unit": "km/h",
+      "base": {
+        "n": "91500",
+        "d": "5489"
+      },
+      "baseUnit": "m/s",
+      "label": "Kelajuan rata-rata",
+      "notes": [
+        "Kelajuan skalar = total jarak \u00f7 total durasi elapsed. Waktu berhenti termasuk dalam durasi yang dimasukkan. Jam boleh lebih dari 24; tidak ada Date, timestamp atau zona waktu.",
+        "Bukan kecepatan sesaat, vektor perpindahan, ETA, rute atau rekomendasi berkendara. mph memakai international mile.",
+        "Pecahan eksak ditampilkan sebelum pembulatan. Hasil desimal terbatas tidak dijanjikan lossless jika disalin menjadi input konversi berikutnya."
+      ],
+      "digits": 6,
+      "converted": "60010931",
+      "baseValue": "16669703",
+      "elapsed": "8233500000"
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "seconds": [
+          "Durasi total harus lebih dari nol. Isi jam, menit atau detik positif."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-blibli",
+    "slug": "blibli",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "primary": {
+        "label": "Dana bersih pesanan (cash simulasi)",
+        "value": {
+          "n": "3187",
+          "d": "1"
+        },
+        "kind": "cash"
+      },
+      "details": [
+        {
+          "label": "Hasil setelah HPP (cash, bukan laba bersih)",
+          "value": {
+            "n": "1348",
+            "d": "1"
+          },
+          "kind": "cash"
+        },
+        {
+          "label": "Bruto harga \u00d7 jumlah",
+          "value": {
+            "n": "3711",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Diskon seller per pesanan",
+          "value": {
+            "n": "211",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Penjualan setelah diskon",
+          "value": {
+            "n": "3500",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Basis komisi: setelah diskon",
+          "value": {
+            "n": "3500",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Komisi eksak",
+          "value": {
+            "n": "1015",
+            "d": "4"
+          }
+        },
+        {
+          "label": "Biaya tetap pesanan",
+          "value": {
+            "n": "17",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Biaya lain pesanan",
+          "value": {
+            "n": "11",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Ongkir seller pesanan",
+          "value": {
+            "n": "31",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Total biaya eksak",
+          "value": {
+            "n": "1251",
+            "d": "4"
+          }
+        },
+        {
+          "label": "Payout sebelum pembulatan",
+          "value": {
+            "n": "12749",
+            "d": "4"
+          }
+        },
+        {
+          "label": "Penyesuaian pembulatan payout",
+          "value": {
+            "n": "-1",
+            "d": "4"
+          }
+        },
+        {
+          "label": "HPP seluruh unit",
+          "value": {
+            "n": "1839",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Hasil setelah HPP sebelum pembulatan",
+          "value": {
+            "n": "5393",
+            "d": "4"
+          }
+        }
+      ],
+      "notes": [
+        "Simulasi komisi berdasarkan input kontrak Anda; bukan kalkulator tarif resmi Blibli.",
+        "Skenario manual, bukan tarif atau invoice resmi marketplace. Biaya persen tetap pecahan eksak. Payout/kontribusi dibulatkan sekali ke rupiah, setengah menjauhi nol. Hasil setelah HPP cash berasal dari payout cash dikurangi HPP integer. Sewa, gaji, pajak dan overhead lain belum tercakup."
+      ]
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "quantity": [
+          "Jumlah harus integer 1\u201310000."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-harga-jual-marketplace",
+    "slug": "harga-jual-marketplace",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "primary": {
+        "label": "Harga listing minimum (rupiah utuh)",
+        "value": {
+          "n": "1563",
+          "d": "1"
+        },
+        "kind": "cash"
+      },
+      "details": [
+        {
+          "label": "Target payout sebelum pembulatan",
+          "value": {
+            "n": "1237",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Harga teoretis eksak",
+          "value": {
+            "n": "4057600",
+            "d": "2597"
+          }
+        },
+        {
+          "label": "Diskon dari listing",
+          "value": {
+            "n": "1563",
+            "d": "8"
+          }
+        },
+        {
+          "label": "Penjualan setelah diskon",
+          "value": {
+            "n": "10941",
+            "d": "8"
+          }
+        },
+        {
+          "label": "Fee persen dari penjualan setelah diskon",
+          "value": {
+            "n": "317289",
+            "d": "3200"
+          }
+        },
+        {
+          "label": "Biaya tetap pesanan",
+          "value": {
+            "n": "31",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Payout kandidat sebelum pembulatan (memenuhi target)",
+          "value": {
+            "n": "3959911",
+            "d": "3200"
+          }
+        },
+        {
+          "label": "Payout kandidat cash (informasi)",
+          "value": {
+            "n": "1237",
+            "d": "1"
+          },
+          "kind": "cash"
+        },
+        {
+          "label": "Payout harga satu rupiah lebih rendah (tidak memenuhi)",
+          "value": {
+            "n": "1978657",
+            "d": "1600"
+          }
+        }
+      ],
+      "notes": [
+        "Target dijamin terhadap payout SEBELUM pembulatan, bukan payout cash. Harga minimum dapat lebih tinggi daripada minimum berdasarkan cash yang dibulatkan. Harga nol sah jika target dan biaya tetap nol. Diskon dan fee masing-masing wajib kurang dari 100%.",
+        "Skenario manual, bukan tarif atau invoice resmi marketplace. Biaya persen tetap pecahan eksak. Payout/kontribusi dibulatkan sekali ke rupiah, setengah menjauhi nol. Hasil setelah HPP cash berasal dari payout cash dikurangi HPP integer. Sewa, gaji, pajak dan overhead lain belum tercakup."
+      ]
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "feeRate": [
+          "Persen harus 0 sampai kurang dari 100."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-banding-biaya-marketplace",
+    "slug": "banding-biaya-marketplace",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "primary": {
+        "label": "Hasil setelah HPP terbaik (cash simulasi)",
+        "value": {
+          "n": "1379",
+          "d": "1"
+        },
+        "kind": "cash"
+      },
+      "details": [
+        {
+          "label": "Bruto bersama",
+          "value": {
+            "n": "3711",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Diskon seller bersama per pesanan",
+          "value": {
+            "n": "211",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Penjualan setelah diskon bersama",
+          "value": {
+            "n": "3500",
+            "d": "1"
+          }
+        },
+        {
+          "label": "HPP bersama seluruh unit",
+          "value": {
+            "n": "1839",
+            "d": "1"
+          }
+        }
+      ],
+      "channels": [
+        {
+          "id": 0,
+          "label": "A",
+          "basis": "net",
+          "commission": {
+            "n": "1015",
+            "d": "4"
+          },
+          "fees": {
+            "n": "1127",
+            "d": "4"
+          },
+          "payout": {
+            "n": "12873",
+            "d": "4"
+          },
+          "profit": {
+            "n": "5517",
+            "d": "4"
+          },
+          "payoutCash": "3218",
+          "profitCash": "1379",
+          "best": true
+        },
+        {
+          "id": 1,
+          "label": "B",
+          "basis": "gross",
+          "commission": {
+            "n": "40821",
+            "d": "100"
+          },
+          "fees": {
+            "n": "41521",
+            "d": "100"
+          },
+          "payout": {
+            "n": "308479",
+            "d": "100"
+          },
+          "profit": {
+            "n": "124579",
+            "d": "100"
+          },
+          "payoutCash": "3085",
+          "profitCash": "1246",
+          "best": false
+        }
+      ],
+      "notes": [
+        "Terbaik menurut hasil setelah HPP SEBELUM pembulatan; semua seri ditandai. Urutan tabel tetap urutan input. HPP sama membuat ranking payout setara. Cash sama belum tentu seri. Biaya lain mencakup ongkir jika diperlukan; nama kanal wajib unik.",
+        "Skenario manual, bukan tarif atau invoice resmi marketplace. Biaya persen tetap pecahan eksak. Payout/kontribusi dibulatkan sekali ke rupiah, setengah menjauhi nol. Hasil setelah HPP cash berasal dari payout cash dikurangi HPP integer. Sewa, gaji, pajak dan overhead lain belum tercakup."
+      ]
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "channels": [
+          "Too small: expected array to have >=2 items"
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-bundel-produk",
+    "slug": "bundel-produk",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "primary": {
+        "label": "Kontribusi bundel (cash simulasi)",
+        "value": {
+          "n": "102",
+          "d": "1"
+        },
+        "kind": "cash"
+      },
+      "details": [
+        {
+          "label": "Harga paket satu pesanan",
+          "value": {
+            "n": "1237",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Diskon seller per pesanan",
+          "value": {
+            "n": "211",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Penjualan setelah diskon",
+          "value": {
+            "n": "1026",
+            "d": "1"
+          }
+        },
+        {
+          "label": "HPP seluruh isi paket",
+          "value": {
+            "n": "833",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Fee persen eksak",
+          "value": {
+            "n": "14877",
+            "d": "200"
+          }
+        },
+        {
+          "label": "Kemasan/fulfillment tetap pesanan",
+          "value": {
+            "n": "17",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Total biaya transaksi eksak",
+          "value": {
+            "n": "18277",
+            "d": "200"
+          }
+        },
+        {
+          "label": "Kontribusi sebelum pembulatan",
+          "value": {
+            "n": "20323",
+            "d": "200"
+          }
+        },
+        {
+          "label": "Penyesuaian pembulatan kontribusi",
+          "value": {
+            "n": "77",
+            "d": "200"
+          }
+        },
+        {
+          "label": "Margin kontribusi terhadap penjualan setelah diskon",
+          "value": {
+            "n": "20323",
+            "d": "2052"
+          },
+          "kind": "percent"
+        }
+      ],
+      "items": [
+        {
+          "label": "A",
+          "cost": "137",
+          "quantity": "3",
+          "id": 0,
+          "total": "411"
+        },
+        {
+          "label": "B",
+          "cost": "211",
+          "quantity": "2",
+          "id": 1,
+          "total": "422"
+        }
+      ],
+      "notes": [
+        "Kontribusi skenario setelah HPP dan biaya yang dimasukkan, bukan laba bersih. Jika HPP mengandung biaya tetap, ini bukan klasifikasi variable-cost murni. Diskon dikurangi sekali. Label produk duplikat sah; setiap baris tetap dihitung.",
+        "Skenario manual, bukan tarif atau invoice resmi marketplace. Biaya persen tetap pecahan eksak. Payout/kontribusi dibulatkan sekali ke rupiah, setengah menjauhi nol. Hasil setelah HPP cash berasal dari payout cash dikurangi HPP integer. Sewa, gaji, pajak dan overhead lain belum tercakup."
+      ]
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "items": [
+          "Too small: expected array to have >=1 items"
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-stok-cover",
+    "slug": "stok-cover",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "primary": {
+        "label": "Cakupan stok pada laju konstan",
+        "value": {
+          "n": "548",
+          "d": "13"
+        },
+        "kind": "days"
+      },
+      "details": [
+        {
+          "label": "Stok siap jual",
+          "value": {
+            "n": "137",
+            "d": "1"
+          },
+          "kind": "integer"
+        },
+        {
+          "label": "Hari penuh yang tercakup (floor)",
+          "value": {
+            "n": "42",
+            "d": "1"
+          },
+          "kind": "integer"
+        }
+      ],
+      "notes": [
+        "Cakupan = stok siap jual \u00f7 rata-rata unit terjual per hari. Hari penuh memakai floor dari pecahan asli, bukan ceiling atau hasil desimal. Rata-rata adalah asumsi pengguna; bukan forecast time-series, tanggal restock atau jaminan kehabisan."
+      ]
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "daily": [
+          "Isi angka nonnegatif hingga 13 digit bulat dan 6 desimal, tanpa pemisah ribuan."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-ppn",
+    "slug": "ppn",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "status": "estimated",
+      "title": "Estimasi PPN sesuai skenario (cash)",
+      "amount": "136",
+      "details": [
+        {
+          "label": "Harga komersial sebelum PPN eksak",
+          "value": {
+            "n": "1237",
+            "d": "1"
+          }
+        },
+        {
+          "label": "DPP untuk menghitung PPN eksak",
+          "value": {
+            "n": "13607",
+            "d": "12"
+          }
+        },
+        {
+          "label": "Tarif nominal (%)",
+          "value": {
+            "n": "12",
+            "d": "1"
+          },
+          "kind": "percent"
+        },
+        {
+          "label": "Faktor efektif terhadap harga (%)",
+          "value": {
+            "n": "11",
+            "d": "1"
+          },
+          "kind": "percent"
+        },
+        {
+          "label": "PPN eksak",
+          "value": {
+            "n": "13607",
+            "d": "100"
+          }
+        },
+        {
+          "label": "Penyesuaian pembulatan PPN",
+          "value": {
+            "n": "-7",
+            "d": "100"
+          }
+        },
+        {
+          "label": "Harga komersial cash rekonsiliasi",
+          "value": {
+            "n": "1237",
+            "d": "1"
+          },
+          "kind": "cash"
+        },
+        {
+          "label": "Total termasuk PPN cash",
+          "value": {
+            "n": "1373",
+            "d": "1"
+          },
+          "kind": "cash"
+        }
+      ],
+      "notes": [
+        "Tarif nominal 12% atas DPP nilai lain 11/12 dari harga komersial; efektif 11%. DPP berbeda dari harga komersial.",
+        "Pecahan dipertahankan; angka cash dibulatkan setengah menjauhi nol sekali pada hasil pajak. Rincian eksak tidak dijumlah dari angka tampilan.",
+        "Estimasi terbatas berdasarkan fakta yang Anda konfirmasi, bukan penetapan DJP, faktur/SPT atau nasihat hukum. Pembulatan tampilan bukan jaminan aturan pembulatan invoice/setoran. Periksa dokumen dan ketentuan yang berlaku."
+      ],
+      "law": "PMK131/2024 Pasal2\u20135, efektif 2025-01-01; transisi ritel mewah sampai 2025-01-31",
+      "sources": [
+        "hpp",
+        "vat",
+        "special",
+        "amendment"
+      ]
+    },
+    "actualEdge": {
+      "success": true,
+      "status": "unsupported",
+      "title": "Perlakuan PPN tidak tercakup / belum terverifikasi",
+      "details": [],
+      "notes": [
+        "Estimasi terbatas berdasarkan fakta yang Anda konfirmasi, bukan penetapan DJP, faktur/SPT atau nasihat hukum. Pembulatan tampilan bukan jaminan aturan pembulatan invoice/setoran. Periksa dokumen dan ketentuan yang berlaku.",
+        "Tidak ada angka pajak karena cakupan atau kelayakan belum dapat dipastikan. Status ini bukan kesimpulan bebas pajak atau tidak berhak secara hukum."
+      ],
+      "law": "PMK131/2024 Pasal2\u20136; rezim khusus tidak diotomatisasi",
+      "sources": [
+        "hpp",
+        "vat",
+        "special",
+        "amendment"
+      ]
+    }
+  },
+  {
+    "id": "calc-pph-23",
+    "slug": "pph-23",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "status": "estimated",
+      "title": "Estimasi potongan PPh23 (cash)",
+      "amount": "25",
+      "details": [
+        {
+          "label": "Dasar bruto tidak termasuk PPN",
+          "value": {
+            "n": "1237",
+            "d": "1"
+          }
+        },
+        {
+          "label": "PPN nominal terpisah input",
+          "value": {
+            "n": "0",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Total invoice",
+          "value": {
+            "n": "1237",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Tarif skenario (%)",
+          "value": {
+            "n": "2",
+            "d": "1"
+          },
+          "kind": "percent"
+        },
+        {
+          "label": "PPh23 eksak",
+          "value": {
+            "n": "1237",
+            "d": "50"
+          }
+        },
+        {
+          "label": "Penyesuaian pembulatan",
+          "value": {
+            "n": "13",
+            "d": "50"
+          }
+        },
+        {
+          "label": "Dana dibayar kepada penerima (invoice \u2212 potongan cash)",
+          "value": {
+            "n": "1212",
+            "d": "1"
+          },
+          "kind": "cash"
+        }
+      ],
+      "notes": [
+        "Hanya badan dalam negeri, objek biasa dan pemotong yang berwenang terkonfirmasi. Bukan OP/NPPN, PPh21/26/final, bank, leasing opsi, fasilitas atau reimbursement khusus. NPWP tidak ditentukan dari format NIK. PPN nominal harus berasal dari invoice yang telah diklasifikasikan; tidak dihitung dari tarif tebakan.",
+        "Pecahan dipertahankan; angka cash dibulatkan setengah menjauhi nol sekali pada hasil pajak. Rincian eksak tidak dijumlah dari angka tampilan.",
+        "Estimasi terbatas berdasarkan fakta yang Anda konfirmasi, bukan penetapan DJP, faktur/SPT atau nasihat hukum. Pembulatan tampilan bukan jaminan aturan pembulatan invoice/setoran. Periksa dokumen dan ketentuan yang berlaku."
+      ],
+      "law": "UU36/2008 Pasal23(1),(1a),(4), efektif 2009-01-01; PMK141/2015 efektif 2015-08-26",
+      "sources": [
+        "pph23",
+        "services"
+      ]
+    },
+    "actualEdge": {
+      "success": true,
+      "status": "unverified",
+      "title": "Objek / identitas PPh23 belum terverifikasi",
+      "details": [],
+      "notes": [
+        "Estimasi terbatas berdasarkan fakta yang Anda konfirmasi, bukan penetapan DJP, faktur/SPT atau nasihat hukum. Pembulatan tampilan bukan jaminan aturan pembulatan invoice/setoran. Periksa dokumen dan ketentuan yang berlaku.",
+        "Tidak ada angka pajak karena cakupan atau kelayakan belum dapat dipastikan. Status ini bukan kesimpulan bebas pajak atau tidak berhak secara hukum."
+      ],
+      "law": "UU PPh Pasal23; cakupan badan DN, jasa biasa/royalti",
+      "sources": [
+        "pph23",
+        "services"
+      ]
+    }
+  },
+  {
+    "id": "calc-pph-4-ayat-2-sewa",
+    "slug": "pph-4-ayat-2-sewa",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "status": "estimated",
+      "title": "Estimasi PPh final sewa (cash)",
+      "amount": "72",
+      "details": [
+        {
+          "label": "Nilai sewa",
+          "value": {
+            "n": "137",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Layanan terkait",
+          "value": {
+            "n": "211",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Perawatan/pemeliharaan",
+          "value": {
+            "n": "317",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Keamanan/fasilitas lain terkait",
+          "value": {
+            "n": "53",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Jumlah bruto seluruh komponen",
+          "value": {
+            "n": "718",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Pajak eksak 10%",
+          "value": {
+            "n": "359",
+            "d": "5"
+          }
+        },
+        {
+          "label": "Penyesuaian pembulatan",
+          "value": {
+            "n": "1",
+            "d": "5"
+          }
+        },
+        {
+          "label": "Kas diterima sebelum setor sendiri",
+          "value": {
+            "n": "718",
+            "d": "1"
+          },
+          "kind": "cash"
+        },
+        {
+          "label": "Kas setelah alokasi PPh (model)",
+          "value": {
+            "n": "646",
+            "d": "1"
+          },
+          "kind": "cash"
+        }
+      ],
+      "notes": [
+        "Penyewa bukan pemotong: penerima memperoleh bruto dan wajib menyetor sendiri PPh sesuai Pasal3. Kas diterima tidak dikurangi seolah telah dipotong.",
+        "Cakupan tanpa komponen PPN. Jika ada PPN/kontrak belum dipisah, pilih belum jelas dan hasil ditahan. Biaya terkait masuk bruto walau kontrak terpisah. Tidak mencakup akomodasi, BGS, kontrak peralihan lama atau fasilitas khusus.",
+        "Pecahan dipertahankan; angka cash dibulatkan setengah menjauhi nol sekali pada hasil pajak. Rincian eksak tidak dijumlah dari angka tampilan.",
+        "Estimasi terbatas berdasarkan fakta yang Anda konfirmasi, bukan penetapan DJP, faktur/SPT atau nasihat hukum. Pembulatan tampilan bukan jaminan aturan pembulatan invoice/setoran. Periksa dokumen dan ketentuan yang berlaku."
+      ],
+      "law": "PP34/2017 Pasal2\u20134 dan7, efektif 2018-01-02",
+      "sources": [
+        "rent"
+      ]
+    },
+    "actualEdge": {
+      "success": true,
+      "status": "unsupported",
+      "title": "Sewa / dasar / peran tidak tercakup atau belum terverifikasi",
+      "details": [],
+      "notes": [
+        "Estimasi terbatas berdasarkan fakta yang Anda konfirmasi, bukan penetapan DJP, faktur/SPT atau nasihat hukum. Pembulatan tampilan bukan jaminan aturan pembulatan invoice/setoran. Periksa dokumen dan ketentuan yang berlaku.",
+        "Tidak ada angka pajak karena cakupan atau kelayakan belum dapat dipastikan. Status ini bukan kesimpulan bebas pajak atau tidak berhak secara hukum."
+      ],
+      "law": "PP34/2017 Pasal2\u20134; efektif 2018-01-02",
+      "sources": [
+        "rent"
+      ]
+    }
+  },
+  {
+    "id": "calc-gross-up-pajak",
+    "slug": "gross-up-pajak",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "status": "manual",
+      "title": "Bruto minimum simulasi manual",
+      "amount": "1537",
+      "details": [
+        {
+          "label": "Target neto",
+          "value": {
+            "n": "1237",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Bruto teoretis eksak",
+          "value": {
+            "n": "50720",
+            "d": "33"
+          }
+        },
+        {
+          "label": "Potongan persentase eksak",
+          "value": {
+            "n": "10759",
+            "d": "40"
+          }
+        },
+        {
+          "label": "Potongan tetap",
+          "value": {
+            "n": "31",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Neto kandidat sebelum pembulatan (memenuhi)",
+          "value": {
+            "n": "49481",
+            "d": "40"
+          }
+        },
+        {
+          "label": "Neto bruto satu rupiah lebih rendah (gagal)",
+          "value": {
+            "n": "6181",
+            "d": "5"
+          }
+        }
+      ],
+      "notes": [
+        "SIMULASI MANUAL tarif tunggal, bukan PPh21 progresif atau klasifikasi hukum. Jaminan minimum terhadap neto SEBELUM pembulatan, bukan neto cash; tarif100% ditolak. Tidak memasukkan tarif hukum otomatis.",
+        "Estimasi terbatas berdasarkan fakta yang Anda konfirmasi, bukan penetapan DJP, faktur/SPT atau nasihat hukum. Pembulatan tampilan bukan jaminan aturan pembulatan invoice/setoran. Periksa dokumen dan ketentuan yang berlaku."
+      ],
+      "law": "Aljabar gross-up manual versi1.0.0; tidak ada tarif legal otomatis",
+      "sources": []
+    },
+    "actualEdge": {
+      "success": false,
+      "errors": {
+        "rate": [
+          "Persen wajib kurang dari 100."
+        ]
+      }
+    }
+  },
+  {
+    "id": "calc-pph-final-umkm",
+    "slug": "pph-final-umkm",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "status": "estimated",
+      "title": "Estimasi PPh final masa 7/2026 (cash)",
+      "amount": "155000",
+      "details": [
+        {
+          "label": "Omzet kumulatif seluruh usaha WP s.d. masa",
+          "value": {
+            "n": "559000000",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Omzet gabungan pihak terkait (uji kelayakan saja)",
+          "value": {
+            "n": "777000000",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Bagian omzet tidak dikenai (OP saja)",
+          "value": {
+            "n": "500000000",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Omzet kena masa terpilih",
+          "value": {
+            "n": "31000000",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Pajak masa terpilih eksak",
+          "value": {
+            "n": "155000",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Penyesuaian pembulatan masa",
+          "value": {
+            "n": "0",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Total pajak eksak s.d. masa",
+          "value": {
+            "n": "295000",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Jumlah cash bulanan s.d. masa",
+          "value": {
+            "n": "295000",
+            "d": "1"
+          },
+          "kind": "cash"
+        }
+      ],
+      "notes": [
+        "Tabel wajib mencakup seluruh usaha/tempat kegiatan usaha yang memenuhi cakupan milik SATU WP, sebelum potongan dan sejak registrasi. Jumlahkan semua lokasi per bulan. PMK164/2023 Pasal6(3)\u2013(6): fasilitas500juta OP hanya sekali atas kumulatif WP itu. Omzet WP lain yang digabung menurut PP20/2026 Pasal58 hanya menguji kelayakan4,8miliar, bukan menghabiskan fasilitas atau menjadi dasar pajak WP ini. Hasil adalah total estimasi WP, bukan alokasi setoran per lokasi menurut Pasal7.",
+        "Kelayakan terbatas pada WP baru terdaftar mulai22April2026 dan fakta yang Anda konfirmasi: usaha dalam negeri yang dicakup, bukan pekerjaan bebas (termasuk influencer), final lain, nonobjek atau luar negeri; tidak memilih umum/fasilitas dan tidak pernah keluar rezim. Penggabungan58 termasuk pasangan/anak/perseroan dan seluruh sumber harus diperiksa.",
+        "Bagian500juta dihitung kumulatif tahunan sekali, bukan pengurang tiap bulan.",
+        "Tahun kalender, omzet sebelum potongan. Setiap pajak bulanan dibulatkan sekali; totalcash adalah jumlahcash perbulan, bukan round(totaleksak). Bulan sesudah masa wajib0 dan tidak dihitung. Data bulan registrasi harus hanya penghasilan sejak registrasi yang memenuhi cakupan.",
+        "Estimasi terbatas berdasarkan fakta yang Anda konfirmasi, bukan penetapan DJP, faktur/SPT atau nasihat hukum. Pembulatan tampilan bukan jaminan aturan pembulatan invoice/setoran. Periksa dokumen dan ketentuan yang berlaku."
+      ],
+      "law": "PP20/2026 efektif 2026-04-22 (Pasal56\u201358,II); PMK164/2023 Pasal6(1)\u2013(6), efektif 2023-12-29; PP55/2022 Pasal60\u201363",
+      "sources": [
+        "pp20",
+        "pp55",
+        "pmk164"
+      ],
+      "rows": [
+        {
+          "month": 1,
+          "turnover": "0",
+          "cumulative": "0",
+          "taxable": "0",
+          "tax": {
+            "n": "0",
+            "d": "1"
+          },
+          "taxCash": "0"
+        },
+        {
+          "month": 2,
+          "turnover": "0",
+          "cumulative": "0",
+          "taxable": "0",
+          "tax": {
+            "n": "0",
+            "d": "1"
+          },
+          "taxCash": "0"
+        },
+        {
+          "month": 3,
+          "turnover": "0",
+          "cumulative": "0",
+          "taxable": "0",
+          "tax": {
+            "n": "0",
+            "d": "1"
+          },
+          "taxCash": "0"
+        },
+        {
+          "month": 4,
+          "turnover": "0",
+          "cumulative": "0",
+          "taxable": "0",
+          "tax": {
+            "n": "0",
+            "d": "1"
+          },
+          "taxCash": "0"
+        },
+        {
+          "month": 5,
+          "turnover": "377000000",
+          "cumulative": "377000000",
+          "taxable": "0",
+          "tax": {
+            "n": "0",
+            "d": "1"
+          },
+          "taxCash": "0"
+        },
+        {
+          "month": 6,
+          "turnover": "151000000",
+          "cumulative": "528000000",
+          "taxable": "28000000",
+          "tax": {
+            "n": "140000",
+            "d": "1"
+          },
+          "taxCash": "140000"
+        },
+        {
+          "month": 7,
+          "turnover": "31000000",
+          "cumulative": "559000000",
+          "taxable": "31000000",
+          "tax": {
+            "n": "155000",
+            "d": "1"
+          },
+          "taxCash": "155000"
+        }
+      ],
+      "totals": {
+        "turnover": "559000000",
+        "taxable": "59000000",
+        "tax": {
+          "n": "295000",
+          "d": "1"
+        },
+        "taxCash": "295000"
+      }
+    },
+    "actualEdge": {
+      "success": true,
+      "status": "unverified",
+      "title": "Kelayakan WP lama / peralihan belum terverifikasi",
+      "details": [],
+      "notes": [
+        "Estimasi terbatas berdasarkan fakta yang Anda konfirmasi, bukan penetapan DJP, faktur/SPT atau nasihat hukum. Pembulatan tampilan bukan jaminan aturan pembulatan invoice/setoran. Periksa dokumen dan ketentuan yang berlaku.",
+        "Tidak ada angka pajak karena cakupan atau kelayakan belum dapat dipastikan. Status ini bukan kesimpulan bebas pajak atau tidak berhak secara hukum."
+      ],
+      "law": "PP20/2026 efektif 2026-04-22 (Pasal56\u201358,II); PMK164/2023 Pasal6(1)\u2013(6), efektif 2023-12-29; PP55/2022 Pasal60\u201363",
+      "sources": [
+        "pp20",
+        "pp55",
+        "pmk164"
+      ]
+    }
+  },
+  {
+    "id": "calc-pph-21-bulanan",
+    "slug": "pph-21-bulanan",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "status": "estimated",
+      "title": "Estimasi potongan TER masa reguler (cash)",
+      "amount": "157502",
+      "details": [
+        {
+          "label": "Bruto bulanan terklasifikasi",
+          "value": {
+            "n": "9000137",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Batas bawah bracket inklusif",
+          "value": {
+            "n": "8550001",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Batas atas bracket inklusif",
+          "value": {
+            "n": "9650000",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Tarif TER (%)",
+          "value": {
+            "n": "7",
+            "d": "4"
+          },
+          "kind": "percent"
+        },
+        {
+          "label": "Pajak eksak",
+          "value": {
+            "n": "63000959",
+            "d": "400"
+          }
+        },
+        {
+          "label": "Penyesuaian cash",
+          "value": {
+            "n": "-159",
+            "d": "400"
+          }
+        }
+      ],
+      "context": "Kategori TER A, status PTKP K/0. Bracket 8550001 sampai 9650000 rupiah, kedua batas inklusif. PP58/2023 Lampiran A; berlaku 2024-01-01.",
+      "sources": [
+        "ter",
+        "terAnnex",
+        "payroll",
+        "ptkp",
+        "hpp",
+        "dtp"
+      ],
+      "notes": [
+        "Bruto termasuk seluruh kompensasi masa yang telah diklasifikasikan, termasuk THR/bonus dan komponen tunai kena pajak. Tidak mengurangi PTKP atau biaya jabatan lagi dari bruto TER. Hanya pegawai tetap swasta DN, subjektif penuh tahun dan satu pemberi kerja. Status PTKP awal tahun (termasuk ketentuan karyawati) serta NPWP/NIK valid harus diperiksa. DTP, natura dan pengecualian di luar cakupan.",
+        "Pecahan BigInt dipertahankan. Cash tampilan dibulatkan setengah menjauhi nol; ini konvensi model, bukan jaminan pembulatan resmi pelaporan atau pembayaran.",
+        "Estimasi terbatas, bukan penetapan DJP/DJBC/Bapenda, SPT, PIB, SPPT atau nasihat hukum. Konfirmasi pengguna bukan verifikasi otoritas. Tidak tercakup bukan berarti bebas pajak."
+      ]
+    },
+    "actualEdge": {
+      "success": true,
+      "status": "unverified",
+      "title": "Masa terakhir: gunakan rekonsiliasi, bukan TER bulanan",
+      "details": [],
+      "sources": [
+        "ter",
+        "terAnnex",
+        "payroll",
+        "ptkp",
+        "hpp",
+        "dtp"
+      ],
+      "notes": [
+        "Tidak ada angka pajak atau ledger karena wilayah, masa, klasifikasi atau data belum terverifikasi.",
+        "Estimasi terbatas, bukan penetapan DJP/DJBC/Bapenda, SPT, PIB, SPPT atau nasihat hukum. Konfirmasi pengguna bukan verifikasi otoritas. Tidak tercakup bukan berarti bebas pajak."
+      ]
+    }
+  },
+  {
+    "id": "calc-pph-21-rekonsiliasi",
+    "slug": "pph-21-rekonsiliasi",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "status": "estimated",
+      "title": "Estimasi selisih pemotongan masa Desember",
+      "amount": "2827300",
+      "details": [
+        {
+          "label": "Bruto setahun aktual",
+          "value": {
+            "n": "150123457",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Biaya jabatan 5%, cap 6 juta setahun",
+          "value": {
+            "n": "6000000",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Iuran sah melalui pemberi kerja",
+          "value": {
+            "n": "1730000",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Zakat wajib sah melalui pemberi kerja",
+          "value": {
+            "n": "311000",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Neto setahun",
+          "value": {
+            "n": "142082457",
+            "d": "1"
+          }
+        },
+        {
+          "label": "PTKP sesuai status awal tahun",
+          "value": {
+            "n": "58500000",
+            "d": "1"
+          }
+        },
+        {
+          "label": "PKP setelah floor ribuan",
+          "value": {
+            "n": "83582000",
+            "d": "1"
+          }
+        },
+        {
+          "label": "PPh setahun eksak",
+          "value": {
+            "n": "6537300",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Pemotongan aktual Jan\u2013Nov",
+          "value": {
+            "n": "3710000",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Selisih eksak masa terakhir",
+          "value": {
+            "n": "2827300",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Penyesuaian cash",
+          "value": {
+            "n": "0",
+            "d": "1"
+          }
+        }
+      ],
+      "rows": [
+        {
+          "label": "0 s.d. 60000000 rupiah",
+          "cells": [
+            {
+              "label": "Irisan PKP",
+              "value": {
+                "n": "60000000",
+                "d": "1"
+              }
+            },
+            {
+              "label": "Tarif (%)",
+              "value": {
+                "n": "5",
+                "d": "1"
+              },
+              "kind": "percent"
+            },
+            {
+              "label": "Pajak eksak",
+              "value": {
+                "n": "3000000",
+                "d": "1"
+              }
+            }
+          ]
+        },
+        {
+          "label": "> 60000000 s.d. 250000000 rupiah",
+          "cells": [
+            {
+              "label": "Irisan PKP",
+              "value": {
+                "n": "23582000",
+                "d": "1"
+              }
+            },
+            {
+              "label": "Tarif (%)",
+              "value": {
+                "n": "15",
+                "d": "1"
+              },
+              "kind": "percent"
+            },
+            {
+              "label": "Pajak eksak",
+              "value": {
+                "n": "3537300",
+                "d": "1"
+              }
+            }
+          ]
+        },
+        {
+          "label": "> 250000000 s.d. 500000000 rupiah",
+          "cells": [
+            {
+              "label": "Irisan PKP",
+              "value": {
+                "n": "0",
+                "d": "1"
+              }
+            },
+            {
+              "label": "Tarif (%)",
+              "value": {
+                "n": "25",
+                "d": "1"
+              },
+              "kind": "percent"
+            },
+            {
+              "label": "Pajak eksak",
+              "value": {
+                "n": "0",
+                "d": "1"
+              }
+            }
+          ]
+        },
+        {
+          "label": "> 500000000 s.d. 5000000000 rupiah",
+          "cells": [
+            {
+              "label": "Irisan PKP",
+              "value": {
+                "n": "0",
+                "d": "1"
+              }
+            },
+            {
+              "label": "Tarif (%)",
+              "value": {
+                "n": "30",
+                "d": "1"
+              },
+              "kind": "percent"
+            },
+            {
+              "label": "Pajak eksak",
+              "value": {
+                "n": "0",
+                "d": "1"
+              }
+            }
+          ]
+        },
+        {
+          "label": "> 5000000000 s.d. tanpa batas rupiah",
+          "cells": [
+            {
+              "label": "Irisan PKP",
+              "value": {
+                "n": "0",
+                "d": "1"
+              }
+            },
+            {
+              "label": "Tarif (%)",
+              "value": {
+                "n": "35",
+                "d": "1"
+              },
+              "kind": "percent"
+            },
+            {
+              "label": "Pajak eksak",
+              "value": {
+                "n": "0",
+                "d": "1"
+              }
+            }
+          ]
+        }
+      ],
+      "caption": "Rincian pajak progresif Pasal17",
+      "context": "Tahun 2024, masa terakhir Desember; pegawai dan kewajiban subjektif penuh 12 bulan, satu pemberi kerja.",
+      "sources": [
+        "ter",
+        "terAnnex",
+        "payroll",
+        "ptkp",
+        "hpp",
+        "dtp"
+      ],
+      "notes": [
+        "Agregat payroll harus lengkap dan telah dicocokkan, termasuk THR/bonus. Biaya jabatan 5% bruto maksimal Rp500.000 sebulan / Rp6.000.000 setahun; hanya model 12 bulan yang dicakup. Iuran dan zakat harus memenuhi PMK168 Pasal10, bukan semua potongan slip gaji. Tidak menghitung ulang potongan aktual memakai TER atau menguranginya dua kali.",
+        "Selisih adalah rekonsiliasi pemotongan pemberi kerja dalam cakupan, bukan hasil SPT seluruh sumber penghasilan.",
+        "Pecahan BigInt dipertahankan. Cash tampilan dibulatkan setengah menjauhi nol; ini konvensi model, bukan jaminan pembulatan resmi pelaporan atau pembayaran.",
+        "Estimasi terbatas, bukan penetapan DJP/DJBC/Bapenda, SPT, PIB, SPPT atau nasihat hukum. Konfirmasi pengguna bukan verifikasi otoritas. Tidak tercakup bukan berarti bebas pajak."
+      ]
+    },
+    "actualEdge": {
+      "success": true,
+      "status": "unverified",
+      "title": "Tahun rekonsiliasi belum terverifikasi / belum selesai",
+      "details": [],
+      "sources": [
+        "ter",
+        "terAnnex",
+        "payroll",
+        "ptkp",
+        "hpp",
+        "dtp"
+      ],
+      "notes": [
+        "Tidak ada angka pajak atau ledger karena wilayah, masa, klasifikasi atau data belum terverifikasi.",
+        "Estimasi terbatas, bukan penetapan DJP/DJBC/Bapenda, SPT, PIB, SPPT atau nasihat hukum. Konfirmasi pengguna bukan verifikasi otoritas. Tidak tercakup bukan berarti bebas pajak."
+      ]
+    }
+  },
+  {
+    "id": "calc-pajak-impor",
+    "slug": "pajak-impor",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "status": "manual",
+      "title": "Total cash SIMULASI MANUAL pungutan impor",
+      "amount": "567178",
+      "details": [
+        {
+          "label": "Nilai pabean IDR eksak",
+          "value": {
+            "n": "159198985",
+            "d": "64"
+          }
+        },
+        {
+          "label": "BM manual eksak",
+          "value": {
+            "n": "923354113",
+            "d": "5120"
+          }
+        },
+        {
+          "label": "Dasar PPN sebelum proporsi manual",
+          "value": {
+            "n": "13659272913",
+            "d": "5120"
+          }
+        },
+        {
+          "label": "DPP PPN manual eksak",
+          "value": {
+            "n": "13659272913",
+            "d": "5120"
+          }
+        },
+        {
+          "label": "PPN manual eksak",
+          "value": {
+            "n": "40977818739",
+            "d": "128000"
+          }
+        },
+        {
+          "label": "Dasar PPh22 manual",
+          "value": {
+            "n": "13659272913",
+            "d": "5120"
+          }
+        },
+        {
+          "label": "PPh22 manual eksak",
+          "value": {
+            "n": "13659272913",
+            "d": "204800"
+          }
+        },
+        {
+          "label": "Jumlah pungutan eksak",
+          "value": {
+            "n": "580789737077",
+            "d": "1024000"
+          }
+        },
+        {
+          "label": "Penyesuaian jumlah cash komponen",
+          "value": {
+            "n": "534923",
+            "d": "1024000"
+          }
+        }
+      ],
+      "context": "SIMULASI MANUAL, bukan tarif hukum atau PIB. FOB USD; CIF eksak 1265/8 USD; kurs 125849/8 IDR per USD; HS dinyatakan pengguna 84713020; referensi Audit manual independent assumption; masa kurs 2024-05-29\u20132024-06-04.",
+      "rows": [
+        {
+          "label": "Bea masuk manual",
+          "cells": [
+            {
+              "label": "Dasar eksak",
+              "value": {
+                "n": "159198985",
+                "d": "64"
+              }
+            },
+            {
+              "label": "Tarif asumsi (%)",
+              "value": {
+                "n": "29",
+                "d": "4"
+              },
+              "kind": "percent"
+            },
+            {
+              "label": "Pungutan eksak",
+              "value": {
+                "n": "923354113",
+                "d": "5120"
+              }
+            },
+            {
+              "label": "Cash komponen",
+              "value": {
+                "n": "180343",
+                "d": "1"
+              },
+              "kind": "cash"
+            }
+          ]
+        },
+        {
+          "label": "PPN impor manual",
+          "cells": [
+            {
+              "label": "Dasar eksak",
+              "value": {
+                "n": "13659272913",
+                "d": "5120"
+              }
+            },
+            {
+              "label": "Tarif asumsi (%)",
+              "value": {
+                "n": "12",
+                "d": "1"
+              },
+              "kind": "percent"
+            },
+            {
+              "label": "Pungutan eksak",
+              "value": {
+                "n": "40977818739",
+                "d": "128000"
+              }
+            },
+            {
+              "label": "Cash komponen",
+              "value": {
+                "n": "320139",
+                "d": "1"
+              },
+              "kind": "cash"
+            }
+          ]
+        },
+        {
+          "label": "PPh22 impor manual",
+          "cells": [
+            {
+              "label": "Dasar eksak",
+              "value": {
+                "n": "13659272913",
+                "d": "5120"
+              }
+            },
+            {
+              "label": "Tarif asumsi (%)",
+              "value": {
+                "n": "5",
+                "d": "2"
+              },
+              "kind": "percent"
+            },
+            {
+              "label": "Pungutan eksak",
+              "value": {
+                "n": "13659272913",
+                "d": "204800"
+              }
+            },
+            {
+              "label": "Cash komponen",
+              "value": {
+                "n": "66696",
+                "d": "1"
+              },
+              "kind": "cash"
+            }
+          ]
+        }
+      ],
+      "caption": "Komponen simulasi manual impor",
+      "sources": [
+        "customs",
+        "customsFaq",
+        "customsFx",
+        "consignment"
+      ],
+      "notes": [
+        "Tidak ada tarif resmi otomatis, kurs live atau verifikasi HS oleh alat. Semua tarif, proporsi DPP dan basis dipilih pengguna; hasil tidak membuktikan kepatuhan hukum. BM memakai nilai pabean; PPN/PPh22 memakai basis manual yang dipilih, bukan otomatis semuanya CIF. Tidak mencakup konsinyasi/barang kiriman, fasilitas, cukai, PPnBM, antidumping atau preferensi. Periksa tambahan nilai pabean lain dan dokumen KMK.",
+        "CIF/manual CIF sudah mencakup freight/asuransi; CFR hanya menambah asuransi. Jumlah cash adalah penjumlahan cash setiap komponen, bukan round(total eksak).",
+        "Pecahan BigInt dipertahankan. Cash tampilan dibulatkan setengah menjauhi nol; ini konvensi model, bukan jaminan pembulatan resmi pelaporan atau pembayaran.",
+        "Estimasi terbatas, bukan penetapan DJP/DJBC/Bapenda, SPT, PIB, SPPT atau nasihat hukum. Konfirmasi pengguna bukan verifikasi otoritas. Tidak tercakup bukan berarti bebas pajak."
+      ]
+    },
+    "actualEdge": {
+      "success": true,
+      "status": "unverified",
+      "title": "Perlu verifikasi klasifikasi / kurs; hanya simulasi manual reguler",
+      "details": [],
+      "sources": [
+        "customs",
+        "customsFaq",
+        "customsFx",
+        "consignment"
+      ],
+      "notes": [
+        "Tidak ada angka pajak atau ledger karena wilayah, masa, klasifikasi atau data belum terverifikasi.",
+        "Estimasi terbatas, bukan penetapan DJP/DJBC/Bapenda, SPT, PIB, SPPT atau nasihat hukum. Konfirmasi pengguna bukan verifikasi otoritas. Tidak tercakup bukan berarti bebas pajak."
+      ]
+    }
+  },
+  {
+    "id": "calc-bphtb",
+    "slug": "bphtb",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "status": "estimated",
+      "title": "Estimasi dasar BPHTB sebelum fasilitas (bukan tagihan final)",
+      "amount": "32506173",
+      "details": [
+        {
+          "label": "Nilai perolehan sah input",
+          "value": {
+            "n": "900123457",
+            "d": "1"
+          }
+        },
+        {
+          "label": "NJOP tahun perolehan",
+          "value": {
+            "n": "800123457",
+            "d": "1"
+          }
+        },
+        {
+          "label": "NPOP setelah floor NJOP",
+          "value": {
+            "n": "900123457",
+            "d": "1"
+          }
+        },
+        {
+          "label": "NPOPTKP sesuai cakupan",
+          "value": {
+            "n": "250000000",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Dasar kena BPHTB",
+          "value": {
+            "n": "650123457",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Tarif (%)",
+          "value": {
+            "n": "5",
+            "d": "1"
+          },
+          "kind": "percent"
+        },
+        {
+          "label": "BPHTB dasar eksak",
+          "value": {
+            "n": "650123457",
+            "d": "20"
+          }
+        },
+        {
+          "label": "Penyesuaian cash",
+          "value": {
+            "n": "3",
+            "d": "20"
+          }
+        }
+      ],
+      "sources": [
+        "regional",
+        "jakarta",
+        "acquisitionRelief",
+        "bphtb2026"
+      ],
+      "notes": [
+        "Hanya DKI tahun2024, perolehan pertama terkonfirmasi dan kasus biasa tanpa fasilitas. Jual beli memakai harga transaksi, lelang harga dalam risalah; waris/hibah wasiat memakai nilai pasar sah dengan hubungan garis lurus satu derajat atau suami/istri. NJOP harus sesuai tahun perolehan. Tanggal saat terutang mengikuti PPJB/AJB, akta, pendaftaran peralihan waris atau penunjukan lelang menurut Pasal41.",
+        "Hasil sebelum fasilitas, bukan penetapan BPHTB final. Tidak meliputi PPh final penjual, jasa notaris/PPAT atau biaya lainnya. Tahun2025/2026 dan fasilitas khusus perlu regulasi serta penetapan tersendiri; tidak memakai preset2024.",
+        "Pecahan BigInt dipertahankan. Cash tampilan dibulatkan setengah menjauhi nol; ini konvensi model, bukan jaminan pembulatan resmi pelaporan atau pembayaran.",
+        "Estimasi terbatas, bukan penetapan DJP/DJBC/Bapenda, SPT, PIB, SPPT atau nasihat hukum. Konfirmasi pengguna bukan verifikasi otoritas. Tidak tercakup bukan berarti bebas pajak."
+      ]
+    },
+    "actualEdge": {
+      "success": true,
+      "status": "unverified",
+      "title": "Perlu konfirmasi daerah / periode BPHTB",
+      "details": [],
+      "sources": [
+        "regional",
+        "jakarta",
+        "acquisitionRelief",
+        "bphtb2026"
+      ],
+      "notes": [
+        "Tidak ada angka pajak atau ledger karena wilayah, masa, klasifikasi atau data belum terverifikasi.",
+        "Estimasi terbatas, bukan penetapan DJP/DJBC/Bapenda, SPT, PIB, SPPT atau nasihat hukum. Konfirmasi pengguna bukan verifikasi otoritas. Tidak tercakup bukan berarti bebas pajak."
+      ]
+    }
+  },
+  {
+    "id": "calc-pbb-p2",
+    "slug": "pbb-p2",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "status": "estimated",
+      "title": "PBB-P2 bruto sebelum fasilitas (bukan tagihan SPPT)",
+      "amount": "1404741",
+      "details": [
+        {
+          "label": "NJOP bumi",
+          "value": {
+            "n": "317123457",
+            "d": "1"
+          }
+        },
+        {
+          "label": "NJOP bangunan",
+          "value": {
+            "n": "211123457",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Jumlah NJOP",
+          "value": {
+            "n": "528246914",
+            "d": "1"
+          }
+        },
+        {
+          "label": "NJOPTKP objek ini, satu kali per WP",
+          "value": {
+            "n": "60000000",
+            "d": "1"
+          }
+        },
+        {
+          "label": "NJOP setelah pengurang dan floor nol",
+          "value": {
+            "n": "468246914",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Persentase penilaian (%)",
+          "value": {
+            "n": "60",
+            "d": "1"
+          },
+          "kind": "percent"
+        },
+        {
+          "label": "NJOP dasar perhitungan",
+          "value": {
+            "n": "1404740742",
+            "d": "5"
+          }
+        },
+        {
+          "label": "Tarif PBB-P2 (%)",
+          "value": {
+            "n": "1",
+            "d": "2"
+          },
+          "kind": "percent"
+        },
+        {
+          "label": "PBB bruto eksak sebelum fasilitas",
+          "value": {
+            "n": "702370371",
+            "d": "500"
+          }
+        },
+        {
+          "label": "Penyesuaian cash",
+          "value": {
+            "n": "129",
+            "d": "500"
+          }
+        }
+      ],
+      "sources": [
+        "regional",
+        "jakarta",
+        "assessment",
+        "relief2024",
+        "pbb2025",
+        "pbb2026"
+      ],
+      "notes": [
+        "DKI tahun2024 saja, NJOP resmi sesuai kondisi1Januari dan klasifikasi objek telah dikonfirmasi. Hunian mengikuti data Bapenda; penggunaan komersial/dominan dan tanah kosong bukan otomatis hunian. Lahan pangan/ternak hanya bila klasifikasi resmi memenuhi cakupan PBB-P2, bukan PBB pusat perkebunan/perhutanan/pertambangan.",
+        "NJOPTKP hanya satu objek tiap WP per tahun, bukan per bidang bumi dan bangunan. Bila sudah dialokasikan pada objek lain, alat tidak menguranginya lagi.",
+        "Hasil bruto sebelum pembebasan/pengurangan/keringanan/sanksi, BUKAN pembayaran SPPT. Pergub16/2024 dapat membebaskan hunian tertentu; Rp880.000 contoh tidak berarti wajib dibayar. Tidak menghitung fasilitas, plafon kenaikan, NIK atau keputusan individual;2025/2026 ditahan.",
+        "Pecahan BigInt dipertahankan. Cash tampilan dibulatkan setengah menjauhi nol; ini konvensi model, bukan jaminan pembulatan resmi pelaporan atau pembayaran.",
+        "Estimasi terbatas, bukan penetapan DJP/DJBC/Bapenda, SPT, PIB, SPPT atau nasihat hukum. Konfirmasi pengguna bukan verifikasi otoritas. Tidak tercakup bukan berarti bebas pajak."
+      ]
+    },
+    "actualEdge": {
+      "success": true,
+      "status": "unverified",
+      "title": "Perlu konfirmasi daerah / tahun PBB-P2",
+      "details": [],
+      "sources": [
+        "regional",
+        "jakarta",
+        "assessment",
+        "relief2024",
+        "pbb2025",
+        "pbb2026"
+      ],
+      "notes": [
+        "Tidak ada angka pajak atau ledger karena wilayah, masa, klasifikasi atau data belum terverifikasi.",
+        "Estimasi terbatas, bukan penetapan DJP/DJBC/Bapenda, SPT, PIB, SPPT atau nasihat hukum. Konfirmasi pengguna bukan verifikasi otoritas. Tidak tercakup bukan berarti bebas pajak."
+      ]
+    }
+  },
+  {
+    "id": "calc-shopee",
+    "slug": "shopee",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "status": "Simulasi manual lengkap",
+      "ledger": {
+        "gross": {
+          "n": "3711",
+          "d": "1"
+        },
+        "sales": {
+          "n": "3500",
+          "d": "1"
+        },
+        "receipts": {
+          "n": "59",
+          "d": "1"
+        },
+        "fees": [
+          {
+            "label": "Audit percent",
+            "basis": "Setelah diskon seller: 3500/1 Rp",
+            "raw": {
+              "n": "1015",
+              "d": "4"
+            },
+            "cap": "211",
+            "value": {
+              "n": "211",
+              "d": "1"
+            }
+          },
+          {
+            "label": "Audit fixed",
+            "basis": "Tetap per unit \u00d7 jumlah",
+            "raw": {
+              "n": "39",
+              "d": "1"
+            },
+            "value": {
+              "n": "39",
+              "d": "1"
+            }
+          }
+        ],
+        "feeTotal": {
+          "n": "250",
+          "d": "1"
+        },
+        "shipping": {
+          "n": "53",
+          "d": "1"
+        },
+        "other": {
+          "n": "7",
+          "d": "1"
+        },
+        "payout": {
+          "n": "3249",
+          "d": "1"
+        },
+        "payoutCash": "3249",
+        "adjustment": {
+          "n": "0",
+          "d": "1"
+        },
+        "cost": {
+          "n": "1839",
+          "d": "1"
+        },
+        "profit": {
+          "n": "1410",
+          "d": "1"
+        },
+        "profitCash": "1410"
+      },
+      "details": [
+        {
+          "label": "Hasil setelah HPP (cash; bukan laba bersih)",
+          "value": {
+            "n": "1410",
+            "d": "1"
+          },
+          "kind": "cash"
+        },
+        {
+          "label": "Bruto harga \u00d7 jumlah",
+          "value": {
+            "n": "3711",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Diskon seller per pesanan",
+          "value": {
+            "n": "211",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Penjualan setelah diskon seller",
+          "value": {
+            "n": "3500",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Ongkir buyer yang dikreditkan ke seller",
+          "value": {
+            "n": "31",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Reimbursement logistik aktual",
+          "value": {
+            "n": "17",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Penerimaan aktual lain",
+          "value": {
+            "n": "11",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Total penerimaan tambahan",
+          "value": {
+            "n": "59",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Total fee eksak",
+          "value": {
+            "n": "250",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Ongkir yang dibayar seller",
+          "value": {
+            "n": "53",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Penyesuaian biaya lain",
+          "value": {
+            "n": "7",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Payout eksak sebelum pembulatan",
+          "value": {
+            "n": "3249",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Penyesuaian pembulatan payout",
+          "value": {
+            "n": "0",
+            "d": "1"
+          }
+        },
+        {
+          "label": "HPP seluruh unit",
+          "value": {
+            "n": "1839",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Hasil setelah HPP eksak",
+          "value": {
+            "n": "1410",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Margin setelah HPP terhadap penjualan neto",
+          "value": {
+            "n": "282",
+            "d": "7"
+          },
+          "kind": "percent"
+        }
+      ]
+    },
+    "actualEdge": {
+      "success": true,
+      "status": "Belum dapat dihitung: data atau cakupan belum lengkap",
+      "details": []
+    }
+  },
+  {
+    "id": "calc-tiktok",
+    "slug": "tiktok-shop",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "status": "Simulasi manual lengkap",
+      "ledger": {
+        "gross": {
+          "n": "3711",
+          "d": "1"
+        },
+        "sales": {
+          "n": "3500",
+          "d": "1"
+        },
+        "receipts": {
+          "n": "59",
+          "d": "1"
+        },
+        "fees": [
+          {
+            "label": "Audit percent",
+            "basis": "Setelah diskon seller: 3500/1 Rp",
+            "raw": {
+              "n": "1015",
+              "d": "4"
+            },
+            "cap": "211",
+            "value": {
+              "n": "211",
+              "d": "1"
+            }
+          },
+          {
+            "label": "Audit fixed",
+            "basis": "Tetap per unit \u00d7 jumlah",
+            "raw": {
+              "n": "39",
+              "d": "1"
+            },
+            "value": {
+              "n": "39",
+              "d": "1"
+            }
+          }
+        ],
+        "feeTotal": {
+          "n": "250",
+          "d": "1"
+        },
+        "shipping": {
+          "n": "53",
+          "d": "1"
+        },
+        "other": {
+          "n": "7",
+          "d": "1"
+        },
+        "payout": {
+          "n": "3249",
+          "d": "1"
+        },
+        "payoutCash": "3249",
+        "adjustment": {
+          "n": "0",
+          "d": "1"
+        },
+        "cost": {
+          "n": "1839",
+          "d": "1"
+        },
+        "profit": {
+          "n": "1410",
+          "d": "1"
+        },
+        "profitCash": "1410"
+      },
+      "details": [
+        {
+          "label": "Hasil setelah HPP (cash; bukan laba bersih)",
+          "value": {
+            "n": "1410",
+            "d": "1"
+          },
+          "kind": "cash"
+        },
+        {
+          "label": "Bruto harga \u00d7 jumlah",
+          "value": {
+            "n": "3711",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Diskon seller per pesanan",
+          "value": {
+            "n": "211",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Penjualan setelah diskon seller",
+          "value": {
+            "n": "3500",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Ongkir buyer yang dikreditkan ke seller",
+          "value": {
+            "n": "31",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Reimbursement logistik aktual",
+          "value": {
+            "n": "17",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Penerimaan aktual lain",
+          "value": {
+            "n": "11",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Total penerimaan tambahan",
+          "value": {
+            "n": "59",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Total fee eksak",
+          "value": {
+            "n": "250",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Ongkir yang dibayar seller",
+          "value": {
+            "n": "53",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Penyesuaian biaya lain",
+          "value": {
+            "n": "7",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Payout eksak sebelum pembulatan",
+          "value": {
+            "n": "3249",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Penyesuaian pembulatan payout",
+          "value": {
+            "n": "0",
+            "d": "1"
+          }
+        },
+        {
+          "label": "HPP seluruh unit",
+          "value": {
+            "n": "1839",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Hasil setelah HPP eksak",
+          "value": {
+            "n": "1410",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Margin setelah HPP terhadap penjualan neto",
+          "value": {
+            "n": "282",
+            "d": "7"
+          },
+          "kind": "percent"
+        }
+      ]
+    },
+    "actualEdge": {
+      "success": true,
+      "status": "Belum dapat dihitung: data atau cakupan belum lengkap",
+      "details": []
+    }
+  },
+  {
+    "id": "calc-tokopedia",
+    "slug": "tokopedia",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "status": "Simulasi manual lengkap",
+      "ledger": {
+        "gross": {
+          "n": "3711",
+          "d": "1"
+        },
+        "sales": {
+          "n": "3500",
+          "d": "1"
+        },
+        "receipts": {
+          "n": "59",
+          "d": "1"
+        },
+        "fees": [
+          {
+            "label": "Audit percent",
+            "basis": "Setelah diskon seller: 3500/1 Rp",
+            "raw": {
+              "n": "1015",
+              "d": "4"
+            },
+            "cap": "211",
+            "value": {
+              "n": "211",
+              "d": "1"
+            }
+          },
+          {
+            "label": "Audit fixed",
+            "basis": "Tetap per unit \u00d7 jumlah",
+            "raw": {
+              "n": "39",
+              "d": "1"
+            },
+            "value": {
+              "n": "39",
+              "d": "1"
+            }
+          }
+        ],
+        "feeTotal": {
+          "n": "250",
+          "d": "1"
+        },
+        "shipping": {
+          "n": "53",
+          "d": "1"
+        },
+        "other": {
+          "n": "7",
+          "d": "1"
+        },
+        "payout": {
+          "n": "3249",
+          "d": "1"
+        },
+        "payoutCash": "3249",
+        "adjustment": {
+          "n": "0",
+          "d": "1"
+        },
+        "cost": {
+          "n": "1839",
+          "d": "1"
+        },
+        "profit": {
+          "n": "1410",
+          "d": "1"
+        },
+        "profitCash": "1410"
+      },
+      "details": [
+        {
+          "label": "Hasil setelah HPP (cash; bukan laba bersih)",
+          "value": {
+            "n": "1410",
+            "d": "1"
+          },
+          "kind": "cash"
+        },
+        {
+          "label": "Bruto harga \u00d7 jumlah",
+          "value": {
+            "n": "3711",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Diskon seller per pesanan",
+          "value": {
+            "n": "211",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Penjualan setelah diskon seller",
+          "value": {
+            "n": "3500",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Ongkir buyer yang dikreditkan ke seller",
+          "value": {
+            "n": "31",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Reimbursement logistik aktual",
+          "value": {
+            "n": "17",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Penerimaan aktual lain",
+          "value": {
+            "n": "11",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Total penerimaan tambahan",
+          "value": {
+            "n": "59",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Total fee eksak",
+          "value": {
+            "n": "250",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Ongkir yang dibayar seller",
+          "value": {
+            "n": "53",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Penyesuaian biaya lain",
+          "value": {
+            "n": "7",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Payout eksak sebelum pembulatan",
+          "value": {
+            "n": "3249",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Penyesuaian pembulatan payout",
+          "value": {
+            "n": "0",
+            "d": "1"
+          }
+        },
+        {
+          "label": "HPP seluruh unit",
+          "value": {
+            "n": "1839",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Hasil setelah HPP eksak",
+          "value": {
+            "n": "1410",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Margin setelah HPP terhadap penjualan neto",
+          "value": {
+            "n": "282",
+            "d": "7"
+          },
+          "kind": "percent"
+        }
+      ]
+    },
+    "actualEdge": {
+      "success": true,
+      "status": "Belum dapat dihitung: data atau cakupan belum lengkap",
+      "details": []
+    }
+  },
+  {
+    "id": "calc-lazada",
+    "slug": "lazada",
+    "baseline": "PASS",
+    "edge": "PASS",
+    "actualBaseline": {
+      "success": true,
+      "status": "Simulasi manual lengkap",
+      "ledger": {
+        "gross": {
+          "n": "3711",
+          "d": "1"
+        },
+        "sales": {
+          "n": "3500",
+          "d": "1"
+        },
+        "receipts": {
+          "n": "59",
+          "d": "1"
+        },
+        "fees": [
+          {
+            "label": "Audit percent",
+            "basis": "Setelah diskon seller: 3500/1 Rp",
+            "raw": {
+              "n": "1015",
+              "d": "4"
+            },
+            "cap": "211",
+            "value": {
+              "n": "211",
+              "d": "1"
+            }
+          },
+          {
+            "label": "Audit fixed",
+            "basis": "Tetap per unit \u00d7 jumlah",
+            "raw": {
+              "n": "39",
+              "d": "1"
+            },
+            "value": {
+              "n": "39",
+              "d": "1"
+            }
+          }
+        ],
+        "feeTotal": {
+          "n": "250",
+          "d": "1"
+        },
+        "shipping": {
+          "n": "53",
+          "d": "1"
+        },
+        "other": {
+          "n": "7",
+          "d": "1"
+        },
+        "payout": {
+          "n": "3249",
+          "d": "1"
+        },
+        "payoutCash": "3249",
+        "adjustment": {
+          "n": "0",
+          "d": "1"
+        },
+        "cost": {
+          "n": "1839",
+          "d": "1"
+        },
+        "profit": {
+          "n": "1410",
+          "d": "1"
+        },
+        "profitCash": "1410"
+      },
+      "details": [
+        {
+          "label": "Hasil setelah HPP (cash; bukan laba bersih)",
+          "value": {
+            "n": "1410",
+            "d": "1"
+          },
+          "kind": "cash"
+        },
+        {
+          "label": "Bruto harga \u00d7 jumlah",
+          "value": {
+            "n": "3711",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Diskon seller per pesanan",
+          "value": {
+            "n": "211",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Penjualan setelah diskon seller",
+          "value": {
+            "n": "3500",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Ongkir buyer yang dikreditkan ke seller",
+          "value": {
+            "n": "31",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Reimbursement logistik aktual",
+          "value": {
+            "n": "17",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Penerimaan aktual lain",
+          "value": {
+            "n": "11",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Total penerimaan tambahan",
+          "value": {
+            "n": "59",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Total fee eksak",
+          "value": {
+            "n": "250",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Ongkir yang dibayar seller",
+          "value": {
+            "n": "53",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Penyesuaian biaya lain",
+          "value": {
+            "n": "7",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Payout eksak sebelum pembulatan",
+          "value": {
+            "n": "3249",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Penyesuaian pembulatan payout",
+          "value": {
+            "n": "0",
+            "d": "1"
+          }
+        },
+        {
+          "label": "HPP seluruh unit",
+          "value": {
+            "n": "1839",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Hasil setelah HPP eksak",
+          "value": {
+            "n": "1410",
+            "d": "1"
+          }
+        },
+        {
+          "label": "Margin setelah HPP terhadap penjualan neto",
+          "value": {
+            "n": "282",
+            "d": "7"
+          },
+          "kind": "percent"
+        }
+      ]
+    },
+    "actualEdge": {
+      "success": true,
+      "status": "Belum dapat dihitung: data atau cakupan belum lengkap",
+      "details": []
+    }
+  }
+]

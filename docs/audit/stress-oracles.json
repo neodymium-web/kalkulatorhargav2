@@ -1,0 +1,6285 @@
+[
+  {
+    "slug": "cicilan-anuitas",
+    "input": {
+      "principal": "1",
+      "rate": "0",
+      "months": "1"
+    },
+    "checks": [
+      {
+        "path": "values.standard",
+        "kind": "integer",
+        "expected": "1"
+      },
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "1"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "0"
+      },
+      {
+        "path": "values.last",
+        "kind": "integer",
+        "expected": "1"
+      }
+    ],
+    "note": "Exact annuity plus independently constructed whole-IDR schedule"
+  },
+  {
+    "slug": "cicilan-flat",
+    "input": {
+      "principal": "1",
+      "rate": "0",
+      "months": "1"
+    },
+    "checks": [
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "1"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "0"
+      }
+    ],
+    "note": "Cumulative flat schedule telescopes to principal + rounded total interest"
+  },
+  {
+    "slug": "cicilan-anuitas",
+    "input": {
+      "principal": "1",
+      "rate": "0",
+      "months": "7"
+    },
+    "checks": [
+      {
+        "path": "values.standard",
+        "kind": "integer",
+        "expected": "1"
+      },
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "1"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "0"
+      },
+      {
+        "path": "values.last",
+        "kind": "integer",
+        "expected": "1"
+      }
+    ],
+    "note": "Exact annuity plus independently constructed whole-IDR schedule"
+  },
+  {
+    "slug": "cicilan-flat",
+    "input": {
+      "principal": "1",
+      "rate": "0",
+      "months": "7"
+    },
+    "checks": [
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "1"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "0"
+      }
+    ],
+    "note": "Cumulative flat schedule telescopes to principal + rounded total interest"
+  },
+  {
+    "slug": "cicilan-anuitas",
+    "input": {
+      "principal": "1",
+      "rate": "0",
+      "months": "120"
+    },
+    "checks": [
+      {
+        "path": "values.standard",
+        "kind": "integer",
+        "expected": "1"
+      },
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "1"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "0"
+      },
+      {
+        "path": "values.last",
+        "kind": "integer",
+        "expected": "1"
+      }
+    ],
+    "note": "Exact annuity plus independently constructed whole-IDR schedule"
+  },
+  {
+    "slug": "cicilan-flat",
+    "input": {
+      "principal": "1",
+      "rate": "0",
+      "months": "120"
+    },
+    "checks": [
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "1"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "0"
+      }
+    ],
+    "note": "Cumulative flat schedule telescopes to principal + rounded total interest"
+  },
+  {
+    "slug": "cicilan-anuitas",
+    "input": {
+      "principal": "1",
+      "rate": "7.25",
+      "months": "1"
+    },
+    "checks": [
+      {
+        "path": "values.standard",
+        "kind": "integer",
+        "expected": "2"
+      },
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "1"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "0"
+      },
+      {
+        "path": "values.last",
+        "kind": "integer",
+        "expected": "1"
+      }
+    ],
+    "note": "Exact annuity plus independently constructed whole-IDR schedule"
+  },
+  {
+    "slug": "cicilan-flat",
+    "input": {
+      "principal": "1",
+      "rate": "7.25",
+      "months": "1"
+    },
+    "checks": [
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "1"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "0"
+      }
+    ],
+    "note": "Cumulative flat schedule telescopes to principal + rounded total interest"
+  },
+  {
+    "slug": "cicilan-anuitas",
+    "input": {
+      "principal": "1",
+      "rate": "7.25",
+      "months": "7"
+    },
+    "checks": [
+      {
+        "path": "values.standard",
+        "kind": "integer",
+        "expected": "1"
+      },
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "1"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "0"
+      },
+      {
+        "path": "values.last",
+        "kind": "integer",
+        "expected": "1"
+      }
+    ],
+    "note": "Exact annuity plus independently constructed whole-IDR schedule"
+  },
+  {
+    "slug": "cicilan-flat",
+    "input": {
+      "principal": "1",
+      "rate": "7.25",
+      "months": "7"
+    },
+    "checks": [
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "1"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "0"
+      }
+    ],
+    "note": "Cumulative flat schedule telescopes to principal + rounded total interest"
+  },
+  {
+    "slug": "cicilan-anuitas",
+    "input": {
+      "principal": "1",
+      "rate": "7.25",
+      "months": "120"
+    },
+    "checks": [
+      {
+        "path": "values.standard",
+        "kind": "integer",
+        "expected": "1"
+      },
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "1"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "0"
+      },
+      {
+        "path": "values.last",
+        "kind": "integer",
+        "expected": "1"
+      }
+    ],
+    "note": "Exact annuity plus independently constructed whole-IDR schedule"
+  },
+  {
+    "slug": "cicilan-flat",
+    "input": {
+      "principal": "1",
+      "rate": "7.25",
+      "months": "120"
+    },
+    "checks": [
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "2"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "1"
+      }
+    ],
+    "note": "Cumulative flat schedule telescopes to principal + rounded total interest"
+  },
+  {
+    "slug": "cicilan-anuitas",
+    "input": {
+      "principal": "1",
+      "rate": "100",
+      "months": "1"
+    },
+    "checks": [
+      {
+        "path": "values.standard",
+        "kind": "integer",
+        "expected": "2"
+      },
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "1"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "0"
+      },
+      {
+        "path": "values.last",
+        "kind": "integer",
+        "expected": "1"
+      }
+    ],
+    "note": "Exact annuity plus independently constructed whole-IDR schedule"
+  },
+  {
+    "slug": "cicilan-flat",
+    "input": {
+      "principal": "1",
+      "rate": "100",
+      "months": "1"
+    },
+    "checks": [
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "1"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "0"
+      }
+    ],
+    "note": "Cumulative flat schedule telescopes to principal + rounded total interest"
+  },
+  {
+    "slug": "cicilan-anuitas",
+    "input": {
+      "principal": "1",
+      "rate": "100",
+      "months": "7"
+    },
+    "checks": [
+      {
+        "path": "values.standard",
+        "kind": "integer",
+        "expected": "1"
+      },
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "1"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "0"
+      },
+      {
+        "path": "values.last",
+        "kind": "integer",
+        "expected": "1"
+      }
+    ],
+    "note": "Exact annuity plus independently constructed whole-IDR schedule"
+  },
+  {
+    "slug": "cicilan-flat",
+    "input": {
+      "principal": "1",
+      "rate": "100",
+      "months": "7"
+    },
+    "checks": [
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "2"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "1"
+      }
+    ],
+    "note": "Cumulative flat schedule telescopes to principal + rounded total interest"
+  },
+  {
+    "slug": "cicilan-anuitas",
+    "input": {
+      "principal": "1",
+      "rate": "100",
+      "months": "120"
+    },
+    "checks": [
+      {
+        "path": "values.standard",
+        "kind": "integer",
+        "expected": "1"
+      },
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "1"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "0"
+      },
+      {
+        "path": "values.last",
+        "kind": "integer",
+        "expected": "1"
+      }
+    ],
+    "note": "Exact annuity plus independently constructed whole-IDR schedule"
+  },
+  {
+    "slug": "cicilan-flat",
+    "input": {
+      "principal": "1",
+      "rate": "100",
+      "months": "120"
+    },
+    "checks": [
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "11"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "10"
+      }
+    ],
+    "note": "Cumulative flat schedule telescopes to principal + rounded total interest"
+  },
+  {
+    "slug": "cicilan-anuitas",
+    "input": {
+      "principal": "13",
+      "rate": "0",
+      "months": "1"
+    },
+    "checks": [
+      {
+        "path": "values.standard",
+        "kind": "integer",
+        "expected": "13"
+      },
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "13"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "0"
+      },
+      {
+        "path": "values.last",
+        "kind": "integer",
+        "expected": "13"
+      }
+    ],
+    "note": "Exact annuity plus independently constructed whole-IDR schedule"
+  },
+  {
+    "slug": "cicilan-flat",
+    "input": {
+      "principal": "13",
+      "rate": "0",
+      "months": "1"
+    },
+    "checks": [
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "13"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "0"
+      }
+    ],
+    "note": "Cumulative flat schedule telescopes to principal + rounded total interest"
+  },
+  {
+    "slug": "cicilan-anuitas",
+    "input": {
+      "principal": "13",
+      "rate": "0",
+      "months": "7"
+    },
+    "checks": [
+      {
+        "path": "values.standard",
+        "kind": "integer",
+        "expected": "2"
+      },
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "13"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "0"
+      },
+      {
+        "path": "values.last",
+        "kind": "integer",
+        "expected": "1"
+      }
+    ],
+    "note": "Exact annuity plus independently constructed whole-IDR schedule"
+  },
+  {
+    "slug": "cicilan-flat",
+    "input": {
+      "principal": "13",
+      "rate": "0",
+      "months": "7"
+    },
+    "checks": [
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "13"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "0"
+      }
+    ],
+    "note": "Cumulative flat schedule telescopes to principal + rounded total interest"
+  },
+  {
+    "slug": "cicilan-anuitas",
+    "input": {
+      "principal": "13",
+      "rate": "0",
+      "months": "120"
+    },
+    "checks": [
+      {
+        "path": "values.standard",
+        "kind": "integer",
+        "expected": "1"
+      },
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "13"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "0"
+      },
+      {
+        "path": "values.last",
+        "kind": "integer",
+        "expected": "1"
+      }
+    ],
+    "note": "Exact annuity plus independently constructed whole-IDR schedule"
+  },
+  {
+    "slug": "cicilan-flat",
+    "input": {
+      "principal": "13",
+      "rate": "0",
+      "months": "120"
+    },
+    "checks": [
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "13"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "0"
+      }
+    ],
+    "note": "Cumulative flat schedule telescopes to principal + rounded total interest"
+  },
+  {
+    "slug": "cicilan-anuitas",
+    "input": {
+      "principal": "13",
+      "rate": "7.25",
+      "months": "1"
+    },
+    "checks": [
+      {
+        "path": "values.standard",
+        "kind": "integer",
+        "expected": "14"
+      },
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "13"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "0"
+      },
+      {
+        "path": "values.last",
+        "kind": "integer",
+        "expected": "13"
+      }
+    ],
+    "note": "Exact annuity plus independently constructed whole-IDR schedule"
+  },
+  {
+    "slug": "cicilan-flat",
+    "input": {
+      "principal": "13",
+      "rate": "7.25",
+      "months": "1"
+    },
+    "checks": [
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "13"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "0"
+      }
+    ],
+    "note": "Cumulative flat schedule telescopes to principal + rounded total interest"
+  },
+  {
+    "slug": "cicilan-anuitas",
+    "input": {
+      "principal": "13",
+      "rate": "7.25",
+      "months": "7"
+    },
+    "checks": [
+      {
+        "path": "values.standard",
+        "kind": "integer",
+        "expected": "2"
+      },
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "13"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "0"
+      },
+      {
+        "path": "values.last",
+        "kind": "integer",
+        "expected": "1"
+      }
+    ],
+    "note": "Exact annuity plus independently constructed whole-IDR schedule"
+  },
+  {
+    "slug": "cicilan-flat",
+    "input": {
+      "principal": "13",
+      "rate": "7.25",
+      "months": "7"
+    },
+    "checks": [
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "14"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "1"
+      }
+    ],
+    "note": "Cumulative flat schedule telescopes to principal + rounded total interest"
+  },
+  {
+    "slug": "cicilan-anuitas",
+    "input": {
+      "principal": "13",
+      "rate": "7.25",
+      "months": "120"
+    },
+    "checks": [
+      {
+        "path": "values.standard",
+        "kind": "integer",
+        "expected": "1"
+      },
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "13"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "0"
+      },
+      {
+        "path": "values.last",
+        "kind": "integer",
+        "expected": "1"
+      }
+    ],
+    "note": "Exact annuity plus independently constructed whole-IDR schedule"
+  },
+  {
+    "slug": "cicilan-flat",
+    "input": {
+      "principal": "13",
+      "rate": "7.25",
+      "months": "120"
+    },
+    "checks": [
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "22"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "9"
+      }
+    ],
+    "note": "Cumulative flat schedule telescopes to principal + rounded total interest"
+  },
+  {
+    "slug": "cicilan-anuitas",
+    "input": {
+      "principal": "13",
+      "rate": "100",
+      "months": "1"
+    },
+    "checks": [
+      {
+        "path": "values.standard",
+        "kind": "integer",
+        "expected": "15"
+      },
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "14"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "1"
+      },
+      {
+        "path": "values.last",
+        "kind": "integer",
+        "expected": "14"
+      }
+    ],
+    "note": "Exact annuity plus independently constructed whole-IDR schedule"
+  },
+  {
+    "slug": "cicilan-flat",
+    "input": {
+      "principal": "13",
+      "rate": "100",
+      "months": "1"
+    },
+    "checks": [
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "14"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "1"
+      }
+    ],
+    "note": "Cumulative flat schedule telescopes to principal + rounded total interest"
+  },
+  {
+    "slug": "cicilan-anuitas",
+    "input": {
+      "principal": "13",
+      "rate": "100",
+      "months": "7"
+    },
+    "checks": [
+      {
+        "path": "values.standard",
+        "kind": "integer",
+        "expected": "3"
+      },
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "17"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "4"
+      },
+      {
+        "path": "values.last",
+        "kind": "integer",
+        "expected": "2"
+      }
+    ],
+    "note": "Exact annuity plus independently constructed whole-IDR schedule"
+  },
+  {
+    "slug": "cicilan-flat",
+    "input": {
+      "principal": "13",
+      "rate": "100",
+      "months": "7"
+    },
+    "checks": [
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "21"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "8"
+      }
+    ],
+    "note": "Cumulative flat schedule telescopes to principal + rounded total interest"
+  },
+  {
+    "slug": "cicilan-anuitas",
+    "input": {
+      "principal": "13",
+      "rate": "100",
+      "months": "120"
+    },
+    "checks": [
+      {
+        "path": "values.standard",
+        "kind": "integer",
+        "expected": "2"
+      },
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "21"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "8"
+      },
+      {
+        "path": "values.last",
+        "kind": "integer",
+        "expected": "1"
+      }
+    ],
+    "note": "Exact annuity plus independently constructed whole-IDR schedule"
+  },
+  {
+    "slug": "cicilan-flat",
+    "input": {
+      "principal": "13",
+      "rate": "100",
+      "months": "120"
+    },
+    "checks": [
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "143"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "130"
+      }
+    ],
+    "note": "Cumulative flat schedule telescopes to principal + rounded total interest"
+  },
+  {
+    "slug": "cicilan-anuitas",
+    "input": {
+      "principal": "1237",
+      "rate": "0",
+      "months": "1"
+    },
+    "checks": [
+      {
+        "path": "values.standard",
+        "kind": "integer",
+        "expected": "1237"
+      },
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "1237"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "0"
+      },
+      {
+        "path": "values.last",
+        "kind": "integer",
+        "expected": "1237"
+      }
+    ],
+    "note": "Exact annuity plus independently constructed whole-IDR schedule"
+  },
+  {
+    "slug": "cicilan-flat",
+    "input": {
+      "principal": "1237",
+      "rate": "0",
+      "months": "1"
+    },
+    "checks": [
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "1237"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "0"
+      }
+    ],
+    "note": "Cumulative flat schedule telescopes to principal + rounded total interest"
+  },
+  {
+    "slug": "cicilan-anuitas",
+    "input": {
+      "principal": "1237",
+      "rate": "0",
+      "months": "7"
+    },
+    "checks": [
+      {
+        "path": "values.standard",
+        "kind": "integer",
+        "expected": "177"
+      },
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "1237"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "0"
+      },
+      {
+        "path": "values.last",
+        "kind": "integer",
+        "expected": "175"
+      }
+    ],
+    "note": "Exact annuity plus independently constructed whole-IDR schedule"
+  },
+  {
+    "slug": "cicilan-flat",
+    "input": {
+      "principal": "1237",
+      "rate": "0",
+      "months": "7"
+    },
+    "checks": [
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "1237"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "0"
+      }
+    ],
+    "note": "Cumulative flat schedule telescopes to principal + rounded total interest"
+  },
+  {
+    "slug": "cicilan-anuitas",
+    "input": {
+      "principal": "1237",
+      "rate": "0",
+      "months": "120"
+    },
+    "checks": [
+      {
+        "path": "values.standard",
+        "kind": "integer",
+        "expected": "11"
+      },
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "1237"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "0"
+      },
+      {
+        "path": "values.last",
+        "kind": "integer",
+        "expected": "5"
+      }
+    ],
+    "note": "Exact annuity plus independently constructed whole-IDR schedule"
+  },
+  {
+    "slug": "cicilan-flat",
+    "input": {
+      "principal": "1237",
+      "rate": "0",
+      "months": "120"
+    },
+    "checks": [
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "1237"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "0"
+      }
+    ],
+    "note": "Cumulative flat schedule telescopes to principal + rounded total interest"
+  },
+  {
+    "slug": "cicilan-anuitas",
+    "input": {
+      "principal": "1237",
+      "rate": "7.25",
+      "months": "1"
+    },
+    "checks": [
+      {
+        "path": "values.standard",
+        "kind": "integer",
+        "expected": "1245"
+      },
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "1244"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "7"
+      },
+      {
+        "path": "values.last",
+        "kind": "integer",
+        "expected": "1244"
+      }
+    ],
+    "note": "Exact annuity plus independently constructed whole-IDR schedule"
+  },
+  {
+    "slug": "cicilan-flat",
+    "input": {
+      "principal": "1237",
+      "rate": "7.25",
+      "months": "1"
+    },
+    "checks": [
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "1244"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "7"
+      }
+    ],
+    "note": "Cumulative flat schedule telescopes to principal + rounded total interest"
+  },
+  {
+    "slug": "cicilan-anuitas",
+    "input": {
+      "principal": "1237",
+      "rate": "7.25",
+      "months": "7"
+    },
+    "checks": [
+      {
+        "path": "values.standard",
+        "kind": "integer",
+        "expected": "182"
+      },
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "1265"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "28"
+      },
+      {
+        "path": "values.last",
+        "kind": "integer",
+        "expected": "173"
+      }
+    ],
+    "note": "Exact annuity plus independently constructed whole-IDR schedule"
+  },
+  {
+    "slug": "cicilan-flat",
+    "input": {
+      "principal": "1237",
+      "rate": "7.25",
+      "months": "7"
+    },
+    "checks": [
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "1289"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "52"
+      }
+    ],
+    "note": "Cumulative flat schedule telescopes to principal + rounded total interest"
+  },
+  {
+    "slug": "cicilan-anuitas",
+    "input": {
+      "principal": "1237",
+      "rate": "7.25",
+      "months": "120"
+    },
+    "checks": [
+      {
+        "path": "values.standard",
+        "kind": "integer",
+        "expected": "15"
+      },
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "1715"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "478"
+      },
+      {
+        "path": "values.last",
+        "kind": "integer",
+        "expected": "5"
+      }
+    ],
+    "note": "Exact annuity plus independently constructed whole-IDR schedule"
+  },
+  {
+    "slug": "cicilan-flat",
+    "input": {
+      "principal": "1237",
+      "rate": "7.25",
+      "months": "120"
+    },
+    "checks": [
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "2134"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "897"
+      }
+    ],
+    "note": "Cumulative flat schedule telescopes to principal + rounded total interest"
+  },
+  {
+    "slug": "cicilan-anuitas",
+    "input": {
+      "principal": "1237",
+      "rate": "100",
+      "months": "1"
+    },
+    "checks": [
+      {
+        "path": "values.standard",
+        "kind": "integer",
+        "expected": "1341"
+      },
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "1340"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "103"
+      },
+      {
+        "path": "values.last",
+        "kind": "integer",
+        "expected": "1340"
+      }
+    ],
+    "note": "Exact annuity plus independently constructed whole-IDR schedule"
+  },
+  {
+    "slug": "cicilan-flat",
+    "input": {
+      "principal": "1237",
+      "rate": "100",
+      "months": "1"
+    },
+    "checks": [
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "1340"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "103"
+      }
+    ],
+    "note": "Cumulative flat schedule telescopes to principal + rounded total interest"
+  },
+  {
+    "slug": "cicilan-anuitas",
+    "input": {
+      "principal": "1237",
+      "rate": "100",
+      "months": "7"
+    },
+    "checks": [
+      {
+        "path": "values.standard",
+        "kind": "integer",
+        "expected": "241"
+      },
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "1681"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "444"
+      },
+      {
+        "path": "values.last",
+        "kind": "integer",
+        "expected": "235"
+      }
+    ],
+    "note": "Exact annuity plus independently constructed whole-IDR schedule"
+  },
+  {
+    "slug": "cicilan-flat",
+    "input": {
+      "principal": "1237",
+      "rate": "100",
+      "months": "7"
+    },
+    "checks": [
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "1959"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "722"
+      }
+    ],
+    "note": "Cumulative flat schedule telescopes to principal + rounded total interest"
+  },
+  {
+    "slug": "cicilan-anuitas",
+    "input": {
+      "principal": "1237",
+      "rate": "100",
+      "months": "120"
+    },
+    "checks": [
+      {
+        "path": "values.standard",
+        "kind": "integer",
+        "expected": "104"
+      },
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "6252"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "5015"
+      },
+      {
+        "path": "values.last",
+        "kind": "integer",
+        "expected": "12"
+      }
+    ],
+    "note": "Exact annuity plus independently constructed whole-IDR schedule"
+  },
+  {
+    "slug": "cicilan-flat",
+    "input": {
+      "principal": "1237",
+      "rate": "100",
+      "months": "120"
+    },
+    "checks": [
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "13607"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "12370"
+      }
+    ],
+    "note": "Cumulative flat schedule telescopes to principal + rounded total interest"
+  },
+  {
+    "slug": "cicilan-anuitas",
+    "input": {
+      "principal": "9999999999999",
+      "rate": "0",
+      "months": "1"
+    },
+    "checks": [
+      {
+        "path": "values.standard",
+        "kind": "integer",
+        "expected": "9999999999999"
+      },
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "9999999999999"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "0"
+      },
+      {
+        "path": "values.last",
+        "kind": "integer",
+        "expected": "9999999999999"
+      }
+    ],
+    "note": "Exact annuity plus independently constructed whole-IDR schedule"
+  },
+  {
+    "slug": "cicilan-flat",
+    "input": {
+      "principal": "9999999999999",
+      "rate": "0",
+      "months": "1"
+    },
+    "checks": [
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "9999999999999"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "0"
+      }
+    ],
+    "note": "Cumulative flat schedule telescopes to principal + rounded total interest"
+  },
+  {
+    "slug": "cicilan-anuitas",
+    "input": {
+      "principal": "9999999999999",
+      "rate": "0",
+      "months": "7"
+    },
+    "checks": [
+      {
+        "path": "values.standard",
+        "kind": "integer",
+        "expected": "1428571428572"
+      },
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "9999999999999"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "0"
+      },
+      {
+        "path": "values.last",
+        "kind": "integer",
+        "expected": "1428571428567"
+      }
+    ],
+    "note": "Exact annuity plus independently constructed whole-IDR schedule"
+  },
+  {
+    "slug": "cicilan-flat",
+    "input": {
+      "principal": "9999999999999",
+      "rate": "0",
+      "months": "7"
+    },
+    "checks": [
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "9999999999999"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "0"
+      }
+    ],
+    "note": "Cumulative flat schedule telescopes to principal + rounded total interest"
+  },
+  {
+    "slug": "cicilan-anuitas",
+    "input": {
+      "principal": "9999999999999",
+      "rate": "0",
+      "months": "120"
+    },
+    "checks": [
+      {
+        "path": "values.standard",
+        "kind": "integer",
+        "expected": "83333333334"
+      },
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "9999999999999"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "0"
+      },
+      {
+        "path": "values.last",
+        "kind": "integer",
+        "expected": "83333333253"
+      }
+    ],
+    "note": "Exact annuity plus independently constructed whole-IDR schedule"
+  },
+  {
+    "slug": "cicilan-flat",
+    "input": {
+      "principal": "9999999999999",
+      "rate": "0",
+      "months": "120"
+    },
+    "checks": [
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "9999999999999"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "0"
+      }
+    ],
+    "note": "Cumulative flat schedule telescopes to principal + rounded total interest"
+  },
+  {
+    "slug": "cicilan-anuitas",
+    "input": {
+      "principal": "9999999999999",
+      "rate": "7.25",
+      "months": "1"
+    },
+    "checks": [
+      {
+        "path": "values.standard",
+        "kind": "integer",
+        "expected": "10060416666666"
+      },
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "10060416666666"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "60416666667"
+      },
+      {
+        "path": "values.last",
+        "kind": "integer",
+        "expected": "10060416666666"
+      }
+    ],
+    "note": "Exact annuity plus independently constructed whole-IDR schedule"
+  },
+  {
+    "slug": "cicilan-flat",
+    "input": {
+      "principal": "9999999999999",
+      "rate": "7.25",
+      "months": "1"
+    },
+    "checks": [
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "10060416666666"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "60416666667"
+      }
+    ],
+    "note": "Cumulative flat schedule telescopes to principal + rounded total interest"
+  },
+  {
+    "slug": "cicilan-anuitas",
+    "input": {
+      "principal": "9999999999999",
+      "rate": "7.25",
+      "months": "7"
+    },
+    "checks": [
+      {
+        "path": "values.standard",
+        "kind": "integer",
+        "expected": "1463303185594"
+      },
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "10243122299158"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "243122299159"
+      },
+      {
+        "path": "values.last",
+        "kind": "integer",
+        "expected": "1463303185594"
+      }
+    ],
+    "note": "Exact annuity plus independently constructed whole-IDR schedule"
+  },
+  {
+    "slug": "cicilan-flat",
+    "input": {
+      "principal": "9999999999999",
+      "rate": "7.25",
+      "months": "7"
+    },
+    "checks": [
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "10422916666666"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "422916666667"
+      }
+    ],
+    "note": "Cumulative flat schedule telescopes to principal + rounded total interest"
+  },
+  {
+    "slug": "cicilan-anuitas",
+    "input": {
+      "principal": "9999999999999",
+      "rate": "7.25",
+      "months": "120"
+    },
+    "checks": [
+      {
+        "path": "values.standard",
+        "kind": "integer",
+        "expected": "117401041158"
+      },
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "14088124938800"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "4088124938801"
+      },
+      {
+        "path": "values.last",
+        "kind": "integer",
+        "expected": "117401040998"
+      }
+    ],
+    "note": "Exact annuity plus independently constructed whole-IDR schedule"
+  },
+  {
+    "slug": "cicilan-flat",
+    "input": {
+      "principal": "9999999999999",
+      "rate": "7.25",
+      "months": "120"
+    },
+    "checks": [
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "17249999999998"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "7249999999999"
+      }
+    ],
+    "note": "Cumulative flat schedule telescopes to principal + rounded total interest"
+  },
+  {
+    "slug": "cicilan-anuitas",
+    "input": {
+      "principal": "9999999999999",
+      "rate": "100",
+      "months": "1"
+    },
+    "checks": [
+      {
+        "path": "values.standard",
+        "kind": "integer",
+        "expected": "10833333333333"
+      },
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "10833333333332"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "833333333333"
+      },
+      {
+        "path": "values.last",
+        "kind": "integer",
+        "expected": "10833333333332"
+      }
+    ],
+    "note": "Exact annuity plus independently constructed whole-IDR schedule"
+  },
+  {
+    "slug": "cicilan-flat",
+    "input": {
+      "principal": "9999999999999",
+      "rate": "100",
+      "months": "1"
+    },
+    "checks": [
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "10833333333332"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "833333333333"
+      }
+    ],
+    "note": "Cumulative flat schedule telescopes to principal + rounded total interest"
+  },
+  {
+    "slug": "cicilan-anuitas",
+    "input": {
+      "principal": "9999999999999",
+      "rate": "100",
+      "months": "7"
+    },
+    "checks": [
+      {
+        "path": "values.standard",
+        "kind": "integer",
+        "expected": "1942675489539"
+      },
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "13598728426763"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "3598728426764"
+      },
+      {
+        "path": "values.last",
+        "kind": "integer",
+        "expected": "1942675489529"
+      }
+    ],
+    "note": "Exact annuity plus independently constructed whole-IDR schedule"
+  },
+  {
+    "slug": "cicilan-flat",
+    "input": {
+      "principal": "9999999999999",
+      "rate": "100",
+      "months": "7"
+    },
+    "checks": [
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "15833333333332"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "5833333333333"
+      }
+    ],
+    "note": "Cumulative flat schedule telescopes to principal + rounded total interest"
+  },
+  {
+    "slug": "cicilan-anuitas",
+    "input": {
+      "principal": "9999999999999",
+      "rate": "100",
+      "months": "120"
+    },
+    "checks": [
+      {
+        "path": "values.standard",
+        "kind": "integer",
+        "expected": "833389489218"
+      },
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "100006738564279"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "90006738564280"
+      },
+      {
+        "path": "values.last",
+        "kind": "integer",
+        "expected": "833389347337"
+      }
+    ],
+    "note": "Exact annuity plus independently constructed whole-IDR schedule"
+  },
+  {
+    "slug": "cicilan-flat",
+    "input": {
+      "principal": "9999999999999",
+      "rate": "100",
+      "months": "120"
+    },
+    "checks": [
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "109999999999989"
+      },
+      {
+        "path": "values.interest",
+        "kind": "integer",
+        "expected": "99999999999990"
+      }
+    ],
+    "note": "Cumulative flat schedule telescopes to principal + rounded total interest"
+  },
+  {
+    "slug": "kpr",
+    "input": {
+      "price": "1537",
+      "down": "300",
+      "months": "7",
+      "fixedRate": "7.25",
+      "fixedMonths": "0",
+      "nextRate": "13.75",
+      "fees": "17"
+    },
+    "checks": [
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "1293"
+      },
+      {
+        "path": "values.outlay",
+        "kind": "integer",
+        "expected": "1610"
+      },
+      {
+        "path": "values.switchBalance",
+        "kind": "integer",
+        "expected": "1237"
+      }
+    ],
+    "note": "Fixed/floating boundaries0,1,6,7; recast remaining principal once"
+  },
+  {
+    "slug": "kpr",
+    "input": {
+      "price": "1537",
+      "down": "300",
+      "months": "7",
+      "fixedRate": "7.25",
+      "fixedMonths": "1",
+      "nextRate": "13.75",
+      "fees": "17"
+    },
+    "checks": [
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "1286"
+      },
+      {
+        "path": "values.outlay",
+        "kind": "integer",
+        "expected": "1603"
+      },
+      {
+        "path": "values.switchBalance",
+        "kind": "integer",
+        "expected": "1062"
+      }
+    ],
+    "note": "Fixed/floating boundaries0,1,6,7; recast remaining principal once"
+  },
+  {
+    "slug": "kpr",
+    "input": {
+      "price": "1537",
+      "down": "300",
+      "months": "7",
+      "fixedRate": "7.25",
+      "fixedMonths": "6",
+      "nextRate": "13.75",
+      "fees": "17"
+    },
+    "checks": [
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "1266"
+      },
+      {
+        "path": "values.outlay",
+        "kind": "integer",
+        "expected": "1583"
+      },
+      {
+        "path": "values.switchBalance",
+        "kind": "integer",
+        "expected": "172"
+      }
+    ],
+    "note": "Fixed/floating boundaries0,1,6,7; recast remaining principal once"
+  },
+  {
+    "slug": "kpr",
+    "input": {
+      "price": "1537",
+      "down": "300",
+      "months": "7",
+      "fixedRate": "7.25",
+      "fixedMonths": "7",
+      "nextRate": "13.75",
+      "fees": "17"
+    },
+    "checks": [
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "1265"
+      },
+      {
+        "path": "values.outlay",
+        "kind": "integer",
+        "expected": "1582"
+      },
+      {
+        "path": "values.switchBalance",
+        "kind": "integer",
+        "expected": "0"
+      }
+    ],
+    "note": "Fixed/floating boundaries0,1,6,7; recast remaining principal once"
+  },
+  {
+    "slug": "pelunasan-dipercepat",
+    "input": {
+      "principal": "1237",
+      "months": "7",
+      "rate": "7.25",
+      "extra": "309",
+      "eventMonth": "1",
+      "penalty": "3"
+    },
+    "checks": [
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "1258"
+      },
+      {
+        "path": "values.net",
+        "kind": "integer",
+        "expected": "7"
+      }
+    ],
+    "note": "Penalty once only on actual extra; final balance zero"
+  },
+  {
+    "slug": "pelunasan-dipercepat",
+    "input": {
+      "principal": "1237",
+      "months": "7",
+      "rate": "7.25",
+      "extra": "309",
+      "eventMonth": "3",
+      "penalty": "3"
+    },
+    "checks": [
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "1261"
+      },
+      {
+        "path": "values.net",
+        "kind": "integer",
+        "expected": "4"
+      }
+    ],
+    "note": "Penalty once only on actual extra; final balance zero"
+  },
+  {
+    "slug": "pelunasan-dipercepat",
+    "input": {
+      "principal": "9999999999999",
+      "months": "120",
+      "rate": "100",
+      "extra": "2499999999999",
+      "eventMonth": "1",
+      "penalty": "3"
+    },
+    "checks": [
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "17772136390832"
+      },
+      {
+        "path": "values.net",
+        "kind": "integer",
+        "expected": "82234602173447"
+      }
+    ],
+    "note": "Penalty once only on actual extra; final balance zero"
+  },
+  {
+    "slug": "pelunasan-dipercepat",
+    "input": {
+      "principal": "9999999999999",
+      "months": "120",
+      "rate": "100",
+      "extra": "2499999999999",
+      "eventMonth": "60",
+      "penalty": "3"
+    },
+    "checks": [
+      {
+        "path": "values.total",
+        "kind": "integer",
+        "expected": "66604026710161"
+      },
+      {
+        "path": "values.net",
+        "kind": "integer",
+        "expected": "33402711854118"
+      }
+    ],
+    "note": "Penalty once only on actual extra; final balance zero"
+  },
+  {
+    "slug": "bunga-efektif-pinjaman",
+    "input": {
+      "proceeds": "1000",
+      "disbursed": "2025-01-01",
+      "repayments": [
+        {
+          "amount": "600",
+          "date": "2026-01-01"
+        },
+        {
+          "amount": "600",
+          "date": "2027-01-01"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "values.effective",
+        "kind": "integer",
+        "expected": "130662"
+      }
+    ],
+    "note": "Decimal90 annual-rate bisection of sum CF/(1+r)^(days/365); irregular, negative, one-day yields"
+  },
+  {
+    "slug": "bunga-efektif-pinjaman",
+    "input": {
+      "proceeds": "1237",
+      "disbursed": "2025-01-01",
+      "repayments": [
+        {
+          "amount": "317",
+          "date": "2025-02-01"
+        },
+        {
+          "amount": "511",
+          "date": "2025-05-18"
+        },
+        {
+          "amount": "613",
+          "date": "2026-01-13"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "values.effective",
+        "kind": "integer",
+        "expected": "306847"
+      }
+    ],
+    "note": "Decimal90 annual-rate bisection of sum CF/(1+r)^(days/365); irregular, negative, one-day yields"
+  },
+  {
+    "slug": "bunga-efektif-pinjaman",
+    "input": {
+      "proceeds": "2000",
+      "disbursed": "2025-01-01",
+      "repayments": [
+        {
+          "amount": "1000",
+          "date": "2026-01-01"
+        },
+        {
+          "amount": "500",
+          "date": "2027-01-01"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "values.effective",
+        "kind": "integer",
+        "expected": "-190983"
+      }
+    ],
+    "note": "Decimal90 annual-rate bisection of sum CF/(1+r)^(days/365); irregular, negative, one-day yields"
+  },
+  {
+    "slug": "bunga-efektif-pinjaman",
+    "input": {
+      "proceeds": "1000",
+      "disbursed": "2025-01-01",
+      "repayments": [
+        {
+          "amount": "1001",
+          "date": "2025-01-02"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "values.effective",
+        "kind": "integer",
+        "expected": "440251"
+      }
+    ],
+    "note": "Decimal90 annual-rate bisection of sum CF/(1+r)^(days/365); irregular, negative, one-day yields"
+  },
+  {
+    "slug": "selisih-tanggal",
+    "input": {
+      "start": "1899-02-27",
+      "end": "1899-03-02",
+      "mode": "elapsed"
+    },
+    "checks": [
+      {
+        "path": "values.days",
+        "kind": "integer",
+        "expected": "3"
+      }
+    ],
+    "note": "Python Gregorian leap-century oracle"
+  },
+  {
+    "slug": "selisih-tanggal",
+    "input": {
+      "start": "1900-02-27",
+      "end": "1900-03-02",
+      "mode": "elapsed"
+    },
+    "checks": [
+      {
+        "path": "values.days",
+        "kind": "integer",
+        "expected": "3"
+      }
+    ],
+    "note": "Python Gregorian leap-century oracle"
+  },
+  {
+    "slug": "selisih-tanggal",
+    "input": {
+      "start": "1999-02-27",
+      "end": "1999-03-02",
+      "mode": "elapsed"
+    },
+    "checks": [
+      {
+        "path": "values.days",
+        "kind": "integer",
+        "expected": "3"
+      }
+    ],
+    "note": "Python Gregorian leap-century oracle"
+  },
+  {
+    "slug": "selisih-tanggal",
+    "input": {
+      "start": "2000-02-27",
+      "end": "2000-03-02",
+      "mode": "elapsed"
+    },
+    "checks": [
+      {
+        "path": "values.days",
+        "kind": "integer",
+        "expected": "4"
+      }
+    ],
+    "note": "Python Gregorian leap-century oracle"
+  },
+  {
+    "slug": "selisih-tanggal",
+    "input": {
+      "start": "2024-02-27",
+      "end": "2024-03-02",
+      "mode": "elapsed"
+    },
+    "checks": [
+      {
+        "path": "values.days",
+        "kind": "integer",
+        "expected": "4"
+      }
+    ],
+    "note": "Python Gregorian leap-century oracle"
+  },
+  {
+    "slug": "selisih-tanggal",
+    "input": {
+      "start": "2099-02-27",
+      "end": "2099-03-02",
+      "mode": "elapsed"
+    },
+    "checks": [
+      {
+        "path": "values.days",
+        "kind": "integer",
+        "expected": "3"
+      }
+    ],
+    "note": "Python Gregorian leap-century oracle"
+  },
+  {
+    "slug": "selisih-tanggal",
+    "input": {
+      "start": "2100-02-27",
+      "end": "2100-03-02",
+      "mode": "elapsed"
+    },
+    "checks": [
+      {
+        "path": "values.days",
+        "kind": "integer",
+        "expected": "3"
+      }
+    ],
+    "note": "Python Gregorian leap-century oracle"
+  },
+  {
+    "slug": "selisih-tanggal",
+    "input": {
+      "start": "9998-02-27",
+      "end": "9998-03-02",
+      "mode": "elapsed"
+    },
+    "checks": [
+      {
+        "path": "values.days",
+        "kind": "integer",
+        "expected": "3"
+      }
+    ],
+    "note": "Python Gregorian leap-century oracle"
+  },
+  {
+    "slug": "cagr",
+    "input": {
+      "initial": "9999999999999",
+      "ending": "1",
+      "years": "100"
+    },
+    "checks": [
+      {
+        "path": "values.cagr",
+        "kind": "integer",
+        "expected": "-258690"
+      }
+    ],
+    "note": "Independent Decimal90 root; losses and near-boundary ratios"
+  },
+  {
+    "slug": "cagr",
+    "input": {
+      "initial": "1237",
+      "ending": "211",
+      "years": "7"
+    },
+    "checks": [
+      {
+        "path": "values.cagr",
+        "kind": "integer",
+        "expected": "-223264"
+      }
+    ],
+    "note": "Independent Decimal90 root; losses and near-boundary ratios"
+  },
+  {
+    "slug": "cagr",
+    "input": {
+      "initial": "211",
+      "ending": "1237",
+      "years": "7"
+    },
+    "checks": [
+      {
+        "path": "values.cagr",
+        "kind": "integer",
+        "expected": "287439"
+      }
+    ],
+    "note": "Independent Decimal90 root; losses and near-boundary ratios"
+  },
+  {
+    "slug": "cagr",
+    "input": {
+      "initial": "1237",
+      "ending": "1237",
+      "years": "100"
+    },
+    "checks": [
+      {
+        "path": "values.cagr",
+        "kind": "integer",
+        "expected": "0"
+      }
+    ],
+    "note": "Independent Decimal90 root; losses and near-boundary ratios"
+  },
+  {
+    "slug": "cagr",
+    "input": {
+      "initial": "1237",
+      "ending": "0",
+      "years": "1"
+    },
+    "checks": [
+      {
+        "path": "values.cagr",
+        "kind": "integer",
+        "expected": "-1000000"
+      }
+    ],
+    "note": "Independent Decimal90 root; losses and near-boundary ratios"
+  },
+  {
+    "slug": "target-tabungan",
+    "input": {
+      "initial": "317",
+      "target": "2111",
+      "rate": "7.25",
+      "months": "7"
+    },
+    "checks": [
+      {
+        "path": "values.payment",
+        "kind": "integer",
+        "expected": "25000"
+      }
+    ],
+    "note": "End-period annuity inverse ceil minimum, no deposits when existing balance sufficient"
+  },
+  {
+    "slug": "target-tabungan",
+    "input": {
+      "initial": "0",
+      "target": "1",
+      "rate": "0",
+      "months": "600"
+    },
+    "checks": [
+      {
+        "path": "values.payment",
+        "kind": "integer",
+        "expected": "100"
+      }
+    ],
+    "note": "End-period annuity inverse ceil minimum, no deposits when existing balance sufficient"
+  },
+  {
+    "slug": "target-tabungan",
+    "input": {
+      "initial": "1237",
+      "target": "1237",
+      "rate": "100",
+      "months": "120"
+    },
+    "checks": [
+      {
+        "path": "values.payment",
+        "kind": "integer",
+        "expected": "0"
+      }
+    ],
+    "note": "End-period annuity inverse ceil minimum, no deposits when existing balance sufficient"
+  },
+  {
+    "slug": "target-tabungan",
+    "input": {
+      "initial": "1",
+      "target": "9999999999999",
+      "rate": "7.25",
+      "months": "600"
+    },
+    "checks": [
+      {
+        "path": "values.payment",
+        "kind": "integer",
+        "expected": "167277266700"
+      }
+    ],
+    "note": "End-period annuity inverse ceil minimum, no deposits when existing balance sufficient"
+  },
+  {
+    "slug": "npv",
+    "input": {
+      "rate": "0",
+      "cashflows": [
+        {
+          "amount": "-1237"
+        },
+        {
+          "amount": "317"
+        },
+        {
+          "amount": "-211"
+        },
+        {
+          "amount": "733"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "values.npv",
+        "kind": "integer",
+        "expected": "-39800"
+      }
+    ],
+    "note": "Signed Fraction discounted sum including year0; negative aggregate and ties"
+  },
+  {
+    "slug": "npv",
+    "input": {
+      "rate": "0",
+      "cashflows": [
+        {
+          "amount": "0"
+        },
+        {
+          "amount": "-1"
+        },
+        {
+          "amount": "0"
+        },
+        {
+          "amount": "0"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "values.npv",
+        "kind": "integer",
+        "expected": "-100"
+      }
+    ],
+    "note": "Signed Fraction discounted sum including year0; negative aggregate and ties"
+  },
+  {
+    "slug": "npv",
+    "input": {
+      "rate": "0",
+      "cashflows": [
+        {
+          "amount": "-1"
+        },
+        {
+          "amount": "0"
+        },
+        {
+          "amount": "0"
+        },
+        {
+          "amount": "1"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "values.npv",
+        "kind": "integer",
+        "expected": "0"
+      }
+    ],
+    "note": "Signed Fraction discounted sum including year0; negative aggregate and ties"
+  },
+  {
+    "slug": "npv",
+    "input": {
+      "rate": "0",
+      "cashflows": [
+        {
+          "amount": "-9999999999999"
+        },
+        {
+          "amount": "9999999999999"
+        },
+        {
+          "amount": "-1"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "values.npv",
+        "kind": "integer",
+        "expected": "-100"
+      }
+    ],
+    "note": "Signed Fraction discounted sum including year0; negative aggregate and ties"
+  },
+  {
+    "slug": "npv",
+    "input": {
+      "rate": "7.25",
+      "cashflows": [
+        {
+          "amount": "-1237"
+        },
+        {
+          "amount": "317"
+        },
+        {
+          "amount": "-211"
+        },
+        {
+          "amount": "733"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "values.npv",
+        "kind": "integer",
+        "expected": "-53069"
+      }
+    ],
+    "note": "Signed Fraction discounted sum including year0; negative aggregate and ties"
+  },
+  {
+    "slug": "npv",
+    "input": {
+      "rate": "7.25",
+      "cashflows": [
+        {
+          "amount": "0"
+        },
+        {
+          "amount": "-1"
+        },
+        {
+          "amount": "0"
+        },
+        {
+          "amount": "0"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "values.npv",
+        "kind": "integer",
+        "expected": "-93"
+      }
+    ],
+    "note": "Signed Fraction discounted sum including year0; negative aggregate and ties"
+  },
+  {
+    "slug": "npv",
+    "input": {
+      "rate": "7.25",
+      "cashflows": [
+        {
+          "amount": "-1"
+        },
+        {
+          "amount": "0"
+        },
+        {
+          "amount": "0"
+        },
+        {
+          "amount": "1"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "values.npv",
+        "kind": "integer",
+        "expected": "-19"
+      }
+    ],
+    "note": "Signed Fraction discounted sum including year0; negative aggregate and ties"
+  },
+  {
+    "slug": "npv",
+    "input": {
+      "rate": "7.25",
+      "cashflows": [
+        {
+          "amount": "-9999999999999"
+        },
+        {
+          "amount": "9999999999999"
+        },
+        {
+          "amount": "-1"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "values.npv",
+        "kind": "integer",
+        "expected": "-67599067599148"
+      }
+    ],
+    "note": "Signed Fraction discounted sum including year0; negative aggregate and ties"
+  },
+  {
+    "slug": "npv",
+    "input": {
+      "rate": "100",
+      "cashflows": [
+        {
+          "amount": "-1237"
+        },
+        {
+          "amount": "317"
+        },
+        {
+          "amount": "-211"
+        },
+        {
+          "amount": "733"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "values.npv",
+        "kind": "integer",
+        "expected": "-103963"
+      }
+    ],
+    "note": "Signed Fraction discounted sum including year0; negative aggregate and ties"
+  },
+  {
+    "slug": "npv",
+    "input": {
+      "rate": "100",
+      "cashflows": [
+        {
+          "amount": "0"
+        },
+        {
+          "amount": "-1"
+        },
+        {
+          "amount": "0"
+        },
+        {
+          "amount": "0"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "values.npv",
+        "kind": "integer",
+        "expected": "-50"
+      }
+    ],
+    "note": "Signed Fraction discounted sum including year0; negative aggregate and ties"
+  },
+  {
+    "slug": "npv",
+    "input": {
+      "rate": "100",
+      "cashflows": [
+        {
+          "amount": "-1"
+        },
+        {
+          "amount": "0"
+        },
+        {
+          "amount": "0"
+        },
+        {
+          "amount": "1"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "values.npv",
+        "kind": "integer",
+        "expected": "-88"
+      }
+    ],
+    "note": "Signed Fraction discounted sum including year0; negative aggregate and ties"
+  },
+  {
+    "slug": "npv",
+    "input": {
+      "rate": "100",
+      "cashflows": [
+        {
+          "amount": "-9999999999999"
+        },
+        {
+          "amount": "9999999999999"
+        },
+        {
+          "amount": "-1"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "values.npv",
+        "kind": "integer",
+        "expected": "-499999999999975"
+      }
+    ],
+    "note": "Signed Fraction discounted sum including year0; negative aggregate and ties"
+  },
+  {
+    "slug": "eoq",
+    "input": {
+      "demand": "17",
+      "order": "31",
+      "holding": "7"
+    },
+    "checks": [
+      {
+        "path": "values.quantity",
+        "kind": "integer",
+        "expected": "12"
+      }
+    ],
+    "note": "Brute-force integer cost minimization independent of application sqrt"
+  },
+  {
+    "slug": "eoq",
+    "input": {
+      "demand": "1",
+      "order": "1",
+      "holding": "100"
+    },
+    "checks": [
+      {
+        "path": "values.quantity",
+        "kind": "integer",
+        "expected": "1"
+      }
+    ],
+    "note": "Brute-force integer cost minimization independent of application sqrt"
+  },
+  {
+    "slug": "eoq",
+    "input": {
+      "demand": "100",
+      "order": "1",
+      "holding": "100"
+    },
+    "checks": [
+      {
+        "path": "values.quantity",
+        "kind": "integer",
+        "expected": "1"
+      }
+    ],
+    "note": "Brute-force integer cost minimization independent of application sqrt"
+  },
+  {
+    "slug": "eoq",
+    "input": {
+      "demand": "173",
+      "order": "29",
+      "holding": "11"
+    },
+    "checks": [
+      {
+        "path": "values.quantity",
+        "kind": "integer",
+        "expected": "30"
+      }
+    ],
+    "note": "Brute-force integer cost minimization independent of application sqrt"
+  },
+  {
+    "slug": "eoq",
+    "input": {
+      "demand": "211",
+      "order": "317",
+      "holding": "137"
+    },
+    "checks": [
+      {
+        "path": "values.quantity",
+        "kind": "integer",
+        "expected": "31"
+      }
+    ],
+    "note": "Brute-force integer cost minimization independent of application sqrt"
+  },
+  {
+    "slug": "eoq",
+    "input": {
+      "demand": "999",
+      "order": "3",
+      "holding": "19"
+    },
+    "checks": [
+      {
+        "path": "values.quantity",
+        "kind": "integer",
+        "expected": "18"
+      }
+    ],
+    "note": "Brute-force integer cost minimization independent of application sqrt"
+  },
+  {
+    "slug": "shopee",
+    "input": {
+      "price": "0",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "0",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "-1"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "-4"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "tiktok-shop",
+    "input": {
+      "price": "0",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "0",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "-1"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "-4"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "tokopedia",
+    "input": {
+      "price": "0",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "0",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "-1"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "-4"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "lazada",
+    "input": {
+      "price": "0",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "0",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "-1"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "-4"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "shopee",
+    "input": {
+      "price": "0",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "0.000001",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "-1"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "-4"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "tiktok-shop",
+    "input": {
+      "price": "0",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "0.000001",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "-1"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "-4"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "tokopedia",
+    "input": {
+      "price": "0",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "0.000001",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "-1"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "-4"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "lazada",
+    "input": {
+      "price": "0",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "0.000001",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "-1"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "-4"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "shopee",
+    "input": {
+      "price": "0",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "50",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "-1"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "-4"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "tiktok-shop",
+    "input": {
+      "price": "0",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "50",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "-1"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "-4"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "tokopedia",
+    "input": {
+      "price": "0",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "50",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "-1"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "-4"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "lazada",
+    "input": {
+      "price": "0",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "50",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "-1"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "-4"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "shopee",
+    "input": {
+      "price": "0",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "100",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "-1"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "-4"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "tiktok-shop",
+    "input": {
+      "price": "0",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "100",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "-1"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "-4"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "tokopedia",
+    "input": {
+      "price": "0",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "100",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "-1"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "-4"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "lazada",
+    "input": {
+      "price": "0",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "100",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "-1"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "-4"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "shopee",
+    "input": {
+      "price": "1",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "0",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "2"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "-1"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "tiktok-shop",
+    "input": {
+      "price": "1",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "0",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "2"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "-1"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "tokopedia",
+    "input": {
+      "price": "1",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "0",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "2"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "-1"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "lazada",
+    "input": {
+      "price": "1",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "0",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "2"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "-1"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "shopee",
+    "input": {
+      "price": "1",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "0.000001",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "2"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "-1"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "tiktok-shop",
+    "input": {
+      "price": "1",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "0.000001",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "2"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "-1"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "tokopedia",
+    "input": {
+      "price": "1",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "0.000001",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "2"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "-1"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "lazada",
+    "input": {
+      "price": "1",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "0.000001",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "2"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "-1"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "shopee",
+    "input": {
+      "price": "1",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "50",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "1"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "-2"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "tiktok-shop",
+    "input": {
+      "price": "1",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "50",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "1"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "-2"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "tokopedia",
+    "input": {
+      "price": "1",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "50",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "1"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "-2"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "lazada",
+    "input": {
+      "price": "1",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "50",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "1"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "-2"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "shopee",
+    "input": {
+      "price": "1",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "100",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "-1"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "-4"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "tiktok-shop",
+    "input": {
+      "price": "1",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "100",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "-1"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "-4"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "tokopedia",
+    "input": {
+      "price": "1",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "100",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "-1"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "-4"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "lazada",
+    "input": {
+      "price": "1",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "100",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "-1"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "-4"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "shopee",
+    "input": {
+      "price": "7",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "0",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "20"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "17"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "tiktok-shop",
+    "input": {
+      "price": "7",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "0",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "20"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "17"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "tokopedia",
+    "input": {
+      "price": "7",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "0",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "20"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "17"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "lazada",
+    "input": {
+      "price": "7",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "0",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "20"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "17"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "shopee",
+    "input": {
+      "price": "7",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "0.000001",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "20"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "17"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "tiktok-shop",
+    "input": {
+      "price": "7",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "0.000001",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "20"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "17"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "tokopedia",
+    "input": {
+      "price": "7",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "0.000001",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "20"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "17"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "lazada",
+    "input": {
+      "price": "7",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "0.000001",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "20"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "17"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "shopee",
+    "input": {
+      "price": "7",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "50",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "10"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "7"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "tiktok-shop",
+    "input": {
+      "price": "7",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "50",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "10"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "7"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "tokopedia",
+    "input": {
+      "price": "7",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "50",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "10"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "7"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "lazada",
+    "input": {
+      "price": "7",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "50",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "10"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "7"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "shopee",
+    "input": {
+      "price": "7",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "100",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "-1"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "-4"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "tiktok-shop",
+    "input": {
+      "price": "7",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "100",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "-1"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "-4"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "tokopedia",
+    "input": {
+      "price": "7",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "100",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "-1"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "-4"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "lazada",
+    "input": {
+      "price": "7",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "100",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "-1"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "-4"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "shopee",
+    "input": {
+      "price": "9999999999999",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "0",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "29999999999996"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "29999999999993"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "tiktok-shop",
+    "input": {
+      "price": "9999999999999",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "0",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "29999999999996"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "29999999999993"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "tokopedia",
+    "input": {
+      "price": "9999999999999",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "0",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "29999999999996"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "29999999999993"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "lazada",
+    "input": {
+      "price": "9999999999999",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "0",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "29999999999996"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "29999999999993"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "shopee",
+    "input": {
+      "price": "9999999999999",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "0.000001",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "29999999699996"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "29999999699993"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "tiktok-shop",
+    "input": {
+      "price": "9999999999999",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "0.000001",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "29999999699996"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "29999999699993"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "tokopedia",
+    "input": {
+      "price": "9999999999999",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "0.000001",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "29999999699996"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "29999999699993"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "lazada",
+    "input": {
+      "price": "9999999999999",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "0.000001",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "29999999699996"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "29999999699993"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "shopee",
+    "input": {
+      "price": "9999999999999",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "50",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "14999999999998"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "14999999999995"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "tiktok-shop",
+    "input": {
+      "price": "9999999999999",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "50",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "14999999999998"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "14999999999995"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "tokopedia",
+    "input": {
+      "price": "9999999999999",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "50",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "14999999999998"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "14999999999995"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "lazada",
+    "input": {
+      "price": "9999999999999",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "50",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "14999999999998"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "14999999999995"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "shopee",
+    "input": {
+      "price": "9999999999999",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "100",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "-1"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "-4"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "tiktok-shop",
+    "input": {
+      "price": "9999999999999",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "100",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "-1"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "-4"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "tokopedia",
+    "input": {
+      "price": "9999999999999",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "100",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "-1"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "-4"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "lazada",
+    "input": {
+      "price": "9999999999999",
+      "quantity": "3",
+      "discount": "0",
+      "cost": "1",
+      "buyerShipping": "0",
+      "shippingFlow": "excluded",
+      "shipping": "1",
+      "reimbursement": "0",
+      "receipts": "0",
+      "other": "0",
+      "coverage": "ordinary",
+      "confirmation": "complete",
+      "fees": [
+        {
+          "label": "Tie",
+          "type": "percent",
+          "basis": "gross",
+          "rate": "100",
+          "minimumMode": "none",
+          "capMode": "none"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "ledger.payoutCash",
+        "kind": "integer",
+        "expected": "-1"
+      },
+      {
+        "path": "ledger.profitCash",
+        "kind": "integer",
+        "expected": "-4"
+      }
+    ],
+    "note": "Fraction exact percentage, aggregate half-away signed cash, HPP conservation"
+  },
+  {
+    "slug": "gross-up-pajak",
+    "input": {
+      "target": "0",
+      "rate": "0",
+      "fixed": "0"
+    },
+    "checks": [
+      {
+        "path": "amount",
+        "kind": "integer",
+        "expected": "0"
+      }
+    ],
+    "note": "Exact minimum integer inverse verified against target before rounding"
+  },
+  {
+    "slug": "gross-up-pajak",
+    "input": {
+      "target": "1",
+      "rate": "0",
+      "fixed": "1"
+    },
+    "checks": [
+      {
+        "path": "amount",
+        "kind": "integer",
+        "expected": "2"
+      }
+    ],
+    "note": "Exact minimum integer inverse verified against target before rounding"
+  },
+  {
+    "slug": "gross-up-pajak",
+    "input": {
+      "target": "1237",
+      "rate": "0",
+      "fixed": "31"
+    },
+    "checks": [
+      {
+        "path": "amount",
+        "kind": "integer",
+        "expected": "1268"
+      }
+    ],
+    "note": "Exact minimum integer inverse verified against target before rounding"
+  },
+  {
+    "slug": "gross-up-pajak",
+    "input": {
+      "target": "9999999999999",
+      "rate": "0",
+      "fixed": "9999999999999"
+    },
+    "checks": [
+      {
+        "path": "amount",
+        "kind": "integer",
+        "expected": "19999999999998"
+      }
+    ],
+    "note": "Exact minimum integer inverse verified against target before rounding"
+  },
+  {
+    "slug": "gross-up-pajak",
+    "input": {
+      "target": "0",
+      "rate": "7.25",
+      "fixed": "0"
+    },
+    "checks": [
+      {
+        "path": "amount",
+        "kind": "integer",
+        "expected": "0"
+      }
+    ],
+    "note": "Exact minimum integer inverse verified against target before rounding"
+  },
+  {
+    "slug": "gross-up-pajak",
+    "input": {
+      "target": "1",
+      "rate": "7.25",
+      "fixed": "1"
+    },
+    "checks": [
+      {
+        "path": "amount",
+        "kind": "integer",
+        "expected": "3"
+      }
+    ],
+    "note": "Exact minimum integer inverse verified against target before rounding"
+  },
+  {
+    "slug": "gross-up-pajak",
+    "input": {
+      "target": "1237",
+      "rate": "7.25",
+      "fixed": "31"
+    },
+    "checks": [
+      {
+        "path": "amount",
+        "kind": "integer",
+        "expected": "1368"
+      }
+    ],
+    "note": "Exact minimum integer inverse verified against target before rounding"
+  },
+  {
+    "slug": "gross-up-pajak",
+    "input": {
+      "target": "9999999999999",
+      "rate": "7.25",
+      "fixed": "9999999999999"
+    },
+    "checks": [
+      {
+        "path": "amount",
+        "kind": "integer",
+        "expected": "21563342318058"
+      }
+    ],
+    "note": "Exact minimum integer inverse verified against target before rounding"
+  },
+  {
+    "slug": "gross-up-pajak",
+    "input": {
+      "target": "0",
+      "rate": "99.999999",
+      "fixed": "0"
+    },
+    "checks": [
+      {
+        "path": "amount",
+        "kind": "integer",
+        "expected": "0"
+      }
+    ],
+    "note": "Exact minimum integer inverse verified against target before rounding"
+  },
+  {
+    "slug": "gross-up-pajak",
+    "input": {
+      "target": "1",
+      "rate": "99.999999",
+      "fixed": "1"
+    },
+    "checks": [
+      {
+        "path": "amount",
+        "kind": "integer",
+        "expected": "200000000"
+      }
+    ],
+    "note": "Exact minimum integer inverse verified against target before rounding"
+  },
+  {
+    "slug": "gross-up-pajak",
+    "input": {
+      "target": "1237",
+      "rate": "99.999999",
+      "fixed": "31"
+    },
+    "checks": [
+      {
+        "path": "amount",
+        "kind": "integer",
+        "expected": "126800000000"
+      }
+    ],
+    "note": "Exact minimum integer inverse verified against target before rounding"
+  },
+  {
+    "slug": "gross-up-pajak",
+    "input": {
+      "target": "9999999999999",
+      "rate": "99.999999",
+      "fixed": "9999999999999"
+    },
+    "checks": [
+      {
+        "path": "amount",
+        "kind": "integer",
+        "expected": "1999999999999800000000"
+      }
+    ],
+    "note": "Exact minimum integer inverse verified against target before rounding"
+  },
+  {
+    "slug": "pph-21-bulanan",
+    "input": {
+      "year": "2024",
+      "month": "5",
+      "finalMonth": "12",
+      "employment": "full-year",
+      "employers": "single",
+      "relief": "none",
+      "classification": "ordinary",
+      "confirmation": "confirmed",
+      "ptkp": "TK/0",
+      "gross": "5399999"
+    },
+    "checks": [
+      {
+        "path": "amount",
+        "kind": "integer",
+        "expected": "0"
+      }
+    ],
+    "note": "Independent official PP58 selected A/B/C endpoints inclusive, ±Rp1"
+  },
+  {
+    "slug": "pph-21-bulanan",
+    "input": {
+      "year": "2024",
+      "month": "5",
+      "finalMonth": "12",
+      "employment": "full-year",
+      "employers": "single",
+      "relief": "none",
+      "classification": "ordinary",
+      "confirmation": "confirmed",
+      "ptkp": "TK/0",
+      "gross": "5400000"
+    },
+    "checks": [
+      {
+        "path": "amount",
+        "kind": "integer",
+        "expected": "0"
+      }
+    ],
+    "note": "Independent official PP58 selected A/B/C endpoints inclusive, ±Rp1"
+  },
+  {
+    "slug": "pph-21-bulanan",
+    "input": {
+      "year": "2024",
+      "month": "5",
+      "finalMonth": "12",
+      "employment": "full-year",
+      "employers": "single",
+      "relief": "none",
+      "classification": "ordinary",
+      "confirmation": "confirmed",
+      "ptkp": "TK/0",
+      "gross": "5400001"
+    },
+    "checks": [
+      {
+        "path": "amount",
+        "kind": "integer",
+        "expected": "13500"
+      }
+    ],
+    "note": "Independent official PP58 selected A/B/C endpoints inclusive, ±Rp1"
+  },
+  {
+    "slug": "pph-21-bulanan",
+    "input": {
+      "year": "2024",
+      "month": "5",
+      "finalMonth": "12",
+      "employment": "full-year",
+      "employers": "single",
+      "relief": "none",
+      "classification": "ordinary",
+      "confirmation": "confirmed",
+      "ptkp": "TK/0",
+      "gross": "8549999"
+    },
+    "checks": [
+      {
+        "path": "amount",
+        "kind": "integer",
+        "expected": "128250"
+      }
+    ],
+    "note": "Independent official PP58 selected A/B/C endpoints inclusive, ±Rp1"
+  },
+  {
+    "slug": "pph-21-bulanan",
+    "input": {
+      "year": "2024",
+      "month": "5",
+      "finalMonth": "12",
+      "employment": "full-year",
+      "employers": "single",
+      "relief": "none",
+      "classification": "ordinary",
+      "confirmation": "confirmed",
+      "ptkp": "TK/0",
+      "gross": "8550000"
+    },
+    "checks": [
+      {
+        "path": "amount",
+        "kind": "integer",
+        "expected": "128250"
+      }
+    ],
+    "note": "Independent official PP58 selected A/B/C endpoints inclusive, ±Rp1"
+  },
+  {
+    "slug": "pph-21-bulanan",
+    "input": {
+      "year": "2024",
+      "month": "5",
+      "finalMonth": "12",
+      "employment": "full-year",
+      "employers": "single",
+      "relief": "none",
+      "classification": "ordinary",
+      "confirmation": "confirmed",
+      "ptkp": "TK/0",
+      "gross": "8550001"
+    },
+    "checks": [
+      {
+        "path": "amount",
+        "kind": "integer",
+        "expected": "149625"
+      }
+    ],
+    "note": "Independent official PP58 selected A/B/C endpoints inclusive, ±Rp1"
+  },
+  {
+    "slug": "pph-21-bulanan",
+    "input": {
+      "year": "2024",
+      "month": "5",
+      "finalMonth": "12",
+      "employment": "full-year",
+      "employers": "single",
+      "relief": "none",
+      "classification": "ordinary",
+      "confirmation": "confirmed",
+      "ptkp": "TK/2",
+      "gross": "6199999"
+    },
+    "checks": [
+      {
+        "path": "amount",
+        "kind": "integer",
+        "expected": "0"
+      }
+    ],
+    "note": "Independent official PP58 selected A/B/C endpoints inclusive, ±Rp1"
+  },
+  {
+    "slug": "pph-21-bulanan",
+    "input": {
+      "year": "2024",
+      "month": "5",
+      "finalMonth": "12",
+      "employment": "full-year",
+      "employers": "single",
+      "relief": "none",
+      "classification": "ordinary",
+      "confirmation": "confirmed",
+      "ptkp": "TK/2",
+      "gross": "6200000"
+    },
+    "checks": [
+      {
+        "path": "amount",
+        "kind": "integer",
+        "expected": "0"
+      }
+    ],
+    "note": "Independent official PP58 selected A/B/C endpoints inclusive, ±Rp1"
+  },
+  {
+    "slug": "pph-21-bulanan",
+    "input": {
+      "year": "2024",
+      "month": "5",
+      "finalMonth": "12",
+      "employment": "full-year",
+      "employers": "single",
+      "relief": "none",
+      "classification": "ordinary",
+      "confirmation": "confirmed",
+      "ptkp": "TK/2",
+      "gross": "6200001"
+    },
+    "checks": [
+      {
+        "path": "amount",
+        "kind": "integer",
+        "expected": "15500"
+      }
+    ],
+    "note": "Independent official PP58 selected A/B/C endpoints inclusive, ±Rp1"
+  },
+  {
+    "slug": "pph-21-bulanan",
+    "input": {
+      "year": "2024",
+      "month": "5",
+      "finalMonth": "12",
+      "employment": "full-year",
+      "employers": "single",
+      "relief": "none",
+      "classification": "ordinary",
+      "confirmation": "confirmed",
+      "ptkp": "K/3",
+      "gross": "6599999"
+    },
+    "checks": [
+      {
+        "path": "amount",
+        "kind": "integer",
+        "expected": "0"
+      }
+    ],
+    "note": "Independent official PP58 selected A/B/C endpoints inclusive, ±Rp1"
+  },
+  {
+    "slug": "pph-21-bulanan",
+    "input": {
+      "year": "2024",
+      "month": "5",
+      "finalMonth": "12",
+      "employment": "full-year",
+      "employers": "single",
+      "relief": "none",
+      "classification": "ordinary",
+      "confirmation": "confirmed",
+      "ptkp": "K/3",
+      "gross": "6600000"
+    },
+    "checks": [
+      {
+        "path": "amount",
+        "kind": "integer",
+        "expected": "0"
+      }
+    ],
+    "note": "Independent official PP58 selected A/B/C endpoints inclusive, ±Rp1"
+  },
+  {
+    "slug": "pph-21-bulanan",
+    "input": {
+      "year": "2024",
+      "month": "5",
+      "finalMonth": "12",
+      "employment": "full-year",
+      "employers": "single",
+      "relief": "none",
+      "classification": "ordinary",
+      "confirmation": "confirmed",
+      "ptkp": "K/3",
+      "gross": "6600001"
+    },
+    "checks": [
+      {
+        "path": "amount",
+        "kind": "integer",
+        "expected": "16500"
+      }
+    ],
+    "note": "Independent official PP58 selected A/B/C endpoints inclusive, ±Rp1"
+  },
+  {
+    "slug": "ppn",
+    "input": {
+      "date": "2025-01-01",
+      "treatment": "luxury-retail",
+      "confirmation": "confirmed",
+      "mode": "inclusive",
+      "amount": "1237"
+    },
+    "checks": [
+      {
+        "path": "amount",
+        "kind": "integer",
+        "expected": "123"
+      }
+    ],
+    "note": "PMK131Pasal5 consumer-luxury January transition, inclusive price inversion"
+  },
+  {
+    "slug": "ppn",
+    "input": {
+      "date": "2025-01-31",
+      "treatment": "luxury-retail",
+      "confirmation": "confirmed",
+      "mode": "inclusive",
+      "amount": "1237"
+    },
+    "checks": [
+      {
+        "path": "amount",
+        "kind": "integer",
+        "expected": "123"
+      }
+    ],
+    "note": "PMK131Pasal5 consumer-luxury January transition, inclusive price inversion"
+  },
+  {
+    "slug": "ppn",
+    "input": {
+      "date": "2025-02-01",
+      "treatment": "luxury-retail",
+      "confirmation": "confirmed",
+      "mode": "inclusive",
+      "amount": "1237"
+    },
+    "checks": [
+      {
+        "path": "amount",
+        "kind": "integer",
+        "expected": "133"
+      }
+    ],
+    "note": "PMK131Pasal5 consumer-luxury January transition, inclusive price inversion"
+  },
+  {
+    "slug": "bagi-tagihan",
+    "input": {
+      "service": "1",
+      "tax": "0",
+      "mode": "proportional",
+      "people": [
+        {
+          "subtotal": "1"
+        },
+        {
+          "subtotal": "1"
+        },
+        {
+          "subtotal": "1"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "values.difference",
+        "kind": "integer",
+        "expected": "0"
+      },
+      {
+        "path": "values.grand",
+        "kind": "integer",
+        "expected": "4"
+      }
+    ],
+    "note": "Independent largest remainders conserve all whole rupiah"
+  },
+  {
+    "slug": "bagi-tagihan",
+    "input": {
+      "service": "18",
+      "tax": "0",
+      "mode": "proportional",
+      "people": [
+        {
+          "subtotal": "137"
+        },
+        {
+          "subtotal": "211"
+        },
+        {
+          "subtotal": "317"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "values.difference",
+        "kind": "integer",
+        "expected": "0"
+      },
+      {
+        "path": "values.grand",
+        "kind": "integer",
+        "expected": "683"
+      }
+    ],
+    "note": "Independent largest remainders conserve all whole rupiah"
+  },
+  {
+    "slug": "bagi-tagihan",
+    "input": {
+      "service": "1",
+      "tax": "0",
+      "mode": "proportional",
+      "people": [
+        {
+          "subtotal": "0"
+        },
+        {
+          "subtotal": "7"
+        },
+        {
+          "subtotal": "11"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "values.difference",
+        "kind": "integer",
+        "expected": "0"
+      },
+      {
+        "path": "values.grand",
+        "kind": "integer",
+        "expected": "19"
+      }
+    ],
+    "note": "Independent largest remainders conserve all whole rupiah"
+  },
+  {
+    "slug": "bagi-tagihan",
+    "input": {
+      "service": "2",
+      "tax": "0",
+      "mode": "proportional",
+      "people": [
+        {
+          "subtotal": "9999999999999"
+        },
+        {
+          "subtotal": "1"
+        },
+        {
+          "subtotal": "1"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "values.difference",
+        "kind": "integer",
+        "expected": "0"
+      },
+      {
+        "path": "values.grand",
+        "kind": "integer",
+        "expected": "10000000000003"
+      }
+    ],
+    "note": "Independent largest remainders conserve all whole rupiah"
+  },
+  {
+    "slug": "pph-final-umkm",
+    "input": {
+      "year": "2026",
+      "month": "6",
+      "registration": "2026-05-03",
+      "taxpayer": "individual",
+      "income": "business",
+      "eligibility": "confirmed",
+      "aggregation": "confirmed",
+      "wpTurnoverScope": "all-businesses",
+      "priorRelatedTurnover": "0",
+      "currentRelatedTurnover": "500001236",
+      "history": "clean",
+      "months": [
+        {
+          "turnover": "0"
+        },
+        {
+          "turnover": "0"
+        },
+        {
+          "turnover": "0"
+        },
+        {
+          "turnover": "0"
+        },
+        {
+          "turnover": "499999999"
+        },
+        {
+          "turnover": "1237"
+        },
+        {
+          "turnover": "0"
+        },
+        {
+          "turnover": "0"
+        },
+        {
+          "turnover": "0"
+        },
+        {
+          "turnover": "0"
+        },
+        {
+          "turnover": "0"
+        },
+        {
+          "turnover": "0"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "amount",
+        "kind": "integer",
+        "expected": "6"
+      }
+    ],
+    "note": "PMK164 own-WP500m boundary; varying PP20 related-party total only tests eligibility"
+  },
+  {
+    "slug": "pph-final-umkm",
+    "input": {
+      "year": "2026",
+      "month": "6",
+      "registration": "2026-05-03",
+      "taxpayer": "individual",
+      "income": "business",
+      "eligibility": "confirmed",
+      "aggregation": "confirmed",
+      "wpTurnoverScope": "all-businesses",
+      "priorRelatedTurnover": "0",
+      "currentRelatedTurnover": "2000000000",
+      "history": "clean",
+      "months": [
+        {
+          "turnover": "0"
+        },
+        {
+          "turnover": "0"
+        },
+        {
+          "turnover": "0"
+        },
+        {
+          "turnover": "0"
+        },
+        {
+          "turnover": "499999999"
+        },
+        {
+          "turnover": "1237"
+        },
+        {
+          "turnover": "0"
+        },
+        {
+          "turnover": "0"
+        },
+        {
+          "turnover": "0"
+        },
+        {
+          "turnover": "0"
+        },
+        {
+          "turnover": "0"
+        },
+        {
+          "turnover": "0"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "amount",
+        "kind": "integer",
+        "expected": "6"
+      }
+    ],
+    "note": "PMK164 own-WP500m boundary; varying PP20 related-party total only tests eligibility"
+  },
+  {
+    "slug": "pph-final-umkm",
+    "input": {
+      "year": "2026",
+      "month": "6",
+      "registration": "2026-05-03",
+      "taxpayer": "individual",
+      "income": "business",
+      "eligibility": "confirmed",
+      "aggregation": "confirmed",
+      "wpTurnoverScope": "all-businesses",
+      "priorRelatedTurnover": "0",
+      "currentRelatedTurnover": "4800000000",
+      "history": "clean",
+      "months": [
+        {
+          "turnover": "0"
+        },
+        {
+          "turnover": "0"
+        },
+        {
+          "turnover": "0"
+        },
+        {
+          "turnover": "0"
+        },
+        {
+          "turnover": "499999999"
+        },
+        {
+          "turnover": "1237"
+        },
+        {
+          "turnover": "0"
+        },
+        {
+          "turnover": "0"
+        },
+        {
+          "turnover": "0"
+        },
+        {
+          "turnover": "0"
+        },
+        {
+          "turnover": "0"
+        },
+        {
+          "turnover": "0"
+        }
+      ]
+    },
+    "checks": [
+      {
+        "path": "amount",
+        "kind": "integer",
+        "expected": "6"
+      }
+    ],
+    "note": "PMK164 own-WP500m boundary; varying PP20 related-party total only tests eligibility"
+  }
+]

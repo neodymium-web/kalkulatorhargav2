@@ -1,0 +1,5482 @@
+{
+  "method": "Python Fraction/Decimal; no application imports; fresh input vectors",
+  "baseline": "f865ee826c4965b1557c20b46c802f3e54138efc",
+  "cases": [
+    {
+      "slug": "hpp",
+      "input": {
+        "materials": "843",
+        "labor": "127",
+        "overhead": "49",
+        "units": "7"
+      },
+      "checks": [
+        {
+          "path": "perUnit",
+          "kind": "integer",
+          "expected": "146"
+        },
+        {
+          "path": "total",
+          "kind": "integer",
+          "expected": "1019"
+        }
+      ],
+      "proof": "(843+127+49)/7; half-up whole rupiah",
+      "edgeInput": {
+        "materials": "843",
+        "labor": "127",
+        "overhead": "49",
+        "units": "0"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "production-cost",
+      "formulaVersion": "1.0.0",
+      "sources": [],
+      "existingTests": [
+        {
+          "file": "tests/hpp.unit.ts",
+          "name": "calculates the documented production batch"
+        },
+        {
+          "file": "tests/hpp.unit.ts",
+          "name": "rounds %s rupiah across %s units"
+        },
+        {
+          "file": "tests/hpp.unit.ts",
+          "name": "preserves precision for the maximum supported costs"
+        },
+        {
+          "file": "tests/hpp.unit.ts",
+          "name": "rejects invalid unit count %s"
+        },
+        {
+          "file": "tests/hpp.unit.ts",
+          "name": "rejects invalid cost %s"
+        }
+      ]
+    },
+    {
+      "slug": "harga-jual",
+      "input": {
+        "cost": "917",
+        "margin": "17.5"
+      },
+      "checks": [
+        {
+          "path": "values.minimum",
+          "kind": "integer",
+          "expected": "1112"
+        }
+      ],
+      "proof": "ceil(917/(1−17.5%))",
+      "edgeInput": {
+        "cost": "917",
+        "margin": "100"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-harga-jual",
+      "formulaVersion": "1.0.0",
+      "sources": [],
+      "existingTests": [
+        {
+          "file": "tests/business.unit.ts",
+          "name": "harga jual uses gross margin and rounds up to meet the threshold"
+        },
+        {
+          "file": "tests/business.unit.ts",
+          "name": "harga jual supports exact, zero-cost and large thresholds"
+        },
+        {
+          "file": "tests/business.unit.ts",
+          "name": "harga jual rejects invalid percentages"
+        }
+      ]
+    },
+    {
+      "slug": "margin-laba",
+      "input": {
+        "price": "137",
+        "cost": "211"
+      },
+      "checks": [
+        {
+          "path": "values.percent",
+          "kind": "integer",
+          "expected": "-5401"
+        }
+      ],
+      "proof": "(137−211)/137 ×100%, scale100",
+      "edgeInput": {
+        "price": "0",
+        "cost": "211"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-margin-laba",
+      "formulaVersion": "1.0.0",
+      "sources": [],
+      "existingTests": [
+        {
+          "file": "tests/business.unit.ts",
+          "name": "margin and markup use different denominators"
+        },
+        {
+          "file": "tests/business.unit.ts",
+          "name": "margin reports losses and rejects a zero selling price"
+        },
+        {
+          "file": "tests/business.unit.ts",
+          "name": "percentages round to two places without floating-point conversion"
+        }
+      ]
+    },
+    {
+      "slug": "markup",
+      "input": {
+        "price": "211",
+        "cost": "137"
+      },
+      "checks": [
+        {
+          "path": "values.percent",
+          "kind": "integer",
+          "expected": "5401"
+        }
+      ],
+      "proof": "(211−137)/137 ×100%, scale100",
+      "edgeInput": {
+        "price": "211",
+        "cost": "0"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-markup",
+      "formulaVersion": "1.0.0",
+      "sources": [],
+      "existingTests": [
+        {
+          "file": "tests/business.unit.ts",
+          "name": "margin and markup use different denominators"
+        },
+        {
+          "file": "tests/business.unit.ts",
+          "name": "markup accepts a zero price but rejects a zero cost"
+        },
+        {
+          "file": "tests/business.unit.ts",
+          "name": "percentages round to two places without floating-point conversion"
+        }
+      ]
+    },
+    {
+      "slug": "bep",
+      "input": {
+        "fixed": "101",
+        "price": "31",
+        "variable": "17"
+      },
+      "checks": [
+        {
+          "path": "values.units",
+          "kind": "integer",
+          "expected": "8"
+        }
+      ],
+      "proof": "ceil(101/(31−17))",
+      "edgeInput": {
+        "fixed": "101",
+        "price": "-1",
+        "variable": "17"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-bep",
+      "formulaVersion": "1.0.0",
+      "sources": [],
+      "existingTests": [
+        {
+          "file": "tests/business.unit.ts",
+          "name": "BEP rounds fractional units up and preserves exact division"
+        },
+        {
+          "file": "tests/business.unit.ts",
+          "name": "BEP handles zero fixed costs and nonpositive contribution"
+        },
+        {
+          "file": "tests/business.unit.ts",
+          "name": "volume targets preserve large values"
+        }
+      ]
+    },
+    {
+      "slug": "target-laba",
+      "input": {
+        "fixed": "101",
+        "price": "31",
+        "variable": "17",
+        "target": "53"
+      },
+      "checks": [
+        {
+          "path": "values.units",
+          "kind": "integer",
+          "expected": "11"
+        }
+      ],
+      "proof": "ceil((101+53)/(31−17))",
+      "edgeInput": {
+        "fixed": "101",
+        "price": "31",
+        "variable": "17",
+        "target": "-1"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-target-laba",
+      "formulaVersion": "1.0.0",
+      "sources": [],
+      "existingTests": [
+        {
+          "file": "tests/business.unit.ts",
+          "name": "target laba rounds up and reduces to BEP when target is zero"
+        },
+        {
+          "file": "tests/business.unit.ts",
+          "name": "target laba handles zero requirement and unreachable targets"
+        },
+        {
+          "file": "tests/business.unit.ts",
+          "name": "volume targets preserve large values"
+        }
+      ]
+    },
+    {
+      "slug": "harga-pokok-penjualan",
+      "input": {
+        "start": "2024-02-01",
+        "end": "2024-02-29",
+        "opening": "701",
+        "purchases": "389",
+        "closing": "211"
+      },
+      "checks": [
+        {
+          "path": "values.cogs",
+          "kind": "integer",
+          "expected": "879"
+        }
+      ],
+      "proof": "Opening + purchases − closing",
+      "edgeInput": {
+        "start": "2024-02-01",
+        "end": "2024-02-29",
+        "opening": "701",
+        "purchases": "389",
+        "closing": "1091"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-harga-pokok-penjualan",
+      "formulaVersion": "1.0.0",
+      "sources": [],
+      "existingTests": [
+        {
+          "file": "tests/operations.unit.ts",
+          "name": "calculates merchandising COGS and checks available inventory"
+        }
+      ]
+    },
+    {
+      "slug": "yield-bahan",
+      "input": {
+        "unit": "kg",
+        "gross": "7.5",
+        "net": "6.125"
+      },
+      "checks": [
+        {
+          "path": "values.yield",
+          "kind": "integer",
+          "expected": "8167"
+        }
+      ],
+      "proof": "Net/gross ×100%; quantities same unit",
+      "edgeInput": {
+        "unit": "kg",
+        "gross": "0",
+        "net": "6.125"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-yield-bahan",
+      "formulaVersion": "1.0.0",
+      "sources": [],
+      "existingTests": [
+        {
+          "file": "tests/operations.unit.ts",
+          "name": "calculates yield and exact loss in the selected weight unit"
+        }
+      ]
+    },
+    {
+      "slug": "penyusutan-garis-lurus",
+      "input": {
+        "cost": "1237",
+        "residual": "101",
+        "years": "7"
+      },
+      "checks": [
+        {
+          "path": "values.annual",
+          "kind": "integer",
+          "expected": "162"
+        }
+      ],
+      "proof": "(cost−residual)/years",
+      "edgeInput": {
+        "cost": "1237",
+        "residual": "101",
+        "years": "0"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-penyusutan-garis-lurus",
+      "formulaVersion": "1.0.0",
+      "sources": [],
+      "existingTests": [
+        {
+          "file": "tests/operations.unit.ts",
+          "name": "rounds annual book depreciation to whole rupiah"
+        }
+      ]
+    },
+    {
+      "slug": "arus-kas",
+      "input": {
+        "start": "2024-02-01",
+        "end": "2024-02-29",
+        "opening": "-73",
+        "receipts": "153",
+        "payments": "211"
+      },
+      "checks": [
+        {
+          "path": "values.closing",
+          "kind": "integer",
+          "expected": "-131"
+        }
+      ],
+      "proof": "Opening + receipts − payments, signed",
+      "edgeInput": {
+        "start": "2024-02-01",
+        "end": "2024-01-31",
+        "opening": "-73",
+        "receipts": "153",
+        "payments": "211"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-arus-kas",
+      "formulaVersion": "1.0.0",
+      "sources": [],
+      "existingTests": [
+        {
+          "file": "tests/operations.unit.ts",
+          "name": "preserves signed cash balances and warns on a deficit"
+        }
+      ]
+    },
+    {
+      "slug": "utilisasi-kapasitas",
+      "input": {
+        "start": "2024-02-01",
+        "end": "2024-02-29",
+        "unit": "unit",
+        "actual": "13.5",
+        "capacity": "11.25"
+      },
+      "checks": [
+        {
+          "path": "values.utilization",
+          "kind": "integer",
+          "expected": "12000"
+        }
+      ],
+      "proof": "Actual/capacity; >100% not clamped",
+      "edgeInput": {
+        "start": "2024-02-01",
+        "end": "2024-02-29",
+        "unit": "unit",
+        "actual": "13.5",
+        "capacity": "0"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-utilisasi-kapasitas",
+      "formulaVersion": "1.0.0",
+      "sources": [],
+      "existingTests": [
+        {
+          "file": "tests/operations.unit.ts",
+          "name": "rounds utilization and detects overrun before rounding"
+        }
+      ]
+    },
+    {
+      "slug": "perputaran-persediaan",
+      "input": {
+        "start": "2024-02-01",
+        "end": "2024-02-29",
+        "cogs": "777",
+        "opening": "301",
+        "closing": "413"
+      },
+      "checks": [
+        {
+          "path": "values.turnover",
+          "kind": "integer",
+          "expected": "218"
+        },
+        {
+          "path": "values.days",
+          "kind": "integer",
+          "expected": "1332"
+        }
+      ],
+      "proof": "COGS / ((opening+closing)/2); scale100",
+      "edgeInput": {
+        "start": "2024-02-01",
+        "end": "2024-02-29",
+        "cogs": "777",
+        "opening": "0",
+        "closing": "0"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-perputaran-persediaan",
+      "formulaVersion": "1.0.0",
+      "sources": [],
+      "existingTests": [
+        {
+          "file": "tests/stock-services.unit.ts",
+          "name": "turnover uses exact average and inclusive calendar days"
+        }
+      ]
+    },
+    {
+      "slug": "reorder-point",
+      "input": {
+        "demand": "2.75",
+        "lead": "3.25",
+        "safety": "1.125"
+      },
+      "checks": [
+        {
+          "path": "values.reorder",
+          "kind": "integer",
+          "expected": "11"
+        }
+      ],
+      "proof": "ceil(daily demand × lead days + safety)",
+      "edgeInput": {
+        "demand": "2.75",
+        "lead": "-1",
+        "safety": "1.125"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-reorder-point",
+      "formulaVersion": "1.0.0",
+      "sources": [],
+      "existingTests": [
+        {
+          "file": "tests/stock-services.unit.ts",
+          "name": "reorder rounds exact scaled demand up to physical units"
+        }
+      ]
+    },
+    {
+      "slug": "runway-kas",
+      "input": {
+        "month": "2026-11",
+        "cash": "1013",
+        "outflow": "317",
+        "inflow": "101"
+      },
+      "checks": [
+        {
+          "path": "values.months",
+          "kind": "integer",
+          "expected": "468"
+        }
+      ],
+      "proof": "Cash/(outflow−inflow), conservative floor hundredths",
+      "edgeInput": {
+        "month": "2026-11",
+        "cash": "-1",
+        "outflow": "317",
+        "inflow": "101"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-runway-kas",
+      "formulaVersion": "1.0.0",
+      "sources": [],
+      "existingTests": [
+        {
+          "file": "tests/stock-services.unit.ts",
+          "name": "runway floors months and makes no-burn an explicit state"
+        }
+      ]
+    },
+    {
+      "slug": "biaya-layanan",
+      "input": {
+        "month": "2026-11",
+        "fixed": "1013",
+        "transactions": "17",
+        "variable": "13"
+      },
+      "checks": [
+        {
+          "path": "values.cost",
+          "kind": "integer",
+          "expected": "73"
+        }
+      ],
+      "proof": "ceil(fixed / billed transactions) + variable",
+      "edgeInput": {
+        "month": "2026-11",
+        "fixed": "1013",
+        "transactions": "0",
+        "variable": "13"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-biaya-layanan",
+      "formulaVersion": "1.0.0",
+      "sources": [],
+      "existingTests": [
+        {
+          "file": "tests/stock-services.unit.ts",
+          "name": "service cost rounds up without changing the exact monthly total"
+        }
+      ]
+    },
+    {
+      "slug": "tarif-freelance",
+      "input": {
+        "earnings": "1037",
+        "expenses": "211",
+        "hours": "17.25"
+      },
+      "checks": [
+        {
+          "path": "values.hourly",
+          "kind": "integer",
+          "expected": "73"
+        }
+      ],
+      "proof": "ceil((earnings+expenses)/hours)",
+      "edgeInput": {
+        "earnings": "1037",
+        "expenses": "211",
+        "hours": "0"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-tarif-freelance",
+      "formulaVersion": "1.0.0",
+      "sources": [],
+      "existingTests": [
+        {
+          "file": "tests/stock-services.unit.ts",
+          "name": "freelance rounds the required rate up using exact billable hours"
+        }
+      ]
+    },
+    {
+      "slug": "food-cost",
+      "input": {
+        "servings": "7",
+        "ingredients": [
+          {
+            "price": "137",
+            "package": "11",
+            "usage": "2.5",
+            "unit": "kg"
+          },
+          {
+            "price": "211",
+            "package": "13",
+            "usage": "3.75",
+            "unit": "kg"
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": "values.perServing",
+          "kind": "integer",
+          "expected": "14"
+        }
+      ],
+      "proof": "Sum ingredient price × usage/package, divide portions, ceil once",
+      "edgeInput": {
+        "servings": "0",
+        "ingredients": [
+          {
+            "price": "137",
+            "package": "11",
+            "usage": "2.5",
+            "unit": "kg"
+          },
+          {
+            "price": "211",
+            "package": "13",
+            "usage": "3.75",
+            "unit": "kg"
+          }
+        ]
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-food-cost",
+      "formulaVersion": "1.0.0",
+      "sources": [],
+      "existingTests": [
+        {
+          "file": "tests/batch-four.unit.ts",
+          "name": "food cost sums multiple rational ingredient costs before rounding"
+        }
+      ]
+    },
+    {
+      "slug": "harga-borongan",
+      "input": {
+        "hours": "3.25",
+        "hourly": "137",
+        "materials": "211",
+        "overhead": "73",
+        "profit": "101"
+      },
+      "checks": [
+        {
+          "path": "values.quote",
+          "kind": "integer",
+          "expected": "831"
+        }
+      ],
+      "proof": "ceil(hours × hourly + materials + overhead + target profit)",
+      "edgeInput": {
+        "hours": "-1",
+        "hourly": "137",
+        "materials": "211",
+        "overhead": "73",
+        "profit": "101"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-harga-borongan",
+      "formulaVersion": "1.0.0",
+      "sources": [],
+      "existingTests": [
+        {
+          "file": "tests/batch-four.unit.ts",
+          "name": "project quote uses fixed profit and rounds up only final costs"
+        }
+      ]
+    },
+    {
+      "slug": "eoq",
+      "input": {
+        "demand": "173",
+        "order": "29",
+        "holding": "11"
+      },
+      "checks": [
+        {
+          "path": "values.quantity",
+          "kind": "integer",
+          "expected": "30"
+        }
+      ],
+      "proof": "argmin q integer>0 of D×S/q + H×q/2 (exhaustive1..1000)",
+      "edgeInput": {
+        "demand": "173",
+        "order": "29",
+        "holding": "0"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-eoq",
+      "formulaVersion": "1.0.0",
+      "sources": [],
+      "existingTests": [
+        {
+          "file": "tests/batch-four.unit.ts",
+          "name": "EOQ chooses the exact integer cost minimum around the square root"
+        }
+      ]
+    },
+    {
+      "slug": "payback-period",
+      "input": {
+        "investment": "107",
+        "period": "bulan",
+        "flows": [
+          {
+            "amount": "31"
+          },
+          {
+            "amount": "-7"
+          },
+          {
+            "amount": "101"
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": "values.payback",
+          "kind": "integer",
+          "expected": "282"
+        }
+      ],
+      "proof": "First crossing: 2 + (107−(31−7))/101 months",
+      "edgeInput": {
+        "investment": "107",
+        "period": "bulan",
+        "flows": []
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-payback-period",
+      "formulaVersion": "1.0.0",
+      "sources": [],
+      "existingTests": [
+        {
+          "file": "tests/batch-four.unit.ts",
+          "name": "payback handles uneven signed flows and first recovery"
+        }
+      ]
+    },
+    {
+      "slug": "berat-volumetrik",
+      "input": {
+        "length": "31",
+        "width": "23",
+        "height": "17",
+        "divisor": "5000",
+        "actual": "1.25"
+      },
+      "checks": [
+        {
+          "path": "values.volumetric",
+          "kind": "integer",
+          "expected": "2424200"
+        }
+      ],
+      "proof": "cm³/divisor kg, microkg",
+      "edgeInput": {
+        "length": "31",
+        "width": "23",
+        "height": "17",
+        "divisor": "0",
+        "actual": "1.25"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-berat-volumetrik",
+      "formulaVersion": "1.0.0",
+      "sources": [],
+      "existingTests": [
+        {
+          "file": "tests/batch-four.unit.ts",
+          "name": "volumetric weight compares exact fractions before display rounding"
+        }
+      ]
+    },
+    {
+      "slug": "roas",
+      "input": {
+        "revenue": "1237",
+        "spend": "317"
+      },
+      "checks": [
+        {
+          "path": "values.roas",
+          "kind": "integer",
+          "expected": "390"
+        }
+      ],
+      "proof": "Revenue/ad spend, hundredths x",
+      "edgeInput": {
+        "revenue": "1237",
+        "spend": "0"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-roas",
+      "formulaVersion": "1.0.0",
+      "sources": [],
+      "existingTests": [
+        {
+          "file": "tests/metrics.unit.ts",
+          "name": "ROAS uses attributed revenue and rejects zero spend"
+        }
+      ]
+    },
+    {
+      "slug": "roas-impas",
+      "input": {
+        "revenue": "1237",
+        "variable": "611"
+      },
+      "checks": [
+        {
+          "path": "values.threshold",
+          "kind": "integer",
+          "expected": "198"
+        }
+      ],
+      "proof": "ceil to .01 of revenue/contribution",
+      "edgeInput": {
+        "revenue": "0",
+        "variable": "611"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-roas-impas",
+      "formulaVersion": "1.0.0",
+      "sources": [],
+      "existingTests": [
+        {
+          "file": "tests/metrics.unit.ts",
+          "name": "break-even ROAS ceilings the exact contribution threshold"
+        }
+      ]
+    },
+    {
+      "slug": "acos",
+      "input": {
+        "spend": "317",
+        "revenue": "1237"
+      },
+      "checks": [
+        {
+          "path": "values.acos",
+          "kind": "integer",
+          "expected": "2563"
+        }
+      ],
+      "proof": "Ad spend/revenue ×100%, scale100",
+      "edgeInput": {
+        "spend": "317",
+        "revenue": "-1"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-acos",
+      "formulaVersion": "1.0.0",
+      "sources": [],
+      "existingTests": [
+        {
+          "file": "tests/metrics.unit.ts",
+          "name": "ACOS treats zero revenue as undefined and zero spend as zero"
+        }
+      ]
+    },
+    {
+      "slug": "konversi-toko",
+      "input": {
+        "visits": "137",
+        "purchasing": "17"
+      },
+      "checks": [
+        {
+          "path": "values.conversion",
+          "kind": "integer",
+          "expected": "1241"
+        }
+      ],
+      "proof": "Purchasing visits / visits ×100%",
+      "edgeInput": {
+        "visits": "0",
+        "purchasing": "17"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-konversi-toko",
+      "formulaVersion": "1.0.0",
+      "sources": [],
+      "existingTests": [
+        {
+          "file": "tests/metrics.unit.ts",
+          "name": "conversion uses purchasing visits with 0 and 100 percent boundaries"
+        }
+      ]
+    },
+    {
+      "slug": "nilai-pesanan-rata-rata",
+      "input": {
+        "revenue": "1237",
+        "orders": "17"
+      },
+      "checks": [
+        {
+          "path": "values.aov",
+          "kind": "integer",
+          "expected": "7276"
+        }
+      ],
+      "proof": "Revenue/orders, sen",
+      "edgeInput": {
+        "revenue": "1237",
+        "orders": "0"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-nilai-pesanan-rata-rata",
+      "formulaVersion": "1.0.0",
+      "sources": [],
+      "existingTests": [
+        {
+          "file": "tests/metrics.unit.ts",
+          "name": "AOV rounds matched order cohort revenue to exact cents"
+        }
+      ]
+    },
+    {
+      "slug": "promo-seller",
+      "input": {
+        "price": "1237",
+        "discount": "211",
+        "share": "37.5"
+      },
+      "checks": [
+        {
+          "path": "values.proceeds",
+          "kind": "integer",
+          "expected": "115787"
+        }
+      ],
+      "proof": "Seller burden rounded to sen first; proceeds=integer price in sen−burden, documented ledger policy",
+      "edgeInput": {
+        "price": "1237",
+        "discount": "1238",
+        "share": "37.5"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-promo-seller",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "TikTok Shop: Co-funded Campaign (Brazil; conceptual only)",
+          "url": "https://seller-br.tiktok.com/university/essay?knowledge_id=2569565069149953&lang=en",
+          "verifiedAt": "2026-11-07"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/seller-costs.unit.ts",
+          "name": "promo reconciles seller and platform funding"
+        }
+      ]
+    },
+    {
+      "slug": "subsidi-ongkir",
+      "input": {
+        "actual": "137",
+        "buyer": "31",
+        "credit": "53"
+      },
+      "checks": [
+        {
+          "path": "values.seller",
+          "kind": "integer",
+          "expected": "5300"
+        }
+      ],
+      "proof": "Actual shipping − buyer − verified subsidy",
+      "edgeInput": {
+        "actual": "137",
+        "buyer": "31",
+        "credit": "107"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-subsidi-ongkir",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "TikTok Shop: Co-funded Campaign (Brazil; conceptual only)",
+          "url": "https://seller-br.tiktok.com/university/essay?knowledge_id=2569565069149953&lang=en",
+          "verifiedAt": "2026-11-07"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/seller-costs.unit.ts",
+          "name": "shipping rejects overfunding"
+        }
+      ]
+    },
+    {
+      "slug": "biaya-kemasan",
+      "input": {
+        "shipments": "17",
+        "materials": [
+          {
+            "price": "137",
+            "quantity": "11",
+            "usage": "1.5",
+            "waste": "12.5",
+            "unit": "pcs"
+          },
+          {
+            "price": "53",
+            "quantity": "7",
+            "usage": "0.25",
+            "waste": "0",
+            "unit": "m"
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": "values.total",
+          "kind": "integer",
+          "expected": "39514"
+        }
+      ],
+      "proof": "Sum exact purchased cost/usable yield × usage, aggregate ×17, round once",
+      "edgeInput": {
+        "shipments": "0",
+        "materials": [
+          {
+            "price": "137",
+            "quantity": "11",
+            "usage": "1.5",
+            "waste": "12.5",
+            "unit": "pcs"
+          },
+          {
+            "price": "53",
+            "quantity": "7",
+            "usage": "0.25",
+            "waste": "0",
+            "unit": "m"
+          }
+        ]
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-biaya-kemasan",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "BCcampus: Yield Testing",
+          "url": "https://opentextbc.ca/basickitchenandfoodservicemanagement/chapter/yield-testing/",
+          "verifiedAt": "2026-11-07"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/seller-costs.unit.ts",
+          "name": "packaging sums rational materials before rounding"
+        }
+      ]
+    },
+    {
+      "slug": "biaya-retur",
+      "input": {
+        "gross": "137",
+        "recovery": "31",
+        "rate": "7.25",
+        "orders": "17"
+      },
+      "checks": [
+        {
+          "path": "values.total",
+          "kind": "integer",
+          "expected": "13065"
+        }
+      ],
+      "proof": "Expected net loss × return probability × orders; no early rounding",
+      "edgeInput": {
+        "gross": "137",
+        "recovery": "138",
+        "rate": "7.25",
+        "orders": "17"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-biaya-retur",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "OpenStax: Expected value",
+          "url": "https://openstax.org/books/introductory-statistics-2e/pages/4-2-mean-or-expected-value-and-standard-deviation",
+          "verifiedAt": "2026-11-07"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/seller-costs.unit.ts",
+          "name": "returns preserve small probabilities in batch totals"
+        }
+      ]
+    },
+    {
+      "slug": "kerugian-cod",
+      "input": {
+        "attempts": "17",
+        "rate": "7.25",
+        "loss": "137"
+      },
+      "checks": [
+        {
+          "path": "values.total",
+          "kind": "integer",
+          "expected": "16885"
+        }
+      ],
+      "proof": "Attempts × failure probability × loss",
+      "edgeInput": {
+        "attempts": "17",
+        "rate": "100.01",
+        "loss": "137"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-kerugian-cod",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "OpenStax: Expected value",
+          "url": "https://openstax.org/books/introductory-statistics-2e/pages/4-2-mean-or-expected-value-and-standard-deviation",
+          "verifiedAt": "2026-11-07"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/seller-costs.unit.ts",
+          "name": "COD never rounds expected failures before loss"
+        }
+      ]
+    },
+    {
+      "slug": "bunga-sederhana",
+      "input": {
+        "principal": "1237",
+        "rate": "7.25",
+        "months": "7"
+      },
+      "checks": [
+        {
+          "path": "values.future",
+          "kind": "integer",
+          "expected": "1289"
+        }
+      ],
+      "proof": "Principal + round(P×annual rate×months/12)",
+      "edgeInput": {
+        "principal": "1237",
+        "rate": "7.25",
+        "months": "1201"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-bunga-sederhana",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "OpenStax: Simple Interest",
+          "url": "https://openstax.org/books/contemporary-mathematics/pages/6-3-simple-interest",
+          "verifiedAt": "2026-11-07"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/finance.unit.ts",
+          "name": "simple interest uses annual rate and integer months"
+        }
+      ]
+    },
+    {
+      "slug": "bunga-majemuk",
+      "input": {
+        "principal": "1237",
+        "rate": "7.25",
+        "frequency": "4",
+        "periods": "7"
+      },
+      "checks": [
+        {
+          "path": "values.future",
+          "kind": "integer",
+          "expected": "1403"
+        }
+      ],
+      "proof": "round(P(1+r/f)^periods)",
+      "edgeInput": {
+        "principal": "1237",
+        "rate": "7.25",
+        "frequency": "3",
+        "periods": "7"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-bunga-majemuk",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "OpenStax: Compound Interest",
+          "url": "https://openstax.org/books/contemporary-mathematics/pages/6-4-compound-interest",
+          "verifiedAt": "2026-11-07"
+        },
+        {
+          "title": "CFPB: Interest rate dan APR",
+          "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-the-difference-between-a-loan-interest-rate-and-the-apr-en-733/",
+          "verifiedAt": "2026-11-07"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/finance.unit.ts",
+          "name": "compound interest uses exact integer powers and aligned periods"
+        }
+      ]
+    },
+    {
+      "slug": "cicilan-anuitas",
+      "input": {
+        "principal": "1237",
+        "rate": "7.25",
+        "months": "7"
+      },
+      "checks": [
+        {
+          "path": "values.total",
+          "kind": "integer",
+          "expected": "1265"
+        },
+        {
+          "path": "values.last",
+          "kind": "integer",
+          "expected": "173"
+        },
+        {
+          "path": "values.interest",
+          "kind": "integer",
+          "expected": "28"
+        }
+      ],
+      "proof": "Exact annuity ceil; monthly interest half-up on remaining principal; final closes",
+      "edgeInput": {
+        "principal": "1237",
+        "rate": "7.25",
+        "months": "0"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-cicilan-anuitas",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "OpenStax: The Basics of Loans",
+          "url": "https://openstax.org/books/contemporary-mathematics/pages/6-8-the-basics-of-loans",
+          "verifiedAt": "2026-11-07"
+        },
+        {
+          "title": "OJK: Buku 2 Perbankan, halaman 46–47",
+          "url": "https://sikapiuangmu.ojk.go.id/FrontEnd/LiterasiPerguruanTinggi/assets/pdf/Buku%202%20-%20Perbankan.pdf#page=46",
+          "verifiedAt": "2026-11-07"
+        },
+        {
+          "title": "CFPB: Interest rate dan APR",
+          "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-the-difference-between-a-loan-interest-rate-and-the-apr-en-733/",
+          "verifiedAt": "2026-11-07"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/finance.unit.ts",
+          "name": "annuity reconciles the independently worked three-month schedule"
+        }
+      ]
+    },
+    {
+      "slug": "cicilan-flat",
+      "input": {
+        "principal": "1237",
+        "rate": "7.25",
+        "months": "7"
+      },
+      "checks": [
+        {
+          "path": "values.total",
+          "kind": "integer",
+          "expected": "1289"
+        }
+      ],
+      "proof": "Total principal + aggregate flat interest; cumulative allocations telescope",
+      "edgeInput": {
+        "principal": "1237",
+        "rate": "7.25",
+        "months": "0"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-cicilan-flat",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "OJK: Buku 2 Perbankan, halaman 46–47",
+          "url": "https://sikapiuangmu.ojk.go.id/FrontEnd/LiterasiPerguruanTinggi/assets/pdf/Buku%202%20-%20Perbankan.pdf#page=46",
+          "verifiedAt": "2026-11-07"
+        },
+        {
+          "title": "CFPB: Interest rate dan APR",
+          "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-the-difference-between-a-loan-interest-rate-and-the-apr-en-733/",
+          "verifiedAt": "2026-11-07"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/finance.unit.ts",
+          "name": "flat loan allocates cumulative fractions without inflating interest"
+        }
+      ]
+    },
+    {
+      "slug": "rasio-cicilan",
+      "input": {
+        "income": "1237",
+        "debt": "317"
+      },
+      "checks": [
+        {
+          "path": "values.ratio",
+          "kind": "integer",
+          "expected": "2563"
+        }
+      ],
+      "proof": "Debt/net income ×100%",
+      "edgeInput": {
+        "income": "0",
+        "debt": "317"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-rasio-cicilan",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "CFPB: Debt-to-income ratio (basis kotor)",
+          "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-debt-to-income-ratio-en-1791/",
+          "verifiedAt": "2026-11-07"
+        },
+        {
+          "title": "Federal Reserve: Household Debt Service Ratios",
+          "url": "https://www.federalreserve.gov/releases/DSR/about.htm",
+          "verifiedAt": "2026-11-07"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/finance.unit.ts",
+          "name": "debt ratio uses net income and exact shortfall status"
+        }
+      ]
+    },
+    {
+      "slug": "target-tabungan",
+      "input": {
+        "initial": "317",
+        "target": "2111",
+        "rate": "7.25",
+        "months": "7"
+      },
+      "checks": [
+        {
+          "path": "values.payment",
+          "kind": "integer",
+          "expected": "25000"
+        }
+      ],
+      "proof": "End-month deposits: ceil((target−initial q^n)/Σq^i); verify prior rupiah fails",
+      "edgeInput": {
+        "initial": "317",
+        "target": "2111",
+        "rate": "7.25",
+        "months": "0"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-target-tabungan",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "OpenStax: Methods of Savings",
+          "url": "https://openstax.org/books/contemporary-mathematics/pages/6-6-methods-of-savings",
+          "verifiedAt": "2026-11-07"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/investment.unit.ts",
+          "name": "savings goal returns the exact minimum end-of-month payment"
+        }
+      ]
+    },
+    {
+      "slug": "dana-darurat",
+      "input": {
+        "expenses": "317",
+        "months": "7",
+        "available": "613"
+      },
+      "checks": [
+        {
+          "path": "values.gap",
+          "kind": "integer",
+          "expected": "1606"
+        }
+      ],
+      "proof": "Expenses×months−available, floor gap at0",
+      "edgeInput": {
+        "expenses": "317",
+        "months": "0",
+        "available": "613"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-dana-darurat",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "CFPB: Building an Emergency Fund",
+          "url": "https://www.consumerfinance.gov/an-essential-guide-to-building-an-emergency-fund/",
+          "verifiedAt": "2026-11-07"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/investment.unit.ts",
+          "name": "emergency reserve separates shortfall and surplus"
+        }
+      ]
+    },
+    {
+      "slug": "deposito",
+      "input": {
+        "principal": "1237",
+        "rate": "7.25",
+        "months": "7",
+        "tax": "17.5",
+        "fees": "3"
+      },
+      "checks": [
+        {
+          "path": "values.maturity",
+          "kind": "integer",
+          "expected": "1277"
+        },
+        {
+          "path": "values.gross",
+          "kind": "integer",
+          "expected": "52"
+        },
+        {
+          "path": "values.withholding",
+          "kind": "integer",
+          "expected": "9"
+        }
+      ],
+      "proof": "Gross interest rounded rupiah, withholding on rounded gross; cash reconciles",
+      "edgeInput": {
+        "principal": "1237",
+        "rate": "7.25",
+        "months": "7",
+        "tax": "17.5",
+        "fees": "9999999999999"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-deposito",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "OpenStax: Simple Interest",
+          "url": "https://openstax.org/books/contemporary-mathematics/pages/6-3-simple-interest",
+          "verifiedAt": "2026-11-07"
+        },
+        {
+          "title": "OJK: Buku 2 Perbankan, halaman 109–110",
+          "url": "https://sikapiuangmu.ojk.go.id/FrontEnd/LiterasiPerguruanTinggi/assets/pdf/Buku%202%20-%20Perbankan.pdf#page=109",
+          "verifiedAt": "2026-11-07"
+        },
+        {
+          "title": "BCA: Rumus dan basis waktu bunga deposito",
+          "url": "https://www.bca.co.id/id/informasi/edukatips/2024/07/02/06/10/cara-hitung-bunga-deposito-ini-rumus-yang-perlu-diketahui",
+          "verifiedAt": "2026-11-07"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/investment.unit.ts",
+          "name": "deposit reconciles rounded gross interest withholding and maturity"
+        }
+      ]
+    },
+    {
+      "slug": "imbal-hasil-investasi",
+      "input": {
+        "initial": "1237",
+        "ending": "1031",
+        "costs": "17"
+      },
+      "checks": [
+        {
+          "path": "values.roi",
+          "kind": "integer",
+          "expected": "-1803"
+        }
+      ],
+      "proof": "(Ending−initial−costs)/initial ×100%; negative supported",
+      "edgeInput": {
+        "initial": "0",
+        "ending": "1031",
+        "costs": "17"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-imbal-hasil-investasi",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "FINRA: Return and Rate of Return",
+          "url": "https://syndication.finra.org/content/key-concepts-return-and-rate-return",
+          "verifiedAt": "2026-11-07"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/investment.unit.ts",
+          "name": "holding period ROI supports signed net gains and fee accounting"
+        }
+      ]
+    },
+    {
+      "slug": "cagr",
+      "input": {
+        "initial": "125",
+        "ending": "216",
+        "years": "3"
+      },
+      "checks": [
+        {
+          "path": "values.cagr",
+          "kind": "integer",
+          "expected": "200000"
+        }
+      ],
+      "proof": "(216/125)^(1/3)−1 =6/5−1; scale1e6",
+      "edgeInput": {
+        "initial": "125",
+        "ending": "216",
+        "years": "0"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-cagr",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "OpenStax: Geometric Mean",
+          "url": "https://openstax.org/books/introductory-business-statistics-2e/pages/2-5-geometric-mean",
+          "verifiedAt": "2026-11-07"
+        },
+        {
+          "title": "FINRA: Return and Rate of Return",
+          "url": "https://syndication.finra.org/content/key-concepts-return-and-rate-return",
+          "verifiedAt": "2026-11-07"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/investment.unit.ts",
+          "name": "CAGR rounds exact positive and negative root thresholds correctly"
+        }
+      ]
+    },
+    {
+      "slug": "nilai-kini",
+      "input": {
+        "future": "1237",
+        "rate": "7.25",
+        "years": "3"
+      },
+      "checks": [
+        {
+          "path": "values.present",
+          "kind": "integer",
+          "expected": "100272"
+        }
+      ],
+      "proof": "PV=FV/(1+r)^n, sen",
+      "edgeInput": {
+        "future": "1237",
+        "rate": "7.25",
+        "years": "101"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-nilai-kini",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "OpenStax: Time Value of Money",
+          "url": "https://openstax.org/books/principles-finance/pages/7-3-methods-for-solving-time-value-of-money-problems",
+          "verifiedAt": "2026-11-07"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/valuation.unit.ts",
+          "name": "present value discounts one annual payment with exact ratios"
+        }
+      ]
+    },
+    {
+      "slug": "npv",
+      "input": {
+        "rate": "7.25",
+        "cashflows": [
+          {
+            "amount": "-1237"
+          },
+          {
+            "amount": "611"
+          },
+          {
+            "amount": "733"
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": "values.npv",
+          "kind": "integer",
+          "expected": "-3005"
+        }
+      ],
+      "proof": "Signed ΣCF_t/(1+r)^t; year0 not discounted",
+      "edgeInput": {
+        "rate": "7.25",
+        "cashflows": []
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-npv",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "OpenStax: Time Value of Money",
+          "url": "https://openstax.org/books/principles-finance/pages/7-3-methods-for-solving-time-value-of-money-problems",
+          "verifiedAt": "2026-11-07"
+        },
+        {
+          "title": "OpenStax: Net Present Value Method",
+          "url": "https://openstax.org/books/principles-finance/pages/16-2-net-present-value-npv-method",
+          "verifiedAt": "2026-11-07"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/valuation.unit.ts",
+          "name": "NPV sums signed discounted fractions before rounding"
+        }
+      ]
+    },
+    {
+      "slug": "inflasi",
+      "input": {
+        "price": "1237",
+        "rate": "7.25",
+        "years": "3"
+      },
+      "checks": [
+        {
+          "path": "values.future",
+          "kind": "integer",
+          "expected": "152602"
+        }
+      ],
+      "proof": "Price×(1+inflation)^years, sen",
+      "edgeInput": {
+        "price": "1237",
+        "rate": "-1",
+        "years": "3"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-inflasi",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "OpenStax: Time Value of Money",
+          "url": "https://openstax.org/books/principles-finance/pages/7-3-methods-for-solving-time-value-of-money-problems",
+          "verifiedAt": "2026-11-07"
+        },
+        {
+          "title": "Bank Indonesia: Pengertian inflasi",
+          "url": "https://www.bi.go.id/id/fungsi-utama/moneter/inflasi/Default.aspx",
+          "verifiedAt": "2026-11-07"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/valuation.unit.ts",
+          "name": "inflation separates future basket price from fixed money purchasing power"
+        }
+      ]
+    },
+    {
+      "slug": "rata-rata-beli-saham",
+      "input": {
+        "sharesPerLot": "100",
+        "purchases": [
+          {
+            "price": "13.25",
+            "lots": "2",
+            "fee": "3"
+          },
+          {
+            "price": "17.75",
+            "lots": "3",
+            "fee": "7"
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": "values.average",
+          "kind": "integer",
+          "expected": "1597"
+        }
+      ],
+      "proof": "(Σprice×shares+fees)/total shares, sen",
+      "edgeInput": {
+        "sharesPerLot": "100",
+        "purchases": []
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-rata-rata-beli-saham",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "OpenStax: Weighted Mean",
+          "url": "https://openstax.org/books/principles-finance-2e/pages/13-1-measures-of-center",
+          "verifiedAt": "2026-11-07"
+        },
+        {
+          "title": "Investor.gov / SEC: Stocks and Fees",
+          "url": "https://www.investor.gov/introduction-investing/investing-basics/investment-products/stocks",
+          "verifiedAt": "2026-11-07"
+        },
+        {
+          "title": "Investor.gov / SEC: Brokerage Statement and Cost Basis",
+          "url": "https://www.investor.gov/better-understanding-your-brokerage-account-statement",
+          "verifiedAt": "2026-11-07"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/valuation.unit.ts",
+          "name": "stock average weights purchases and allocates fees only after summation"
+        }
+      ]
+    },
+    {
+      "slug": "untung-rugi-saham",
+      "input": {
+        "buyPrice": "13.25",
+        "sellPrice": "11.75",
+        "lots": "3",
+        "sharesPerLot": "100",
+        "buyFee": "7",
+        "sellFee": "3",
+        "sellTax": "2"
+      },
+      "checks": [
+        {
+          "path": "values.profit",
+          "kind": "integer",
+          "expected": "-46200"
+        }
+      ],
+      "proof": "Sale−buy−buyfee−sellfee−selltax, signed sen",
+      "edgeInput": {
+        "buyPrice": "13.25",
+        "sellPrice": "11.75",
+        "lots": "0",
+        "sharesPerLot": "100",
+        "buyFee": "7",
+        "sellFee": "3",
+        "sellTax": "2"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-untung-rugi-saham",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "Investor.gov / SEC: Stocks and Fees",
+          "url": "https://www.investor.gov/introduction-investing/investing-basics/investment-products/stocks",
+          "verifiedAt": "2026-11-07"
+        },
+        {
+          "title": "Investor.gov / SEC: Brokerage Statement and Cost Basis",
+          "url": "https://www.investor.gov/better-understanding-your-brokerage-account-statement",
+          "verifiedAt": "2026-11-07"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/valuation.unit.ts",
+          "name": "stock profit reconciles same-share acquisition net sale and signed ROI"
+        }
+      ]
+    },
+    {
+      "slug": "bunga-efektif-pinjaman",
+      "input": {
+        "proceeds": "1237",
+        "disbursed": "2025-01-01",
+        "repayments": [
+          {
+            "amount": "1361",
+            "date": "2026-01-01"
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": "values.effective",
+          "kind": "integer",
+          "expected": "100243"
+        }
+      ],
+      "proof": "365-day single payment: annual rate =1361/1237−1; percent4dp",
+      "edgeInput": {
+        "proceeds": "1237",
+        "disbursed": "2025-01-01",
+        "repayments": [
+          {
+            "amount": "1361",
+            "date": "2025-01-01"
+          }
+        ]
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-bunga-efektif-pinjaman",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "Microsoft: XIRR dan basis hari 365",
+          "url": "https://support.microsoft.com/en-us/excel/functions/xirr-function",
+          "verifiedAt": "2026-11-07"
+        },
+        {
+          "title": "OpenStax: The Basics of Loans",
+          "url": "https://openstax.org/books/contemporary-mathematics/pages/6-8-the-basics-of-loans",
+          "verifiedAt": "2026-11-07"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/loan-scenarios.unit.ts",
+          "name": "dated loan yield matches independent ACT365 fixtures and residual"
+        }
+      ]
+    },
+    {
+      "slug": "kpr",
+      "input": {
+        "price": "1537",
+        "down": "300",
+        "months": "7",
+        "fixedRate": "7.25",
+        "fixedMonths": "2",
+        "nextRate": "13.75",
+        "fees": "17"
+      },
+      "checks": [
+        {
+          "path": "values.outlay",
+          "kind": "integer",
+          "expected": "1597"
+        },
+        {
+          "path": "values.interest",
+          "kind": "integer",
+          "expected": "43"
+        }
+      ],
+      "proof": "Two phase annuity: recast remaining principal after month2; add down+fees once",
+      "edgeInput": {
+        "price": "1537",
+        "down": "1538",
+        "months": "7",
+        "fixedRate": "7.25",
+        "fixedMonths": "2",
+        "nextRate": "13.75",
+        "fees": "17"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-kpr",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "OpenStax: The Basics of Loans",
+          "url": "https://openstax.org/books/contemporary-mathematics/pages/6-8-the-basics-of-loans",
+          "verifiedAt": "2026-11-07"
+        },
+        {
+          "title": "CFPB: fixed dan adjustable rate",
+          "url": "https://www.consumerfinance.gov/owning-a-home/explore/understand-the-different-kinds-of-loans-available/",
+          "verifiedAt": "2026-11-07"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/loan-scenarios.unit.ts",
+          "name": "mortgage reamortizes rounded switch balance and reconciles outlay"
+        }
+      ]
+    },
+    {
+      "slug": "pelunasan-dipercepat",
+      "input": {
+        "principal": "1237",
+        "months": "7",
+        "rate": "7.25",
+        "extra": "211",
+        "eventMonth": "2",
+        "penalty": "7"
+      },
+      "checks": [
+        {
+          "path": "values.net",
+          "kind": "integer",
+          "expected": "-2"
+        }
+      ],
+      "proof": "Baseline interest−modified interest−actual penalty; extra after regular month2",
+      "edgeInput": {
+        "principal": "1237",
+        "months": "7",
+        "rate": "7.25",
+        "extra": "211",
+        "eventMonth": "8",
+        "penalty": "7"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-pelunasan-dipercepat",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "OpenStax: The Basics of Loans",
+          "url": "https://openstax.org/books/contemporary-mathematics/pages/6-8-the-basics-of-loans",
+          "verifiedAt": "2026-11-07"
+        },
+        {
+          "title": "CFPB: prepayment penalty",
+          "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-prepayment-penalty-en-1957/",
+          "verifiedAt": "2026-11-07"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/loan-scenarios.unit.ts",
+          "name": "early payoff keeps reference payment and separates penalty from principal"
+        }
+      ]
+    },
+    {
+      "slug": "refinancing",
+      "input": {
+        "principal": "1237",
+        "months": "7",
+        "oldRate": "13.75",
+        "newRate": "7.25",
+        "newMonths": "7",
+        "cost": "11"
+      },
+      "checks": [
+        {
+          "path": "values.net",
+          "kind": "integer",
+          "expected": "17"
+        }
+      ],
+      "proof": "Undiscounted lifetime cash difference incl upfront cost once",
+      "edgeInput": {
+        "principal": "1237",
+        "months": "7",
+        "oldRate": "13.75",
+        "newRate": "7.25",
+        "newMonths": "0",
+        "cost": "11"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-refinancing",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "OpenStax: The Basics of Loans",
+          "url": "https://openstax.org/books/contemporary-mathematics/pages/6-8-the-basics-of-loans",
+          "verifiedAt": "2026-11-07"
+        },
+        {
+          "title": "Federal Reserve: Mortgage Refinancings",
+          "url": "https://www.federalreserve.gov/pubs/refinancings/default.htm",
+          "verifiedAt": "2026-11-07"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/loan-scenarios.unit.ts",
+          "name": "refinance tracks temporary and permanent crossovers across unequal tenors"
+        }
+      ]
+    },
+    {
+      "slug": "kurs-mata-uang",
+      "input": {
+        "direction": "usd-idr",
+        "amount": "13.25",
+        "rate": "15731.125",
+        "fee": "317"
+      },
+      "checks": [
+        {
+          "path": "values.net",
+          "kind": "integer",
+          "expected": "208120"
+        }
+      ],
+      "proof": "USD amount × manual IDR/USD; gross rounded once then IDR fee",
+      "edgeInput": {
+        "direction": "usd-idr",
+        "amount": "13.25",
+        "rate": "0",
+        "fee": "317"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-kurs-mata-uang",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "ECB: kuotasi kurs dan batas referensi",
+          "url": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html",
+          "verifiedAt": "2026-11-07"
+        },
+        {
+          "title": "SIX: standar mata uang",
+          "url": "https://www.six-group.com/en/products-services/financial-information/market-reference-data/data-standards.html",
+          "verifiedAt": "2026-11-07"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/loan-scenarios.unit.ts",
+          "name": "manual FX respects direction target units and exact fee bounds"
+        }
+      ]
+    },
+    {
+      "slug": "engagement-rate",
+      "input": {
+        "likes": "31",
+        "comments": "7",
+        "saves": "11",
+        "shares": "13",
+        "basis": "reach",
+        "denominator": "317"
+      },
+      "checks": [
+        {
+          "path": "values.rate",
+          "kind": "integer",
+          "expected": "1956"
+        }
+      ],
+      "proof": "Sum interactions / declared reach ×100%",
+      "edgeInput": {
+        "likes": "31",
+        "comments": "7",
+        "saves": "11",
+        "shares": "13",
+        "basis": "reach",
+        "denominator": "0"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-engagement-rate",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "Sprout Social API: definisi metrik engagement",
+          "url": "https://api.sproutsocial.com/docs",
+          "verifiedAt": "2026-11-07"
+        },
+        {
+          "title": "Hootsuite: engagement menurut reach dan followers",
+          "url": "https://blog.hootsuite.com/calculate-engagement-rate/",
+          "verifiedAt": "2026-11-07"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/social-metrics.unit.ts",
+          "name": "engagement sums four actions and preserves both denominator bases beyond 100 percent"
+        }
+      ]
+    },
+    {
+      "slug": "pertumbuhan-pengikut",
+      "input": {
+        "start": "317",
+        "end": "211"
+      },
+      "checks": [
+        {
+          "path": "values.rate",
+          "kind": "integer",
+          "expected": "-3344"
+        }
+      ],
+      "proof": "(End−start)/start ×100%, signed",
+      "edgeInput": {
+        "start": "-1",
+        "end": "211"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-pertumbuhan-pengikut",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "Socialinsider: rumus pertumbuhan pengikut",
+          "url": "https://www.socialinsider.io/blog/how-to-calculate-follower-growth/",
+          "verifiedAt": "2026-11-07"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/social-metrics.unit.ts",
+          "name": "follower growth supports signed changes and leaves zero-base percent undefined"
+        }
+      ]
+    },
+    {
+      "slug": "cpm",
+      "input": {
+        "spend": "1237",
+        "impressions": "3317"
+      },
+      "checks": [
+        {
+          "path": "values.cost",
+          "kind": "integer",
+          "expected": "37293"
+        }
+      ],
+      "proof": "Spend/impressions ×1000; sen",
+      "edgeInput": {
+        "spend": "1237",
+        "impressions": "0"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-cpm",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "Google Ads: CPM",
+          "url": "https://support.google.com/google-ads/answer/6310?hl=en",
+          "verifiedAt": "2026-11-07"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/social-metrics.unit.ts",
+          "name": "CPM scales exact spend by one thousand impressions before rounding"
+        }
+      ]
+    },
+    {
+      "slug": "cpc",
+      "input": {
+        "spend": "1237",
+        "clicks": "317"
+      },
+      "checks": [
+        {
+          "path": "values.cost",
+          "kind": "integer",
+          "expected": "390"
+        }
+      ],
+      "proof": "Spend/clicks, sen",
+      "edgeInput": {
+        "spend": "1237",
+        "clicks": "0"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-cpc",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "Google Ads: average CPC",
+          "url": "https://support.google.com/google-ads/answer/14074?hl=en",
+          "verifiedAt": "2026-11-07"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/social-metrics.unit.ts",
+          "name": "CPC divides matched campaign spend by positive click events"
+        }
+      ]
+    },
+    {
+      "slug": "cpa",
+      "input": {
+        "spend": "1237",
+        "action": "lead",
+        "acquisitions": "17"
+      },
+      "checks": [
+        {
+          "path": "values.cost",
+          "kind": "integer",
+          "expected": "7276"
+        }
+      ],
+      "proof": "Spend/attributed leads, sen",
+      "edgeInput": {
+        "spend": "1237",
+        "action": "lead",
+        "acquisitions": "0"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-cpa",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "Google Ads: average CPA",
+          "url": "https://support.google.com/google-ads/answer/6396841?hl=en",
+          "verifiedAt": "2026-11-07"
+        },
+        {
+          "title": "Google Ads: conversion windows",
+          "url": "https://support.google.com/google-ads/answer/3123169?hl=en",
+          "verifiedAt": "2026-11-07"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/social-metrics.unit.ts",
+          "name": "CPA preserves chosen acquisition definition while dividing attributed results"
+        }
+      ]
+    },
+    {
+      "slug": "ctr",
+      "input": {
+        "clicks": "17",
+        "impressions": "317"
+      },
+      "checks": [
+        {
+          "path": "values.rate",
+          "kind": "integer",
+          "expected": "536"
+        }
+      ],
+      "proof": "Clicks/impressions×100%",
+      "edgeInput": {
+        "clicks": "17",
+        "impressions": "0"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-ctr",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "Google Ads: definisi CTR",
+          "url": "https://support.google.com/google-ads/answer/2615875?hl=en",
+          "verifiedAt": "2026-11-07"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/creator-analytics.unit.ts",
+          "name": "CTR uses exact event counts and warns above impressions"
+        }
+      ]
+    },
+    {
+      "slug": "estimasi-youtube",
+      "input": {
+        "views": "3317",
+        "rpm": "137.25"
+      },
+      "checks": [
+        {
+          "path": "values.income",
+          "kind": "integer",
+          "expected": "45526"
+        }
+      ],
+      "proof": "User RPM per1000totalviews, sen; hypothetical not official rate",
+      "edgeInput": {
+        "views": "-1",
+        "rpm": "137.25"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-estimasi-youtube",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "YouTube: RPM kreator dan CPM pengiklan",
+          "url": "https://support.google.com/youtube/answer/9314357?hl=en",
+          "verifiedAt": "2026-11-07"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/creator-analytics.unit.ts",
+          "name": "YouTube model uses matching total-view RPM without invented revenue share"
+        }
+      ]
+    },
+    {
+      "slug": "tiktok",
+      "input": {
+        "mode": "earnings",
+        "eligibleViews": "3317",
+        "rpm": "137.25",
+        "incomeBasis": "assumed",
+        "sponsor": "17.25",
+        "affiliate": "3.75",
+        "gift": "1.50"
+      },
+      "checks": [
+        {
+          "path": "values.total",
+          "kind": "integer",
+          "expected": "47776"
+        }
+      ],
+      "proof": "Hypothetical eligibleviews×userRPM/1000 + separate net sources",
+      "edgeInput": {
+        "mode": "unknown",
+        "eligibleViews": "3317",
+        "rpm": "137.25",
+        "incomeBasis": "assumed",
+        "sponsor": "17.25",
+        "affiliate": "3.75",
+        "gift": "1.50"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-estimasi-tiktok-kreator",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "TikTok Newsroom: pengumuman Creator Rewards 18 Maret 2024 (konteks historis)",
+          "url": "https://newsroom.tiktok.com/introducing-the-new-creator-rewards-program?lang=en",
+          "verifiedAt": "2026-11-07"
+        },
+        {
+          "title": "Sprout Social API: definisi metrik analitik",
+          "url": "https://api.sproutsocial.com/docs",
+          "verifiedAt": "2026-11-07"
+        },
+        {
+          "title": "OpenStax: biaya, harga jual dan rasio margin",
+          "url": "https://openstax.org/books/principles-managerial-accounting/pages/3-1-explain-contribution-margin-and-calculate-contribution-margin-per-unit-contribution-margin-ratio-and-total-contribution-margin",
+          "verifiedAt": "2026-11-07"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/creator-analytics.unit.ts",
+          "name": "TikTok suite dispatches every functional manual mode without seller intent"
+        }
+      ]
+    },
+    {
+      "slug": "tarif-endorsement",
+      "input": {
+        "production": "137",
+        "hours": "1.25",
+        "hourly": "31",
+        "overhead": "17",
+        "usage": "11",
+        "deliverables": "3",
+        "margin": "17.5"
+      },
+      "checks": [
+        {
+          "path": "values.quote",
+          "kind": "integer",
+          "expected": "734"
+        }
+      ],
+      "proof": "ceil(production package costs/(1−margin)) + usage rights without margin",
+      "edgeInput": {
+        "production": "137",
+        "hours": "1.25",
+        "hourly": "31",
+        "overhead": "17",
+        "usage": "11",
+        "deliverables": "3",
+        "margin": "100"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-tarif-endorsement",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "OpenStax: biaya, harga jual dan rasio margin",
+          "url": "https://openstax.org/books/principles-managerial-accounting/pages/3-1-explain-contribution-margin-and-calculate-contribution-margin-per-unit-contribution-margin-ratio-and-total-contribution-margin",
+          "verifiedAt": "2026-11-07"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/creator-analytics.unit.ts",
+          "name": "endorsement ceilings minimum production price and passes rights separately"
+        }
+      ]
+    },
+    {
+      "slug": "waktu-tonton",
+      "input": {
+        "views": "317",
+        "minutes": "2.75"
+      },
+      "checks": [
+        {
+          "path": "values.hours",
+          "kind": "integer",
+          "expected": "1453"
+        }
+      ],
+      "proof": "Views×average minutes/60, hundredthhours",
+      "edgeInput": {
+        "views": "317",
+        "minutes": "-1"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-waktu-tonton",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "YouTube Analytics: metrik waktu tonton",
+          "url": "https://developers.google.com/youtube/analytics/metrics",
+          "verifiedAt": "2026-11-07"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/creator-analytics.unit.ts",
+          "name": "watch time derives hours and minutes independently from one exact ledger"
+        }
+      ]
+    },
+    {
+      "slug": "diskon",
+      "input": {
+        "original": "1237",
+        "discounts": [
+          {
+            "rate": "12.5"
+          },
+          {
+            "rate": "7.25"
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": "values.final",
+          "kind": "integer",
+          "expected": "1004"
+        }
+      ],
+      "proof": "Sequential discounts multiply remaining factors; cash once",
+      "edgeInput": {
+        "original": "1237",
+        "discounts": []
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-diskon",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "OpenStax: aplikasi diskon",
+          "url": "https://openstax.org/books/prealgebra-2e/pages/6-3-solve-sales-tax-commission-and-discount-applications",
+          "verifiedAt": "2026-11-07"
+        },
+        {
+          "title": "OpenStax: persen dan perubahan persen",
+          "url": "https://openstax.org/books/prealgebra-2e/pages/6-2-solve-general-applications-of-percent",
+          "verifiedAt": "2026-11-07"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/everyday.unit.ts",
+          "name": "sequential discount keeps exact factors and rounds cash only once"
+        }
+      ]
+    },
+    {
+      "slug": "harga-per-satuan",
+      "input": {
+        "packages": [
+          {
+            "price": "137",
+            "quantity": "250",
+            "unit": "g"
+          },
+          {
+            "price": "211",
+            "quantity": "0.5",
+            "unit": "kg"
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": "values.minimum",
+          "kind": "integer",
+          "expected": "42200"
+        }
+      ],
+      "proof": "Normalize kg: min(137/.25,211/.5)=422Rp/kg; display2dp",
+      "edgeInput": {
+        "packages": []
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-harga-per-satuan",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "NIST: SI metric prefixes",
+          "url": "https://www.nist.gov/pml/owm/metric-si-prefixes",
+          "verifiedAt": "2026-11-07"
+        },
+        {
+          "title": "NIST SP811: unit di luar SI",
+          "url": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-chapter-5-units-outside-si",
+          "verifiedAt": "2026-11-07"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/everyday.unit.ts",
+          "name": "unit prices normalize families and compare unrounded cross products"
+        }
+      ]
+    },
+    {
+      "slug": "bagi-tagihan",
+      "input": {
+        "service": "7",
+        "tax": "11",
+        "mode": "proportional",
+        "people": [
+          {
+            "subtotal": "137"
+          },
+          {
+            "subtotal": "211"
+          },
+          {
+            "subtotal": "317"
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": "values.grand",
+          "kind": "integer",
+          "expected": "683"
+        },
+        {
+          "path": "values.difference",
+          "kind": "integer",
+          "expected": "0"
+        }
+      ],
+      "proof": "Subtotal665 + fixed service7 + tax11; largest remainder must sum683",
+      "edgeInput": {
+        "service": "7",
+        "tax": "11",
+        "mode": "proportional",
+        "people": []
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-bagi-tagihan",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "Kenyon & Lippman, Math in Society: Hamilton, halaman 75–76",
+          "url": "https://www.opentextbookstore.com/mathinsociety/2.5/Apportionment.pdf",
+          "verifiedAt": "2026-11-07"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/everyday.unit.ts",
+          "name": "bill allocations conserve every rupiah with largest remainder and stable ties"
+        }
+      ]
+    },
+    {
+      "slug": "persen",
+      "input": {
+        "mode": "portion",
+        "value": "137.25",
+        "percent": "17.5"
+      },
+      "checks": [
+        {
+          "path": "values.result",
+          "kind": "integer",
+          "expected": "240188"
+        }
+      ],
+      "proof": "Value×percentage/100,4dp",
+      "edgeInput": {
+        "mode": "portion",
+        "value": "137.25",
+        "percent": "NaN"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-persen",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "OpenStax: persen dan perubahan persen",
+          "url": "https://openstax.org/books/prealgebra-2e/pages/6-2-solve-general-applications-of-percent",
+          "verifiedAt": "2026-11-07"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/everyday.unit.ts",
+          "name": "percent dispatcher exposes both complete signed arithmetic modes"
+        }
+      ]
+    },
+    {
+      "slug": "perubahan-persen",
+      "input": {
+        "previous": "317",
+        "current": "211"
+      },
+      "checks": [
+        {
+          "path": "values.percent",
+          "kind": "integer",
+          "expected": "-334385"
+        }
+      ],
+      "proof": "(Current−previous)/previous×100%,4dp",
+      "edgeInput": {
+        "previous": "-1",
+        "current": "211"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-perubahan-persen",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "OpenStax: persen dan perubahan persen",
+          "url": "https://openstax.org/books/prealgebra-2e/pages/6-2-solve-general-applications-of-percent",
+          "verifiedAt": "2026-11-07"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/everyday.unit.ts",
+          "name": "percent change preserves exact decimal delta and undefined zero baseline"
+        }
+      ]
+    },
+    {
+      "slug": "selisih-tanggal",
+      "input": {
+        "start": "2024-02-27",
+        "end": "2024-03-02",
+        "mode": "elapsed"
+      },
+      "checks": [
+        {
+          "path": "values.days",
+          "kind": "integer",
+          "expected": "4"
+        }
+      ],
+      "proof": "Python Gregorian date difference, leap day included",
+      "edgeInput": {
+        "start": "2024-02-27",
+        "end": "2024-02-26",
+        "mode": "elapsed"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-selisih-tanggal",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "US Naval Observatory: aturan tahun kabisat Gregorian",
+          "url": "https://aa.usno.navy.mil/faq/leap_years",
+          "verifiedAt": "2026-11-07"
+        },
+        {
+          "title": "Richards, Calendars §15.4.2: Gregorian dan anchor hari Senin (PDF halaman 15)",
+          "url": "https://aa.usno.navy.mil/downloads/c15_usb_online.pdf",
+          "verifiedAt": "2026-11-07"
+        },
+        {
+          "title": "RFC 3339 §5.6–5.7: representasi tanggal dan batas jam/menit",
+          "url": "https://www.rfc-editor.org/rfc/rfc3339.html",
+          "verifiedAt": "2026-11-07"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/calendar-time.unit.ts",
+          "name": "date differences respect Gregorian boundaries and both endpoint conventions"
+        }
+      ]
+    },
+    {
+      "slug": "hari-kerja",
+      "input": {
+        "start": "2024-02-26",
+        "end": "2024-03-03",
+        "weekend": "sat-sun",
+        "holidays": [
+          {
+            "date": "2024-02-29"
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": "values.workdays",
+          "kind": "integer",
+          "expected": "4"
+        }
+      ],
+      "proof": "Inclusive Python weekday enumeration excluding Feb29 holiday",
+      "edgeInput": {
+        "start": "2024-02-26",
+        "end": "2024-02-25",
+        "weekend": "sat-sun",
+        "holidays": [
+          {
+            "date": "2024-02-29"
+          }
+        ]
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-hari-kerja",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "US Naval Observatory: aturan tahun kabisat Gregorian",
+          "url": "https://aa.usno.navy.mil/faq/leap_years",
+          "verifiedAt": "2026-11-07"
+        },
+        {
+          "title": "Richards, Calendars §15.4.2: Gregorian dan anchor hari Senin (PDF halaman 15)",
+          "url": "https://aa.usno.navy.mil/downloads/c15_usb_online.pdf",
+          "verifiedAt": "2026-11-07"
+        },
+        {
+          "title": "RFC 3339 §5.6–5.7: representasi tanggal dan batas jam/menit",
+          "url": "https://www.rfc-editor.org/rfc/rfc3339.html",
+          "verifiedAt": "2026-11-07"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/calendar-time.unit.ts",
+          "name": "workdays deduplicate explicit holidays and reconcile their classification ledger"
+        }
+      ]
+    },
+    {
+      "slug": "usia",
+      "input": {
+        "birth": "2000-02-29",
+        "reference": "2024-03-01"
+      },
+      "checks": [
+        {
+          "path": "values.totalDays",
+          "kind": "integer",
+          "expected": "8767"
+        },
+        {
+          "path": "values.years",
+          "kind": "integer",
+          "expected": "24"
+        },
+        {
+          "path": "values.days",
+          "kind": "integer",
+          "expected": "1"
+        }
+      ],
+      "proof": "Python Gregorian elapsed days; calendar years24/months0/days1",
+      "edgeInput": {
+        "birth": "2000-02-29",
+        "reference": "1999-12-31"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-usia",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "US Naval Observatory: aturan tahun kabisat Gregorian",
+          "url": "https://aa.usno.navy.mil/faq/leap_years",
+          "verifiedAt": "2026-11-07"
+        },
+        {
+          "title": "Richards, Calendars §15.4.2: Gregorian dan anchor hari Senin (PDF halaman 15)",
+          "url": "https://aa.usno.navy.mil/downloads/c15_usb_online.pdf",
+          "verifiedAt": "2026-11-07"
+        },
+        {
+          "title": "RFC 3339 §5.6–5.7: representasi tanggal dan batas jam/menit",
+          "url": "https://www.rfc-editor.org/rfc/rfc3339.html",
+          "verifiedAt": "2026-11-07"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/calendar-time.unit.ts",
+          "name": "age uses maximal original-anchor clamped months without anniversary drift"
+        }
+      ]
+    },
+    {
+      "slug": "durasi-kerja",
+      "input": {
+        "start": "22:45",
+        "end": "06:15",
+        "endDay": "next-day",
+        "break": "37"
+      },
+      "checks": [
+        {
+          "path": "values.net",
+          "kind": "integer",
+          "expected": "413"
+        }
+      ],
+      "proof": "Next-day elapsed450min−break37",
+      "edgeInput": {
+        "start": "22:45",
+        "end": "06:15",
+        "endDay": "next-day",
+        "break": "451"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-durasi-kerja",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "RFC 3339 §5.6–5.7: representasi tanggal dan batas jam/menit",
+          "url": "https://www.rfc-editor.org/rfc/rfc3339.html",
+          "verifiedAt": "2026-11-07"
+        },
+        {
+          "title": "NIST SP330 §4: satuan menit, jam dan liter",
+          "url": "https://www.nist.gov/pml/special-publication-330/sp-330-section-4",
+          "verifiedAt": "2026-11-07"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/calendar-time.unit.ts",
+          "name": "shift minutes respect explicit rollover and conserve gross break and net"
+        }
+      ]
+    },
+    {
+      "slug": "konsumsi-bbm",
+      "input": {
+        "distance": "137.25",
+        "efficiency": "13.75",
+        "price": "1237"
+      },
+      "checks": [
+        {
+          "path": "values.cost",
+          "kind": "integer",
+          "expected": "12348"
+        }
+      ],
+      "proof": "Distance/km per litre × IDR/litre; aggregate cash",
+      "edgeInput": {
+        "distance": "137.25",
+        "efficiency": "0",
+        "price": "1237"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-konsumsi-bbm",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "NIST SP330 §4: satuan menit, jam dan liter",
+          "url": "https://www.nist.gov/pml/special-publication-330/sp-330-section-4",
+          "verifiedAt": "2026-11-07"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/calendar-time.unit.ts",
+          "name": "fuel costs round original rational liters once without display intermediates"
+        }
+      ]
+    },
+    {
+      "slug": "biaya-listrik",
+      "input": {
+        "power": "317",
+        "hours": "3.25",
+        "days": "17",
+        "quantity": "3",
+        "tariff": "1375.25"
+      },
+      "checks": [
+        {
+          "path": "values.cost",
+          "kind": "integer",
+          "expected": "72259"
+        }
+      ],
+      "proof": "W×hours/day×days×devices/1000 × usertariff",
+      "edgeInput": {
+        "power": "317",
+        "hours": "25",
+        "days": "17",
+        "quantity": "3",
+        "tariff": "1375.25"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-biaya-listrik",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "US EIA: daya watt dan energi Wh/kWh",
+          "url": "https://www.eia.gov/energyexplained/electricity/measuring-electricity.php",
+          "verifiedAt": "2026-11-07"
+        },
+        {
+          "title": "NIST: prefiks SI kilo dan centi",
+          "url": "https://www.nist.gov/pml/owm/metric-si-prefixes",
+          "verifiedAt": "2026-11-07"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/utilities-materials.unit.ts",
+          "name": "electricity converts per-device daily watt hours and rounds original energy cost"
+        }
+      ]
+    },
+    {
+      "slug": "biaya-air",
+      "input": {
+        "usage": "13.75",
+        "fixed": "317",
+        "tiers": [
+          {
+            "limit": "bounded",
+            "upper": "7",
+            "rate": "1237.25"
+          },
+          {
+            "limit": "unbounded",
+            "rate": "2117.5"
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": "values.bill",
+          "kind": "integer",
+          "expected": "23271"
+        }
+      ],
+      "proof": "Progressive marginal blocks7 and6.75 m3; fixed once",
+      "edgeInput": {
+        "usage": "13.75",
+        "fixed": "317",
+        "tiers": []
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-biaya-air",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "NIST: prefiks SI kilo dan centi",
+          "url": "https://www.nist.gov/pml/owm/metric-si-prefixes",
+          "verifiedAt": "2026-11-07"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/utilities-materials.unit.ts",
+          "name": "water allocates marginal tiers exactly and rounds only the final total"
+        }
+      ]
+    },
+    {
+      "slug": "kebutuhan-cat",
+      "input": {
+        "gross": "137.25",
+        "openings": "17.75",
+        "coats": "3",
+        "coverage": "11.25",
+        "reserve": "7.5",
+        "package": "2.5"
+      },
+      "checks": [
+        {
+          "path": "values.packages",
+          "kind": "integer",
+          "expected": "14"
+        }
+      ],
+      "proof": "ceil(netarea×coats/coverage×reservefactor/packagesize)",
+      "edgeInput": {
+        "gross": "137.25",
+        "openings": "17.75",
+        "coats": "3",
+        "coverage": "0",
+        "reserve": "7.5",
+        "package": "2.5"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-kebutuhan-cat",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "NIST: prefiks SI kilo dan centi",
+          "url": "https://www.nist.gov/pml/owm/metric-si-prefixes",
+          "verifiedAt": "2026-11-07"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/utilities-materials.unit.ts",
+          "name": "paint package ceiling uses exact reserve-adjusted liters and reconciles leftovers"
+        }
+      ]
+    },
+    {
+      "slug": "kebutuhan-keramik",
+      "input": {
+        "area": "13.75",
+        "length": "31",
+        "width": "23",
+        "perBox": "7",
+        "reserve": "7.5"
+      },
+      "checks": [
+        {
+          "path": "values.boxes",
+          "kind": "integer",
+          "expected": "30"
+        }
+      ],
+      "proof": "ceil(ceil(area/tilearea ×1.075)/7)",
+      "edgeInput": {
+        "area": "13.75",
+        "length": "31",
+        "width": "23",
+        "perBox": "0",
+        "reserve": "7.5"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-kebutuhan-keramik",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "OpenStax: luas persegi panjang, balok dan silinder",
+          "url": "https://openstax.org/books/prealgebra-2e/pages/c-geometric-formulas",
+          "verifiedAt": "2026-11-07"
+        },
+        {
+          "title": "NIST: prefiks SI kilo dan centi",
+          "url": "https://www.nist.gov/pml/owm/metric-si-prefixes",
+          "verifiedAt": "2026-11-07"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/utilities-materials.unit.ts",
+          "name": "tiles use exact area then per-tile and per-box ceilings"
+        }
+      ]
+    },
+    {
+      "slug": "volume-beton",
+      "input": {
+        "reserve": "7.5",
+        "elements": [
+          {
+            "shape": "prism",
+            "length": "3.25",
+            "width": "1.75",
+            "height": "0.125",
+            "count": "3"
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": "exact.total",
+          "kind": "rational",
+          "expected": "11739/5120"
+        }
+      ],
+      "proof": "Sum prism m³ × reserve; exact rational",
+      "edgeInput": {
+        "reserve": "7.5",
+        "elements": []
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-volume-beton",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "OpenStax: luas persegi panjang, balok dan silinder",
+          "url": "https://openstax.org/books/prealgebra-2e/pages/c-geometric-formulas",
+          "verifiedAt": "2026-11-07"
+        },
+        {
+          "title": "Wolfram Functions: nilai desimal π",
+          "url": "https://functions.wolfram.com/Constants/Pi/03/0001/",
+          "verifiedAt": "2026-11-07"
+        },
+        {
+          "title": "NIST: prefiks SI kilo dan centi",
+          "url": "https://www.nist.gov/pml/owm/metric-si-prefixes",
+          "verifiedAt": "2026-11-07"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/utilities-materials.unit.ts",
+          "name": "concrete accumulates original prism and rational-pi cylinder volumes"
+        }
+      ]
+    },
+    {
+      "slug": "skala-denah",
+      "input": {
+        "mode": "drawing-real",
+        "value": "3.25",
+        "scale": "75",
+        "from": "cm",
+        "to": "m"
+      },
+      "checks": [
+        {
+          "path": "exact",
+          "kind": "rational",
+          "expected": "39/16"
+        }
+      ],
+      "proof": "Drawing centimetres×75/100 to metres",
+      "edgeInput": {
+        "mode": "drawing-real",
+        "value": "3.25",
+        "scale": "0",
+        "from": "cm",
+        "to": "m"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-skala-denah",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "NIST: definisi satuan dasar meter, kilogram dan second",
+          "url": "https://www.nist.gov/si-redefinition/definitions-si-base-units",
+          "verifiedAt": "2026-11-07"
+        },
+        {
+          "title": "NIST: prefiks SI",
+          "url": "https://www.nist.gov/pml/owm/metric-si-prefixes",
+          "verifiedAt": "2026-11-07"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/units-scale.unit.ts",
+          "name": "plan scale converts both directions after exact unit normalization"
+        }
+      ]
+    },
+    {
+      "slug": "konversi-panjang",
+      "input": {
+        "value": "3.25",
+        "from": "ft",
+        "to": "cm"
+      },
+      "checks": [
+        {
+          "path": "exact",
+          "kind": "rational",
+          "expected": "4953/50"
+        }
+      ],
+      "proof": "International foot=30.48cm exact",
+      "edgeInput": {
+        "value": "-1",
+        "from": "ft",
+        "to": "cm"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-konversi-panjang",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "NIST: definisi satuan dasar meter, kilogram dan second",
+          "url": "https://www.nist.gov/si-redefinition/definitions-si-base-units",
+          "verifiedAt": "2026-11-07"
+        },
+        {
+          "title": "NIST: prefiks SI",
+          "url": "https://www.nist.gov/pml/owm/metric-si-prefixes",
+          "verifiedAt": "2026-11-07"
+        },
+        {
+          "title": "NIST SP811 Appendix B: international yard dan foot",
+          "url": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors",
+          "verifiedAt": "2026-11-07"
+        },
+        {
+          "title": "NIST Handbook44–2026 Appendix C: panjang dan massa, international serta avoirdupois",
+          "url": "https://www.nist.gov/document/2026-nist-handbook-44-appendix-c",
+          "verifiedAt": "2026-11-07"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/units-scale.unit.ts",
+          "name": "length factors use exact international and metric definitions"
+        }
+      ]
+    },
+    {
+      "slug": "konversi-berat",
+      "input": {
+        "value": "3.25",
+        "from": "lb",
+        "to": "kg"
+      },
+      "checks": [
+        {
+          "path": "exact",
+          "kind": "rational",
+          "expected": "589670081/400000000"
+        }
+      ],
+      "proof": "International avoirdupois pound=0.45359237kg exact",
+      "edgeInput": {
+        "value": "-1",
+        "from": "lb",
+        "to": "kg"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-konversi-berat",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "NIST: definisi satuan dasar meter, kilogram dan second",
+          "url": "https://www.nist.gov/si-redefinition/definitions-si-base-units",
+          "verifiedAt": "2026-11-07"
+        },
+        {
+          "title": "NIST: prefiks SI",
+          "url": "https://www.nist.gov/pml/owm/metric-si-prefixes",
+          "verifiedAt": "2026-11-07"
+        },
+        {
+          "title": "NIST SP811 footnote22: pound avoirdupois eksak",
+          "url": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-footnotes",
+          "verifiedAt": "2026-11-07"
+        },
+        {
+          "title": "NIST Handbook44–2026 Appendix C: panjang dan massa, international serta avoirdupois",
+          "url": "https://www.nist.gov/document/2026-nist-handbook-44-appendix-c",
+          "verifiedAt": "2026-11-07"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/units-scale.unit.ts",
+          "name": "mass uses exact avoirdupois pound ounce and metric tonne factors"
+        }
+      ]
+    },
+    {
+      "slug": "konversi-suhu",
+      "input": {
+        "value": "-40",
+        "from": "C",
+        "to": "F"
+      },
+      "checks": [
+        {
+          "path": "exact",
+          "kind": "rational",
+          "expected": "-40"
+        }
+      ],
+      "proof": "F=9C/5+32; −40 fixed point",
+      "edgeInput": {
+        "value": "-273.150001",
+        "from": "C",
+        "to": "F"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-konversi-suhu",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "NIST: konversi suhu eksak Celsius/Fahrenheit/Kelvin",
+          "url": "https://www.nist.gov/pml/owm/si-units-temperature",
+          "verifiedAt": "2026-11-07"
+        },
+        {
+          "title": "NIST Kelvin Introduction: nol mutlak",
+          "url": "https://www.nist.gov/si-redefinition/kelvin-introduction",
+          "verifiedAt": "2026-11-07"
+        },
+        {
+          "title": "NIST: definisi satuan dasar meter, kilogram dan second",
+          "url": "https://www.nist.gov/si-redefinition/definitions-si-base-units",
+          "verifiedAt": "2026-11-07"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/units-scale.unit.ts",
+          "name": "temperature affine conversion enforces absolute zero on exact input"
+        }
+      ]
+    },
+    {
+      "slug": "kecepatan-rata-rata",
+      "input": {
+        "distance": "137.25",
+        "distanceUnit": "km",
+        "hours": "2",
+        "minutes": "17",
+        "seconds": "13.5",
+        "to": "km/h"
+      },
+      "checks": [
+        {
+          "path": "exact",
+          "kind": "rational",
+          "expected": "329400/5489"
+        }
+      ],
+      "proof": "Total distance / elapsed seconds ×3600",
+      "edgeInput": {
+        "distance": "137.25",
+        "distanceUnit": "km",
+        "hours": "0",
+        "minutes": "0",
+        "seconds": "0",
+        "to": "km/h"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-kecepatan-rata-rata",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "NIST: definisi satuan dasar meter, kilogram dan second",
+          "url": "https://www.nist.gov/si-redefinition/definitions-si-base-units",
+          "verifiedAt": "2026-11-07"
+        },
+        {
+          "title": "NIST SP330 §4: menit dan jam",
+          "url": "https://www.nist.gov/pml/special-publication-330/sp-330-section-4",
+          "verifiedAt": "2026-11-07"
+        },
+        {
+          "title": "NIST SP811 Appendix B: international yard dan foot",
+          "url": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors",
+          "verifiedAt": "2026-11-07"
+        },
+        {
+          "title": "NIST Handbook44–2026 Appendix C: panjang dan massa, international serta avoirdupois",
+          "url": "https://www.nist.gov/document/2026-nist-handbook-44-appendix-c",
+          "verifiedAt": "2026-11-07"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/units-scale.unit.ts",
+          "name": "average speed uses exact elapsed seconds and distance unit factors"
+        }
+      ]
+    },
+    {
+      "slug": "blibli",
+      "input": {
+        "price": "1237",
+        "quantity": "3",
+        "discount": "211",
+        "cost": "613",
+        "rate": "7.25",
+        "fixed": "17",
+        "other": "11",
+        "basis": "net",
+        "shipping": "31"
+      },
+      "checks": [
+        {
+          "path": "primary.value",
+          "kind": "rational",
+          "expected": "3187"
+        }
+      ],
+      "proof": "Net sales3500 less user7.25%, fixed17,other11,shipping31; round aggregate",
+      "edgeInput": {
+        "price": "1237",
+        "quantity": "0",
+        "discount": "211",
+        "cost": "613",
+        "rate": "7.25",
+        "fixed": "17",
+        "other": "11",
+        "basis": "net",
+        "shipping": "31"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-blibli",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "AccountingCoach: Income Statement, gross profit dan biaya operasi",
+          "url": "https://www.accountingcoach.com/income-statement/explanation",
+          "verifiedAt": "2026-11-07"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/marketplace-economics.unit.ts",
+          "name": "settlement reconciles independent net and gross basis fixtures"
+        }
+      ]
+    },
+    {
+      "slug": "harga-jual-marketplace",
+      "input": {
+        "target": "1237",
+        "discountRate": "12.5",
+        "feeRate": "7.25",
+        "fixed": "31"
+      },
+      "checks": [
+        {
+          "path": "primary.value",
+          "kind": "rational",
+          "expected": "1563"
+        }
+      ],
+      "proof": "ceil((target+fixed)/((1−discount)(1−fee)))",
+      "edgeInput": {
+        "target": "1237",
+        "discountRate": "12.5",
+        "feeRate": "100",
+        "fixed": "31"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-harga-jual-marketplace",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "AccountingCoach: Income Statement, gross profit dan biaya operasi",
+          "url": "https://www.accountingcoach.com/income-statement/explanation",
+          "verifiedAt": "2026-11-07"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/marketplace-economics.unit.ts",
+          "name": "listing inversion verifies exact target and previous integer minimality"
+        }
+      ]
+    },
+    {
+      "slug": "banding-biaya-marketplace",
+      "input": {
+        "price": "1237",
+        "quantity": "3",
+        "discount": "211",
+        "cost": "613",
+        "channels": [
+          {
+            "label": "A",
+            "rate": "7.25",
+            "fixed": "17",
+            "other": "11",
+            "basis": "net"
+          },
+          {
+            "label": "B",
+            "rate": "11",
+            "fixed": "0",
+            "other": "7",
+            "basis": "gross"
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": "channels.0.payout",
+          "kind": "rational",
+          "expected": "12873/4"
+        }
+      ],
+      "proof": "ChannelA exactnet; ranking must use exact contributions",
+      "edgeInput": {
+        "price": "1237",
+        "quantity": "3",
+        "discount": "211",
+        "cost": "613",
+        "channels": []
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-banding-biaya-marketplace",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "AccountingCoach: Income Statement, gross profit dan biaya operasi",
+          "url": "https://www.accountingcoach.com/income-statement/explanation",
+          "verifiedAt": "2026-11-07"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/marketplace-economics.unit.ts",
+          "name": "comparison ranks exact profits with deterministic ties and basis"
+        }
+      ]
+    },
+    {
+      "slug": "bundel-produk",
+      "input": {
+        "price": "1237",
+        "discount": "211",
+        "rate": "7.25",
+        "fixed": "17",
+        "items": [
+          {
+            "label": "A",
+            "cost": "137",
+            "quantity": "3"
+          },
+          {
+            "label": "B",
+            "cost": "211",
+            "quantity": "2"
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": "primary.value",
+          "kind": "rational",
+          "expected": "102"
+        }
+      ],
+      "proof": "Net1026 minus fee and all bundled HPP; round aggregate",
+      "edgeInput": {
+        "price": "1237",
+        "discount": "211",
+        "rate": "7.25",
+        "fixed": "17",
+        "items": []
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-bundel-produk",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "MIT OCW: Management Accounting and Control, slide 16 (kontribusi dan laba)",
+          "url": "https://ocw.mit.edu/courses/15-963-management-accounting-and-control-spring-2007/c0e4e8a92624f3eff86232c0b2df69cf_lec2.pdf",
+          "verifiedAt": "2026-11-07"
+        },
+        {
+          "title": "AccountingCoach: Income Statement, gross profit dan biaya operasi",
+          "url": "https://www.accountingcoach.com/income-statement/explanation",
+          "verifiedAt": "2026-11-07"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/marketplace-economics.unit.ts",
+          "name": "bundle contribution respects independent fixtures and split reorder invariance"
+        }
+      ]
+    },
+    {
+      "slug": "stok-cover",
+      "input": {
+        "stock": "137",
+        "daily": "3.25"
+      },
+      "checks": [
+        {
+          "path": "primary.value",
+          "kind": "rational",
+          "expected": "548/13"
+        }
+      ],
+      "proof": "Stock / assumed daily sales, exact days",
+      "edgeInput": {
+        "stock": "137",
+        "daily": "-1"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-stok-cover",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "Shopify Help Center: Product analytics, days of inventory remaining",
+          "url": "https://help.shopify.com/en/manual/products/analytics",
+          "verifiedAt": "2026-11-07"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/marketplace-economics.unit.ts",
+          "name": "stock cover distinguishes finite zero demand and indeterminate states"
+        }
+      ]
+    },
+    {
+      "slug": "ppn",
+      "input": {
+        "date": "2026-11-01",
+        "treatment": "general",
+        "confirmation": "confirmed",
+        "mode": "exclusive",
+        "amount": "1237"
+      },
+      "checks": [
+        {
+          "path": "amount",
+          "kind": "integer",
+          "expected": "136"
+        }
+      ],
+      "proof": "PMK131/2024:12%×11/12 commercialprice; modelcashhalfaway",
+      "edgeInput": {
+        "date": "2026-11-01",
+        "treatment": "unknown",
+        "confirmation": "confirmed",
+        "mode": "exclusive",
+        "amount": "1237"
+      },
+      "edgeChecks": [
+        {
+          "path": "status",
+          "kind": "literal",
+          "expected": "unsupported"
+        },
+        {
+          "path": "amount",
+          "kind": "absent"
+        }
+      ],
+      "id": "calc-ppn",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "UU7/2021: PPN Pasal7/8A dan bagian omzet OP500juta",
+          "url": "https://www.pajak.go.id/en/node/74838",
+          "effectiveDate": "2022-04-01",
+          "verifiedAt": "2026-11-08",
+          "version": "1.1.0"
+        },
+        {
+          "title": "PMK131/2024: Pasal2–6 PPN dan transisi Januari2025",
+          "url": "https://www.pajak.go.id/id/peraturan/perlakuan-pajak-pertambahan-nilai-atas-impor-barang-kena-pajak-penyerahan-barang-kena",
+          "effectiveDate": "2025-01-01",
+          "verifiedAt": "2026-11-08",
+          "version": "1.1.0"
+        },
+        {
+          "title": "PMK11/2025: pengecualian DPP dan besaran tertentu",
+          "url": "https://www.pajak.go.id/id/peraturan/ketentuan-nilai-lain-sebagai-dasar-pengenaan-pajak-dan-besaran-tertentu-pajak-pertambahan",
+          "effectiveDate": "2025-02-04",
+          "verifiedAt": "2026-11-08",
+          "version": "1.1.0"
+        },
+        {
+          "title": "PMK53/2025: perubahan PMK11 (rezim khusus tidak dicakup)",
+          "url": "https://www.pajak.go.id/index.php/id/peraturan/perubahan-atas-peraturan-menteri-keuangan-nomor-11-tahun-2025-tentang-ketentuan-nilai",
+          "effectiveDate": "2025-08-01",
+          "verifiedAt": "2026-11-08",
+          "version": "1.1.0"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/tax.unit.ts",
+          "name": "VAT separates commercial price legal DPP and date transitions"
+        }
+      ]
+    },
+    {
+      "slug": "pph-23",
+      "input": {
+        "date": "2026-11-01",
+        "type": "services",
+        "recipient": "domestic-body",
+        "identity": "npwp",
+        "confirmation": "confirmed",
+        "mode": "exclusive",
+        "amount": "1237",
+        "vat": "0"
+      },
+      "checks": [
+        {
+          "path": "amount",
+          "kind": "integer",
+          "expected": "25"
+        }
+      ],
+      "proof": "UU36/2008Pasal23/PMK141:ordinaryservices2% exclusiveVAT",
+      "edgeInput": {
+        "date": "2026-11-01",
+        "type": "services",
+        "recipient": "unknown",
+        "identity": "npwp",
+        "confirmation": "confirmed",
+        "mode": "exclusive",
+        "amount": "1237",
+        "vat": "0"
+      },
+      "edgeChecks": [
+        {
+          "path": "status",
+          "kind": "literal",
+          "expected": "unverified"
+        },
+        {
+          "path": "amount",
+          "kind": "absent"
+        }
+      ],
+      "id": "calc-pph-23",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "UU36/2008 Pasal23: tarif, identitas dan pengecualian",
+          "url": "https://pajak.go.id/id/undang-undang-nomor-36-tahun-2008",
+          "effectiveDate": "2009-01-01",
+          "verifiedAt": "2026-11-08",
+          "version": "1.1.0"
+        },
+        {
+          "title": "PMK141/2015: jumlah bruto jasa tidak termasuk PPN",
+          "url": "https://www.pajak.go.id/index.php/id/peraturan/jenis-jasa-lain-sebagaimana-dimaksud-dalam-pasal-23-ayat-1-huruf-c-angka-2-undang-0",
+          "effectiveDate": "2015-08-26",
+          "verifiedAt": "2026-11-08",
+          "version": "1.1.0"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/tax.unit.ts",
+          "name": "PPh23 class identity VAT basis and eligibility are explicit"
+        }
+      ]
+    },
+    {
+      "slug": "pph-4-ayat-2-sewa",
+      "input": {
+        "date": "2026-11-01",
+        "type": "land-building",
+        "role": "self",
+        "confirmation": "confirmed",
+        "vatStatus": "none",
+        "rent": "137",
+        "service": "211",
+        "maintenance": "317",
+        "other": "53"
+      },
+      "checks": [
+        {
+          "path": "amount",
+          "kind": "integer",
+          "expected": "72"
+        }
+      ],
+      "proof": "PP34/2017:10% grossrentplusrelatedcharges, selfpay does not fakewithholding",
+      "edgeInput": {
+        "date": "2026-11-01",
+        "type": "land-building",
+        "role": "self",
+        "confirmation": "confirmed",
+        "vatStatus": "unresolved",
+        "rent": "137",
+        "service": "211",
+        "maintenance": "317",
+        "other": "53"
+      },
+      "edgeChecks": [
+        {
+          "path": "status",
+          "kind": "literal",
+          "expected": "unsupported"
+        },
+        {
+          "path": "amount",
+          "kind": "absent"
+        }
+      ],
+      "id": "calc-pph-4-ayat-2-sewa",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "PP34/2017: Pasal2–4 dan7 sewa tanah/bangunan",
+          "url": "https://jdih.kemenkeu.go.id/api/download/fulltext/2017/34TAHUN2017PP.pdf",
+          "effectiveDate": "2018-01-02",
+          "verifiedAt": "2026-11-08",
+          "version": "1.1.0"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/tax.unit.ts",
+          "name": "rental tax includes related charges and separates payer roles"
+        }
+      ]
+    },
+    {
+      "slug": "gross-up-pajak",
+      "input": {
+        "target": "1237",
+        "rate": "17.5",
+        "fixed": "31"
+      },
+      "checks": [
+        {
+          "path": "amount",
+          "kind": "integer",
+          "expected": "1537"
+        }
+      ],
+      "proof": "Singleuser-ratealgebra, ceil((target+fixed)/(1−rate)), notprogressivePPh21",
+      "edgeInput": {
+        "target": "1237",
+        "rate": "100",
+        "fixed": "31"
+      },
+      "edgeChecks": [
+        {
+          "path": "success",
+          "kind": "literal",
+          "expected": false
+        }
+      ],
+      "id": "calc-gross-up-pajak",
+      "formulaVersion": "1.0.0",
+      "sources": [],
+      "existingTests": [
+        {
+          "file": "tests/tax.unit.ts",
+          "name": "manual gross up verifies exact forward and previous integer minimality"
+        }
+      ]
+    },
+    {
+      "slug": "pph-final-umkm",
+      "input": {
+        "year": "2026",
+        "month": "7",
+        "registration": "2026-05-03",
+        "taxpayer": "individual",
+        "income": "business",
+        "eligibility": "confirmed",
+        "aggregation": "confirmed",
+        "wpTurnoverScope": "all-businesses",
+        "priorRelatedTurnover": "100000000",
+        "currentRelatedTurnover": "777000000",
+        "history": "clean",
+        "months": [
+          {
+            "turnover": "0"
+          },
+          {
+            "turnover": "0"
+          },
+          {
+            "turnover": "0"
+          },
+          {
+            "turnover": "0"
+          },
+          {
+            "turnover": "377000000"
+          },
+          {
+            "turnover": "151000000"
+          },
+          {
+            "turnover": "31000000"
+          },
+          {
+            "turnover": "0"
+          },
+          {
+            "turnover": "0"
+          },
+          {
+            "turnover": "0"
+          },
+          {
+            "turnover": "0"
+          },
+          {
+            "turnover": "0"
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": "amount",
+          "kind": "integer",
+          "expected": "155000"
+        }
+      ],
+      "proof": "PP20/2026 + PMK164Pasal6: WPowncumulative528m beforeJuly alreadyuses500m; unrelatedWPonlyeligibility",
+      "edgeInput": {
+        "year": "2026",
+        "month": "7",
+        "registration": "2020-05-03",
+        "taxpayer": "individual",
+        "income": "business",
+        "eligibility": "confirmed",
+        "aggregation": "confirmed",
+        "wpTurnoverScope": "all-businesses",
+        "priorRelatedTurnover": "100000000",
+        "currentRelatedTurnover": "777000000",
+        "history": "clean",
+        "months": [
+          {
+            "turnover": "0"
+          },
+          {
+            "turnover": "0"
+          },
+          {
+            "turnover": "0"
+          },
+          {
+            "turnover": "0"
+          },
+          {
+            "turnover": "377000000"
+          },
+          {
+            "turnover": "151000000"
+          },
+          {
+            "turnover": "31000000"
+          },
+          {
+            "turnover": "0"
+          },
+          {
+            "turnover": "0"
+          },
+          {
+            "turnover": "0"
+          },
+          {
+            "turnover": "0"
+          },
+          {
+            "turnover": "0"
+          }
+        ]
+      },
+      "edgeChecks": [
+        {
+          "path": "status",
+          "kind": "literal",
+          "expected": "unverified"
+        },
+        {
+          "path": "amount",
+          "kind": "absent"
+        }
+      ],
+      "id": "calc-pph-final-umkm",
+      "formulaVersion": "1.1.0",
+      "sources": [
+        {
+          "title": "PP20/2026: perubahan PP55, Pasal56–58 dan PasalII (salinan primer)",
+          "url": "https://jdih.kemenkeu.go.id/api/download/d057ff82-50e7-4127-b66b-f704a36f071d/2026pp020.pdf",
+          "effectiveDate": "2026-04-22",
+          "verifiedAt": "2026-11-08",
+          "version": "1.1.0"
+        },
+        {
+          "title": "PP55/2022: Pasal60–63, dasar kumulatif dan pelunasan",
+          "url": "https://www.pajak.go.id/id/peraturan/penyesuaian-pengaturan-di-bidang-pajak-penghasilan",
+          "effectiveDate": "2022-12-20",
+          "verifiedAt": "2026-11-08",
+          "version": "1.1.0"
+        },
+        {
+          "title": "PMK164/2023: Pasal6, kumulatif seluruh tempat usaha satu WP",
+          "url": "https://pajak.go.id/id/peraturan/tata-cara-pengenaan-pajak-penghasilan-atas-penghasilan-dari-usaha-yang-diterima-atau",
+          "effectiveDate": "2023-12-29",
+          "verifiedAt": "2026-11-08",
+          "version": "1.1.0"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/tax.unit.ts",
+          "name": "UMKM eligibility and cumulative fiscal ledger guard legal boundaries"
+        }
+      ]
+    },
+    {
+      "slug": "pph-21-bulanan",
+      "input": {
+        "year": "2024",
+        "finalMonth": "12",
+        "ptkp": "K/0",
+        "employment": "full-year",
+        "employers": "single",
+        "relief": "none",
+        "classification": "ordinary",
+        "confirmation": "confirmed",
+        "month": "5",
+        "gross": "9000137"
+      },
+      "checks": [
+        {
+          "path": "amount",
+          "kind": "integer",
+          "expected": "157502"
+        }
+      ],
+      "proof": "PP58/2023 TER A:8.55m<gross≤9.65m,1.75% of wholegross",
+      "edgeInput": {
+        "year": "2024",
+        "finalMonth": "12",
+        "ptkp": "K/0",
+        "employment": "full-year",
+        "employers": "single",
+        "relief": "none",
+        "classification": "ordinary",
+        "confirmation": "confirmed",
+        "month": "12",
+        "gross": "9000137"
+      },
+      "edgeChecks": [
+        {
+          "path": "status",
+          "kind": "literal",
+          "expected": "unverified"
+        },
+        {
+          "path": "amount",
+          "kind": "absent"
+        }
+      ],
+      "id": "calc-pph-21-bulanan",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "PP58/2023: tarif efektif dan kategori PTKP",
+          "url": "https://pajak.go.id/id/peraturan/tarif-pemotongan-pajak-penghasiian-pasal-21-atas-penghasilan-sehubungan-dengan-pekerjaan",
+          "effectiveDate": "2024-01-01",
+          "verifiedAt": "2026-11-08",
+          "version": "1.0.0"
+        },
+        {
+          "title": "Lampiran resmi PP58/2023: seluruh tabel A/B/C",
+          "url": "https://pajak.go.id/sites/default/files/lampiran/Lampiran%20PP58TAHUN2023.pdf",
+          "effectiveDate": "2024-01-01",
+          "verifiedAt": "2026-11-08",
+          "version": "1.0.0"
+        },
+        {
+          "title": "PMK168/2023: bruto, pengurang dan masa terakhir",
+          "url": "https://pajak.go.id/id/peraturan/petunjuk-pelaksanaan-pemotongan-pajak-atas-penghasilan-sehubungan-dengan-pekerjaan-jasa-1",
+          "effectiveDate": "2024-01-01",
+          "verifiedAt": "2026-11-08",
+          "version": "1.0.0"
+        },
+        {
+          "title": "PMK101/2016: besaran PTKP",
+          "url": "https://pajak.go.id/id/peraturan/penyesuaian-besarnya-penghasilan-tidak-kena-pajak-2",
+          "effectiveDate": "2016-06-27",
+          "verifiedAt": "2026-11-08",
+          "version": "1.0.0"
+        },
+        {
+          "title": "UU7/2021: lapisan Pasal17 dan PTKP",
+          "url": "https://pajak.go.id/id/peraturan/harmonisasi-peraturan-perpajakan",
+          "effectiveDate": "2022-01-01",
+          "verifiedAt": "2026-11-08",
+          "version": "1.0.0"
+        },
+        {
+          "title": "PMK105/2025: fasilitas DTP 2026 di luar cakupan",
+          "url": "https://www.pajak.go.id/id/peraturan/pajak-penghasilan-pasal-21-atas-penghasilan-tertentu-yang-ditanggung-pemerintah-dalam-0",
+          "effectiveDate": "2025-12-31",
+          "verifiedAt": "2026-11-08",
+          "version": "1.0.0"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/tax-advanced.unit.ts",
+          "name": "TER complete primary tables and every boundary ±one are exact"
+        }
+      ]
+    },
+    {
+      "slug": "pph-21-rekonsiliasi",
+      "input": {
+        "year": "2024",
+        "finalMonth": "12",
+        "ptkp": "K/0",
+        "employment": "full-year",
+        "employers": "single",
+        "relief": "none",
+        "classification": "ordinary",
+        "confirmation": "confirmed",
+        "aggregate": "complete",
+        "deductions": "confirmed",
+        "gross": "150123457",
+        "contributions": "1730000",
+        "zakat": "311000",
+        "withheld": "3710000"
+      },
+      "checks": [
+        {
+          "path": "amount",
+          "kind": "integer",
+          "expected": "2827300"
+        }
+      ],
+      "proof": "PMK168:annualnet−PTKPK0, PKPfloor1000, UU7Pasal17:5%first60m+15%next, lessactualwithheld",
+      "edgeInput": {
+        "year": "2026",
+        "finalMonth": "12",
+        "ptkp": "K/0",
+        "employment": "full-year",
+        "employers": "single",
+        "relief": "none",
+        "classification": "ordinary",
+        "confirmation": "confirmed",
+        "aggregate": "complete",
+        "deductions": "confirmed",
+        "gross": "150123457",
+        "contributions": "1730000",
+        "zakat": "311000",
+        "withheld": "3710000"
+      },
+      "edgeChecks": [
+        {
+          "path": "status",
+          "kind": "literal",
+          "expected": "unverified"
+        },
+        {
+          "path": "amount",
+          "kind": "absent"
+        }
+      ],
+      "id": "calc-pph-21-rekonsiliasi",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "PP58/2023: tarif efektif dan kategori PTKP",
+          "url": "https://pajak.go.id/id/peraturan/tarif-pemotongan-pajak-penghasiian-pasal-21-atas-penghasilan-sehubungan-dengan-pekerjaan",
+          "effectiveDate": "2024-01-01",
+          "verifiedAt": "2026-11-08",
+          "version": "1.0.0"
+        },
+        {
+          "title": "Lampiran resmi PP58/2023: seluruh tabel A/B/C",
+          "url": "https://pajak.go.id/sites/default/files/lampiran/Lampiran%20PP58TAHUN2023.pdf",
+          "effectiveDate": "2024-01-01",
+          "verifiedAt": "2026-11-08",
+          "version": "1.0.0"
+        },
+        {
+          "title": "PMK168/2023: bruto, pengurang dan masa terakhir",
+          "url": "https://pajak.go.id/id/peraturan/petunjuk-pelaksanaan-pemotongan-pajak-atas-penghasilan-sehubungan-dengan-pekerjaan-jasa-1",
+          "effectiveDate": "2024-01-01",
+          "verifiedAt": "2026-11-08",
+          "version": "1.0.0"
+        },
+        {
+          "title": "PMK101/2016: besaran PTKP",
+          "url": "https://pajak.go.id/id/peraturan/penyesuaian-besarnya-penghasilan-tidak-kena-pajak-2",
+          "effectiveDate": "2016-06-27",
+          "verifiedAt": "2026-11-08",
+          "version": "1.0.0"
+        },
+        {
+          "title": "UU7/2021: lapisan Pasal17 dan PTKP",
+          "url": "https://pajak.go.id/id/peraturan/harmonisasi-peraturan-perpajakan",
+          "effectiveDate": "2022-01-01",
+          "verifiedAt": "2026-11-08",
+          "version": "1.0.0"
+        },
+        {
+          "title": "PMK105/2025: fasilitas DTP 2026 di luar cakupan",
+          "url": "https://www.pajak.go.id/id/peraturan/pajak-penghasilan-pasal-21-atas-penghasilan-tertentu-yang-ditanggung-pemerintah-dalam-0",
+          "effectiveDate": "2025-12-31",
+          "verifiedAt": "2026-11-08",
+          "version": "1.0.0"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/tax-advanced.unit.ts",
+          "name": "annual reconciliation progressive layers and actual withholding reconcile"
+        }
+      ]
+    },
+    {
+      "slug": "pajak-impor",
+      "input": {
+        "date": "2024-06-03",
+        "mode": "manual",
+        "regime": "regular",
+        "incoterm": "FOB",
+        "currency": "USD",
+        "hs": "84713020",
+        "confirmation": "confirmed",
+        "reference": "Audit manual independent assumption",
+        "fxStart": "2024-05-29",
+        "fxEnd": "2024-06-04",
+        "fx": "15731.125",
+        "value": "137.25",
+        "freight": "17.75",
+        "insurance": "3.125",
+        "dutyRate": "7.25",
+        "vatRate": "12",
+        "vatFactor": "100",
+        "incomeRate": "2.5",
+        "vatBase": "plus-duty",
+        "incomeBase": "plus-duty"
+      },
+      "checks": [
+        {
+          "path": "amount",
+          "kind": "integer",
+          "expected": "567178"
+        }
+      ],
+      "proof": "CIF×manualFX; duty7.25%;VAT12% andincome2.5%onCIF+duty; roundcomponentsbeforetotal",
+      "edgeInput": {
+        "date": "2024-06-03",
+        "mode": "manual",
+        "regime": "consignment",
+        "incoterm": "FOB",
+        "currency": "USD",
+        "hs": "84713020",
+        "confirmation": "confirmed",
+        "reference": "Audit manual independent assumption",
+        "fxStart": "2024-05-29",
+        "fxEnd": "2024-06-04",
+        "fx": "15731.125",
+        "value": "137.25",
+        "freight": "17.75",
+        "insurance": "3.125",
+        "dutyRate": "7.25",
+        "vatRate": "12",
+        "vatFactor": "100",
+        "incomeRate": "2.5",
+        "vatBase": "plus-duty",
+        "incomeBase": "plus-duty"
+      },
+      "edgeChecks": [
+        {
+          "path": "status",
+          "kind": "literal",
+          "expected": "unverified"
+        },
+        {
+          "path": "amount",
+          "kind": "absent"
+        }
+      ],
+      "id": "calc-pajak-impor",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "PMK144/2022: nilai pabean CIF",
+          "url": "https://jdih.kemenkeu.go.id/api/download/dc898419-85c0-4fe3-a2e8-c3770c034e16/144~PMK.04~2022.pdf",
+          "effectiveDate": "2023-01-01",
+          "verifiedAt": "2026-11-08",
+          "version": "1.0.0"
+        },
+        {
+          "title": "DJBC: CIF dan perlakuan FOB/CFR/CIF",
+          "url": "https://www.beacukai.go.id/faq-impor-nilai-pabean-untuk-penghitungan-bea-masuk",
+          "effectiveDate": "2023-01-01",
+          "verifiedAt": "2026-11-08",
+          "version": "1.0.0"
+        },
+        {
+          "title": "DJBC: kurs kepabeanan resmi",
+          "url": "https://www.beacukai.go.id/kurs",
+          "effectiveDate": "2023-01-01",
+          "verifiedAt": "2026-11-08",
+          "version": "1.0.0"
+        },
+        {
+          "title": "PMK4/2025: barang kiriman tidak dicakup",
+          "url": "https://www.jdih.kemenkeu.go.id/dok/pmk-4-tahun-2025/overview",
+          "effectiveDate": "2025-03-05",
+          "verifiedAt": "2026-11-08",
+          "version": "1.0.0"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/tax-advanced.unit.ts",
+          "name": "import manual CIF and declared bases conserve exact cash components"
+        }
+      ]
+    },
+    {
+      "slug": "bphtb",
+      "input": {
+        "region": "DKI",
+        "confirmation": "confirmed",
+        "date": "2024-11-01",
+        "acquisition": "sale",
+        "first": "confirmed",
+        "taxpayer": "body",
+        "property": "nonresidential",
+        "relation": "not-applicable",
+        "facility": "none-confirmed",
+        "value": "900123457",
+        "njop": "800123457"
+      },
+      "checks": [
+        {
+          "path": "amount",
+          "kind": "integer",
+          "expected": "32506173"
+        }
+      ],
+      "proof": "DKI1/2024:5%max(NPOP,NJOP)lessfirstacquisitionNPOPTKP250m; nofacilities",
+      "edgeInput": {
+        "region": "DKI",
+        "confirmation": "confirmed",
+        "date": "2026-11-01",
+        "acquisition": "sale",
+        "first": "confirmed",
+        "taxpayer": "body",
+        "property": "nonresidential",
+        "relation": "not-applicable",
+        "facility": "none-confirmed",
+        "value": "900123457",
+        "njop": "800123457"
+      },
+      "edgeChecks": [
+        {
+          "path": "status",
+          "kind": "literal",
+          "expected": "unverified"
+        },
+        {
+          "path": "amount",
+          "kind": "absent"
+        }
+      ],
+      "id": "calc-bphtb",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "PP35/2023: pajak daerah menurut wilayah",
+          "url": "https://jdih.kemenkeu.go.id/api/download/06195e1e-c66b-4254-b3b0-877cfa443aa3/35TAHUN2023PP.pdf",
+          "effectiveDate": "2023-06-16",
+          "verifiedAt": "2026-11-08",
+          "version": "1.0.0"
+        },
+        {
+          "title": "PerdaDKI1/2024: BPHTB dan PBB-P2",
+          "url": "https://jdih.jakarta.go.id/dokumenPeraturanDirectory/0031/2024PERDA00311.pdf",
+          "effectiveDate": "2024-01-05",
+          "verifiedAt": "2026-11-08",
+          "version": "1.0.0"
+        },
+        {
+          "title": "PergubDKI23/2023: pembebasan rumah tapak pertama",
+          "url": "https://jdih.jakarta.go.id/link/download-fulltext/13650",
+          "effectiveDate": "2023-08-28",
+          "verifiedAt": "2026-11-08",
+          "version": "1.0.0"
+        },
+        {
+          "title": "Kepgub450/2026: fasilitas BPHTB baru",
+          "url": "https://bapenda.jakarta.go.id/peraturan-perpajakan/unduh/kepgub-nomor-450-tahun-2026-tentang-kriteria-pemberian-pengurangan-dan-pembebasan-pokok-bea-perolehan-hak-atas-tanah-dan-bangunan",
+          "effectiveDate": "2026-05-13",
+          "verifiedAt": "2026-11-08",
+          "version": "1.0.0"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/tax-advanced.unit.ts",
+          "name": "BPHTB region year first acquisition floor and family guards are explicit"
+        }
+      ]
+    },
+    {
+      "slug": "pbb-p2",
+      "input": {
+        "region": "DKI",
+        "confirmation": "confirmed",
+        "year": "2024",
+        "use": "nonresidential",
+        "allocation": "this-object",
+        "purpose": "gross-only",
+        "land": "317123457",
+        "building": "211123457"
+      },
+      "checks": [
+        {
+          "path": "amount",
+          "kind": "integer",
+          "expected": "1404741"
+        }
+      ],
+      "proof": "DKI1/2024/Pergub17:0.5%×60%×(NJOP−60m), grossbeforefacilities",
+      "edgeInput": {
+        "region": "DKI",
+        "confirmation": "confirmed",
+        "year": "2026",
+        "use": "nonresidential",
+        "allocation": "this-object",
+        "purpose": "gross-only",
+        "land": "317123457",
+        "building": "211123457"
+      },
+      "edgeChecks": [
+        {
+          "path": "status",
+          "kind": "literal",
+          "expected": "unverified"
+        },
+        {
+          "path": "amount",
+          "kind": "absent"
+        }
+      ],
+      "id": "calc-pbb-p2",
+      "formulaVersion": "1.0.0",
+      "sources": [
+        {
+          "title": "PP35/2023: pajak daerah menurut wilayah",
+          "url": "https://jdih.kemenkeu.go.id/api/download/06195e1e-c66b-4254-b3b0-877cfa443aa3/35TAHUN2023PP.pdf",
+          "effectiveDate": "2023-06-16",
+          "verifiedAt": "2026-11-08",
+          "version": "1.0.0"
+        },
+        {
+          "title": "PerdaDKI1/2024: BPHTB dan PBB-P2",
+          "url": "https://jdih.jakarta.go.id/dokumenPeraturanDirectory/0031/2024PERDA00311.pdf",
+          "effectiveDate": "2024-01-05",
+          "verifiedAt": "2026-11-08",
+          "version": "1.0.0"
+        },
+        {
+          "title": "PergubDKI17/2024: persentase NJOP",
+          "url": "https://jdih.jakarta.go.id/dokumenPeraturanDirectory/0031/2024PERGUB003117.pdf",
+          "effectiveDate": "2024-05-30",
+          "verifiedAt": "2026-11-08",
+          "version": "1.0.0"
+        },
+        {
+          "title": "PergubDKI16/2024: fasilitas PBB tahun2024",
+          "url": "https://jdih.jakarta.go.id/dokumenPeraturanDirectory/0031/2024PERGUB003116.pdf",
+          "effectiveDate": "2024-06-04",
+          "verifiedAt": "2026-11-08",
+          "version": "1.0.0"
+        },
+        {
+          "title": "Kepgub281/2025: PBB tahun2025 ditahan",
+          "url": "https://jdih.jakarta.go.id/dokumenPeraturanDirectory/0031/2025KEPGUB0031281.pdf",
+          "effectiveDate": "2025-04-08",
+          "verifiedAt": "2026-11-08",
+          "version": "1.0.0"
+        },
+        {
+          "title": "Kepgub339/2026: PBB tahun2026 ditahan",
+          "url": "https://jdih.jakarta.go.id/dokumenPeraturanDirectory/0031/2026KEPGUB0031339.pdf",
+          "effectiveDate": "2026-04-01",
+          "verifiedAt": "2026-11-08",
+          "version": "1.0.0"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/tax-advanced.unit.ts",
+          "name": "PBB gross regional factor and single object allowance never imply SPPT"
+        }
+      ]
+    },
+    {
+      "slug": "shopee",
+      "input": {
+        "price": "1237",
+        "quantity": "3",
+        "discount": "211",
+        "cost": "613",
+        "buyerShipping": "31",
+        "shippingFlow": "credited",
+        "shipping": "53",
+        "reimbursement": "17",
+        "receipts": "11",
+        "other": "7",
+        "coverage": "ordinary",
+        "confirmation": "complete",
+        "fees": [
+          {
+            "label": "Audit percent",
+            "type": "percent",
+            "rate": "7.25",
+            "basis": "net",
+            "minimumMode": "none",
+            "capMode": "enabled",
+            "cap": "211"
+          },
+          {
+            "label": "Audit fixed",
+            "type": "fixed",
+            "amount": "13",
+            "scope": "unit",
+            "minimumMode": "none",
+            "capMode": "none"
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": "ledger.payout",
+          "kind": "rational",
+          "expected": "3249"
+        },
+        {
+          "path": "ledger.payoutCash",
+          "kind": "integer",
+          "expected": "3249"
+        },
+        {
+          "path": "ledger.profitCash",
+          "kind": "integer",
+          "expected": "1410"
+        }
+      ],
+      "proof": "Manual net3500+actualcredits59−cappedfee211−fixed39−shipping53−other7; nocurrentofficialrates",
+      "edgeInput": {
+        "price": "1237",
+        "quantity": "3",
+        "discount": "211",
+        "cost": "613",
+        "buyerShipping": "31",
+        "shippingFlow": "credited",
+        "shipping": "53",
+        "reimbursement": "17",
+        "receipts": "11",
+        "other": "7",
+        "coverage": "ordinary",
+        "confirmation": "unknown",
+        "fees": [
+          {
+            "label": "Audit percent",
+            "type": "percent",
+            "rate": "7.25",
+            "basis": "net",
+            "minimumMode": "none",
+            "capMode": "enabled",
+            "cap": "211"
+          },
+          {
+            "label": "Audit fixed",
+            "type": "fixed",
+            "amount": "13",
+            "scope": "unit",
+            "minimumMode": "none",
+            "capMode": "none"
+          }
+        ]
+      },
+      "edgeChecks": [
+        {
+          "path": "ledger",
+          "kind": "absent"
+        }
+      ],
+      "id": "calc-shopee",
+      "formulaVersion": "manual-settlement-v1",
+      "sources": [
+        {
+          "title": "Syarat layanan Shopee Indonesia (bukan jadwal tarif)",
+          "url": "https://help.shopee.co.id/portal/4/article/71187-Syarat-Layanan-Shopee",
+          "verifiedAt": "2026-11-08",
+          "version": "manual-only; bukan jadwal tarif"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/platform-settlement.unit.ts",
+          "name": "reconciles independent shopee settlement"
+        }
+      ]
+    },
+    {
+      "slug": "tiktok-shop",
+      "input": {
+        "price": "1237",
+        "quantity": "3",
+        "discount": "211",
+        "cost": "613",
+        "buyerShipping": "31",
+        "shippingFlow": "credited",
+        "shipping": "53",
+        "reimbursement": "17",
+        "receipts": "11",
+        "other": "7",
+        "coverage": "ordinary",
+        "confirmation": "complete",
+        "fees": [
+          {
+            "label": "Audit percent",
+            "type": "percent",
+            "rate": "7.25",
+            "basis": "net",
+            "minimumMode": "none",
+            "capMode": "enabled",
+            "cap": "211"
+          },
+          {
+            "label": "Audit fixed",
+            "type": "fixed",
+            "amount": "13",
+            "scope": "unit",
+            "minimumMode": "none",
+            "capMode": "none"
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": "ledger.payout",
+          "kind": "rational",
+          "expected": "3249"
+        },
+        {
+          "path": "ledger.payoutCash",
+          "kind": "integer",
+          "expected": "3249"
+        },
+        {
+          "path": "ledger.profitCash",
+          "kind": "integer",
+          "expected": "1410"
+        }
+      ],
+      "proof": "Manual net3500+actualcredits59−cappedfee211−fixed39−shipping53−other7; nocurrentofficialrates",
+      "edgeInput": {
+        "price": "1237",
+        "quantity": "3",
+        "discount": "211",
+        "cost": "613",
+        "buyerShipping": "31",
+        "shippingFlow": "credited",
+        "shipping": "53",
+        "reimbursement": "17",
+        "receipts": "11",
+        "other": "7",
+        "coverage": "ordinary",
+        "confirmation": "unknown",
+        "fees": [
+          {
+            "label": "Audit percent",
+            "type": "percent",
+            "rate": "7.25",
+            "basis": "net",
+            "minimumMode": "none",
+            "capMode": "enabled",
+            "cap": "211"
+          },
+          {
+            "label": "Audit fixed",
+            "type": "fixed",
+            "amount": "13",
+            "scope": "unit",
+            "minimumMode": "none",
+            "capMode": "none"
+          }
+        ]
+      },
+      "edgeChecks": [
+        {
+          "path": "ledger",
+          "kind": "absent"
+        }
+      ],
+      "id": "calc-tiktok",
+      "formulaVersion": "manual-settlement-v1",
+      "sources": [
+        {
+          "title": "Academy TikTok Shop dan Tokopedia Indonesia (tabel tidak terbaca)",
+          "url": "https://seller-id.tiktok.com/university/home",
+          "verifiedAt": "2026-11-08",
+          "version": "manual-only; bukan jadwal tarif"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/platform-settlement.unit.ts",
+          "name": "reconciles independent tiktok-shop settlement"
+        }
+      ]
+    },
+    {
+      "slug": "tokopedia",
+      "input": {
+        "price": "1237",
+        "quantity": "3",
+        "discount": "211",
+        "cost": "613",
+        "buyerShipping": "31",
+        "shippingFlow": "credited",
+        "shipping": "53",
+        "reimbursement": "17",
+        "receipts": "11",
+        "other": "7",
+        "coverage": "ordinary",
+        "confirmation": "complete",
+        "fees": [
+          {
+            "label": "Audit percent",
+            "type": "percent",
+            "rate": "7.25",
+            "basis": "net",
+            "minimumMode": "none",
+            "capMode": "enabled",
+            "cap": "211"
+          },
+          {
+            "label": "Audit fixed",
+            "type": "fixed",
+            "amount": "13",
+            "scope": "unit",
+            "minimumMode": "none",
+            "capMode": "none"
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": "ledger.payout",
+          "kind": "rational",
+          "expected": "3249"
+        },
+        {
+          "path": "ledger.payoutCash",
+          "kind": "integer",
+          "expected": "3249"
+        },
+        {
+          "path": "ledger.profitCash",
+          "kind": "integer",
+          "expected": "1410"
+        }
+      ],
+      "proof": "Manual net3500+actualcredits59−cappedfee211−fixed39−shipping53−other7; nocurrentofficialrates",
+      "edgeInput": {
+        "price": "1237",
+        "quantity": "3",
+        "discount": "211",
+        "cost": "613",
+        "buyerShipping": "31",
+        "shippingFlow": "credited",
+        "shipping": "53",
+        "reimbursement": "17",
+        "receipts": "11",
+        "other": "7",
+        "coverage": "ordinary",
+        "confirmation": "unknown",
+        "fees": [
+          {
+            "label": "Audit percent",
+            "type": "percent",
+            "rate": "7.25",
+            "basis": "net",
+            "minimumMode": "none",
+            "capMode": "enabled",
+            "cap": "211"
+          },
+          {
+            "label": "Audit fixed",
+            "type": "fixed",
+            "amount": "13",
+            "scope": "unit",
+            "minimumMode": "none",
+            "capMode": "none"
+          }
+        ]
+      },
+      "edgeChecks": [
+        {
+          "path": "ledger",
+          "kind": "absent"
+        }
+      ],
+      "id": "calc-tokopedia",
+      "formulaVersion": "manual-settlement-v1",
+      "sources": [
+        {
+          "title": "Ketentuan biaya Tokopedia Official Store (tanggal berlaku tidak tersedia)",
+          "url": "https://assets.tokopedia.net/asts/onboarding/Ketentuan_biaya_Tokopedia_Official_Store.pdf",
+          "verifiedAt": "2026-11-08",
+          "version": "manual-only; bukan jadwal tarif"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/platform-settlement.unit.ts",
+          "name": "reconciles independent tokopedia settlement"
+        }
+      ]
+    },
+    {
+      "slug": "lazada",
+      "input": {
+        "price": "1237",
+        "quantity": "3",
+        "discount": "211",
+        "cost": "613",
+        "buyerShipping": "31",
+        "shippingFlow": "credited",
+        "shipping": "53",
+        "reimbursement": "17",
+        "receipts": "11",
+        "other": "7",
+        "coverage": "ordinary",
+        "confirmation": "complete",
+        "fees": [
+          {
+            "label": "Audit percent",
+            "type": "percent",
+            "rate": "7.25",
+            "basis": "net",
+            "minimumMode": "none",
+            "capMode": "enabled",
+            "cap": "211"
+          },
+          {
+            "label": "Audit fixed",
+            "type": "fixed",
+            "amount": "13",
+            "scope": "unit",
+            "minimumMode": "none",
+            "capMode": "none"
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": "ledger.payout",
+          "kind": "rational",
+          "expected": "3249"
+        },
+        {
+          "path": "ledger.payoutCash",
+          "kind": "integer",
+          "expected": "3249"
+        },
+        {
+          "path": "ledger.profitCash",
+          "kind": "integer",
+          "expected": "1410"
+        }
+      ],
+      "proof": "Manual net3500+actualcredits59−cappedfee211−fixed39−shipping53−other7; nocurrentofficialrates",
+      "edgeInput": {
+        "price": "1237",
+        "quantity": "3",
+        "discount": "211",
+        "cost": "613",
+        "buyerShipping": "31",
+        "shippingFlow": "credited",
+        "shipping": "53",
+        "reimbursement": "17",
+        "receipts": "11",
+        "other": "7",
+        "coverage": "ordinary",
+        "confirmation": "unknown",
+        "fees": [
+          {
+            "label": "Audit percent",
+            "type": "percent",
+            "rate": "7.25",
+            "basis": "net",
+            "minimumMode": "none",
+            "capMode": "enabled",
+            "cap": "211"
+          },
+          {
+            "label": "Audit fixed",
+            "type": "fixed",
+            "amount": "13",
+            "scope": "unit",
+            "minimumMode": "none",
+            "capMode": "none"
+          }
+        ]
+      },
+      "edgeChecks": [
+        {
+          "path": "ledger",
+          "kind": "absent"
+        }
+      ],
+      "id": "calc-lazada",
+      "formulaVersion": "manual-settlement-v1",
+      "sources": [
+        {
+          "title": "Lazada Seller Center Indonesia (tabel tidak terbaca)",
+          "url": "https://sellercenter.lazada.co.id/apps/register/lazmall/joining",
+          "verifiedAt": "2026-11-08",
+          "version": "manual-only; bukan jadwal tarif"
+        }
+      ],
+      "existingTests": [
+        {
+          "file": "tests/platform-settlement.unit.ts",
+          "name": "reconciles independent lazada settlement"
+        }
+      ]
+    }
+  ]
+}

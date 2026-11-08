@@ -1,0 +1,20 @@
+{
+  "routes": 107,
+  "desktopMobileResponses": 214,
+  "uniqueTitles": 107,
+  "uniqueDescriptions": 107,
+  "zeroInitialInbound": [
+    "/kalkulator/runway-kas",
+    "/kalkulator/biaya-layanan",
+    "/kalkulator/tarif-freelance",
+    "/kalkulator/food-cost",
+    "/kalkulator/harga-borongan",
+    "/kalkulator/eoq",
+    "/kalkulator/payback-period",
+    "/kalkulator/kurs-mata-uang"
+  ],
+  "axeScans": 110,
+  "axeViolations": 0,
+  "runtimeErrors": 0,
+  "externalRequests": 0
+}

@@ -5,6 +5,7 @@ const baseURL = 'http://127.0.0.1:3100'
 export default defineConfig({
   testDir: './tests',
   testMatch: '*.spec.ts',
+  testIgnore: 'release-webkit.spec.ts',
   use: { baseURL },
   projects: [
     { name: 'desktop', use: { ...devices['Desktop Chrome'] } },
