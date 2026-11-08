@@ -27,3 +27,7 @@ npm run e2e
 Playwright starts the local production build on port 3100 and saves desktop and mobile screenshots in `test-results/`.
 
 Indexing is disabled by default. Only set `SITE_INDEXABLE=true` at build time for an approved production cutover. Vercel preview and development builds ignore that opt-in.
+
+## Migration release gate
+
+Status migrasi kalkulatorharga.com: **NO-GO untuk cutover** sampai blocker dan approval owner selesai. Rujukan terkini: [register dan keputusan](docs/MIGRATION_RELEASE.md), [runbook cutover/rollback](docs/MIGRATION_CUTOVER_RUNBOOK.md). Periksa lokal dengan `node scripts/migration/release-gates.cjs`; exit 0 adalah konsistensi laporan, bukan izin launch.

@@ -50,6 +50,11 @@ jobs:
         run: node scripts/migration/capture.mjs
       - name: Deferred feature SSR link evidence
         run: node scripts/deferred/crawl.mjs
+      - name: Migration release consistency and read-only rehearsal
+        run: |
+          mkdir -p test-results/migration-release
+          node scripts/migration/release-gates.cjs > test-results/migration-release/report.json
+          node -e 'const r=require("child_process").spawnSync(process.execPath,["scripts/migration/release-gates.cjs","--require-cutover"],{encoding:"utf8"});if(r.status!==2||JSON.parse(r.stdout).cutoverDecision!=="NO-GO")process.exit(1)'
       - name: Dependency advisory audit
         run: npm audit --json > test-results/dependency-audit.json
       - name: Bind evidence to commit

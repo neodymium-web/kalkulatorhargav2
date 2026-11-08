@@ -1,0 +1,39 @@
+{
+  "observedAtUtc": "2026-11-08T16:30:38.635Z",
+  "method": "Read-only Vercel get_alias for both hosts and list_project_domains v2; no platform changes",
+  "legacy": [
+    {
+      "alias": "kalkulatorharga.com",
+      "projectId": "prj_OtNkapBGqShbDEludYl1Ea5QoLz9",
+      "deployment": {
+        "id": "dpl_kk6BZ55DrPg8hrnTovFjgWvkeJiJ",
+        "url": "kalkulator-bhpsnup7e-neodymium-vercel.vercel.app"
+      },
+      "redirect": "www.kalkulatorharga.com",
+      "redirectStatusCode": 308,
+      "updatedAt": 1792931627010
+    },
+    {
+      "alias": "www.kalkulatorharga.com",
+      "projectId": "prj_OtNkapBGqShbDEludYl1Ea5QoLz9",
+      "deployment": {
+        "id": "dpl_kk6BZ55DrPg8hrnTovFjgWvkeJiJ",
+        "url": "kalkulator-bhpsnup7e-neodymium-vercel.vercel.app"
+      },
+      "redirect": null,
+      "redirectStatusCode": null,
+      "updatedAt": 1792931627015
+    }
+  ],
+  "v2": [
+    {
+      "name": "kalkulatorhargav2.vercel.app",
+      "projectId": "prj_p1VRZQiOB0BHJrQSC5JS2rDhYoF7",
+      "redirect": null,
+      "verified": true
+    }
+  ],
+  "registrarDNSOwnership": "UNKNOWN",
+  "tlsRollbackDrill": "NOT_PERFORMED",
+  "operatorAuthorization": "UNKNOWN"
+}

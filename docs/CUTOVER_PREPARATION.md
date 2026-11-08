@@ -1,3 +1,5 @@
+> Dokumen historis. Untuk status terkini baseline b8dd6ee, gunakan [Migration Release](MIGRATION_RELEASE.md) dan [runbook terkini](MIGRATION_CUTOVER_RUNBOOK.md). Jumlah/rencana di bawah adalah bukti pada fase asal, bukan approval atau instruksi eksekusi saat ini.
+
 # Hasil persiapan cutover dan baseline
 
 **CONDITIONAL GO untuk persiapan/review; NO-GO untuk eksekusi cutover.** Baseline main `ec4bdb2b42ca7db16eea9ee74b1a7a23c5db5a44`. Commit pertama khusus rencana dokumentasi; rencana asli tetap di bagian bawah dan riwayat Git. Domain/production/DNS/alias/canonical/indexing staging tidak diubah.

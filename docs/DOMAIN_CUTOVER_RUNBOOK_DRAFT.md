@@ -1,3 +1,5 @@
+> Dokumen historis. Untuk status terkini baseline b8dd6ee, gunakan [Migration Release](MIGRATION_RELEASE.md) dan [runbook terkini](MIGRATION_CUTOVER_RUNBOOK.md). Jumlah/rencana di bawah adalah bukti pada fase asal, bukan approval atau instruksi eksekusi saat ini.
+
 # Runbook cutover dan rollback: DRAFT, jangan dieksekusi
 
 Issue #53 menyiapkan review, bukan perpindahan domain. Status eksekusi cutover saat ini **NO-GO** sampai gap konten legacy, data SEO, dan approval baru diselesaikan. CI hijau atau deployment READY tidak memberi izin memindahkan domain atau membuka indexing.
