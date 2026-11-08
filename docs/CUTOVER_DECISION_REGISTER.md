@@ -1,3 +1,5 @@
+> Dokumen historis. Untuk status terkini baseline b8dd6ee, gunakan [Migration Release](MIGRATION_RELEASE.md) dan [runbook terkini](MIGRATION_CUTOVER_RUNBOOK.md). Jumlah/rencana di bawah adalah bukti pada fase asal, bukan approval atau instruksi eksekusi saat ini.
+
 # Keputusan sebelum cutover, Issue #55
 
 **CONDITIONAL GO untuk persiapan/review; NO-GO untuk domain move.** Baseline `83485060ae157855bd1adcf9c5250c231c3e5972`. Menerbitkan arsip di staging bukan persetujuan kebijakan, kepemilikan, tarif, konten terbaru atau launch. Domain/DNS/alias/canonical/indexing tetap.

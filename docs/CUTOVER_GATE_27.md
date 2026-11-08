@@ -1,3 +1,5 @@
+> Dokumen historis. Untuk status terkini baseline b8dd6ee, gunakan [Migration Release](MIGRATION_RELEASE.md) dan [runbook terkini](MIGRATION_CUTOVER_RUNBOOK.md). Jumlah/rencana di bawah adalah bukti pada fase asal, bukan approval atau instruksi eksekusi saat ini.
+
 # Gate cutover27: kode, konten dan domain adalah keputusan berbeda
 
 Baseline `a2cbd56c7c255d006f8ceb6905f6686e53699087`. Issue #57 hanya source/evidence staging; tidak merge, domain move, DNS, alias, host redirect, canonical, production legacy, Vercel target/protection/indexing atau sitemap submission.

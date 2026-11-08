@@ -1,0 +1,450 @@
+{
+  "schemaVersion": 1,
+  "baseline": "b8dd6ee6fe9a45bca1b86e793a430ce25ca27844",
+  "purpose": "Release blocker consolidation; no application or platform changes",
+  "archives": [
+    {
+      "id": "ARCHIVE-01",
+      "path": "/kalkulator/tiktok/panduan",
+      "status": "UNKNOWN",
+      "ownerRole": "Content / legal / SEO owner",
+      "approval": null,
+      "evidence": [
+        "docs/audit/legacy55/source-pages.json",
+        "docs/audit/legacy-content-parity.csv"
+      ],
+      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy. Ketersediaan Creator Rewards/negara dan syarat program bersifat historis; v2 hanya simulasi asumsi pengguna dan tidak menyediakan pencarian akun atau tarif resmi."
+    },
+    {
+      "id": "ARCHIVE-02",
+      "path": "/biaya-admin-marketplace",
+      "status": "UNKNOWN",
+      "ownerRole": "Content / legal / SEO owner",
+      "approval": null,
+      "evidence": [
+        "docs/audit/legacy55/source-pages.json",
+        "docs/audit/legacy-content-parity.csv"
+      ],
+      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy."
+    },
+    {
+      "id": "ARCHIVE-03",
+      "path": "/update-tarif",
+      "status": "UNKNOWN",
+      "ownerRole": "Content / legal / SEO owner",
+      "approval": null,
+      "evidence": [
+        "docs/audit/legacy55/source-pages.json",
+        "docs/audit/legacy-content-parity.csv"
+      ],
+      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy."
+    },
+    {
+      "id": "ARCHIVE-04",
+      "path": "/blog",
+      "status": "UNKNOWN",
+      "ownerRole": "Content / legal / SEO owner",
+      "approval": null,
+      "evidence": [
+        "docs/audit/legacy55/source-pages.json",
+        "docs/audit/legacy-content-parity.csv"
+      ],
+      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy."
+    },
+    {
+      "id": "ARCHIVE-05",
+      "path": "/metodologi",
+      "status": "UNKNOWN",
+      "ownerRole": "Content / legal / SEO owner",
+      "approval": null,
+      "evidence": [
+        "docs/audit/legacy55/source-pages.json",
+        "docs/audit/legacy-content-parity.csv"
+      ],
+      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy. Pernyataan entity, kebijakan, privasi, username lookup dan tanggung jawab adalah teks legacy, bukan janji operasional v2 yang telah disahkan. Pemilik wajib meninjaunya sebelum production."
+    },
+    {
+      "id": "ARCHIVE-06",
+      "path": "/redaksi",
+      "status": "UNKNOWN",
+      "ownerRole": "Content / legal / SEO owner",
+      "approval": null,
+      "evidence": [
+        "docs/audit/legacy55/source-pages.json",
+        "docs/audit/legacy-content-parity.csv"
+      ],
+      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy. Pernyataan entity, kebijakan, privasi, username lookup dan tanggung jawab adalah teks legacy, bukan janji operasional v2 yang telah disahkan. Pemilik wajib meninjaunya sebelum production."
+    },
+    {
+      "id": "ARCHIVE-07",
+      "path": "/kebijakan-editorial",
+      "status": "UNKNOWN",
+      "ownerRole": "Content / legal / SEO owner",
+      "approval": null,
+      "evidence": [
+        "docs/audit/legacy55/source-pages.json",
+        "docs/audit/legacy-content-parity.csv"
+      ],
+      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy. Pernyataan entity, kebijakan, privasi, username lookup dan tanggung jawab adalah teks legacy, bukan janji operasional v2 yang telah disahkan. Pemilik wajib meninjaunya sebelum production."
+    },
+    {
+      "id": "ARCHIVE-08",
+      "path": "/disclaimer",
+      "status": "UNKNOWN",
+      "ownerRole": "Content / legal / SEO owner",
+      "approval": null,
+      "evidence": [
+        "docs/audit/legacy55/source-pages.json",
+        "docs/audit/legacy-content-parity.csv"
+      ],
+      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy. Pernyataan entity, kebijakan, privasi, username lookup dan tanggung jawab adalah teks legacy, bukan janji operasional v2 yang telah disahkan. Pemilik wajib meninjaunya sebelum production."
+    },
+    {
+      "id": "ARCHIVE-09",
+      "path": "/blog/menghitung-margin-marketplace",
+      "status": "UNKNOWN",
+      "ownerRole": "Content / legal / SEO owner",
+      "approval": null,
+      "evidence": [
+        "docs/audit/legacy55/source-pages.json",
+        "docs/audit/legacy-content-parity.csv"
+      ],
+      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy."
+    },
+    {
+      "id": "ARCHIVE-10",
+      "path": "/blog/strategi-naikkan-profit",
+      "status": "UNKNOWN",
+      "ownerRole": "Content / legal / SEO owner",
+      "approval": null,
+      "evidence": [
+        "docs/audit/legacy55/source-pages.json",
+        "docs/audit/legacy-content-parity.csv"
+      ],
+      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy."
+    },
+    {
+      "id": "ARCHIVE-11",
+      "path": "/blog/biaya-admin-marketplace",
+      "status": "UNKNOWN",
+      "ownerRole": "Content / legal / SEO owner",
+      "approval": null,
+      "evidence": [
+        "docs/audit/legacy55/source-pages.json",
+        "docs/audit/legacy-content-parity.csv"
+      ],
+      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy."
+    },
+    {
+      "id": "ARCHIVE-12",
+      "path": "/blog/fee-shopee-2026",
+      "status": "UNKNOWN",
+      "ownerRole": "Content / legal / SEO owner",
+      "approval": null,
+      "evidence": [
+        "docs/audit/legacy55/source-pages.json",
+        "docs/audit/legacy-content-parity.csv"
+      ],
+      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy."
+    },
+    {
+      "id": "ARCHIVE-13",
+      "path": "/blog/lazada-marketplace-vs-lazmall",
+      "status": "UNKNOWN",
+      "ownerRole": "Content / legal / SEO owner",
+      "approval": null,
+      "evidence": [
+        "docs/audit/legacy55/source-pages.json",
+        "docs/audit/legacy-content-parity.csv"
+      ],
+      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy."
+    },
+    {
+      "id": "ARCHIVE-14",
+      "path": "/blog/pph-22-marketplace",
+      "status": "UNKNOWN",
+      "ownerRole": "Content / legal / SEO owner",
+      "approval": null,
+      "evidence": [
+        "docs/audit/legacy55/source-pages.json",
+        "docs/audit/legacy-content-parity.csv"
+      ],
+      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy. Angka studi/pajak dalam kutipan sumber belum merupakan verifikasi studi atau ketentuan pajak terkini."
+    },
+    {
+      "id": "ARCHIVE-15",
+      "path": "/blog/gratis-ongkir-xtra-shopee-2026",
+      "status": "UNKNOWN",
+      "ownerRole": "Content / legal / SEO owner",
+      "approval": null,
+      "evidence": [
+        "docs/audit/legacy55/source-pages.json",
+        "docs/audit/legacy-content-parity.csv"
+      ],
+      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy."
+    },
+    {
+      "id": "ARCHIVE-16",
+      "path": "/blog/tokopedia-tiktok-shop-komisi-dinamis",
+      "status": "UNKNOWN",
+      "ownerRole": "Content / legal / SEO owner",
+      "approval": null,
+      "evidence": [
+        "docs/audit/legacy55/source-pages.json",
+        "docs/audit/legacy-content-parity.csv"
+      ],
+      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy."
+    },
+    {
+      "id": "ARCHIVE-17",
+      "path": "/blog/harga-jual-minimum-marketplace",
+      "status": "UNKNOWN",
+      "ownerRole": "Content / legal / SEO owner",
+      "approval": null,
+      "evidence": [
+        "docs/audit/legacy55/source-pages.json",
+        "docs/audit/legacy-content-parity.csv"
+      ],
+      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy."
+    },
+    {
+      "id": "ARCHIVE-18",
+      "path": "/blog/kalkulator-vs-spreadsheet",
+      "status": "UNKNOWN",
+      "ownerRole": "Content / legal / SEO owner",
+      "approval": null,
+      "evidence": [
+        "docs/audit/legacy55/source-pages.json",
+        "docs/audit/legacy-content-parity.csv"
+      ],
+      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy."
+    },
+    {
+      "id": "ARCHIVE-19",
+      "path": "/blog/cek-dana-cair-shopee",
+      "status": "UNKNOWN",
+      "ownerRole": "Content / legal / SEO owner",
+      "approval": null,
+      "evidence": [
+        "docs/audit/legacy55/source-pages.json",
+        "docs/audit/legacy-content-parity.csv"
+      ],
+      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy. Teks lama menyebut pembulatan per komponen; v2 merekonsiliasi aggregate rasional dan adjustment, sehingga hasil bisa berbeda dari pembulatan legacy."
+    },
+    {
+      "id": "ARCHIVE-20",
+      "path": "/blog/memilih-marketplace-untuk-mulai-jual",
+      "status": "UNKNOWN",
+      "ownerRole": "Content / legal / SEO owner",
+      "approval": null,
+      "evidence": [
+        "docs/audit/legacy55/source-pages.json",
+        "docs/audit/legacy-content-parity.csv"
+      ],
+      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy."
+    },
+    {
+      "id": "ARCHIVE-21",
+      "path": "/blog/engagement-rate-tiktok-2026",
+      "status": "UNKNOWN",
+      "ownerRole": "Content / legal / SEO owner",
+      "approval": null,
+      "evidence": [
+        "docs/audit/legacy55/source-pages.json",
+        "docs/audit/legacy-content-parity.csv"
+      ],
+      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy. Angka studi/pajak dalam kutipan sumber belum merupakan verifikasi studi atau ketentuan pajak terkini."
+    },
+    {
+      "id": "ARCHIVE-22",
+      "path": "/blog/kalkulator-average-down-saham-harga-rata-rata",
+      "status": "UNKNOWN",
+      "ownerRole": "Content / legal / SEO owner",
+      "approval": null,
+      "evidence": [
+        "docs/audit/legacy55/source-pages.json",
+        "docs/audit/legacy-content-parity.csv"
+      ],
+      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy. Contoh sumber belum konsisten: harga impas sekitar Rp4.436 dibanding fraksi Rp5, sementara tabel teks menyebut Rp10 untuk harga Rp2.000–Rp5.000. Fee beli contoh juga belum direkonsiliasi. Jangan gunakan contoh ini untuk order; perlu koreksi owner dan verifikasi primer."
+    }
+  ],
+  "references": [
+    {
+      "id": "REF-01",
+      "sourcePath": "/blog",
+      "anchorText": "kalkulator utama",
+      "target": "https://www.kalkulatorharga.com/",
+      "currentTreatment": "NONCLICKABLE_ARCHIVAL_REFERENCE",
+      "status": "UNKNOWN",
+      "ownerRole": "Product / content / SEO owner",
+      "approval": null,
+      "requiredDecision": "Beranda lama memuat preset kalkulator; direktori v2 bukan fitur yang sama."
+    },
+    {
+      "id": "REF-02",
+      "sourcePath": "/blog/kalkulator-vs-spreadsheet",
+      "anchorText": "Kalkulator fee marketplace",
+      "target": "https://www.kalkulatorharga.com/",
+      "currentTreatment": "NONCLICKABLE_ARCHIVAL_REFERENCE",
+      "status": "UNKNOWN",
+      "ownerRole": "Product / content / SEO owner",
+      "approval": null,
+      "requiredDecision": "Beranda lama memuat preset kalkulator; direktori v2 bukan fitur yang sama."
+    },
+    {
+      "id": "REF-03",
+      "sourcePath": "/blog/kalkulator-average-down-saham-harga-rata-rata",
+      "anchorText": "Kalkulator average down saham",
+      "target": "https://www.kalkulatorharga.com/kalkulator/saham/average",
+      "currentTreatment": "NONCLICKABLE_ARCHIVAL_REFERENCE",
+      "status": "UNKNOWN",
+      "ownerRole": "Product / content / SEO owner",
+      "approval": null,
+      "requiredDecision": "Fitur atau path legacy ini belum tersedia/setara pada v2."
+    },
+    {
+      "id": "REF-04",
+      "sourcePath": "/biaya-admin-marketplace",
+      "anchorText": "Buka kalkulator Tokopedia",
+      "target": "https://www.kalkulatorharga.com/",
+      "currentTreatment": "NONCLICKABLE_ARCHIVAL_REFERENCE",
+      "status": "UNKNOWN",
+      "ownerRole": "Product / content / SEO owner",
+      "approval": null,
+      "requiredDecision": "Beranda lama memuat preset kalkulator; direktori v2 bukan fitur yang sama."
+    },
+    {
+      "id": "REF-05",
+      "sourcePath": "/biaya-admin-marketplace",
+      "anchorText": "Hitung profit",
+      "target": "https://www.kalkulatorharga.com/",
+      "currentTreatment": "NONCLICKABLE_ARCHIVAL_REFERENCE",
+      "status": "UNKNOWN",
+      "ownerRole": "Product / content / SEO owner",
+      "approval": null,
+      "requiredDecision": "Beranda lama memuat preset kalkulator; direktori v2 bukan fitur yang sama."
+    },
+    {
+      "id": "REF-06",
+      "sourcePath": "/kalkulator/tiktok/panduan",
+      "anchorText": "Benchmark engagement rate TikTok",
+      "target": "https://www.kalkulatorharga.com/kalkulator/tiktok/benchmark",
+      "currentTreatment": "NONCLICKABLE_ARCHIVAL_REFERENCE",
+      "status": "UNKNOWN",
+      "ownerRole": "Product / content / SEO owner",
+      "approval": null,
+      "requiredDecision": "Fitur atau path legacy ini belum tersedia/setara pada v2."
+    }
+  ],
+  "gates": [
+    {
+      "id": "BENCHMARK",
+      "status": "UNKNOWN",
+      "ownerRole": "Data / legal / SEO owner",
+      "approval": null,
+      "requiredDecision": "Dataset rights, cohort/date/geography/sample/denominator/quantile and reproducible calculations, or explicit approved retirement with SEO impact. Current404 is not an approved removal.",
+      "evidence": []
+    },
+    {
+      "id": "MANUAL-SCOPE",
+      "status": "UNKNOWN",
+      "ownerRole": "Product / data owner",
+      "approval": null,
+      "requiredDecision": "Accept gold live-feed to manual and four-channel comparison preset to manual differences; existing manual tools are not proven legacy parity.",
+      "evidence": []
+    },
+    {
+      "id": "ARCHIVE-PROVENANCE",
+      "status": "UNKNOWN",
+      "ownerRole": "Content / legal owner",
+      "approval": null,
+      "requiredDecision": "Approve permanent archival strategy or explicit nonclick historical-source treatment after domain move. No archival host supplied or invented.",
+      "evidence": []
+    },
+    {
+      "id": "SEO-EXPORTS",
+      "status": "UNKNOWN",
+      "ownerRole": "SEO / analytics owner",
+      "approval": null,
+      "requiredDecision": "Provide GSC six months pages/queries/indexing/sitemaps and GA4 organic landing pages with period, property scope, timezone, export timestamp; assess missing URLs, traffic and baseline. No exports supplied.",
+      "evidence": []
+    },
+    {
+      "id": "BACKLINKS",
+      "status": "UNKNOWN",
+      "ownerRole": "SEO owner",
+      "approval": null,
+      "requiredDecision": "Provide important inbound links and legacy404/access-log inventory with authorized source and period; public sitemap is not full indexed footprint.",
+      "evidence": []
+    },
+    {
+      "id": "HOST-POLICY",
+      "status": "UNKNOWN",
+      "ownerRole": "SEO / domain owner",
+      "approval": null,
+      "requiredDecision": "Choose apex or www explicitly, align canonical/sitemap/redirect and approve removal of opposite rule. Current canonical apex and legacy apex308-to-www stay unchanged.",
+      "evidence": []
+    },
+    {
+      "id": "REDIRECTS",
+      "status": "UNKNOWN",
+      "ownerRole": "SEO / product owner",
+      "approval": null,
+      "requiredDecision": "Approve or reject each proposal: /kalkulator to / and /kalkulator/saham/average to /kalkulator/rata-rata-beli-saham; review old preset and break-even intent. No redirect activated.",
+      "evidence": []
+    },
+    {
+      "id": "OPERATIONS",
+      "status": "UNKNOWN",
+      "ownerRole": "Operations / domain owner",
+      "approval": null,
+      "requiredDecision": "Named operator/reviewer, exact SHA/deployments/projects/hostnames, permissions and registrar/DNS/TLS/config snapshot verified on execution day, window and rollback deadline. Old observed IDs are not readiness proof.",
+      "evidence": []
+    },
+    {
+      "id": "ROLLBACK-THRESHOLDS",
+      "status": "UNKNOWN",
+      "ownerRole": "Operations / SEO / product owner",
+      "approval": null,
+      "requiredDecision": "Approve business/error/traffic thresholds and decision owner from real baseline; physical-device/field-CWV follow-up still required. Synthetic rollback is not a platform recovery drill.",
+      "evidence": []
+    },
+    {
+      "id": "PRODUCTION-INDEXING",
+      "status": "UNKNOWN",
+      "ownerRole": "SEO / operations owner",
+      "approval": null,
+      "requiredDecision": "Explicit production-only indexability plan and later verification, keep Preview SSO/noindex; no current permission to change environment/indexing.",
+      "evidence": []
+    },
+    {
+      "id": "EXECUTION-AUTHORIZATION",
+      "status": "UNKNOWN",
+      "ownerRole": "Repository / domain owner",
+      "approval": null,
+      "requiredDecision": "New explicit authorization with final reviewed SHA, candidate and rollback deployments, projects, exact host/path/DNS/alias/canonical/indexing changes, operator, maintenance window and rollback. PR/CI success is not approval.",
+      "evidence": []
+    }
+  ],
+  "benchmark": {
+    "path": "/kalkulator/tiktok/benchmark",
+    "currentStatus": 404,
+    "published": false,
+    "evidence": "docs/audit/deferred57/benchmark-inventory.csv",
+    "licensedReproducibleDataset": "UNKNOWN",
+    "approvedRetirement": "UNKNOWN"
+  },
+  "seoData": {
+    "gsc": "UNKNOWN",
+    "ga4": "UNKNOWN",
+    "backlinks": "UNKNOWN",
+    "trafficPriority": "UNKNOWN",
+    "exports": []
+  },
+  "host": {
+    "currentCanonical": "https://kalkulatorharga.com",
+    "observedLegacyRedirect": "apex308-to-www",
+    "approvedPolicy": "UNKNOWN"
+  },
+  "executionAuthorized": false
+}

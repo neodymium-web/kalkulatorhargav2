@@ -1,0 +1,730 @@
+{
+  "baseline": "b8dd6ee6fe9a45bca1b86e793a430ce25ca27844",
+  "files": [
+    {
+      "path": "app/[...legacy]/page.tsx",
+      "sha256": "4f0ba3b33d13dd11eab3e7bddaf7c23168be6ef78c9c2bb8922ac348cb5d14c8"
+    },
+    {
+      "path": "app/bandingkan/page.tsx",
+      "sha256": "0340c5f073a8998df8b2bb6df7fac286c198fa3edad326e206f8713c7fecc998"
+    },
+    {
+      "path": "app/bisnis/page.tsx",
+      "sha256": "e53dfc5f7559209a16da485cff2c4c60406e5d98fecb197b66e7a52367f1db54"
+    },
+    {
+      "path": "app/favicon.ico",
+      "sha256": "1ce8a393d6a6c92716ad8d1758537eb9d2e406b60b25ea246fd84135d85ff753"
+    },
+    {
+      "path": "app/kalkulator/[slug]/page.tsx",
+      "sha256": "b0e8422195c9a4636d4cfeed62e04519b78f97aa56422fefac331664d7dcd7bb"
+    },
+    {
+      "path": "app/kalkulator/emas/page.tsx",
+      "sha256": "a53b1ca2cbb930238d9aa43ff60f953de1a176ecbc9e8bbba215e8249dce2462"
+    },
+    {
+      "path": "app/keuangan/page.tsx",
+      "sha256": "13835bbcfaaf56efc06f284ed00e5369cee1a88f37b991e6814bc7fc8f819546"
+    },
+    {
+      "path": "app/layout.tsx",
+      "sha256": "fd30e32916ae3bb8c2b8605c1fcf0ea7b676c9abbe42f0df8518b799ccd63144"
+    },
+    {
+      "path": "app/marketplace/page.tsx",
+      "sha256": "10469c7c176d6d84971b1a5fc3f761ffffadb77b7daee61fce422be7f9e0f898"
+    },
+    {
+      "path": "app/media-sosial/page.tsx",
+      "sha256": "6cda91b9327d4f8a82ed420a8c70bcecb2d35dae01f22a82e25ddcaed0a6ee10"
+    },
+    {
+      "path": "app/page.tsx",
+      "sha256": "dc0274e8341e34d249e41e30f3bc9954b3ee6af5b1bb60f18909e4cd3702be29"
+    },
+    {
+      "path": "app/pajak/page.tsx",
+      "sha256": "7fb03c0df9bed762acbb3fa15f0102f28d89ddc571ee44e0c17014ed83e06913"
+    },
+    {
+      "path": "app/robots.ts",
+      "sha256": "3d58c71edc55e668ad721dfd1904855eab8e400f23984fd2edcc6fbe98c768b1"
+    },
+    {
+      "path": "app/sehari-hari/page.tsx",
+      "sha256": "791147f5c5a4eabb5de23867bc6434be661a9c4ea99df0491d4aa515804e3598"
+    },
+    {
+      "path": "app/sitemap.ts",
+      "sha256": "dd93add3fe9206e76024e0f814c8dc41536f175b7269b40263985143d1050059"
+    },
+    {
+      "path": "app/style.css",
+      "sha256": "f05e7fa7db33a4ebb0629b2d4f70c4dd41838c9e4bcb0bb8edd98ae23e49b1cf"
+    },
+    {
+      "path": "app/tokens.css",
+      "sha256": "e814eb389fe2ea932c2000b2201cc0745b3d083791ac83b2ce83edc0eebdd58f"
+    },
+    {
+      "path": "components/breadcrumb.module.css",
+      "sha256": "6bae612948d297ed9bae8185b066d5fded899f50e47e0bce105ccc508b3ea946"
+    },
+    {
+      "path": "components/breadcrumb.tsx",
+      "sha256": "3a11d27770b4e03b9289b03a2eecf030e604f197cb25c7cf34b01702cc2c79a5"
+    },
+    {
+      "path": "components/calculator-page.tsx",
+      "sha256": "fd575836d52308a2d701c242eb7365570629b3051b076676d31f85b06c31a8b9"
+    },
+    {
+      "path": "components/calculators/advanced-tax-form.tsx",
+      "sha256": "9d0602d84ece34eb13f0fdde4182db0080bae76df9da9ee6157d1d5275c7bfee"
+    },
+    {
+      "path": "components/calculators/advanced-tax-methodology.tsx",
+      "sha256": "05ee0b4f400d18162a9d8ab6c75a505c400aaea5047cbc3b29c3530a8a74cde7"
+    },
+    {
+      "path": "components/calculators/advanced-tax.module.css",
+      "sha256": "7fcadcc6a4b86ca79626c89d5c1b5d38bcf184a199eb789506a90642ba8a1c26"
+    },
+    {
+      "path": "components/calculators/batch-four-form.module.css",
+      "sha256": "b898628b6840b8797a108ff8670855285b1170b96763bb2a32936a17ab6588e4"
+    },
+    {
+      "path": "components/calculators/batch-four-form.tsx",
+      "sha256": "eede6bac3d4d33e7665a0fda3014c0fca48ae446fe2f8aa37f4b2e123a573e8e"
+    },
+    {
+      "path": "components/calculators/batch-four-methodology.tsx",
+      "sha256": "4a5982ba208d210325d11a615eac860765078f8cf02a3c7d605624a46e25f899"
+    },
+    {
+      "path": "components/calculators/business-form.tsx",
+      "sha256": "ae152844afcd0da573cc770c8fee66004b6386c4ac3607ca32016b4af03c8b1f"
+    },
+    {
+      "path": "components/calculators/business-methodology.tsx",
+      "sha256": "c6ec7a80425d60e5b5c773f516de977fa056bf7aa870e92181488fcdba8ec9d6"
+    },
+    {
+      "path": "components/calculators/calendar-form.tsx",
+      "sha256": "dce2d5aaaffa6c6e0caaa3d479132495ec0bd632fadf94dc748018de674764d8"
+    },
+    {
+      "path": "components/calculators/calendar-methodology.tsx",
+      "sha256": "89c5d422adf0e192fb26f329b17d8c7bfcd529e7e14d624e214e3b5822ec7fcc"
+    },
+    {
+      "path": "components/calculators/creator-form.tsx",
+      "sha256": "fc8cfc5488f5ea12bfe09e8c0c216fbce3515f00e37d254ae347a32e6e39e4de"
+    },
+    {
+      "path": "components/calculators/creator-methodology.tsx",
+      "sha256": "606825b67ddfed3480a6c14b25a8ec0cb2c8c9481af99208b7acec6370d27af5"
+    },
+    {
+      "path": "components/calculators/economics-form.tsx",
+      "sha256": "85df6677e7cb5c4f428eb243bbac53cc625bb7f00f9e15d6eddd8fa2bd032ca1"
+    },
+    {
+      "path": "components/calculators/economics-methodology.tsx",
+      "sha256": "f04234762d0d49166995868e94fffda687c3729e0c62ebe929e4a5b65053d02c"
+    },
+    {
+      "path": "components/calculators/everyday-form.tsx",
+      "sha256": "63b30c4d64d76f1b118799b388d3babe8be12bcf3bbd42a0099386e50977ebc4"
+    },
+    {
+      "path": "components/calculators/everyday-methodology.tsx",
+      "sha256": "ba2cea1f4c089fb65a88f922d3cd1005ed0df3c352e6e73553ba3cd327eacb21"
+    },
+    {
+      "path": "components/calculators/finance-form.tsx",
+      "sha256": "71da81f30cdb704518a8593c840a25b8867afa37787903706e834d18a648d120"
+    },
+    {
+      "path": "components/calculators/finance-methodology.tsx",
+      "sha256": "0696c3c4b053f18022ad135172f0618aa847377e1ea35a22cf34d8f85f5e14a6"
+    },
+    {
+      "path": "components/calculators/hpp-form.tsx",
+      "sha256": "a447af0f116dcf9b24166d5d612539d508aba1460c94274f3f49353e26624b19"
+    },
+    {
+      "path": "components/calculators/hpp.tsx",
+      "sha256": "0f60ad216de8af15c8c1e796fd053b76f62ee1aca2b9da7e40f6b1ed2c480cd5"
+    },
+    {
+      "path": "components/calculators/investment-form.tsx",
+      "sha256": "a20dd0e7b4b7aea515f36400a6ab528406c75670eb9bf574809128bcd22879ef"
+    },
+    {
+      "path": "components/calculators/investment-methodology.tsx",
+      "sha256": "b6dc965fbfc47ba8e2f1d7e0d0febd494349e229703649dbf1c06946a916fd53"
+    },
+    {
+      "path": "components/calculators/materials-form.tsx",
+      "sha256": "3d03b08df80df2bdd5aac817a0e22aa687641a88e5db92a24e365cbccea101a1"
+    },
+    {
+      "path": "components/calculators/materials-methodology.module.css",
+      "sha256": "969ec870b41bf4fe4c95453c2b62caa3f77c3bad668fe9fdb04868cbdf1ee9bf"
+    },
+    {
+      "path": "components/calculators/materials-methodology.tsx",
+      "sha256": "c25b53c0f5d9d741caaff79f1c9d992cee836a239ea636c7a1ce17d008226a89"
+    },
+    {
+      "path": "components/calculators/metrics-form.tsx",
+      "sha256": "2f6a3a32b26fcf2e26fabec97d5f8a859c41e6595ccf378ab129d6909fc804d7"
+    },
+    {
+      "path": "components/calculators/metrics-methodology.tsx",
+      "sha256": "bc6bb75a0b07cf851cf7b749c84f2335800a4cc2814c21ba961c5d8c03ee60bf"
+    },
+    {
+      "path": "components/calculators/operations-form.tsx",
+      "sha256": "1b70b2262d47c09b08ec027b3064bf3dd4fb0bd3fcf8f5d0c76004f1db1bd28e"
+    },
+    {
+      "path": "components/calculators/operations-methodology.tsx",
+      "sha256": "7190ec4bdd51cd1e7752a1ff5ec936f397e8ec77af15a6bb8cf4559297fe7f6a"
+    },
+    {
+      "path": "components/calculators/platform-form.tsx",
+      "sha256": "9806ac08eebe7fb3dd0d5746e78d66127e1c4a38d7d4b4d164b8e1eb533cb019"
+    },
+    {
+      "path": "components/calculators/platform-methodology.tsx",
+      "sha256": "ae4a00ce91f11511ff06bbbfb1bec7aaf514539679c9d123137540ffe682849e"
+    },
+    {
+      "path": "components/calculators/platform.module.css",
+      "sha256": "c41e8d6ba15207c7289e3b13eb196ca2c4402f03d3d073b2dd63ebbe3f8865e8"
+    },
+    {
+      "path": "components/calculators/scenario-form.tsx",
+      "sha256": "84c14ba2d0933827b109a9e7fc1a1d9618734e3a2085a92a775f3a9011c43bff"
+    },
+    {
+      "path": "components/calculators/scenario-methodology.tsx",
+      "sha256": "9d6320abd3849b8dab319bccfb32f409ea3fdc2a645e6e8cda17c8835ec191b3"
+    },
+    {
+      "path": "components/calculators/seller-form.tsx",
+      "sha256": "7d802ac5e7c25b250b2e820a9ec011a996d662c0b7d22ff51fa9d90b040692d6"
+    },
+    {
+      "path": "components/calculators/seller-methodology.tsx",
+      "sha256": "ddc4e28a9d54cca6f72ab282d1238757135ce0af78b85045a767770b95c275d7"
+    },
+    {
+      "path": "components/calculators/social-form.tsx",
+      "sha256": "f27faff53d4dbd68bd566ded61d939105cb6bc853ee795be7aa710660fa6ea2c"
+    },
+    {
+      "path": "components/calculators/social-methodology.tsx",
+      "sha256": "73a1cf00d619e7fb9dc9d80866dd79c0065893ea1d0aae92736d3f857df0acf0"
+    },
+    {
+      "path": "components/calculators/stock-services-form.tsx",
+      "sha256": "445c6711c78a7b666c0e88ad650c061239e7d3cfc6e968e898856c011c1a4c6a"
+    },
+    {
+      "path": "components/calculators/stock-services-methodology.tsx",
+      "sha256": "e42aebf1b936aae2eb446b99cd7a6ee0b8fad807b70371babe8dce8e947d06ff"
+    },
+    {
+      "path": "components/calculators/tax-form.tsx",
+      "sha256": "2f58891c6a1c3e1b088bc214f157f722b72cb491de53a2cb961ef33576d42e15"
+    },
+    {
+      "path": "components/calculators/tax-methodology.tsx",
+      "sha256": "899705690180458fc5f9d37e13a0ca3fe29362456f02c0f1fee4b0571eb02f4c"
+    },
+    {
+      "path": "components/calculators/units-form.tsx",
+      "sha256": "c556123dced4815cefe1546e17ab2d7228351ff6ee83808c853618daa2067eaa"
+    },
+    {
+      "path": "components/calculators/units-methodology.tsx",
+      "sha256": "e68c0842402910f3ada24da677e37a8df55e796043a852409fde9bb306405c80"
+    },
+    {
+      "path": "components/calculators/valuation-form.tsx",
+      "sha256": "59ab14dc1946e075c3990256b669e196f9c726c5f08741b72f753c6e755d017e"
+    },
+    {
+      "path": "components/calculators/valuation-methodology.tsx",
+      "sha256": "27dc2598b168eae75a9d85f8df0034583789fdc1e5328550b9115fedd15b14ac"
+    },
+    {
+      "path": "components/calculators/views.tsx",
+      "sha256": "48f2efc7d24a6005010fb629e4400004aa3ad5293d321c3bd5a90267c925e758"
+    },
+    {
+      "path": "components/category-page.tsx",
+      "sha256": "6ecca6762ec11301524ff2475d5e45f2802c01ff6db00eb1b86a43c3dc9ff370"
+    },
+    {
+      "path": "components/directory.module.css",
+      "sha256": "9f1596473104fdc9f81f6c2221e4a2e3a2a446292b3cf842fe64333359a627df"
+    },
+    {
+      "path": "components/directory.tsx",
+      "sha256": "3b8f16a6eaa537473c71fdd3a80d3ffba877107c8f9c906251afbcb996686cb9"
+    },
+    {
+      "path": "components/legacy-page.module.css",
+      "sha256": "39f036c38b2aec847d5666a1e567a84953bdc2495bcab16c730faefdcb90995a"
+    },
+    {
+      "path": "components/legacy-page.tsx",
+      "sha256": "7c987d17ac2d70436a50f0ba062bd909964edf8686761a786447683e40ec1aa4"
+    },
+    {
+      "path": "components/site-header.module.css",
+      "sha256": "9603733a7664cc65e9775f146e05b347ca6835e047bf5aea09e6febf7ea0a250"
+    },
+    {
+      "path": "components/site-header.tsx",
+      "sha256": "e8c8cf813713d5a0176b3faefa1532aab6d01bac5f00da7c48a81c9c0e2695cc"
+    },
+    {
+      "path": "components/supplemental/comparison-form.tsx",
+      "sha256": "256004855d9ea01089c5d9a1999f1a174d8562e44c449a4b73aca3b483039cbc"
+    },
+    {
+      "path": "components/supplemental/gold-form.tsx",
+      "sha256": "a5b576d27dffed1e849f0ed8f175dd32c2da884926c2fe5691cba65cccce009f"
+    },
+    {
+      "path": "components/supplemental/settlement-ledger.tsx",
+      "sha256": "157cd1e2cab32beca34713e3f70c2abebd912f729bfae48a94fb02358be3cf99"
+    },
+    {
+      "path": "components/supplemental/supplemental.module.css",
+      "sha256": "fc105c130482c773c64d92311f023514b6403fe14138c941346a79484629ef9b"
+    },
+    {
+      "path": "components/ui/calculator.module.css",
+      "sha256": "3affc33d0b21742dc25e80f56a6f5779e59621205c0472c1a7af6de7132f0ff9"
+    },
+    {
+      "path": "components/ui/calculator.tsx",
+      "sha256": "1d7d42b2bc061f33e847f900e2f52b26c24e1217301c403d03abb6ea5f87a9eb"
+    },
+    {
+      "path": "components/ui/cash-flow-breakdown.tsx",
+      "sha256": "23824c13c0eab8146171c2c9b57b5e829708e98b42ec15162939719094c273dc"
+    },
+    {
+      "path": "components/ui/controls.module.css",
+      "sha256": "d1a1c173671f6ea4f635a6cf6736275cf0ea652e5792d47757962e57ac374585"
+    },
+    {
+      "path": "components/ui/controls.tsx",
+      "sha256": "16a553ff1de44799f2ba7775e4ea5ca4c983685a7b9a17175ff6f4b56c837080"
+    },
+    {
+      "path": "components/ui/creator-comparison.tsx",
+      "sha256": "04d6a30dfd1bc39a139c6c80bf944f342d6873d86d50a205d5e167a05ca183df"
+    },
+    {
+      "path": "components/ui/everyday-tables.tsx",
+      "sha256": "a50917ed30429df4666ec01b85b1ec87b36579b5d7a985f55568ed27ead8d74c"
+    },
+    {
+      "path": "components/ui/holiday-breakdown.tsx",
+      "sha256": "911120d3759dbb34a92bc46ff2f19c3d461727d5d6aef9f555219a3c55cdad73"
+    },
+    {
+      "path": "components/ui/layout.module.css",
+      "sha256": "69d07fa203dd39f06fd0d2822fb2bd7eaf38f57b9515e5dab86423bccb3148c7"
+    },
+    {
+      "path": "components/ui/loan-schedule.module.css",
+      "sha256": "5099318479c24c0bdb4e1bfdeaa69e6859964ca1d8ef0ea18cd9401ae0fddc1c"
+    },
+    {
+      "path": "components/ui/loan-schedule.tsx",
+      "sha256": "7779f771aa6f79dbf63ae75d298f3cec0d7e5becf168641def240065a02fa4d2"
+    },
+    {
+      "path": "components/ui/materials-breakdown.tsx",
+      "sha256": "d484ee7c3f9874e257a91dbd8937fa8bf34606ac9f443d5b6930bf07f3034dd8"
+    },
+    {
+      "path": "components/ui/scenario-tables.tsx",
+      "sha256": "9fbd4ec4698e1d4024685eb0ab0a04fe0906eb9b3d60098389198cc2d2f9f6d0"
+    },
+    {
+      "path": "components/ui/structured-form.module.css",
+      "sha256": "fb87bf65d224ec714cd41a7f0d52ae95576ac1c00b963537e0574f5d5ffcb14e"
+    },
+    {
+      "path": "components/ui/structured-form.tsx",
+      "sha256": "3cbb1012ad20ad135afe2f0fc44cad6f68fed59fc1b26de35fc624f964a064a0"
+    },
+    {
+      "path": "lib/batch-four/engines.ts",
+      "sha256": "7f9a7a40d5523c16d6cff3684d37afd91fd1bfa8199496b61fb52604c82d05b3"
+    },
+    {
+      "path": "lib/batch-four/tools.ts",
+      "sha256": "1c3b7af2c6daaab1a483455f0c0b18fafc4da533f0ae2699c4b179020e6970b4"
+    },
+    {
+      "path": "lib/business/engines.ts",
+      "sha256": "3278f69f05f345539f84e047c15b9d077c2b087b3128825e1415a851fe8c9421"
+    },
+    {
+      "path": "lib/business/tools.ts",
+      "sha256": "6d42cf6db6ee4cdca4049ed9753b24ef6e77a316f40954a60d110941ae73b006"
+    },
+    {
+      "path": "lib/calendar-time/civil.ts",
+      "sha256": "377da1f38cc3e80f265416d138c9909b24d3283a4044163e06d9da1a9f630fd7"
+    },
+    {
+      "path": "lib/calendar-time/engines.ts",
+      "sha256": "eb60eba56931a55ed8bcac9ac4cabbab0371aff43e6306d6881a268f93a9c77e"
+    },
+    {
+      "path": "lib/calendar-time/format.ts",
+      "sha256": "5e2f75971d95d18165bcbcb3942c001e824319640becbacf1698cb16a1bb2009"
+    },
+    {
+      "path": "lib/calendar-time/sources.ts",
+      "sha256": "10701086db455440c627e579978c2604dd952774472f4402921e5f920247f1cc"
+    },
+    {
+      "path": "lib/calendar-time/tools.ts",
+      "sha256": "abe5d675dc27ce61b2e868e1975b570111b7949425a700727e0b4a8a0f4b9a82"
+    },
+    {
+      "path": "lib/categories.ts",
+      "sha256": "83b49baf48323405f81e2be039c2c007913818f1997d44d5016baeae576ec7af"
+    },
+    {
+      "path": "lib/creator-analytics/engines.ts",
+      "sha256": "ef849b051380195ca806c15ee16213a3f4e8f413d46d51c202cb281f665b1a3a"
+    },
+    {
+      "path": "lib/creator-analytics/format.ts",
+      "sha256": "ad3dbe004b27d76f6f9648105aa4979da38f0c83713e8ccdc9472be10601d9ca"
+    },
+    {
+      "path": "lib/creator-analytics/sources.ts",
+      "sha256": "d82db40d9dd053e5c50f2c9f8a8af1640de7fbd8dc6896f8d3f4d965b55129fe"
+    },
+    {
+      "path": "lib/creator-analytics/tools.ts",
+      "sha256": "c4ba5b52b5fbab7e31e974cd882bde2de28abb6e75e4884623764e8eadc4d6ba"
+    },
+    {
+      "path": "lib/directory.ts",
+      "sha256": "2ff287692ec595eea50c79c8041311fc247b3c952dde3d91a725889c2c721cdb"
+    },
+    {
+      "path": "lib/everyday/engines.ts",
+      "sha256": "98f02ad9c69df93a8cb94f718a4318500741ce483036e00f992a96cf0c3a33b4"
+    },
+    {
+      "path": "lib/everyday/format.ts",
+      "sha256": "a3ae088df5283a3b2a998527df4817e5649ce6607446c1c9af60b5bc8a5ed897"
+    },
+    {
+      "path": "lib/everyday/sources.ts",
+      "sha256": "d892fd2a49adcbe1a1eca9b0f82ba5168723b2b209d29d30f01b93190e4483b2"
+    },
+    {
+      "path": "lib/everyday/tools.ts",
+      "sha256": "37471174f4971d70e7799e1e1cbcd7eb2b7ee61062ed6a074254b6330be5e554"
+    },
+    {
+      "path": "lib/finance/engines.ts",
+      "sha256": "3e3a9c70db51515f018d1f220cb422757a7075aadfc2ff39fb232f4b636fbf85"
+    },
+    {
+      "path": "lib/finance/format.ts",
+      "sha256": "8cd9285509073fb7914f6217aadb2d1afda2f18f42a449a6604a762729451581"
+    },
+    {
+      "path": "lib/finance/sources.ts",
+      "sha256": "9c74c2d3e9305235c3366039b115d28ece2b3e691d6e0ea339b668b25d655f7b"
+    },
+    {
+      "path": "lib/finance/tools.ts",
+      "sha256": "a6921a31a1937555eb63a3268e9f72d2f93564c421b2fbb63c100c1116301b8d"
+    },
+    {
+      "path": "lib/hpp.ts",
+      "sha256": "4b4121e33bb5473b06d7d5705a91540e1731f5b98a64727e9924a1d8d5fed289"
+    },
+    {
+      "path": "lib/investment/engines.ts",
+      "sha256": "ba68fd8f75bac0f8c1a0aaa8a49b2918afd4accbf4763bc4a327db9c587703b3"
+    },
+    {
+      "path": "lib/investment/format.ts",
+      "sha256": "faee9383124c3efc64b4b9e7eb54e6b02266b4893acc6a9d5d13bfceb2550384"
+    },
+    {
+      "path": "lib/investment/sources.ts",
+      "sha256": "ad1914fed8ae52c27eb9c019e2203ded8eec05a9dc285f7d0f715370e2b546bc"
+    },
+    {
+      "path": "lib/investment/tools.ts",
+      "sha256": "7268b7dab9262fc2d320ed526bb01c8841c18f3de251248b14da7df0f29ae192"
+    },
+    {
+      "path": "lib/legacy/links.ts",
+      "sha256": "22b5a0bcc125a7e7338f762c3f1c5a0bf753c102a8cca8160bab01060c121565"
+    },
+    {
+      "path": "lib/legacy/pages.json",
+      "sha256": "073002da1b61f203518bf7ebd26bf31dc4d74cb7f45c0998ed2b1ded578c9c8e"
+    },
+    {
+      "path": "lib/legacy/registry.ts",
+      "sha256": "85c590c5c3df894910bb577d3903afb7dc5a5e1138afcd40aae5101acee1c6fb"
+    },
+    {
+      "path": "lib/legacy/routes.ts",
+      "sha256": "f851542ada65603dd400fa0d7437c1f9a85f922ca6c88a6cc81d550bbea83178"
+    },
+    {
+      "path": "lib/loan-scenarios/engines.ts",
+      "sha256": "c617b261bc8dea64e4e38cd4c4e583fc129ba70fd0da5c3c4ec760835dba5c8f"
+    },
+    {
+      "path": "lib/loan-scenarios/format.ts",
+      "sha256": "c6613bc59f757320697961a10b80b8a3b6133acc5f6240bac6331f24d1b562d4"
+    },
+    {
+      "path": "lib/loan-scenarios/sources.ts",
+      "sha256": "d794a74a93d17411842ea706ff1fa67151d04b38a92bd5db822d8f68314c775b"
+    },
+    {
+      "path": "lib/loan-scenarios/tools.ts",
+      "sha256": "b13d32a2d0e7f1f69651ec0e76e373092929894acbfd2b2466a507251d456a25"
+    },
+    {
+      "path": "lib/marketplace-economics/engines.ts",
+      "sha256": "876166fd9c30f9a698ba0e3527569986c0d1cc0de2e41e7bcac2a42a0736601f"
+    },
+    {
+      "path": "lib/marketplace-economics/format.ts",
+      "sha256": "ac5169e1507ac7124c7375d7e6b4aefe9395655a3ac7c1eece87c1e30dda16c5"
+    },
+    {
+      "path": "lib/marketplace-economics/sources.ts",
+      "sha256": "de1d10e256c54812cd9015f5bb06da4acf418d51a3ced25925222ce9f1a6f850"
+    },
+    {
+      "path": "lib/marketplace-economics/tools.ts",
+      "sha256": "baf17173f0bf468d91b0b6e0456dd51068caeb2cc643096342d6d316b9bdb6e2"
+    },
+    {
+      "path": "lib/marketplace-metrics/engines.ts",
+      "sha256": "6d4e302f6b65c5b4e8578e7b1259f83049d58dc838b26c7c9fba1f443c96d14d"
+    },
+    {
+      "path": "lib/marketplace-metrics/tools.ts",
+      "sha256": "c3899254c285b20ccee7ef117359e62e5de20b690cce2a8d77968ee7522f826d"
+    },
+    {
+      "path": "lib/operations/engines.ts",
+      "sha256": "31fbdf976fe992ae952d1eecab7aba8cbb4d4292cb06e7d71e75364376816354"
+    },
+    {
+      "path": "lib/operations/tools.ts",
+      "sha256": "688be5acb449c2df853f802a0a3df89349c706ba7e867ad5e6f2929d8bf1e836"
+    },
+    {
+      "path": "lib/platform-settlement/engine.ts",
+      "sha256": "4cbdb9b3a26641475c36de77cb77636aa4faec534f46ed0822d809834b449cc4"
+    },
+    {
+      "path": "lib/platform-settlement/tools.ts",
+      "sha256": "4cc3b2e3947a6a86aa8007316be1cba696821a43cbaff63e0b5acb303a3eb4ca"
+    },
+    {
+      "path": "lib/published-paths.ts",
+      "sha256": "1b3cbc3581da25b2e299dc56e50ddb8c5e7336317c7ea3b81f1f436e0a483777"
+    },
+    {
+      "path": "lib/registry.ts",
+      "sha256": "4f4ec6addefbebcf82124a864ba972cd2983e7a13e7158e4f4c8071d4689de78"
+    },
+    {
+      "path": "lib/seller-costs/engines.ts",
+      "sha256": "e32144e6ecf4ccdc14e14b7080d8717ba9495b6552c9c6278a2e17bebbdbdffd"
+    },
+    {
+      "path": "lib/seller-costs/tools.ts",
+      "sha256": "dd6bc9bc0a903478e97cccaf7ee3d44ccce257f2d5e124c54ec405fba2d34a0c"
+    },
+    {
+      "path": "lib/seo.ts",
+      "sha256": "c1461e9d4647aeb6e4facce3d78f8ac5e02e8d916b1e470f4a64bd8ecc94db7b"
+    },
+    {
+      "path": "lib/social-metrics/engines.ts",
+      "sha256": "6f768cc03d0c223103ae6884b60fce60bb12769ede30ad0a9e5eff8c659e0aa9"
+    },
+    {
+      "path": "lib/social-metrics/format.ts",
+      "sha256": "22c7e86ee4840786a38cbc398598502fac77f4b263d0b83de73a34beb6660dd5"
+    },
+    {
+      "path": "lib/social-metrics/sources.ts",
+      "sha256": "f63050867c1f3d246c2ce94251e34cc087778a8594aadcc06f163152f889a617"
+    },
+    {
+      "path": "lib/social-metrics/tools.ts",
+      "sha256": "1ad50cb6681cd1e44f3721b1898e3752ec58c9b03d81bf1209a3ec07373a84d8"
+    },
+    {
+      "path": "lib/stock-services/engines.ts",
+      "sha256": "0a9742679c464f4595a2f17c9a9c30d407afbdf678f89f49513945f19406e1e0"
+    },
+    {
+      "path": "lib/stock-services/tools.ts",
+      "sha256": "a91d5902d2ef1aba5da730a2001c0c25549f8b9c33cdf58a861c261ef5b3cc4c"
+    },
+    {
+      "path": "lib/supplemental/comparison.ts",
+      "sha256": "840d38ea3af059fab800a81c972388298206d7d24edacf96df5add44e2406009"
+    },
+    {
+      "path": "lib/supplemental/gold.ts",
+      "sha256": "c1a8338ca517b08c7ae8bdd5e7ee78cf90bd1359e69fd16a9bd76f38d536acc4"
+    },
+    {
+      "path": "lib/supplemental/registry.ts",
+      "sha256": "4ea44deb0aef1c24089aa54e6c6e8c9247199ad8bcc23082772157c3297251e3"
+    },
+    {
+      "path": "lib/supplemental/routes.ts",
+      "sha256": "28d69d6f88334eb07da0acb6535401145401763189055f0aab9a9dae8f75bfc0"
+    },
+    {
+      "path": "lib/supplemental/tools.ts",
+      "sha256": "f5c76c97619cf5f5edceb8c0d8a6cbd4dd50cc2d88bb49f630ac17049fbfd58c"
+    },
+    {
+      "path": "lib/tax-advanced/engines.ts",
+      "sha256": "7b1e51e24fc0d7b6d9efea70cd88f2bc4c193cfcabea959231b890362fb802c0"
+    },
+    {
+      "path": "lib/tax-advanced/rates.ts",
+      "sha256": "273813692eaae63b1347d5c29562164648d0f0f17c2625f8d8074af9d3f843e5"
+    },
+    {
+      "path": "lib/tax-advanced/sources.ts",
+      "sha256": "9aa09ef76ebafb63e31bfb70203aadca747ed404e19811b014c6e1cc40a03581"
+    },
+    {
+      "path": "lib/tax-advanced/tools.ts",
+      "sha256": "58bbe4f9b6a88c7fad4ea6eeeac79a63b1439702da9bf8dfb3cab8090ae52558"
+    },
+    {
+      "path": "lib/tax/engines.ts",
+      "sha256": "89f506249993e3455f0eea29916158a6b792e7b121e60f72af6c5a4b05709cd4"
+    },
+    {
+      "path": "lib/tax/sources.ts",
+      "sha256": "f17faad05a41f6a3332faa2220d3be363c99b0663ab41b9096dd3a154a95bc22"
+    },
+    {
+      "path": "lib/tax/tools.ts",
+      "sha256": "31cff4c260b656368d7641855b7ee291e2190c6ae3f19b644bb364d9bbc20c32"
+    },
+    {
+      "path": "lib/units-scale/engines.ts",
+      "sha256": "acc25bf011eac711a98d608e796c8e4828965ac29da11b52a5293fefcff2650f"
+    },
+    {
+      "path": "lib/units-scale/format.ts",
+      "sha256": "bfd23ba11ea0489afca1717236788fb6674ac68adde233fa845160605ff00dd8"
+    },
+    {
+      "path": "lib/units-scale/sources.ts",
+      "sha256": "0235e085d326d9c6d4473eb9327d9ca7f660bc31fe09a4cbe44bca804283192c"
+    },
+    {
+      "path": "lib/units-scale/tools.ts",
+      "sha256": "834af5afb64f6d54fb3435e76f6cac4e12162b1bab5f105b7ee14e31d3399ac3"
+    },
+    {
+      "path": "lib/units-scale/units.ts",
+      "sha256": "ae6f70e3c952bc3f889a5693dddcd089d45d44f519ea15b55f08f313f993a5fd"
+    },
+    {
+      "path": "lib/utilities-materials/engines.ts",
+      "sha256": "f5173e3240288da2c1f34bf0098aad55e16f7b396903a4590ea9f4ecc45c90f5"
+    },
+    {
+      "path": "lib/utilities-materials/format.ts",
+      "sha256": "59902ff5485bb73f767d02e51767426fb9a4cf10d3ecbdbecc1eac4ef2a2eb43"
+    },
+    {
+      "path": "lib/utilities-materials/rational.ts",
+      "sha256": "a5a052cac5d84a269d186b80eb450caa1a2f401763d8c4c1f94f2c797b0cde8a"
+    },
+    {
+      "path": "lib/utilities-materials/sources.ts",
+      "sha256": "e54b97a08240c524126c67638a6efc5977a00c91fb17c927835441786f28d80c"
+    },
+    {
+      "path": "lib/utilities-materials/tools.ts",
+      "sha256": "91b4dfb45a675c8ba24e7760778c1762a2217c6d8e2b999175a72d2d158b6a11"
+    },
+    {
+      "path": "lib/valuation/engines.ts",
+      "sha256": "aba1d86c220cc66c1d8fcf03f5cb6dcb42a3d9a68a6288589c9d45fbef67fa6e"
+    },
+    {
+      "path": "lib/valuation/format.ts",
+      "sha256": "d286c7534ec09807fa30be83b3140cc78d87dd7b519ce3e71afe5cf65268e263"
+    },
+    {
+      "path": "lib/valuation/sources.ts",
+      "sha256": "f71226aecf3900bcfdaa09070f738c453534348a36256b3c4783dceaf82b6837"
+    },
+    {
+      "path": "lib/valuation/tools.ts",
+      "sha256": "b890a38df4485991cdbb52c5b7da59f6cd6dda5cc038389eea7ad9f2b4d37eeb"
+    },
+    {
+      "path": "next.config.ts",
+      "sha256": "740967fff8c6cbe6289029c86b68cd99b170fcaf3402c3753a766ae5bfb52abe"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "18a04aa7c5227be0913f10a693507b6bd9ab13f9a5c910b6aa5b6c3440ec0d31"
+    },
+    {
+      "path": "package.json",
+      "sha256": "5d893d98e0407134b383461909e4fa5f0bae8c52e980aa492d1c2b102c3c7729"
+    },
+    {
+      "path": "tsconfig.json",
+      "sha256": "160f78cb90940805f8bbf1374f1945d9ddd9f17cd600c5c2119f691642edb1c7"
+    }
+  ],
+  "absent": [
+    "vercel.json",
+    "middleware.ts",
+    "proxy.ts"
+  ]
+}

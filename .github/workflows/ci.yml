@@ -36,6 +36,11 @@ jobs:
         run: npm test
       - name: Production build
         run: npm run build
+      - name: Migration release consistency and read-only rehearsal
+        run: |
+          mkdir -p test-results/migration-release
+          node scripts/migration/release-gates.cjs > test-results/migration-release/report.json
+          node -e 'const r=require("child_process").spawnSync(process.execPath,["scripts/migration/release-gates.cjs","--require-cutover"],{encoding:"utf8"});if(r.status!==2||JSON.parse(r.stdout).cutoverDecision!=="NO-GO")process.exit(1)'
       - name: Install audit browsers
         run: npx playwright install --with-deps chromium webkit
       - name: Browser smoke tests
