@@ -122,7 +122,7 @@ test('creator catalog hub ten tools canonical search sitemap and staging protect
   await expect(listing.locator('a[href="/kalkulator/tiktok"]')).toHaveCount(1); await expect(listing.locator('a[href="/kalkulator/tiktok-shop"]')).toHaveCount(0)
   await page.screenshot({ path: info.outputPath('media-sosial-10-alat.jpg'), quality: 75, fullPage: true })
   for (const f of fixtures.filter(x => !x.mode || x.mode === 'earnings')) { await page.goto('/'); await page.getByRole('searchbox').fill(f.title); await expect(page.getByRole('region', { name: 'Hasil pencarian' }).locator(`a[href="/kalkulator/${f.slug}"]`)).toBeVisible() }
-  const xml = await (await request.get('/sitemap.xml')).text(); expect(xml.match(/<loc>/g)).toHaveLength(98)
+  const xml = await (await request.get('/sitemap.xml')).text(); expect(xml.match(/<loc>/g)).toHaveLength(103)
   for (const slug of ['ctr', 'estimasi-youtube', 'tiktok', 'tarif-endorsement', 'waktu-tonton']) expect(xml).toContain(`/kalkulator/${slug}</loc>`)
   for (const slug of ['tiktok-shop', 'estimasi-tiktok-kreator', 'shopee']) { expect((await request.get(`/kalkulator/${slug}`)).status()).toBe(404); expect(xml).not.toContain(`/kalkulator/${slug}</loc>`); await page.goto('/'); await page.getByRole('searchbox').fill(slug.replaceAll('-', ' ')); await expect(page.locator(`a[href="/kalkulator/${slug}"]`)).toHaveCount(0) }
   expect(await (await request.get('/robots.txt')).text()).toContain('Disallow: /')

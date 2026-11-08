@@ -163,6 +163,11 @@ test('blocks preview indexing and lists only published URLs', async ({ request }
     '<loc>https://kalkulatorharga.com/kalkulator/pph-4-ayat-2-sewa</loc>',
     '<loc>https://kalkulatorharga.com/kalkulator/gross-up-pajak</loc>',
     '<loc>https://kalkulatorharga.com/kalkulator/pph-final-umkm</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/pph-21-bulanan</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/pph-21-rekonsiliasi</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/pajak-impor</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/bphtb</loc>',
+    '<loc>https://kalkulatorharga.com/kalkulator/pbb-p2</loc>',
   ])
 })
 

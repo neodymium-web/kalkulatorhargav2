@@ -1,3 +1,6 @@
+import {advancedTools,type AdvancedSlug} from '../../lib/tax-advanced/tools'
+import {AdvancedTaxForm} from './advanced-tax-form'
+import {AdvancedTaxMethodology} from './advanced-tax-methodology'
 import { taxTools, type TaxSlug } from '../../lib/tax/tools'
 import { TaxForm } from './tax-form'
 import { TaxMethodology } from './tax-methodology'
@@ -183,5 +186,9 @@ export const views: Readonly<Record<string, CalculatorView | undefined>> = {
   ...Object.fromEntries((Object.keys(taxTools) as TaxSlug[]).map(slug => {
     const view: CalculatorView = { Form: () => <TaxForm slug={slug} />, Methodology: ({ formulaVersion }) => <TaxMethodology slug={slug} formulaVersion={formulaVersion} /> }
     return [slug, view]
+  })),
+  ...Object.fromEntries((Object.keys(advancedTools) as AdvancedSlug[]).map(slug => {
+    const view: CalculatorView = { Form: () => <AdvancedTaxForm slug={slug} />, Methodology: ({formulaVersion}) => <AdvancedTaxMethodology slug={slug} formulaVersion={formulaVersion} /> }
+    return [slug,view]
   })),
 }

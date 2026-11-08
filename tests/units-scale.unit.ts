@@ -168,10 +168,10 @@ describe('strict validation format and catalog', () => {
     expect(formatExact(fraction(5000n, 479n), 'm/s')).toBe('5000/479 m/s'); expect(formatExact(fraction(-45967n, 100n), '°F')).toBe('−45967/100 °F'); expect(formatExact(fraction(60n), 'km/h')).toBe('60 km/h')
   })
   it('publishes five existing IDs finishing twenty everyday tools and 87 sitemap URLs', () => {
-    expect(listPublished()).toHaveLength(91); expect(listCategory('sehari-hari')).toHaveLength(20); expect(listCategoryHubs()).toHaveLength(6); expect(sitemapPaths()).toHaveLength(98)
+    expect(listPublished()).toHaveLength(96); expect(listCategory('sehari-hari')).toHaveLength(20); expect(listCategoryHubs()).toHaveLength(6); expect(sitemapPaths()).toHaveLength(103)
     for (const slug of ['skala-denah', 'konversi-panjang', 'konversi-berat', 'konversi-suhu', 'kecepatan-rata-rata']) expect(findPublished(slug)?.id).toBe(`calc-${slug}`)
-    for (const slug of ['pajak-impor', 'shopee', 'tiktok-shop', 'pbb-p2', 'pph-21-bulanan']) expect(findPublished(slug)).toBeUndefined()
+    for (const slug of [ 'shopee', 'tiktok-shop']) expect(findPublished(slug)).toBeUndefined()
     const rows = readFileSync(new URL('../docs/CALCULATOR_INVENTORY.md', import.meta.url), 'utf8').split('\n').filter(l => /^\| (production-cost|calc-)/.test(l)).map(l => l.split('|').map(x => x.trim()))
-    expect(rows).toHaveLength(100); expect(new Set(rows.map(r => r[1])).size).toBe(100); expect(rows.filter(r => r[10] === 'published')).toHaveLength(91)
+    expect(rows).toHaveLength(100); expect(new Set(rows.map(r => r[1])).size).toBe(100); expect(rows.filter(r => r[10] === 'published')).toHaveLength(96)
   })
 })

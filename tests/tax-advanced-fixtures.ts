@@ -1,0 +1,6 @@
+export const payrollFacts={ptkp:'K/0',employment:'full-year',employers:'single',relief:'none',classification:'ordinary',confirmation:'confirmed',finalMonth:'12'}
+export const monthlyFixture={year:'2024',month:'5',...payrollFacts,gross:'10000000'}
+export const annualFixture={year:'2024',...payrollFacts,aggregate:'complete',deductions:'confirmed',gross:'120000000',contributions:'1200000',zakat:'0',withheld:'2200000'}
+export const importFixture={date:'2024-06-03',mode:'manual',regime:'regular',incoterm:'FOB',currency:'USD',hs:'84713020',confirmation:'confirmed',reference:'KMK fixture manual: USD16000; tarif10/12/2,5 asumsi, bukan data live',fxStart:'2024-05-29',fxEnd:'2024-06-04',fx:'16000',value:'100',freight:'20',insurance:'5',dutyRate:'10',vatRate:'12',vatFactor:'100',incomeRate:'2.5',vatBase:'plus-duty',incomeBase:'plus-duty'}
+export const bphtbFixture={region:'DKI',confirmation:'confirmed',date:'2024-06-01',acquisition:'sale',first:'confirmed',taxpayer:'body',property:'nonresidential',relation:'not-applicable',facility:'none-confirmed',value:'800000000',njop:'1000000000'}
+export const pbbFixture={region:'DKI',confirmation:'confirmed',year:'2024',use:'residential',allocation:'this-object',purpose:'gross-only',land:'300000000',building:'200000000'}

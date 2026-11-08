@@ -63,3 +63,7 @@ Batch 17 memisahkan ledger settlement manual, pembalikan harga, ranking kanal, k
 Batch18 menyimpan snapshot legal, tanggal efektif/cakupan, asumsi dan status tanpaangka di lib/tax. Lihat [verifikasi hukum dan rumus](BATCH_18_FORMULA_VERIFICATION.md). Unsupported/eligibility unverified tidak mempunyai amount/ledger pajak; bukan pajak0. PP20/2026 dipisahkan dari materi sosialisasi DJP.
 
 PR46 UMKM: monthly ledger contains all qualifying businesses of one WP only. Explicit coverage confirmation is required. Separate prior/current related-party totals gate eligibility, never the OP allowance/tax base. Missing turnover yields a status without amount or ledger; legacy ambiguous payloads fail closed.
+
+## Batch19 payroll, import and regional tax
+
+`lib/tax-advanced` isolates strict schemas, pure BigInt/rational engines, complete TER tables, source snapshots and tool content. Its five records publish existing IDs; the91 previous engines/helpers remain unchanged. Unknown facts return no amount/details/ledger. Payroll regular TER is separate from final-period reconciliation; current incomplete2026 annual payroll is held. Import is manual-only, with explicit rates/bases, CIF incoterm handling and dated KMK input. Property presets are limited to DKI2024 and gross before facilities, never a legal SPPT/PIB/payable claim.

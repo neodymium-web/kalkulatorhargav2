@@ -91,8 +91,8 @@ test('twenty everyday tools pagination keyboard search canonical sitemap and sta
   await page.screenshot({ path: info.outputPath('sehari-hari-20-alat.jpg'), quality: 75, fullPage: true })
   for (const f of fixtures.filter(f => f.name !== 'nyata-gambar')) { await page.goto('/'); await page.getByRole('searchbox').fill(f.title); await expect(page.getByRole('region', { name: 'Hasil pencarian' }).locator(`a[href="/kalkulator/${f.slug}"]`)).toBeVisible() }
   await page.getByRole('searchbox').fill('sehari-hari'); await expect(page.getByRole('status')).toHaveText('20 kalkulator ditemukan'); const search = page.getByRole('region', { name: 'Hasil pencarian' }); await search.getByRole('button', { name: 'Muat lebih banyak' }).click(); await expect(search.getByRole('link')).toHaveCount(20)
-  const xml = await (await request.get('/sitemap.xml')).text(); expect(xml.match(/<loc>/g)).toHaveLength(98); for (const f of fixtures) expect(xml).toContain(`/kalkulator/${f.slug}</loc>`)
-  for (const slug of ['pajak-impor', 'shopee', 'tiktok-shop', 'pbb-p2', 'pph-21-bulanan']) { expect((await request.get(`/kalkulator/${slug}`)).status()).toBe(404); expect(xml).not.toContain(`/kalkulator/${slug}</loc>`) }
+  const xml = await (await request.get('/sitemap.xml')).text(); expect(xml.match(/<loc>/g)).toHaveLength(103); for (const f of fixtures) expect(xml).toContain(`/kalkulator/${f.slug}</loc>`)
+  for (const slug of [ 'shopee', 'tiktok-shop']) { expect((await request.get(`/kalkulator/${slug}`)).status()).toBe(404); expect(xml).not.toContain(`/kalkulator/${slug}</loc>`) }
   expect(await (await request.get('/robots.txt')).text()).toContain('Disallow: /'); await expect(page.getByRole('navigation', { name: 'Navigasi utama' }).getByRole('link')).toHaveCount(7)
 })
 test('all six conversion flows exact fractions and large numbers fit five widths', async ({ page, isMobile }) => {

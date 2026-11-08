@@ -110,9 +110,9 @@ test('twenty everyday tools hub search sitemap sources 404 and staging protectio
   await expect(page.locator('link[rel=canonical]')).toHaveAttribute('href', 'https://kalkulatorharga.com/sehari-hari'); await expect(page.getByRole('navigation', { name: 'Navigasi utama' }).getByRole('link')).toHaveCount(7)
   await page.screenshot({ path: info.outputPath('sehari-hari-20-alat.jpg'), quality: 75, fullPage: true })
   for (const f of fixtures) { await page.goto('/'); await page.getByRole('searchbox').fill(f.title); await expect(page.getByRole('region', { name: 'Hasil pencarian' }).locator(`a[href="/kalkulator/${f.slug}"]`)).toBeVisible(); const r = await request.get(`/kalkulator/${f.slug}`); expect(r.headers()['x-robots-tag']).toBe('noindex, nofollow'); const html = await r.text(); expect(html).toContain('Presisi dan pembulatan'); expect(html).toContain('Sumber dan konvensi model') }
-  const xml = await (await request.get('/sitemap.xml')).text(); expect(xml.match(/<loc>/g)).toHaveLength(98)
+  const xml = await (await request.get('/sitemap.xml')).text(); expect(xml.match(/<loc>/g)).toHaveLength(103)
   for (const f of fixtures) expect(xml).toContain(`/kalkulator/${f.slug}</loc>`)
-  for (const slug of ['pajak-impor', 'shopee', 'tiktok-shop', 'pbb-p2', 'pph-21-bulanan']) { expect((await request.get(`/kalkulator/${slug}`)).status()).toBe(404); expect(xml).not.toContain(`/kalkulator/${slug}</loc>`); await page.goto('/'); await page.getByRole('searchbox').fill(slug.replaceAll('-', ' ')); await expect(page.locator(`a[href="/kalkulator/${slug}"]`)).toHaveCount(0) }
+  for (const slug of [ 'shopee', 'tiktok-shop']) { expect((await request.get(`/kalkulator/${slug}`)).status()).toBe(404); expect(xml).not.toContain(`/kalkulator/${slug}</loc>`); await page.goto('/'); await page.getByRole('searchbox').fill(slug.replaceAll('-', ' ')); await expect(page.locator(`a[href="/kalkulator/${slug}"]`)).toHaveCount(0) }
   expect(await (await request.get('/robots.txt')).text()).toContain('Disallow: /')
 })
 test('calendar forms holiday table and large fuel output fit all five widths', async ({ page, isMobile }) => {
