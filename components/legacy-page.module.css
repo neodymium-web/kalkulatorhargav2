@@ -20,3 +20,7 @@
 .related p, .archive p { margin-top: var(--space-3); color: var(--text-secondary); max-width: var(--measure-prose); }
 .archive ul { display: grid; grid-template-columns: minmax(0,1fr); gap: var(--space-2) var(--space-8); padding-inline-start: var(--space-5); }
 @media (min-width: 48rem) { .archive ul { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+
+.reference { color: var(--text-secondary); }
+.reference small { font: var(--text-small) var(--font-ui); }
+.notice code { overflow-wrap: anywhere; }
