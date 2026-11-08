@@ -63,7 +63,7 @@ export function LegacyPageView({ page }: { page: LegacyPage }) {
     </>, page.path)}</article>
     <section className={styles.related} aria-labelledby="v2-tools"><h2 id="v2-tools">Alat v2 dengan asumsi yang dijelaskan</h2>
       <p>Alat berikut terpisah dari preset dan fitur situs lama. Biaya seller diisi manual; estimasi pendapatan kreator memakai asumsi pengguna.</p>
-      <ul>{[['/marketplace','Kalkulator Marketplace'],['/kalkulator/tiktok','TikTok kreator'],['/kalkulator/tiktok-shop','TikTok Shop seller'],['/kalkulator/rata-rata-beli-saham','Rata-rata beli saham']].map(([href,label]) => <li key={href}><Link href={href} prefetch={false}>{label}</Link></li>)}</ul>
+      <ul>{[['/kalkulator/emas','Emas dengan quote manual'],['/bandingkan','Bandingkan marketplace manual'],['/marketplace','Kalkulator Marketplace'],['/kalkulator/tiktok','TikTok kreator'],['/kalkulator/tiktok-shop','TikTok Shop seller'],['/kalkulator/rata-rata-beli-saham','Rata-rata beli saham']].map(([href,label]) => <li key={href}><Link href={href} prefetch={false}>{label}</Link></li>)}</ul>
     </section>
     <nav className={styles.archive} aria-label="Arsip legacy yang tersedia"><h2>Arsip konten yang tersedia</h2><p>22 halaman diwarisi untuk review, termasuk 13 artikel. Status arsip ini bukan persetujuan peluncuran.</p><ul>{legacyPages.map(p => <li key={p.path}><Link href={p.path} prefetch={false} aria-current={p.path === page.path ? 'page' : undefined}>{p.h1}</Link></li>)}</ul></nav>
   </div>

@@ -39,11 +39,13 @@ function Field({ field, error, hintId, onChoice }: { field: Control; error?: str
 
 export function StructuredForm({
   tool,
+  title = 'Data perhitungan',
   errors,
   onResult,
   onChange,
 }: {
   tool: StructuredTool
+  title?: string
   errors?: Record<string, string[] | undefined>
   onResult: (input: unknown) => void
   onChange: () => void
@@ -126,7 +128,7 @@ export function StructuredForm({
 
   return (
     <CalculatorForm
-      title="Data perhitungan"
+      title={title}
       hint={tool.hint}
       hintId={hintId}
       submitLabel="Hitung"
