@@ -13,7 +13,9 @@
         "docs/audit/legacy55/source-pages.json",
         "docs/audit/legacy-content-parity.csv"
       ],
-      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy. Ketersediaan Creator Rewards/negara dan syarat program bersifat historis; v2 hanya simulasi asumsi pengguna dan tidak menyediakan pencarian akun atau tarif resmi."
+      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy. Ketersediaan Creator Rewards/negara dan syarat program bersifat historis; v2 hanya simulasi asumsi pengguna dan tidak menyediakan pencarian akun atau tarif resmi.",
+      "publicationStatus": "PENDING_OWNER_APPROVAL",
+      "editorialEvidence": "docs/audit/editorial61/changes.json"
     },
     {
       "id": "ARCHIVE-02",
@@ -25,7 +27,9 @@
         "docs/audit/legacy55/source-pages.json",
         "docs/audit/legacy-content-parity.csv"
       ],
-      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy."
+      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy.",
+      "publicationStatus": "PENDING_OWNER_APPROVAL",
+      "editorialEvidence": "docs/audit/editorial61/changes.json"
     },
     {
       "id": "ARCHIVE-03",
@@ -37,7 +41,9 @@
         "docs/audit/legacy55/source-pages.json",
         "docs/audit/legacy-content-parity.csv"
       ],
-      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy."
+      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy.",
+      "publicationStatus": "PENDING_OWNER_APPROVAL",
+      "editorialEvidence": "docs/audit/editorial61/changes.json"
     },
     {
       "id": "ARCHIVE-04",
@@ -49,7 +55,9 @@
         "docs/audit/legacy55/source-pages.json",
         "docs/audit/legacy-content-parity.csv"
       ],
-      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy."
+      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy.",
+      "publicationStatus": "PENDING_OWNER_APPROVAL",
+      "editorialEvidence": "docs/audit/editorial61/changes.json"
     },
     {
       "id": "ARCHIVE-05",
@@ -61,7 +69,9 @@
         "docs/audit/legacy55/source-pages.json",
         "docs/audit/legacy-content-parity.csv"
       ],
-      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy. Pernyataan entity, kebijakan, privasi, username lookup dan tanggung jawab adalah teks legacy, bukan janji operasional v2 yang telah disahkan. Pemilik wajib meninjaunya sebelum production."
+      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy. Pernyataan entity, kebijakan, privasi, username lookup dan tanggung jawab adalah teks legacy, bukan janji operasional v2 yang telah disahkan. Pemilik wajib meninjaunya sebelum production.",
+      "publicationStatus": "PENDING_OWNER_APPROVAL",
+      "editorialEvidence": "docs/audit/editorial61/changes.json"
     },
     {
       "id": "ARCHIVE-06",
@@ -73,7 +83,9 @@
         "docs/audit/legacy55/source-pages.json",
         "docs/audit/legacy-content-parity.csv"
       ],
-      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy. Pernyataan entity, kebijakan, privasi, username lookup dan tanggung jawab adalah teks legacy, bukan janji operasional v2 yang telah disahkan. Pemilik wajib meninjaunya sebelum production."
+      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy. Pernyataan entity, kebijakan, privasi, username lookup dan tanggung jawab adalah teks legacy, bukan janji operasional v2 yang telah disahkan. Pemilik wajib meninjaunya sebelum production.",
+      "publicationStatus": "PENDING_OWNER_APPROVAL",
+      "editorialEvidence": "docs/audit/editorial61/changes.json"
     },
     {
       "id": "ARCHIVE-07",
@@ -85,7 +97,9 @@
         "docs/audit/legacy55/source-pages.json",
         "docs/audit/legacy-content-parity.csv"
       ],
-      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy. Pernyataan entity, kebijakan, privasi, username lookup dan tanggung jawab adalah teks legacy, bukan janji operasional v2 yang telah disahkan. Pemilik wajib meninjaunya sebelum production."
+      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy. Pernyataan entity, kebijakan, privasi, username lookup dan tanggung jawab adalah teks legacy, bukan janji operasional v2 yang telah disahkan. Pemilik wajib meninjaunya sebelum production.",
+      "publicationStatus": "PENDING_OWNER_APPROVAL",
+      "editorialEvidence": "docs/audit/editorial61/changes.json"
     },
     {
       "id": "ARCHIVE-08",
@@ -97,7 +111,9 @@
         "docs/audit/legacy55/source-pages.json",
         "docs/audit/legacy-content-parity.csv"
       ],
-      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy. Pernyataan entity, kebijakan, privasi, username lookup dan tanggung jawab adalah teks legacy, bukan janji operasional v2 yang telah disahkan. Pemilik wajib meninjaunya sebelum production."
+      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy. Pernyataan entity, kebijakan, privasi, username lookup dan tanggung jawab adalah teks legacy, bukan janji operasional v2 yang telah disahkan. Pemilik wajib meninjaunya sebelum production.",
+      "publicationStatus": "PENDING_OWNER_APPROVAL",
+      "editorialEvidence": "docs/audit/editorial61/changes.json"
     },
     {
       "id": "ARCHIVE-09",
@@ -109,7 +125,9 @@
         "docs/audit/legacy55/source-pages.json",
         "docs/audit/legacy-content-parity.csv"
       ],
-      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy."
+      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy.",
+      "publicationStatus": "PENDING_OWNER_APPROVAL",
+      "editorialEvidence": "docs/audit/editorial61/changes.json"
     },
     {
       "id": "ARCHIVE-10",
@@ -121,7 +139,9 @@
         "docs/audit/legacy55/source-pages.json",
         "docs/audit/legacy-content-parity.csv"
       ],
-      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy."
+      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy.",
+      "publicationStatus": "PENDING_OWNER_APPROVAL",
+      "editorialEvidence": "docs/audit/editorial61/changes.json"
     },
     {
       "id": "ARCHIVE-11",
@@ -133,7 +153,9 @@
         "docs/audit/legacy55/source-pages.json",
         "docs/audit/legacy-content-parity.csv"
       ],
-      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy."
+      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy.",
+      "publicationStatus": "PENDING_OWNER_APPROVAL",
+      "editorialEvidence": "docs/audit/editorial61/changes.json"
     },
     {
       "id": "ARCHIVE-12",
@@ -145,7 +167,9 @@
         "docs/audit/legacy55/source-pages.json",
         "docs/audit/legacy-content-parity.csv"
       ],
-      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy."
+      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy.",
+      "publicationStatus": "PENDING_OWNER_APPROVAL",
+      "editorialEvidence": "docs/audit/editorial61/changes.json"
     },
     {
       "id": "ARCHIVE-13",
@@ -157,7 +181,9 @@
         "docs/audit/legacy55/source-pages.json",
         "docs/audit/legacy-content-parity.csv"
       ],
-      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy."
+      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy.",
+      "publicationStatus": "PENDING_OWNER_APPROVAL",
+      "editorialEvidence": "docs/audit/editorial61/changes.json"
     },
     {
       "id": "ARCHIVE-14",
@@ -169,7 +195,9 @@
         "docs/audit/legacy55/source-pages.json",
         "docs/audit/legacy-content-parity.csv"
       ],
-      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy. Angka studi/pajak dalam kutipan sumber belum merupakan verifikasi studi atau ketentuan pajak terkini."
+      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy. Angka studi/pajak dalam kutipan sumber belum merupakan verifikasi studi atau ketentuan pajak terkini.",
+      "publicationStatus": "PENDING_OWNER_APPROVAL",
+      "editorialEvidence": "docs/audit/editorial61/changes.json"
     },
     {
       "id": "ARCHIVE-15",
@@ -181,7 +209,9 @@
         "docs/audit/legacy55/source-pages.json",
         "docs/audit/legacy-content-parity.csv"
       ],
-      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy."
+      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy.",
+      "publicationStatus": "PENDING_OWNER_APPROVAL",
+      "editorialEvidence": "docs/audit/editorial61/changes.json"
     },
     {
       "id": "ARCHIVE-16",
@@ -193,7 +223,9 @@
         "docs/audit/legacy55/source-pages.json",
         "docs/audit/legacy-content-parity.csv"
       ],
-      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy."
+      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy.",
+      "publicationStatus": "PENDING_OWNER_APPROVAL",
+      "editorialEvidence": "docs/audit/editorial61/changes.json"
     },
     {
       "id": "ARCHIVE-17",
@@ -205,7 +237,9 @@
         "docs/audit/legacy55/source-pages.json",
         "docs/audit/legacy-content-parity.csv"
       ],
-      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy."
+      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy.",
+      "publicationStatus": "PENDING_OWNER_APPROVAL",
+      "editorialEvidence": "docs/audit/editorial61/changes.json"
     },
     {
       "id": "ARCHIVE-18",
@@ -217,7 +251,9 @@
         "docs/audit/legacy55/source-pages.json",
         "docs/audit/legacy-content-parity.csv"
       ],
-      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy."
+      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy.",
+      "publicationStatus": "PENDING_OWNER_APPROVAL",
+      "editorialEvidence": "docs/audit/editorial61/changes.json"
     },
     {
       "id": "ARCHIVE-19",
@@ -229,7 +265,9 @@
         "docs/audit/legacy55/source-pages.json",
         "docs/audit/legacy-content-parity.csv"
       ],
-      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy. Teks lama menyebut pembulatan per komponen; v2 merekonsiliasi aggregate rasional dan adjustment, sehingga hasil bisa berbeda dari pembulatan legacy."
+      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy. Teks lama menyebut pembulatan per komponen; v2 merekonsiliasi aggregate rasional dan adjustment, sehingga hasil bisa berbeda dari pembulatan legacy.",
+      "publicationStatus": "PENDING_OWNER_APPROVAL",
+      "editorialEvidence": "docs/audit/editorial61/changes.json"
     },
     {
       "id": "ARCHIVE-20",
@@ -241,7 +279,9 @@
         "docs/audit/legacy55/source-pages.json",
         "docs/audit/legacy-content-parity.csv"
       ],
-      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy."
+      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy.",
+      "publicationStatus": "PENDING_OWNER_APPROVAL",
+      "editorialEvidence": "docs/audit/editorial61/changes.json"
     },
     {
       "id": "ARCHIVE-21",
@@ -253,7 +293,9 @@
         "docs/audit/legacy55/source-pages.json",
         "docs/audit/legacy-content-parity.csv"
       ],
-      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy. Angka studi/pajak dalam kutipan sumber belum merupakan verifikasi studi atau ketentuan pajak terkini."
+      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy. Angka studi/pajak dalam kutipan sumber belum merupakan verifikasi studi atau ketentuan pajak terkini.",
+      "publicationStatus": "PENDING_OWNER_APPROVAL",
+      "editorialEvidence": "docs/audit/editorial61/changes.json"
     },
     {
       "id": "ARCHIVE-22",
@@ -265,7 +307,9 @@
         "docs/audit/legacy55/source-pages.json",
         "docs/audit/legacy-content-parity.csv"
       ],
-      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy. Contoh sumber belum konsisten: harga impas sekitar Rp4.436 dibanding fraksi Rp5, sementara tabel teks menyebut Rp10 untuk harga Rp2.000–Rp5.000. Fee beli contoh juga belum direkonsiliasi. Jangan gunakan contoh ini untuk order; perlu koreksi owner dan verifikasi primer."
+      "requiredDecision": "Teks, byline dan tanggal berikut diwarisi dari situs lama. Klaim tarif, sumber, fitur dan proses belum diverifikasi ulang untuk v2; ini bukan data resmi terbaru. Kalkulator seller v2 memakai biaya manual, bukan preset legacy. Contoh sumber belum konsisten: harga impas sekitar Rp4.436 dibanding fraksi Rp5, sementara tabel teks menyebut Rp10 untuk harga Rp2.000–Rp5.000. Fee beli contoh juga belum direkonsiliasi. Jangan gunakan contoh ini untuk order; perlu koreksi owner dan verifikasi primer.",
+      "publicationStatus": "PENDING_OWNER_APPROVAL",
+      "editorialEvidence": "docs/audit/editorial61/changes.json"
     }
   ],
   "references": [

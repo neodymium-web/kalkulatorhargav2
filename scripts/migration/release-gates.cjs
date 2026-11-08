@@ -108,7 +108,12 @@ function report() {
   const register = load(`${directory}/register.json`)
   const blocked = validateRegister(register)
   const baseline = load(`${directory}/application-baseline.json`)
-  assert(baseline.baseline === register.baseline && same(applicationFiles(), [...baseline.files].sort((a, b) => a.path < b.path ? -1 : a.path > b.path ? 1 : 0)), 'Application/config drift from requested baseline')
+  const expectedFiles = structuredClone(baseline.files)
+  // Issue61 allows only source-replayed archive content; all other application files stay frozen.
+  const editorial = require('../legacy/editorial-contract.cjs').verify()
+  assert(expectedFiles.some(f => f.path === editorial.path), 'Archive file missing from baseline')
+  expectedFiles.find(f => f.path === editorial.path).sha256 = editorial.sha256
+  assert(baseline.baseline === register.baseline && same(applicationFiles(), expectedFiles.sort((a, b) => a.path < b.path ? -1 : a.path > b.path ? 1 : 0)), 'Application/config drift outside reviewed editorial ledger')
   const map = mapping()
   const observation = load(`${directory}/domain-observation.json`)
   const snapshot = { assignments: Object.fromEntries(observation.legacy.map(a => [a.alias, { projectId: a.projectId, deploymentId: a.deployment.id, redirect: a.redirect, status: a.redirectStatusCode }])), canonical: register.host.currentCanonical, staging: { sso: true, noindex: true } }
@@ -127,7 +132,7 @@ function report() {
     assert(trace(host, '/', draft(host)).length === 0, 'Canonical self redirect')
     return { hypotheticalCanonical: host, canonicalChangeAllowed: false, routeChecks: routes.length, rollbackCases: cases.map(({ restored, ...r }) => r) }
   })
-  return { schemaVersion: 1, baseline: register.baseline, technicalConsistency: 'PASS', cutoverDecision: 'NO-GO', executionAuthorized: false, blockedDecisionRows: blocked, counts: { originalCalculators: 100, hubs: 6, archives: 22, supplementalManualTools: 2, sitemap: 131, legacyContentURLs: map.legacyContentURLs, unresolvedReferenceInstances: 6, pathProposals: 2 }, rehearsals, evidenceLimits: ['Synthetic local models, not a platform rollback drill', 'No GSC/GA4/backlink exports or owner approvals supplied', 'Historical domain observation must be reverified on execution day', 'No change to canonical, production, DNS, aliases, staging SSO or indexing'] }
+  return { schemaVersion: 1, baseline: register.baseline, technicalConsistency: 'PASS', cutoverDecision: 'NO-GO', executionAuthorized: false, blockedDecisionRows: blocked, counts: { originalCalculators: 100, hubs: 6, archives: 22, supplementalManualTools: 2, sitemap: 131, legacyContentURLs: map.legacyContentURLs, unresolvedReferenceInstances: 6, pathProposals: 2 }, rehearsals, evidenceLimits: ['Synthetic local models, not a platform rollback drill', 'No complete SEO exports or archive-publication/cutover approval; Issue60 product/manual and future-www planning choices are recorded separately', 'Historical domain observation must be reverified on execution day', 'No change to canonical, production, DNS, aliases, staging SSO or indexing'] }
 }
 module.exports = { applicationFiles, validateRegister, mapping, routeFixture, rollbackFixture, report }
 if (require.main === module) {

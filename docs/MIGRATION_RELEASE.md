@@ -1,3 +1,5 @@
+> Pembaruan editorial Issue #61: lihat [ledger 22 arsip](ARCHIVE_EDITORIAL_REMEDIATION.md). Semua publikasi PENDING_OWNER_APPROVAL, cutover NO-GO. Issue #60 mencatat www sebagai pilihan masa depan dan dua alat manual diterima sebagai pilihan produk; canonical aktif tetap apex. Register sebelumnya memuat keputusan historis, bukan pembatalan keputusan owner tersebut atau izin cutover.
+
 # Migration release: keputusan final untuk review
 
 Baseline `main@b8dd6ee6fe9a45bca1b86e793a430ce25ca27844`. Ini rujukan terkini untuk release blocker; dokumen Issue #53/#55/#57 adalah riwayat bertanggal, bukan daftar keputusan aktif.

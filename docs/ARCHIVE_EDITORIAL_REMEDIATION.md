@@ -78,7 +78,7 @@ Sumber primer dicek 9 November 2026 Asia/Jakarta. Kode di baseline adalah sumber
 
 **After yang diusulkan:** V2 menggunakan input kreator manual, tanpa pencarian username; praktik log/retensi operasional belum diverifikasi sehingga tidak menjanjikan tidak ada penyimpanan data.
 
-**Sumber/kebutuhan verifikasi primer:** https://github.com/neodymium-web/kalkulatorhargav2/blob/2f3f1b8ec18e8e555c0193faa1e282bd175614e4/components/forms/creator-analytics.tsx; diperiksa/diupayakan 2026-11-09, status rinci akan dicatat bersama revisi.
+**Sumber/kebutuhan verifikasi primer:** https://github.com/neodymium-web/kalkulatorhargav2/blob/2f3f1b8ec18e8e555c0193faa1e282bd175614e4/components/calculators/creator-form.tsx; diperiksa/diupayakan 2026-11-09, status rinci akan dicatat bersama revisi.
 
 **Owner:** hak republication, identitas/byline/tanggal, keputusan konten serta legal/finance bila relevan belum disahkan. Status `PENDING_OWNER_APPROVAL`. Pilihan `APPROVE_REVISED / REQUEST_CHANGES / WITHHOLD`: __________.
 
@@ -216,7 +216,7 @@ Sumber primer dicek 9 November 2026 Asia/Jakarta. Kode di baseline adalah sumber
 
 **Before (teks tepat dari baseline):** Angka acuan 2026 bergerak dan bergantung metodologi. Socialinsider mencatat engagement rate per tayangan 3,85 persen pada paruh pertama 2026 dan 3,90 persen pada kuartal ketiga. SociaVault Labs, yang hanya menghitung akun terverifikasi bersih, mendapat median 4,25 persen per pengikut. Rival IQ dan Quid mencatat 2,01 persen dengan penyebut per pengikut dan sampel 150 perusahaan acak.
 
-**After yang diusulkan:** Angka studi tanpa rights/cohort/denominator dikeluarkan dari rekomendasi; ER bukan retensi dan penyebut tidak dicampur. Benchmark tetap404.
+**After yang diusulkan:** Angka studi tanpa rights/cohort/denominator dikeluarkan dari rekomendasi; ER bukan retensi dan penyebut tidak dicampur. Benchmark tetap 404.
 
 **Sumber/kebutuhan verifikasi primer:** https://github.com/neodymium-web/kalkulatorhargav2/blob/2f3f1b8ec18e8e555c0193faa1e282bd175614e4/docs/audit/deferred57/benchmark-inventory.csv; diperiksa/diupayakan 2026-11-09, status rinci akan dicatat bersama revisi.
 
@@ -236,4 +236,83 @@ Sumber primer dicek 9 November 2026 Asia/Jakarta. Kode di baseline adalah sumber
 
 Gunakan tes existing dengan kontrak editorial baru: replay perubahan bernama terhadap snapshot asli, expected text rendered berasal dari ledger, preservasi semua blok/atribut yang tidak diubah, tanggal/byline historis berlabel, oracle rasional independen saham/harga minimum/pembulatan settlement,22route200,131sitemap,6referensi nonklik dan crawl noJS. Fingerprint scope lama harus membolehkan hanya perubahan konten yang direkonsiliasi, bukan dihapus. CI tetap menjalankan Node22,typecheck,unit,build,Playwright/WebKit dan audit dependency tanpa menambah koleksi screenshot masif.
 
-Satu PR `Closes #61`; CI success dan Preview READY exact head. Tanpa izin baru, jangan membuat sharelink; jika SSO302, laporkan keterbatasan body Preview. Tidak merge, production, domain/DNS/alias/canonical/redirect/indexing/protection mutation. Hasil aktual dicatat di PR dan lampiran akhir, bukan angka target dianggap lulus.
+Satu PR `Closes #61`; CI success dan Preview READY exact head. Tanpa izin baru, jangan membuat sharelink; jika SSO 302, laporkan keterbatasan body Preview. Tidak merge, production, domain/DNS/alias/canonical/redirect/indexing/protection mutation. Hasil aktual dicatat di PR dan lampiran akhir, bukan angka target dianggap lulus.
+
+
+## Revisi yang disiapkan setelah rencana pertama
+
+Ledger lengkap [changes.json](audit/editorial61/changes.json) mencatat 275 operasi blok berurutan: exact before/after beserta posisi/tag, metadata yang berubah, sumber lama, expected full text dan pilihan owner yang masih kosong. Snapshot sumber [legacy55/source-pages.json](audit/legacy55/source-pages.json) tetap byte-identik; replay wajib cocok sebelum setiap revisi diterapkan. Tidak mengganti assertion teks lengkap dengan sekadar pemeriksaan keberadaan judul.
+
+Judul, H1, URL, canonical aktif, semua elemen tanggal sumber dan hash provenance tetap. Sebelas description diperbaiki sebagai bagian editorial agar tidak menjanjikan preset/proses atau benchmark yang tidak ada. Byline/tanggal ditandai sebagai catatan sumber lama yang belum disahkan, bukan identitas editor aktif. Data numerik grid tarif tetap hanya snapshot klaim historis berlabel; tidak ada tarif baru atau lisensi yang diarang. Semua approval/publication arsip dan owner_status CSV adalah PENDING_OWNER_APPROVAL.
+
+Koreksi saham mendefinisikan Rp26.000 sebagai total biaya beli asumsi yang belum dibuktikan oleh nota, bukan tarif Stockbit. Bruto Rp2.100.000 + Rp26.000 = Rp2.126.000; modal Rp6.626.000/1.500 saham dengan asumsi fee jual inklusif 0,25% memberi impas Rp4.428,404344…; ilustrasi harga Rp4.430 neto Rp6.628.387,50 dan harga Rp4.420 neto Rp6.613.425. Fee beli hipotesis 0,15% justru Rp3.150, bukan Rp26.000. Finance owner masih harus menilai fixture/nota dan ketentuan order; contoh bukan saran transaksi atau janji eksekusi.
+
+Harga minimum adalah penurunan aljabar bersyarat, bukan solver baru. Asumsi C Rp100.000, f Rp5.000, r 10% dan laba nominal Rp20.000 memberi ceil(125000/0,9)=138889; harga sebelumnya gagal. Jika margin 20% atas harga jual, harga Rp150.000 memberi laba Rp30.000. Dengan cap fee Rp10.000 per pesanan, kandidat Rp135.000 memberi laba Rp20.000 dan kandidat Rp134.999 gagal. Basis/diskon, minimum/cap dan biaya tak lengkap tidak disamakan dengan model linear ini. Contoh settlement Rp1 dengan tiga fee masing-masing 50% mempertahankan total Rp1,50 dan dana cair −Rp0,50 → −Rp1, bukan pembulatan tiap fee lebih dahulu.
+
+### Bukti primer dan batas yang masih terbuka
+
+[sources.json](audit/editorial61/sources.json) membedakan sumber terbaca, sumber historis, app shell, security block, search-index-only dan verifikasi perilaku kode. Seluruh pemeriksaan sumber pada 9 November 2026 Asia/Jakarta; bukan tanggal efektif tarif atau tanggal persetujuan publikasi.
+
+| ID sumber | URL / bukti | Hasil dan batas |
+| --- | --- | --- |
+| V2-SETTLEMENT | https://github.com/neodymium-web/kalkulatorhargav2/blob/2f3f1b8ec18e8e555c0193faa1e282bd175614e4/lib/platform-settlement/engine.ts | PRIMARY_CODE_READ: Code establishes implemented scope, not hosting logs/retention, operational process or owner/legal publication approval. |
+| V2-CREATOR | https://github.com/neodymium-web/kalkulatorhargav2/blob/2f3f1b8ec18e8e555c0193faa1e282bd175614e4/lib/creator-analytics/tools.ts | PRIMARY_CODE_READ: Code establishes implemented scope, not hosting logs/retention, operational process or owner/legal publication approval. |
+| V2-COMPARISON | https://github.com/neodymium-web/kalkulatorhargav2/blob/2f3f1b8ec18e8e555c0193faa1e282bd175614e4/lib/supplemental/comparison.ts | PRIMARY_CODE_READ: Code establishes implemented scope, not hosting logs/retention, operational process or owner/legal publication approval. |
+| BEI-FRACTION | https://www.idx.id/id/produk-layanan/jam-dan-mekanisme-perdagangan/ | PRIMARY_TEXT_READ: Old idx.co.id URL403; readable idx.id page cites Kep-00158/BEI/10-2026, unlike old09-2026 citation. No invented effective date; actual order/day/market rules require verification. |
+| PMK37-TEXT | https://www.pajak.go.id/index.php/id/peraturan/penunjukan-pihak-lain-sebagai-pemungut-pajak-penghasilan-serta-tata-cara-pemungutan | PRIMARY_REGULATION_TEXT_READ: Does not establish latest appointment/operational start for a specific marketplace/order. JDIH PDF link404; DJP HTML regulation used instead. |
+| JDIH-METADATA | https://jdih.kemenkeu.go.id/dok/pmk-37-tahun-2025 | PRIMARY_METADATA_READ: Not the same as appointment or actual collection start for every marketplace. |
+| DJP-FAQ | https://pajak.go.id/marketplace | PRIMARY_TEXT_READ: FAQ appointment dates are not proof for every transaction; latest legal/period-specific evidence still needed. |
+| DJP-POSTPONEMENT | https://pajak.go.id/index.php/id/pengumuman/penundaan-waktu-pemberlakuan-ketentuan-pemungutan-pph-pasal-22-oleh-marketplace | SEARCH_INDEX_ONLY_NOT_RECONCILED: Direct reader exposed no complete authoritative announcement/dated attachment. Do not resolve conflicting dates from a search snippet or infer latest operative appointment. |
+| DJP-OLD-PRESS | https://stats.pajak.go.id/id/siaran-pers/pemungutan-pph-pasal-22-melalui-marketplace-mulai-dilaksanakan-1-oktober-2026 | SECURITY_BLOCK_PAGE: Not proof of an October start. Owner/legal must supply latest signed notice and appointment evidence before definitive scenario/date claims. |
+| SHOPEE7216 | https://seller.shopee.co.id/edu/article/7216 | HTML_SHELL_NO_RATE_TABLE: Historical rate cells retained only as unverified source claims. No current rates, waivers, effective dates or category mappings certified. |
+| SHOPEE24877 | https://seller.shopee.co.id/edu/article/24877 | HTML_SHELL_NO_RATE_TABLE: December2026/January2027 claims not adopted as effective policy; seller/account evidence required. |
+| TIKTOK2024 | https://newsroom.tiktok.com/introducing-the-new-creator-rewards-program?lang=en | PRIMARY_HISTORICAL_TEXT_READ: Historical context only; not a current country list, universal RPM or eligibility/payout certification. |
+| TIKTOKSUPPORT | https://support.tiktok.com/en/business-and-creator/creator-rewards-program/creator-rewards-program | NO_READABLE_TEXT: No new geographic or detailed eligibility rules inferred; directs reader to their own current account/terms. |
+| BENCHMARK-RIGHTS | https://github.com/neodymium-web/kalkulatorhargav2/blob/2f3f1b8ec18e8e555c0193faa1e282bd175614e4/docs/audit/deferred57/benchmark-inventory.csv | RIGHTS_COHORT_NOT_VERIFIED: No third-party benchmark numbers recommended or published as current; benchmark route stays404. |
+| OWNER60 | https://github.com/neodymium-web/kalkulatorhargav2/issues/60 | PLANNING_PRODUCT_CHOICES_ONLY: No archive publication, legal/finance signoff, active canonical/routing/indexing or cutover approval. Short GSC discussed externally is not complete six-month GSC/GA4/backlink evidence in this checkout. |
+| MATH-ORACLES | https://github.com/neodymium-web/kalkulatorhargav2/blob/2f3f1b8ec18e8e555c0193faa1e282bd175614e4/lib/platform-settlement/engine.ts | DERIVATION_REVIEW_REQUIRED: Educational assumptions, not broker tariffs, legal determination, production solver or authorized finance approval. Actual test run linked in final PR. |
+
+PMK 37/2025 tersedia sebagai salinan HTML DJP walau link PDF JDIH 404. Tanggal pengundangan dari metadata JDIH dibedakan dari penunjukan dan mulai pemungutan. Rujukan pengumuman Oktober/November 2026 belum dapat disahkan sebagai bukti primer lengkap/terbaru per pemungut; teks tidak menetapkan tanggal operasional definitif atau angka pajak pesanan yang belum terverifikasi. Ini blocker review legal yang tetap terbuka, bukan masalah yang dianggap selesai lewat disclaimer.
+
+Sumber TikTok 2024 hanya konteks qualified-view/RPM historis; akses Support tidak memberi teks terbaca untuk mengesahkan negara/syarat terkini. Statistik studi pihak ketiga ditarik sebagai rekomendasi dan tautannya diberi label rujukan historis; tidak ada klaim lisensi/cohort terverifikasi. Benchmark tetap 404 dan enam referensi unresolved tetap nonklik.
+
+### Handoff publikasi per URL
+
+Setiap baris tetap PENDING_OWNER_APPROVAL, reviewer/keputusan owner null. Kolom pilihan sengaja kosong; tidak ada hak atau identitas editorial yang disahkan oleh tes.
+
+| URL | Risiko | Blok direvisi | Sumber primer / bukti | Pilihan owner (APPROVE_REVISED / REQUEST_CHANGES / WITHHOLD) |
+| --- | --- | --- | --- | --- |
+| `/kalkulator/tiktok/panduan` | P0 | 24 | V2-CREATOR, TIKTOK2024, TIKTOKSUPPORT, BENCHMARK-RIGHTS | |
+| `/biaya-admin-marketplace` | P0 | 15 | V2-SETTLEMENT, SHOPEE7216, SHOPEE24877 | |
+| `/update-tarif` | P0 | 23 | V2-SETTLEMENT, SHOPEE7216, SHOPEE24877 | |
+| `/blog` | P1 | 9 | V2-CREATOR, V2-SETTLEMENT, BENCHMARK-RIGHTS | |
+| `/metodologi` | P0 | 25 | V2-SETTLEMENT, V2-CREATOR, BEI-FRACTION | |
+| `/redaksi` | P0 | 11 | V2-SETTLEMENT, OWNER60 | |
+| `/kebijakan-editorial` | P0 | 12 | V2-CREATOR, V2-SETTLEMENT, OWNER60 | |
+| `/disclaimer` | P0 | 5 | V2-CREATOR, OWNER60 | |
+| `/blog/menghitung-margin-marketplace` | P1 | 9 | V2-SETTLEMENT, PMK37-TEXT | |
+| `/blog/strategi-naikkan-profit` | P1 | 7 | V2-COMPARISON | |
+| `/blog/biaya-admin-marketplace` | P0 | 10 | V2-SETTLEMENT, SHOPEE7216 | |
+| `/blog/fee-shopee-2026` | P0 | 9 | V2-SETTLEMENT, SHOPEE7216 | |
+| `/blog/lazada-marketplace-vs-lazmall` | P0 | 10 | V2-SETTLEMENT, PMK37-TEXT | |
+| `/blog/pph-22-marketplace` | P0 | 11 | PMK37-TEXT, JDIH-METADATA, DJP-FAQ, DJP-POSTPONEMENT, DJP-OLD-PRESS | |
+| `/blog/gratis-ongkir-xtra-shopee-2026` | P0 | 13 | SHOPEE7216, SHOPEE24877, V2-SETTLEMENT | |
+| `/blog/tokopedia-tiktok-shop-komisi-dinamis` | P0 | 9 | V2-SETTLEMENT, V2-COMPARISON | |
+| `/blog/harga-jual-minimum-marketplace` | P1 | 9 | MATH-ORACLES, V2-SETTLEMENT | |
+| `/blog/kalkulator-vs-spreadsheet` | P1 | 10 | V2-SETTLEMENT | |
+| `/blog/cek-dana-cair-shopee` | P0 | 10 | MATH-ORACLES, V2-SETTLEMENT | |
+| `/blog/memilih-marketplace-untuk-mulai-jual` | P1 | 9 | V2-COMPARISON | |
+| `/blog/engagement-rate-tiktok-2026` | P0 | 11 | V2-CREATOR, BENCHMARK-RIGHTS | |
+| `/blog/kalkulator-average-down-saham-harga-rata-rata` | P0 | 22 | BEI-FRACTION, MATH-ORACLES | |
+
+## Verifikasi dan scope guard
+
+Hanya lib/legacy/pages.json berubah pada 180 file aplikasi/konfigurasi yang dibekukan. 179 file lain tetap hash-identik. Pengecualian pemeriksa scope hanya berlaku jika replay sumber asli→ledger→JSON saat ini cocok seluruhnya; perubahan yang tidak tercatat, approval owner rekaan atau perubahan file aplikasi lain tetap gagal. Komponen/layout/engine,100 ID, 2 manual, 6 hub, 22 path dan 131 URL sitemap tidak berubah. Workflow CI tidak diubah.
+
+Unit/typecheck/build dan browser harus dilaporkan sesuai run aktual di PR. Screenshot existing tetap di CI; dua capture tambahan hanya untuk contoh saham yang berubah, bukan koleksi baru seluruh kalkulator. CI/artifact/Preview exact HEAD ditautkan di PR. SSO 302 hanya membuktikan edge protection/noindex, bukan body aplikasi; tanpa izin spesifik baru tidak ada sharelink.
+
+## Keputusan
+
+0/22 owner publication approvals. Cutover STRICT NO-GO. Owner tetap harus meninjau hak/byline/tanggal tiap URL, legal/finance dan evidence gap; benchmark disposition, enam referensi, data SEO lengkap, dua redirect, implementasi www terpisah, TLS/domain/operator/live rollback serta otorisasi eksekusi belum tertutup. Keputusan Issue60 menerima dua alat manual dan memilih www masa depan tidak memberi izin publikasi arsip atau mengubah canonical apex yang aktif.
+
+Inspeksi visual terbatas: lima viewport benar-benar dilihat (kebijakan desktop/mobile, contoh saham desktop/mobile, grid arsip mobile). Hash/dimensi/batas inspeksi ada di [visual-review.json](audit/editorial61/visual-review.json). Tidak mengklaim seluruh 22 arsip/semua piksel fullpage dilihat ulang. Fraksi/angka dan notice terbaca, tidak ada overlap/overflow halaman; paragraf saham yang berlanjut di bawah viewport bukan clipping konten. ENERGY2/RHYTHM1/MOTION1 mengikuti DS yang ada; tidak ada asset, identitas, layout atau CSS baru. Gate copy: klaim palsu diperbaiki, sumber dan batas dinyatakan, tidak ada angka/approval/testimoni rekaan; gate visual terbatas PASS.

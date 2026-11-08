@@ -1,3 +1,4 @@
+const { expectedArchive } = require('../scripts/legacy/editorial-contract.cjs')
 import { supplementalPaths } from '../lib/supplemental/routes'
 import { describe, it, expect } from 'vitest'
 import { createHash } from 'node:crypto'
@@ -20,9 +21,9 @@ describe('independent legacy source inventory and explicit dispositions', () => 
     const page=legacyPages.find(p=>p.path===source.path)
     if (source.path in blocked) { expect(page).toBeUndefined(); expect(legacyPaths).not.toContain(source.path); return }
     expect(page).toBeDefined(); expect(page!.title).toBe(source.title); expect(page!.h1).toBe(source.h1)
-    expect(normalize(text(page!.tree))).toBe(normalize(source.text.replaceAll('Ruang iklan','')))
+    expect(normalize(text(page!.tree))).toBe(expectedArchive(source.path).expectedText)
     expect(page!.dates).toEqual(source.dates); expect(page!.sha256).toBe(source.sha256)
-    expect(page!.approval).toBe('PENDING_OWNER_REVIEW'); expect(page!.reviewNotice).toContain('bukan data resmi terbaru')
+    expect(page!.approval).toBe('PENDING_OWNER_APPROVAL'); expect(page!.reviewNotice).toContain('bukan data resmi terbaru')
     const treeNodes=nodes(page!.tree)
     expect(treeNodes.filter(n=>n.tag==='h1').map(text)).toEqual([source.h1])
     for (const n of treeNodes) { expect(['script','iframe','img','input','button','select','style']).not.toContain(n.tag); expect(Object.keys(n.attrs).every(k=>['href','datetime','colspan','rowspan','scope','start'].includes(k))).toBe(true) }
