@@ -20,6 +20,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
       - name: Node.js
         uses: actions/setup-node@v4
         with:
@@ -34,10 +36,21 @@ jobs:
         run: npm test
       - name: Production build
         run: npm run build
-      - name: Install Chromium
-        run: npx playwright install --with-deps chromium
+      - name: Install audit browsers
+        run: npx playwright install --with-deps chromium webkit
       - name: Browser smoke tests
         run: npm run e2e
+      - name: WebKit audit (emulated iPhone)
+        run: npx playwright test --config=playwright.audit-webkit.config.ts
+      - name: Lighthouse audit lab
+        run: node scripts/audit/lighthouse.mjs
+      - name: Dependency advisory audit
+        run: npm audit --json > test-results/dependency-audit.json
+      - name: Bind evidence to commit
+        if: always()
+        run: |
+          mkdir -p test-results
+          node -e 'const head=require("child_process").execFileSync("git",["rev-parse","HEAD"]).toString().trim();require("fs").writeFileSync("test-results/commit.json",JSON.stringify({sha:head,head,eventSha:process.env.GITHUB_SHA,node:process.version},null,2))'
       - name: Upload browser evidence
         if: always()
         uses: actions/upload-artifact@v4
@@ -49,6 +62,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
       - name: Verify Codex instructions
         run: |
           test -s AGENTS.md

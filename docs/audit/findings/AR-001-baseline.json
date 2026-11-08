@@ -1,0 +1,11 @@
+{
+  "baseline": "f865ee826c4965b1557c20b46c802f3e54138efc",
+  "javaScriptEnabled": false,
+  "expected": "No financial inputs in navigation URL or HTTP request",
+  "actualUrl": "http://127.0.0.1:3100/kalkulator/hpp?materials=317&labor=211&overhead=101&units=7",
+  "navigationRequests": [
+    "http://127.0.0.1:3100/kalkulator/hpp",
+    "http://127.0.0.1:3100/kalkulator/hpp?materials=317&labor=211&overhead=101&units=7"
+  ],
+  "syntheticInputsOnly": true
+}

@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useId, useRef, type ComponentProps, type ReactNode } from 'react'
+import { useEffect, useId, useRef, useState, type ComponentProps, type ReactNode } from 'react'
 import { Button } from './controls'
 import styles from './calculator.module.css'
 
@@ -17,6 +17,9 @@ export function CalculatorForm({ title, hint, hintId, submitLabel, invalidFields
   }) {
   const titleId = useId()
   const form = useRef<HTMLFormElement>(null)
+  const [hydrated, setHydrated] = useState(false)
+
+  useEffect(() => { setHydrated(true) }, [])
 
   useEffect(() => {
     const first = invalidFields?.[0]
@@ -25,6 +28,11 @@ export function CalculatorForm({ title, hint, hintId, submitLabel, invalidFields
     if (input instanceof HTMLElement) input.focus()
   }, [invalidFields])
 
+  const controls = <>
+    <div className={styles.fields}>{children}</div>
+    <Button className={styles.submit} type="submit">{submitLabel}</Button>
+  </>
+
   return <form {...props} ref={form} aria-labelledby={titleId} className={styles.panel}>
     <h2 id={titleId}>{title}</h2>
     {invalidFields && invalidFields.length > 0 && <div className={styles.summary} role="alert">
@@ -32,8 +40,8 @@ export function CalculatorForm({ title, hint, hintId, submitLabel, invalidFields
       <ul role="list">{invalidFields.map(field => <li key={field.id}><a href={`#${field.id}`}>{field.label}</a></li>)}</ul>
     </div>}
     <p className={styles.hint} id={hintId}>{hint}</p>
-    <div className={styles.fields}>{children}</div>
-    <Button className={styles.submit} type="submit">{submitLabel}</Button>
+    <noscript><p className={styles.message}>Aktifkan JavaScript untuk menghitung. Formulir dinonaktifkan agar data perhitungan tidak dikirim melalui URL.</p></noscript>
+    {hydrated ? controls : <fieldset disabled aria-labelledby={titleId} className={styles.formControls}>{controls}</fieldset>}
   </form>
 }
 

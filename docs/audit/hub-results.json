@@ -1,0 +1,465 @@
+[
+  {
+    "path": "/sehari-hari",
+    "title": "Kalkulator Sehari-hari | KalkulatorHarga",
+    "description": "Hitung harga, tanggal, utilitas, bahan bangunan, skala denah, konversi satuan dan kecepatan rata-rata dengan rumus serta asumsi yang jelas.",
+    "canonical": "https://kalkulatorharga.com/sehari-hari",
+    "robots": "noindex, nofollow",
+    "h1": [
+      "Kalkulator sehari-hari"
+    ],
+    "ssrCharacters": 1998,
+    "headings": [
+      "Kalkulator tersedia"
+    ],
+    "links": [
+      "#konten",
+      "/",
+      "/bisnis",
+      "/marketplace",
+      "/keuangan",
+      "/pajak",
+      "/media-sosial",
+      "/sehari-hari",
+      "/kalkulator/diskon",
+      "/kalkulator/harga-per-satuan",
+      "/kalkulator/bagi-tagihan",
+      "/kalkulator/persen",
+      "/kalkulator/perubahan-persen",
+      "/kalkulator/selisih-tanggal",
+      "/kalkulator/hari-kerja",
+      "/kalkulator/usia",
+      "/kalkulator/durasi-kerja",
+      "/kalkulator/konsumsi-bbm",
+      "/kalkulator/biaya-listrik",
+      "/kalkulator/biaya-air"
+    ],
+    "jsonLd": [],
+    "http": 200,
+    "xRobotsTag": "noindex, nofollow",
+    "viewport": 1440,
+    "baseline": "f865ee826c4965b1557c20b46c802f3e54138efc",
+    "reflow_initial": [
+      {
+        "width": 320,
+        "actual": 320
+      },
+      {
+        "width": 375,
+        "actual": 375
+      },
+      {
+        "width": 768,
+        "actual": 768
+      },
+      {
+        "width": 1024,
+        "actual": 1024
+      },
+      {
+        "width": 1440,
+        "actual": 1440
+      }
+    ],
+    "axeInitial": [],
+    "cardsAfterMore": 20,
+    "errors": [],
+    "externalRequests": []
+  },
+  {
+    "path": "/media-sosial",
+    "title": "Kalkulator Media Sosial | KalkulatorHarga",
+    "description": "Hitung engagement, biaya iklan, CTR, simulasi RPM YouTube/TikTok, tarif endorsement dan waktu tonton dari data manual.",
+    "canonical": "https://kalkulatorharga.com/media-sosial",
+    "robots": "noindex, nofollow",
+    "h1": [
+      "Kalkulator media sosial"
+    ],
+    "ssrCharacters": 1662,
+    "headings": [
+      "Kalkulator tersedia"
+    ],
+    "links": [
+      "#konten",
+      "/",
+      "/bisnis",
+      "/marketplace",
+      "/keuangan",
+      "/pajak",
+      "/media-sosial",
+      "/sehari-hari",
+      "/kalkulator/engagement-rate",
+      "/kalkulator/pertumbuhan-pengikut",
+      "/kalkulator/cpm",
+      "/kalkulator/cpc",
+      "/kalkulator/cpa",
+      "/kalkulator/ctr",
+      "/kalkulator/estimasi-youtube",
+      "/kalkulator/tiktok",
+      "/kalkulator/tarif-endorsement",
+      "/kalkulator/waktu-tonton"
+    ],
+    "jsonLd": [],
+    "http": 200,
+    "xRobotsTag": "noindex, nofollow",
+    "viewport": 1440,
+    "baseline": "f865ee826c4965b1557c20b46c802f3e54138efc",
+    "reflow_initial": [
+      {
+        "width": 320,
+        "actual": 320
+      },
+      {
+        "width": 375,
+        "actual": 375
+      },
+      {
+        "width": 768,
+        "actual": 768
+      },
+      {
+        "width": 1024,
+        "actual": 1024
+      },
+      {
+        "width": 1440,
+        "actual": 1440
+      }
+    ],
+    "axeInitial": [],
+    "errors": [],
+    "externalRequests": []
+  },
+  {
+    "path": "/",
+    "title": "Direktori Kalkulator Indonesia",
+    "description": "Temukan kalkulator bisnis dan hitung biaya produksi per unit.",
+    "canonical": "https://kalkulatorharga.com",
+    "robots": "noindex, nofollow",
+    "h1": [
+      "Direktori kalkulator"
+    ],
+    "ssrCharacters": 1550,
+    "headings": [
+      "Jelajahi kategori",
+      "Kalkulator tersedia"
+    ],
+    "links": [
+      "#konten",
+      "/",
+      "/bisnis",
+      "/marketplace",
+      "/keuangan",
+      "/pajak",
+      "/media-sosial",
+      "/sehari-hari",
+      "/kalkulator/hpp",
+      "/kalkulator/harga-jual",
+      "/kalkulator/margin-laba",
+      "/kalkulator/markup",
+      "/kalkulator/bep",
+      "/kalkulator/target-laba",
+      "/kalkulator/harga-pokok-penjualan",
+      "/kalkulator/yield-bahan",
+      "/kalkulator/penyusutan-garis-lurus",
+      "/kalkulator/arus-kas",
+      "/kalkulator/utilisasi-kapasitas",
+      "/kalkulator/perputaran-persediaan"
+    ],
+    "jsonLd": [],
+    "http": 200,
+    "xRobotsTag": "noindex, nofollow",
+    "viewport": 1440,
+    "baseline": "f865ee826c4965b1557c20b46c802f3e54138efc",
+    "reflow_initial": [
+      {
+        "width": 320,
+        "actual": 320
+      },
+      {
+        "width": 375,
+        "actual": 375
+      },
+      {
+        "width": 768,
+        "actual": 768
+      },
+      {
+        "width": 1024,
+        "actual": 1024
+      },
+      {
+        "width": 1440,
+        "actual": 1440
+      }
+    ],
+    "axeInitial": [],
+    "errors": [],
+    "externalRequests": []
+  },
+  {
+    "path": "/keuangan",
+    "title": "Kalkulator Keuangan | KalkulatorHarga",
+    "description": "Hitung bunga, KPR, pelunasan, refinancing, kurs manual, tabungan, nilai kini dan saham dengan asumsi serta pembulatan yang jelas.",
+    "canonical": "https://kalkulatorharga.com/keuangan",
+    "robots": "noindex, nofollow",
+    "h1": [
+      "Kalkulator keuangan"
+    ],
+    "ssrCharacters": 1866,
+    "headings": [
+      "Kalkulator tersedia"
+    ],
+    "links": [
+      "#konten",
+      "/",
+      "/bisnis",
+      "/marketplace",
+      "/keuangan",
+      "/pajak",
+      "/media-sosial",
+      "/sehari-hari",
+      "/kalkulator/bunga-sederhana",
+      "/kalkulator/bunga-majemuk",
+      "/kalkulator/cicilan-anuitas",
+      "/kalkulator/cicilan-flat",
+      "/kalkulator/rasio-cicilan",
+      "/kalkulator/target-tabungan",
+      "/kalkulator/dana-darurat",
+      "/kalkulator/deposito",
+      "/kalkulator/imbal-hasil-investasi",
+      "/kalkulator/cagr",
+      "/kalkulator/nilai-kini",
+      "/kalkulator/npv"
+    ],
+    "jsonLd": [],
+    "http": 200,
+    "xRobotsTag": "noindex, nofollow",
+    "viewport": 1440,
+    "baseline": "f865ee826c4965b1557c20b46c802f3e54138efc",
+    "reflow_initial": [
+      {
+        "width": 320,
+        "actual": 320
+      },
+      {
+        "width": 375,
+        "actual": 375
+      },
+      {
+        "width": 768,
+        "actual": 768
+      },
+      {
+        "width": 1024,
+        "actual": 1024
+      },
+      {
+        "width": 1440,
+        "actual": 1440
+      }
+    ],
+    "axeInitial": [],
+    "cardsAfterMore": 20,
+    "errors": [],
+    "externalRequests": []
+  },
+  {
+    "path": "/bisnis",
+    "title": "Kalkulator Bisnis | KalkulatorHarga",
+    "description": "Temukan alat hitung biaya produksi untuk usaha Anda.",
+    "canonical": "https://kalkulatorharga.com/bisnis",
+    "robots": "noindex, nofollow",
+    "h1": [
+      "Kalkulator bisnis"
+    ],
+    "ssrCharacters": 1499,
+    "headings": [
+      "Kalkulator tersedia"
+    ],
+    "links": [
+      "#konten",
+      "/",
+      "/bisnis",
+      "/marketplace",
+      "/keuangan",
+      "/pajak",
+      "/media-sosial",
+      "/sehari-hari",
+      "/kalkulator/hpp",
+      "/kalkulator/harga-jual",
+      "/kalkulator/margin-laba",
+      "/kalkulator/markup",
+      "/kalkulator/bep",
+      "/kalkulator/target-laba",
+      "/kalkulator/harga-pokok-penjualan",
+      "/kalkulator/yield-bahan",
+      "/kalkulator/penyusutan-garis-lurus",
+      "/kalkulator/arus-kas",
+      "/kalkulator/utilisasi-kapasitas",
+      "/kalkulator/perputaran-persediaan"
+    ],
+    "jsonLd": [],
+    "http": 200,
+    "xRobotsTag": "noindex, nofollow",
+    "viewport": 1440,
+    "baseline": "f865ee826c4965b1557c20b46c802f3e54138efc",
+    "reflow_initial": [
+      {
+        "width": 320,
+        "actual": 320
+      },
+      {
+        "width": 375,
+        "actual": 375
+      },
+      {
+        "width": 768,
+        "actual": 768
+      },
+      {
+        "width": 1024,
+        "actual": 1024
+      },
+      {
+        "width": 1440,
+        "actual": 1440
+      }
+    ],
+    "axeInitial": [],
+    "cardsAfterMore": 20,
+    "errors": [],
+    "externalRequests": []
+  },
+  {
+    "path": "/marketplace",
+    "title": "Kalkulator Marketplace | KalkulatorHarga",
+    "description": "Hitung iklan, promo, biaya operasional, settlement manual, harga listing, kontribusi bundel dan stok cover Marketplace.",
+    "canonical": "https://kalkulatorharga.com/marketplace",
+    "robots": "noindex, nofollow",
+    "h1": [
+      "Kalkulator marketplace"
+    ],
+    "ssrCharacters": 1789,
+    "headings": [
+      "Kalkulator tersedia"
+    ],
+    "links": [
+      "#konten",
+      "/",
+      "/bisnis",
+      "/marketplace",
+      "/keuangan",
+      "/pajak",
+      "/media-sosial",
+      "/sehari-hari",
+      "/kalkulator/berat-volumetrik",
+      "/kalkulator/roas",
+      "/kalkulator/roas-impas",
+      "/kalkulator/acos",
+      "/kalkulator/konversi-toko",
+      "/kalkulator/nilai-pesanan-rata-rata",
+      "/kalkulator/promo-seller",
+      "/kalkulator/subsidi-ongkir",
+      "/kalkulator/biaya-kemasan",
+      "/kalkulator/biaya-retur",
+      "/kalkulator/kerugian-cod",
+      "/kalkulator/blibli"
+    ],
+    "jsonLd": [],
+    "http": 200,
+    "xRobotsTag": "noindex, nofollow",
+    "viewport": 1440,
+    "baseline": "f865ee826c4965b1557c20b46c802f3e54138efc",
+    "reflow_initial": [
+      {
+        "width": 320,
+        "actual": 320
+      },
+      {
+        "width": 375,
+        "actual": 375
+      },
+      {
+        "width": 768,
+        "actual": 768
+      },
+      {
+        "width": 1024,
+        "actual": 1024
+      },
+      {
+        "width": 1440,
+        "actual": 1440
+      }
+    ],
+    "axeInitial": [],
+    "cardsAfterMore": 20,
+    "errors": [],
+    "externalRequests": []
+  },
+  {
+    "path": "/pajak",
+    "title": "Kalkulator Pajak: PPN, PPh dan Gross-up | KalkulatorHarga",
+    "description": "Estimasi pajak dalam cakupan sumber primer, tanggal berlaku dan kelayakan; simulasi manual dibedakan dari ketentuan hukum.",
+    "canonical": "https://kalkulatorharga.com/pajak",
+    "robots": "noindex, nofollow",
+    "h1": [
+      "Kalkulator pajak"
+    ],
+    "ssrCharacters": 2008,
+    "headings": [
+      "Kalkulator tersedia"
+    ],
+    "links": [
+      "#konten",
+      "/",
+      "/bisnis",
+      "/marketplace",
+      "/keuangan",
+      "/pajak",
+      "/media-sosial",
+      "/sehari-hari",
+      "/kalkulator/ppn",
+      "/kalkulator/pph-23",
+      "/kalkulator/pph-4-ayat-2-sewa",
+      "/kalkulator/gross-up-pajak",
+      "/kalkulator/pph-final-umkm",
+      "/kalkulator/pph-21-bulanan",
+      "/kalkulator/pph-21-rekonsiliasi",
+      "/kalkulator/pajak-impor",
+      "/kalkulator/bphtb",
+      "/kalkulator/pbb-p2"
+    ],
+    "jsonLd": [],
+    "http": 200,
+    "xRobotsTag": "noindex, nofollow",
+    "viewport": 1440,
+    "baseline": "f865ee826c4965b1557c20b46c802f3e54138efc",
+    "reflow_initial": [
+      {
+        "width": 320,
+        "actual": 320
+      },
+      {
+        "width": 375,
+        "actual": 375
+      },
+      {
+        "width": 768,
+        "actual": 768
+      },
+      {
+        "width": 1024,
+        "actual": 1024
+      },
+      {
+        "width": 1440,
+        "actual": 1440
+      }
+    ],
+    "axeInitial": [],
+    "errors": [],
+    "externalRequests": []
+  }
+]
