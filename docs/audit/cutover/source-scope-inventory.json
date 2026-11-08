@@ -1,0 +1,1991 @@
+[
+  {
+    "id": "production-cost",
+    "path": "/kalkulator/hpp",
+    "category": "bisnis",
+    "formulaVersion": "1.0.0",
+    "scope": "Hitung total biaya produksi dan harga pokok produksi per unit.",
+    "sources": [],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-harga-jual",
+    "path": "/kalkulator/harga-jual",
+    "category": "bisnis",
+    "formulaVersion": "1.0.0",
+    "scope": "Hitung harga jual minimum dari HPP per unit dan target margin kotor atas penjualan.",
+    "sources": [],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-margin-laba",
+    "path": "/kalkulator/margin-laba",
+    "category": "bisnis",
+    "formulaVersion": "1.0.0",
+    "scope": "Hitung laba kotor per unit dan persentase margin berdasarkan harga jual aktual.",
+    "sources": [],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-markup",
+    "path": "/kalkulator/markup",
+    "category": "bisnis",
+    "formulaVersion": "1.0.0",
+    "scope": "Hitung selisih harga dan biaya per unit serta persentase markup terhadap biaya.",
+    "sources": [],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-bep",
+    "path": "/kalkulator/bep",
+    "category": "bisnis",
+    "formulaVersion": "1.0.0",
+    "scope": "Hitung kontribusi per unit dan jumlah penjualan minimum agar biaya tetap tertutup.",
+    "sources": [],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-target-laba",
+    "path": "/kalkulator/target-laba",
+    "category": "bisnis",
+    "formulaVersion": "1.0.0",
+    "scope": "Hitung jumlah unit yang perlu dijual untuk mencapai target laba setelah menutup biaya tetap.",
+    "sources": [],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-harga-pokok-penjualan",
+    "path": "/kalkulator/harga-pokok-penjualan",
+    "category": "bisnis",
+    "formulaVersion": "1.0.0",
+    "scope": "Hitung biaya barang dagang terjual dari persediaan awal, pembelian bersih, dan persediaan akhir.",
+    "sources": [],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-yield-bahan",
+    "path": "/kalkulator/yield-bahan",
+    "category": "bisnis",
+    "formulaVersion": "1.0.0",
+    "scope": "Hitung persentase bahan yang dapat digunakan dan susut berat setelah pengolahan.",
+    "sources": [],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-penyusutan-garis-lurus",
+    "path": "/kalkulator/penyusutan-garis-lurus",
+    "category": "bisnis",
+    "formulaVersion": "1.0.0",
+    "scope": "Hitung beban penyusutan buku tahunan dari biaya perolehan, nilai residu, dan umur manfaat.",
+    "sources": [],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-arus-kas",
+    "path": "/kalkulator/arus-kas",
+    "category": "bisnis",
+    "formulaVersion": "1.0.0",
+    "scope": "Hitung arus kas bersih dan saldo kas akhir dari saldo awal, penerimaan, serta pengeluaran.",
+    "sources": [],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-utilisasi-kapasitas",
+    "path": "/kalkulator/utilisasi-kapasitas",
+    "category": "bisnis",
+    "formulaVersion": "1.0.0",
+    "scope": "Bandingkan produksi aktual dengan kapasitas acuan yang tersedia dalam satu periode.",
+    "sources": [],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-perputaran-persediaan",
+    "path": "/kalkulator/perputaran-persediaan",
+    "category": "bisnis",
+    "formulaVersion": "1.0.0",
+    "scope": "Hitung perputaran stok dan estimasi hari persediaan dari harga pokok penjualan serta nilai buku stok.",
+    "sources": [],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-reorder-point",
+    "path": "/kalkulator/reorder-point",
+    "category": "bisnis",
+    "formulaVersion": "1.0.0",
+    "scope": "Hitung ambang stok untuk memesan ulang dari permintaan harian, lead time, dan stok aman.",
+    "sources": [],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-runway-kas",
+    "path": "/kalkulator/runway-kas",
+    "category": "bisnis",
+    "formulaVersion": "1.0.0",
+    "scope": "Estimasi berapa bulan kas tersedia menutup burn bersih dari arus kas bulanan.",
+    "sources": [],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-biaya-layanan",
+    "path": "/kalkulator/biaya-layanan",
+    "category": "bisnis",
+    "formulaVersion": "1.0.0",
+    "scope": "Hitung biaya per transaksi tertagih dari biaya tetap bulanan dan biaya variabel per transaksi.",
+    "sources": [],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-tarif-freelance",
+    "path": "/kalkulator/tarif-freelance",
+    "category": "bisnis",
+    "formulaVersion": "1.0.0",
+    "scope": "Hitung tarif minimum per jam dari kebutuhan penghasilan dan biaya tahunan serta jam tertagih.",
+    "sources": [],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-food-cost",
+    "path": "/kalkulator/food-cost",
+    "category": "bisnis",
+    "formulaVersion": "1.0.0",
+    "scope": "Hitung total biaya bahan resep dan biaya per porsi dari beberapa bahan dengan ukuran kemasan berbeda.",
+    "sources": [],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-harga-borongan",
+    "path": "/kalkulator/harga-borongan",
+    "category": "bisnis",
+    "formulaVersion": "1.0.0",
+    "scope": "Hitung penawaran proyek jasa dari jam kerja, biaya tenaga kerja, material, overhead, dan target laba tetap.",
+    "sources": [],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-eoq",
+    "path": "/kalkulator/eoq",
+    "category": "bisnis",
+    "formulaVersion": "1.0.0",
+    "scope": "Hitung ukuran pesanan ekonomis unit bulat dari permintaan tahunan, biaya pesan, dan biaya simpan.",
+    "sources": [],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-payback-period",
+    "path": "/kalkulator/payback-period",
+    "category": "bisnis",
+    "formulaVersion": "1.0.0",
+    "scope": "Hitung waktu pemulihan pertama investasi dari daftar arus kas bersih beberapa periode.",
+    "sources": [],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-berat-volumetrik",
+    "path": "/kalkulator/berat-volumetrik",
+    "category": "marketplace",
+    "formulaVersion": "1.0.0",
+    "scope": "Bandingkan berat volumetrik paket dan berat aktual menggunakan divisor kurir yang Anda masukkan.",
+    "sources": [],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-roas",
+    "path": "/kalkulator/roas",
+    "category": "marketplace",
+    "formulaVersion": "1.0.0",
+    "scope": "Hitung kelipatan pendapatan teratribusi terhadap biaya iklan pada cakupan yang sama.",
+    "sources": [],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-roas-impas",
+    "path": "/kalkulator/roas-impas",
+    "category": "marketplace",
+    "formulaVersion": "1.0.0",
+    "scope": "Hitung ambang ROAS untuk menutup iklan dari margin kontribusi sebelum biaya iklan.",
+    "sources": [],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-acos",
+    "path": "/kalkulator/acos",
+    "category": "marketplace",
+    "formulaVersion": "1.0.0",
+    "scope": "Hitung biaya iklan sebagai persentase penjualan teratribusi pada kampanye yang sama.",
+    "sources": [],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-konversi-toko",
+    "path": "/kalkulator/konversi-toko",
+    "category": "marketplace",
+    "formulaVersion": "1.0.0",
+    "scope": "Hitung persentase kunjungan toko yang menghasilkan setidaknya satu pembelian.",
+    "sources": [],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-nilai-pesanan-rata-rata",
+    "path": "/kalkulator/nilai-pesanan-rata-rata",
+    "category": "marketplace",
+    "formulaVersion": "1.0.0",
+    "scope": "Hitung AOV dari pendapatan produk setelah diskon saat pemesanan dan jumlah pesanan yang sesuai.",
+    "sources": [],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-promo-seller",
+    "path": "/kalkulator/promo-seller",
+    "category": "marketplace",
+    "formulaVersion": "1.0.0",
+    "scope": "Pisahkan beban diskon seller, pendanaan platform, harga pembeli, dan penerimaan kotor sebelum fee.",
+    "sources": [
+      {
+        "title": "TikTok Shop: Co-funded Campaign (Brazil; conceptual only)",
+        "url": "https://seller-br.tiktok.com/university/essay?knowledge_id=2569565069149953&lang=en",
+        "verifiedAt": "2026-11-07"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-subsidi-ongkir",
+    "path": "/kalkulator/subsidi-ongkir",
+    "category": "marketplace",
+    "formulaVersion": "1.0.0",
+    "scope": "Hitung ongkir yang ditanggung seller dari biaya aktual, pembayaran pembeli, dan subsidi yang dikreditkan.",
+    "sources": [
+      {
+        "title": "TikTok Shop: Co-funded Campaign (Brazil; conceptual only)",
+        "url": "https://seller-br.tiktok.com/university/essay?knowledge_id=2569565069149953&lang=en",
+        "verifiedAt": "2026-11-07"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-biaya-kemasan",
+    "path": "/kalkulator/biaya-kemasan",
+    "category": "marketplace",
+    "formulaVersion": "1.0.0",
+    "scope": "Jumlahkan biaya banyak bahan kemasan per kiriman dan batch dengan penyesuaian waste.",
+    "sources": [
+      {
+        "title": "BCcampus: Yield Testing",
+        "url": "https://opentextbc.ca/basickitchenandfoodservicemanagement/chapter/yield-testing/",
+        "verifiedAt": "2026-11-07"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-biaya-retur",
+    "path": "/kalkulator/biaya-retur",
+    "category": "marketplace",
+    "formulaVersion": "1.0.0",
+    "scope": "Hitung kerugian bersih satu retur dan ekspektasi biaya incremental per pesanan serta total kelompok.",
+    "sources": [
+      {
+        "title": "OpenStax: Expected value",
+        "url": "https://openstax.org/books/introductory-statistics-2e/pages/4-2-mean-or-expected-value-and-standard-deviation",
+        "verifiedAt": "2026-11-07"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-kerugian-cod",
+    "path": "/kalkulator/kerugian-cod",
+    "category": "marketplace",
+    "formulaVersion": "1.0.0",
+    "scope": "Hitung ekspektasi pengiriman COD gagal dan kerugian tanpa membulatkan jumlah gagal lebih awal.",
+    "sources": [
+      {
+        "title": "OpenStax: Expected value",
+        "url": "https://openstax.org/books/introductory-statistics-2e/pages/4-2-mean-or-expected-value-and-standard-deviation",
+        "verifiedAt": "2026-11-07"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-bunga-sederhana",
+    "path": "/kalkulator/bunga-sederhana",
+    "category": "keuangan",
+    "formulaVersion": "1.0.0",
+    "scope": "Hitung bunga tanpa kapitalisasi dari pokok, bunga nominal tahunan, dan durasi bulan yang jelas.",
+    "sources": [
+      {
+        "title": "OpenStax: Simple Interest",
+        "url": "https://openstax.org/books/contemporary-mathematics/pages/6-3-simple-interest",
+        "verifiedAt": "2026-11-07"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-bunga-majemuk",
+    "path": "/kalkulator/bunga-majemuk",
+    "category": "keuangan",
+    "formulaVersion": "1.0.0",
+    "scope": "Hitung pertumbuhan pokok, bunga periodik, dan yield tahunan efektif dengan periode kapitalisasi utuh.",
+    "sources": [
+      {
+        "title": "OpenStax: Compound Interest",
+        "url": "https://openstax.org/books/contemporary-mathematics/pages/6-4-compound-interest",
+        "verifiedAt": "2026-11-07"
+      },
+      {
+        "title": "CFPB: Interest rate dan APR",
+        "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-the-difference-between-a-loan-interest-rate-and-the-apr-en-733/",
+        "verifiedAt": "2026-11-07"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-cicilan-anuitas",
+    "path": "/kalkulator/cicilan-anuitas",
+    "category": "keuangan",
+    "formulaVersion": "1.0.0",
+    "scope": "Simulasikan angsuran anuitas, pembayaran penutup, total bunga, dan jadwal saldo pokok dalam rupiah.",
+    "sources": [
+      {
+        "title": "OpenStax: The Basics of Loans",
+        "url": "https://openstax.org/books/contemporary-mathematics/pages/6-8-the-basics-of-loans",
+        "verifiedAt": "2026-11-07"
+      },
+      {
+        "title": "OJK: Buku 2 Perbankan, halaman 46–47",
+        "url": "https://sikapiuangmu.ojk.go.id/FrontEnd/LiterasiPerguruanTinggi/assets/pdf/Buku%202%20-%20Perbankan.pdf#page=46",
+        "verifiedAt": "2026-11-07"
+      },
+      {
+        "title": "CFPB: Interest rate dan APR",
+        "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-the-difference-between-a-loan-interest-rate-and-the-apr-en-733/",
+        "verifiedAt": "2026-11-07"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-cicilan-flat",
+    "path": "/kalkulator/cicilan-flat",
+    "category": "keuangan",
+    "formulaVersion": "1.0.0",
+    "scope": "Hitung bunga atas pokok awal, cicilan rupiah, total pembayaran, dan jadwal flat yang saling konsisten.",
+    "sources": [
+      {
+        "title": "OJK: Buku 2 Perbankan, halaman 46–47",
+        "url": "https://sikapiuangmu.ojk.go.id/FrontEnd/LiterasiPerguruanTinggi/assets/pdf/Buku%202%20-%20Perbankan.pdf#page=46",
+        "verifiedAt": "2026-11-07"
+      },
+      {
+        "title": "CFPB: Interest rate dan APR",
+        "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-the-difference-between-a-loan-interest-rate-and-the-apr-en-733/",
+        "verifiedAt": "2026-11-07"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-rasio-cicilan",
+    "path": "/kalkulator/rasio-cicilan",
+    "category": "keuangan",
+    "formulaVersion": "1.0.0",
+    "scope": "Hitung porsi cicilan terhadap pendapatan bersih dan sisa pendapatan sebelum biaya hidup tanpa ambang kelayakan kredit.",
+    "sources": [
+      {
+        "title": "CFPB: Debt-to-income ratio (basis kotor)",
+        "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-debt-to-income-ratio-en-1791/",
+        "verifiedAt": "2026-11-07"
+      },
+      {
+        "title": "Federal Reserve: Household Debt Service Ratios",
+        "url": "https://www.federalreserve.gov/releases/DSR/about.htm",
+        "verifiedAt": "2026-11-07"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-target-tabungan",
+    "path": "/kalkulator/target-tabungan",
+    "category": "keuangan",
+    "formulaVersion": "1.0.0",
+    "scope": "Hitung setoran minimum setiap akhir bulan untuk mencapai target dengan saldo awal dan imbal hasil hipotetis.",
+    "sources": [
+      {
+        "title": "OpenStax: Methods of Savings",
+        "url": "https://openstax.org/books/contemporary-mathematics/pages/6-6-methods-of-savings",
+        "verifiedAt": "2026-11-07"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-dana-darurat",
+    "path": "/kalkulator/dana-darurat",
+    "category": "keuangan",
+    "formulaVersion": "1.0.0",
+    "scope": "Hitung target cadangan likuid, kekurangan, surplus, dan cakupan bulan dari pengeluaran wajib pilihan Anda.",
+    "sources": [
+      {
+        "title": "CFPB: Building an Emergency Fund",
+        "url": "https://www.consumerfinance.gov/an-essential-guide-to-building-an-emergency-fund/",
+        "verifiedAt": "2026-11-07"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-deposito",
+    "path": "/kalkulator/deposito",
+    "category": "keuangan",
+    "formulaVersion": "1.0.0",
+    "scope": "Simulasikan deposito bunga sederhana dengan potongan manual dan ledger rupiah yang konsisten sampai jatuh tempo.",
+    "sources": [
+      {
+        "title": "OpenStax: Simple Interest",
+        "url": "https://openstax.org/books/contemporary-mathematics/pages/6-3-simple-interest",
+        "verifiedAt": "2026-11-07"
+      },
+      {
+        "title": "OJK: Buku 2 Perbankan, halaman 109–110",
+        "url": "https://sikapiuangmu.ojk.go.id/FrontEnd/LiterasiPerguruanTinggi/assets/pdf/Buku%202%20-%20Perbankan.pdf#page=109",
+        "verifiedAt": "2026-11-07"
+      },
+      {
+        "title": "BCA: Rumus dan basis waktu bunga deposito",
+        "url": "https://www.bca.co.id/id/informasi/edukatips/2024/07/02/06/10/cara-hitung-bunga-deposito-ini-rumus-yang-perlu-diketahui",
+        "verifiedAt": "2026-11-07"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-imbal-hasil-investasi",
+    "path": "/kalkulator/imbal-hasil-investasi",
+    "category": "keuangan",
+    "formulaVersion": "1.0.0",
+    "scope": "Hitung ROI bersih selama periode kepemilikan, termasuk kerugian dan biaya beli/jual yang dicatat terpisah.",
+    "sources": [
+      {
+        "title": "FINRA: Return and Rate of Return",
+        "url": "https://syndication.finra.org/content/key-concepts-return-and-rate-return",
+        "verifiedAt": "2026-11-07"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-cagr",
+    "path": "/kalkulator/cagr",
+    "category": "keuangan",
+    "formulaVersion": "1.0.0",
+    "scope": "Hitung pertumbuhan tahunan geometris dari nilai awal dan akhir, termasuk penurunan nilai serta kehilangan total.",
+    "sources": [
+      {
+        "title": "OpenStax: Geometric Mean",
+        "url": "https://openstax.org/books/introductory-business-statistics-2e/pages/2-5-geometric-mean",
+        "verifiedAt": "2026-11-07"
+      },
+      {
+        "title": "FINRA: Return and Rate of Return",
+        "url": "https://syndication.finra.org/content/key-concepts-return-and-rate-return",
+        "verifiedAt": "2026-11-07"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-nilai-kini",
+    "path": "/kalkulator/nilai-kini",
+    "category": "keuangan",
+    "formulaVersion": "1.0.0",
+    "scope": "Hitung nilai hari ini dari satu pembayaran nominal pada akhir tahun mendatang dengan diskonto asumsi Anda.",
+    "sources": [
+      {
+        "title": "OpenStax: Time Value of Money",
+        "url": "https://openstax.org/books/principles-finance/pages/7-3-methods-for-solving-time-value-of-money-problems",
+        "verifiedAt": "2026-11-07"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-npv",
+    "path": "/kalkulator/npv",
+    "category": "keuangan",
+    "formulaVersion": "1.0.0",
+    "scope": "Jumlahkan nilai kini arus kas tahunan bertanda, mulai hari ini pada tahun 0, tanpa pembulatan total terlalu awal.",
+    "sources": [
+      {
+        "title": "OpenStax: Time Value of Money",
+        "url": "https://openstax.org/books/principles-finance/pages/7-3-methods-for-solving-time-value-of-money-problems",
+        "verifiedAt": "2026-11-07"
+      },
+      {
+        "title": "OpenStax: Net Present Value Method",
+        "url": "https://openstax.org/books/principles-finance/pages/16-2-net-present-value-npv-method",
+        "verifiedAt": "2026-11-07"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-inflasi",
+    "path": "/kalkulator/inflasi",
+    "category": "keuangan",
+    "formulaVersion": "1.0.0",
+    "scope": "Bedakan proyeksi harga keranjang dan daya beli uang nominal tetap dengan asumsi inflasi tahunan Anda.",
+    "sources": [
+      {
+        "title": "OpenStax: Time Value of Money",
+        "url": "https://openstax.org/books/principles-finance/pages/7-3-methods-for-solving-time-value-of-money-problems",
+        "verifiedAt": "2026-11-07"
+      },
+      {
+        "title": "Bank Indonesia: Pengertian inflasi",
+        "url": "https://www.bi.go.id/id/fungsi-utama/moneter/inflasi/Default.aspx",
+        "verifiedAt": "2026-11-07"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-rata-rata-beli-saham",
+    "path": "/kalkulator/rata-rata-beli-saham",
+    "category": "keuangan",
+    "formulaVersion": "1.0.0",
+    "scope": "Gabungkan banyak transaksi beli menjadi biaya perolehan dan rata-rata per lembar yang sudah memasukkan biaya beli.",
+    "sources": [
+      {
+        "title": "OpenStax: Weighted Mean",
+        "url": "https://openstax.org/books/principles-finance-2e/pages/13-1-measures-of-center",
+        "verifiedAt": "2026-11-07"
+      },
+      {
+        "title": "Investor.gov / SEC: Stocks and Fees",
+        "url": "https://www.investor.gov/introduction-investing/investing-basics/investment-products/stocks",
+        "verifiedAt": "2026-11-07"
+      },
+      {
+        "title": "Investor.gov / SEC: Brokerage Statement and Cost Basis",
+        "url": "https://www.investor.gov/better-understanding-your-brokerage-account-statement",
+        "verifiedAt": "2026-11-07"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-untung-rugi-saham",
+    "path": "/kalkulator/untung-rugi-saham",
+    "category": "keuangan",
+    "formulaVersion": "1.0.0",
+    "scope": "Hitung hasil jual bersih, laba atau rugi, serta ROI untuk saham yang dijual setelah biaya dan pajak nominal manual.",
+    "sources": [
+      {
+        "title": "Investor.gov / SEC: Stocks and Fees",
+        "url": "https://www.investor.gov/introduction-investing/investing-basics/investment-products/stocks",
+        "verifiedAt": "2026-11-07"
+      },
+      {
+        "title": "Investor.gov / SEC: Brokerage Statement and Cost Basis",
+        "url": "https://www.investor.gov/better-understanding-your-brokerage-account-statement",
+        "verifiedAt": "2026-11-07"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-bunga-efektif-pinjaman",
+    "path": "/kalkulator/bunga-efektif-pinjaman",
+    "category": "keuangan",
+    "formulaVersion": "1.0.0",
+    "scope": "Cari tingkat efektif tahunan tersirat dari dana cair bersih dan pembayaran pada tanggal sebenarnya dengan basis ACT/365.",
+    "sources": [
+      {
+        "title": "Microsoft: XIRR dan basis hari 365",
+        "url": "https://support.microsoft.com/en-us/excel/functions/xirr-function",
+        "verifiedAt": "2026-11-07"
+      },
+      {
+        "title": "OpenStax: The Basics of Loans",
+        "url": "https://openstax.org/books/contemporary-mathematics/pages/6-8-the-basics-of-loans",
+        "verifiedAt": "2026-11-07"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-kpr",
+    "path": "/kalkulator/kpr",
+    "category": "keuangan",
+    "formulaVersion": "1.0.0",
+    "scope": "Simulasikan cicilan KPR dua fase dengan hitung ulang sisa pokok saat bunga berganti dan rincian dana awal.",
+    "sources": [
+      {
+        "title": "OpenStax: The Basics of Loans",
+        "url": "https://openstax.org/books/contemporary-mathematics/pages/6-8-the-basics-of-loans",
+        "verifiedAt": "2026-11-07"
+      },
+      {
+        "title": "CFPB: fixed dan adjustable rate",
+        "url": "https://www.consumerfinance.gov/owning-a-home/explore/understand-the-different-kinds-of-loans-available/",
+        "verifiedAt": "2026-11-07"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-pelunasan-dipercepat",
+    "path": "/kalkulator/pelunasan-dipercepat",
+    "category": "keuangan",
+    "formulaVersion": "1.0.0",
+    "scope": "Bandingkan satu tambahan pokok setelah cicilan biasa untuk mempercepat lunas, termasuk penalti kontrak manual.",
+    "sources": [
+      {
+        "title": "OpenStax: The Basics of Loans",
+        "url": "https://openstax.org/books/contemporary-mathematics/pages/6-8-the-basics-of-loans",
+        "verifiedAt": "2026-11-07"
+      },
+      {
+        "title": "CFPB: prepayment penalty",
+        "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-prepayment-penalty-en-1957/",
+        "verifiedAt": "2026-11-07"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-refinancing",
+    "path": "/kalkulator/refinancing",
+    "category": "keuangan",
+    "formulaVersion": "1.0.0",
+    "scope": "Bandingkan dua tenor dan tingkat pinjaman, biaya pindah tunai, serta titik impas kas sementara dan permanen.",
+    "sources": [
+      {
+        "title": "OpenStax: The Basics of Loans",
+        "url": "https://openstax.org/books/contemporary-mathematics/pages/6-8-the-basics-of-loans",
+        "verifiedAt": "2026-11-07"
+      },
+      {
+        "title": "Federal Reserve: Mortgage Refinancings",
+        "url": "https://www.federalreserve.gov/pubs/refinancings/default.htm",
+        "verifiedAt": "2026-11-07"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-kurs-mata-uang",
+    "path": "/kalkulator/kurs-mata-uang",
+    "category": "keuangan",
+    "formulaVersion": "1.0.0",
+    "scope": "Konversikan USD ke rupiah atau rupiah ke USD dengan kurs manual dan biaya dalam mata uang keluaran.",
+    "sources": [
+      {
+        "title": "ECB: kuotasi kurs dan batas referensi",
+        "url": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html",
+        "verifiedAt": "2026-11-07"
+      },
+      {
+        "title": "SIX: standar mata uang",
+        "url": "https://www.six-group.com/en/products-services/financial-information/market-reference-data/data-standards.html",
+        "verifiedAt": "2026-11-07"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-engagement-rate",
+    "path": "/kalkulator/engagement-rate",
+    "category": "media-sosial",
+    "formulaVersion": "1.0.0",
+    "scope": "Hitung persentase aksi suka, komentar, simpan dan bagikan terhadap pengikut atau reach dengan basis yang jelas.",
+    "sources": [
+      {
+        "title": "Sprout Social API: definisi metrik engagement",
+        "url": "https://api.sproutsocial.com/docs",
+        "verifiedAt": "2026-11-07"
+      },
+      {
+        "title": "Hootsuite: engagement menurut reach dan followers",
+        "url": "https://blog.hootsuite.com/calculate-engagement-rate/",
+        "verifiedAt": "2026-11-07"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-pertumbuhan-pengikut",
+    "path": "/kalkulator/pertumbuhan-pengikut",
+    "category": "media-sosial",
+    "formulaVersion": "1.0.0",
+    "scope": "Bandingkan dua snapshot jumlah pengikut untuk melihat perubahan bersih dan persentase terhadap jumlah awal.",
+    "sources": [
+      {
+        "title": "Socialinsider: rumus pertumbuhan pengikut",
+        "url": "https://www.socialinsider.io/blog/how-to-calculate-follower-growth/",
+        "verifiedAt": "2026-11-07"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-cpm",
+    "path": "/kalkulator/cpm",
+    "category": "media-sosial",
+    "formulaVersion": "1.0.0",
+    "scope": "Hitung biaya rata-rata per 1.000 impresi dari belanja kampanye dan jumlah penayangan yang sesuai.",
+    "sources": [
+      {
+        "title": "Google Ads: CPM",
+        "url": "https://support.google.com/google-ads/answer/6310?hl=en",
+        "verifiedAt": "2026-11-07"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-cpc",
+    "path": "/kalkulator/cpc",
+    "category": "media-sosial",
+    "formulaVersion": "1.0.0",
+    "scope": "Hitung biaya rata-rata per klik dari belanja iklan dan definisi klik yang Anda gunakan.",
+    "sources": [
+      {
+        "title": "Google Ads: average CPC",
+        "url": "https://support.google.com/google-ads/answer/14074?hl=en",
+        "verifiedAt": "2026-11-07"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-cpa",
+    "path": "/kalkulator/cpa",
+    "category": "media-sosial",
+    "formulaVersion": "1.0.0",
+    "scope": "Hitung biaya rata-rata per penjualan, lead atau pendaftaran teratribusi dengan definisi hasil yang Anda pilih.",
+    "sources": [
+      {
+        "title": "Google Ads: average CPA",
+        "url": "https://support.google.com/google-ads/answer/6396841?hl=en",
+        "verifiedAt": "2026-11-07"
+      },
+      {
+        "title": "Google Ads: conversion windows",
+        "url": "https://support.google.com/google-ads/answer/3123169?hl=en",
+        "verifiedAt": "2026-11-07"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-ctr",
+    "path": "/kalkulator/ctr",
+    "category": "media-sosial",
+    "formulaVersion": "1.0.0",
+    "scope": "Hitung click-through rate dari klik dan impresi, dengan validasi basis serta hasil persen yang presisi.",
+    "sources": [
+      {
+        "title": "Google Ads: definisi CTR",
+        "url": "https://support.google.com/google-ads/answer/2615875?hl=en",
+        "verifiedAt": "2026-11-07"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-estimasi-youtube",
+    "path": "/kalkulator/estimasi-youtube",
+    "category": "media-sosial",
+    "formulaVersion": "1.0.0",
+    "scope": "Simulasikan pendapatan video non-Shorts dari total tayangan dan RPM kreator asumsi pada basis yang sama.",
+    "sources": [
+      {
+        "title": "YouTube: RPM kreator dan CPM pengiklan",
+        "url": "https://support.google.com/youtube/answer/9314357?hl=en",
+        "verifiedAt": "2026-11-07"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-estimasi-tiktok-kreator",
+    "path": "/kalkulator/tiktok",
+    "category": "media-sosial",
+    "formulaVersion": "1.0.0",
+    "scope": "Simulasi penghasilan, engagement, rentang penawaran sponsor dan perbandingan akun TikTok dari asumsi manual, tanpa tarif resmi.",
+    "sources": [
+      {
+        "title": "TikTok Newsroom: pengumuman Creator Rewards 18 Maret 2024 (konteks historis)",
+        "url": "https://newsroom.tiktok.com/introducing-the-new-creator-rewards-program?lang=en",
+        "verifiedAt": "2026-11-07"
+      },
+      {
+        "title": "Sprout Social API: definisi metrik analitik",
+        "url": "https://api.sproutsocial.com/docs",
+        "verifiedAt": "2026-11-07"
+      },
+      {
+        "title": "OpenStax: biaya, harga jual dan rasio margin",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/3-1-explain-contribution-margin-and-calculate-contribution-margin-per-unit-contribution-margin-ratio-and-total-contribution-margin",
+        "verifiedAt": "2026-11-07"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-tarif-endorsement",
+    "path": "/kalkulator/tarif-endorsement",
+    "category": "media-sosial",
+    "formulaVersion": "1.0.0",
+    "scope": "Susun minimum penawaran paket konten dari biaya, jam kerja dan margin harga jual, dengan hak pakai terpisah.",
+    "sources": [
+      {
+        "title": "OpenStax: biaya, harga jual dan rasio margin",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/3-1-explain-contribution-margin-and-calculate-contribution-margin-per-unit-contribution-margin-ratio-and-total-contribution-margin",
+        "verifiedAt": "2026-11-07"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-waktu-tonton",
+    "path": "/kalkulator/waktu-tonton",
+    "category": "media-sosial",
+    "formulaVersion": "1.0.0",
+    "scope": "Estimasi total jam dan menit tonton dari views serta durasi rata-rata pada populasi dan periode yang sama.",
+    "sources": [
+      {
+        "title": "YouTube Analytics: metrik waktu tonton",
+        "url": "https://developers.google.com/youtube/analytics/metrics",
+        "verifiedAt": "2026-11-07"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-diskon",
+    "path": "/kalkulator/diskon",
+    "category": "sehari-hari",
+    "formulaVersion": "1.0.0",
+    "scope": "Hitung harga setelah satu atau beberapa diskon persentase, dengan pembulatan cash sekali di akhir.",
+    "sources": [
+      {
+        "title": "OpenStax: aplikasi diskon",
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-3-solve-sales-tax-commission-and-discount-applications",
+        "verifiedAt": "2026-11-07"
+      },
+      {
+        "title": "OpenStax: persen dan perubahan persen",
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-2-solve-general-applications-of-percent",
+        "verifiedAt": "2026-11-07"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-harga-per-satuan",
+    "path": "/kalkulator/harga-per-satuan",
+    "category": "sehari-hari",
+    "formulaVersion": "1.0.0",
+    "scope": "Bandingkan kemasan pada satuan massa, volume atau pcs yang sama, berdasarkan harga satuan eksak.",
+    "sources": [
+      {
+        "title": "NIST: SI metric prefixes",
+        "url": "https://www.nist.gov/pml/owm/metric-si-prefixes",
+        "verifiedAt": "2026-11-07"
+      },
+      {
+        "title": "NIST SP811: unit di luar SI",
+        "url": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-chapter-5-units-outside-si",
+        "verifiedAt": "2026-11-07"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-bagi-tagihan",
+    "path": "/kalkulator/bagi-tagihan",
+    "category": "sehari-hari",
+    "formulaVersion": "1.0.0",
+    "scope": "Bagi biaya bersama rata atau proporsional terhadap subtotal item per orang, dengan rekonsiliasi setiap rupiah.",
+    "sources": [
+      {
+        "title": "Kenyon & Lippman, Math in Society: Hamilton, halaman 75–76",
+        "url": "https://www.opentextbookstore.com/mathinsociety/2.5/Apportionment.pdf",
+        "verifiedAt": "2026-11-07"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-persen",
+    "path": "/kalkulator/persen",
+    "category": "sehari-hari",
+    "formulaVersion": "1.0.0",
+    "scope": "Hitung X% dari N atau A sebagai persen dari B dengan bilangan bertanda dan pembulatan presisi.",
+    "sources": [
+      {
+        "title": "OpenStax: persen dan perubahan persen",
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-2-solve-general-applications-of-percent",
+        "verifiedAt": "2026-11-07"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-perubahan-persen",
+    "path": "/kalkulator/perubahan-persen",
+    "category": "sehari-hari",
+    "formulaVersion": "1.0.0",
+    "scope": "Hitung perubahan nilai awal ke akhir, dengan delta eksak dan persentase naik atau turun terhadap awal.",
+    "sources": [
+      {
+        "title": "OpenStax: persen dan perubahan persen",
+        "url": "https://openstax.org/books/prealgebra-2e/pages/6-2-solve-general-applications-of-percent",
+        "verifiedAt": "2026-11-07"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-selisih-tanggal",
+    "path": "/kalkulator/selisih-tanggal",
+    "category": "sehari-hari",
+    "formulaVersion": "1.0.0",
+    "scope": "Hitung jarak hari kalender dan minggu penuh, dengan aturan awal tidak dihitung atau kedua tanggal dihitung.",
+    "sources": [
+      {
+        "title": "US Naval Observatory: aturan tahun kabisat Gregorian",
+        "url": "https://aa.usno.navy.mil/faq/leap_years",
+        "verifiedAt": "2026-11-07"
+      },
+      {
+        "title": "Richards, Calendars §15.4.2: Gregorian dan anchor hari Senin (PDF halaman 15)",
+        "url": "https://aa.usno.navy.mil/downloads/c15_usb_online.pdf",
+        "verifiedAt": "2026-11-07"
+      },
+      {
+        "title": "RFC 3339 §5.6–5.7: representasi tanggal dan batas jam/menit",
+        "url": "https://www.rfc-editor.org/rfc/rfc3339.html",
+        "verifiedAt": "2026-11-07"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-hari-kerja",
+    "path": "/kalkulator/hari-kerja",
+    "category": "sehari-hari",
+    "formulaVersion": "1.0.0",
+    "scope": "Hitung hari kerja dalam rentang inklusif menurut pola mingguan dan tanggal libur yang Anda masukkan, tanpa pengurangan ganda.",
+    "sources": [
+      {
+        "title": "US Naval Observatory: aturan tahun kabisat Gregorian",
+        "url": "https://aa.usno.navy.mil/faq/leap_years",
+        "verifiedAt": "2026-11-07"
+      },
+      {
+        "title": "Richards, Calendars §15.4.2: Gregorian dan anchor hari Senin (PDF halaman 15)",
+        "url": "https://aa.usno.navy.mil/downloads/c15_usb_online.pdf",
+        "verifiedAt": "2026-11-07"
+      },
+      {
+        "title": "RFC 3339 §5.6–5.7: representasi tanggal dan batas jam/menit",
+        "url": "https://www.rfc-editor.org/rfc/rfc3339.html",
+        "verifiedAt": "2026-11-07"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-usia",
+    "path": "/kalkulator/usia",
+    "category": "sehari-hari",
+    "formulaVersion": "1.0.0",
+    "scope": "Hitung usia kalender dalam tahun, bulan dan hari pada tanggal acuan pilihan Anda, termasuk aturan akhir bulan dan 29 Februari.",
+    "sources": [
+      {
+        "title": "US Naval Observatory: aturan tahun kabisat Gregorian",
+        "url": "https://aa.usno.navy.mil/faq/leap_years",
+        "verifiedAt": "2026-11-07"
+      },
+      {
+        "title": "Richards, Calendars §15.4.2: Gregorian dan anchor hari Senin (PDF halaman 15)",
+        "url": "https://aa.usno.navy.mil/downloads/c15_usb_online.pdf",
+        "verifiedAt": "2026-11-07"
+      },
+      {
+        "title": "RFC 3339 §5.6–5.7: representasi tanggal dan batas jam/menit",
+        "url": "https://www.rfc-editor.org/rfc/rfc3339.html",
+        "verifiedAt": "2026-11-07"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-durasi-kerja",
+    "path": "/kalkulator/durasi-kerja",
+    "category": "sehari-hari",
+    "formulaVersion": "1.0.0",
+    "scope": "Hitung jam dan menit bersih satu shift setelah jeda, dengan akhir hari yang sama atau hari berikutnya dipilih eksplisit.",
+    "sources": [
+      {
+        "title": "RFC 3339 §5.6–5.7: representasi tanggal dan batas jam/menit",
+        "url": "https://www.rfc-editor.org/rfc/rfc3339.html",
+        "verifiedAt": "2026-11-07"
+      },
+      {
+        "title": "NIST SP330 §4: satuan menit, jam dan liter",
+        "url": "https://www.nist.gov/pml/special-publication-330/sp-330-section-4",
+        "verifiedAt": "2026-11-07"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-konsumsi-bbm",
+    "path": "/kalkulator/konsumsi-bbm",
+    "category": "sehari-hari",
+    "formulaVersion": "1.0.0",
+    "scope": "Simulasikan liter BBM dan biaya perjalanan dari jarak total, efisiensi km/L dan harga Rp/L yang Anda masukkan.",
+    "sources": [
+      {
+        "title": "NIST SP330 §4: satuan menit, jam dan liter",
+        "url": "https://www.nist.gov/pml/special-publication-330/sp-330-section-4",
+        "verifiedAt": "2026-11-07"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-biaya-listrik",
+    "path": "/kalkulator/biaya-listrik",
+    "category": "sehari-hari",
+    "formulaVersion": "1.0.0",
+    "scope": "Simulasikan energi kWh dan biaya perangkat dari watt per unit, jam per hari, jumlah hari serta tarif Rp/kWh manual.",
+    "sources": [
+      {
+        "title": "US EIA: daya watt dan energi Wh/kWh",
+        "url": "https://www.eia.gov/energyexplained/electricity/measuring-electricity.php",
+        "verifiedAt": "2026-11-07"
+      },
+      {
+        "title": "NIST: prefiks SI kilo dan centi",
+        "url": "https://www.nist.gov/pml/owm/metric-si-prefixes",
+        "verifiedAt": "2026-11-07"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-biaya-air",
+    "path": "/kalkulator/biaya-air",
+    "category": "sehari-hari",
+    "formulaVersion": "1.0.0",
+    "scope": "Alokasikan pemakaian m³ ke blok tarif kumulatif manual, lalu tambahkan biaya tetap sekali dan bulatkan tagihan akhir.",
+    "sources": [
+      {
+        "title": "NIST: prefiks SI kilo dan centi",
+        "url": "https://www.nist.gov/pml/owm/metric-si-prefixes",
+        "verifiedAt": "2026-11-07"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-kebutuhan-cat",
+    "path": "/kalkulator/kebutuhan-cat",
+    "category": "sehari-hari",
+    "formulaVersion": "1.0.0",
+    "scope": "Hitung liter cat, cadangan dan kemasan utuh dari luas bersih, lapisan serta daya sebar asumsi produk.",
+    "sources": [
+      {
+        "title": "NIST: prefiks SI kilo dan centi",
+        "url": "https://www.nist.gov/pml/owm/metric-si-prefixes",
+        "verifiedAt": "2026-11-07"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-kebutuhan-keramik",
+    "path": "/kalkulator/kebutuhan-keramik",
+    "category": "sehari-hari",
+    "formulaVersion": "1.0.0",
+    "scope": "Hitung ubin dan dus utuh dari luas lantai, dimensi ubin cm, isi dus dan cadangan potong/pecah.",
+    "sources": [
+      {
+        "title": "OpenStax: luas persegi panjang, balok dan silinder",
+        "url": "https://openstax.org/books/prealgebra-2e/pages/c-geometric-formulas",
+        "verifiedAt": "2026-11-07"
+      },
+      {
+        "title": "NIST: prefiks SI kilo dan centi",
+        "url": "https://www.nist.gov/pml/owm/metric-si-prefixes",
+        "verifiedAt": "2026-11-07"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-volume-beton",
+    "path": "/kalkulator/volume-beton",
+    "category": "sehari-hari",
+    "formulaVersion": "1.0.0",
+    "scope": "Jumlahkan volume balok dan silinder dari beberapa elemen, lalu tambahkan cadangan tanpa menjumlah angka baris yang dibulatkan.",
+    "sources": [
+      {
+        "title": "OpenStax: luas persegi panjang, balok dan silinder",
+        "url": "https://openstax.org/books/prealgebra-2e/pages/c-geometric-formulas",
+        "verifiedAt": "2026-11-07"
+      },
+      {
+        "title": "Wolfram Functions: nilai desimal π",
+        "url": "https://functions.wolfram.com/Constants/Pi/03/0001/",
+        "verifiedAt": "2026-11-07"
+      },
+      {
+        "title": "NIST: prefiks SI kilo dan centi",
+        "url": "https://www.nist.gov/pml/owm/metric-si-prefixes",
+        "verifiedAt": "2026-11-07"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-skala-denah",
+    "path": "/kalkulator/skala-denah",
+    "category": "sehari-hari",
+    "formulaVersion": "1.0.0",
+    "scope": "Ubah jarak gambar ke jarak nyata atau sebaliknya pada skala linear 1:N, dengan satuan asal dan tujuan eksplisit.",
+    "sources": [
+      {
+        "title": "NIST: definisi satuan dasar meter, kilogram dan second",
+        "url": "https://www.nist.gov/si-redefinition/definitions-si-base-units",
+        "verifiedAt": "2026-11-07"
+      },
+      {
+        "title": "NIST: prefiks SI",
+        "url": "https://www.nist.gov/pml/owm/metric-si-prefixes",
+        "verifiedAt": "2026-11-07"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-konversi-panjang",
+    "path": "/kalkulator/konversi-panjang",
+    "category": "sehari-hari",
+    "formulaVersion": "1.0.0",
+    "scope": "Konversi µm, mm, cm, m, km serta inch, foot, yard dan mile international melalui faktor meter eksak.",
+    "sources": [
+      {
+        "title": "NIST: definisi satuan dasar meter, kilogram dan second",
+        "url": "https://www.nist.gov/si-redefinition/definitions-si-base-units",
+        "verifiedAt": "2026-11-07"
+      },
+      {
+        "title": "NIST: prefiks SI",
+        "url": "https://www.nist.gov/pml/owm/metric-si-prefixes",
+        "verifiedAt": "2026-11-07"
+      },
+      {
+        "title": "NIST SP811 Appendix B: international yard dan foot",
+        "url": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors",
+        "verifiedAt": "2026-11-07"
+      },
+      {
+        "title": "NIST Handbook44–2026 Appendix C: panjang dan massa, international serta avoirdupois",
+        "url": "https://www.nist.gov/document/2026-nist-handbook-44-appendix-c",
+        "verifiedAt": "2026-11-07"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-konversi-berat",
+    "path": "/kalkulator/konversi-berat",
+    "category": "sehari-hari",
+    "formulaVersion": "1.0.0",
+    "scope": "Konversi massa sehari-hari antara µg, mg, g, kg, ton metrik, ounce dan pound avoirdupois dengan presisi sembilan desimal.",
+    "sources": [
+      {
+        "title": "NIST: definisi satuan dasar meter, kilogram dan second",
+        "url": "https://www.nist.gov/si-redefinition/definitions-si-base-units",
+        "verifiedAt": "2026-11-07"
+      },
+      {
+        "title": "NIST: prefiks SI",
+        "url": "https://www.nist.gov/pml/owm/metric-si-prefixes",
+        "verifiedAt": "2026-11-07"
+      },
+      {
+        "title": "NIST SP811 footnote22: pound avoirdupois eksak",
+        "url": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-footnotes",
+        "verifiedAt": "2026-11-07"
+      },
+      {
+        "title": "NIST Handbook44–2026 Appendix C: panjang dan massa, international serta avoirdupois",
+        "url": "https://www.nist.gov/document/2026-nist-handbook-44-appendix-c",
+        "verifiedAt": "2026-11-07"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-konversi-suhu",
+    "path": "/kalkulator/konversi-suhu",
+    "category": "sehari-hari",
+    "formulaVersion": "1.0.0",
+    "scope": "Konversi suhu absolut Celsius, Fahrenheit dan Kelvin dengan offset eksak dan validasi nol mutlak sebelum pembulatan.",
+    "sources": [
+      {
+        "title": "NIST: konversi suhu eksak Celsius/Fahrenheit/Kelvin",
+        "url": "https://www.nist.gov/pml/owm/si-units-temperature",
+        "verifiedAt": "2026-11-07"
+      },
+      {
+        "title": "NIST Kelvin Introduction: nol mutlak",
+        "url": "https://www.nist.gov/si-redefinition/kelvin-introduction",
+        "verifiedAt": "2026-11-07"
+      },
+      {
+        "title": "NIST: definisi satuan dasar meter, kilogram dan second",
+        "url": "https://www.nist.gov/si-redefinition/definitions-si-base-units",
+        "verifiedAt": "2026-11-07"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-kecepatan-rata-rata",
+    "path": "/kalkulator/kecepatan-rata-rata",
+    "category": "sehari-hari",
+    "formulaVersion": "1.0.0",
+    "scope": "Hitung kelajuan skalar dari jarak total dan durasi elapsed jam, menit, detik; hasil km/h, m/s atau mph dari pecahan asli.",
+    "sources": [
+      {
+        "title": "NIST: definisi satuan dasar meter, kilogram dan second",
+        "url": "https://www.nist.gov/si-redefinition/definitions-si-base-units",
+        "verifiedAt": "2026-11-07"
+      },
+      {
+        "title": "NIST SP330 §4: menit dan jam",
+        "url": "https://www.nist.gov/pml/special-publication-330/sp-330-section-4",
+        "verifiedAt": "2026-11-07"
+      },
+      {
+        "title": "NIST SP811 Appendix B: international yard dan foot",
+        "url": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors",
+        "verifiedAt": "2026-11-07"
+      },
+      {
+        "title": "NIST Handbook44–2026 Appendix C: panjang dan massa, international serta avoirdupois",
+        "url": "https://www.nist.gov/document/2026-nist-handbook-44-appendix-c",
+        "verifiedAt": "2026-11-07"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-blibli",
+    "path": "/kalkulator/blibli",
+    "category": "marketplace",
+    "formulaVersion": "1.0.0",
+    "scope": "Simulasikan dana bersih dan hasil setelah HPP dengan tarif kontrak yang Anda isi. Bukan kalkulator tarif resmi Blibli.",
+    "sources": [
+      {
+        "title": "AccountingCoach: Income Statement, gross profit dan biaya operasi",
+        "url": "https://www.accountingcoach.com/income-statement/explanation",
+        "verifiedAt": "2026-11-07"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-harga-jual-marketplace",
+    "path": "/kalkulator/harga-jual-marketplace",
+    "category": "marketplace",
+    "formulaVersion": "1.0.0",
+    "scope": "Cari harga listing rupiah minimum untuk target payout sebelum pembulatan, dengan diskon dan fee manual yang jelas basisnya.",
+    "sources": [
+      {
+        "title": "AccountingCoach: Income Statement, gross profit dan biaya operasi",
+        "url": "https://www.accountingcoach.com/income-statement/explanation",
+        "verifiedAt": "2026-11-07"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-banding-biaya-marketplace",
+    "path": "/kalkulator/banding-biaya-marketplace",
+    "category": "marketplace",
+    "formulaVersion": "1.0.0",
+    "scope": "Bandingkan payout dan hasil setelah HPP pada 2–5 kanal dengan tarif manual, basis komisi eksplisit dan ranking pecahan asli.",
+    "sources": [
+      {
+        "title": "AccountingCoach: Income Statement, gross profit dan biaya operasi",
+        "url": "https://www.accountingcoach.com/income-statement/explanation",
+        "verifiedAt": "2026-11-07"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-bundel-produk",
+    "path": "/kalkulator/bundel-produk",
+    "category": "marketplace",
+    "formulaVersion": "1.0.0",
+    "scope": "Hitung kontribusi satu paket dari 1–20 produk, diskon seller dan biaya transaksi manual; pisahkan kontribusi dari laba bersih.",
+    "sources": [
+      {
+        "title": "MIT OCW: Management Accounting and Control, slide 16 (kontribusi dan laba)",
+        "url": "https://ocw.mit.edu/courses/15-963-management-accounting-and-control-spring-2007/c0e4e8a92624f3eff86232c0b2df69cf_lec2.pdf",
+        "verifiedAt": "2026-11-07"
+      },
+      {
+        "title": "AccountingCoach: Income Statement, gross profit dan biaya operasi",
+        "url": "https://www.accountingcoach.com/income-statement/explanation",
+        "verifiedAt": "2026-11-07"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-stok-cover",
+    "path": "/kalkulator/stok-cover",
+    "category": "marketplace",
+    "formulaVersion": "1.0.0",
+    "scope": "Perkirakan hari cakupan stok siap jual dari laju penjualan harian konstan, dengan hari penuh dan status permintaan nol yang jelas.",
+    "sources": [
+      {
+        "title": "Shopify Help Center: Product analytics, days of inventory remaining",
+        "url": "https://help.shopify.com/en/manual/products/analytics",
+        "verifiedAt": "2026-11-07"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-ppn",
+    "path": "/kalkulator/ppn",
+    "category": "pajak",
+    "formulaVersion": "1.0.0",
+    "scope": "Pisahkan harga komersial, DPP dan PPN berdasarkan tanggal serta skenario terkonfirmasi. Rezim khusus dan klasifikasi tidak jelas ditahan.",
+    "sources": [
+      {
+        "title": "UU7/2021: PPN Pasal7/8A dan bagian omzet OP500juta",
+        "url": "https://www.pajak.go.id/en/node/74838",
+        "effectiveDate": "2022-04-01",
+        "verifiedAt": "2026-11-08",
+        "version": "1.1.0"
+      },
+      {
+        "title": "PMK131/2024: Pasal2–6 PPN dan transisi Januari2025",
+        "url": "https://www.pajak.go.id/id/peraturan/perlakuan-pajak-pertambahan-nilai-atas-impor-barang-kena-pajak-penyerahan-barang-kena",
+        "effectiveDate": "2025-01-01",
+        "verifiedAt": "2026-11-08",
+        "version": "1.1.0"
+      },
+      {
+        "title": "PMK11/2025: pengecualian DPP dan besaran tertentu",
+        "url": "https://www.pajak.go.id/id/peraturan/ketentuan-nilai-lain-sebagai-dasar-pengenaan-pajak-dan-besaran-tertentu-pajak-pertambahan",
+        "effectiveDate": "2025-02-04",
+        "verifiedAt": "2026-11-08",
+        "version": "1.1.0"
+      },
+      {
+        "title": "PMK53/2025: perubahan PMK11 (rezim khusus tidak dicakup)",
+        "url": "https://www.pajak.go.id/index.php/id/peraturan/perubahan-atas-peraturan-menteri-keuangan-nomor-11-tahun-2025-tentang-ketentuan-nilai",
+        "effectiveDate": "2025-08-01",
+        "verifiedAt": "2026-11-08",
+        "version": "1.1.0"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Human legal review, region/date/classification and full facts; held states remain",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-pph-23",
+    "path": "/kalkulator/pph-23",
+    "category": "pajak",
+    "formulaVersion": "1.0.0",
+    "scope": "Estimasi pemotongan jasa biasa atau royalti badan dalam negeri, dengan identitas dan dasar PPN terpisah yang dikonfirmasi.",
+    "sources": [
+      {
+        "title": "UU36/2008 Pasal23: tarif, identitas dan pengecualian",
+        "url": "https://pajak.go.id/id/undang-undang-nomor-36-tahun-2008",
+        "effectiveDate": "2009-01-01",
+        "verifiedAt": "2026-11-08",
+        "version": "1.1.0"
+      },
+      {
+        "title": "PMK141/2015: jumlah bruto jasa tidak termasuk PPN",
+        "url": "https://www.pajak.go.id/index.php/id/peraturan/jenis-jasa-lain-sebagaimana-dimaksud-dalam-pasal-23-ayat-1-huruf-c-angka-2-undang-0",
+        "effectiveDate": "2015-08-26",
+        "verifiedAt": "2026-11-08",
+        "version": "1.1.0"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Human legal review, region/date/classification and full facts; held states remain",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-pph-4-ayat-2-sewa",
+    "path": "/kalkulator/pph-4-ayat-2-sewa",
+    "category": "pajak",
+    "formulaVersion": "1.0.0",
+    "scope": "Estimasi PPh final 10% atas sewa dan biaya terkait dalam cakupan PP 34/2017, dengan perbedaan pemotong dan setor sendiri.",
+    "sources": [
+      {
+        "title": "PP34/2017: Pasal2–4 dan7 sewa tanah/bangunan",
+        "url": "https://jdih.kemenkeu.go.id/api/download/fulltext/2017/34TAHUN2017PP.pdf",
+        "effectiveDate": "2018-01-02",
+        "verifiedAt": "2026-11-08",
+        "version": "1.1.0"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Human legal review, region/date/classification and full facts; held states remain",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-gross-up-pajak",
+    "path": "/kalkulator/gross-up-pajak",
+    "category": "pajak",
+    "formulaVersion": "1.0.0",
+    "scope": "Cari bruto rupiah minimum untuk target neto sebelum pembulatan dengan satu tarif potong manual, bukan mesin PPh 21 progresif.",
+    "sources": [],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Human legal review, region/date/classification and full facts; held states remain",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-pph-final-umkm",
+    "path": "/kalkulator/pph-final-umkm",
+    "category": "pajak",
+    "formulaVersion": "1.1.0",
+    "scope": "Estimasi 0,5% untuk WP baru dalam cakupan PP 20/2026, dengan omzet kumulatif, fasilitas OP dan status peralihan yang ditahan.",
+    "sources": [
+      {
+        "title": "PP20/2026: perubahan PP55, Pasal56–58 dan PasalII (salinan primer)",
+        "url": "https://jdih.kemenkeu.go.id/api/download/d057ff82-50e7-4127-b66b-f704a36f071d/2026pp020.pdf",
+        "effectiveDate": "2026-04-22",
+        "verifiedAt": "2026-11-08",
+        "version": "1.1.0"
+      },
+      {
+        "title": "PP55/2022: Pasal60–63, dasar kumulatif dan pelunasan",
+        "url": "https://www.pajak.go.id/id/peraturan/penyesuaian-pengaturan-di-bidang-pajak-penghasilan",
+        "effectiveDate": "2022-12-20",
+        "verifiedAt": "2026-11-08",
+        "version": "1.1.0"
+      },
+      {
+        "title": "PMK164/2023: Pasal6, kumulatif seluruh tempat usaha satu WP",
+        "url": "https://pajak.go.id/id/peraturan/tata-cara-pengenaan-pajak-penghasilan-atas-penghasilan-dari-usaha-yang-diterima-atau",
+        "effectiveDate": "2023-12-29",
+        "verifiedAt": "2026-11-08",
+        "version": "1.1.0"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Human legal review, region/date/classification and full facts; held states remain",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-pph-21-bulanan",
+    "path": "/kalkulator/pph-21-bulanan",
+    "category": "pajak",
+    "formulaVersion": "1.0.0",
+    "scope": "Estimasi TER masa reguler pegawai tetap biasa dengan tabel lengkap PP 58/2023, pemetaan PTKP dan batas masa akhir yang eksplisit.",
+    "sources": [
+      {
+        "title": "PP58/2023: tarif efektif dan kategori PTKP",
+        "url": "https://pajak.go.id/id/peraturan/tarif-pemotongan-pajak-penghasiian-pasal-21-atas-penghasilan-sehubungan-dengan-pekerjaan",
+        "effectiveDate": "2024-01-01",
+        "verifiedAt": "2026-11-08",
+        "version": "1.0.0"
+      },
+      {
+        "title": "Lampiran resmi PP58/2023: seluruh tabel A/B/C",
+        "url": "https://pajak.go.id/sites/default/files/lampiran/Lampiran%20PP58TAHUN2023.pdf",
+        "effectiveDate": "2024-01-01",
+        "verifiedAt": "2026-11-08",
+        "version": "1.0.0"
+      },
+      {
+        "title": "PMK168/2023: bruto, pengurang dan masa terakhir",
+        "url": "https://pajak.go.id/id/peraturan/petunjuk-pelaksanaan-pemotongan-pajak-atas-penghasilan-sehubungan-dengan-pekerjaan-jasa-1",
+        "effectiveDate": "2024-01-01",
+        "verifiedAt": "2026-11-08",
+        "version": "1.0.0"
+      },
+      {
+        "title": "PMK101/2016: besaran PTKP",
+        "url": "https://pajak.go.id/id/peraturan/penyesuaian-besarnya-penghasilan-tidak-kena-pajak-2",
+        "effectiveDate": "2016-06-27",
+        "verifiedAt": "2026-11-08",
+        "version": "1.0.0"
+      },
+      {
+        "title": "UU7/2021: lapisan Pasal17 dan PTKP",
+        "url": "https://pajak.go.id/id/peraturan/harmonisasi-peraturan-perpajakan",
+        "effectiveDate": "2022-01-01",
+        "verifiedAt": "2026-11-08",
+        "version": "1.0.0"
+      },
+      {
+        "title": "PMK105/2025: fasilitas DTP 2026 di luar cakupan",
+        "url": "https://www.pajak.go.id/id/peraturan/pajak-penghasilan-pasal-21-atas-penghasilan-tertentu-yang-ditanggung-pemerintah-dalam-0",
+        "effectiveDate": "2025-12-31",
+        "verifiedAt": "2026-11-08",
+        "version": "1.0.0"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Human legal review, region/date/classification and full facts; held states remain",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-pph-21-rekonsiliasi",
+    "path": "/kalkulator/pph-21-rekonsiliasi",
+    "category": "pajak",
+    "formulaVersion": "1.0.0",
+    "scope": "Hitung pajak progresif setahun, PKP ribuan dan selisih dari potongan aktual untuk pegawai penuh tahun dalam cakupan terverifikasi.",
+    "sources": [
+      {
+        "title": "PP58/2023: tarif efektif dan kategori PTKP",
+        "url": "https://pajak.go.id/id/peraturan/tarif-pemotongan-pajak-penghasiian-pasal-21-atas-penghasilan-sehubungan-dengan-pekerjaan",
+        "effectiveDate": "2024-01-01",
+        "verifiedAt": "2026-11-08",
+        "version": "1.0.0"
+      },
+      {
+        "title": "Lampiran resmi PP58/2023: seluruh tabel A/B/C",
+        "url": "https://pajak.go.id/sites/default/files/lampiran/Lampiran%20PP58TAHUN2023.pdf",
+        "effectiveDate": "2024-01-01",
+        "verifiedAt": "2026-11-08",
+        "version": "1.0.0"
+      },
+      {
+        "title": "PMK168/2023: bruto, pengurang dan masa terakhir",
+        "url": "https://pajak.go.id/id/peraturan/petunjuk-pelaksanaan-pemotongan-pajak-atas-penghasilan-sehubungan-dengan-pekerjaan-jasa-1",
+        "effectiveDate": "2024-01-01",
+        "verifiedAt": "2026-11-08",
+        "version": "1.0.0"
+      },
+      {
+        "title": "PMK101/2016: besaran PTKP",
+        "url": "https://pajak.go.id/id/peraturan/penyesuaian-besarnya-penghasilan-tidak-kena-pajak-2",
+        "effectiveDate": "2016-06-27",
+        "verifiedAt": "2026-11-08",
+        "version": "1.0.0"
+      },
+      {
+        "title": "UU7/2021: lapisan Pasal17 dan PTKP",
+        "url": "https://pajak.go.id/id/peraturan/harmonisasi-peraturan-perpajakan",
+        "effectiveDate": "2022-01-01",
+        "verifiedAt": "2026-11-08",
+        "version": "1.0.0"
+      },
+      {
+        "title": "PMK105/2025: fasilitas DTP 2026 di luar cakupan",
+        "url": "https://www.pajak.go.id/id/peraturan/pajak-penghasilan-pasal-21-atas-penghasilan-tertentu-yang-ditanggung-pemerintah-dalam-0",
+        "effectiveDate": "2025-12-31",
+        "verifiedAt": "2026-11-08",
+        "version": "1.0.0"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Human legal review, region/date/classification and full facts; held states remain",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-pajak-impor",
+    "path": "/kalkulator/pajak-impor",
+    "category": "pajak",
+    "formulaVersion": "1.0.0",
+    "scope": "Simulasikan FOB/CFR/CIF, kurs KMK input, bea masuk serta PPN/PPh 22 dengan dasar dan tarif manual, tanpa klaim tarif universal.",
+    "sources": [
+      {
+        "title": "PMK144/2022: nilai pabean CIF",
+        "url": "https://jdih.kemenkeu.go.id/api/download/dc898419-85c0-4fe3-a2e8-c3770c034e16/144~PMK.04~2022.pdf",
+        "effectiveDate": "2023-01-01",
+        "verifiedAt": "2026-11-08",
+        "version": "1.0.0"
+      },
+      {
+        "title": "DJBC: CIF dan perlakuan FOB/CFR/CIF",
+        "url": "https://www.beacukai.go.id/faq-impor-nilai-pabean-untuk-penghitungan-bea-masuk",
+        "effectiveDate": "2023-01-01",
+        "verifiedAt": "2026-11-08",
+        "version": "1.0.0"
+      },
+      {
+        "title": "DJBC: kurs kepabeanan resmi",
+        "url": "https://www.beacukai.go.id/kurs",
+        "effectiveDate": "2023-01-01",
+        "verifiedAt": "2026-11-08",
+        "version": "1.0.0"
+      },
+      {
+        "title": "PMK4/2025: barang kiriman tidak dicakup",
+        "url": "https://www.jdih.kemenkeu.go.id/dok/pmk-4-tahun-2025/overview",
+        "effectiveDate": "2025-03-05",
+        "verifiedAt": "2026-11-08",
+        "version": "1.0.0"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Human legal review, region/date/classification and full facts; held states remain",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-bphtb",
+    "path": "/kalkulator/bphtb",
+    "category": "pajak",
+    "formulaVersion": "1.0.0",
+    "scope": "Estimasi dasar BPHTB DKI 2024 dengan NPOP/NJOP, perolehan pertama dan hubungan waris terkonfirmasi; wilayah/tahun lain ditahan.",
+    "sources": [
+      {
+        "title": "PP35/2023: pajak daerah menurut wilayah",
+        "url": "https://jdih.kemenkeu.go.id/api/download/06195e1e-c66b-4254-b3b0-877cfa443aa3/35TAHUN2023PP.pdf",
+        "effectiveDate": "2023-06-16",
+        "verifiedAt": "2026-11-08",
+        "version": "1.0.0"
+      },
+      {
+        "title": "PerdaDKI1/2024: BPHTB dan PBB-P2",
+        "url": "https://jdih.jakarta.go.id/dokumenPeraturanDirectory/0031/2024PERDA00311.pdf",
+        "effectiveDate": "2024-01-05",
+        "verifiedAt": "2026-11-08",
+        "version": "1.0.0"
+      },
+      {
+        "title": "PergubDKI23/2023: pembebasan rumah tapak pertama",
+        "url": "https://jdih.jakarta.go.id/link/download-fulltext/13650",
+        "effectiveDate": "2023-08-28",
+        "verifiedAt": "2026-11-08",
+        "version": "1.0.0"
+      },
+      {
+        "title": "Kepgub450/2026: fasilitas BPHTB baru",
+        "url": "https://bapenda.jakarta.go.id/peraturan-perpajakan/unduh/kepgub-nomor-450-tahun-2026-tentang-kriteria-pemberian-pengurangan-dan-pembebasan-pokok-bea-perolehan-hak-atas-tanah-dan-bangunan",
+        "effectiveDate": "2026-05-13",
+        "verifiedAt": "2026-11-08",
+        "version": "1.0.0"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Human legal review, region/date/classification and full facts; held states remain",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-pbb-p2",
+    "path": "/kalkulator/pbb-p2",
+    "category": "pajak",
+    "formulaVersion": "1.0.0",
+    "scope": "Hitung dasar PBB-P 2 sebelum fasilitas DKI 2024 dengan NJOPTKP satu objek, persentase penilaian dan klasifikasi penggunaan terverifikasi.",
+    "sources": [
+      {
+        "title": "PP35/2023: pajak daerah menurut wilayah",
+        "url": "https://jdih.kemenkeu.go.id/api/download/06195e1e-c66b-4254-b3b0-877cfa443aa3/35TAHUN2023PP.pdf",
+        "effectiveDate": "2023-06-16",
+        "verifiedAt": "2026-11-08",
+        "version": "1.0.0"
+      },
+      {
+        "title": "PerdaDKI1/2024: BPHTB dan PBB-P2",
+        "url": "https://jdih.jakarta.go.id/dokumenPeraturanDirectory/0031/2024PERDA00311.pdf",
+        "effectiveDate": "2024-01-05",
+        "verifiedAt": "2026-11-08",
+        "version": "1.0.0"
+      },
+      {
+        "title": "PergubDKI17/2024: persentase NJOP",
+        "url": "https://jdih.jakarta.go.id/dokumenPeraturanDirectory/0031/2024PERGUB003117.pdf",
+        "effectiveDate": "2024-05-30",
+        "verifiedAt": "2026-11-08",
+        "version": "1.0.0"
+      },
+      {
+        "title": "PergubDKI16/2024: fasilitas PBB tahun2024",
+        "url": "https://jdih.jakarta.go.id/dokumenPeraturanDirectory/0031/2024PERGUB003116.pdf",
+        "effectiveDate": "2024-06-04",
+        "verifiedAt": "2026-11-08",
+        "version": "1.0.0"
+      },
+      {
+        "title": "Kepgub281/2025: PBB tahun2025 ditahan",
+        "url": "https://jdih.jakarta.go.id/dokumenPeraturanDirectory/0031/2025KEPGUB0031281.pdf",
+        "effectiveDate": "2025-04-08",
+        "verifiedAt": "2026-11-08",
+        "version": "1.0.0"
+      },
+      {
+        "title": "Kepgub339/2026: PBB tahun2026 ditahan",
+        "url": "https://jdih.jakarta.go.id/dokumenPeraturanDirectory/0031/2026KEPGUB0031339.pdf",
+        "effectiveDate": "2026-04-01",
+        "verifiedAt": "2026-11-08",
+        "version": "1.0.0"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Human legal review, region/date/classification and full facts; held states remain",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-shopee",
+    "path": "/kalkulator/shopee",
+    "category": "marketplace",
+    "formulaVersion": "manual-settlement-v1",
+    "scope": "Hitung simulasi dana cair Shopee, biaya manual dengan basis dan cap eksplisit, serta hasil setelah HPP. Tanpa tarif resmi otomatis.",
+    "sources": [
+      {
+        "title": "Syarat layanan Shopee Indonesia (bukan jadwal tarif)",
+        "url": "https://help.shopee.co.id/portal/4/article/71187-Syarat-Layanan-Shopee",
+        "verifiedAt": "2026-11-08",
+        "version": "manual-only; bukan jadwal tarif"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-tiktok",
+    "path": "/kalkulator/tiktok-shop",
+    "category": "marketplace",
+    "formulaVersion": "manual-settlement-v1",
+    "scope": "Hitung simulasi dana cair TikTok Shop, biaya manual dengan basis dan cap eksplisit, serta hasil setelah HPP. Tanpa tarif resmi otomatis.",
+    "sources": [
+      {
+        "title": "Academy TikTok Shop dan Tokopedia Indonesia (tabel tidak terbaca)",
+        "url": "https://seller-id.tiktok.com/university/home",
+        "verifiedAt": "2026-11-08",
+        "version": "manual-only; bukan jadwal tarif"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-tokopedia",
+    "path": "/kalkulator/tokopedia",
+    "category": "marketplace",
+    "formulaVersion": "manual-settlement-v1",
+    "scope": "Hitung simulasi dana cair Tokopedia, biaya manual dengan basis dan cap eksplisit, serta hasil setelah HPP. Tanpa tarif resmi otomatis.",
+    "sources": [
+      {
+        "title": "Ketentuan biaya Tokopedia Official Store (tanggal berlaku tidak tersedia)",
+        "url": "https://assets.tokopedia.net/asts/onboarding/Ketentuan_biaya_Tokopedia_Official_Store.pdf",
+        "verifiedAt": "2026-11-08",
+        "version": "manual-only; bukan jadwal tarif"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  },
+  {
+    "id": "calc-lazada",
+    "path": "/kalkulator/lazada",
+    "category": "marketplace",
+    "formulaVersion": "manual-settlement-v1",
+    "scope": "Hitung simulasi dana cair Lazada, biaya manual dengan basis dan cap eksplisit, serta hasil setelah HPP. Tanpa tarif resmi otomatis.",
+    "sources": [
+      {
+        "title": "Lazada Seller Center Indonesia (tabel tidak terbaca)",
+        "url": "https://sellercenter.lazada.co.id/apps/register/lazmall/joining",
+        "verifiedAt": "2026-11-08",
+        "version": "manual-only; bukan jadwal tarif"
+      }
+    ],
+    "audit53LegalReverification": "NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded",
+    "ownerFollowUp": "Validate input assumptions; manual tariffs/RPM are not official",
+    "physicalDeviceStatus": "UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android"
+  }
+]

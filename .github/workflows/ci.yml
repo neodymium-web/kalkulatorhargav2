@@ -44,6 +44,10 @@ jobs:
         run: npx playwright test --config=playwright.audit-webkit.config.ts
       - name: Lighthouse audit lab
         run: node scripts/audit/lighthouse.mjs
+      - name: Repeated cutover performance sample
+        run: node scripts/migration/performance.mjs
+      - name: Cutover comparison screenshots
+        run: node scripts/migration/capture.mjs
       - name: Dependency advisory audit
         run: npm audit --json > test-results/dependency-audit.json
       - name: Bind evidence to commit

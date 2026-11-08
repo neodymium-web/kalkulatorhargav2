@@ -1,0 +1,15 @@
+{
+  "id": "dpl_kk6BZ55DrPg8hrnTovFjgWvkeJiJ",
+  "state": "READY",
+  "target": "production",
+  "url": "kalkulator-bhpsnup7e-neodymium-vercel.vercel.app",
+  "projectId": "prj_OtNkapBGqShbDEludYl1Ea5QoLz9",
+  "aliases": [
+    "www.kalkulatorharga.com",
+    "kalkulatorharga.com",
+    "kalkulator-gold-xi.vercel.app",
+    "kalkulator-neodymium-vercel.vercel.app"
+  ],
+  "source": "cli",
+  "observedAtUtc": "2026-11-08 10:54:31 UTC"
+}

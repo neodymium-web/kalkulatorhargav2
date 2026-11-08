@@ -10,7 +10,7 @@ import layout from './ui/layout.module.css'
 const pageSize = 12
 
 function ToolCard({ tool }: { tool: DirectoryEntry }) {
-  return <Link className={styles.card} href={tool.path}>
+  return <Link className={styles.card} href={tool.path} prefetch={false}>
     <span className={styles.category}>{tool.categories[0]}</span>
     <strong>{tool.name}</strong>
     <span>{tool.description}</span>

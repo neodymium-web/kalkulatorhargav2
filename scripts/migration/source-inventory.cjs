@@ -1,0 +1,5 @@
+require('../audit/runtime.cjs')
+const fs=require('node:fs'),{listPublished}=require('../../lib/registry.ts')
+const rows=listPublished().map(t=>({id:t.id,path:t.path,category:t.primaryCategory,formulaVersion:t.implementation.formulaVersion,scope:t.metadata.description,sources:t.officialSources,audit53LegalReverification:'NOT_PERFORMED: source inventory carries existing batch provenance; no legislation/rates expanded',ownerFollowUp:t.primaryCategory==='pajak'?'Human legal review, region/date/classification and full facts; held states remain':'Validate input assumptions; manual tariffs/RPM are not official',physicalDeviceStatus:'UNKNOWN: Chromium/WebKit emulation is not physical iOS/Android'}))
+fs.writeFileSync('docs/audit/cutover/source-scope-inventory.json',JSON.stringify(rows,null,2)+'\n')
+console.log('Source scope inventory',rows.length)

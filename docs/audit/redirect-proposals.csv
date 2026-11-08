@@ -1,0 +1,3 @@
+source,destination,status,approved_for_production,rationale,evidence_url,scope
+/kalkulator,/,301,no,Existing calculator directory → v2 directory at root,https://www.kalkulatorharga.com/kalkulator,dry-run fixture only; never imported by Next config
+/kalkulator/saham/average,/kalkulator/rata-rata-beli-saham,301,no,Average purchase cost; review legacy break-even extras,https://www.kalkulatorharga.com/kalkulator/saham/average,dry-run fixture only; never imported by Next config
