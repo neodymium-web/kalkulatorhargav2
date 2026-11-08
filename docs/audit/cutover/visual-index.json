@@ -1,0 +1,522 @@
+[
+  {
+    "phase": "baseline",
+    "route": "home",
+    "width": 375,
+    "originalSha256": "d837e7d6199da6972f91290c6db7f3f3efa933f59d33c3b0312128b34d10793a",
+    "originalDimensions": [
+      375,
+      2813
+    ],
+    "sheet": "baseline/375-1.jpg",
+    "inspection": "INSPECTED 2026-11-08",
+    "notes": "Viewed actual initial viewport pixels in contact sheet; fullpage original separate; no clipping seen in inspected viewport. Not all fullpage pixels read."
+  },
+  {
+    "phase": "baseline",
+    "route": "bisnis",
+    "width": 375,
+    "originalSha256": "ca87bcb00ea856cf238be6691190082cba97cc8546cadc8a5b4215c3a4efe9d9",
+    "originalDimensions": [
+      375,
+      2606
+    ],
+    "sheet": "baseline/375-1.jpg",
+    "inspection": "INSPECTED 2026-11-08",
+    "notes": "Viewed actual initial viewport pixels in contact sheet; fullpage original separate; no clipping seen in inspected viewport. Not all fullpage pixels read."
+  },
+  {
+    "phase": "baseline",
+    "route": "marketplace",
+    "width": 375,
+    "originalSha256": "f41f3fdc5e1ebe3ebc42e251c92652ef14fe187388d1fd81a18d69942fee3ff0",
+    "originalDimensions": [
+      375,
+      2702
+    ],
+    "sheet": "baseline/375-1.jpg",
+    "inspection": "INSPECTED 2026-11-08",
+    "notes": "Viewed actual initial viewport pixels in contact sheet; fullpage original separate; no clipping seen in inspected viewport. Not all fullpage pixels read."
+  },
+  {
+    "phase": "baseline",
+    "route": "keuangan",
+    "width": 375,
+    "originalSha256": "fd2b3c79041d714979ad0ebbdfa8067ef7c7dd47952c22c20c35a7f247da4015",
+    "originalDimensions": [
+      375,
+      2726
+    ],
+    "sheet": "baseline/375-1.jpg",
+    "inspection": "INSPECTED 2026-11-08",
+    "notes": "Viewed actual initial viewport pixels in contact sheet; fullpage original separate; no clipping seen in inspected viewport. Not all fullpage pixels read."
+  },
+  {
+    "phase": "baseline",
+    "route": "pajak",
+    "width": 375,
+    "originalSha256": "0f5315621162d6c5eadcd93ea82137480e3bf0dc4ee1d0851d43e9f63c20e9f7",
+    "originalDimensions": [
+      375,
+      2760
+    ],
+    "sheet": "baseline/375-1.jpg",
+    "inspection": "INSPECTED 2026-11-08",
+    "notes": "Viewed actual initial viewport pixels in contact sheet; fullpage original separate; no clipping seen in inspected viewport. Not all fullpage pixels read."
+  },
+  {
+    "phase": "baseline",
+    "route": "media-sosial",
+    "width": 375,
+    "originalSha256": "0d7dfe9dc7d151068f3e8d42003ffcebdadec238820dec9076b81055c7701ec4",
+    "originalDimensions": [
+      375,
+      2328
+    ],
+    "sheet": "baseline/375-2.jpg",
+    "inspection": "INSPECTED 2026-11-08",
+    "notes": "Viewed actual initial viewport pixels in contact sheet; fullpage original separate; no clipping seen in inspected viewport. Not all fullpage pixels read."
+  },
+  {
+    "phase": "baseline",
+    "route": "sehari-hari",
+    "width": 375,
+    "originalSha256": "b625b49285a8f5f5aaa8fd531838797e63f485142485c5472e74a84993489b7a",
+    "originalDimensions": [
+      375,
+      2798
+    ],
+    "sheet": "baseline/375-2.jpg",
+    "inspection": "INSPECTED 2026-11-08",
+    "notes": "Viewed actual initial viewport pixels in contact sheet; fullpage original separate; no clipping seen in inspected viewport. Not all fullpage pixels read."
+  },
+  {
+    "phase": "baseline",
+    "route": "kalkulator-food-cost",
+    "width": 375,
+    "originalSha256": "4e22dd242e304970d7f760353554558881dc077cae5b7812eee364696de10181",
+    "originalDimensions": [
+      375,
+      4286
+    ],
+    "sheet": "baseline/375-2.jpg",
+    "inspection": "INSPECTED 2026-11-08",
+    "notes": "Viewed actual initial viewport pixels in contact sheet; fullpage original separate; no clipping seen in inspected viewport. Not all fullpage pixels read."
+  },
+  {
+    "phase": "baseline",
+    "route": "kalkulator-hpp",
+    "width": 375,
+    "originalSha256": "d4dff542194d4b4df20a3c785e6719ad4c22fbe1493af5019463ed01d3c636ce",
+    "originalDimensions": [
+      375,
+      4049
+    ],
+    "sheet": "baseline/375-2.jpg",
+    "inspection": "INSPECTED 2026-11-08",
+    "notes": "Viewed actual initial viewport pixels in contact sheet; fullpage original separate; no clipping seen in inspected viewport. Not all fullpage pixels read."
+  },
+  {
+    "phase": "baseline",
+    "route": "kalkulator-pph-final-umkm",
+    "width": 375,
+    "originalSha256": "edfd1300a86150250735ca4ff523a349563fd42cccaa61d02d205858d988e2df",
+    "originalDimensions": [
+      375,
+      9943
+    ],
+    "sheet": "baseline/375-2.jpg",
+    "inspection": "INSPECTED 2026-11-08",
+    "notes": "Viewed actual initial viewport pixels in contact sheet; fullpage original separate; no clipping seen in inspected viewport. Not all fullpage pixels read."
+  },
+  {
+    "phase": "baseline",
+    "route": "home",
+    "width": 1440,
+    "originalSha256": "d5d721e202814b97ac0f856415b701f752d5d97aca04f059e86841379b88116a",
+    "originalDimensions": [
+      1440,
+      1305
+    ],
+    "sheet": "baseline/1440-1.jpg",
+    "inspection": "INSPECTED 2026-11-08",
+    "notes": "Viewed actual initial viewport pixels in contact sheet; fullpage original separate; no clipping seen in inspected viewport. Not all fullpage pixels read."
+  },
+  {
+    "phase": "baseline",
+    "route": "bisnis",
+    "width": 1440,
+    "originalSha256": "ec7c68b89a1b4c9780cc0192ac041a32d5b6d5e94a607a6c667a9cfda3865cca",
+    "originalDimensions": [
+      1440,
+      1142
+    ],
+    "sheet": "baseline/1440-1.jpg",
+    "inspection": "INSPECTED 2026-11-08",
+    "notes": "Viewed actual initial viewport pixels in contact sheet; fullpage original separate; no clipping seen in inspected viewport. Not all fullpage pixels read."
+  },
+  {
+    "phase": "baseline",
+    "route": "marketplace",
+    "width": 1440,
+    "originalSha256": "32c3cd5873054c02a778e09fecef19c22110ba680333e567771395667a7a3d11",
+    "originalDimensions": [
+      1440,
+      1190
+    ],
+    "sheet": "baseline/1440-1.jpg",
+    "inspection": "INSPECTED 2026-11-08",
+    "notes": "Viewed actual initial viewport pixels in contact sheet; fullpage original separate; no clipping seen in inspected viewport. Not all fullpage pixels read."
+  },
+  {
+    "phase": "baseline",
+    "route": "keuangan",
+    "width": 1440,
+    "originalSha256": "c4cfed0e17a1d6bf029f0bd2360c4e6946bcfd02ea58524d060d5f44b654ed52",
+    "originalDimensions": [
+      1440,
+      1190
+    ],
+    "sheet": "baseline/1440-1.jpg",
+    "inspection": "INSPECTED 2026-11-08",
+    "notes": "Viewed actual initial viewport pixels in contact sheet; fullpage original separate; no clipping seen in inspected viewport. Not all fullpage pixels read."
+  },
+  {
+    "phase": "baseline",
+    "route": "pajak",
+    "width": 1440,
+    "originalSha256": "99301ee512300c00b3ef32c8de55f01071fc7802ee481c16c539f857431a0b15",
+    "originalDimensions": [
+      1440,
+      1294
+    ],
+    "sheet": "baseline/1440-1.jpg",
+    "inspection": "INSPECTED 2026-11-08",
+    "notes": "Viewed actual initial viewport pixels in contact sheet; fullpage original separate; no clipping seen in inspected viewport. Not all fullpage pixels read."
+  },
+  {
+    "phase": "baseline",
+    "route": "media-sosial",
+    "width": 1440,
+    "originalSha256": "8d43872089b2a9ec16122ea466a24f1e31c03f78574420e16b6eb32fbc9c6608",
+    "originalDimensions": [
+      1440,
+      1126
+    ],
+    "sheet": "baseline/1440-2.jpg",
+    "inspection": "INSPECTED 2026-11-08",
+    "notes": "Viewed actual initial viewport pixels in contact sheet; fullpage original separate; no clipping seen in inspected viewport. Not all fullpage pixels read."
+  },
+  {
+    "phase": "baseline",
+    "route": "sehari-hari",
+    "width": 1440,
+    "originalSha256": "6d8d2ea1d75d392168e845019243c177787f78ce561e06aa422941d818501929",
+    "originalDimensions": [
+      1440,
+      1214
+    ],
+    "sheet": "baseline/1440-2.jpg",
+    "inspection": "INSPECTED 2026-11-08",
+    "notes": "Viewed actual initial viewport pixels in contact sheet; fullpage original separate; no clipping seen in inspected viewport. Not all fullpage pixels read."
+  },
+  {
+    "phase": "baseline",
+    "route": "kalkulator-food-cost",
+    "width": 1440,
+    "originalSha256": "6369d69deb96f1f9023ca21f63f63da25146c11a8b412687f60ba209a2d4ca4c",
+    "originalDimensions": [
+      1440,
+      2508
+    ],
+    "sheet": "baseline/1440-2.jpg",
+    "inspection": "INSPECTED 2026-11-08",
+    "notes": "Viewed actual initial viewport pixels in contact sheet; fullpage original separate; no clipping seen in inspected viewport. Not all fullpage pixels read."
+  },
+  {
+    "phase": "baseline",
+    "route": "kalkulator-hpp",
+    "width": 1440,
+    "originalSha256": "84b473ee74e9a09280070c50efcd0ec5d6822f2add45e432f708c2f19235249f",
+    "originalDimensions": [
+      1440,
+      2158
+    ],
+    "sheet": "baseline/1440-2.jpg",
+    "inspection": "INSPECTED 2026-11-08",
+    "notes": "Viewed actual initial viewport pixels in contact sheet; fullpage original separate; no clipping seen in inspected viewport. Not all fullpage pixels read."
+  },
+  {
+    "phase": "baseline",
+    "route": "kalkulator-pph-final-umkm",
+    "width": 1440,
+    "originalSha256": "3d50d2bac95309106af7e8a5e3406bf7d9eb926fef894c8544982bf85ff861dd",
+    "originalDimensions": [
+      1440,
+      6295
+    ],
+    "sheet": "baseline/1440-2.jpg",
+    "inspection": "INSPECTED 2026-11-08",
+    "notes": "Viewed actual initial viewport pixels in contact sheet; fullpage original separate; no clipping seen in inspected viewport. Not all fullpage pixels read."
+  },
+  {
+    "phase": "candidate",
+    "route": "home",
+    "width": 375,
+    "originalSha256": "257998738df4de108ba3752c983c3b9c0fb10024b3dd3fabbc25c1ec4e427739",
+    "originalDimensions": [
+      375,
+      2837
+    ],
+    "sheet": "candidate/375-1.jpg",
+    "inspection": "INSPECTED 2026-11-08",
+    "notes": "Viewed actual initial viewport pixels in contact sheet; fullpage original separate; no clipping seen in inspected viewport. Not all fullpage pixels read. Intro now names100tools/six categories."
+  },
+  {
+    "phase": "candidate",
+    "route": "bisnis",
+    "width": 375,
+    "originalSha256": "11d99ee9cc55a26b12ac29f23815c07e1804179df1b63bec8be0d1352136047a",
+    "originalDimensions": [
+      375,
+      2715
+    ],
+    "sheet": "candidate/375-1.jpg",
+    "inspection": "INSPECTED 2026-11-08",
+    "notes": "Viewed actual initial viewport pixels in contact sheet; fullpage original separate; no clipping seen in inspected viewport. Not all fullpage pixels read. Intro now covers cost/profit/cash/inventory/services."
+  },
+  {
+    "phase": "candidate",
+    "route": "marketplace",
+    "width": 375,
+    "originalSha256": "66bb66cd401e5511f97134eadcb85c779457d665f2562ad88de85dcc5668fa20",
+    "originalDimensions": [
+      375,
+      2787
+    ],
+    "sheet": "candidate/375-1.jpg",
+    "inspection": "INSPECTED 2026-11-08",
+    "notes": "Viewed actual initial viewport pixels in contact sheet; fullpage original separate; no clipping seen in inspected viewport. Not all fullpage pixels read."
+  },
+  {
+    "phase": "candidate",
+    "route": "keuangan",
+    "width": 375,
+    "originalSha256": "db019b13bfa1c0957996ba0a081074d2cb1cce2f2a642353c4fd9fb7e311315c",
+    "originalDimensions": [
+      375,
+      2811
+    ],
+    "sheet": "candidate/375-1.jpg",
+    "inspection": "INSPECTED 2026-11-08",
+    "notes": "Viewed actual initial viewport pixels in contact sheet; fullpage original separate; no clipping seen in inspected viewport. Not all fullpage pixels read."
+  },
+  {
+    "phase": "candidate",
+    "route": "pajak",
+    "width": 375,
+    "originalSha256": "65dac42883df84d232d9d54a6b6227efd05e457ffedc472c2198aed37cac3deb",
+    "originalDimensions": [
+      375,
+      2893
+    ],
+    "sheet": "candidate/375-1.jpg",
+    "inspection": "INSPECTED 2026-11-08",
+    "notes": "Viewed actual initial viewport pixels in contact sheet; fullpage original separate; no clipping seen in inspected viewport. Not all fullpage pixels read. Final Pajak intro re-viewed375/1440: readable spaces and unchanged scope qualifiers."
+  },
+  {
+    "phase": "candidate",
+    "route": "media-sosial",
+    "width": 375,
+    "originalSha256": "fd00b222929790f6f0e3b107e1c762953959c9565f209626ef1194cc9f106080",
+    "originalDimensions": [
+      375,
+      2413
+    ],
+    "sheet": "candidate/375-2.jpg",
+    "inspection": "INSPECTED 2026-11-08",
+    "notes": "Viewed actual initial viewport pixels in contact sheet; fullpage original separate; no clipping seen in inspected viewport. Not all fullpage pixels read."
+  },
+  {
+    "phase": "candidate",
+    "route": "sehari-hari",
+    "width": 375,
+    "originalSha256": "8bc8830e5b78739a7ce1b1b3edf07bb18fd07a2feda8f132dcb73b8171abc380",
+    "originalDimensions": [
+      375,
+      2883
+    ],
+    "sheet": "candidate/375-2.jpg",
+    "inspection": "INSPECTED 2026-11-08",
+    "notes": "Viewed actual initial viewport pixels in contact sheet; fullpage original separate; no clipping seen in inspected viewport. Not all fullpage pixels read."
+  },
+  {
+    "phase": "candidate",
+    "route": "kalkulator-food-cost",
+    "width": 375,
+    "originalSha256": "4e22dd242e304970d7f760353554558881dc077cae5b7812eee364696de10181",
+    "originalDimensions": [
+      375,
+      4286
+    ],
+    "sheet": "candidate/375-2.jpg",
+    "inspection": "INSPECTED 2026-11-08",
+    "notes": "Viewed actual initial viewport pixels in contact sheet; fullpage original separate; no clipping seen in inspected viewport. Not all fullpage pixels read."
+  },
+  {
+    "phase": "candidate",
+    "route": "kalkulator-hpp",
+    "width": 375,
+    "originalSha256": "d4dff542194d4b4df20a3c785e6719ad4c22fbe1493af5019463ed01d3c636ce",
+    "originalDimensions": [
+      375,
+      4049
+    ],
+    "sheet": "candidate/375-2.jpg",
+    "inspection": "INSPECTED 2026-11-08",
+    "notes": "Viewed actual initial viewport pixels in contact sheet; fullpage original separate; no clipping seen in inspected viewport. Not all fullpage pixels read."
+  },
+  {
+    "phase": "candidate",
+    "route": "kalkulator-pph-final-umkm",
+    "width": 375,
+    "originalSha256": "29fd5ff360f5d4d459030bf56537b2685de4674992c2bf6e780d4b02e5a06422",
+    "originalDimensions": [
+      375,
+      9946
+    ],
+    "sheet": "candidate/375-2.jpg",
+    "inspection": "INSPECTED 2026-11-08",
+    "notes": "Viewed actual initial viewport pixels in contact sheet; fullpage original separate; no clipping seen in inspected viewport. Not all fullpage pixels read. Dates/numeric hints now separated with spaces; qualifiers preserved."
+  },
+  {
+    "phase": "candidate",
+    "route": "home",
+    "width": 1440,
+    "originalSha256": "12fc67f0d749acd239236f9e365061e8c3c719afeb84ebce8f7394f7bb93fb3b",
+    "originalDimensions": [
+      1440,
+      1329
+    ],
+    "sheet": "candidate/1440-1.jpg",
+    "inspection": "INSPECTED 2026-11-08",
+    "notes": "Viewed actual initial viewport pixels in contact sheet; fullpage original separate; no clipping seen in inspected viewport. Not all fullpage pixels read. Intro now names100tools/six categories."
+  },
+  {
+    "phase": "candidate",
+    "route": "bisnis",
+    "width": 1440,
+    "originalSha256": "406b423eff6cadea4621027bd61611375307cd96b7598c73a682176eac7dcc38",
+    "originalDimensions": [
+      1440,
+      1251
+    ],
+    "sheet": "candidate/1440-1.jpg",
+    "inspection": "INSPECTED 2026-11-08",
+    "notes": "Viewed actual initial viewport pixels in contact sheet; fullpage original separate; no clipping seen in inspected viewport. Not all fullpage pixels read. Intro now covers cost/profit/cash/inventory/services."
+  },
+  {
+    "phase": "candidate",
+    "route": "marketplace",
+    "width": 1440,
+    "originalSha256": "903ac7de152c56bcf6e586c3bcc268f64ad4957b0985397b652c1a67ce2d8ee7",
+    "originalDimensions": [
+      1440,
+      1275
+    ],
+    "sheet": "candidate/1440-1.jpg",
+    "inspection": "INSPECTED 2026-11-08",
+    "notes": "Viewed actual initial viewport pixels in contact sheet; fullpage original separate; no clipping seen in inspected viewport. Not all fullpage pixels read."
+  },
+  {
+    "phase": "candidate",
+    "route": "keuangan",
+    "width": 1440,
+    "originalSha256": "b5b68d91ae39c35612460da4974c3662a9d238348cfe241944e831389905a276",
+    "originalDimensions": [
+      1440,
+      1275
+    ],
+    "sheet": "candidate/1440-1.jpg",
+    "inspection": "INSPECTED 2026-11-08",
+    "notes": "Viewed actual initial viewport pixels in contact sheet; fullpage original separate; no clipping seen in inspected viewport. Not all fullpage pixels read."
+  },
+  {
+    "phase": "candidate",
+    "route": "pajak",
+    "width": 1440,
+    "originalSha256": "f5f0b27687710ae2cbef686c1ee3eefd4045dd17f950eea2d717fcb0d6bf18ca",
+    "originalDimensions": [
+      1440,
+      1379
+    ],
+    "sheet": "candidate/1440-1.jpg",
+    "inspection": "INSPECTED 2026-11-08",
+    "notes": "Viewed actual initial viewport pixels in contact sheet; fullpage original separate; no clipping seen in inspected viewport. Not all fullpage pixels read. Final Pajak intro re-viewed375/1440: readable spaces and unchanged scope qualifiers."
+  },
+  {
+    "phase": "candidate",
+    "route": "media-sosial",
+    "width": 1440,
+    "originalSha256": "76a3bd4a8ad7dddb209fcdc76531f6d74a4372224550f5d2cf73570d77fae42d",
+    "originalDimensions": [
+      1440,
+      1211
+    ],
+    "sheet": "candidate/1440-2.jpg",
+    "inspection": "INSPECTED 2026-11-08",
+    "notes": "Viewed actual initial viewport pixels in contact sheet; fullpage original separate; no clipping seen in inspected viewport. Not all fullpage pixels read."
+  },
+  {
+    "phase": "candidate",
+    "route": "sehari-hari",
+    "width": 1440,
+    "originalSha256": "61a46c3e64abd304bd9bba86f9552e56182ca49b292db7a97d695251f509d57e",
+    "originalDimensions": [
+      1440,
+      1299
+    ],
+    "sheet": "candidate/1440-2.jpg",
+    "inspection": "INSPECTED 2026-11-08",
+    "notes": "Viewed actual initial viewport pixels in contact sheet; fullpage original separate; no clipping seen in inspected viewport. Not all fullpage pixels read."
+  },
+  {
+    "phase": "candidate",
+    "route": "kalkulator-food-cost",
+    "width": 1440,
+    "originalSha256": "6369d69deb96f1f9023ca21f63f63da25146c11a8b412687f60ba209a2d4ca4c",
+    "originalDimensions": [
+      1440,
+      2508
+    ],
+    "sheet": "candidate/1440-2.jpg",
+    "inspection": "INSPECTED 2026-11-08",
+    "notes": "Viewed actual initial viewport pixels in contact sheet; fullpage original separate; no clipping seen in inspected viewport. Not all fullpage pixels read."
+  },
+  {
+    "phase": "candidate",
+    "route": "kalkulator-hpp",
+    "width": 1440,
+    "originalSha256": "84b473ee74e9a09280070c50efcd0ec5d6822f2add45e432f708c2f19235249f",
+    "originalDimensions": [
+      1440,
+      2158
+    ],
+    "sheet": "candidate/1440-2.jpg",
+    "inspection": "INSPECTED 2026-11-08",
+    "notes": "Viewed actual initial viewport pixels in contact sheet; fullpage original separate; no clipping seen in inspected viewport. Not all fullpage pixels read."
+  },
+  {
+    "phase": "candidate",
+    "route": "kalkulator-pph-final-umkm",
+    "width": 1440,
+    "originalSha256": "e1b341511d6dd5519876394ca7163a7284f090b2c39062ca5dbdf3ff06ff22e8",
+    "originalDimensions": [
+      1440,
+      6295
+    ],
+    "sheet": "candidate/1440-2.jpg",
+    "inspection": "INSPECTED 2026-11-08",
+    "notes": "Viewed actual initial viewport pixels in contact sheet; fullpage original separate; no clipping seen in inspected viewport. Not all fullpage pixels read. Dates/numeric hints now separated with spaces; qualifiers preserved."
+  }
+]

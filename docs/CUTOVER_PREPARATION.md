@@ -1,3 +1,32 @@
+# Hasil persiapan cutover dan baseline
+
+**CONDITIONAL GO untuk persiapan/review; NO-GO untuk eksekusi cutover.** Baseline main `ec4bdb2b42ca7db16eea9ee74b1a7a23c5db5a44`. Commit pertama khusus rencana dokumentasi; rencana asli tetap di bagian bawah dan riwayat Git. Domain/production/DNS/alias/canonical/indexing staging tidak diubah.
+
+## Hasil dan bukti baru
+
+- Perbaikan P2: disclosure native berisi tautan SSR lengkap di setiap hub; favicon asli motif project; intro home/Bisnis dan spasi copy pajak; prefetch yang terukur tidak berguna dibatasi; Referrer-Policy/nosniff dan CSP report-only. Search, Muat lebih banyak, URL,100title/ID/status dan semua matematika tetap. Fingerprint empat file pajak hanya berbeda whitespace dalam string.
+- Crawl HTML actual dari root saja mencapai107/107 tanpa JS/sitemap. [Graph](audit/cutover/ssr-graph.json) dan tes BFS terpisah tidak mengandalkan daftar registry sebagai sumber URL traversal. Expected107 hanya dipakai untuk membandingkan hasil akhir.
+- Survey legacy GET publik:37respons,32halaman HTML unik pada hostwww,32sitemaploc. Apex308→www lalu200; robots legacy Allow:/ dengan pengecualian API/studio. Concurrency1,jeda350ms,UTC/hash/redirectchain/metadata direkam. Satu body-read timeout pada percobaan awal ditangani lewat checkpoint; survey selesai tanpa403/429 atau antrean tertinggal. Tidak membaca API/studio atau membypass akses.
+- [Legacy inventory37baris](audit/legacy-url-inventory.csv), [107target map](audit/cutover-url-map.csv), [dua redirect proposal](audit/redirect-proposals.csv).107mapping memuat5preserve,1redirect-target,101provisional new; root juga menerima usulan alias directory `/kalkulator`. Kedua proposal301 hanya fixture localhost, belum disetujui/diaktifkan. TikTok kreator dan seller tetap terpisah.
+-25halaman legacy tidak memiliki padanan aman: inventory menandai manual-review. Tidak diarahkan ke root secara massal. Ini blocker cutover sampai ada retensi/porting/keputusan owner.101new berarti tidak teramati dalam survey publik, bukan bukti tidak pernah indexed.
+- Metadata assignment Vercel read-only membuktikan custom domain masih di project legacy berbeda dari v2; [observasi sanitasi](audit/cutover/domain-observations.json). Registrar/DNS ownership dan GSC/GA4/backlinks tetap UNKNOWN. Legacy deployment dilihat READY; operator tetap wajib re-verify pada hari cutover.
+- [Perbandingan performa](audit/cutover/PERFORMANCE_COMPARISON.md):3run valid per route/fase dengan protokol sama, bukan single lucky run. Home transfer turun47,6%,food-cost3,8%; median LCP hampir sama dan satu run food-cost final2718ms. AR-003 tetap PARTIAL, tidak menjamin CWV lapangan.
+- [Register P2/blocker](audit/cutover/P2_DISPOSITIONS.md), [source/device follow-up100alat](audit/cutover/SOURCE_AND_DEVICE_FOLLOWUPS.md) dan [runbook cutover/rollback DRAFT](DOMAIN_CUTOVER_RUNBOOK_DRAFT.md). Tidak mengeksekusi runbook.
+
+## Verifikasi dan batas
+
+Node22 clean install,typecheck,unit dan build dijalankan pada branch. Suite final,CI,artifact dan Preview READY exact head dirujuk dalam PR agar dokumen tidak mengklaim SHA dirinya sendiri. Unit mencakup1316tes setelah penambahan9regresi; browser target adalah seluruh707tes aktif +1skip lama,11WebKit,noJS100form×2project,5width serta payload/SEO/rounding yang sudah ada. Hasil lokal/CI harus dilaporkan sesuai run aktual, bukan target ini dianggap kelulusan.
+
+Percobaan pertama unit/browser mendeteksi label lama seperti PPh23/Pasal17/nominal11% setelah spasi diperbaiki; hanya expected text diperbarui, assertion nominal/hukum tidak dilonggarkan. Eksperimen dynamic import seluruh form dibatalkan karena transfer food-cost bertambah. Invalid Lighthouse NO_NAVSTART dipisahkan dari run valid; protokol final fresh browser mengulang baseline dan kandidat. Capture yang memakai halaman berulang dan menghasilkan artefak piksel dibuang; final capture memakai halaman baru perURL, font siap dan dua animation frame sebelum snapshot.
+
+Screenshot sebelum berasal dari build main terisolasi; kandidat dari build final.40viewportframe (10halaman×2device×2fase) benar-benar dilihat melalui contact sheet, ditambah navigasi disclosure noJS. Contactsheet adalah crop viewport awal, bukan klaim semua piksel fullpage sudah dibaca; original candidate fullpage tersedia pada artifact CI `cutover-visual/candidate`. Hash/dimensi/catatan lokal berada di [visual-index](audit/cutover/visual-index.json); contact sheets baseline ikut artifact. Rendering CI dapat berbeda dari hash lokal. Perangkat fisik/field CWV/SEO traffic tidak diganti dengan emulasi/lab.
+
+Akses Preview Issue53 yang terlindungi memerlukan izin spesifik jika konektor membuat sharelink23jam. Izin PR52 tidak otomatis dipakai untuk deployment baru. Pemeriksaan anonim302SSO hanya membuktikan edge protection/noindex, bukan body app. Status verifikasi actual Preview final dicatat dalam PR setelah akses disetujui; proteksi tidak dinonaktifkan.
+
+Approval cutover harus instruksi user baru yang lengkap: SHA,project IDs,hostname,perubahan domain/DNS/alias yang persis,indexing,window dan operator/rollback. Temuan25URLlegacy,host policy,eksporGSC/GA4 serta QA manusia wajib ditutup/diterima sebelum owner dapat menilai launch. PR ini tidak mengizinkan merge/auto-merge atau cutover.
+
+## Rencana beku pada commit pertama (riwayat)
+
 # Persiapan cutover: rencana dan baseline beku
 
 Issue #53. Baseline immutable: `main@ec4bdb2b42ca7db16eea9ee74b1a7a23c5db5a44`. Tanggal: 8 November 2026 (Asia/Jakarta). Branch `fix/issue-53-cutover-preparation`. Commit pertama ini khusus dokumentasi rencana, belum menyatakan pengujian atau remediasi lulus.
