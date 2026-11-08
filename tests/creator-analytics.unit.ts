@@ -191,10 +191,10 @@ describe('creator validation and integration', () => {
     expect(formatCreator(0n, 'hours', 'positive')).toContain('<0,01 jam'); expect(formatCreator(0n, 'pp', 'negative')).toContain('negatif'); expect(formatCreator(null, '%')).toContain('Tidak terdefinisi')
   })
   it('publishes exactly five reserved entries and preserves distinct TikTok seller intent', () => {
-    expect(listPublished()).toHaveLength(86); expect(listCategory('media-sosial')).toHaveLength(10); expect(listCategoryHubs()).toHaveLength(5); expect(sitemapPaths()).toHaveLength(92)
+    expect(listPublished()).toHaveLength(91); expect(listCategory('media-sosial')).toHaveLength(10); expect(listCategoryHubs()).toHaveLength(6); expect(sitemapPaths()).toHaveLength(98)
     expect(listCategory('bisnis')).toHaveLength(20); expect(listCategory('marketplace')).toHaveLength(16); expect(listCategory('keuangan')).toHaveLength(20)
     expect(findPublished('tiktok')?.id).toBe('calc-estimasi-tiktok-kreator'); expect(findPublished('tiktok-shop')).toBeUndefined(); expect(findPublished('shopee')).toBeUndefined()
     const rows = readFileSync(new URL('../docs/CALCULATOR_INVENTORY.md', import.meta.url), 'utf8').split('\n').filter(l => /^\| (production-cost|calc-)/.test(l)).map(l => l.split('|').map(x => x.trim()))
-    expect(rows).toHaveLength(100); expect(new Set(rows.map(x => x[1])).size).toBe(100); expect(rows.filter(x => x[10] === 'published')).toHaveLength(86)
+    expect(rows).toHaveLength(100); expect(new Set(rows.map(x => x[1])).size).toBe(100); expect(rows.filter(x => x[10] === 'published')).toHaveLength(91)
   })
 })

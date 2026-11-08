@@ -1,3 +1,5 @@
+import { taxTools, type TaxSlug, type TaxTool } from './tax/tools'
+import { taxSources, taxSnapshot } from './tax/sources'
 import { economicsTools, type EconomicsSlug, type EconomicsTool } from './marketplace-economics/tools'
 import { economicsSources } from './marketplace-economics/sources'
 import { unitsTools, type UnitsSlug, type UnitsTool } from './units-scale/tools'
@@ -279,6 +281,15 @@ const economicsDefinitions = (Object.keys(economicsTools) as EconomicsSlug[]).ma
   }
 })
 
+const taxDefinitions = (Object.keys(taxTools) as TaxSlug[]).map((slug): PublishedCalculator => {
+  const tool: TaxTool = taxTools[slug]
+  return { id: `calc-${slug}`, slug, path: `/kalkulator/${slug}`, primaryCategory: 'pajak', secondaryCategories: [],
+    metadata: { locale: 'id-ID', title: tool.title, description: tool.description, keywords: tool.keywords },
+    inputFields: [...tool.inputFields, ...(tool.rows ? [{ id: tool.rows, label: 'Omzet dua belas bulan', type: 'array' as const }] : [])], outputFields: [{ id: 'amount', label: 'Estimasi pajak atau status kelayakan', type: 'integer', unit: 'IDR' }],
+    officialSources: tool.sources.map(s => ({ title: taxSources[s].title, url: taxSources[s].url, effectiveDate: taxSources[s].effectiveFrom, verifiedAt: taxSnapshot.verifiedAt, version: taxSnapshot.version })), status: 'published',
+    implementation: { engine: tool.engine, formulaVersion: slug === 'pph-final-umkm' ? '1.1.0' : '1.0.0', testCases: [{ file: 'tests/tax.unit.ts', name: tool.testCase }] } }
+})
+
 export const definitions: readonly CalculatorDefinition[] = [{
   id: 'production-cost',
   slug: 'hpp',
@@ -314,7 +325,7 @@ export const definitions: readonly CalculatorDefinition[] = [{
       { file: 'tests/hpp.unit.ts', name: 'rejects invalid cost %s' },
     ],
   },
-}, ...businessDefinitions, ...operationDefinitions, ...stockServiceDefinitions, ...batchFourDefinitions, ...metricDefinitions, ...sellerDefinitions, ...financeDefinitions, ...investmentDefinitions, ...valuationDefinitions, ...scenarioDefinitions, ...socialDefinitions, ...creatorDefinitions, ...everydayDefinitions, ...calendarDefinitions, ...materialsDefinitions, ...unitsDefinitions, ...economicsDefinitions]
+}, ...businessDefinitions, ...operationDefinitions, ...stockServiceDefinitions, ...batchFourDefinitions, ...metricDefinitions, ...sellerDefinitions, ...financeDefinitions, ...investmentDefinitions, ...valuationDefinitions, ...scenarioDefinitions, ...socialDefinitions, ...creatorDefinitions, ...everydayDefinitions, ...calendarDefinitions, ...materialsDefinitions, ...unitsDefinitions, ...economicsDefinitions, ...taxDefinitions]
 
 export function listPublished(records = definitions): PublishedCalculator[] {
   return records.filter(tool => tool.status === 'published')

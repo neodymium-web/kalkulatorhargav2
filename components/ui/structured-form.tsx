@@ -8,7 +8,7 @@ export type StructuredTool = {
   inputFields: readonly BatchField[]
   rowFields?: readonly BatchField[]
   rows?: string
-  rowConfig?: { name: string; label: string; startIndex?: number; max: number; min?: number; limitLabel?: string }
+  rowConfig?: { name: string; label: string; startIndex?: number; max: number; min?: number; limitLabel?: string; fixed?: boolean }
   hint: string
 }
 type Control = BatchField & { name: string; htmlId: string }
@@ -146,22 +146,22 @@ export function StructuredForm({
                     onChoice={conditionalRows && field.options ? value => setRowChoices(previous => ({ ...previous, [rows[index]]: { ...previous[rows[index]], [field.id]: value } })) : undefined} />
                 ))}
               </div>
-              <Button
+              {!tool.rowConfig?.fixed && <Button
                 className={styles.remove}
                 variant="text"
                 disabled={rows.length <= rowMinimum}
                 onClick={() => removeRow(index)}
               >
                 Hapus {rowName} {index + rowStart}
-              </Button>
+              </Button>}
             </fieldset>
           ))}
-          <Button id={addId} variant="secondary" disabled={rows.length >= rowLimit} onClick={addRow}>
+          {!tool.rowConfig?.fixed && <><Button id={addId} variant="secondary" disabled={rows.length >= rowLimit} onClick={addRow}>
             Tambah {rowName}
           </Button>
           <p className={styles.hint}>
             Maksimal {rowLimit} {tool.rowConfig?.limitLabel ?? rowName}.
-          </p>
+          </p></>}
         </>
       )}
     </CalculatorForm>

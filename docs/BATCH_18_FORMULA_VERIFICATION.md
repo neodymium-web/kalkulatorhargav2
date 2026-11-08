@@ -1,0 +1,81 @@
+# Verifikasi hukum dan rumus Pajak Batch 18
+
+Tanggal pemeriksaan 8 November 2026 (UTC 7 November 2026), basis main `5b32618aa22852adc81233203f78253f3b3ebc05`. Versi model/data 1.0.0. Commit pertama hanya dokumen ini. Ini estimasi dengan cakupan terbatas, bukan penetapan pajak, faktur, SPT, atau nasihat hukum. Tidak menggunakan tanggal sistem untuk memilih rezim. Snapshot tanggal transaksi berakhir pada tanggal verifikasi 2026-11-08 sebagai batas cakupan aplikasi, bukan tanggal peraturan dicabut.
+
+## Sumber primer yang benar-benar dibuka
+
+1. [PP20/2026 salinan JDIH, 23 halaman termasuk penjelasan](https://jdih.kemenkeu.go.id/api/download/d057ff82-50e7-4127-b66b-f704a36f071d/2026pp020.pdf). Dibuka dan diperiksa pasal perubahan, peralihan dan contoh penjelasan; dicocokkan dengan [teks DJP](https://pajak.go.id/id/peraturan/perubahan-atas-peraturan-pemerintah-nomor-55-tahun-2022-tentang-penyesuaian-pengaturan-di). Pasal II angka2 dan pengundangan halaman11: berlaku22April2026. Mengubah PP55/2022 Pasal56–58 dan menghapus59. Tarif56(2) tetap0,5%. Pasal57(1) OP/PTperorangan/koperasi;57(2) pengecualian, penggabungan OP/perseroan, koperasi4tahun;58 basis tahun sebelumnya termasuk usaha/pekerjaan bebas/final/nonfinal/luar negeri dan penggabungan keluarga. Pasal II angka1(a–f) mempunyai peralihan yang tidak boleh diganti hanya dengan label badan. JDIH summary berlabel AI tidak dipakai sebagai otoritas.
+2. PDF DJP bernama [Peraturan Pemerintah nomor20Tahun2026](https://www.pajak.go.id/sites/default/files/2026-06/Peraturan%20Pemerintah%20nomor%2020%20Tahun%202026.pdf) benar-benar dibuka: **materi sosialisasi P2Humas versi20260605, bukan naskah PP**. Tidak diperlakukan sebagai pengganti salinan primer.
+3. [PP55/2022 teks primer DJP](https://www.pajak.go.id/id/peraturan/penyesuaian-pengaturan-di-bidang-pajak-penghasilan), khusus Pasal60–63 yang tidak diubah PP20: pengecualian kumulatif500juta hanya OP; dasar sebelum diskon;61(1) tetap final sampai akhir tahun ketika omzet tahun berjalan menembus4,8miliar. Aplikasi mengambil pilihan konservatif menahan hasil di atas batas ini, bukan menyatakan hak final berhenti di bulan pelampauan. Effective20Des2022; ketentuan kelayakan lama tidak dipakai tanpa perubahan2026.
+4. [UU7/2021 teks primer DJP](https://www.pajak.go.id/en/node/74838) dibuka pada pemeriksaan tambahan sebelum memperluas skenario2024: BabIV perubahan UUPPN Pasal7/8A nominal11% efektif1April2022, kemudian12% paling lambat1Jan2025. Skenario umum2024 memakai11% dasar penuh; bukan DPP/besaran khusus.
+
+   [PMK131/2024 teks primer DJP](https://www.pajak.go.id/id/peraturan/perlakuan-pajak-pertambahan-nilai-atas-impor-barang-kena-pajak-penyerahan-barang-kena), Pasal2–6; berlaku1Jan2025. Pasal2 barang mewah yang dikenai PPnBM:12% dasar penuh; Pasal3 selain itu memakai12%×11/12. Pasal5 khusus penyerahan mewah kepada konsumen akhir Jan2025 masih11/12, mulai1Feb dasar penuh. Pasal4 mengecualikan rezim DPP/besaran tertentu tersendiri. PDF JDIH131 yang dicoba502; teks DJP berhasil, tidak mengklaim PDF berhasil.
+5. [PMK11/2025 teks primer DJP](https://www.pajak.go.id/id/peraturan/ketentuan-nilai-lain-sebagai-dasar-pengenaan-pajak-dan-besaran-tertentu-pajak-pertambahan) dan [PMK53/2025 perubahan](https://www.pajak.go.id/index.php/id/peraturan/perubahan-atas-peraturan-menteri-keuangan-nomor-11-tahun-2025-tentang-ketentuan-nilai), serta [siaran pers PDF SP4/2025 delapan halaman](https://www.pajak.go.id/sites/default/files/2025-02/SP-4%20PEMERINTAH%20TERBITKAN%20ATURAN%20DPP%20NILAI%20LAIN%20DAN%20BESARAN%20TERTENTU%20PPN.pdf) benar-benar dibuka. PMK11 berlaku4Feb2025, PMK53 berlaku1Agu2025; riwayat JDIH juga menunjukkan perubahan administrasi PMK1/2026. **Tidak mengotomatisasi rezim khusus** (kripto, emas, agen, voucher, pemakaian sendiri, penyerahan cuma-cuma, DTP dan lainnya), sehingga tidak menyalin tarif generik11% ke kelas tersebut.
+6. [UU36/2008 teks primer DJP Pasal23](https://pajak.go.id/id/undang-undang-nomor-36-tahun-2008), effective1Jan2009;23(1) tarif2%/15%,23(1a) tarif100% lebih tinggi tanpa NPWP,23(4) pengecualian. Dicocokkan [ringkasan DJP PPh23/26](https://www.pajak.go.id/id/pph-pasal-2326). Bukan semua dividen/bunga/jasa otomatis objek. [PMK141/2015 primer](https://www.pajak.go.id/index.php/id/peraturan/jenis-jasa-lain-sebagaimana-dimaksud-dalam-pasal-23-ayat-1-huruf-c-angka-2-undang-0), Pasal1 tarif2% tidak termasuk PPN, syarat bukti reimbursement; Pasal4 berlaku30hari setelah diundangkan27Juli2015 (26Agustus2015). Hanya jasa manajemen/konsultan/teknik bukan konstruksi dan royalti badan dalam negeri, NPWP diketahui, tanpa fasilitas/pengecualian. OP/NPPN, bank, leasing opsi, dividen, hadiah, bunga khusus, luar negeri, PPh21/26/final dan reimbursement rumit ditahan. Tidak menafsirkan NIK sebagai non-NPWP otomatis.
+7. [PP34/2017 salinan primer JDIH14halaman](https://jdih.kemenkeu.go.id/api/download/fulltext/2017/34TAHUN2017PP.pdf), Pasal2 penghasilan sewa tanah/bangunan, bukan jasa penginapan;3 pemotong atau setor sendiri;4 tarif10% bruto termasuk perawatan/pemeliharaan/keamanan/layanan walau kontrak terpisah;7 **berlaku2Jan2018**, berbeda dari tanggal penetapan6Sep2017 yang muncul sebagai metadata JDIH. Dicocokkan [DJP Pasal4(2)](https://pajak.go.id/id/pemotongan-pajak-penghasilan-pasal-4-ayat-2-1). BGS/peralihan kontrak lama tidak diotomatisasi. Tidak mencampur PPN ke sewa; skenario dengan PPN yang belum dipisahkan/dikonfirmasi ditahan.
+
+Pencarian DJP/JDIH untuk perubahan PP20,PP34,PMK131 dilakukan saat implementasi. Tidak ditemukan perubahan langsung berikutnya pada pasal yang diotomatisasi; ini bukan jaminan kelengkapan seluruh hukum. Rezim PPN khusus dan transisi UMKM sengaja tidak diotomatisasi. Percobaan unduh langsung salinan untuk ekstraksi lokal timeout/WAF; bukti pembacaan berasal dari pembuka web di atas, bukan file lokal yang gagal.
+
+## Matrix cakupan / truth table
+
+| Alat / kondisi | Perilaku |
+| --- | --- |
+| PPN, tanggal2025-01-01 s.d.2026-11-08, PKP/transaksi umum terkonfirmasi, nonmewah/jasa umum | 12%×11/12 harga sebelum PPN; tunjukkan harga komersial dan DPP nilai lain secara terpisah |
+| PPN mewah PPnBM terkonfirmasi, penyerahan dalam negeri bukan konsumen akhir | 12% dasar penuh; PPnBM sendiri tidak dihitung |
+| PPN mewah konsumen akhir Jan2025 / mulaiFeb2025 | Faktor11% /12%, DPP11/12 /penuh |
+| PPN umum2024 dengan klasifikasi terkonfirmasi |11% nominal dasar penuh; DPP berbeda dari mekanisme umum2025walau efektif sama11% |
+| PPN sebelum2024, kelas mewah2024, nonobjek/dibebaskan, rezim khusus atau klasifikasi belum jelas | Status tidak tercakup, **bukan** PPN0 atau kesimpulan dibebaskan |
+| PPN simulasi manual | Nominal persen dan DPP persen input, faktor hasil kali; label simulasi matematika, tidak mengesahkan klasifikasi |
+| PPh23,2025–snapshot, penerima badan DN, objek biasa terkonfirmasi | jasa2% /royalti15%; tanpa NPWP menjadi4%/30%, identitas tak diketahui menahan hasil |
+| PPh23 VAT terpisah yang dikonfirmasi | Input harga sebelum PPN + nominal PPN, atau invoice termasuk PPN dikurangi nominal PPN; tidak membalik PPN dengan tarif tebakan |
+| Sewa,2025–snapshot, tanah/bangunan biasa tanpa BGS/akomodasi/fasilitas khusus, basis terkonfirmasi |10%×(sewa+layanan+perawatan+keamanan/lain terkait). Pilih penyewa pemotong atau penerima setor sendiri; arus kas berbeda |
+| Gross-up manual |ceil((net+fixed)/(1−r)),0≤r<100; bukan PPh21progresif/rezim legal otomatis |
+| UMKM,2026 periodeMei–November, OP/PTperorangan/koperasi **baru terdaftar mulai22Apr2026**, fakta lengkap terkonfirmasi |0,5% dengan allowance500juta hanyaOP, ledger12bulan tetap; bulan masa depan harus0, sebelum bulan registrasi harus0 |
+| UMKM WP terdaftar sebelum22Apr2026 / badan lain |Kelayakan belum terverifikasi; **tanpa angka pajak**. PasalII peralihan perlu penelaahan tersendiri, bukan penolakan hak legal |
+| UMKM periodeJan–Apr2026,tahunlain/masa mendatang, pekerjaan bebas/final lain/luar negeri/nonobjek, memilih umum/fasilitas, penggabungan belum jelas |Status tidak tercakup/belum terverifikasi, tanpa payable/ledger pajak |
+| UMKM prior turnover gabungan>4,8miliar atau riwayat keluar rezim |Tidak memenuhi cakupan, tanpa angka. Prior turnover meliputi seluruh sumber58, pasangan/anak/perseroan bila berlaku, bukan hanya tabel usaha ini |
+| UMKM cumulative tahun ini>4,8miliar |Tahan hasil:61mengatur kelanjutan sampai akhir tahun, tetapi penggabungan57/58dan transisi perlu tinjau; tidak menganggap otomatis pajak0/0,5% |
+
+Omzet gabungan seluruh sumber/pihak terkait tahun berjalan diisi terpisah, wajib ≥jumlah tabel usaha ini dan maksimal4,8miliar untuk hasil otomatis; tidak menganggap tabel satu WP sebagai keseluruhan grup.
+
+Batas cakupan konservatif UMKM baru dan sewa tanpa VAT ambigu harus terlihat di UI/PR. Lima alat berfungsi untuk skenario yang didukung; **bukan** cakupan pajak Indonesia penuh. Status tidak tercakup bukan validasi legal tidak wajib pajak. Seluruh konfirmasi fakta adalah pernyataan pengguna, bukan verifikasi identitas DJP.
+
+## Rumus, presisi dan pembulatan
+
+Semua uang input integer0–9999999999999rupiah, persen manual0–100 dengan6desimal (gross-up<100). BigInt dan rasional n/d,d>0 sepanjang domain; Number hanya indeks bulan/baris. Tanggal Gregorian date-only tervalidasi, bukan Date/timezone. Kalender pajak tahunJanuari–Desember saja. Tabel12bulan tetap tanpa tambah/hapus agar urutan fiskal tidak berubah.
+
+PPN pre-tax harga komersial H: DPP=H×b;VAT=DPP×r;total=H+VAT. Inclusive G: H=G/(1+r×b),DPP=H×b,VAT=G−H. **DPP bukan selalu harga komersial**. VATcash half-up sekali, Hcash=G−VATcash untuk inclusive dan totalcash=H+VATcash untuk exclusive. Ledger eksak/adjustment ditampilkan; bukan klaim pembulatan faktur wajib.
+
+PPh23 base adalah harga tanpa PPN terkonfirmasi. Withholding=base×r;cash half-up;netPaid=invoice−taxcash. PPN nominal tidak menebak klasifikasi. Sewa taxablegross jumlah seluruh biaya terkait, tax=10%; penyewa pemotong menyerahkan gross−taxcash, setor sendiri menerima gross lalu mengalokasikan taxcash. Tidak menghitung/mengesahkan PPN.
+
+Gross-up menjamin net SEBELUM pembulatan. G=ceil((T+F)/(1−r)); forward net G×(1−r)−F≥T dan G−1 gagal (kecualiG0). Tarif100tak invertibel. Simulasi single flat, bukan tarif hukum.
+
+UMKM OP allowanceA500juta,badanA0. C_i=Σturnover sampaii;B_i=max(0,C_i−A)−max(0,C_(i−1)−A);tax_i=B_i/200. Pajak bulan yang dipilih jadi hasil utama, jumlah tahun-s.d.masa dan perbulan terpisah. Bulan sesudah masa tidak dihitung. Taxcash perbulan half-up; totalcash=jumlahcash bulanan (dapat berbeda dari round(totaleksak)); ledger memuat eksak/adjustment dan total agar konsisten. Tidak menyatakan rounding ini aturan setor resmi.
+
+## Vektor independen sebelum implementasi
+
+- PPN umum H100000,b11/12,r12%→DPP275000/3,VAT11000,total111000. Inclusive111000→H100000,VAT11000. Mewah dasar penuh H100000→VAT12000,total112000. Mewah konsumen akhir2025-01-31 VAT11000,2025-02-01 VAT12000. InclusiveG1pada11%→H100/111,VAT11/111,cashVAT0,Hcash1. Simulasi50%×1%padaH1→VAT1/200. Umum2024harga100000→DPP100000,VAT11000; umum2025harga100000→DPP275000/3,VAT11000. Klasifikasi/tanggal tidak didukung bukanVAT0.
+- PPh23 base10000000jasa2%→200000,royalti15%→1500000; tanpaNPWP400000/3000000. Invoice11100000denganPPN1100000→base10000000,jasa tax200000,net10900000. Base25jasa2%→tax1/2,cash1. StatusNPWP/objek/penerima takterverifikasi tanpaangka.
+- Sewa100000000→tax10000000,net90000000. Sewa90000000+layanan5000000+perawatan3000000+keamanan2000000→basis100000000,tax10000000. Sewa5→tax1/2,cash1; pemotong menyerahkan4, setor sendiri menerima5dan alokasipajak1. Penginapan bukan tax0.
+- Gross-upT9000000,r10%,F0→G10000000. T1000000,r15%→G1176471;net1000000,35;G−1net999999,5. T1,r50%→G2meski netcashG1bisa1. T0,F0→G0. r99,999999%,T=F9999999999999→G1999999999999800000000.
+- UMKM OPbaru22Apr2026,April480000000+Mei50000000→C530000000,BMei30000000,tax150000. April400000000+Mei50000000→B0,tax0. PTperorangan/koperasibaru22Apr2026 denganMei50000000→tax250000tanpaallowance. C499999999+1→B0;bulanberikut1→B1,tax1/200cash0;100rupiahkena→tax1/2cash1. Dua bulanmasing-masing100kena→cash1+1=2meskitotaleksak1. Prior4800000000boleh,4800000001ditahan;current4800000001ditahan. WPolder,peralihan,profesi/identitastakjelas→statusdan **tidak ada nilai pajak**.
+
+Uji independen Python Fraction serta Vitest fixture/manual, konservasi, ceiling minimal, threshold±1, rate0/100/99,999999, NPWPmultiplier, kalender/tanggalberlaku, status unsupported tanpaangka, ledgerbulan dan seluruh86engine regresi. Browser desktop/mobile,12bulan, fokus/error/stale, SSR sumbertanggal/FAQ,hub6/inventaris91/sitemap98/404/noindex dan screenshot. PR harus mengungkap seluruh batas cakupan di atas untuk audit pemilik.
+
+## Revisi audit PR46 — dua basis omzet UMKM (model1.1.0)
+
+Diverifikasi8November2026. Sumber primer tambahan: [PMK164/2023, Pasal6(1)–(6) dan7(2)](https://pajak.go.id/id/peraturan/tata-cara-pengenaan-pajak-penghasilan-atas-penghasilan-dari-usaha-yang-diterima-atau), berlaku29Desember2023 (Pasal25). Dibaca bersama [PP20/2026 Pasal57–58 danII(1)g](https://jdih.kemenkeu.go.id/api/download/d057ff82-50e7-4127-b66b-f704a36f071d/2026pp020.pdf), berlaku22April2026. Ketentuan pelaksana terdahulu berlaku sepanjang tidak bertentangan. Penggabungan untuk kelayakan tidak mengubah basis fasilitas OP menjadi omzet kelompok.
+
+Pemisahan ini menggantikan setiap interpretasi sebelumnya bahwa tabel boleh berisi satu usaha/cabang saja. Tabel12bulan wajib merupakan jumlah seluruh usaha/lokasi yang memenuhi cakupan milik **WP yang sama**, sebelum potongan, sejak registrasi. Pasal6(4) mengharuskan kumulatif seluruh tempat kegiatan usaha; Pasal6(5) secara khusus membedakan fasilitas masing-masing suami/istri dengan kewajiban perpajakan terpisah. Fasilitas OP Rp500juta sekali per tahun/bagian tahun, bukan per cabang dan bukan per kelompok pihak terkait. Badan tidak mendapat fasilitas ini.
+
+Kolom terpisah `priorRelatedTurnover` dan `currentRelatedTurnover` adalah penggabungan seluruh sumber/pihak yang diwajibkan Pasal58, untuk uji Rp4,8miliar tahun sebelumnya dan tahun berjalan. Nilainya mencakup omzet WP tabel, dapat lebih besar karena WP/sumber lain, tetapi tidak boleh lebih kecil. Kolom ini **tidak pernah** menjadi dasar pajak atau mengurangi fasilitas Rp500juta. Kelayakan tahun berjalan di atas batas tetap ditahan untuk penelaahan Pasal61, bukan klaim otomatis kehilangan hak saat itu.
+
+Untuk kumulatif satu WP C dan batas A (OP500.000.000, badan0), bagian kena bulan m = max(Cm−A,0)−max(Cm−1−A,0). Pajak eksak = bagian kena/200. BigInt dan rasional tetap digunakan; cash dibulatkan setengah menjauhi nol per bulan, total cash menjumlah cash bulanan. Ini estimasi total WP, bukan alokasi pembayaran per lokasi menurut Pasal7(2).
+
+Contoh independen:
+
+- WP yang sama: usahaB April200juta + usahaA Mei400juta → kumulatif600juta; kena Mei100juta; pajakMei500.000. Omzet gabungan kelayakan800juta tidak menghasilkan pajak1,5juta.
+- WP berbeda: WPtabel April200juta + Mei200juta =400juta; WPterkait200juta → gabungan600juta. WPtabel masih pajak0; omzet WPterkait tidak menghabiskan fasilitasnya. Gabungan4,8miliar tetap0;4,8miliar+1 menghasilkan status tanpa pajak.
+- Kumulatif satu WP0,499.999.999,500.000.000 → bagian kena0. Kumulatif500.000.001 → bagian kena1, pajak eksak1/200rupiah, cash0 (bukan menyatakan omzet tambahan bebas pajak).
+
+`wpTurnoverScope` harus dikonfirmasi mencakup semua usaha/lokasi dan seluruh bulan sejak registrasi. Parsial, tidak diketahui, legacy payload, kolom omzet kosong/hilang, atau konfirmasi kelayakan belum lengkap menghasilkan status tanpa angka, rincian atau ledger; kosong tidak diubah menjadi0. Nilai negatif/malformed tetap error validasi. Bulan nihil harus diisi0, termasuk sebelum registrasi dan sesudah masa; bulan registrasi hanya penghasilan sejak registrasi yang memenuhi cakupan. WP lama sebelum22April2026/peralihan, klasifikasi khusus, riwayat, batas periode dan seluruh guard konservatif sebelumnya tetap berlaku. Kelayakan tidak ditentukan hanya dari tipe WP.

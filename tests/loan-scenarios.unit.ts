@@ -173,7 +173,7 @@ describe('Batch 10 independent fixtures',()=>{
   expect(formatScenario(-100000n,'rate')).toBe('−10,0000%');expect(formatScenario(0n,'rate',undefined,'negative')).toContain('negatif');expect(formatScenario(657n,'target','USD')).toBe('USD6,57');expect(formatScenario(0n,'target','USD','positive')).toBe('<USD0,01 (positif)')
  })
  it('publishes exactly five existing IDs with 81 tools 20 finance and 87 sitemap URLs',()=>{
-  expect(listPublished()).toHaveLength(86);expect(listCategory('keuangan')).toHaveLength(20);expect(listCategory('bisnis')).toHaveLength(20);expect(listCategory('marketplace')).toHaveLength(16);expect(sitemapPaths()).toHaveLength(92)
-  expect(new Set(listPublished().map(x=>x.id)).size).toBe(86)
+  expect(listPublished()).toHaveLength(91);expect(listCategory('keuangan')).toHaveLength(20);expect(listCategory('bisnis')).toHaveLength(20);expect(listCategory('marketplace')).toHaveLength(16);expect(sitemapPaths()).toHaveLength(98)
+  expect(new Set(listPublished().map(x=>x.id)).size).toBe(91)
  })
 })
