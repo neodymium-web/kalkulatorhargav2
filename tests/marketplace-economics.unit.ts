@@ -138,10 +138,10 @@ describe('manual marketplace economics', () => {
     expect(cashText(-1n)).toBe('−Rp 1'); expect(cashText(0n)).toBe('Rp 0'); expect(formatEntry(R(-1n, 2n))).toBe('−Rp 0,5'); expect(formatEntry(R(1n, 100000000n))).toBe('Rp 0,00000001'); expect(formatEntry(R(1n, 3n))).toContain('1/3 rupiah'); expect(formatEntry(R(-1n, 100000000n), 'percent')).toContain('(negatif)')
   })
   it('publishes exactly five inventory IDs with 86 tools 16 marketplace and 92 sitemap URLs', () => {
-    expect(listPublished()).toHaveLength(91); expect(listCategory('marketplace')).toHaveLength(16); expect(listCategory('sehari-hari')).toHaveLength(20); expect(listCategoryHubs()).toHaveLength(6); expect(sitemapPaths()).toHaveLength(98)
+    expect(listPublished()).toHaveLength(96); expect(listCategory('marketplace')).toHaveLength(16); expect(listCategory('sehari-hari')).toHaveLength(20); expect(listCategoryHubs()).toHaveLength(6); expect(sitemapPaths()).toHaveLength(103)
     const rows = readFileSync('docs/CALCULATOR_INVENTORY.md', 'utf8').split('\n').filter(l => l.startsWith('| calc-') || l.startsWith('| production-cost ')); expect(rows).toHaveLength(100); expect(new Set(rows.map(r => r.split('|')[1].trim())).size).toBe(100)
-    expect(rows.filter(r => r.includes('| published |'))).toHaveLength(91)
+    expect(rows.filter(r => r.includes('| published |'))).toHaveLength(96)
     for (const slug of Object.keys(economicsTools)) expect(findPublished(slug)?.id).toBe(`calc-${slug}`)
-    for (const slug of ['shopee', 'tiktok-shop', 'tokopedia', 'lazada', 'pajak-impor', 'pph-21-bulanan', 'pbb-p2']) expect(findPublished(slug)).toBeUndefined()
+    for (const slug of ['shopee', 'tiktok-shop', 'tokopedia', 'lazada']) expect(findPublished(slug)).toBeUndefined()
   })
 })

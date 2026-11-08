@@ -1,6 +1,6 @@
 # Inventaris 100 kalkulator
 
-Inventaris ini menetapkan usulan slug dan intent untuk setiap alat. Sebanyak 91 kalkulator sudah terbit. Baris berstatus ide belum memiliki rute publik. ID untuk ide memakai awalan `calc-`. ID TikTok yang sudah dicatat tetap mengikuti alatnya saat slug dikoreksi. Setelah implementasi, simpan ID saat mengubah nama tampilan atau URL.
+Inventaris ini menetapkan usulan slug dan intent untuk setiap alat. Sebanyak 96 kalkulator sudah terbit. Lima alat Batch19 memiliki cakupan hukum/periode eksplisit; impor adalah simulasi tarif manual, properti hanya dasar DKI2024 sebelum fasilitas. Baris berstatus ide belum memiliki rute publik. ID untuk ide memakai awalan `calc-`. ID TikTok yang sudah dicatat tetap mengikuti alatnya saat slug dikoreksi. Setelah implementasi, simpan ID saat mengubah nama tampilan atau URL.
 
 Tingkat 1 memakai rumus langsung. Tingkat 2 melibatkan beberapa mode, jadwal, satuan, atau kebijakan pembulatan. Tingkat 3 membutuhkan aturan bertanggal, pencarian solusi, atau verifikasi domain yang lebih ketat. Kolom sumber menjelaskan kebutuhan tarif dinamis. Tanda “—” berarti alat tidak memerlukan data tarif eksternal. Input manual berasal dari pengguna dan ditampilkan sebagai asumsi.
 
@@ -85,15 +85,15 @@ Tingkat 1 memakai rumus langsung. Tingkat 2 melibatkan beberapa mode, jadwal, sa
 | ID | Slug | Canonical usulan | Intent | Kategori | Input | Output | Rumus atau mesin | Tingkat | Status | Sumber dinamis | Monetisasi |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | calc-ppn | ppn | /kalkulator/ppn | PPN dan pemisahan harga termasuk pajak | pajak | Harga, dasar pengenaan, tarif, mode termasuk pajak | Dasar dan PPN | Kalikan tarif efektif atau balikkan harga bruto | 3 | published | Resmi atau input pengguna | — |
-| calc-pph-21-bulanan | pph-21-bulanan | /kalkulator/pph-21-bulanan | Pemotongan PPh 21 pegawai pada masa reguler | pajak | Bruto, kategori, masa dan tabel versi | Potongan bulanan | Pilih bracket efektif yang sesuai masa | 3 | idea | Resmi | — |
-| calc-pph-21-rekonsiliasi | pph-21-rekonsiliasi | /kalkulator/pph-21-rekonsiliasi | Selisih PPh 21 pegawai pada masa akhir | pajak | Bruto tahun, pengurang, status, potongan sebelumnya | Pajak setahun dan selisih pemotongan | Hitung progresif atas dasar kena pajak dan kurangi pemotongan | 3 | idea | Resmi | — |
+| calc-pph-21-bulanan | pph-21-bulanan | /kalkulator/pph-21-bulanan | Pemotongan PPh 21 pegawai pada masa reguler | pajak | Bruto, kategori, masa dan tabel versi | Potongan bulanan | Pilih bracket efektif yang sesuai masa | 3 | published | Resmi | — |
+| calc-pph-21-rekonsiliasi | pph-21-rekonsiliasi | /kalkulator/pph-21-rekonsiliasi | Selisih PPh 21 pegawai pada masa akhir | pajak | Bruto tahun, pengurang, status, potongan sebelumnya | Pajak setahun dan selisih pemotongan | Hitung progresif atas dasar kena pajak dan kurangi pemotongan | 3 | published | Resmi | — |
 | calc-pph-final-umkm | pph-final-umkm | /kalkulator/pph-final-umkm | PPh final omzet usaha sesuai kelayakan | pajak | Omzet per bulan, tipe wajib pajak, masa kelayakan | Dasar dan pajak per masa | Terapkan batas dan tarif versi pada omzet yang memenuhi syarat | 3 | published | Resmi | — |
 | calc-pph-23 | pph-23 | /kalkulator/pph-23 | Potongan PPh 23 transaksi jasa atau penghasilan lain | pajak | Jenis transaksi, dasar potong, identitas dan masa | Potongan dan dana dibayar | Pilih tarif dan dasar sesuai klasifikasi yang berlaku | 3 | published | Resmi | — |
 | calc-pph-4-ayat-2-sewa | pph-4-ayat-2-sewa | /kalkulator/pph-4-ayat-2-sewa | Potongan final sewa tanah atau bangunan | pajak | Nilai sewa, komponen terkait dan masa | Pajak final sewa | Dasar sewa yang memenuhi cakupan × tarif versi | 3 | published | Resmi | — |
 | calc-gross-up-pajak | gross-up-pajak | /kalkulator/gross-up-pajak | Nilai bruto agar penerimaan bersih tercapai | pajak | Target bersih, tarif potong input | Bruto dan potongan | Target ÷ (1 − tarif) untuk tarif tunggal | 2 | published | Input pengguna | — |
-| calc-pajak-impor | pajak-impor | /kalkulator/pajak-impor | Simulasi bea dan pajak barang impor | pajak | Nilai barang, pengiriman, asuransi, kurs dan komponen tarif | Rincian biaya impor | Urutkan bea dan pajak sesuai basis per komponen | 3 | idea | Resmi atau input pengguna | — |
-| calc-bphtb | bphtb | /kalkulator/bphtb | Estimasi BPHTB untuk perolehan properti | pajak | Wilayah, tanggal, nilai, jenis perolehan | Dasar kena dan estimasi BPHTB | Kurangi batas regional lalu kalikan tarif daerah | 3 | idea | Resmi | — |
-| calc-pbb-p2 | pbb-p2 | /kalkulator/pbb-p2 | Estimasi PBB properti per tahun | pajak | Wilayah, tahun, NJOP, penggunaan dan pengurang | Estimasi PBB tahunan | Terapkan dasar dan tarif daerah menurut tahun | 3 | idea | Resmi | — |
+| calc-pajak-impor | pajak-impor | /kalkulator/pajak-impor | Simulasi bea dan pajak barang impor | pajak | Nilai barang, pengiriman, asuransi, kurs dan komponen tarif | Rincian biaya impor | Urutkan bea dan pajak sesuai basis per komponen | 3 | published | Resmi atau input pengguna | — |
+| calc-bphtb | bphtb | /kalkulator/bphtb | Estimasi BPHTB untuk perolehan properti | pajak | Wilayah, tanggal, nilai, jenis perolehan | Dasar kena dan estimasi BPHTB | Kurangi batas regional lalu kalikan tarif daerah | 3 | published | Resmi | — |
+| calc-pbb-p2 | pbb-p2 | /kalkulator/pbb-p2 | Estimasi PBB properti per tahun | pajak | Wilayah, tahun, NJOP, penggunaan dan pengurang | Estimasi PBB tahunan | Terapkan dasar dan tarif daerah menurut tahun | 3 | published | Resmi | — |
 
 ## media-sosial
 
