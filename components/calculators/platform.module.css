@@ -1,0 +1,4 @@
+.result { min-width: 0; overflow-wrap: anywhere; }
+.ledger { font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.ledger > div { margin-block: var(--space-3); }
+.ledger dd { margin-inline-start: 0; }

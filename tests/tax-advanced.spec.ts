@@ -67,16 +67,21 @@ test('PBB gross before facilities single allowance use rates and unsupported SPP
  await result(page).screenshot({path:info.outputPath('pbb-bukan-sppt-tanpa-angka.jpg'),quality:75})
 })
 test('Batch19 five widths large results and source tables fit without clipping',async({page})=>{
- for(const width of [320,375,768,1024,1440]){await page.setViewportSize({width,height:900});for(let j=0;j<fixtures.length;j++){await open(page,j);await submit(page);expect(await page.evaluate(()=>document.documentElement.scrollWidth),`${fixtures[j].slug} ${width}`).toBe(width)}await page.goto('/pajak');expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBe(width)}
- await page.setViewportSize({width:320,height:900});for(const font of ['Arial','Verdana'])for(let j=0;j<fixtures.length;j++){await open(page,j);await submit(page);await page.evaluate(font=>{document.body.style.fontFamily=font},font);expect(await page.evaluate(()=>document.documentElement.scrollWidth),`${fixtures[j].slug} ${font}`).toBe(320)}
+ for(let j=0;j<fixtures.length;j++){
+  await open(page,j);await submit(page)
+  for(const width of [320,375,768,1024,1440]){await page.setViewportSize({width,height:900});expect(await page.evaluate(()=>document.documentElement.scrollWidth),`${fixtures[j].slug} ${width}`).toBe(width)}
+  await page.setViewportSize({width:320,height:900});for(const font of ['Arial','Verdana']){await page.evaluate(font=>{document.body.style.fontFamily=font},font);expect(await page.evaluate(()=>document.documentElement.scrollWidth),`${fixtures[j].slug} ${font}`).toBe(320)}
+ }
+ await page.goto('/pajak');for(const width of [320,375,768,1024,1440]){await page.setViewportSize({width,height:900});expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBe(width)}
+ await page.setViewportSize({width:320,height:900})
  await open(page,0);await page.locator('summary').filter({hasText:'Lihat seluruh tabel TER'}).click();expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBe(320)
  await open(page,2);await fill(page,{value:'9999999999999.999999',freight:'9999999999999.999999',insurance:'9999999999999.999999',fx:'9999999999999.999999',dutyRate:'100',vatRate:'100',incomeRate:'100'});await submit(page);expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBe(320)
 })
-test('Batch19 hub search sitemap103 four unpublished platforms and staging boundaries',async({page,request,isMobile},info)=>{
+test('Batch19 hub search sitemap107 unknown route and staging boundaries',async({page,request,isMobile},info)=>{
  await page.setViewportSize({width:isMobile?375:1440,height:900});await page.goto('/pajak');await expect(page.getByRole('region',{name:'Kalkulator tersedia'}).getByRole('link')).toHaveCount(10);await page.screenshot({path:info.outputPath('pajak-sepuluh-alat.jpg'),quality:75,fullPage:true})
  for(const f of fixtures){await page.goto('/');await page.getByRole('searchbox').fill(f.title);await expect(page.getByRole('region',{name:'Hasil pencarian'}).locator(`a[href="/kalkulator/${f.slug}"]`)).toBeVisible()}
- const xml=await(await request.get('/sitemap.xml')).text();expect(xml.match(/<loc>/g)).toHaveLength(103);for(const f of fixtures)expect(xml).toContain(`/kalkulator/${f.slug}</loc>`)
- for(const slug of ['shopee','tiktok-shop','tokopedia','lazada']){expect((await request.get(`/kalkulator/${slug}`)).status()).toBe(404);expect(xml).not.toContain(`/kalkulator/${slug}</loc>`);await page.getByRole('searchbox').fill(slug);await expect(page.locator(`a[href="/kalkulator/${slug}"]`)).toHaveCount(0)}expect(await(await request.get('/robots.txt')).text()).toContain('Disallow: /')
+ const xml=await(await request.get('/sitemap.xml')).text();expect(xml.match(/<loc>/g)).toHaveLength(107);for(const f of fixtures)expect(xml).toContain(`/kalkulator/${f.slug}</loc>`)
+ for(const slug of ['kalkulator-tidak-ada']){expect((await request.get(`/kalkulator/${slug}`)).status()).toBe(404);expect(xml).not.toContain(`/kalkulator/${slug}</loc>`);await page.getByRole('searchbox').fill(slug);await expect(page.locator(`a[href="/kalkulator/${slug}"]`)).toHaveCount(0)}expect(await(await request.get('/robots.txt')).text()).toContain('Disallow: /')
 })
 test('Batch19 legal methods dates limits full TER source tables and FAQs SSR without JavaScript',async({browser})=>{
  const context=await browser.newContext({javaScriptEnabled:false}),page=await context.newPage()

@@ -155,9 +155,9 @@ describe('Batch19 release and strict input',()=>{
   expect(advancedSnapshot.verifiedAt).toBe('2026-11-08');expect(advancedSources.ter.effectiveFrom).toBe('2024-01-01');expect(advancedSources.assessment.effectiveFrom).toBe('2024-05-30');expect(advancedSources.bphtb2026.effectiveFrom).toBe('2026-05-13');expect(advancedSources.pbb2026.effectiveFrom).toBe('2026-04-01')
   for(const tool of Object.values(advancedTools)){expect(tool.sources.length).toBeGreaterThan(0);for(const s of tool.sources)expect(advancedSources[s].url).toMatch(/^https:\/\//)}
  })
- it('publishes exactly96 of100 unique inventory IDs ten tax tools six hubs and103URLs',()=>{
-  expect(listPublished()).toHaveLength(96);expect(listCategory('pajak')).toHaveLength(10);expect(listCategoryHubs()).toHaveLength(6);expect(sitemapPaths()).toHaveLength(103)
-  const inventory=readFileSync('docs/CALCULATOR_INVENTORY.md','utf8').split('\n').filter(l=>/^\| (production-cost|calc-)/.test(l));expect(inventory).toHaveLength(100);expect(new Set(inventory.map(l=>l.split('|')[1])).size).toBe(100);expect(inventory.filter(l=>l.includes('| published |'))).toHaveLength(96)
-  for(const slug of Object.keys(advancedTools))expect(findPublished(slug)?.id).toBe(`calc-${slug}`);for(const slug of ['shopee','tiktok-shop','tokopedia','lazada'])expect(findPublished(slug)).toBeUndefined()
+ it('publishes exactly100 of100 unique inventory IDs ten tax tools six hubs and107URLs',()=>{
+  expect(listPublished()).toHaveLength(100);expect(listCategory('pajak')).toHaveLength(10);expect(listCategoryHubs()).toHaveLength(6);expect(sitemapPaths()).toHaveLength(107)
+  const inventory=readFileSync('docs/CALCULATOR_INVENTORY.md','utf8').split('\n').filter(l=>/^\| (production-cost|calc-)/.test(l));expect(inventory).toHaveLength(100);expect(new Set(inventory.map(l=>l.split('|')[1])).size).toBe(100);expect(inventory.filter(l=>l.includes('| published |'))).toHaveLength(100)
+  for(const slug of Object.keys(advancedTools))expect(findPublished(slug)?.id).toBe(`calc-${slug}`);for(const slug of ['kalkulator-tidak-ada'])expect(findPublished(slug)).toBeUndefined()
  })
 })

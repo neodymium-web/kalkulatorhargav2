@@ -54,7 +54,7 @@ describe('calculator inventory', () => {
       'tiktok-shop', '/kalkulator/tiktok-shop', expect.stringMatching(/TikTok Shop.*dana cair.*penjual/), 'marketplace',
     ])
     expect(creator?.[9]).toBe('published')
-    expect(seller?.[9]).toBe('idea')
+    expect(seller?.[9]).toBe('published')
     expect(inventory.some(row => row[1] === 'estimasi-tiktok-kreator')).toBe(false)
   })
 

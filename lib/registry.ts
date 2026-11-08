@@ -1,3 +1,4 @@
+import { platformTools, platformTitle, platformDescription, platformEngine, platformSources, settlementFields, type PlatformSlug } from './platform-settlement/tools'
 import { advancedTools, type AdvancedSlug, type AdvancedTool } from './tax-advanced/tools'
 import { advancedSources, advancedSnapshot } from './tax-advanced/sources'
 import { taxTools, type TaxSlug, type TaxTool } from './tax/tools'
@@ -301,6 +302,14 @@ const advancedDefinitions = (Object.keys(advancedTools) as AdvancedSlug[]).map((
     implementation: {engine:tool.engine,formulaVersion:'1.0.0',testCases:[{file:'tests/tax-advanced.unit.ts',name:tool.testCase}]} }
 })
 
+const platformDefinitions = (Object.keys(platformTools) as PlatformSlug[]).map((slug): PublishedCalculator => ({
+  id: platformTools[slug].id, slug, path: `/kalkulator/${slug}`, primaryCategory: 'marketplace', secondaryCategories: [],
+  metadata: { locale: 'id-ID', title: platformTitle(slug), description: platformDescription(slug), keywords: [platformTools[slug].name, 'biaya admin', 'simulasi manual', 'dana cair'] },
+  inputFields: [...settlementFields.inputFields, { id: 'fees', label: 'Biaya manual', type: 'array' }], outputFields: [{ id: 'payout', label: 'Dana cair simulasi atau status', type: 'integer', unit: 'IDR' }],
+  officialSources: [{ ...platformSources[slug], verifiedAt: '2026-11-08', version: 'manual-only; bukan jadwal tarif' }], status: 'published',
+  implementation: { engine: platformEngine, formulaVersion: 'manual-settlement-v1', testCases: [{ file: 'tests/platform-settlement.unit.ts', name: `reconciles independent ${slug} settlement` }] },
+}))
+
 export const definitions: readonly CalculatorDefinition[] = [{
   id: 'production-cost',
   slug: 'hpp',
@@ -336,7 +345,7 @@ export const definitions: readonly CalculatorDefinition[] = [{
       { file: 'tests/hpp.unit.ts', name: 'rejects invalid cost %s' },
     ],
   },
-}, ...businessDefinitions, ...operationDefinitions, ...stockServiceDefinitions, ...batchFourDefinitions, ...metricDefinitions, ...sellerDefinitions, ...financeDefinitions, ...investmentDefinitions, ...valuationDefinitions, ...scenarioDefinitions, ...socialDefinitions, ...creatorDefinitions, ...everydayDefinitions, ...calendarDefinitions, ...materialsDefinitions, ...unitsDefinitions, ...economicsDefinitions, ...taxDefinitions, ...advancedDefinitions]
+}, ...businessDefinitions, ...operationDefinitions, ...stockServiceDefinitions, ...batchFourDefinitions, ...metricDefinitions, ...sellerDefinitions, ...financeDefinitions, ...investmentDefinitions, ...valuationDefinitions, ...scenarioDefinitions, ...socialDefinitions, ...creatorDefinitions, ...everydayDefinitions, ...calendarDefinitions, ...materialsDefinitions, ...unitsDefinitions, ...economicsDefinitions, ...taxDefinitions, ...advancedDefinitions, ...platformDefinitions]
 
 export function listPublished(records = definitions): PublishedCalculator[] {
   return records.filter(tool => tool.status === 'published')
