@@ -71,3 +71,11 @@ Keputusan akurasi terlihat: harga komersial dan DPP PPN terpisah; kas sewa pemot
 Batas hukum untuk audit pemilik: otomatisasi UMKM hanya WP baru mulai22April2026, masaMei–November2026. WP lama/PasalIIperalihan, penggabungan belum jelas, omzet melampaui4,8miliar dan profesi/rezim lain ditahan. PPh23 hanya objek biasa badanDN; sewa hanya tanpaPPN dan bukanBGS/akomodasi. PPNrezimkhusus tidak diasumsikan11%/12%. Detail ada pada BATCH_18_FORMULA_VERIFICATION.md.
 
 Inventaris100IDunik/91terbit/5Pajak/6hub/98sitemapURL. Seluruh86alat sebelumnya tetap. Production/domain/DNS/alias/redirect dan indexing staging tidak diubah. Tidak merge/auto-merge.
+
+## Revisi audit PR46 (model/data1.1.0)
+
+Tabel bulanan kini wajib dikonfirmasi mencakup seluruh usaha/lokasi milik satu WP, sejak registrasi. Kolom gabungan Pasal58 hanya menguji kelayakan4,8miliar; hasil memisahkan kumulatif satu WP dan gabungan pihak terkait. Konfirmasi parsial/tidak diketahui dan omzet kosong menghasilkan status tanpa nominal atau ledger. Tidak ada CSS, TSX, warna, domain atau indexing yang diubah dalam revisi ini.
+
+Validasi ulang berurutan: typecheck,607unit,build,429Playwright lulus/1skip lama.40unit Pajak dan36kasus browser Pajak mencakup beberapa usaha WP yang sama, gabungan WP berbeda, ambang0/500juta±1, ketidaklengkapan bulanan/penggabungan, bulan registrasi dan stale result. Guard WP lama/peralihan tetap diuji. Putaran awal pengujian bersamaan mengalami timeout/asset saat build berjalan; putaran final berurutan seluruhnya lulus tanpa perubahan timeout atau pengurangan suite.
+
+Screenshot desktop/mobile `umkm-seluruh-usaha-satu-wp.jpg`, `umkm-gabungan-wp-berbeda.jpg`, `umkm-data-belum-lengkap.jpg` ditambahkan ke artifact otomatis CI. Hasil WPberbeda desktop/mobile serta status ditahan desktop ditinjau visual: label dan nominal terpisah, status utama tanpa angka pajak, teks membungkus. Uji lima viewport dan font320px tetap lulus. Delivery gate di atas tetap berlaku; penambahan konfirmasi memakai komponen Select yang sama, sumber/FAQ tetapSSR. SHA, CI dan artifact final dicatat pada PR setelah upload.

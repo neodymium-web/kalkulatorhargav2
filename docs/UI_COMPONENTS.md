@@ -30,3 +30,5 @@ UnitsForm membagikan CalculatorForm, Input/Select, Button dan ResultPanel untuk 
 EconomicsForm memakai StructuredForm untuk kanal (2–5) dan produk (1–20) dengan ID/key serta fokus baris bersama. Field text memakai keyboard teks untuk label kanal/produk tanpa mengubah field numerik lama. Tabel menampilkan ledger rasional sebelum pembulatan, hasil cash dan ranking eksak; status stok nol-demand menjadi hasil utama. Hasil dan tabel dibersihkan pada setiap perubahan.
 
 TaxForm memakai StructuredForm dengan rowConfig.fixed untuk12bulan kalender yang tidak dapat ditambah/dihapus. Tanpa fixed, seluruh perilaku baris lama tetap. Status kelayakan menjadi hasil utama tanpa rincian nominal; sumber primer, tanggal berlaku dan verifikasi menyertai hasil/SSR. Ledger UMKM memisahkan eksak, cash bulanan dan adjustment.
+
+PR46: UMKM StructuredForm distinguishes all-businesses/single-WP table coverage from Pasal58 related-party eligibility totals. Empty turnover is unknown, explicit0 is nil. Status results omit amount and ledger; input changes clear stale results.

@@ -61,3 +61,5 @@ Lihat [verifikasi skala, satuan panjang/massa, suhu dan kecepatan](BATCH_16_FORM
 Batch 17 memisahkan ledger settlement manual, pembalikan harga, ranking kanal, kontribusi bundel dan status stok pada lib/marketplace-economics. Lihat [verifikasi rumus](BATCH_17_FORMULA_VERIFICATION.md); tidak menerbitkan tarif kontrak marketplace.
 
 Batch18 menyimpan snapshot legal, tanggal efektif/cakupan, asumsi dan status tanpaangka di lib/tax. Lihat [verifikasi hukum dan rumus](BATCH_18_FORMULA_VERIFICATION.md). Unsupported/eligibility unverified tidak mempunyai amount/ledger pajak; bukan pajak0. PP20/2026 dipisahkan dari materi sosialisasi DJP.
+
+PR46 UMKM: monthly ledger contains all qualifying businesses of one WP only. Explicit coverage confirmation is required. Separate prior/current related-party totals gate eligibility, never the OP allowance/tax base. Missing turnover yields a status without amount or ledger; legacy ambiguous payloads fail closed.

@@ -61,3 +61,21 @@ UMKM OP allowanceA500juta,badanA0. C_i=Σturnover sampaii;B_i=max(0,C_i−A)−m
 - UMKM OPbaru22Apr2026,April480000000+Mei50000000→C530000000,BMei30000000,tax150000. April400000000+Mei50000000→B0,tax0. PTperorangan/koperasibaru22Apr2026 denganMei50000000→tax250000tanpaallowance. C499999999+1→B0;bulanberikut1→B1,tax1/200cash0;100rupiahkena→tax1/2cash1. Dua bulanmasing-masing100kena→cash1+1=2meskitotaleksak1. Prior4800000000boleh,4800000001ditahan;current4800000001ditahan. WPolder,peralihan,profesi/identitastakjelas→statusdan **tidak ada nilai pajak**.
 
 Uji independen Python Fraction serta Vitest fixture/manual, konservasi, ceiling minimal, threshold±1, rate0/100/99,999999, NPWPmultiplier, kalender/tanggalberlaku, status unsupported tanpaangka, ledgerbulan dan seluruh86engine regresi. Browser desktop/mobile,12bulan, fokus/error/stale, SSR sumbertanggal/FAQ,hub6/inventaris91/sitemap98/404/noindex dan screenshot. PR harus mengungkap seluruh batas cakupan di atas untuk audit pemilik.
+
+## Revisi audit PR46 — dua basis omzet UMKM (model1.1.0)
+
+Diverifikasi8November2026. Sumber primer tambahan: [PMK164/2023, Pasal6(1)–(6) dan7(2)](https://pajak.go.id/id/peraturan/tata-cara-pengenaan-pajak-penghasilan-atas-penghasilan-dari-usaha-yang-diterima-atau), berlaku29Desember2023 (Pasal25). Dibaca bersama [PP20/2026 Pasal57–58 danII(1)g](https://jdih.kemenkeu.go.id/api/download/d057ff82-50e7-4127-b66b-f704a36f071d/2026pp020.pdf), berlaku22April2026. Ketentuan pelaksana terdahulu berlaku sepanjang tidak bertentangan. Penggabungan untuk kelayakan tidak mengubah basis fasilitas OP menjadi omzet kelompok.
+
+Pemisahan ini menggantikan setiap interpretasi sebelumnya bahwa tabel boleh berisi satu usaha/cabang saja. Tabel12bulan wajib merupakan jumlah seluruh usaha/lokasi yang memenuhi cakupan milik **WP yang sama**, sebelum potongan, sejak registrasi. Pasal6(4) mengharuskan kumulatif seluruh tempat kegiatan usaha; Pasal6(5) secara khusus membedakan fasilitas masing-masing suami/istri dengan kewajiban perpajakan terpisah. Fasilitas OP Rp500juta sekali per tahun/bagian tahun, bukan per cabang dan bukan per kelompok pihak terkait. Badan tidak mendapat fasilitas ini.
+
+Kolom terpisah `priorRelatedTurnover` dan `currentRelatedTurnover` adalah penggabungan seluruh sumber/pihak yang diwajibkan Pasal58, untuk uji Rp4,8miliar tahun sebelumnya dan tahun berjalan. Nilainya mencakup omzet WP tabel, dapat lebih besar karena WP/sumber lain, tetapi tidak boleh lebih kecil. Kolom ini **tidak pernah** menjadi dasar pajak atau mengurangi fasilitas Rp500juta. Kelayakan tahun berjalan di atas batas tetap ditahan untuk penelaahan Pasal61, bukan klaim otomatis kehilangan hak saat itu.
+
+Untuk kumulatif satu WP C dan batas A (OP500.000.000, badan0), bagian kena bulan m = max(Cm−A,0)−max(Cm−1−A,0). Pajak eksak = bagian kena/200. BigInt dan rasional tetap digunakan; cash dibulatkan setengah menjauhi nol per bulan, total cash menjumlah cash bulanan. Ini estimasi total WP, bukan alokasi pembayaran per lokasi menurut Pasal7(2).
+
+Contoh independen:
+
+- WP yang sama: usahaB April200juta + usahaA Mei400juta → kumulatif600juta; kena Mei100juta; pajakMei500.000. Omzet gabungan kelayakan800juta tidak menghasilkan pajak1,5juta.
+- WP berbeda: WPtabel April200juta + Mei200juta =400juta; WPterkait200juta → gabungan600juta. WPtabel masih pajak0; omzet WPterkait tidak menghabiskan fasilitasnya. Gabungan4,8miliar tetap0;4,8miliar+1 menghasilkan status tanpa pajak.
+- Kumulatif satu WP0,499.999.999,500.000.000 → bagian kena0. Kumulatif500.000.001 → bagian kena1, pajak eksak1/200rupiah, cash0 (bukan menyatakan omzet tambahan bebas pajak).
+
+`wpTurnoverScope` harus dikonfirmasi mencakup semua usaha/lokasi dan seluruh bulan sejak registrasi. Parsial, tidak diketahui, legacy payload, kolom omzet kosong/hilang, atau konfirmasi kelayakan belum lengkap menghasilkan status tanpa angka, rincian atau ledger; kosong tidak diubah menjadi0. Nilai negatif/malformed tetap error validasi. Bulan nihil harus diisi0, termasuk sebelum registrasi dan sesudah masa; bulan registrasi hanya penghasilan sejak registrasi yang memenuhi cakupan. WP lama sebelum22April2026/peralihan, klasifikasi khusus, riwayat, batas periode dan seluruh guard konservatif sebelumnya tetap berlaku. Kelayakan tidak ditentukan hanya dari tipe WP.
