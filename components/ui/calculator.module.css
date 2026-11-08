@@ -34,3 +34,5 @@
 }
 @media (min-width: 64rem) { .grid { grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); } }
 @media (min-width: 90rem) { .grid { gap: var(--space-8); } }
+
+.formControls { border: 0; padding: 0; margin: 0; min-width: 0; }
