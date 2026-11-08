@@ -2,3 +2,5 @@
 .scenario > h2 { margin-bottom: var(--space-4); }
 .comparison { margin-block: var(--space-6); padding: var(--space-4); background: var(--surface-subtle); border-inline-start: 4px solid var(--action-primary); }
 .comparison p { margin-top: var(--space-3); }
+
+.page { overflow-wrap: anywhere; }

@@ -1,0 +1,17 @@
+# Inspeksi visual Issue #57
+
+Build lokal kandidat, viewport375×900 dan1440×900. **8frame/panel fitur baru** dan **20frame arsip representatif** benar-benar dilihat: goldviewport/result, comparisonviewport/table pada dua ukuran; contact sheet mobile1/4 dan desktop1/4 masing-masing6/4frame. Tidak mengklaim seluruh44frame arsip atau setiap piksel fullpage telah dibaca pada tugas ini. Semua22arsip tetap diuji copy,axe,reflow dan links pada kedua project.
+
+Hasil: judul dan batas manual terlihat sebelum input; quote pasar tidak diisi bawaan; hasil emas memisahkan penerimaan, modal, selisihcash, beratmurni dan usiaquote. Tabel komparatif desktop menampilkan kolom eksak/cash/ranking dengan angka tabular. Pada mobile tabel mempertahankan kolom yang terbaca dalam scroll region fokus, disertai instruksi panah; tidak memecah nama kanal atau angka menjadi karakter perbaris. Provenance arsip berupa URLteks dengan penjelasan sebelum/sesudah cutover, bukan tautan palsu ke project lama. Frame yang diperiksa tidak menunjukkan overlap/clipping konten di luar scroll region yang sengaja digulir.
+
+Iterasi yang dibuang: tabel komparatif awal terlalu memampatkan kolom karena wrapper belum memakai schedule style; CSS tabel bersama dipasang dan diuji keyboardscroll. Formula tanpa spasi menimbulkan overflow; spasi dan pembungkusan teks lokal diperbaiki. Native fieldgrid memerlukan minmax0 pada text200% agar ukuran intrinsik tidak melebihi kolom. Landmark hasil empatkanal dibuat unik melalui propheading opsional; default100alat lama tidak berubah. Tidak memakai overflowhidden, suppressHydrationWarning, menghapus assertion atau menaikkan timeout. Callback animationframe tidak dipakai dalam tesnoJS karena tidak dieksekusi oleh browser pada mode tersebut.
+
+Hash capture lokal ada di visual-inspection.json. CI akan menghasilkan ulang screenshot pada SHA final; hash/renderingCI tidak dianggap identik dengan lokal. Fullpage, resultpanel, viewport, noJS dan WebKit screenshots ada di artifactbrowser; hasil aktualCI/Preview dan perSHA gate dicatat dalam PR.
+
+## Gate UI dan React
+
+Design System v2, ENERGY2/RHYTHM1/MOTION1. Layout mengikuti lembarhitungan: garis biru pada hasil, angka tabular, border token, form/result dua kolom desktop dan satu kolom mobile. Tidak ada identitas, font, gambar, animasi atau tracker baru. Status UNKNOWN/stale disampaikan lewat teks, bukan warna atau angka0. Bukti quote/tarif tidak direkayasa.
+
+Purpose: input/ledger dan navigationreference menjalankan tugasnya, bukan halaman pemasaran pengganti alat. Hard gate: tidak ada fake200 benchmark, kontrol palsu, source-self-link atau harga resmi fiktif. Liveliness: hierarki H1/result/table, cukup kontras dan whitespace dari token, label tugas spesifik. Craftsmanship: keyboard/fokus/table/noJS/zoom diuji, pembulatan dan perbedaan scope ditulis. Kontras memakai pasangan DS yang telah diverifikasi (biru/putih5,17:1, teksgelap/putih17,85:1); axe dijalankan pada hasil baru dan22arsip.
+
+React review: engine murni dan reusable exactmoney core, state lokal tanpa network/effect baru untuk data, key kanal tetap, rowID dari StructuredForm, propheading/title opsional backwardcompatible. Perubahan input membersihkan ledger/ranking. Tag/URL allowlist arsip dan React escaping dipertahankan. Newtoolregistry terpisah dari100baseline, route/sitemap/graph memakai publishedPaths yang sama tetapi expectedset/oracle tetap diaudit independen. Gate visual perubahan terbatas PASS; gate domain tetap NO-GO.

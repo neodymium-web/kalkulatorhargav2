@@ -1,3 +1,4 @@
+import { supplementalPaths } from '../lib/supplemental/routes'
 import { legacyPaths } from '../lib/legacy/routes'
 import { test, expect, type Page } from '@playwright/test'
 const fixtures = [
@@ -69,7 +70,7 @@ test('stock finite floor zero demand indeterminate tiny and maximum states', asy
 test('marketplace twenty pagination search sitemap and unknown routes', async ({ page, request, isMobile }, info) => {
   await page.setViewportSize({ width: isMobile ? 375 : 1440, height: 900 }); await page.goto('/marketplace'); const listing = page.getByRole('region', { name: 'Kalkulator tersedia' }); await expect(listing.getByRole('link')).toHaveCount(12); await page.getByRole('button', { name: 'Muat lebih banyak', exact: true }).press('Enter'); await expect(listing.getByRole('link')).toHaveCount(20); await expect(listing.getByRole('link').nth(12)).toBeFocused(); await page.screenshot({ path: info.outputPath('marketplace-20-alat.jpg'), fullPage: true, quality: 75 })
   for (const f of fixtures) { await page.goto('/'); await page.getByRole('searchbox').fill(f.title); await expect(page.getByRole('region', { name: 'Hasil pencarian' }).locator(`a[href="/kalkulator/${f.slug}"]`)).toBeVisible() }
-  const xml = await (await request.get('/sitemap.xml')).text(); expect(xml.match(/<loc>/g)).toHaveLength(107 + legacyPaths.length); for (const f of fixtures) expect(xml).toContain(`/kalkulator/${f.slug}</loc>`)
+  const xml = await (await request.get('/sitemap.xml')).text(); expect(xml.match(/<loc>/g)).toHaveLength(107 + legacyPaths.length + supplementalPaths.length); for (const f of fixtures) expect(xml).toContain(`/kalkulator/${f.slug}</loc>`)
   for (const slug of ['kalkulator-tidak-ada']) { expect((await request.get(`/kalkulator/${slug}`)).status()).toBe(404); expect(xml).not.toContain(`/kalkulator/${slug}</loc>`); await page.getByRole('searchbox').fill(slug); await expect(page.locator(`a[href="/kalkulator/${slug}"]`)).toHaveCount(0) }
   expect(await (await request.get('/robots.txt')).text()).toContain('Disallow: /')
 })

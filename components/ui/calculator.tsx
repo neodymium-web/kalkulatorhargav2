@@ -47,15 +47,16 @@ export function CalculatorForm({ title, hint, hintId, submitLabel, invalidFields
 
 type Result = { label: string; value: string }
 
-export function ResultPanel({ result, details = [], assumptions, message }: {
+export function ResultPanel({ result, details = [], assumptions, message, heading = 'Hasil perhitungan' }: {
   result?: Result
+  heading?: string
   details?: readonly Result[]
   assumptions?: string
   message?: string
 }) {
   const titleId = useId()
   return <section className={`${styles.panel} ${styles.result}`} aria-labelledby={titleId}>
-    <h2 id={titleId}>Hasil perhitungan</h2>
+    <h2 id={titleId}>{heading}</h2>
     <div aria-live="polite" aria-atomic="true">
       {result ? <>
         <dl>

@@ -5,7 +5,7 @@
   padding: var(--space-4);
   min-width: 0;
 }
-.fields { display: grid; gap: var(--space-4); margin-block: var(--space-4); }
+.fields { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-4); margin-block: var(--space-4); }
 .hint, .assumptions { color: var(--text-secondary); font: var(--text-small) var(--font-ui); }
 .hint, .message { margin-top: var(--space-2); }
 .assumptions { margin-top: var(--space-4); }

@@ -1,0 +1,78 @@
+[
+  {
+    "file": "deferred-features-four-man-75464-g-on-unknown-or-edited-data-desktop__comparison-panel.jpg",
+    "sha256": "1b7c270cc7a6c3c707b08c858fbad142c0eb648723b94fccc711654ac2dd7cd8",
+    "status": "INSPECTED",
+    "scope": "Local viewport/result panel, not all fullpage pixels"
+  },
+  {
+    "file": "deferred-features-four-man-75464-g-on-unknown-or-edited-data-desktop__comparison-viewport.jpg",
+    "sha256": "e060b0fc615581745ff4f9efca350ef07358301e1c849355d684049b40b1cc47",
+    "status": "INSPECTED",
+    "scope": "Local viewport/result panel, not all fullpage pixels"
+  },
+  {
+    "file": "deferred-features-four-man-75464-g-on-unknown-or-edited-data-mobile__comparison-panel.jpg",
+    "sha256": "1de7bb0afd4c1fd0d63e0daf2699c7ee47b249798b64982bbeda693384dcecf0",
+    "status": "INSPECTED",
+    "scope": "Local viewport/result panel, not all fullpage pixels"
+  },
+  {
+    "file": "deferred-features-four-man-75464-g-on-unknown-or-edited-data-mobile__comparison-viewport.jpg",
+    "sha256": "ddc0cd0cdbec8221352a2df5b9c1046fade6f4885513f5d0965150a4794beda6",
+    "status": "INSPECTED",
+    "scope": "Local viewport/result panel, not all fullpage pixels"
+  },
+  {
+    "file": "deferred-features-manual-g-c41bf-ation-retain-precise-ledger-desktop__gold-panel.jpg",
+    "sha256": "040564e2221294e264a7dcb1aed10059c5f5ea341377f18a3f649db9934cc7f8",
+    "status": "INSPECTED",
+    "scope": "Local viewport/result panel, not all fullpage pixels"
+  },
+  {
+    "file": "deferred-features-manual-g-c41bf-ation-retain-precise-ledger-desktop__gold-viewport.jpg",
+    "sha256": "3f56c3a1a1e102ee6f1d608c52034f36763b60f002a1238e4d744cf91705d943",
+    "status": "INSPECTED",
+    "scope": "Local viewport/result panel, not all fullpage pixels"
+  },
+  {
+    "file": "deferred-features-manual-g-c41bf-ation-retain-precise-ledger-mobile__gold-panel.jpg",
+    "sha256": "89d761f082a431282048af83dbf5648e1466f626298e9f74fc387c7637145079",
+    "status": "INSPECTED",
+    "scope": "Local viewport/result panel, not all fullpage pixels"
+  },
+  {
+    "file": "deferred-features-manual-g-c41bf-ation-retain-precise-ledger-mobile__gold-viewport.jpg",
+    "sha256": "e6bf8ba50db11f2d87fd89c3e62ba69b85a7b2a29f70106e20635db1e99c87a1",
+    "status": "INSPECTED",
+    "scope": "Local viewport/result panel, not all fullpage pixels"
+  },
+  {
+    "file": "mobile-1.jpg",
+    "sha256": "8080ecad0d2da56e1442a442f6eb13dcc0882ab93737c57f2b723b966b80641c",
+    "frames": 6,
+    "status": "INSPECTED",
+    "scope": "Representative local archive viewports;20 of44frames inspected"
+  },
+  {
+    "file": "mobile-4.jpg",
+    "sha256": "4debb8d1f423a78c5321c682e8202eba2dcec2818c465587bbe9dc1e3ff67e0e",
+    "frames": 4,
+    "status": "INSPECTED",
+    "scope": "Representative local archive viewports;20 of44frames inspected"
+  },
+  {
+    "file": "desktop-1.jpg",
+    "sha256": "8eba2e41c9febc48276ca76c602457ddccc40cb4cd224f85c41885febdcaca37",
+    "frames": 6,
+    "status": "INSPECTED",
+    "scope": "Representative local archive viewports;20 of44frames inspected"
+  },
+  {
+    "file": "desktop-4.jpg",
+    "sha256": "d36a512544bce43273c862d99a1b08bbd026355ee59a3013b693ab9387d384af",
+    "frames": 4,
+    "status": "INSPECTED",
+    "scope": "Representative local archive viewports;20 of44frames inspected"
+  }
+]

@@ -10,7 +10,7 @@ const date = z.string().refine(v=>parseCivil(v)!==null,{message:'Isi tanggal val
 export const goldInput=z.object({
   gross:decimal, nonGold:decimal, purityMode:z.enum(['karat','fineness'],{error:'Pilih dasar kadar.'}),purity:decimal,
   price:optional(money.refine(v=>v>0n,'Quote beli harus lebih dari0.')),
-  buybackMode:z.enum(['spread','direct'],{error:'Pilih dasar buyback.'}),spread:optional(decimal.refine(v=>v<=100n*S,'Spread maksimal100%.')),buybackPrice:optional(money),
+  buybackMode:z.enum(['spread','direct'],{error:'Pilih dasar buyback.'}),spread:optional(decimal.refine(v=>v<=100n*S,'Spread maksimal100%.')),buybackPrice:optional(money.refine(v=>v>0n,'Quote buyback langsung harus lebih dari0.')),
   buyCosts:money,sellCosts:money,source:optional(z.string().trim().min(1).max(160)),quoteDate:optional(date),asOf:optional(date),
   maxAge:optional(z.string().trim().regex(/^\d{1,4}$/).transform(BigInt).refine(v=>v<=3650n,'Toleransi maksimal3650hari.')),
   quoteStatus:z.enum(['confirmed','unknown'],{error:'Pilih status quote.'}),costStatus:z.enum(['complete','unknown'],{error:'Pilih status biaya.'}),

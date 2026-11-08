@@ -1,0 +1,41 @@
+import{test,expect,type Page}from'@playwright/test'
+import{goldFixture,scenarioFixture,comparisonPlatforms,fillFields,addManualFees}from'./deferred-browser-helpers'
+import{supplementalPaths}from'../lib/supplemental/routes'
+async function axe(page:Page){await page.addScriptTag({path:require.resolve('axe-core/axe.min.js')});return page.evaluate(async()=>{const api=(window as unknown as{axe:{run:(d:Document,o:unknown)=>Promise<{violations:unknown[]}>}}).axe;return(await api.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa','best-practice']}})).violations})}
+test('manual gold independent oracle, stale quote, conditional inputs and validation retain precise ledger',async({page,isMobile},info)=>{
+ const errors:string[]=[],external:string[]=[];page.on('pageerror',e=>errors.push(e.message));page.on('request',r=>{if(!r.url().startsWith('http://127.0.0.1:3100/'))external.push(r.url())})
+ await page.setViewportSize({width:isMobile?375:1440,height:900});await page.goto('/kalkulator/emas');const form=page.getByRole('form'),result=page.getByRole('region',{name:'Hasil perhitungan',exact:true})
+ await expect(form.locator('[name=price]')).toHaveValue('');await expect(form.locator('[name=quoteDate]')).toHaveValue('')
+ await fillFields(form,goldFixture);await form.getByRole('button',{name:'Hitung emas',exact:true}).press('Enter');await expect(result.locator('dd').first()).toHaveText('Rp 6.720.000');await expect(result).toContainText('−Rp 800.000');await expect(page.getByRole('table')).toContainText('15/2 g')
+ for(const width of[320,375,768,1440]){await page.setViewportSize({width,height:900});expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBe(width)}
+ await page.setViewportSize({width:isMobile?375:1440,height:900});expect(await axe(page)).toEqual([]);await page.screenshot({path:info.outputPath('gold-result.jpg'),fullPage:true,scale:'css',quality:70});await result.screenshot({path:info.outputPath('gold-panel.jpg'),scale:'css'});await page.locator('main h1').scrollIntoViewIfNeeded();await page.screenshot({path:info.outputPath('gold-viewport.jpg'),scale:'css',quality:80})
+ await fillFields(form,{asOf:'2026-11-09'});await expect(result.locator('dd')).toHaveCount(0);await form.getByRole('button',{name:'Hitung emas',exact:true}).click();await expect(result).toContainText('kedaluwarsa');await expect(result.locator('dd')).toHaveCount(1);await expect(result).not.toContainText('Rp');await expect(page.getByRole('table')).toHaveCount(0)
+ await fillFields(form,{asOf:'2026-11-08',buybackMode:'direct',buybackPrice:'900000'});await expect(form.locator('[name=spread]')).toHaveCount(0);await form.getByRole('button',{name:'Hitung emas',exact:true}).click();await expect(result.locator('dd').first()).toHaveText('Rp 6.720.000')
+ await fillFields(form,{buybackMode:'spread'});await expect(form.locator('[name=buybackPrice]')).toHaveCount(0);await expect(form.locator('[name=spread]')).toHaveValue('');await form.getByRole('button',{name:'Hitung emas',exact:true}).click();await expect(result).toContainText('Belum dapat dihitung');await expect(page.getByRole('table')).toHaveCount(0)
+ await fillFields(form,{spread:'10',nonGold:'12'});await form.getByRole('button',{name:'Hitung emas',exact:true}).click();await expect(form.getByRole('alert')).toBeVisible();await expect(form.locator('[name=nonGold]')).toBeFocused();await expect(result.locator('dd')).toHaveCount(0)
+ expect(errors).toEqual([]);expect(external).toEqual([])
+})
+test('four manual marketplace scenarios reconcile fees and remove ranking on unknown or edited data',async({page,isMobile},info)=>{
+ const errors:string[]=[],external:string[]=[];page.on('pageerror',e=>errors.push(e.message));page.on('request',r=>{if(!r.url().startsWith('http://127.0.0.1:3100/'))external.push(r.url())})
+ await page.setViewportSize({width:isMobile?375:1440,height:900});await page.goto('/bandingkan');const comparison=page.getByRole('region',{name:'Perbandingan empat kanal'})
+ await expect(comparison).toContainText('UNKNOWN');await expect(comparison.getByRole('table')).toHaveCount(0)
+ for(const name of comparisonPlatforms){const form=page.getByRole('form',{name:`Skenario ${name}`,exact:true});await fillFields(form,{...scenarioFixture,other:name==='Tokopedia'?'8000':'0'});await addManualFees(form);await form.getByRole('button',{name:'Hitung',exact:true}).click()}
+ const table=comparison.getByRole('table');await expect(table).toBeVisible();await expect(table.getByRole('row').filter({hasText:'Shopee'})).toContainText('Rp 89.500');await expect(table.getByRole('row').filter({hasText:'Tokopedia'})).toContainText('Rp 81.500')
+ for(const width of[320,375,768,1440]){await page.setViewportSize({width,height:900});expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBe(width)}
+ await page.setViewportSize({width:isMobile?375:1440,height:900});expect(await axe(page)).toEqual([]);await page.screenshot({path:info.outputPath('comparison-result.jpg'),fullPage:true,scale:'css',quality:70});const scroll=table.locator('..');await expect(table.getByRole('columnheader').first()).toHaveCSS('white-space','nowrap');await scroll.focus();if(await scroll.evaluate(el=>el.scrollWidth>el.clientWidth)){await scroll.press('ArrowRight');await expect.poll(()=>scroll.evaluate(el=>el.scrollLeft)).toBeGreaterThan(0);await scroll.evaluate(el=>el.scrollLeft=0)}await comparison.screenshot({path:info.outputPath('comparison-panel.jpg'),scale:'css'});await page.locator('main h1').scrollIntoViewIfNeeded();await page.screenshot({path:info.outputPath('comparison-viewport.jpg'),scale:'css',quality:80})
+ const first=page.getByRole('form',{name:'Skenario Shopee',exact:true});await fillFields(first,{taxScope:'unknown'});await expect(comparison).toContainText('UNKNOWN');await expect(table).toHaveCount(0);await first.getByRole('button',{name:'Hitung',exact:true}).click();await expect(page.getByRole('region',{name:'Skenario Shopee',exact:true}).getByRole('region',{name:'Hasil Shopee',exact:true})).toContainText('UNKNOWN')
+ await fillFields(first,{taxScope:'receipt',taxAmount:'750',taxEvidence:'Bukti sintetis'});await first.getByRole('button',{name:'Hitung',exact:true}).click();await expect(table).toBeVisible();await expect(table.getByRole('row').filter({hasText:'Shopee'})).toContainText('Rp 88.750')
+ await fillFields(first,{quantity:'2'});await first.getByRole('button',{name:'Hitung',exact:true}).click();await expect(comparison).toContainText('belum sebanding');await expect(table).toHaveCount(0)
+ expect(errors).toEqual([]);expect(external).toEqual([])
+})
+test('new tools preserve noJS privacy, responsive reflow, canonical, noindex and unknown404',async({browser,request,isMobile},info)=>{
+ const context=await browser.newContext({javaScriptEnabled:false,viewport:{width:isMobile?375:1440,height:900}})
+ for(const path of supplementalPaths){const page=await context.newPage();const response=await page.goto('http://127.0.0.1:3100'+path);expect(response?.status()).toBe(200);expect(response?.headers()['x-robots-tag']).toBe('noindex, nofollow');await expect(page.locator('link[rel=canonical]')).toHaveAttribute('href','https://kalkulatorharga.com'+path)
+  const forms=page.getByRole('form');expect(await forms.count()).toBe(path==='/bandingkan'?4:1)
+  for(const f of await forms.all()){await expect(f.getByRole('button',{name:path==='/bandingkan'?'Hitung':'Hitung emas',exact:true})).toBeDisabled();expect(await f.evaluate(el=>[...new FormData(el as HTMLFormElement).entries()])).toEqual([])}
+  for(const width of[320,375,768,1440]){await page.setViewportSize({width,height:900});expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBe(width)}
+  await page.setViewportSize({width:375,height:900});await page.evaluate(()=>{document.documentElement.style.fontSize='200%'});expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBe(375);await page.evaluate(()=>{document.documentElement.style.fontSize=''});await page.screenshot({path:info.outputPath(path==='/bandingkan'?'comparison-nojs.jpg':'gold-nojs.jpg'),fullPage:true,scale:'css',quality:70});await page.close()
+ }
+ for(const path of ['/kalkulator/tiktok/benchmark','/bandingkan/tidak-ada','/kalkulator/emas/tidak-ada'])expect((await request.get(path)).status()).toBe(404)
+ await context.close()
+})

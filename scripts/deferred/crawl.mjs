@@ -1,5 +1,5 @@
 import fs from 'node:fs'
-import {spawn} from 'node:child_process'
+import {spawn,execFileSync} from 'node:child_process'
 import {chromium} from 'playwright'
 const phase=process.env.AUDIT_PHASE||'candidate',out=process.env.AUDIT_OUTPUT||`test-results/deferred57/${phase}`
 fs.mkdirSync(out,{recursive:true})
@@ -18,5 +18,5 @@ try{
   rows.push({...row,status:response.status})
   for(const {href}of row.anchors)if(href.startsWith('/')&&!href.startsWith('//')){const next=href.split(/[?#]/)[0]||'/';if(!seen.has(next))pending.push(next)}
  }
- fs.writeFileSync(out+'/ssr-links.json',JSON.stringify({phase,method:'BFS root seed only; raw production HTML; no page JavaScript/sitemap seed',rows},null,2)+'\n');console.log('Reached',rows.length,'routes; anchors',rows.reduce((n,r)=>n+r.anchors.length,0))
+ fs.writeFileSync(out+'/ssr-links.json',JSON.stringify({phase,commit:execFileSync('git',['rev-parse','HEAD']).toString().trim(),observedAtUtc:new Date().toISOString(),workingTreeDirty:execFileSync('git',['status','--porcelain']).toString().trim().length>0,method:'BFS root seed only; raw production HTML; no page JavaScript/sitemap seed',rows},null,2)+'\n');console.log('Reached',rows.length,'routes; anchors',rows.reduce((n,r)=>n+r.anchors.length,0))
 }finally{if(browser)await browser.close();server.kill('SIGTERM')}

@@ -48,6 +48,8 @@ jobs:
         run: node scripts/migration/performance.mjs
       - name: Cutover comparison screenshots
         run: node scripts/migration/capture.mjs
+      - name: Deferred feature SSR link evidence
+        run: node scripts/deferred/crawl.mjs
       - name: Dependency advisory audit
         run: npm audit --json > test-results/dependency-audit.json
       - name: Bind evidence to commit
