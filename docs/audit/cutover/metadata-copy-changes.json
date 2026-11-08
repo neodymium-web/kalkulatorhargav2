@@ -1,0 +1,37 @@
+[
+  {
+    "id": "calc-pph-4-ayat-2-sewa",
+    "before": "Estimasi PPh final10% atas sewa dan biaya terkait dalam cakupan PP34/2017, dengan perbedaan pemotong dan setor sendiri.",
+    "after": "Estimasi PPh final 10% atas sewa dan biaya terkait dalam cakupan PP 34/2017, dengan perbedaan pemotong dan setor sendiri."
+  },
+  {
+    "id": "calc-gross-up-pajak",
+    "before": "Cari bruto rupiah minimum untuk target neto sebelum pembulatan dengan satu tarif potong manual, bukan mesin PPh21 progresif.",
+    "after": "Cari bruto rupiah minimum untuk target neto sebelum pembulatan dengan satu tarif potong manual, bukan mesin PPh 21 progresif."
+  },
+  {
+    "id": "calc-pph-final-umkm",
+    "before": "Estimasi0,5% untuk WP baru dalam cakupan PP20/2026, dengan omzet kumulatif, fasilitas OP dan status peralihan yang ditahan.",
+    "after": "Estimasi 0,5% untuk WP baru dalam cakupan PP 20/2026, dengan omzet kumulatif, fasilitas OP dan status peralihan yang ditahan."
+  },
+  {
+    "id": "calc-pph-21-bulanan",
+    "before": "Estimasi TER masa reguler pegawai tetap biasa dengan tabel lengkap PP58/2023, pemetaan PTKP dan batas masa akhir yang eksplisit.",
+    "after": "Estimasi TER masa reguler pegawai tetap biasa dengan tabel lengkap PP 58/2023, pemetaan PTKP dan batas masa akhir yang eksplisit."
+  },
+  {
+    "id": "calc-pajak-impor",
+    "before": "Simulasikan FOB/CFR/CIF, kurs KMK input, bea masuk serta PPN/PPh22 dengan dasar dan tarif manual, tanpa klaim tarif universal.",
+    "after": "Simulasikan FOB/CFR/CIF, kurs KMK input, bea masuk serta PPN/PPh 22 dengan dasar dan tarif manual, tanpa klaim tarif universal."
+  },
+  {
+    "id": "calc-bphtb",
+    "before": "Estimasi dasar BPHTB DKI2024 dengan NPOP/NJOP, perolehan pertama dan hubungan waris terkonfirmasi; wilayah/tahun lain ditahan.",
+    "after": "Estimasi dasar BPHTB DKI 2024 dengan NPOP/NJOP, perolehan pertama dan hubungan waris terkonfirmasi; wilayah/tahun lain ditahan."
+  },
+  {
+    "id": "calc-pbb-p2",
+    "before": "Hitung dasar PBB-P2 sebelum fasilitas DKI2024 dengan NJOPTKP satu objek, persentase penilaian dan klasifikasi penggunaan terverifikasi.",
+    "after": "Hitung dasar PBB-P 2 sebelum fasilitas DKI 2024 dengan NJOPTKP satu objek, persentase penilaian dan klasifikasi penggunaan terverifikasi."
+  }
+]

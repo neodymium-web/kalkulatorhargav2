@@ -4,6 +4,7 @@ import { readFileSync, writeFileSync, mkdirSync } from 'node:fs'
 import path from 'node:path'
 import { execFileSync } from 'node:child_process'
 const catalogue = JSON.parse(readFileSync('docs/audit/catalogue.json', 'utf8'))
+const copyChanges: { id: string; before: string; after: string }[] = JSON.parse(readFileSync('docs/audit/cutover/metadata-copy-changes.json', 'utf8'))
 const cases: { slug: string; id: string; input: Record<string, unknown> }[] = JSON.parse(readFileSync('docs/audit/oracles.json', 'utf8')).cases
 const sample = new Set(['hpp','bep','food-cost','kpr','refinancing','npv','tiktok','ctr','bagi-tagihan','usia','ppn','pph-23','pph-4-ayat-2-sewa','gross-up-pajak','pph-final-umkm','pph-21-bulanan','pph-21-rekonsiliasi','pajak-impor','bphtb','pbb-p2','shopee','tiktok-shop','tokopedia','lazada'])
 const widths = [320,375,768,1024,1440]
@@ -41,7 +42,7 @@ for (const route of catalogue.paths as string[]) test(`independent rendered audi
   if (selected) { report.axeInitial = await axe(page); await page.screenshot({ path: info.outputPath('initial.jpg'), fullPage: true, quality: 70 }); await page.screenshot({ path: info.outputPath('initial-viewport.jpg'), quality: 80 }) }
   if (c) {
     const metadata = catalogue.tools.find((t: { slug: string }) => t.slug === c.slug)
-    expect(report.title).toBe(`${metadata.metadata.title} | KalkulatorHarga`); expect(report.description).toBe(metadata.metadata.description)
+    expect(report.title).toBe(`${metadata.metadata.title} | KalkulatorHarga`); expect(report.description).toBe(copyChanges.find(change => change.id === c.id)?.after ?? metadata.metadata.description)
     await fillAudit(page, c.input); await page.getByRole('button', { name: c.slug === 'hpp' ? 'Hitung HPP' : 'Hitung', exact: true }).press('Enter')
     const result = page.getByRole('region', { name: 'Hasil perhitungan', exact: true })
     await expect(result.locator('dd').first()).toBeVisible(); await expect(page.getByRole('form').getByRole('alert')).toHaveCount(0)

@@ -77,7 +77,7 @@ describe('Batch19 annual reconciliation',()=>{
 })
 describe('Batch19 manual import',()=>{
  it('import manual CIF and declared bases conserve exact cash components',()=>{
-  const r=ok(imports(i));expect(r.status).toBe('manual');expect(r.amount).toBe(519000n);exact(value(r,'Nilai pabean IDR eksak'),2000000n);exact(value(r,'BM manual eksak'),200000n);exact(value(r,'PPN manual eksak'),264000n);exact(value(r,'PPh22 manual eksak'),55000n);expect(r.context).toContain('SIMULASI MANUAL')
+  const r=ok(imports(i));expect(r.status).toBe('manual');expect(r.amount).toBe(519000n);exact(value(r,'Nilai pabean IDR eksak'),2000000n);exact(value(r,'BM manual eksak'),200000n);exact(value(r,'PPN manual eksak'),264000n);exact(value(r,'PPh 22 manual eksak'),55000n);expect(r.context).toContain('SIMULASI MANUAL')
  })
  it('FOB CFR CIF and declared CIF never double count freight or insurance',()=>{
   for(const[incoterm,value,freight,insurance]of [['FOB','100','20','5'],['CFR','120','0','5'],['CIF','125','0','0'],['declared','125','0','0']])expect(ok(imports({...i,incoterm,value,freight,insurance})).amount).toBe(519000n)
@@ -85,8 +85,8 @@ describe('Batch19 manual import',()=>{
   bad(imports({...i,incoterm:'CIF',freight:'0'}),'insurance')
  })
  it('manual VAT and income bases are explicit and separate from CIF and each other',()=>{
-  const r=imports({...i,vatBase:'customs',incomeBase:'plus-duty',vatFactor:'50'});exact(value(r,'PPN manual eksak'),120000n);exact(value(r,'PPh22 manual eksak'),55000n);expect(ok(r).amount).toBe(375000n)
-  const s=imports({...i,vatBase:'plus-duty',incomeBase:'customs',vatFactor:'100'});exact(value(s,'PPh22 manual eksak'),50000n);expect(ok(s).amount).toBe(514000n)
+  const r=imports({...i,vatBase:'customs',incomeBase:'plus-duty',vatFactor:'50'});exact(value(r,'PPN manual eksak'),120000n);exact(value(r,'PPh 22 manual eksak'),55000n);expect(ok(r).amount).toBe(375000n)
+  const s=imports({...i,vatBase:'plus-duty',incomeBase:'customs',vatFactor:'100'});exact(value(s,'PPh 22 manual eksak'),50000n);expect(ok(s).amount).toBe(514000n)
  })
  it('zero cents tiny FX half-rupiah and component cash preserve rationals',()=>{
   const r=imports({...i,value:'0.000001',freight:'0',insurance:'0',fx:'0.5',dutyRate:'0',vatRate:'0',incomeRate:'0'});exact(value(r,'Nilai pabean IDR eksak'),1n,2000000n);expect(ok(r).amount).toBe(0n)
