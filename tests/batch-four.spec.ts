@@ -1,3 +1,4 @@
+import { legacyPaths } from '../lib/legacy/routes'
 import { expect, test, type Page } from '@playwright/test'
 
 const slugs = ['food-cost', 'harga-borongan', 'eoq', 'payback-period', 'berat-volumetrik']
@@ -118,7 +119,7 @@ test('serves the Marketplace hub and published batch with canonical and staging 
   await page.screenshot({ path: info.outputPath('marketplace.jpg'), fullPage: true, quality: 70 })
   const sitemap = await request.get('/sitemap.xml')
   const xml = await sitemap.text()
-  expect(xml.match(/<loc>/g)).toHaveLength(107)
+  expect(xml.match(/<loc>/g)).toHaveLength(107 + legacyPaths.length)
   expect(xml).toContain('<loc>https://kalkulatorharga.com/marketplace</loc>')
   for (const slug of slugs) expect(xml).toContain(`<loc>https://kalkulatorharga.com/kalkulator/${slug}</loc>`)
   for (const slug of ['kalkulator-tidak-ada']) expect((await request.get(`/kalkulator/${slug}`)).status()).toBe(404)

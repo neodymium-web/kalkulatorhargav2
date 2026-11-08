@@ -1,0 +1,58 @@
+[
+  {
+    "sheet": "desktop-1.jpg",
+    "sha256": "4136e634d08bc81b18b2612851ac8dfd621adfc8cd905a2b6381f4fb7feebe6b",
+    "frames": 6,
+    "status": "INSPECTED",
+    "scope": "Local candidate initial viewports; not all fullpage pixels or physical devices; CI render hashes may differ"
+  },
+  {
+    "sheet": "desktop-2.jpg",
+    "sha256": "66f6d514937eeb7475dda4885f09c71c49c07baac4208d650635f24f729e3974",
+    "frames": 6,
+    "status": "INSPECTED",
+    "scope": "Local candidate initial viewports; not all fullpage pixels or physical devices; CI render hashes may differ"
+  },
+  {
+    "sheet": "desktop-3.jpg",
+    "sha256": "0d3ac5f07aebe9751ad583746ce07e3258521cd08b0eb4bb88bbc90b3f1e21c9",
+    "frames": 6,
+    "status": "INSPECTED",
+    "scope": "Local candidate initial viewports; not all fullpage pixels or physical devices; CI render hashes may differ"
+  },
+  {
+    "sheet": "desktop-4.jpg",
+    "sha256": "541e48d44699b19dca00335d3dad0092c28613c0656f4fbddd7323737a593705",
+    "frames": 4,
+    "status": "INSPECTED",
+    "scope": "Local candidate initial viewports; not all fullpage pixels or physical devices; CI render hashes may differ"
+  },
+  {
+    "sheet": "mobile-1.jpg",
+    "sha256": "5a8f63115c9ccd5bdd55ba5003a7cee0d99e483b6b3f76092445b36b02671274",
+    "frames": 6,
+    "status": "INSPECTED",
+    "scope": "Local candidate initial viewports; not all fullpage pixels or physical devices; CI render hashes may differ"
+  },
+  {
+    "sheet": "mobile-2.jpg",
+    "sha256": "72a3e4acacfa5b1f030f2fa28f6672142cebf6bd5e71821fc3dececbfc53e433",
+    "frames": 6,
+    "status": "INSPECTED",
+    "scope": "Local candidate initial viewports; not all fullpage pixels or physical devices; CI render hashes may differ"
+  },
+  {
+    "sheet": "mobile-3.jpg",
+    "sha256": "36442ebb9a91374bb3cc2541d49c33299e5cd1107dfe89c0812bf7e06b6f945f",
+    "frames": 6,
+    "status": "INSPECTED",
+    "scope": "Local candidate initial viewports; not all fullpage pixels or physical devices; CI render hashes may differ"
+  },
+  {
+    "sheet": "mobile-4.jpg",
+    "sha256": "80eb4de37e28ec26d08cb96e2451af566dae4a308d131f05212f772c1da8e253",
+    "frames": 4,
+    "status": "INSPECTED",
+    "scope": "Local candidate initial viewports; not all fullpage pixels or physical devices; CI render hashes may differ"
+  }
+]

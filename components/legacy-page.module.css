@@ -1,0 +1,22 @@
+.page { max-width: var(--container-max); }
+.notice { line-height: 1.5; margin-block: var(--space-6); padding: var(--space-4); border-inline-start: 4px solid var(--action-primary); background: var(--surface-subtle); max-width: var(--measure-prose); }
+.notice p + p { margin-top: var(--space-3); }
+.content { max-width: var(--measure-prose); line-height: 1.8; overflow-wrap: anywhere; }
+.content h1 { margin-block: var(--space-8) var(--space-4); }
+.content h2 { margin-block: var(--space-8) var(--space-3); scroll-margin-top: var(--space-4); }
+.content h3 { margin-block: var(--space-5) var(--space-2); scroll-margin-top: var(--space-4); }
+.content p { margin-block: var(--space-3); }
+.content li { margin-block: var(--space-2); }
+.content dt { font-weight: var(--weight-label); margin-top: var(--space-3); }
+.content a:has(h2), .content a:has(h3) { display: block; border-bottom: 1px solid var(--border-subtle); padding-block: var(--space-2); }
+.content pre { white-space: pre-wrap; }
+.table { overflow-x: auto; max-width: 100%; margin-block: var(--space-5); }
+.table table { border-collapse: collapse; min-width: 35rem; width: 100%; font-variant-numeric: tabular-nums; }
+.table caption { text-align: start; font-weight: var(--weight-label); margin-bottom: var(--space-3); }
+.table th, .table td { text-align: start; vertical-align: top; padding: var(--space-3); border-bottom: 1px solid var(--border-subtle); }
+.table th { background: var(--surface-subtle); }
+.toc, .related, .archive { border-top: 1px solid var(--border-subtle); padding-top: var(--space-5); margin-block: var(--space-8); }
+.toc a, .related a, .archive a { display: inline-flex; align-items: center; min-height: var(--target-min); }
+.related p, .archive p { margin-top: var(--space-3); color: var(--text-secondary); max-width: var(--measure-prose); }
+.archive ul { display: grid; grid-template-columns: minmax(0,1fr); gap: var(--space-2) var(--space-8); padding-inline-start: var(--space-5); }
+@media (min-width: 48rem) { .archive ul { grid-template-columns: repeat(2,minmax(0,1fr)); } }

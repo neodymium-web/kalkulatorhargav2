@@ -1,3 +1,4 @@
+import { legacyPaths } from '../lib/legacy/routes'
 import { expect, test } from '@playwright/test'
 
 const scenarios = [
@@ -221,7 +222,7 @@ test('finance hub, navigation, search, sitemap and unpublished boundaries', asyn
     ).toBeVisible()
   }
   const xml = await (await request.get('/sitemap.xml')).text()
-  expect(xml.match(/<loc>/g)).toHaveLength(107)
+  expect(xml.match(/<loc>/g)).toHaveLength(107 + legacyPaths.length)
   expect(xml).toContain('<loc>https://kalkulatorharga.com/keuangan</loc>')
   for (const { slug } of scenarios)
     expect(xml).toContain(`<loc>https://kalkulatorharga.com/kalkulator/${slug}</loc>`)

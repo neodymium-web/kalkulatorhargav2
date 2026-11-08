@@ -1,3 +1,4 @@
+import { legacyPaths } from '../lib/legacy/routes'
 import { fillAudit } from './audit-browser-helpers'
 import { test, expect, type Page } from '@playwright/test'
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs'
@@ -35,7 +36,7 @@ for (const route of catalogue.paths as string[]) test(`independent rendered audi
   const response = await page.goto(route); expect(response?.status()).toBe(200)
   const report: Record<string, unknown> = { ...await seo(page, await response!.text(), route), http: response!.status(), xRobotsTag: response!.headers()['x-robots-tag'], viewport: width, baseline: catalogue.baseline, testedCommit: execFileSync('git', ['rev-parse','HEAD']).toString().trim() }
   expect(report.xRobotsTag).toBe('noindex, nofollow'); expect(new URL(String(report.canonical)).href).toBe(new URL(route, 'https://kalkulatorharga.com').href); expect(report.h1).toHaveLength(1); expect(String(report.title).length).toBeGreaterThan(5); expect(String(report.description).length).toBeGreaterThan(20); expect(report.ssrCharacters).toBeGreaterThan(200)
-  for (const link of report.links as string[]) if (link?.startsWith('/') && !link.startsWith('//')) expect(catalogue.paths, `internal ${link}`).toContain(link.split('#')[0].split('?')[0] || '/')
+  for (const link of report.links as string[]) if (link?.startsWith('/') && !link.startsWith('//')) expect([...catalogue.paths, ...legacyPaths], `internal ${link}`).toContain(link.split('#')[0].split('?')[0] || '/')
   const c = cases.find(c => `/kalkulator/${c.slug}` === route), selected = !c || sample.has(c.slug)
   await reflow(page, report)
   await page.setViewportSize({ width, height: 900 })
@@ -67,7 +68,7 @@ for (const route of catalogue.paths as string[]) test(`independent rendered audi
 })
 test('audit sitemap robots unknown routes injection and input privacy', async ({ page, request }, info) => {
   const xml = await (await request.get('/sitemap.xml')).text(), robots = await (await request.get('/robots.txt')).text()
-  const urls = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1]); expect(urls).toHaveLength(107); expect(new Set(urls).size).toBe(107); expect(urls.sort()).toEqual(catalogue.paths.map((p: string) => `https://kalkulatorharga.com${p}`).sort()); expect(robots).toContain('Disallow: /')
+  const urls = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1]); expect(urls).toHaveLength(107 + legacyPaths.length); expect(new Set(urls).size).toBe(107 + legacyPaths.length); expect(urls.sort()).toEqual([...catalogue.paths, ...legacyPaths].map((p: string) => `https://kalkulatorharga.com${p}`).sort()); expect(robots).toContain('Disallow: /')
   for (const p of ['/kalkulator/tidak-ada-audit','/kalkulator/%3Cscript%3E','/kalkulator/__proto__']) expect((await request.get(p)).status()).toBe(404)
   const sent: string[]=[]; page.on('request', r => sent.push(r.url())); await page.goto('/kalkulator/shopee')
   const c = cases.find(c => c.slug === 'shopee')!; const input = structuredClone(c.input); const payload='<img src=x onerror="window.__auditXss=1">'; (input.fees as Record<string, unknown>[])[0].label=payload
