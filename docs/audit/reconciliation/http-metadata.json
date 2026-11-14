@@ -1835,7 +1835,10 @@
       "legacy": {
         "path": "/kalkulator/tokopedia",
         "url": "https://www.kalkulatorharga.com/kalkulator/tokopedia",
-        "error": "HTTP Error 404: Not Found"
+        "error": "HTTP Error 404: Not Found",
+        "status": 404,
+        "atUtc": "2026-11-14T18:56:45.160702+00:00",
+        "method": "GET returned urllib HTTPError with actual response code404"
       },
       "staging": {
         "status": 200,

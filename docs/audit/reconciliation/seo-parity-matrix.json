@@ -807,7 +807,7 @@
     "gscClicks": "UNKNOWN",
     "gscImpressions": "UNKNOWN",
     "reportingPeriod": "Export2026-11-15; daily observed2026-10-17..2026-11-11; Pages row interval not independently verified; NOT six months",
-    "legacyBehavior": "UNKNOWN fresh GET/SSR only",
+    "legacyBehavior": "404 fresh GET/SSR only (actual HTTPError response code)",
     "stagingBehavior": "200 local production build main4a48b0e",
     "parity": "Fresh exact legacy path404; legacy root contains Tokopedia preset scenario, current v2 route200 manual",
     "missingCapabilitiesOrEvidence": "No evidence this exact path was indexed/live legacy; no page metrics provided",
