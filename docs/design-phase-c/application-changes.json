@@ -1,0 +1,61 @@
+{
+  "baseline": "141659c52af8533df7df9514ef73a99b23fd1642",
+  "files": [
+    {
+      "path": "app/layout.tsx",
+      "sha256": "ba223c16f3c56c71431128b24c0cf0c2780d0a86db253d374d2aad9ae7e988e1"
+    },
+    {
+      "path": "app/tokens.css",
+      "sha256": "624522d90afac200a06421ac2ad730c3ff76123930cf9a9d32b063955d5e5a2c"
+    },
+    {
+      "path": "components/breadcrumb.module.css",
+      "sha256": "60a977b632b130f11fcb45b72d6cf1abd42015af0f0d435a34fbbbee8c04f058"
+    },
+    {
+      "path": "components/calculator-page.tsx",
+      "sha256": "35f625bad6e39c2d4837cb87d5626b229a2979541bed5e9bf46127309ab8a968"
+    },
+    {
+      "path": "components/category-page.tsx",
+      "sha256": "9afe1496d8c23c7fd3f8693a2bcb3d4f1bcaac39d588fda8195fc1511a2efbdb"
+    },
+    {
+      "path": "components/directory.module.css",
+      "sha256": "a313245d81e89d19803ba583f4693833561c0696ebd9c09c0718ada41be03547"
+    },
+    {
+      "path": "components/directory.tsx",
+      "sha256": "a05bfdd32f424cc5b00ea7ff819e72f105a71811610fce243201ff2d5891cde1"
+    },
+    {
+      "path": "components/site-footer.tsx",
+      "sha256": "547569d7a75f0042968f645567b930617dff7127d58029a469e54f926f7e10b0"
+    },
+    {
+      "path": "components/site-header.module.css",
+      "sha256": "95c75cb73ef1a48a4b331095ff9524f31329d862941d50f0012993b1fbe3f50c"
+    },
+    {
+      "path": "components/ui/calculator.module.css",
+      "sha256": "b6e8d65135919f194992403e5f795ef8bb4744800a0f5fd3784169ef5fb8decd"
+    },
+    {
+      "path": "components/ui/controls.module.css",
+      "sha256": "d8bbc5b4a84f703af6d02a4a9e512c048a75053aae31b26cd751fef4cc6298dd"
+    },
+    {
+      "path": "components/ui/layout.module.css",
+      "sha256": "5e4095202acf15877858381b9347b28190990de7691e9e825e27920ff24d4bc9"
+    },
+    {
+      "path": "components/ui/loan-schedule.module.css",
+      "sha256": "02b473713f45c27b961afa5e28055e6ed811065e5d8608da27450e8dc9c2eca3"
+    },
+    {
+      "path": "components/ui/structured-form.module.css",
+      "sha256": "5d19fb9184bfa897ed3b9aac979e7d1834eebaf7b1609c2bc465d7559b525c2e"
+    }
+  ]
+}
