@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
 import { SiteHeader } from '../components/site-header'
+import { SiteFooter } from '../components/site-footer'
 import { listCategoryHubs } from '../lib/registry'
-import layout from '../components/ui/layout.module.css'
-import styles from '../components/site-header.module.css'
 import { canonicalOrigin, indexable } from '../lib/seo'
 import './tokens.css'
 import './style.css'
@@ -19,7 +18,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <body>
         <SiteHeader hubs={listCategoryHubs()} />
         <main id="konten" tabIndex={-1}>{children}</main>
-        <footer className={`${layout.container} ${styles.footer}`}>KalkulatorHarga · <a href="/kalkulator/emas">Emas manual</a> · <a href="/bandingkan">Bandingkan biaya marketplace</a> · <a href="/blog">Arsip catatan seller (perlu review)</a> · <a href="/kalkulator/saham/average">Average saham dan impas</a> · <a href="/kalkulator/tiktok/benchmark">Analisis engagement TikTok manual</a></footer>
+        <SiteFooter />
       </body>
     </html>
   )
