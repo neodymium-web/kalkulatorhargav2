@@ -1,3 +1,5 @@
+import { publishedPaths } from '../lib/published-paths'
+import { legacyPaths } from '../lib/legacy/routes'
 import { test, expect } from "@playwright/test";
 test("manual benchmark preserves intent without invented industry data", async ({
   page,
@@ -92,4 +94,12 @@ test('legacy directory remains200 with root canonical without an unapproved redi
  const r=await request.get('/kalkulator',{maxRedirects:0});expect(r.status()).toBe(200);expect(r.headers().location).toBeUndefined()
  await page.goto('/kalkulator');await expect(page.getByRole('heading',{level:1})).toHaveText('Direktori kalkulator');await expect(page.locator('link[rel=canonical]')).toHaveAttribute('href','https://kalkulatorharga.com')
  expect((await(await request.get('/sitemap.xml')).text())).not.toContain('/kalkulator</loc>')
+})
+test('all eligible canonical pages are reachable without traversing pending archives',async({page,request})=>{
+ const allowed=new Set(publishedPaths().filter(p=>!(legacyPaths as readonly string[]).includes(p))),queue=['/'],seen=new Set<string>()
+ while(queue.length){const p=queue.shift()!;if(seen.has(p))continue;seen.add(p);const r=await request.get(p);expect(r.status()).toBe(200)
+ const hrefs=await page.evaluate(html=>[...new DOMParser().parseFromString(html,'text/html').querySelectorAll('a[href]')].map(a=>a.getAttribute('href')!),await r.text())
+ for(const href of hrefs){if(!href.startsWith('/')||href.startsWith('//'))continue;const next=href.split(/[?#]/)[0]||'/';if(allowed.has(next)&&!seen.has(next))queue.push(next)}
+ }
+ expect([...seen].sort()).toEqual([...allowed].sort());expect(seen.size).toBe(111)
 })
