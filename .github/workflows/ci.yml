@@ -22,6 +22,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
       - name: Node.js
         uses: actions/setup-node@v4
         with:
@@ -55,6 +56,11 @@ jobs:
           mkdir -p test-results/migration-release
           node scripts/migration/release-gates.cjs > test-results/migration-release/report.json
           node -e 'const r=require("child_process").spawnSync(process.execPath,["scripts/migration/release-gates.cjs","--require-cutover"],{encoding:"utf8"});if(r.status!==2||JSON.parse(r.stdout).cutoverDecision!=="NO-GO")process.exit(1)'
+      - name: Final release gate (inactive configuration and dry-run)
+        run: |
+          mkdir -p test-results/final-release
+          node scripts/migration/final-release.cjs > test-results/final-release/report.json
+          node -e 'const r=require("child_process").spawnSync(process.execPath,["scripts/migration/final-release.cjs","--require-release"],{encoding:"utf8"});if(r.status!==2||JSON.parse(r.stdout).decision!=="NO-GO")process.exit(1)'
       - name: Dependency advisory audit
         run: npm audit --json > test-results/dependency-audit.json
       - name: Bind evidence to commit
