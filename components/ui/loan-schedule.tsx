@@ -1,6 +1,7 @@
 'use client'
 
 import { useId } from 'react'
+import { scrollTableByKey } from './table-scroll'
 import type { LoanRow } from '../../lib/finance/engines'
 import { rupiah } from '../../lib/finance/format'
 import styles from './loan-schedule.module.css'
@@ -25,6 +26,7 @@ export function LoanSchedule({
       </p>
       <div
         className={styles.scroll}
+        onKeyDown={scrollTableByKey}
         role="region"
         aria-labelledby={captionId}
         aria-describedby={hintId}

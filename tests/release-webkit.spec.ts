@@ -34,3 +34,4 @@ test('WebKit manual four-channel ledger and ranking invalidation',async({page},i
 
 import './migration-completion.spec'
 import './stock63.spec'
+import './phase-c.spec'

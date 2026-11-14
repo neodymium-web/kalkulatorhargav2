@@ -34,14 +34,14 @@ exports.project = (files) => {
   for (const f of manifest) {
     const hash = crypto
       .createHash("sha256")
-      .update(fs.readFileSync(f.path))
+      .update(require('../design/contract.cjs').previousContent(f.path))
       .digest("hex");
     if (hash !== f.sha256) throw Error("Implementation hash drift " + f.path);
     const old = expected.find((x) => x.path === f.path);
     if (old) old.sha256 = hash;
     else expected.push(f);
   }
-  return expected.sort((a, b) =>
+  return require('../design/contract.cjs').project(expected).sort((a, b) =>
     a.path < b.path ? -1 : a.path > b.path ? 1 : 0,
   );
 };

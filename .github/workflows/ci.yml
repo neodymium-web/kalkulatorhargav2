@@ -45,6 +45,8 @@ jobs:
         run: npx playwright test --config=playwright.audit-webkit.config.ts
       - name: Lighthouse audit lab
         run: node scripts/audit/lighthouse.mjs
+      - name: Phase C representative mobile quality gate
+        run: node scripts/audit/lighthouse.mjs --phase-c
       - name: Repeated cutover performance sample
         run: node scripts/migration/performance.mjs
       - name: Cutover comparison screenshots

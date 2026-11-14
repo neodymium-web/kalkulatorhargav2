@@ -115,6 +115,7 @@ test('bill equal shares charges only and zero proportional guard reconcile rupia
 test('percent mode keyboard focus resets and signed tiny and zero basis output', async ({ page, isMobile }, info) => {
   await page.setViewportSize({ width: isMobile ? 375 : 1440, height: 900 }); await open(page, fixtures[3]); await submit(page)
   const select = modeSelect(page); await select.focus(); await select.selectOption('ratio'); await expect(select).toBeFocused(); await expect(result(page)).toContainText('Isi semua kolom'); await expect(page.locator('[name=part]')).toHaveValue('')
+  await expect(page.locator('[name=part]')).toBeEnabled()
   await select.press('Tab'); await expect(page.locator('[name=part]')).toBeFocused(); await page.locator('[name=part]').press('Shift+Tab'); await expect(select).toBeFocused()
   await fill(page, { part: '-3', whole: '-8' }); await submit(page); await expect(result(page).locator('dd').first()).toHaveText('37,5000%')
   await select.selectOption('portion'); await expect(page.locator('[name=value]')).toHaveValue(''); await fill(page, { value: '-0.01', percent: '0.5' }); await submit(page); await expect(result(page).locator('dd').first()).toHaveText('−0,0001')

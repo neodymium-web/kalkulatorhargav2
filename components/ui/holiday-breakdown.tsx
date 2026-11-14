@@ -1,5 +1,6 @@
 'use client'
 import { useId } from 'react'
+import { scrollTableByKey } from './table-scroll'
 import type { HolidayRow } from '../../lib/calendar-time/engines'
 import { weekdayNames } from '../../lib/calendar-time/civil'
 import styles from './loan-schedule.module.css'
@@ -9,7 +10,7 @@ export function HolidayBreakdown({ rows }: { rows: readonly HolidayRow[] }) {
   if (!rows.length) return null
   return <section className={styles.schedule}>
     <p className={styles.hint} id={hint}>Setiap tanggal unik tampil sekali, mengikuti urutan pertama kali dimasukkan. Duplikat tidak dikurangi lagi. Geser tabel pada layar sempit.</p>
-    <div className={styles.scroll} role="region" aria-labelledby={caption} aria-describedby={hint} tabIndex={0}>
+    <div className={styles.scroll} onKeyDown={scrollTableByKey} role="region" aria-labelledby={caption} aria-describedby={hint} tabIndex={0}>
       <table>
         <caption id={caption}>Pemeriksaan tanggal libur unik</caption>
         <thead><tr><th scope="col">Tanggal kalender</th><th scope="col">Hari</th><th scope="col">Perlakuan dalam hitungan</th></tr></thead>

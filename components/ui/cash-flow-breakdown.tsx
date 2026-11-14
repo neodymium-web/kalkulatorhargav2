@@ -1,5 +1,6 @@
 'use client'
 import { useId } from 'react'
+import { scrollTableByKey } from './table-scroll'
 import type { CashFlowRow, Precision } from '../../lib/valuation/engines'
 import { formatValuation } from '../../lib/valuation/format'
 import styles from './loan-schedule.module.css'
@@ -24,7 +25,7 @@ export function CashFlowBreakdown({
         Tahun 0 adalah hari ini. PV baris dibulatkan untuk tampilan; total NPV dihitung dari pecahan asli,
         sehingga jumlah angka tampilan bisa berbeda. Geser tabel pada layar sempit.
       </p>
-      <div className={styles.scroll} role="region" aria-labelledby={id} aria-describedby={hint} tabIndex={0}>
+      <div className={styles.scroll} onKeyDown={scrollTableByKey} role="region" aria-labelledby={id} aria-describedby={hint} tabIndex={0}>
         <table>
           <caption id={id}>Rincian arus kas dan nilai kini</caption>
           <thead>

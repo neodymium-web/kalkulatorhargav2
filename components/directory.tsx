@@ -17,9 +17,10 @@ function ToolCard({ tool }: { tool: DirectoryEntry }) {
   </Link>
 }
 
-export function Directory({ tools, heading = 'Kalkulator tersedia' }: {
+export function Directory({ tools, heading = 'Kalkulator tersedia', total = tools.length }: {
   tools: readonly DirectoryEntry[]
   heading?: string
+  total?: number
 }) {
   const titleId = useId()
   const [limit, setLimit] = useState(pageSize)
@@ -33,8 +34,11 @@ export function Directory({ tools, heading = 'Kalkulator tersedia' }: {
     list.current?.children.item(index)?.querySelector('a')?.focus()
   }, [limit])
 
-  return <section aria-labelledby={titleId}>
-    <h2 id={titleId}>{heading}</h2>
+  return <section aria-labelledby={titleId} className={styles.catalog}>
+    <div className={styles.catalogHeading}>
+      <h2 id={titleId}>{heading}</h2>
+      {tools.length > 0 && <span className={styles.count}>{Math.min(limit, tools.length)} dari {total} kalkulator</span>}
+    </div>
     {tools.length > 0 && <ul ref={list} className={styles.list} role="list">
       {tools.slice(0, limit).map(tool => <li key={tool.id}><ToolCard tool={tool} /></li>)}
     </ul>}
@@ -71,8 +75,8 @@ export function DirectorySearch({ tools, hubs, children }: {
 
   return <>
     <section className={styles.hero}>
-      <div className={layout.container}>
-        {children}
+      <div className={`${layout.container} ${styles.heroContent}`}>
+        <div className={styles.heroIntro}>{children}</div>
         <div className={styles.search} role="search">
           <div className={styles.searchRow}>
             <Input ref={input} id="calculator-search" label="Cari kalkulator" type="search"
@@ -80,6 +84,7 @@ export function DirectorySearch({ tools, hubs, children }: {
             {query && <Button variant="secondary" onClick={clear}>Hapus pencarian</Button>}
           </div>
           <p className={styles.status} role="status">{queryText && `${matches.length} kalkulator ditemukan`}</p>
+          {!queryText && <p className={styles.searchHint}>Cari berdasarkan nama atau kebutuhan perhitungan.</p>}
         </div>
       </div>
     </section>
@@ -91,10 +96,11 @@ export function DirectorySearch({ tools, hubs, children }: {
         </nav>
       </section>}
       <div className={!queryText && hubs.length ? layout.section : undefined}>
-        <Directory key={normalized} heading={queryText ? 'Hasil pencarian' : 'Kalkulator tersedia'} tools={matches} />
+        <Directory key={normalized} heading={queryText ? 'Hasil pencarian' : 'Kalkulator tersedia'} tools={matches} total={queryText ? matches.length : tools.length} />
         {queryText && matches.length === 0 && <div className={styles.empty}>
           <strong>Tidak ada kalkulator yang cocok.</strong>
           <p>Coba kata kunci lain, misalnya HPP atau biaya produksi.</p>
+          <Button variant="secondary" onClick={clear}>Hapus dan cari lagi</Button>
         </div>}
       </div>
     </div>

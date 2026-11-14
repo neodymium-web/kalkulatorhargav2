@@ -38,6 +38,11 @@
   --control-size: 3rem;
   --container-max: 75rem;
   --measure-prose: 65ch;
+  /* Phase C: restrained depth and readable emphasis for utility surfaces. */
+  --surface-highlight: #eff6ff;
+  --border-strong: #cbd5e1;
+  --shadow-card: 0 2px 5px rgba(15, 23, 42, .035), 0 12px 28px rgba(15, 23, 42, .045);
+  --shadow-card-hover: 0 6px 16px rgba(15, 23, 42, .06), 0 18px 38px rgba(15, 23, 42, .075);
   --motion-fast: 120ms;
   --motion-ease: ease-out;
   --gutter: clamp(var(--space-3), calc(7.2727vw - .7045rem), var(--space-4));

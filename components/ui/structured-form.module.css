@@ -4,8 +4,11 @@
   padding: var(--space-4);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-panel);
+  background: var(--surface-subtle);
 }
 .row legend { font-weight: var(--weight-label); padding-inline: var(--space-1); }
 .rowFields { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-4); }
 .remove { margin-top: var(--space-3); }
+.row:focus-within { border-color: var(--border-control); }
+@container (min-width: 30rem) { .rowFields { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .hint { color: var(--text-secondary); font: var(--text-small) var(--font-ui); }
