@@ -11,8 +11,11 @@ export function CategoryPage({ categoryId, title, description }: { categoryId: C
   const tools = listCategory(categoryId)
   return <div className={`${styles.container} ${styles.page}`}>
     <Breadcrumb current={categories[categoryId].name} />
-    <h1>{title}</h1>
-    <p className={styles.intro}>{description}</p>
+    <header className={styles.pageHeader}>
+      <h1>{title}</h1>
+      <p className={styles.intro}>{description}</p>
+      <p className={styles.catalogMeta}>{tools.length} kalkulator · Pilih sesuai kebutuhan perhitungan</p>
+    </header>
     <div className={styles.section}><Directory tools={tools.map(directoryEntry)} /></div>
     <details className={directoryStyles.completeIndex}>
       <summary>Daftar lengkap {tools.length} kalkulator {categories[categoryId].name}</summary>

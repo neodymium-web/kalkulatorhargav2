@@ -31,4 +31,5 @@
 .completeIndex a { display: inline-flex; align-items: center; min-height: var(--target-min); overflow-wrap: anywhere; }
 .completeIndex summary:focus-visible { outline: 3px solid var(--focus-ring); outline-offset: var(--focus-offset); }
 @media (min-width: 48rem) { .list { --columns: 2; gap: var(--space-4); } .links { grid-template-columns: repeat(3, minmax(0, 1fr)); } .search { padding: var(--space-6); } }
+@media (min-width: 48rem) { .completeIndex ul { columns: 2; column-gap: var(--space-8); } .completeIndex li { break-inside: avoid; } }
 @media (min-width: 64rem) { .hero { padding-block: var(--space-12); } .heroContent { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-12); } .list { --columns: 3; } .links { grid-template-columns: repeat(6, minmax(0, 1fr)); } }

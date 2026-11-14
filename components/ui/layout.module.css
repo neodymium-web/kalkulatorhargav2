@@ -6,6 +6,9 @@
 .page { padding-block: var(--space-8); }
 .intro { margin-top: var(--space-3); max-width: var(--measure-prose); color: var(--text-secondary); }
 .section { margin-top: var(--space-8); }
+.pageHeader { padding-block: var(--space-3) var(--space-6); border-bottom: 1px solid var(--border-subtle); }
+.pageHeader h1 { max-width: 30ch; text-wrap: balance; }
+.catalogMeta { margin-top: var(--space-5); color: var(--text-secondary); font: var(--text-small) var(--font-ui); }
 
 .methodology { max-width: var(--measure-prose); margin-block: var(--space-8); }
 .methodology p { margin-top: var(--space-2); }
