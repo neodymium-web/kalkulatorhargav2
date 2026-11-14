@@ -31,3 +31,6 @@ test('WebKit manual four-channel ledger and ranking invalidation',async({page},i
  const region=page.getByRole('region',{name:'Perbandingan empat kanal'});await expect(region.getByRole('table')).toBeVisible();await expect(region).toContainText('Rp 89.500');expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBe(await page.evaluate(()=>innerWidth))
  await page.screenshot({path:info.outputPath('comparison-webkit.jpg'),fullPage:true,scale:'css',quality:70});await fillFields(page.getByRole('form',{name:'Skenario Shopee',exact:true}),{taxScope:'unknown'});await expect(region.getByRole('table')).toHaveCount(0);await expect(region).toContainText('UNKNOWN')
 })
+
+// The same new-route contract runs in WebKit as in Chromium.
+import './stock63.spec'

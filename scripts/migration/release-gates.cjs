@@ -113,6 +113,9 @@ function report() {
   const editorial = require('../legacy/editorial-contract.cjs').verify()
   assert(expectedFiles.some(f => f.path === editorial.path), 'Archive file missing from baseline')
   expectedFiles.find(f => f.path === editorial.path).sha256 = editorial.sha256
+  const additions=load('docs/audit/stock63-scope.json').files
+  assert(same(additions.map(f=>f.path).sort(),['app/kalkulator/saham/average/page.tsx','components/stock-parity/form.tsx','lib/stock-parity/engine.ts','lib/stock-parity/fields.ts'].sort()),'Unexpected stock scope')
+  expectedFiles.push(...additions)
   assert(baseline.baseline === register.baseline && same(applicationFiles(), expectedFiles.sort((a, b) => a.path < b.path ? -1 : a.path > b.path ? 1 : 0)), 'Application/config drift outside reviewed editorial ledger')
   const map = mapping()
   const observation = load(`${directory}/domain-observation.json`)
