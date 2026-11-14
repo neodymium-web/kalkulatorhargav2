@@ -1,0 +1,3122 @@
+{
+  "baseline": "4a48b0e29c558089ddeacdfd9fff602995a8bbc0",
+  "capturedAtUtc": "2026-11-14T18:42:30.626Z",
+  "method": "Fresh public legacy GET; DOMParser only, remote JavaScript not run; local production build metadata, not a new protected-preview browser test; no remote form submissions",
+  "records": [
+    {
+      "path": "/",
+      "legacy": {
+        "path": "/",
+        "url": "https://www.kalkulatorharga.com/",
+        "finalUrl": "https://www.kalkulatorharga.com/",
+        "status": 200,
+        "atUtc": "2026-11-14T18:35:57.108275+00:00",
+        "title": "Kalkulator Biaya 2026: Shopee, Tokopedia, TikTok, Lazada",
+        "h1": [
+          "Kalkulator Fee Shopee, Tokopedia, TikTok Shop, dan Lazada 2026"
+        ],
+        "description": "Hitung Biaya Shopee, Tokopedia, TikTok Shop, dan Lazada. Cocok bagi seller untuk cek biaya admin, dana cair, profit bersih, dan margin jualan.",
+        "canonical": "https://www.kalkulatorharga.com",
+        "robots": "index, follow",
+        "forms": 0,
+        "controls": [
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "Menu☰"
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "Shopee"
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "Tokopedia"
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "TikTok Shop"
+          },
+          {
+            "tag": "INPUT",
+            "type": "number",
+            "name": null,
+            "label": "Harga jual per unit, setelah diskon penjual"
+          },
+          {
+            "tag": "INPUT",
+            "type": "number",
+            "name": null,
+            "label": "HPP / modal dalam rupiah"
+          },
+          {
+            "tag": "INPUT",
+            "type": "number",
+            "name": null,
+            "label": "Jumlah unit total kuantitas"
+          },
+          {
+            "tag": "SELECT",
+            "type": null,
+            "name": null,
+            "label": "KategoriFashionBeautyElektronikHPMakananLainnyaPerhiasan emas",
+            "optionCount": 7
+          },
+          {
+            "tag": "SELECT",
+            "type": null,
+            "name": null,
+            "label": "Status tokoNon-Star / RegularStarStar+Mall / Official Store",
+            "optionCount": 4
+          },
+          {
+            "tag": "SELECT",
+            "type": null,
+            "name": null,
+            "label": "Dimensi produk≤5kg / ≤60cm / ≤20.000 cm³≥5kg / ≥60cm / ≥20.000 cm³",
+            "optionCount": 2
+          },
+          {
+            "tag": "INPUT",
+            "type": "checkbox",
+            "name": null,
+            "label": "Gratis Ongkir XTRA +7.5%"
+          },
+          {
+            "tag": "INPUT",
+            "type": "checkbox",
+            "name": null,
+            "label": "Promo XTRA +4.5%"
+          },
+          {
+            "tag": "INPUT",
+            "type": "checkbox",
+            "name": null,
+            "label": "Pre-order +3%"
+          },
+          {
+            "tag": "INPUT",
+            "type": "number",
+            "name": null,
+            "label": "Biaya logistik"
+          },
+          {
+            "tag": "BUTTON",
+            "type": null,
+            "name": null,
+            "label": "Salin hasil"
+          },
+          {
+            "tag": "BUTTON",
+            "type": null,
+            "name": null,
+            "label": "Tanya AI"
+          }
+        ],
+        "schemaTypes": [
+          "Organization",
+          "WebSite",
+          "WebPage",
+          "WebApplication",
+          "FAQPage"
+        ]
+      },
+      "staging": {
+        "status": 200,
+        "noindex": "noindex, nofollow",
+        "title": "Direktori Kalkulator Indonesia",
+        "h1": [
+          "Direktori kalkulator"
+        ],
+        "description": "Temukan 100 kalkulator bisnis, marketplace, keuangan, pajak, media sosial, dan kebutuhan sehari-hari dengan rumus serta asumsi yang jelas.",
+        "canonical": "https://kalkulatorharga.com",
+        "robots": "noindex, nofollow",
+        "forms": 0,
+        "controls": [
+          {
+            "tag": "INPUT",
+            "type": "search",
+            "name": null,
+            "label": "Cari kalkulator"
+          }
+        ],
+        "schemaTypes": []
+      }
+    },
+    {
+      "path": "/kalkulator",
+      "legacy": {
+        "path": "/kalkulator",
+        "url": "https://www.kalkulatorharga.com/kalkulator",
+        "finalUrl": "https://www.kalkulatorharga.com/kalkulator",
+        "status": 200,
+        "atUtc": "2026-11-14T18:35:57.566761+00:00",
+        "title": "Semua Kalkulator: Fee Marketplace, TikTok, Emas, Saham",
+        "h1": [
+          "Semua kalkulator: fee marketplace, TikTok, emas, dan saham"
+        ],
+        "description": "Daftar semua kalkulator Kalkulator Harga: biaya admin marketplace, penghasilan kreator TikTok, harga emas, dan rata-rata saham. Dipilih sesuai kebutuhanmu.",
+        "canonical": "https://www.kalkulatorharga.com/kalkulator",
+        "robots": "index, follow",
+        "forms": 0,
+        "controls": [
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "Menu☰"
+          }
+        ],
+        "schemaTypes": [
+          "CollectionPage",
+          "BreadcrumbList"
+        ]
+      },
+      "staging": {
+        "status": 404,
+        "noindex": "noindex, nofollow",
+        "title": "KalkulatorHarga",
+        "h1": [
+          "404"
+        ],
+        "robots": "noindex",
+        "forms": 0,
+        "controls": [],
+        "schemaTypes": []
+      }
+    },
+    {
+      "path": "/kalkulator/tiktok",
+      "legacy": {
+        "path": "/kalkulator/tiktok",
+        "url": "https://www.kalkulatorharga.com/kalkulator/tiktok",
+        "finalUrl": "https://www.kalkulatorharga.com/kalkulator/tiktok",
+        "status": 200,
+        "atUtc": "2026-11-14T18:35:58.117991+00:00",
+        "title": "Kalkulator TikTok: Engagement Rate dan Pendapatan",
+        "h1": [
+          "Kalkulator TikTok: Cek Engagement Rate dan Pendapatan Akunmu"
+        ],
+        "description": "Kalkulator TikTok untuk cek engagement rate dan estimasi penghasilan akun dari username, lalu susun rate card endorse. Semua angka menyebut sumbernya.",
+        "canonical": "https://www.kalkulatorharga.com/kalkulator/tiktok",
+        "robots": "index, follow",
+        "forms": 0,
+        "controls": [
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "Menu☰"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": null,
+            "label": "Username TikTok"
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "Cari akun"
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "Pendapatan"
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "Performa"
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "Rate card"
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "Bandingkan"
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "Per ukuran akun"
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "Isi data"
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "Atur ulang"
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "Bagikan hasil"
+          },
+          {
+            "tag": "INPUT",
+            "type": "number",
+            "name": null,
+            "label": "Video / bulan"
+          },
+          {
+            "tag": "INPUT",
+            "type": "number",
+            "name": null,
+            "label": "Rate Creator Rewards / 1.000 tayanganBawaan Rp0 karena programnya belum tersedia di Indonesia. Isi rate aktual kalau sudah tersedia di wilayahmu."
+          },
+          {
+            "tag": "INPUT",
+            "type": "number",
+            "name": null,
+            "label": "Endorse / bulan"
+          },
+          {
+            "tag": "INPUT",
+            "type": "number",
+            "name": null,
+            "label": "Nilai per endorse"
+          },
+          {
+            "tag": "INPUT",
+            "type": "number",
+            "name": null,
+            "label": "GMV affiliate / bulan"
+          },
+          {
+            "tag": "INPUT",
+            "type": "number",
+            "name": null,
+            "label": "Komisi affiliate (%)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "number",
+            "name": null,
+            "label": "Gift / live / bulan"
+          },
+          {
+            "tag": "INPUT",
+            "type": "number",
+            "name": null,
+            "label": "Tarif sponsor terendah per videoAngka yang Anda tawarkan sebagai batas bawah."
+          },
+          {
+            "tag": "INPUT",
+            "type": "number",
+            "name": null,
+            "label": "Tarif sponsor tertinggi per videoBatas atas yang masih masuk akal untuk niche Anda."
+          },
+          {
+            "tag": "INPUT",
+            "type": "number",
+            "name": null,
+            "label": "Video sponsor per bulanJumlah slot sponsor yang bisa Anda isi tiap bulan."
+          },
+          {
+            "tag": "INPUT",
+            "type": "number",
+            "name": null,
+            "label": "Porsi video bersponsor (%)Acuan indikatif, bisa diubah. 20% berarti 1 dari 5 video."
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": null,
+            "label": "Label akun"
+          },
+          {
+            "tag": "INPUT",
+            "type": "number",
+            "name": null,
+            "label": "Jumlah pengikut"
+          },
+          {
+            "tag": "INPUT",
+            "type": "number",
+            "name": null,
+            "label": "Rata-rata tayangan per video"
+          },
+          {
+            "tag": "INPUT",
+            "type": "number",
+            "name": null,
+            "label": "Total interaksi per videoSuka + komentar + bagikan + simpan."
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": null,
+            "label": "Label akun"
+          },
+          {
+            "tag": "INPUT",
+            "type": "number",
+            "name": null,
+            "label": "Jumlah pengikut"
+          },
+          {
+            "tag": "INPUT",
+            "type": "number",
+            "name": null,
+            "label": "Rata-rata tayangan per video"
+          },
+          {
+            "tag": "INPUT",
+            "type": "number",
+            "name": null,
+            "label": "Total interaksi per videoSuka + komentar + bagikan + simpan."
+          },
+          {
+            "tag": "INPUT",
+            "type": "number",
+            "name": null,
+            "label": "Jumlah pengikut"
+          },
+          {
+            "tag": "INPUT",
+            "type": "number",
+            "name": null,
+            "label": "Rata-rata tayangan per video"
+          },
+          {
+            "tag": "INPUT",
+            "type": "number",
+            "name": null,
+            "label": "Suka per video"
+          },
+          {
+            "tag": "INPUT",
+            "type": "number",
+            "name": null,
+            "label": "Komentar per video"
+          },
+          {
+            "tag": "INPUT",
+            "type": "number",
+            "name": null,
+            "label": "Bagikan per video"
+          },
+          {
+            "tag": "INPUT",
+            "type": "number",
+            "name": null,
+            "label": "Simpan per video"
+          }
+        ],
+        "schemaTypes": [
+          "WebPage",
+          "WebApplication",
+          "FAQPage",
+          "BreadcrumbList"
+        ]
+      },
+      "staging": {
+        "status": 200,
+        "noindex": "noindex, nofollow",
+        "title": "Kalkulator TikTok Kreator | KalkulatorHarga",
+        "h1": [
+          "Kalkulator TikTok Kreator"
+        ],
+        "description": "Simulasi penghasilan, engagement, rentang penawaran sponsor dan perbandingan akun TikTok dari asumsi manual, tanpa tarif resmi.",
+        "canonical": "https://kalkulatorharga.com/kalkulator/tiktok",
+        "robots": "noindex, nofollow",
+        "forms": 1,
+        "controls": [
+          {
+            "tag": "SELECT",
+            "type": null,
+            "name": null,
+            "label": "Pilih modul TikTok Kreator",
+            "optionCount": 4
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "eligibleViews",
+            "label": "Tayangan yang diasumsikan memenuhi basis RPM model"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "rpm",
+            "label": "RPM kreator asumsi neto per 1.000 tayangan sesuai basis (2 desimal) (Rp)"
+          },
+          {
+            "tag": "SELECT",
+            "type": null,
+            "name": "incomeBasis",
+            "label": "Dasar angka sumber pendapatan lain",
+            "optionCount": 3
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "sponsor",
+            "label": "Sponsor neto pada periode yang sama (Rp)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "affiliate",
+            "label": "Komisi affiliate neto (bukan omzet) (Rp)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "gift",
+            "label": "Gift neto yang direalisasi atau diasumsikan (bukan coin) (Rp)"
+          },
+          {
+            "tag": "BUTTON",
+            "type": "submit",
+            "name": null,
+            "label": "Hitung"
+          }
+        ],
+        "schemaTypes": []
+      }
+    },
+    {
+      "path": "/kalkulator/emas",
+      "legacy": {
+        "path": "/kalkulator/emas",
+        "url": "https://www.kalkulatorharga.com/kalkulator/emas",
+        "finalUrl": "https://www.kalkulatorharga.com/kalkulator/emas",
+        "status": 200,
+        "atUtc": "2026-11-14T18:35:58.585407+00:00",
+        "title": "Kalkulator Harga Emas 2026: Harga, Karat, Kode, dan Buyback",
+        "h1": [
+          "Kalkulator Harga Emas: Harga, Karat, Kode, dan Buyback"
+        ],
+        "description": "Hitung harga emas per gram dan per ukuran, konversi karat ke kode kemurnian, serta nilai jual balik emas batangan dan perhiasan. Lengkap dengan spread buyback.",
+        "canonical": "https://www.kalkulatorharga.com/kalkulator/emas",
+        "robots": "index, follow",
+        "forms": 0,
+        "controls": [
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "Menu☰"
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "Harga emas"
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "Emas perhiasan"
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "Kadar & kode"
+          },
+          {
+            "tag": "INPUT",
+            "type": "number",
+            "name": null,
+            "label": "Berat emasdalam gram"
+          },
+          {
+            "tag": "SELECT",
+            "type": null,
+            "name": null,
+            "label": "Kadar emasdari 24 karat ke 5 karat24 karat · kode 99922 karat · kode 91720 karat · kode 83318 karat · kode 75016 karat · kode 66714 karat · kode 58512 karat · kode 50010 karat · ko",
+            "optionCount": 12
+          },
+          {
+            "tag": "INPUT",
+            "type": "number",
+            "name": null,
+            "label": "Harga 1 gram 24Kacuan per gram, rupiah"
+          },
+          {
+            "tag": "INPUT",
+            "type": "number",
+            "name": null,
+            "label": "Spread beli-kembalipersen, bawaan 8,1%"
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "Refresh harga emas"
+          }
+        ],
+        "schemaTypes": [
+          "WebApplication",
+          "FAQPage",
+          "BreadcrumbList"
+        ]
+      },
+      "staging": {
+        "status": 200,
+        "noindex": "noindex, nofollow",
+        "title": "Kalkulator Emas dengan Harga Manual | KalkulatorHarga",
+        "h1": [
+          "Kalkulator emas dengan harga manual"
+        ],
+        "description": "Hitung nilai emas, kadar karat atau fineness, buyback manual, biaya dan selisih dengan quote yang Anda konfirmasi. Tanpa harga real-time atau pajak otomatis.",
+        "canonical": "https://kalkulatorharga.com/kalkulator/emas",
+        "robots": "noindex, nofollow",
+        "forms": 1,
+        "controls": [
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "gross",
+            "label": "Berat bruto (gram)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "nonGold",
+            "label": "Berat batu atau bagian nonemas (gram)"
+          },
+          {
+            "tag": "SELECT",
+            "type": null,
+            "name": "purityMode",
+            "label": "Dasar kadar",
+            "optionCount": 3
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "purity",
+            "label": "Nilai kadar (karat atau per 1000 sesuai pilihan)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "price",
+            "label": "Quote beli manual per gram emas murni (Rp)"
+          },
+          {
+            "tag": "SELECT",
+            "type": null,
+            "name": "buybackMode",
+            "label": "Dasar buyback",
+            "optionCount": 3
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "buyCosts",
+            "label": "Total biaya beli yang dikonfirmasi (Rp)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "sellCosts",
+            "label": "Total biaya jual/pemotongan yang dikonfirmasi (Rp)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "source",
+            "label": "Catatan sumber/asumsi quote, tanpa data pribadi"
+          },
+          {
+            "tag": "INPUT",
+            "type": "date",
+            "name": "quoteDate",
+            "label": "Tanggal quote"
+          },
+          {
+            "tag": "INPUT",
+            "type": "date",
+            "name": "asOf",
+            "label": "Tanggal simulasi"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "maxAge",
+            "label": "Toleransi usia quote (hari,0–3650)"
+          },
+          {
+            "tag": "SELECT",
+            "type": null,
+            "name": "quoteStatus",
+            "label": "Konfirmasi quote",
+            "optionCount": 3
+          },
+          {
+            "tag": "SELECT",
+            "type": null,
+            "name": "costStatus",
+            "label": "Konfirmasi biaya",
+            "optionCount": 3
+          },
+          {
+            "tag": "BUTTON",
+            "type": "submit",
+            "name": null,
+            "label": "Hitung emas"
+          }
+        ],
+        "schemaTypes": []
+      }
+    },
+    {
+      "path": "/bandingkan",
+      "legacy": {
+        "path": "/bandingkan",
+        "url": "https://www.kalkulatorharga.com/bandingkan",
+        "finalUrl": "https://www.kalkulatorharga.com/bandingkan",
+        "status": 200,
+        "atUtc": "2026-11-14T18:35:58.989405+00:00",
+        "title": "Bandingkan Fee Shopee, Tokopedia, TikTok, Lazada",
+        "h1": [
+          "Shopee vs Tokopedia vs TikTok Shop vs Lazada"
+        ],
+        "description": "Perbandingan biaya admin, biaya proses, dana cair, dan margin untuk produk Fashion seharga Rp100.000 di empat marketplace.",
+        "canonical": "https://www.kalkulatorharga.com/bandingkan",
+        "robots": "index, follow",
+        "forms": 0,
+        "controls": [
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "Menu☰"
+          }
+        ],
+        "schemaTypes": [
+          "WebPage",
+          "BreadcrumbList"
+        ]
+      },
+      "staging": {
+        "status": 200,
+        "noindex": "noindex, nofollow",
+        "title": "Bandingkan Marketplace dengan Biaya Manual | KalkulatorHarga",
+        "h1": [
+          "Bandingkan marketplace dengan biaya manual"
+        ],
+        "description": "Bandingkan empat skenario seller dengan fee, basis, minimum/cap, ongkir dan nominal pemotongan manual yang lengkap. Tanpa preset resmi atau biaya UNKNOWN dianggap nol.",
+        "canonical": "https://kalkulatorharga.com/bandingkan",
+        "robots": "noindex, nofollow",
+        "forms": 4,
+        "controls": [
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "price",
+            "label": "Harga jual per unit (Rp)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "quantity",
+            "label": "Jumlah unit (1–10000)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "discount",
+            "label": "Diskon seller per pesanan (Rp)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "cost",
+            "label": "HPP per unit (Rp)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "context",
+            "label": "Konteks kategori, tier, program, tanggal pesanan (catatan opsional; tidak mengisi tarif)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "buyerShipping",
+            "label": "Ongkir dibayar buyer (Rp)"
+          },
+          {
+            "tag": "SELECT",
+            "type": null,
+            "name": "shippingFlow",
+            "label": "Pemetaan ongkir buyer",
+            "optionCount": 4
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "shipping",
+            "label": "Ongkir dibayar seller (Rp)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "reimbursement",
+            "label": "Reimbursement logistik aktual, bukan kredit yang sudah dicatat (Rp)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "receipts",
+            "label": "Kredit aktual lain, bukan diskon platform tampilan (Rp)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "other",
+            "label": "Penyesuaian biaya lain, tidak termasuk fee yang sudah dicatat (Rp)"
+          },
+          {
+            "tag": "SELECT",
+            "type": null,
+            "name": "coverage",
+            "label": "Cakupan transaksi",
+            "optionCount": 4
+          },
+          {
+            "tag": "SELECT",
+            "type": null,
+            "name": "confirmation",
+            "label": "Konfirmasi kelengkapan",
+            "optionCount": 3
+          },
+          {
+            "tag": "SELECT",
+            "type": null,
+            "name": "taxScope",
+            "label": "Cakupan pemotongan manual",
+            "optionCount": 5
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "taxAmount",
+            "label": "Nominal pemotongan per pesanan dari bukti (tidak termasuk biaya lain) (Rp)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "taxEvidence",
+            "label": "Catatan bukti pemotongan, tanpa data pribadi (wajib bila ada)"
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "Tambah biaya"
+          },
+          {
+            "tag": "BUTTON",
+            "type": "submit",
+            "name": null,
+            "label": "Hitung"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "price",
+            "label": "Harga jual per unit (Rp)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "quantity",
+            "label": "Jumlah unit (1–10000)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "discount",
+            "label": "Diskon seller per pesanan (Rp)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "cost",
+            "label": "HPP per unit (Rp)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "context",
+            "label": "Konteks kategori, tier, program, tanggal pesanan (catatan opsional; tidak mengisi tarif)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "buyerShipping",
+            "label": "Ongkir dibayar buyer (Rp)"
+          },
+          {
+            "tag": "SELECT",
+            "type": null,
+            "name": "shippingFlow",
+            "label": "Pemetaan ongkir buyer",
+            "optionCount": 4
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "shipping",
+            "label": "Ongkir dibayar seller (Rp)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "reimbursement",
+            "label": "Reimbursement logistik aktual, bukan kredit yang sudah dicatat (Rp)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "receipts",
+            "label": "Kredit aktual lain, bukan diskon platform tampilan (Rp)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "other",
+            "label": "Penyesuaian biaya lain, tidak termasuk fee yang sudah dicatat (Rp)"
+          },
+          {
+            "tag": "SELECT",
+            "type": null,
+            "name": "coverage",
+            "label": "Cakupan transaksi",
+            "optionCount": 4
+          },
+          {
+            "tag": "SELECT",
+            "type": null,
+            "name": "confirmation",
+            "label": "Konfirmasi kelengkapan",
+            "optionCount": 3
+          },
+          {
+            "tag": "SELECT",
+            "type": null,
+            "name": "taxScope",
+            "label": "Cakupan pemotongan manual",
+            "optionCount": 5
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "taxAmount",
+            "label": "Nominal pemotongan per pesanan dari bukti (tidak termasuk biaya lain) (Rp)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "taxEvidence",
+            "label": "Catatan bukti pemotongan, tanpa data pribadi (wajib bila ada)"
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "Tambah biaya"
+          },
+          {
+            "tag": "BUTTON",
+            "type": "submit",
+            "name": null,
+            "label": "Hitung"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "price",
+            "label": "Harga jual per unit (Rp)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "quantity",
+            "label": "Jumlah unit (1–10000)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "discount",
+            "label": "Diskon seller per pesanan (Rp)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "cost",
+            "label": "HPP per unit (Rp)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "context",
+            "label": "Konteks kategori, tier, program, tanggal pesanan (catatan opsional; tidak mengisi tarif)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "buyerShipping",
+            "label": "Ongkir dibayar buyer (Rp)"
+          },
+          {
+            "tag": "SELECT",
+            "type": null,
+            "name": "shippingFlow",
+            "label": "Pemetaan ongkir buyer",
+            "optionCount": 4
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "shipping",
+            "label": "Ongkir dibayar seller (Rp)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "reimbursement",
+            "label": "Reimbursement logistik aktual, bukan kredit yang sudah dicatat (Rp)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "receipts",
+            "label": "Kredit aktual lain, bukan diskon platform tampilan (Rp)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "other",
+            "label": "Penyesuaian biaya lain, tidak termasuk fee yang sudah dicatat (Rp)"
+          },
+          {
+            "tag": "SELECT",
+            "type": null,
+            "name": "coverage",
+            "label": "Cakupan transaksi",
+            "optionCount": 4
+          },
+          {
+            "tag": "SELECT",
+            "type": null,
+            "name": "confirmation",
+            "label": "Konfirmasi kelengkapan",
+            "optionCount": 3
+          },
+          {
+            "tag": "SELECT",
+            "type": null,
+            "name": "taxScope",
+            "label": "Cakupan pemotongan manual",
+            "optionCount": 5
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "taxAmount",
+            "label": "Nominal pemotongan per pesanan dari bukti (tidak termasuk biaya lain) (Rp)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "taxEvidence",
+            "label": "Catatan bukti pemotongan, tanpa data pribadi (wajib bila ada)"
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "Tambah biaya"
+          },
+          {
+            "tag": "BUTTON",
+            "type": "submit",
+            "name": null,
+            "label": "Hitung"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "price",
+            "label": "Harga jual per unit (Rp)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "quantity",
+            "label": "Jumlah unit (1–10000)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "discount",
+            "label": "Diskon seller per pesanan (Rp)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "cost",
+            "label": "HPP per unit (Rp)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "context",
+            "label": "Konteks kategori, tier, program, tanggal pesanan (catatan opsional; tidak mengisi tarif)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "buyerShipping",
+            "label": "Ongkir dibayar buyer (Rp)"
+          },
+          {
+            "tag": "SELECT",
+            "type": null,
+            "name": "shippingFlow",
+            "label": "Pemetaan ongkir buyer",
+            "optionCount": 4
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "shipping",
+            "label": "Ongkir dibayar seller (Rp)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "reimbursement",
+            "label": "Reimbursement logistik aktual, bukan kredit yang sudah dicatat (Rp)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "receipts",
+            "label": "Kredit aktual lain, bukan diskon platform tampilan (Rp)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "other",
+            "label": "Penyesuaian biaya lain, tidak termasuk fee yang sudah dicatat (Rp)"
+          },
+          {
+            "tag": "SELECT",
+            "type": null,
+            "name": "coverage",
+            "label": "Cakupan transaksi",
+            "optionCount": 4
+          },
+          {
+            "tag": "SELECT",
+            "type": null,
+            "name": "confirmation",
+            "label": "Konfirmasi kelengkapan",
+            "optionCount": 3
+          },
+          {
+            "tag": "SELECT",
+            "type": null,
+            "name": "taxScope",
+            "label": "Cakupan pemotongan manual",
+            "optionCount": 5
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "taxAmount",
+            "label": "Nominal pemotongan per pesanan dari bukti (tidak termasuk biaya lain) (Rp)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "taxEvidence",
+            "label": "Catatan bukti pemotongan, tanpa data pribadi (wajib bila ada)"
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "Tambah biaya"
+          },
+          {
+            "tag": "BUTTON",
+            "type": "submit",
+            "name": null,
+            "label": "Hitung"
+          }
+        ],
+        "schemaTypes": []
+      }
+    },
+    {
+      "path": "/kalkulator/shopee",
+      "legacy": {
+        "path": "/kalkulator/shopee",
+        "url": "https://www.kalkulatorharga.com/kalkulator/shopee",
+        "finalUrl": "https://www.kalkulatorharga.com/kalkulator/shopee",
+        "status": 200,
+        "atUtc": "2026-11-14T18:35:59.497814+00:00",
+        "title": "Kalkulator Shopee 2026: Fee, Program & Profit",
+        "h1": [
+          "Kalkulator Shopee 2026"
+        ],
+        "description": "Hitung fee Shopee 2026 dari tarif resmi per subkategori: admin, program opsional, proses, dana cair, profit, dan margin. Tabel 28 baris + contoh.",
+        "canonical": "https://www.kalkulatorharga.com/kalkulator/shopee",
+        "robots": "index, follow",
+        "forms": 0,
+        "controls": [
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "Menu☰"
+          },
+          {
+            "tag": "INPUT",
+            "type": "number",
+            "name": null,
+            "label": "Harga jual per unit, setelah diskon penjual"
+          },
+          {
+            "tag": "INPUT",
+            "type": "number",
+            "name": null,
+            "label": "HPP / modal dalam rupiah"
+          },
+          {
+            "tag": "INPUT",
+            "type": "number",
+            "name": null,
+            "label": "Jumlah unit total kuantitas"
+          },
+          {
+            "tag": "SELECT",
+            "type": null,
+            "name": null,
+            "label": "KategoriFashionBeautyElektronikHPMakananLainnyaPerhiasan emas",
+            "optionCount": 7
+          },
+          {
+            "tag": "SELECT",
+            "type": null,
+            "name": null,
+            "label": "Status tokoNon-Star / RegularStarStar+Mall / Official Store",
+            "optionCount": 4
+          },
+          {
+            "tag": "SELECT",
+            "type": null,
+            "name": null,
+            "label": "Dimensi produk≤5kg / ≤60cm / ≤20.000 cm³≥5kg / ≥60cm / ≥20.000 cm³",
+            "optionCount": 2
+          },
+          {
+            "tag": "INPUT",
+            "type": "checkbox",
+            "name": null,
+            "label": "Gratis Ongkir XTRA +7.5%"
+          },
+          {
+            "tag": "INPUT",
+            "type": "checkbox",
+            "name": null,
+            "label": "Promo XTRA +4.5%"
+          },
+          {
+            "tag": "INPUT",
+            "type": "checkbox",
+            "name": null,
+            "label": "Pre-order +3%"
+          },
+          {
+            "tag": "INPUT",
+            "type": "number",
+            "name": null,
+            "label": "Biaya logistik"
+          },
+          {
+            "tag": "BUTTON",
+            "type": null,
+            "name": null,
+            "label": "Salin hasil"
+          },
+          {
+            "tag": "BUTTON",
+            "type": null,
+            "name": null,
+            "label": "Tanya AI"
+          }
+        ],
+        "schemaTypes": [
+          "WebApplication",
+          "FAQPage",
+          "BreadcrumbList",
+          "ItemList"
+        ]
+      },
+      "staging": {
+        "status": 200,
+        "noindex": "noindex, nofollow",
+        "title": "Kalkulator Biaya Admin Shopee (Simulasi Tarif Penjual) | KalkulatorHarga",
+        "h1": [
+          "Kalkulator Biaya Admin Shopee (Simulasi Tarif Penjual)"
+        ],
+        "description": "Hitung simulasi dana cair Shopee, biaya manual dengan basis dan cap eksplisit, serta hasil setelah HPP. Tanpa tarif resmi otomatis.",
+        "canonical": "https://kalkulatorharga.com/kalkulator/shopee",
+        "robots": "noindex, nofollow",
+        "forms": 1,
+        "controls": [
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "price",
+            "label": "Harga jual per unit (Rp)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "quantity",
+            "label": "Jumlah unit (1–10000)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "discount",
+            "label": "Diskon seller per pesanan (Rp)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "cost",
+            "label": "HPP per unit (Rp)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "context",
+            "label": "Konteks kategori, tier, program, tanggal pesanan (catatan opsional; tidak mengisi tarif)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "buyerShipping",
+            "label": "Ongkir dibayar buyer (Rp)"
+          },
+          {
+            "tag": "SELECT",
+            "type": null,
+            "name": "shippingFlow",
+            "label": "Pemetaan ongkir buyer",
+            "optionCount": 4
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "shipping",
+            "label": "Ongkir dibayar seller (Rp)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "reimbursement",
+            "label": "Reimbursement logistik aktual, bukan kredit yang sudah dicatat (Rp)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "receipts",
+            "label": "Kredit aktual lain, bukan diskon platform tampilan (Rp)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "other",
+            "label": "Penyesuaian biaya lain, tidak termasuk fee yang sudah dicatat (Rp)"
+          },
+          {
+            "tag": "SELECT",
+            "type": null,
+            "name": "coverage",
+            "label": "Cakupan transaksi",
+            "optionCount": 4
+          },
+          {
+            "tag": "SELECT",
+            "type": null,
+            "name": "confirmation",
+            "label": "Konfirmasi kelengkapan",
+            "optionCount": 3
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "Tambah biaya"
+          },
+          {
+            "tag": "BUTTON",
+            "type": "submit",
+            "name": null,
+            "label": "Hitung"
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "Muat lebih banyak"
+          }
+        ],
+        "schemaTypes": []
+      }
+    },
+    {
+      "path": "/kalkulator/lazada",
+      "legacy": {
+        "path": "/kalkulator/lazada",
+        "url": "https://www.kalkulatorharga.com/kalkulator/lazada",
+        "finalUrl": "https://www.kalkulatorharga.com/kalkulator/lazada",
+        "status": 200,
+        "atUtc": "2026-11-14T18:36:00.089188+00:00",
+        "title": "Kalkulator Fee Lazada 2026: Marketplace & LazMall",
+        "h1": [
+          "Kalkulator Fee Lazada Seller 2026"
+        ],
+        "description": "Hitung fee Lazada berdasarkan kategori resmi, Marketplace atau LazMall, biaya proses, PPh 22, iklan, dan biaya lain. Lengkap dengan tabel tarif dan contoh.",
+        "canonical": "https://www.kalkulatorharga.com/kalkulator/lazada",
+        "robots": "index, follow",
+        "forms": 0,
+        "controls": [
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "Menu☰"
+          },
+          {
+            "tag": "SELECT",
+            "type": null,
+            "name": null,
+            "label": "Tipe sellerMarketplace BiasaLazMall",
+            "optionCount": 2
+          },
+          {
+            "tag": "SELECT",
+            "type": null,
+            "name": null,
+            "label": "KategoriAksesoris FashionAlat & Perbaikan RumahAlat tulis, kerajinan, dan kartu hadiahAudioBarang dan Servis DigitalBayi & BalitaBekalan Kelengkapan RumahBinatu & Peralatan Kebersi",
+            "optionCount": 43
+          },
+          {
+            "tag": "INPUT",
+            "type": "number",
+            "name": null,
+            "label": "Rate komisi (%)Sesuaikan dengan subkategori produk."
+          },
+          {
+            "tag": "INPUT",
+            "type": "number",
+            "name": null,
+            "label": "Harga jual / unit"
+          },
+          {
+            "tag": "INPUT",
+            "type": "number",
+            "name": null,
+            "label": "HPP / modal / unit"
+          },
+          {
+            "tag": "INPUT",
+            "type": "number",
+            "name": null,
+            "label": "Jumlah unit"
+          },
+          {
+            "tag": "INPUT",
+            "type": "number",
+            "name": null,
+            "label": "Biaya proses / orderDefault Rp1.250 sesuai ringkasan biaya Lazada."
+          },
+          {
+            "tag": "INPUT",
+            "type": "number",
+            "name": null,
+            "label": "Biaya iklan / order"
+          },
+          {
+            "tag": "INPUT",
+            "type": "number",
+            "name": null,
+            "label": "Biaya lain / orderPacking, retur, voucher, atau subsidi kirim."
+          },
+          {
+            "tag": "INPUT",
+            "type": "checkbox",
+            "name": null,
+            "label": "Hitung PPh 22 0,5% dari harga jual (opsional, sesuai status pajak toko)"
+          }
+        ],
+        "schemaTypes": [
+          "WebApplication",
+          "FAQPage",
+          "BreadcrumbList"
+        ]
+      },
+      "staging": {
+        "status": 200,
+        "noindex": "noindex, nofollow",
+        "title": "Kalkulator Biaya Admin Lazada (Simulasi Tarif Penjual) | KalkulatorHarga",
+        "h1": [
+          "Kalkulator Biaya Admin Lazada (Simulasi Tarif Penjual)"
+        ],
+        "description": "Hitung simulasi dana cair Lazada, biaya manual dengan basis dan cap eksplisit, serta hasil setelah HPP. Tanpa tarif resmi otomatis.",
+        "canonical": "https://kalkulatorharga.com/kalkulator/lazada",
+        "robots": "noindex, nofollow",
+        "forms": 1,
+        "controls": [
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "price",
+            "label": "Harga jual per unit (Rp)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "quantity",
+            "label": "Jumlah unit (1–10000)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "discount",
+            "label": "Diskon seller per pesanan (Rp)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "cost",
+            "label": "HPP per unit (Rp)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "context",
+            "label": "Konteks kategori, tier, program, tanggal pesanan (catatan opsional; tidak mengisi tarif)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "buyerShipping",
+            "label": "Ongkir dibayar buyer (Rp)"
+          },
+          {
+            "tag": "SELECT",
+            "type": null,
+            "name": "shippingFlow",
+            "label": "Pemetaan ongkir buyer",
+            "optionCount": 4
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "shipping",
+            "label": "Ongkir dibayar seller (Rp)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "reimbursement",
+            "label": "Reimbursement logistik aktual, bukan kredit yang sudah dicatat (Rp)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "receipts",
+            "label": "Kredit aktual lain, bukan diskon platform tampilan (Rp)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "other",
+            "label": "Penyesuaian biaya lain, tidak termasuk fee yang sudah dicatat (Rp)"
+          },
+          {
+            "tag": "SELECT",
+            "type": null,
+            "name": "coverage",
+            "label": "Cakupan transaksi",
+            "optionCount": 4
+          },
+          {
+            "tag": "SELECT",
+            "type": null,
+            "name": "confirmation",
+            "label": "Konfirmasi kelengkapan",
+            "optionCount": 3
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "Tambah biaya"
+          },
+          {
+            "tag": "BUTTON",
+            "type": "submit",
+            "name": null,
+            "label": "Hitung"
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "Muat lebih banyak"
+          }
+        ],
+        "schemaTypes": []
+      }
+    },
+    {
+      "path": "/kalkulator/tiktok-shop",
+      "legacy": {
+        "path": "/kalkulator/tiktok-shop",
+        "url": "https://www.kalkulatorharga.com/kalkulator/tiktok-shop",
+        "finalUrl": "https://www.kalkulatorharga.com/kalkulator/tiktok-shop",
+        "status": 200,
+        "atUtc": "2026-11-14T18:36:00.530014+00:00",
+        "title": "Biaya Admin TikTok Shop 2026: Fee, Proses & Profit",
+        "h1": [
+          "Kalkulator Biaya Admin TikTok Shop 2026"
+        ],
+        "description": "Hitung biaya admin TikTok Shop 2026 dari tarif resmi per kategori dan status toko: komisi dinamis, Growth Xtra, dana cair, dan margin. 14 baris tarif.",
+        "canonical": "https://www.kalkulatorharga.com/kalkulator/tiktok-shop",
+        "robots": "index, follow",
+        "forms": 0,
+        "controls": [
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "Menu☰"
+          },
+          {
+            "tag": "INPUT",
+            "type": "number",
+            "name": null,
+            "label": "Harga jual per unit, setelah diskon penjual"
+          },
+          {
+            "tag": "INPUT",
+            "type": "number",
+            "name": null,
+            "label": "HPP / modal dalam rupiah"
+          },
+          {
+            "tag": "INPUT",
+            "type": "number",
+            "name": null,
+            "label": "Jumlah unit total kuantitas"
+          },
+          {
+            "tag": "SELECT",
+            "type": null,
+            "name": null,
+            "label": "KategoriFashionBeautyElektronikHPMakananLainnyaPerhiasan emas",
+            "optionCount": 7
+          },
+          {
+            "tag": "SELECT",
+            "type": null,
+            "name": null,
+            "label": "Status tokoRegularMall",
+            "optionCount": 2
+          },
+          {
+            "tag": "SELECT",
+            "type": null,
+            "name": null,
+            "label": "Dimensi produk≤5kg / ≤60cm / ≤20.000 cm³≥5kg / ≥60cm / ≥20.000 cm³",
+            "optionCount": 2
+          },
+          {
+            "tag": "INPUT",
+            "type": "checkbox",
+            "name": null,
+            "label": "Gratis Ongkir TikTok +3%"
+          },
+          {
+            "tag": "INPUT",
+            "type": "checkbox",
+            "name": null,
+            "label": "Voucher Seller +1%"
+          },
+          {
+            "tag": "INPUT",
+            "type": "checkbox",
+            "name": null,
+            "label": "Pre-order +3%"
+          },
+          {
+            "tag": "INPUT",
+            "type": "number",
+            "name": null,
+            "label": "Biaya logistik"
+          },
+          {
+            "tag": "BUTTON",
+            "type": null,
+            "name": null,
+            "label": "Salin hasil"
+          },
+          {
+            "tag": "BUTTON",
+            "type": null,
+            "name": null,
+            "label": "Tanya AI"
+          }
+        ],
+        "schemaTypes": [
+          "WebApplication",
+          "FAQPage",
+          "BreadcrumbList",
+          "ItemList"
+        ]
+      },
+      "staging": {
+        "status": 200,
+        "noindex": "noindex, nofollow",
+        "title": "Kalkulator Biaya Admin TikTok Shop (Simulasi Tarif Penjual) | KalkulatorHarga",
+        "h1": [
+          "Kalkulator Biaya Admin TikTok Shop (Simulasi Tarif Penjual)"
+        ],
+        "description": "Hitung simulasi dana cair TikTok Shop, biaya manual dengan basis dan cap eksplisit, serta hasil setelah HPP. Tanpa tarif resmi otomatis.",
+        "canonical": "https://kalkulatorharga.com/kalkulator/tiktok-shop",
+        "robots": "noindex, nofollow",
+        "forms": 1,
+        "controls": [
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "price",
+            "label": "Harga jual per unit (Rp)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "quantity",
+            "label": "Jumlah unit (1–10000)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "discount",
+            "label": "Diskon seller per pesanan (Rp)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "cost",
+            "label": "HPP per unit (Rp)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "context",
+            "label": "Konteks kategori, tier, program, tanggal pesanan (catatan opsional; tidak mengisi tarif)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "buyerShipping",
+            "label": "Ongkir dibayar buyer (Rp)"
+          },
+          {
+            "tag": "SELECT",
+            "type": null,
+            "name": "shippingFlow",
+            "label": "Pemetaan ongkir buyer",
+            "optionCount": 4
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "shipping",
+            "label": "Ongkir dibayar seller (Rp)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "reimbursement",
+            "label": "Reimbursement logistik aktual, bukan kredit yang sudah dicatat (Rp)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "receipts",
+            "label": "Kredit aktual lain, bukan diskon platform tampilan (Rp)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "other",
+            "label": "Penyesuaian biaya lain, tidak termasuk fee yang sudah dicatat (Rp)"
+          },
+          {
+            "tag": "SELECT",
+            "type": null,
+            "name": "coverage",
+            "label": "Cakupan transaksi",
+            "optionCount": 4
+          },
+          {
+            "tag": "SELECT",
+            "type": null,
+            "name": "confirmation",
+            "label": "Konfirmasi kelengkapan",
+            "optionCount": 3
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "Tambah biaya"
+          },
+          {
+            "tag": "BUTTON",
+            "type": "submit",
+            "name": null,
+            "label": "Hitung"
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "Muat lebih banyak"
+          }
+        ],
+        "schemaTypes": []
+      }
+    },
+    {
+      "path": "/kalkulator/tokopedia",
+      "legacy": {
+        "path": "/kalkulator/tokopedia",
+        "url": "https://www.kalkulatorharga.com/kalkulator/tokopedia",
+        "error": "HTTP Error 404: Not Found",
+        "status": 404,
+        "atUtc": "2026-11-14T18:56:45.160702+00:00",
+        "method": "GET returned urllib HTTPError with actual response code404"
+      },
+      "staging": {
+        "status": 200,
+        "noindex": "noindex, nofollow",
+        "title": "Kalkulator Biaya Admin Tokopedia (Simulasi Tarif Penjual) | KalkulatorHarga",
+        "h1": [
+          "Kalkulator Biaya Admin Tokopedia (Simulasi Tarif Penjual)"
+        ],
+        "description": "Hitung simulasi dana cair Tokopedia, biaya manual dengan basis dan cap eksplisit, serta hasil setelah HPP. Tanpa tarif resmi otomatis.",
+        "canonical": "https://kalkulatorharga.com/kalkulator/tokopedia",
+        "robots": "noindex, nofollow",
+        "forms": 1,
+        "controls": [
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "price",
+            "label": "Harga jual per unit (Rp)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "quantity",
+            "label": "Jumlah unit (1–10000)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "discount",
+            "label": "Diskon seller per pesanan (Rp)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "cost",
+            "label": "HPP per unit (Rp)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "context",
+            "label": "Konteks kategori, tier, program, tanggal pesanan (catatan opsional; tidak mengisi tarif)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "buyerShipping",
+            "label": "Ongkir dibayar buyer (Rp)"
+          },
+          {
+            "tag": "SELECT",
+            "type": null,
+            "name": "shippingFlow",
+            "label": "Pemetaan ongkir buyer",
+            "optionCount": 4
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "shipping",
+            "label": "Ongkir dibayar seller (Rp)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "reimbursement",
+            "label": "Reimbursement logistik aktual, bukan kredit yang sudah dicatat (Rp)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "receipts",
+            "label": "Kredit aktual lain, bukan diskon platform tampilan (Rp)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "text",
+            "name": "other",
+            "label": "Penyesuaian biaya lain, tidak termasuk fee yang sudah dicatat (Rp)"
+          },
+          {
+            "tag": "SELECT",
+            "type": null,
+            "name": "coverage",
+            "label": "Cakupan transaksi",
+            "optionCount": 4
+          },
+          {
+            "tag": "SELECT",
+            "type": null,
+            "name": "confirmation",
+            "label": "Konfirmasi kelengkapan",
+            "optionCount": 3
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "Tambah biaya"
+          },
+          {
+            "tag": "BUTTON",
+            "type": "submit",
+            "name": null,
+            "label": "Hitung"
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "Muat lebih banyak"
+          }
+        ],
+        "schemaTypes": []
+      }
+    },
+    {
+      "path": "/kalkulator/saham/average",
+      "legacy": {
+        "path": "/kalkulator/saham/average",
+        "url": "https://www.kalkulatorharga.com/kalkulator/saham/average",
+        "finalUrl": "https://www.kalkulatorharga.com/kalkulator/saham/average",
+        "status": 200,
+        "atUtc": "2026-11-14T18:36:01.587701+00:00",
+        "title": "Kalkulator Average Down: Harga Rata-rata dan Impas",
+        "h1": [
+          "Kalkulator Average Down Saham: Harga Rata-rata dan Harga Impas"
+        ],
+        "description": "Hitung harga rata-rata saham setelah average down, harga impas yang menutup komisi broker, levy bursa, dan PPh 0,1%, plus berapa lot untuk mencapai target.",
+        "canonical": "https://www.kalkulatorharga.com/kalkulator/saham/average",
+        "robots": "index, follow",
+        "forms": 0,
+        "controls": [
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "Menu☰"
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "Atur ulang"
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "Bagikan hasil"
+          },
+          {
+            "tag": "SELECT",
+            "type": null,
+            "name": null,
+            "label": "BrokerStockbit SekuritasAjaib SekuritasBCA Sekuritas (BEST)BNI Sekuritas (BIONS)Mandiri Sekuritas (MOST)Samuel Sekuritas (STAR)Tarif sendiri",
+            "optionCount": 7
+          },
+          {
+            "tag": "INPUT",
+            "type": "radio",
+            "name": "mode-posisi",
+            "label": "Harga beli per lembarAngka harga beli mentah, jadi fee beli belum termasuk dan ikut dihitung."
+          },
+          {
+            "tag": "INPUT",
+            "type": "radio",
+            "name": "mode-posisi",
+            "label": "Harga rata-rata dari brokerAngka rata-rata yang sudah memuat fee beli, jadi fee-nya tidak dihitung lagi."
+          },
+          {
+            "tag": "INPUT",
+            "type": "number",
+            "name": null,
+            "label": "Harga beli posisi awal per lembarHarga per lembar saham, bukan per lot."
+          },
+          {
+            "tag": "INPUT",
+            "type": "number",
+            "name": null,
+            "label": "Jumlah lot posisi awal1 lot = 100 lembar."
+          },
+          {
+            "tag": "INPUT",
+            "type": "number",
+            "name": null,
+            "label": "Harga beli per lembar (baris 1)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "number",
+            "name": null,
+            "label": "Jumlah lot"
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "Hapus baris"
+          },
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "Tambah pembelian"
+          },
+          {
+            "tag": "INPUT",
+            "type": "checkbox",
+            "name": null,
+            "label": "Levy bursa 0,0433% per sisi"
+          },
+          {
+            "tag": "INPUT",
+            "type": "checkbox",
+            "name": null,
+            "label": "PPN atas komisi (12% dengan dasar pengenaan 11/12)"
+          },
+          {
+            "tag": "INPUT",
+            "type": "checkbox",
+            "name": null,
+            "label": "PPh final 0,1% saat jual"
+          },
+          {
+            "tag": "INPUT",
+            "type": "checkbox",
+            "name": null,
+            "label": "Bea meterai harian broker"
+          },
+          {
+            "tag": "INPUT",
+            "type": "number",
+            "name": null,
+            "label": "Target harga rata-rata per lembarKosongkan kalau tidak perlu menghitungnya."
+          }
+        ],
+        "schemaTypes": [
+          "WebApplication",
+          "FAQPage",
+          "BreadcrumbList"
+        ]
+      },
+      "staging": {
+        "status": 404,
+        "noindex": "noindex, nofollow",
+        "title": "KalkulatorHarga",
+        "h1": [
+          "404"
+        ],
+        "robots": "noindex",
+        "forms": 0,
+        "controls": [],
+        "schemaTypes": []
+      }
+    },
+    {
+      "path": "/kalkulator/tiktok/benchmark",
+      "legacy": {
+        "path": "/kalkulator/tiktok/benchmark",
+        "url": "https://www.kalkulatorharga.com/kalkulator/tiktok/benchmark",
+        "finalUrl": "https://www.kalkulatorharga.com/kalkulator/tiktok/benchmark",
+        "status": 200,
+        "atUtc": "2026-11-14T18:36:02.027992+00:00",
+        "title": "Benchmark TikTok 2026: Engagement Rate per Tier",
+        "h1": [
+          "Benchmark TikTok 2026: Engagement Rate dan Performa per Ukuran Akun"
+        ],
+        "description": "Benchmark TikTok 2026: median dan kuartil engagement rate per tingkat pengikut, rata-rata performa per ukuran akun, dan perbandingan antar studi.",
+        "canonical": "https://www.kalkulatorharga.com/kalkulator/tiktok/benchmark",
+        "robots": "index, follow",
+        "forms": 0,
+        "controls": [
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "Menu☰"
+          }
+        ],
+        "schemaTypes": [
+          "WebPage",
+          "Dataset",
+          "BreadcrumbList"
+        ]
+      },
+      "staging": {
+        "status": 404,
+        "noindex": "noindex, nofollow",
+        "title": "KalkulatorHarga",
+        "h1": [
+          "404"
+        ],
+        "robots": "noindex",
+        "forms": 0,
+        "controls": [],
+        "schemaTypes": []
+      }
+    },
+    {
+      "path": "/kalkulator/tiktok/panduan",
+      "legacy": {
+        "path": "/kalkulator/tiktok/panduan",
+        "url": "https://www.kalkulatorharga.com/kalkulator/tiktok/panduan",
+        "finalUrl": "https://www.kalkulatorharga.com/kalkulator/tiktok/panduan",
+        "status": 200,
+        "atUtc": "2026-11-14T18:42:25.610625+00:00",
+        "title": "Cara Menghitung Penghasilan TikTok dan Rate Card",
+        "h1": [
+          "Cara menghitung penghasilan TikTok dan menyusun rate card"
+        ],
+        "description": "Cara menghitung penghasilan TikTok: rumus yang bisa diaudit, syarat Creator Rewards, cara mencairkan, dan kesalahan yang membuat estimasi terlalu tinggi.",
+        "canonical": "https://www.kalkulatorharga.com/kalkulator/tiktok/panduan",
+        "robots": "index, follow",
+        "forms": 0,
+        "controls": [
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "Menu☰"
+          }
+        ],
+        "schemaTypes": [
+          "WebPage",
+          "Article",
+          "BreadcrumbList"
+        ]
+      },
+      "staging": {
+        "status": 200,
+        "noindex": "noindex, nofollow",
+        "title": "Cara Menghitung Penghasilan TikTok dan Rate Card",
+        "h1": [
+          "Cara menghitung penghasilan TikTok dan menyusun rate card"
+        ],
+        "description": "Panduan simulasi pendapatan kreator manual: qualified views, RPM asumsi dan sumber neto. Kelayakan program serta publikasi masih memerlukan review.",
+        "canonical": "https://kalkulatorharga.com/kalkulator/tiktok/panduan",
+        "robots": "noindex, nofollow",
+        "forms": 0,
+        "controls": [],
+        "schemaTypes": []
+      }
+    },
+    {
+      "path": "/biaya-admin-marketplace",
+      "legacy": {
+        "path": "/biaya-admin-marketplace",
+        "url": "https://www.kalkulatorharga.com/biaya-admin-marketplace",
+        "finalUrl": "https://www.kalkulatorharga.com/biaya-admin-marketplace",
+        "status": 200,
+        "atUtc": "2026-11-14T18:42:25.647386+00:00",
+        "title": "Biaya Admin Marketplace 2026: 4 Marketplace",
+        "h1": [
+          "Biaya admin marketplace 2026"
+        ],
+        "description": "Tabel biaya admin Shopee, Tokopedia, TikTok Shop, dan Lazada 2026 per kategori, lengkap dengan biaya proses dan tautan sumber resmi.",
+        "canonical": "https://www.kalkulatorharga.com/biaya-admin-marketplace",
+        "robots": "index, follow",
+        "forms": 0,
+        "controls": [
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "Menu☰"
+          }
+        ],
+        "schemaTypes": [
+          "WebPage",
+          "FAQPage",
+          "BreadcrumbList"
+        ]
+      },
+      "staging": {
+        "status": 200,
+        "noindex": "noindex, nofollow",
+        "title": "Biaya Admin Marketplace 2026: 4 Marketplace",
+        "h1": [
+          "Biaya admin marketplace 2026"
+        ],
+        "description": "Snapshot klaim tarif legacy untuk review, bukan tarif resmi kini atau preset v2. Verifikasi tiap biaya berdasarkan bukti seller.",
+        "canonical": "https://kalkulatorharga.com/biaya-admin-marketplace",
+        "robots": "noindex, nofollow",
+        "forms": 0,
+        "controls": [],
+        "schemaTypes": []
+      }
+    },
+    {
+      "path": "/update-tarif",
+      "legacy": {
+        "path": "/update-tarif",
+        "url": "https://www.kalkulatorharga.com/update-tarif",
+        "finalUrl": "https://www.kalkulatorharga.com/update-tarif",
+        "status": 200,
+        "atUtc": "2026-11-14T18:42:25.602111+00:00",
+        "title": "Changelog tarif marketplace · Kalkulator Harga",
+        "h1": [
+          "Apa yang berubah dan kapan"
+        ],
+        "description": "Riwayat perubahan tarif Shopee, Tokopedia, TikTok Shop, dan Lazada yang dipakai kalkulator.",
+        "canonical": "https://www.kalkulatorharga.com/update-tarif",
+        "robots": "index, follow",
+        "forms": 0,
+        "controls": [
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "Menu☰"
+          }
+        ],
+        "schemaTypes": [
+          "BreadcrumbList"
+        ]
+      },
+      "staging": {
+        "status": 200,
+        "noindex": "noindex, nofollow",
+        "title": "Changelog tarif marketplace · Kalkulator Harga",
+        "h1": [
+          "Apa yang berubah dan kapan"
+        ],
+        "description": "Catatan perubahan tarif dari sumber lama, belum disahkan sebagai proses pembaruan atau tarif default v2.",
+        "canonical": "https://kalkulatorharga.com/update-tarif",
+        "robots": "noindex, nofollow",
+        "forms": 0,
+        "controls": [],
+        "schemaTypes": []
+      }
+    },
+    {
+      "path": "/blog",
+      "legacy": {
+        "path": "/blog",
+        "url": "https://www.kalkulatorharga.com/blog",
+        "finalUrl": "https://www.kalkulatorharga.com/blog",
+        "status": 200,
+        "atUtc": "2026-11-14T18:42:26.055661+00:00",
+        "title": "Catatan seller: panduan fee dan margin · Kalkulator Harga",
+        "h1": [
+          "Catatan seller"
+        ],
+        "description": "Panduan praktis menghitung margin, biaya admin marketplace, dan strategi menjaga profit bersih.",
+        "canonical": "https://www.kalkulatorharga.com/blog",
+        "robots": "index, follow",
+        "forms": 0,
+        "controls": [
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "Menu☰"
+          }
+        ],
+        "schemaTypes": [
+          "CollectionPage",
+          "BreadcrumbList"
+        ]
+      },
+      "staging": {
+        "status": 200,
+        "noindex": "noindex, nofollow",
+        "title": "Catatan seller: panduan fee dan margin · Kalkulator Harga",
+        "h1": [
+          "Catatan seller"
+        ],
+        "description": "Panduan praktis menghitung margin, biaya admin marketplace, dan strategi menjaga profit bersih.",
+        "canonical": "https://kalkulatorharga.com/blog",
+        "robots": "noindex, nofollow",
+        "forms": 0,
+        "controls": [],
+        "schemaTypes": []
+      }
+    },
+    {
+      "path": "/metodologi",
+      "legacy": {
+        "path": "/metodologi",
+        "url": "https://www.kalkulatorharga.com/metodologi",
+        "finalUrl": "https://www.kalkulatorharga.com/metodologi",
+        "status": 200,
+        "atUtc": "2026-11-14T18:42:26.069175+00:00",
+        "title": "Metodologi & sumber tarif · Kalkulator Harga",
+        "h1": [
+          "Dari mana angka tarif ini berasal?"
+        ],
+        "description": "Sumber resmi, tanggal berlaku, cara verifikasi, dan batasan data tarif Shopee, Tokopedia, TikTok Shop, dan Lazada.",
+        "canonical": "https://www.kalkulatorharga.com/metodologi",
+        "robots": "index, follow",
+        "forms": 0,
+        "controls": [
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "Menu☰"
+          }
+        ],
+        "schemaTypes": [
+          "BreadcrumbList"
+        ]
+      },
+      "staging": {
+        "status": 200,
+        "noindex": "noindex, nofollow",
+        "title": "Metodologi & sumber tarif · Kalkulator Harga",
+        "h1": [
+          "Dari mana angka tarif ini berasal?"
+        ],
+        "description": "Metodologi input manual dan batas cakupan v2, dengan sumber historis yang masih menunggu review owner.",
+        "canonical": "https://kalkulatorharga.com/metodologi",
+        "robots": "noindex, nofollow",
+        "forms": 0,
+        "controls": [],
+        "schemaTypes": []
+      }
+    },
+    {
+      "path": "/redaksi",
+      "legacy": {
+        "path": "/redaksi",
+        "url": "https://www.kalkulatorharga.com/redaksi",
+        "finalUrl": "https://www.kalkulatorharga.com/redaksi",
+        "status": 200,
+        "atUtc": "2026-11-14T18:42:26.087978+00:00",
+        "title": "Tim redaksi dan cara verifikasi tarif · Kalkulator Harga",
+        "h1": [
+          "Tim redaksi Kalkulator Harga"
+        ],
+        "description": "Siapa yang menulis dan memverifikasi isi Kalkulator Harga, dan bagaimana tarif resmi dicek sebelum dipublikasikan.",
+        "canonical": "https://www.kalkulatorharga.com/redaksi",
+        "robots": "index, follow",
+        "forms": 0,
+        "controls": [
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "Menu☰"
+          }
+        ],
+        "schemaTypes": [
+          "ProfilePage",
+          "BreadcrumbList"
+        ]
+      },
+      "staging": {
+        "status": 200,
+        "noindex": "noindex, nofollow",
+        "title": "Tim redaksi dan cara verifikasi tarif · Kalkulator Harga",
+        "h1": [
+          "Tim redaksi Kalkulator Harga"
+        ],
+        "description": "Catatan identitas dan proses redaksi sumber lama; entitas, byline dan hak publikasi belum disahkan owner.",
+        "canonical": "https://kalkulatorharga.com/redaksi",
+        "robots": "noindex, nofollow",
+        "forms": 0,
+        "controls": [],
+        "schemaTypes": []
+      }
+    },
+    {
+      "path": "/kebijakan-editorial",
+      "legacy": {
+        "path": "/kebijakan-editorial",
+        "url": "https://www.kalkulatorharga.com/kebijakan-editorial",
+        "finalUrl": "https://www.kalkulatorharga.com/kebijakan-editorial",
+        "status": 200,
+        "atUtc": "2026-11-14T18:42:26.487472+00:00",
+        "title": "Kebijakan editorial · Kalkulator Harga",
+        "h1": [
+          "Cara kami menjaga data tetap jujur"
+        ],
+        "description": "Cara kami memilih sumber, memverifikasi tarif, menangani koreksi, dan menjaga independensi konten.",
+        "canonical": "https://www.kalkulatorharga.com/kebijakan-editorial",
+        "robots": "index, follow",
+        "forms": 0,
+        "controls": [
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "Menu☰"
+          }
+        ],
+        "schemaTypes": [
+          "BreadcrumbList"
+        ]
+      },
+      "staging": {
+        "status": 200,
+        "noindex": "noindex, nofollow",
+        "title": "Kebijakan editorial · Kalkulator Harga",
+        "h1": [
+          "Cara kami menjaga data tetap jujur"
+        ],
+        "description": "Revisi kebijakan untuk review: input manual, batas verifikasi sumber dan privasi operasional yang masih menunggu owner.",
+        "canonical": "https://kalkulatorharga.com/kebijakan-editorial",
+        "robots": "noindex, nofollow",
+        "forms": 0,
+        "controls": [],
+        "schemaTypes": []
+      }
+    },
+    {
+      "path": "/disclaimer",
+      "legacy": {
+        "path": "/disclaimer",
+        "url": "https://www.kalkulatorharga.com/disclaimer",
+        "finalUrl": "https://www.kalkulatorharga.com/disclaimer",
+        "status": 200,
+        "atUtc": "2026-11-14T18:42:26.463162+00:00",
+        "title": "Disclaimer · Kalkulator Harga",
+        "h1": [
+          "Estimasi, bukan tagihan resmi"
+        ],
+        "description": "Kalkulator ini memberi estimasi indikatif, bukan penetapan resmi biaya marketplace atau nasihat keuangan.",
+        "canonical": "https://www.kalkulatorharga.com/disclaimer",
+        "robots": "index, follow",
+        "forms": 0,
+        "controls": [
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "Menu☰"
+          }
+        ],
+        "schemaTypes": [
+          "BreadcrumbList"
+        ]
+      },
+      "staging": {
+        "status": 200,
+        "noindex": "noindex, nofollow",
+        "title": "Disclaimer · Kalkulator Harga",
+        "h1": [
+          "Estimasi, bukan tagihan resmi"
+        ],
+        "description": "Kalkulator ini memberi estimasi indikatif, bukan penetapan resmi biaya marketplace atau nasihat keuangan.",
+        "canonical": "https://kalkulatorharga.com/disclaimer",
+        "robots": "noindex, nofollow",
+        "forms": 0,
+        "controls": [],
+        "schemaTypes": []
+      }
+    },
+    {
+      "path": "/blog/menghitung-margin-marketplace",
+      "legacy": {
+        "path": "/blog/menghitung-margin-marketplace",
+        "url": "https://www.kalkulatorharga.com/blog/menghitung-margin-marketplace",
+        "finalUrl": "https://www.kalkulatorharga.com/blog/menghitung-margin-marketplace",
+        "status": 200,
+        "atUtc": "2026-11-14T18:42:27.472448+00:00",
+        "title": "Cara menghitung margin marketplace tanpa bikin pusing",
+        "h1": [
+          "Cara menghitung margin marketplace tanpa bikin pusing"
+        ],
+        "description": "Pahami bedanya omzet, dana cair, dan profit bersih agar harga jual tidak asal teebak.",
+        "canonical": "https://www.kalkulatorharga.com/blog/menghitung-margin-marketplace",
+        "robots": "index, follow",
+        "forms": 0,
+        "controls": [
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "Menu☰"
+          }
+        ],
+        "schemaTypes": [
+          "Article",
+          "Person",
+          "BreadcrumbList"
+        ]
+      },
+      "staging": {
+        "status": 200,
+        "noindex": "noindex, nofollow",
+        "title": "Cara menghitung margin marketplace tanpa bikin pusing",
+        "h1": [
+          "Cara menghitung margin marketplace tanpa bikin pusing"
+        ],
+        "description": "Bedakan margin atas omzet bruto dari margin atas penerimaan neto serta laba bersih; petakan biaya dan pemungutan pajak.",
+        "canonical": "https://kalkulatorharga.com/blog/menghitung-margin-marketplace",
+        "robots": "noindex, nofollow",
+        "forms": 0,
+        "controls": [],
+        "schemaTypes": []
+      }
+    },
+    {
+      "path": "/blog/strategi-naikkan-profit",
+      "legacy": {
+        "path": "/blog/strategi-naikkan-profit",
+        "url": "https://www.kalkulatorharga.com/blog/strategi-naikkan-profit",
+        "finalUrl": "https://www.kalkulatorharga.com/blog/strategi-naikkan-profit",
+        "status": 200,
+        "atUtc": "2026-11-14T18:42:28.279958+00:00",
+        "title": "5 strategi sederhana untuk menaikkan profit",
+        "h1": [
+          "5 strategi sederhana untuk menaikkan profit"
+        ],
+        "description": "Mulai dari bundling sampai optimasi HPP, ini langkah yang bisa langsung dicoba.",
+        "canonical": "https://www.kalkulatorharga.com/blog/strategi-naikkan-profit",
+        "robots": "index, follow",
+        "forms": 0,
+        "controls": [
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "Menu☰"
+          }
+        ],
+        "schemaTypes": [
+          "Article",
+          "Person",
+          "BreadcrumbList"
+        ]
+      },
+      "staging": {
+        "status": 200,
+        "noindex": "noindex, nofollow",
+        "title": "5 strategi sederhana untuk menaikkan profit",
+        "h1": [
+          "5 strategi sederhana untuk menaikkan profit"
+        ],
+        "description": "Mulai dari bundling sampai optimasi HPP, ini langkah yang bisa langsung dicoba.",
+        "canonical": "https://kalkulatorharga.com/blog/strategi-naikkan-profit",
+        "robots": "noindex, nofollow",
+        "forms": 0,
+        "controls": [],
+        "schemaTypes": []
+      }
+    },
+    {
+      "path": "/blog/biaya-admin-marketplace",
+      "legacy": {
+        "path": "/blog/biaya-admin-marketplace",
+        "url": "https://www.kalkulatorharga.com/blog/biaya-admin-marketplace",
+        "finalUrl": "https://www.kalkulatorharga.com/blog/biaya-admin-marketplace",
+        "status": 200,
+        "atUtc": "2026-11-14T18:42:27.050092+00:00",
+        "title": "Kenapa biaya admin marketplace berubah? · Kalkulator Harga",
+        "h1": [
+          "Kenapa biaya admin marketplace berubah?"
+        ],
+        "description": "Mengenal biaya program, biaya proses, dan faktor yang membuat potongan berbeda.",
+        "canonical": "https://www.kalkulatorharga.com/blog/biaya-admin-marketplace",
+        "robots": "index, follow",
+        "forms": 0,
+        "controls": [
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "Menu☰"
+          }
+        ],
+        "schemaTypes": [
+          "Article",
+          "Person",
+          "BreadcrumbList"
+        ]
+      },
+      "staging": {
+        "status": 200,
+        "noindex": "noindex, nofollow",
+        "title": "Kenapa biaya admin marketplace berubah? · Kalkulator Harga",
+        "h1": [
+          "Kenapa biaya admin marketplace berubah?"
+        ],
+        "description": "Mengenal biaya program, biaya proses, dan faktor yang membuat potongan berbeda.",
+        "canonical": "https://kalkulatorharga.com/blog/biaya-admin-marketplace",
+        "robots": "noindex, nofollow",
+        "forms": 0,
+        "controls": [],
+        "schemaTypes": []
+      }
+    },
+    {
+      "path": "/blog/fee-shopee-2026",
+      "legacy": {
+        "path": "/blog/fee-shopee-2026",
+        "url": "https://www.kalkulatorharga.com/blog/fee-shopee-2026",
+        "finalUrl": "https://www.kalkulatorharga.com/blog/fee-shopee-2026",
+        "status": 200,
+        "atUtc": "2026-11-14T18:42:27.440434+00:00",
+        "title": "Fee Shopee 2026: komponen yang memotong dana cair",
+        "h1": [
+          "Fee Shopee 2026: komponen yang memotong dana cair"
+        ],
+        "description": "Pisahkan biaya admin, biaya proses, program opsional, dan logistik agar estimasi profit tidak salah baca.",
+        "canonical": "https://www.kalkulatorharga.com/blog/fee-shopee-2026",
+        "robots": "index, follow",
+        "forms": 0,
+        "controls": [
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "Menu☰"
+          }
+        ],
+        "schemaTypes": [
+          "Article",
+          "Person",
+          "BreadcrumbList"
+        ]
+      },
+      "staging": {
+        "status": 200,
+        "noindex": "noindex, nofollow",
+        "title": "Fee Shopee 2026: komponen yang memotong dana cair",
+        "h1": [
+          "Fee Shopee 2026: komponen yang memotong dana cair"
+        ],
+        "description": "Pisahkan biaya admin, biaya proses, program opsional, dan logistik agar estimasi profit tidak salah baca.",
+        "canonical": "https://kalkulatorharga.com/blog/fee-shopee-2026",
+        "robots": "noindex, nofollow",
+        "forms": 0,
+        "controls": [],
+        "schemaTypes": []
+      }
+    },
+    {
+      "path": "/blog/lazada-marketplace-vs-lazmall",
+      "legacy": {
+        "path": "/blog/lazada-marketplace-vs-lazmall",
+        "url": "https://www.kalkulatorharga.com/blog/lazada-marketplace-vs-lazmall",
+        "finalUrl": "https://www.kalkulatorharga.com/blog/lazada-marketplace-vs-lazmall",
+        "status": 200,
+        "atUtc": "2026-11-14T18:42:27.937755+00:00",
+        "title": "Lazada Marketplace vs LazMall: bedanya fee dan dana cair",
+        "h1": [
+          "Lazada Marketplace vs LazMall: bedanya fee dan dana cair"
+        ],
+        "description": "Tipe toko, kategori, biaya proses, PPh 22, dan iklan membuat hasil akhir Lazada berbeda.",
+        "canonical": "https://www.kalkulatorharga.com/blog/lazada-marketplace-vs-lazmall",
+        "robots": "index, follow",
+        "forms": 0,
+        "controls": [
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "Menu☰"
+          }
+        ],
+        "schemaTypes": [
+          "Article",
+          "Person",
+          "BreadcrumbList"
+        ]
+      },
+      "staging": {
+        "status": 200,
+        "noindex": "noindex, nofollow",
+        "title": "Lazada Marketplace vs LazMall: bedanya fee dan dana cair",
+        "h1": [
+          "Lazada Marketplace vs LazMall: bedanya fee dan dana cair"
+        ],
+        "description": "Tipe toko, kategori, biaya proses, PPh 22, dan iklan membuat hasil akhir Lazada berbeda.",
+        "canonical": "https://kalkulatorharga.com/blog/lazada-marketplace-vs-lazmall",
+        "robots": "noindex, nofollow",
+        "forms": 0,
+        "controls": [],
+        "schemaTypes": []
+      }
+    },
+    {
+      "path": "/blog/pph-22-marketplace",
+      "legacy": {
+        "path": "/blog/pph-22-marketplace",
+        "url": "https://www.kalkulatorharga.com/blog/pph-22-marketplace",
+        "finalUrl": "https://www.kalkulatorharga.com/blog/pph-22-marketplace",
+        "status": 200,
+        "atUtc": "2026-11-14T18:42:27.923000+00:00",
+        "title": "PPh 22 marketplace: kapan 0,5% memotong dana cair?",
+        "h1": [
+          "PPh 22 marketplace: kapan 0,5% memotong dana cair?"
+        ],
+        "description": "Pahami kapan pemotongan PPh 22 perlu dimasukkan ke simulasi profit dan kapan tidak.",
+        "canonical": "https://www.kalkulatorharga.com/blog/pph-22-marketplace",
+        "robots": "index, follow",
+        "forms": 0,
+        "controls": [
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "Menu☰"
+          }
+        ],
+        "schemaTypes": [
+          "Article",
+          "Person",
+          "BreadcrumbList"
+        ]
+      },
+      "staging": {
+        "status": 200,
+        "noindex": "noindex, nofollow",
+        "title": "PPh 22 marketplace: kapan 0,5% memotong dana cair?",
+        "h1": [
+          "PPh 22 marketplace: kapan 0,5% memotong dana cair?"
+        ],
+        "description": "Pahami kapan pemotongan PPh 22 perlu dimasukkan ke simulasi profit dan kapan tidak.",
+        "canonical": "https://kalkulatorharga.com/blog/pph-22-marketplace",
+        "robots": "noindex, nofollow",
+        "forms": 0,
+        "controls": [],
+        "schemaTypes": []
+      }
+    },
+    {
+      "path": "/blog/gratis-ongkir-xtra-shopee-2026",
+      "legacy": {
+        "path": "/blog/gratis-ongkir-xtra-shopee-2026",
+        "url": "https://www.kalkulatorharga.com/blog/gratis-ongkir-xtra-shopee-2026",
+        "finalUrl": "https://www.kalkulatorharga.com/blog/gratis-ongkir-xtra-shopee-2026",
+        "status": 200,
+        "atUtc": "2026-11-14T18:42:28.354696+00:00",
+        "title": "Gratis Ongkir XTRA Shopee 2026: Tarif & Cap",
+        "h1": [
+          "Gratis Ongkir XTRA Shopee 2026: Tarif & Cap"
+        ],
+        "description": "Rate program berbeda per kategori dan ukuran produk. Pahami cap Rp40.000/Rp60.000 dan perubahan Desember 2026.",
+        "canonical": "https://www.kalkulatorharga.com/blog/gratis-ongkir-xtra-shopee-2026",
+        "robots": "index, follow",
+        "forms": 0,
+        "controls": [
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "Menu☰"
+          }
+        ],
+        "schemaTypes": [
+          "Article",
+          "Person",
+          "BreadcrumbList"
+        ]
+      },
+      "staging": {
+        "status": 200,
+        "noindex": "noindex, nofollow",
+        "title": "Gratis Ongkir XTRA Shopee 2026: Tarif & Cap",
+        "h1": [
+          "Gratis Ongkir XTRA Shopee 2026: Tarif & Cap"
+        ],
+        "description": "Catatan historis Gratis Ongkir XTRA; rate, cap, waiver dan tanggal belum disahkan sebagai aturan kini. V2 memakai biaya manual.",
+        "canonical": "https://kalkulatorharga.com/blog/gratis-ongkir-xtra-shopee-2026",
+        "robots": "noindex, nofollow",
+        "forms": 0,
+        "controls": [],
+        "schemaTypes": []
+      }
+    },
+    {
+      "path": "/blog/tokopedia-tiktok-shop-komisi-dinamis",
+      "legacy": {
+        "path": "/blog/tokopedia-tiktok-shop-komisi-dinamis",
+        "url": "https://www.kalkulatorharga.com/blog/tokopedia-tiktok-shop-komisi-dinamis",
+        "finalUrl": "https://www.kalkulatorharga.com/blog/tokopedia-tiktok-shop-komisi-dinamis",
+        "status": 200,
+        "atUtc": "2026-11-14T18:42:28.326196+00:00",
+        "title": "Komisi dinamis Tokopedia & TikTok Shop · Kalkulator Harga",
+        "h1": [
+          "Komisi dinamis Tokopedia & TikTok Shop"
+        ],
+        "description": "Klasifikasi produk, program, dan status akun menentukan tarif. Ini cara membacanya tanpa menebak.",
+        "canonical": "https://www.kalkulatorharga.com/blog/tokopedia-tiktok-shop-komisi-dinamis",
+        "robots": "index, follow",
+        "forms": 0,
+        "controls": [
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "Menu☰"
+          }
+        ],
+        "schemaTypes": [
+          "Article",
+          "Person",
+          "BreadcrumbList"
+        ]
+      },
+      "staging": {
+        "status": 200,
+        "noindex": "noindex, nofollow",
+        "title": "Komisi dinamis Tokopedia & TikTok Shop · Kalkulator Harga",
+        "h1": [
+          "Komisi dinamis Tokopedia & TikTok Shop"
+        ],
+        "description": "Klasifikasi produk, program, dan status akun menentukan tarif. Ini cara membacanya tanpa menebak.",
+        "canonical": "https://kalkulatorharga.com/blog/tokopedia-tiktok-shop-komisi-dinamis",
+        "robots": "noindex, nofollow",
+        "forms": 0,
+        "controls": [],
+        "schemaTypes": []
+      }
+    },
+    {
+      "path": "/blog/harga-jual-minimum-marketplace",
+      "legacy": {
+        "path": "/blog/harga-jual-minimum-marketplace",
+        "url": "https://www.kalkulatorharga.com/blog/harga-jual-minimum-marketplace",
+        "finalUrl": "https://www.kalkulatorharga.com/blog/harga-jual-minimum-marketplace",
+        "status": 200,
+        "atUtc": "2026-11-14T18:42:28.667276+00:00",
+        "title": "Cara mencari harga jual minimum yang tetap untung",
+        "h1": [
+          "Cara mencari harga jual minimum yang tetap untung"
+        ],
+        "description": "Dari HPP ke titik impas, lalu tambahkan target margin dan biaya yang sering luput.",
+        "canonical": "https://www.kalkulatorharga.com/blog/harga-jual-minimum-marketplace",
+        "robots": "index, follow",
+        "forms": 0,
+        "controls": [
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "Menu☰"
+          }
+        ],
+        "schemaTypes": [
+          "Article",
+          "Person",
+          "BreadcrumbList"
+        ]
+      },
+      "staging": {
+        "status": 200,
+        "noindex": "noindex, nofollow",
+        "title": "Cara mencari harga jual minimum yang tetap untung",
+        "h1": [
+          "Cara mencari harga jual minimum yang tetap untung"
+        ],
+        "description": "Model pendidikan harga minimum untuk fee proporsional, laba nominal, margin dan cap; bukan solver baru atau tarif resmi.",
+        "canonical": "https://kalkulatorharga.com/blog/harga-jual-minimum-marketplace",
+        "robots": "noindex, nofollow",
+        "forms": 0,
+        "controls": [],
+        "schemaTypes": []
+      }
+    },
+    {
+      "path": "/blog/kalkulator-vs-spreadsheet",
+      "legacy": {
+        "path": "/blog/kalkulator-vs-spreadsheet",
+        "url": "https://www.kalkulatorharga.com/blog/kalkulator-vs-spreadsheet",
+        "finalUrl": "https://www.kalkulatorharga.com/blog/kalkulator-vs-spreadsheet",
+        "status": 200,
+        "atUtc": "2026-11-14T18:42:28.746764+00:00",
+        "title": "Kalkulator atau spreadsheet: mana yang lebih akurat?",
+        "h1": [
+          "Kalkulator atau spreadsheet: mana yang lebih akurat?"
+        ],
+        "description": "Spreadsheet cepat untuk satu skenario. Kalkulator lebih aman saat tarif dan program berubah.",
+        "canonical": "https://www.kalkulatorharga.com/blog/kalkulator-vs-spreadsheet",
+        "robots": "index, follow",
+        "forms": 0,
+        "controls": [
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "Menu☰"
+          }
+        ],
+        "schemaTypes": [
+          "Article",
+          "Person",
+          "BreadcrumbList"
+        ]
+      },
+      "staging": {
+        "status": 200,
+        "noindex": "noindex, nofollow",
+        "title": "Kalkulator atau spreadsheet: mana yang lebih akurat?",
+        "h1": [
+          "Kalkulator atau spreadsheet: mana yang lebih akurat?"
+        ],
+        "description": "Akurasi kalkulator dan spreadsheet bergantung input, basis biaya dan pembulatan; v2 tidak menyediakan preset tarif resmi otomatis.",
+        "canonical": "https://kalkulatorharga.com/blog/kalkulator-vs-spreadsheet",
+        "robots": "noindex, nofollow",
+        "forms": 0,
+        "controls": [],
+        "schemaTypes": []
+      }
+    },
+    {
+      "path": "/blog/cek-dana-cair-shopee",
+      "legacy": {
+        "path": "/blog/cek-dana-cair-shopee",
+        "url": "https://www.kalkulatorharga.com/blog/cek-dana-cair-shopee",
+        "finalUrl": "https://www.kalkulatorharga.com/blog/cek-dana-cair-shopee",
+        "status": 200,
+        "atUtc": "2026-11-14T18:42:28.771587+00:00",
+        "title": "Cara cek sendiri angka dana cair di Seller Center",
+        "h1": [
+          "Cara cek sendiri angka dana cair di Seller Center"
+        ],
+        "description": "Bandingkan komponen di dashboard dengan kalkulator. Kalau beda, cari empat penyebab ini.",
+        "canonical": "https://www.kalkulatorharga.com/blog/cek-dana-cair-shopee",
+        "robots": "index, follow",
+        "forms": 0,
+        "controls": [
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "Menu☰"
+          }
+        ],
+        "schemaTypes": [
+          "Article",
+          "Person",
+          "BreadcrumbList"
+        ]
+      },
+      "staging": {
+        "status": 200,
+        "noindex": "noindex, nofollow",
+        "title": "Cara cek sendiri angka dana cair di Seller Center",
+        "h1": [
+          "Cara cek sendiri angka dana cair di Seller Center"
+        ],
+        "description": "Bandingkan komponen di dashboard dengan kalkulator. Kalau beda, cari empat penyebab ini.",
+        "canonical": "https://kalkulatorharga.com/blog/cek-dana-cair-shopee",
+        "robots": "noindex, nofollow",
+        "forms": 0,
+        "controls": [],
+        "schemaTypes": []
+      }
+    },
+    {
+      "path": "/blog/memilih-marketplace-untuk-mulai-jual",
+      "legacy": {
+        "path": "/blog/memilih-marketplace-untuk-mulai-jual",
+        "url": "https://www.kalkulatorharga.com/blog/memilih-marketplace-untuk-mulai-jual",
+        "finalUrl": "https://www.kalkulatorharga.com/blog/memilih-marketplace-untuk-mulai-jual",
+        "status": 200,
+        "atUtc": "2026-11-14T18:42:29.046709+00:00",
+        "title": "Pilih marketplace pertama untuk mulai jual",
+        "h1": [
+          "Pilih marketplace pertama untuk mulai jual"
+        ],
+        "description": "Bandingkan biaya, audience, dan beban operasional sebelum memilih kanal pertama.",
+        "canonical": "https://www.kalkulatorharga.com/blog/memilih-marketplace-untuk-mulai-jual",
+        "robots": "index, follow",
+        "forms": 0,
+        "controls": [
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "Menu☰"
+          }
+        ],
+        "schemaTypes": [
+          "Article",
+          "Person",
+          "BreadcrumbList"
+        ]
+      },
+      "staging": {
+        "status": 200,
+        "noindex": "noindex, nofollow",
+        "title": "Pilih marketplace pertama untuk mulai jual",
+        "h1": [
+          "Pilih marketplace pertama untuk mulai jual"
+        ],
+        "description": "Bandingkan biaya, audience, dan beban operasional sebelum memilih kanal pertama.",
+        "canonical": "https://kalkulatorharga.com/blog/memilih-marketplace-untuk-mulai-jual",
+        "robots": "noindex, nofollow",
+        "forms": 0,
+        "controls": [],
+        "schemaTypes": []
+      }
+    },
+    {
+      "path": "/blog/engagement-rate-tiktok-2026",
+      "legacy": {
+        "path": "/blog/engagement-rate-tiktok-2026",
+        "url": "https://www.kalkulatorharga.com/blog/engagement-rate-tiktok-2026",
+        "finalUrl": "https://www.kalkulatorharga.com/blog/engagement-rate-tiktok-2026",
+        "status": 200,
+        "atUtc": "2026-11-14T18:42:29.163528+00:00",
+        "title": "Engagement rate TikTok 2026: cara hitung dan membacanya",
+        "h1": [
+          "Engagement rate TikTok 2026: cara hitung dan membacanya"
+        ],
+        "description": "Pahami cara menghitung engagement rate TikTok, lalu bandingkan angka Anda dengan median dan kuartil tingkat pengikut dari studi 2026.",
+        "canonical": "https://www.kalkulatorharga.com/blog/engagement-rate-tiktok-2026",
+        "robots": "index, follow",
+        "forms": 0,
+        "controls": [
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "Menu☰"
+          }
+        ],
+        "schemaTypes": [
+          "Article",
+          "Person",
+          "BreadcrumbList"
+        ]
+      },
+      "staging": {
+        "status": 200,
+        "noindex": "noindex, nofollow",
+        "title": "Engagement rate TikTok 2026: cara hitung dan membacanya",
+        "h1": [
+          "Engagement rate TikTok 2026: cara hitung dan membacanya"
+        ],
+        "description": "Definisi engagement rate dan penyebut konsisten. Angka studi dan benchmark belum disahkan; ER bukan retensi video.",
+        "canonical": "https://kalkulatorharga.com/blog/engagement-rate-tiktok-2026",
+        "robots": "noindex, nofollow",
+        "forms": 0,
+        "controls": [],
+        "schemaTypes": []
+      }
+    },
+    {
+      "path": "/blog/kalkulator-average-down-saham-harga-rata-rata",
+      "legacy": {
+        "path": "/blog/kalkulator-average-down-saham-harga-rata-rata",
+        "url": "https://www.kalkulatorharga.com/blog/kalkulator-average-down-saham-harga-rata-rata",
+        "finalUrl": "https://www.kalkulatorharga.com/blog/kalkulator-average-down-saham-harga-rata-rata",
+        "status": 200,
+        "atUtc": "2026-11-14T18:42:29.151949+00:00",
+        "title": "Cara hitung harga rata-rata saham setelah average down",
+        "h1": [
+          "Cara hitung harga rata-rata saham setelah average down"
+        ],
+        "description": "Rumus HPP setelah beli tambahan, biaya transaksi yang sering terlewat, dan cara menghitung harga impas yang benar-benar menutup modal.",
+        "canonical": "https://www.kalkulatorharga.com/blog/kalkulator-average-down-saham-harga-rata-rata",
+        "robots": "index, follow",
+        "forms": 0,
+        "controls": [
+          {
+            "tag": "BUTTON",
+            "type": "button",
+            "name": null,
+            "label": "Menu☰"
+          }
+        ],
+        "schemaTypes": [
+          "Article",
+          "Person",
+          "BreadcrumbList"
+        ]
+      },
+      "staging": {
+        "status": 200,
+        "noindex": "noindex, nofollow",
+        "title": "Cara hitung harga rata-rata saham setelah average down",
+        "h1": [
+          "Cara hitung harga rata-rata saham setelah average down"
+        ],
+        "description": "Rumus HPP setelah beli tambahan, biaya transaksi yang sering terlewat, dan cara menghitung harga impas yang benar-benar menutup modal.",
+        "canonical": "https://kalkulatorharga.com/blog/kalkulator-average-down-saham-harga-rata-rata",
+        "robots": "noindex, nofollow",
+        "forms": 0,
+        "controls": [],
+        "schemaTypes": []
+      }
+    }
+  ]
+}

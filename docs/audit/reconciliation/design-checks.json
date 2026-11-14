@@ -1,0 +1,192 @@
+{
+  "baseline": "4a48b0e29c558089ddeacdfd9fff602995a8bbc0",
+  "capturedAtUtc": "2026-11-14T18:39:19.805Z",
+  "browser": "Chromium local production build",
+  "rows": [
+    {
+      "width": 320,
+      "path": "/",
+      "overflow": false,
+      "violations": [],
+      "focus": {
+        "focusVisible": true,
+        "outline": "3px solid",
+        "outlineColor": "rgb(37, 99, 235)"
+      },
+      "pass": true
+    },
+    {
+      "width": 320,
+      "path": "/bisnis",
+      "overflow": false,
+      "violations": [],
+      "focus": {
+        "focusVisible": true,
+        "outline": "3px solid",
+        "outlineColor": "rgb(37, 99, 235)"
+      },
+      "pass": true
+    },
+    {
+      "width": 320,
+      "path": "/kalkulator/hpp",
+      "overflow": false,
+      "violations": [],
+      "focus": {
+        "focusVisible": true,
+        "outline": "3px solid",
+        "outlineColor": "rgb(37, 99, 235)"
+      },
+      "transition": "0s",
+      "pass": true
+    },
+    {
+      "width": 375,
+      "path": "/",
+      "overflow": false,
+      "violations": [],
+      "focus": {
+        "focusVisible": true,
+        "outline": "3px solid",
+        "outlineColor": "rgb(37, 99, 235)"
+      },
+      "pass": true
+    },
+    {
+      "width": 375,
+      "path": "/bisnis",
+      "overflow": false,
+      "violations": [],
+      "focus": {
+        "focusVisible": true,
+        "outline": "3px solid",
+        "outlineColor": "rgb(37, 99, 235)"
+      },
+      "pass": true
+    },
+    {
+      "width": 375,
+      "path": "/kalkulator/hpp",
+      "overflow": false,
+      "violations": [],
+      "focus": {
+        "focusVisible": true,
+        "outline": "3px solid",
+        "outlineColor": "rgb(37, 99, 235)"
+      },
+      "transition": "0s",
+      "pass": true
+    },
+    {
+      "width": 768,
+      "path": "/",
+      "overflow": false,
+      "violations": [],
+      "focus": {
+        "focusVisible": true,
+        "outline": "3px solid",
+        "outlineColor": "rgb(37, 99, 235)"
+      },
+      "pass": true
+    },
+    {
+      "width": 768,
+      "path": "/bisnis",
+      "overflow": false,
+      "violations": [],
+      "focus": {
+        "focusVisible": true,
+        "outline": "3px solid",
+        "outlineColor": "rgb(37, 99, 235)"
+      },
+      "pass": true
+    },
+    {
+      "width": 768,
+      "path": "/kalkulator/hpp",
+      "overflow": false,
+      "violations": [],
+      "focus": {
+        "focusVisible": true,
+        "outline": "3px solid",
+        "outlineColor": "rgb(37, 99, 235)"
+      },
+      "transition": "0s",
+      "pass": true
+    },
+    {
+      "width": 1024,
+      "path": "/",
+      "overflow": false,
+      "violations": [],
+      "focus": {
+        "focusVisible": true,
+        "outline": "3px solid",
+        "outlineColor": "rgb(37, 99, 235)"
+      },
+      "pass": true
+    },
+    {
+      "width": 1024,
+      "path": "/bisnis",
+      "overflow": false,
+      "violations": [],
+      "focus": {
+        "focusVisible": true,
+        "outline": "3px solid",
+        "outlineColor": "rgb(37, 99, 235)"
+      },
+      "pass": true
+    },
+    {
+      "width": 1024,
+      "path": "/kalkulator/hpp",
+      "overflow": false,
+      "violations": [],
+      "focus": {
+        "focusVisible": true,
+        "outline": "3px solid",
+        "outlineColor": "rgb(37, 99, 235)"
+      },
+      "transition": "0s",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "path": "/",
+      "overflow": false,
+      "violations": [],
+      "focus": {
+        "focusVisible": true,
+        "outline": "3px solid",
+        "outlineColor": "rgb(37, 99, 235)"
+      },
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "path": "/bisnis",
+      "overflow": false,
+      "violations": [],
+      "focus": {
+        "focusVisible": true,
+        "outline": "3px solid",
+        "outlineColor": "rgb(37, 99, 235)"
+      },
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "path": "/kalkulator/hpp",
+      "overflow": false,
+      "violations": [],
+      "focus": {
+        "focusVisible": true,
+        "outline": "3px solid",
+        "outlineColor": "rgb(37, 99, 235)"
+      },
+      "transition": "0s",
+      "pass": true
+    }
+  ]
+}

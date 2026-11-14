@@ -1,8 +1,8 @@
 # Sistem desain KalkulatorHarga
 
-**Phase A · Usulan untuk persetujuan**
+**Spesifikasi Phase A disetujui; Phase B sudah diimplementasikan.** [PR #7](https://github.com/neodymium-web/kalkulatorhargav2/pull/7) merged `1e860f1a`; [PR #9](https://github.com/neodymium-web/kalkulatorhargav2/pull/9) merged `d35ac72d`. Lihat [rekonsiliasi Issue #6](ISSUE_RECONCILIATION.md) untuk bukti verifikasi saat ini.
 
-Dokumen ini menetapkan aturan visual dan perilaku komponen untuk beranda, kategori, dan kalkulator. Preview memakai HPP untuk contoh kalkulator dan kartu ilustratif dari inventaris untuk menguji kepadatan direktori. Terapkan sistem ini pada aplikasi setelah persetujuan Phase A.
+Dokumen ini menetapkan aturan visual dan perilaku komponen untuk beranda, kategori, dan kalkulator. Preview memakai HPP untuk contoh kalkulator dan kartu ilustratif dari inventaris untuk menguji kepadatan direktori. Kontrak di bawah dipertahankan sebagai acuan implementasi yang sudah disetujui; label proposal pada preview statis adalah riwayat Phase A.
 
 ## Arah visual
 

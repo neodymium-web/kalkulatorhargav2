@@ -1,0 +1,61 @@
+{
+  "status": "PARTIAL_OWNER_REPORTED_EXPORT",
+  "source": "https://github.com/neodymium-web/kalkulatorhargav2/issues/66",
+  "exportDate": "2026-11-15",
+  "property": "https://www.kalkulatorharga.com/",
+  "reportedFilter": "16 months",
+  "availableDailyObservations": {
+    "start": "2026-10-17",
+    "end": "2026-11-11",
+    "days": 26,
+    "chartClicks": 38,
+    "chartImpressions": 2475
+  },
+  "pageTableRowsReported": 32,
+  "pageMetrics": {
+    "/kalkulator/tiktok": [
+      20,
+      317
+    ],
+    "/kalkulator/emas": [
+      7,
+      1529
+    ],
+    "/": [
+      4,
+      165
+    ],
+    "/kalkulator/saham/average": [
+      2,
+      68
+    ],
+    "/kalkulator/tiktok-shop": [
+      1,
+      231
+    ],
+    "/kalkulator/shopee": [
+      1,
+      154
+    ],
+    "/kalkulator/lazada": [
+      1,
+      64
+    ],
+    "/bandingkan": [
+      0,
+      87
+    ],
+    "/kalkulator/tiktok/benchmark": [
+      0,
+      12
+    ]
+  },
+  "rawExportBytesAvailableInRepository": false,
+  "pageTableTotalsNotReconciledWithChart": true,
+  "pageRowReportingPeriodIndependentlyVerified": false,
+  "sixMonthBaselineComplete": false,
+  "pageQueryJoinAvailable": false,
+  "ga4": "UNKNOWN",
+  "backlinks": "UNKNOWN",
+  "otherPageMetrics": "UNKNOWN, not zero"
+}
