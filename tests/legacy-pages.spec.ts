@@ -1,3 +1,4 @@
+import { migrationPaths } from '../lib/migration/routes'
 const { expectedArchive } = require('../scripts/legacy/editorial-contract.cjs')
 import { supplementalPaths } from '../lib/supplemental/routes'
 import { test, expect, type Page } from '@playwright/test'
@@ -6,7 +7,7 @@ import sources from '../docs/audit/legacy55/source-pages.json'
 import { deferredPaths } from '../lib/supplemental/routes'
 import { legacyPaths } from '../lib/legacy/routes'
 const catalogue=JSON.parse(readFileSync('docs/audit/catalogue.json','utf8'))
-const paths=[...catalogue.paths,...legacyPaths,...supplementalPaths]
+const paths=[...catalogue.paths,...legacyPaths,...supplementalPaths,...migrationPaths]
 const normalize=(s:string)=>s.replace(/\s+/g,' ').trim()
 async function accessibility(page:Page) {
   await page.addScriptTag({path:require.resolve('axe-core/axe.min.js')})
@@ -18,6 +19,7 @@ async function accessibility(page:Page) {
 for(const source of sources)test(`legacy disposition and independent source text ${source.path}`,async({page,request,isMobile},info)=>{
   const response=await request.get(source.path,{maxRedirects:0})
   writeFileSync(info.outputPath('legacy-outcome.json'),JSON.stringify({path:source.path,status:response.status(),observedAtUtc:new Date().toISOString()}))
+  if((migrationPaths as readonly string[]).includes(source.path)){expect(response.status()).toBe(200);expect(paths).toContain(source.path);return}
   if((supplementalPaths as readonly string[]).includes(source.path)){expect(response.status()).toBe(200);expect(paths).toContain(source.path);return}
   if((deferredPaths as readonly string[]).includes(source.path)){expect(response.status()).toBe(404);expect(paths).not.toContain(source.path);return}
   expect(response.status()).toBe(200);expect(response.headers()['x-robots-tag']).toBe('noindex, nofollow')

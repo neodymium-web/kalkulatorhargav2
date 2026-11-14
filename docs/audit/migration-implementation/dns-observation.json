@@ -1,0 +1,118 @@
+{
+  "observedAtUtc": "2026-11-14T19:46:02.832738+00:00",
+  "scope": "Read-only public DNS queries; not a full authoritative zone export or recovery authorization",
+  "rows": [
+    {
+      "name": "kalkulatorharga.com",
+      "type": "A",
+      "returncode": 0,
+      "answer": "kalkulatorharga.com.\t1800\tIN\tA\t64.29.17.65\nkalkulatorharga.com.\t1800\tIN\tA\t64.29.17.1",
+      "error": ""
+    },
+    {
+      "name": "kalkulatorharga.com",
+      "type": "AAAA",
+      "returncode": 0,
+      "answer": "",
+      "error": ""
+    },
+    {
+      "name": "kalkulatorharga.com",
+      "type": "CNAME",
+      "returncode": 0,
+      "answer": "",
+      "error": ""
+    },
+    {
+      "name": "kalkulatorharga.com",
+      "type": "NS",
+      "returncode": 0,
+      "answer": "kalkulatorharga.com.\t86400\tIN\tNS\tns2.vercel-dns.com.\nkalkulatorharga.com.\t86400\tIN\tNS\tns1.vercel-dns.com.",
+      "error": ""
+    },
+    {
+      "name": "kalkulatorharga.com",
+      "type": "SOA",
+      "returncode": 0,
+      "answer": "kalkulatorharga.com.\t3600\tIN\tSOA\tns1.vercel-dns.com. hostmaster.nsone.net. 1792321508 43200 7200 1209600 600",
+      "error": ""
+    },
+    {
+      "name": "kalkulatorharga.com",
+      "type": "MX",
+      "returncode": 0,
+      "answer": "",
+      "error": ""
+    },
+    {
+      "name": "kalkulatorharga.com",
+      "type": "TXT",
+      "returncode": 0,
+      "answer": "",
+      "error": ""
+    },
+    {
+      "name": "kalkulatorharga.com",
+      "type": "CAA",
+      "returncode": 0,
+      "answer": "kalkulatorharga.com.\t300\tIN\tCAA\t0 issue \"letsencrypt.org\"\nkalkulatorharga.com.\t300\tIN\tCAA\t0 issue \"pki.goog\"\nkalkulatorharga.com.\t300\tIN\tCAA\t0 issue \"sectigo.com\"",
+      "error": ""
+    },
+    {
+      "name": "www.kalkulatorharga.com",
+      "type": "A",
+      "returncode": 0,
+      "answer": "www.kalkulatorharga.com. 1800\tIN\tA\t64.29.17.65\nwww.kalkulatorharga.com. 1800\tIN\tA\t216.198.79.65",
+      "error": ""
+    },
+    {
+      "name": "www.kalkulatorharga.com",
+      "type": "AAAA",
+      "returncode": 0,
+      "answer": "",
+      "error": ""
+    },
+    {
+      "name": "www.kalkulatorharga.com",
+      "type": "CNAME",
+      "returncode": 0,
+      "answer": "",
+      "error": ""
+    },
+    {
+      "name": "www.kalkulatorharga.com",
+      "type": "NS",
+      "returncode": 0,
+      "answer": "",
+      "error": ""
+    },
+    {
+      "name": "www.kalkulatorharga.com",
+      "type": "SOA",
+      "returncode": 0,
+      "answer": "",
+      "error": ""
+    },
+    {
+      "name": "www.kalkulatorharga.com",
+      "type": "MX",
+      "returncode": 0,
+      "answer": "",
+      "error": ""
+    },
+    {
+      "name": "www.kalkulatorharga.com",
+      "type": "TXT",
+      "returncode": 0,
+      "answer": "",
+      "error": ""
+    },
+    {
+      "name": "www.kalkulatorharga.com",
+      "type": "CAA",
+      "returncode": 0,
+      "answer": "",
+      "error": ""
+    }
+  ]
+}

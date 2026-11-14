@@ -1,3 +1,4 @@
+import { execFileSync } from 'node:child_process'
 import { describe, expect, it } from 'vitest'
 import { readFileSync } from 'node:fs'
 import { createHash } from 'node:crypto'
@@ -13,7 +14,7 @@ describe('22 editorial revisions, no owner publication approval', () => {
     expect(ledger.pages).toHaveLength(22)
     const sources = JSON.parse(readFileSync('docs/audit/editorial61/sources.json', 'utf8')).sources
     for (const row of ledger.pages) for (const id of row.sourceRefs) expect(sources.some((s: { id: string }) => s.id === id)).toBe(true)
-    for (const source of sources) for (const file of source.files ?? []) expect(createHash('sha256').update(readFileSync(file.path)).digest('hex')).toBe(file.sha256)
+    for (const source of sources) for (const file of source.files ?? []) expect(createHash('sha256').update(execFileSync('git',['show',`${file.url.split('/blob/')[1].split('/')[0]}:${file.path}`])).digest('hex')).toBe(file.sha256)
     const register = JSON.parse(readFileSync('docs/audit/migration-release/register.json', 'utf8'))
     expect(register.archives.every((r: { publicationStatus: string }) => r.publicationStatus === 'PENDING_OWNER_APPROVAL')).toBe(true)
     expect(ledger.pages.every((p: { ownerDecision: null; publicationStatus: string }) => p.ownerDecision === null && p.publicationStatus === 'PENDING_OWNER_APPROVAL')).toBe(true)

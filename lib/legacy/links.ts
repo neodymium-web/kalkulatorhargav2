@@ -19,6 +19,7 @@ export function classifyLegacyLink(href: string, sourcePath: string, published: 
     if (url.search) return reference('unresolved-legacy-feature','Parameter pilihan atau preset lama belum didukung v2; path dasar 200 bukan bukti kesetaraan.')
     if (url.hash) return reference('unresolved-legacy-feature','Fragmen sumber lama belum dipetakan ke heading v2.')
     if (url.pathname === '/') return reference('unresolved-legacy-feature','Beranda lama memuat preset kalkulator; direktori v2 bukan fitur yang sama.')
+    if (['/kalkulator/saham/average','/kalkulator/tiktok/benchmark'].includes(url.pathname)) return reference('unresolved-legacy-feature','Route kandidat tersedia, tetapi kesetaraan referensi arsip dan publikasi belum disetujui.')
     if (!published.includes(url.pathname)) return reference('unresolved-legacy-feature','Fitur atau path legacy ini belum tersedia/setara pada v2.')
     return {kind:'local',classification:'implemented-v2',original,href:url.pathname,reason:'Route v2 terbit; tidak bergantung hostname legacy.',ownerApproval:false,scopeChanged:url.pathname.startsWith('/kalkulator/') || additional.includes(url.pathname)}
   } catch { return {kind:'invalid',classification:'unknown',original:href,reason:'Alamat tidak valid.',ownerApproval:true} }

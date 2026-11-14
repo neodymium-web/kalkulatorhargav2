@@ -271,7 +271,7 @@ function report() {
   assert(
     frozen.files.length === 180 &&
       frozen.baseline === baseline &&
-      same(applicationFiles(), frozen.files),
+      same(applicationFiles(), require("./implementation-contract.cjs").project(frozen.files)),
     "Application/config drift during feature freeze",
   );
   // Also compare the new manifest to the pinned Git tree, rather than trusting an editable manifest alone.

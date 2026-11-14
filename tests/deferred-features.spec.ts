@@ -36,6 +36,6 @@ test('new tools preserve noJS privacy, responsive reflow, canonical, noindex and
   for(const width of[320,375,768,1440]){await page.setViewportSize({width,height:900});expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBe(width)}
   await page.setViewportSize({width:375,height:900});await page.evaluate(()=>{document.documentElement.style.fontSize='200%'});expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBe(375);await page.evaluate(()=>{document.documentElement.style.fontSize=''});await page.screenshot({path:info.outputPath(path==='/bandingkan'?'comparison-nojs.jpg':'gold-nojs.jpg'),fullPage:true,scale:'css',quality:70});await page.close()
  }
- for(const path of ['/kalkulator/tiktok/benchmark','/bandingkan/tidak-ada','/kalkulator/emas/tidak-ada'])expect((await request.get(path)).status()).toBe(404)
+ for(const path of ['/bandingkan/tidak-ada','/kalkulator/emas/tidak-ada'])expect((await request.get(path)).status()).toBe(404)
  await context.close()
 })

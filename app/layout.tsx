@@ -19,7 +19,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <body>
         <SiteHeader hubs={listCategoryHubs()} />
         <main id="konten" tabIndex={-1}>{children}</main>
-        <footer className={`${layout.container} ${styles.footer}`}>KalkulatorHarga · <a href="/blog">Arsip catatan seller (perlu review)</a></footer>
+        <footer className={`${layout.container} ${styles.footer}`}>KalkulatorHarga · <a href="/blog">Arsip catatan seller (perlu review)</a> · <a href="/kalkulator/saham/average">Average saham dan impas</a> · <a href="/kalkulator/tiktok/benchmark">Analisis engagement TikTok manual</a></footer>
       </body>
     </html>
   )

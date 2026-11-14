@@ -47,7 +47,7 @@ function sourceContent(tree: LegacyNode, annotation: ReactNode, sourcePath: stri
   return render(tree, 0)
 }
 export function legacyMetadata(page: LegacyPage): Metadata {
-  return { ...pageMetadata(page.h1, page.description ?? 'Arsip konten situs lama yang menunggu review pemilik.', page.path), title: { absolute: page.title } }
+  return { ...pageMetadata(page.h1, page.description ?? 'Arsip konten situs lama yang menunggu review pemilik.', page.path), title: { absolute: page.title }, robots: { index: false, follow: false } }
 }
 export function LegacyPageView({ page }: { page: LegacyPage }) {
   const toc = headings(page.tree)

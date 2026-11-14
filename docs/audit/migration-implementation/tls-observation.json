@@ -1,0 +1,80 @@
+{
+  "observedAtUtc": "2026-11-14T19:50:06.428451+00:00",
+  "scope": "Current public TLS handshake only; no proof certificate reissuance/domain move or recovery",
+  "rows": [
+    {
+      "host": "kalkulatorharga.com",
+      "verified": true,
+      "tlsVersion": "TLSv1.2",
+      "issuer": [
+        [
+          [
+            "countryName",
+            "US"
+          ]
+        ],
+        [
+          [
+            "organizationName",
+            "Let's Encrypt"
+          ]
+        ],
+        [
+          [
+            "commonName",
+            "YR1"
+          ]
+        ]
+      ],
+      "subjectAltName": [
+        [
+          "DNS",
+          "*.kalkulatorharga.com"
+        ],
+        [
+          "DNS",
+          "kalkulatorharga.com"
+        ]
+      ],
+      "notBefore": "Oct 18 10:49:47 2026 GMT",
+      "notAfter": "Jan 16 10:49:46 2027 GMT"
+    },
+    {
+      "host": "www.kalkulatorharga.com",
+      "verified": true,
+      "tlsVersion": "TLSv1.2",
+      "issuer": [
+        [
+          [
+            "countryName",
+            "US"
+          ]
+        ],
+        [
+          [
+            "organizationName",
+            "Let's Encrypt"
+          ]
+        ],
+        [
+          [
+            "commonName",
+            "YR1"
+          ]
+        ]
+      ],
+      "subjectAltName": [
+        [
+          "DNS",
+          "*.kalkulatorharga.com"
+        ],
+        [
+          "DNS",
+          "kalkulatorharga.com"
+        ]
+      ],
+      "notBefore": "Oct 18 10:49:47 2026 GMT",
+      "notAfter": "Jan 16 10:49:46 2027 GMT"
+    }
+  ]
+}
