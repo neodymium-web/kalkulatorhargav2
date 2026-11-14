@@ -1,0 +1,57 @@
+{
+  "scope": "5local viewport frames, not every pixel of22archives. Captured in70targeted tests before final2wording-only edits to other pages; inspected stock/policy/tariff frames unchanged by those edits.",
+  "frames": [
+    {
+      "file": "test-results/legacy-pages-legacy-dispos-19419-ce-text-kebijakan-editorial-desktop/legacy-viewport.jpg",
+      "sha256": "f256bd296d79f6ddf1dcadbf000ca5669082a2f32e4d82871b179b7a1a226cf6",
+      "size": [
+        1440,
+        900
+      ],
+      "inspected": true
+    },
+    {
+      "file": "test-results/editorial61-specific-finan-a3bf9-t-invented-official-presets-desktop/stock-editorial-correction.jpg",
+      "sha256": "c714073d3b2202d77bea9c432a05d79895bc8a6833d905ea901d31d0f13aa4ae",
+      "size": [
+        1280,
+        720
+      ],
+      "inspected": true
+    },
+    {
+      "file": "test-results/editorial61-specific-finan-a3bf9-t-invented-official-presets-mobile/stock-editorial-correction.jpg",
+      "sha256": "cb53363b73f32d1b4331273abae158414dc711f3c56f0314cdf6f8de521a116f",
+      "size": [
+        320,
+        800
+      ],
+      "inspected": true
+    },
+    {
+      "file": "test-results/legacy-pages-legacy-dispos-19419-ce-text-kebijakan-editorial-mobile/legacy-viewport.jpg",
+      "sha256": "d0458267bdb9a6812046b12d28987345f8ac468ed1d576b54a50d315b4a742aa",
+      "size": [
+        375,
+        900
+      ],
+      "inspected": true
+    },
+    {
+      "file": "test-results/legacy-pages-legacy-dispos-fa997-ext-biaya-admin-marketplace-mobile/legacy-viewport.jpg",
+      "sha256": "585d7cdff36ca41f15fcd73b8324f1df6395e1ef62619f64655f648d8a7641a0",
+      "size": [
+        375,
+        900
+      ],
+      "inspected": true
+    }
+  ],
+  "findings": [
+    "Pending-owner notice visible, source URL is text not fake archive link",
+    "Stock cost/fee explanation and break-even amounts readable without overlap; viewport crops continuing paragraphs normally",
+    "Mobile content wraps, no horizontal page overflow; existing DS/CSS retained",
+    "Original44archive reflow/axe/content screenshot checks remain; CI regenerates on final SHA"
+  ],
+  "gate": "PASS for limited editorial visual scope; no owner publication approval"
+}

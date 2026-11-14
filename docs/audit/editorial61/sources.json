@@ -1,0 +1,185 @@
+{
+  "checkedOn": "2026-11-09",
+  "sources": [
+    {
+      "id": "V2-SETTLEMENT",
+      "url": "https://github.com/neodymium-web/kalkulatorhargav2/blob/2f3f1b8ec18e8e555c0193faa1e282bd175614e4/lib/platform-settlement/engine.ts",
+      "method": "local checkout at pinned baseline; source read",
+      "checkedOn": "2026-11-09",
+      "outcome": "PRIMARY_CODE_READ",
+      "files": [
+        {
+          "path": "lib/platform-settlement/engine.ts",
+          "url": "https://github.com/neodymium-web/kalkulatorhargav2/blob/2f3f1b8ec18e8e555c0193faa1e282bd175614e4/lib/platform-settlement/engine.ts",
+          "sha256": "4cbdb9b3a26641475c36de77cb77636aa4faec534f46ed0822d809834b449cc4"
+        },
+        {
+          "path": "lib/platform-settlement/tools.ts",
+          "url": "https://github.com/neodymium-web/kalkulatorhargav2/blob/2f3f1b8ec18e8e555c0193faa1e282bd175614e4/lib/platform-settlement/tools.ts",
+          "sha256": "4cc3b2e3947a6a86aa8007316be1cba696821a43cbaff63e0b5acb303a3eb4ca"
+        }
+      ],
+      "findings": "Manual fees/basis/minimum/cap per order; exact fractions before final payout rounding; unsupported scope holds without ledger. No automatic official rate schedule.",
+      "limitations": "Code establishes implemented scope, not hosting logs/retention, operational process or owner/legal publication approval."
+    },
+    {
+      "id": "V2-CREATOR",
+      "url": "https://github.com/neodymium-web/kalkulatorhargav2/blob/2f3f1b8ec18e8e555c0193faa1e282bd175614e4/lib/creator-analytics/tools.ts",
+      "method": "local checkout at pinned baseline; source read",
+      "checkedOn": "2026-11-09",
+      "outcome": "PRIMARY_CODE_READ",
+      "files": [
+        {
+          "path": "lib/creator-analytics/tools.ts",
+          "url": "https://github.com/neodymium-web/kalkulatorhargav2/blob/2f3f1b8ec18e8e555c0193faa1e282bd175614e4/lib/creator-analytics/tools.ts",
+          "sha256": "c4ba5b52b5fbab7e31e974cd882bde2de28abb6e75e4884623764e8eadc4d6ba"
+        },
+        {
+          "path": "lib/creator-analytics/engines.ts",
+          "url": "https://github.com/neodymium-web/kalkulatorhargav2/blob/2f3f1b8ec18e8e555c0193faa1e282bd175614e4/lib/creator-analytics/engines.ts",
+          "sha256": "ef849b051380195ca806c15ee16213a3f4e8f413d46d51c202cb281f665b1a3a"
+        },
+        {
+          "path": "components/calculators/creator-form.tsx",
+          "url": "https://github.com/neodymium-web/kalkulatorhargav2/blob/2f3f1b8ec18e8e555c0193faa1e282bd175614e4/components/calculators/creator-form.tsx",
+          "sha256": "fc8cfc5488f5ea12bfe09e8c0c216fbce3515f00e37d254ae347a32e6e39e4de"
+        }
+      ],
+      "findings": "Four independent manual modules; matching assumed-view RPM; sponsor/affiliate/gift net inputs, no username lookup or eligibility verification.",
+      "limitations": "Code establishes implemented scope, not hosting logs/retention, operational process or owner/legal publication approval."
+    },
+    {
+      "id": "V2-COMPARISON",
+      "url": "https://github.com/neodymium-web/kalkulatorhargav2/blob/2f3f1b8ec18e8e555c0193faa1e282bd175614e4/lib/supplemental/comparison.ts",
+      "method": "local checkout at pinned baseline; source read",
+      "checkedOn": "2026-11-09",
+      "outcome": "PRIMARY_CODE_READ",
+      "files": [
+        {
+          "path": "lib/supplemental/comparison.ts",
+          "url": "https://github.com/neodymium-web/kalkulatorhargav2/blob/2f3f1b8ec18e8e555c0193faa1e282bd175614e4/lib/supplemental/comparison.ts",
+          "sha256": "840d38ea3af059fab800a81c972388298206d7d24edacf96df5add44e2406009"
+        }
+      ],
+      "findings": "Four manual scenarios; same quantity/HPP basket for ranking; receipt tax is manual evidence-backed amount, not automatic legal rate.",
+      "limitations": "Code establishes implemented scope, not hosting logs/retention, operational process or owner/legal publication approval."
+    },
+    {
+      "id": "BEI-FRACTION",
+      "url": "https://www.idx.id/id/produk-layanan/jam-dan-mekanisme-perdagangan/",
+      "method": "web source reader / targeted first-party search",
+      "checkedOn": "2026-11-09",
+      "outcome": "PRIMARY_TEXT_READ",
+      "findings": "Table supports Rp10 step in the illustrated Rp2000–<5000 range.",
+      "limitations": "Old idx.co.id URL403; readable idx.id page cites Kep-00158/BEI/10-2026, unlike old09-2026 citation. No invented effective date; actual order/day/market rules require verification."
+    },
+    {
+      "id": "PMK37-TEXT",
+      "url": "https://www.pajak.go.id/index.php/id/peraturan/penunjukan-pihak-lain-sebagai-pemungut-pajak-penghasilan-serta-tata-cara-pemungutan",
+      "method": "web source reader / targeted first-party search",
+      "checkedOn": "2026-11-09",
+      "outcome": "PRIMARY_REGULATION_TEXT_READ",
+      "findings": "Read PMK37/2025 sections6/8/10/18; conditional collection basis and exceptions, not universal tax on every seller.",
+      "limitations": "Does not establish latest appointment/operational start for a specific marketplace/order. JDIH PDF link404; DJP HTML regulation used instead."
+    },
+    {
+      "id": "JDIH-METADATA",
+      "url": "https://jdih.kemenkeu.go.id/dok/pmk-37-tahun-2025",
+      "method": "web source reader / targeted first-party search",
+      "checkedOn": "2026-11-09",
+      "outcome": "PRIMARY_METADATA_READ",
+      "findings": "Metadata records promulgation/effective14July2025.",
+      "limitations": "Not the same as appointment or actual collection start for every marketplace."
+    },
+    {
+      "id": "DJP-FAQ",
+      "url": "https://pajak.go.id/marketplace",
+      "method": "web source reader / targeted first-party search",
+      "checkedOn": "2026-11-09",
+      "outcome": "PRIMARY_TEXT_READ",
+      "findings": "One NPWP/NIK statement covers all accounts/businesses of that taxpayer; evidence and qualifying criteria matter.",
+      "limitations": "FAQ appointment dates are not proof for every transaction; latest legal/period-specific evidence still needed."
+    },
+    {
+      "id": "DJP-POSTPONEMENT",
+      "url": "https://pajak.go.id/index.php/id/pengumuman/penundaan-waktu-pemberlakuan-ketentuan-pemungutan-pph-pasal-22-oleh-marketplace",
+      "method": "web source reader / targeted first-party search",
+      "checkedOn": "2026-11-09",
+      "outcome": "SEARCH_INDEX_ONLY_NOT_RECONCILED",
+      "findings": "Primary search index mentions postponement/November2026.",
+      "limitations": "Direct reader exposed no complete authoritative announcement/dated attachment. Do not resolve conflicting dates from a search snippet or infer latest operative appointment."
+    },
+    {
+      "id": "DJP-OLD-PRESS",
+      "url": "https://stats.pajak.go.id/id/siaran-pers/pemungutan-pph-pasal-22-melalui-marketplace-mulai-dilaksanakan-1-oktober-2026",
+      "method": "web source reader / targeted first-party search",
+      "checkedOn": "2026-11-09",
+      "outcome": "SECURITY_BLOCK_PAGE",
+      "findings": "Reader returned access/security restriction rather than announcement.",
+      "limitations": "Not proof of an October start. Owner/legal must supply latest signed notice and appointment evidence before definitive scenario/date claims."
+    },
+    {
+      "id": "SHOPEE7216",
+      "url": "https://seller.shopee.co.id/edu/article/7216",
+      "method": "web source reader / targeted first-party search",
+      "checkedOn": "2026-11-09",
+      "outcome": "HTML_SHELL_NO_RATE_TABLE",
+      "findings": "No readable category/rate/cap table in response.",
+      "limitations": "Historical rate cells retained only as unverified source claims. No current rates, waivers, effective dates or category mappings certified."
+    },
+    {
+      "id": "SHOPEE24877",
+      "url": "https://seller.shopee.co.id/edu/article/24877",
+      "method": "web source reader / targeted first-party search",
+      "checkedOn": "2026-11-09",
+      "outcome": "HTML_SHELL_NO_RATE_TABLE",
+      "findings": "No readable change schedule.",
+      "limitations": "December2026/January2027 claims not adopted as effective policy; seller/account evidence required."
+    },
+    {
+      "id": "TIKTOK2024",
+      "url": "https://newsroom.tiktok.com/introducing-the-new-creator-rewards-program?lang=en",
+      "method": "web source reader / targeted first-party search",
+      "checkedOn": "2026-11-09",
+      "outcome": "PRIMARY_HISTORICAL_TEXT_READ",
+      "findings": "18March2024 announcement describes qualified-view/RPM reporting.",
+      "limitations": "Historical context only; not a current country list, universal RPM or eligibility/payout certification."
+    },
+    {
+      "id": "TIKTOKSUPPORT",
+      "url": "https://support.tiktok.com/en/business-and-creator/creator-rewards-program/creator-rewards-program",
+      "method": "web source reader / targeted first-party search",
+      "checkedOn": "2026-11-09",
+      "outcome": "NO_READABLE_TEXT",
+      "findings": "Support reader returned no readable lines; id/different-program/how-rewards-work variants also attempted.",
+      "limitations": "No new geographic or detailed eligibility rules inferred; directs reader to their own current account/terms."
+    },
+    {
+      "id": "BENCHMARK-RIGHTS",
+      "url": "https://github.com/neodymium-web/kalkulatorhargav2/blob/2f3f1b8ec18e8e555c0193faa1e282bd175614e4/docs/audit/deferred57/benchmark-inventory.csv",
+      "method": "existing evidence read",
+      "checkedOn": "2026-11-09",
+      "outcome": "RIGHTS_COHORT_NOT_VERIFIED",
+      "findings": "16historical rows are audit inventory, not approved licensed dataset.",
+      "limitations": "No third-party benchmark numbers recommended or published as current; benchmark route stays404."
+    },
+    {
+      "id": "OWNER60",
+      "url": "https://github.com/neodymium-web/kalkulatorhargav2/issues/60",
+      "method": "GitHub issue body read",
+      "checkedOn": "2026-11-09",
+      "outcome": "PLANNING_PRODUCT_CHOICES_ONLY",
+      "findings": "Future www replaces prior apex planning choice; both supplemental tools accepted as manual simulations.",
+      "limitations": "No archive publication, legal/finance signoff, active canonical/routing/indexing or cutover approval. Short GSC discussed externally is not complete six-month GSC/GA4/backlink evidence in this checkout."
+    },
+    {
+      "id": "MATH-ORACLES",
+      "url": "https://github.com/neodymium-web/kalkulatorhargav2/blob/2f3f1b8ec18e8e555c0193faa1e282bd175614e4/lib/platform-settlement/engine.ts",
+      "method": "independent BigInt test derivations, checked against unchanged engine only for settlement example",
+      "checkedOn": "2026-11-09",
+      "outcome": "DERIVATION_REVIEW_REQUIRED",
+      "findings": "Stock capital/fee reconciliation, price-step predecessor test, linear and capped minimum-price branches; test file tests/editorial61.unit.ts.",
+      "limitations": "Educational assumptions, not broker tariffs, legal determination, production solver or authorized finance approval. Actual test run linked in final PR."
+    }
+  ]
+}

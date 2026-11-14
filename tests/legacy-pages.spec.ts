@@ -1,3 +1,4 @@
+const { expectedArchive } = require('../scripts/legacy/editorial-contract.cjs')
 import { supplementalPaths } from '../lib/supplemental/routes'
 import { test, expect, type Page } from '@playwright/test'
 import { readFileSync, writeFileSync } from 'node:fs'
@@ -25,7 +26,7 @@ for(const source of sources)test(`legacy disposition and independent source text
   await expect(page.locator('main h1')).toHaveText(source.h1);await expect(page).toHaveTitle(source.title)
   await expect(page.locator('link[rel=canonical]')).toHaveAttribute('href','https://kalkulatorharga.com'+source.path)
   await expect(page.getByRole('complementary',{name:'Status review arsip'})).toContainText('menunggu review pemilik')
-  expect(normalize(await page.locator('[data-legacy-source]').evaluate(el=>{const copy=el.cloneNode(true)as HTMLElement;copy.querySelectorAll('[data-legacy-annotation]').forEach(n=>n.remove());return copy.textContent??''}))).toBe(normalize(source.text.replaceAll('Ruang iklan','')))
+  expect(normalize(await page.locator('[data-legacy-source]').evaluate(el=>{const copy=el.cloneNode(true)as HTMLElement;copy.querySelectorAll('[data-legacy-annotation]').forEach(n=>n.remove());return copy.textContent??''}))).toBe(expectedArchive(source.path).expectedText)
   expect(await page.locator('[data-legacy-source] time').evaluateAll(ns=>ns.filter(n=>!n.closest('[data-legacy-annotation]')).map(n=>({datetime:n.getAttribute('datetime'),text:n.textContent})))).toEqual(source.dates)
   expect(await page.locator('[data-legacy-source] script,[data-legacy-source] iframe,[data-legacy-source] img,[data-legacy-source] input,[data-legacy-source] button').count()).toBe(0)
   const links=await page.locator('main a[href]').evaluateAll(ns=>ns.map(n=>n.getAttribute('href')!))
@@ -41,7 +42,7 @@ test('blog and inherited archives work without JS and link to supported manual a
   const context=await browser.newContext({javaScriptEnabled:false}),page=await context.newPage()
   await page.goto('http://127.0.0.1:3100/');await page.locator('footer a[href="/blog"]').press('Enter');await expect(page).toHaveURL(/\/blog$/)
   const nav=page.getByRole('navigation',{name:'Arsip legacy yang tersedia'});await expect(nav.getByRole('link')).toHaveCount(22)
-  for(const path of legacyPaths){await page.goto('http://127.0.0.1:3100'+path);await expect(page.locator('main h1')).toHaveCount(1);expect(normalize(await page.locator('[data-legacy-source]').evaluate(el=>{const copy=el.cloneNode(true)as HTMLElement;copy.querySelectorAll('[data-legacy-annotation]').forEach(n=>n.remove());return copy.textContent??''}))).toBe(normalize(sources.find(p=>p.path===path)!.text.replaceAll('Ruang iklan','')))}
+  for(const path of legacyPaths){await page.goto('http://127.0.0.1:3100'+path);await expect(page.locator('main h1')).toHaveCount(1);expect(normalize(await page.locator('[data-legacy-source]').evaluate(el=>{const copy=el.cloneNode(true)as HTMLElement;copy.querySelectorAll('[data-legacy-annotation]').forEach(n=>n.remove());return copy.textContent??''}))).toBe(expectedArchive(path).expectedText)}
   await page.goto('http://127.0.0.1:3100/blog/kalkulator-average-down-saham-harga-rata-rata');await expect(page.locator('[data-legacy-source] a[href="/kalkulator/emas"]')).toHaveCount(1)
   await page.screenshot({path:info.outputPath('legacy-nojs.jpg'),fullPage:true,scale:'css',quality:70});await context.close()
 })
