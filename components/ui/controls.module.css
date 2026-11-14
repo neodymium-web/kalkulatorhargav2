@@ -29,7 +29,11 @@
   border: 1px solid var(--border-control);
   background: var(--surface-page);
   color: var(--text-primary);
+  font-variant-numeric: var(--numeric-variant);
+  transition: border-color var(--motion-fast) var(--motion-ease), background-color var(--motion-fast) var(--motion-ease);
 }
+.input:hover:not(:disabled):not([aria-invalid=true]) { border-color: var(--text-primary); }
+.input:focus-visible { border-color: var(--action-primary); }
 .input::placeholder { color: var(--text-secondary); opacity: 1; }
 .input[aria-invalid=true] { border-color: var(--text-error); }
 .input:disabled { background: var(--surface-disabled); color: var(--text-secondary); }
