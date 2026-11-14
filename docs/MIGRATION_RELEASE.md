@@ -1,3 +1,5 @@
+> Rekonsiliasi berikutnya: [Issue #66 dan lima issue terbuka](ISSUE_RECONCILIATION.md). Ringkasan ekspor GSC owner 15 November sudah tersedia sebagai bukti parsial (26 observasi harian); UNKNOWN di plan sebelumnya tidak berarti tidak pernah ada data, melainkan baseline lengkap belum tervalidasi. Raw export, page×query, GA4 dan backlink belum tersedia di repository. Plan/runtime tidak diaktifkan atau diubah.
+
 # Final Release Gate: review persiapan, eksekusi NO-GO
 
 Baseline `main@125e93d240d83ae35f63965289dd87315cb52bcc`. Ditinjau 15 November 2026 (Asia/Jakarta). Spesifikasi dan keputusan owner: [Issue #60](https://github.com/neodymium-web/kalkulatorhargav2/issues/60). Instruksi tugas terbaru mengizinkan satu PR persiapan, bukan aktivasi. Fitur dibekukan; PR #64 tidak dilanjutkan atau dimasukkan ke branch ini.

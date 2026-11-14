@@ -1,0 +1,31 @@
+{
+  "method": "Independent Python datetime and Fraction/Decimal, no TypeScript engine imports",
+  "stock": {
+    "capital": 6626000,
+    "shares": 1500,
+    "sellRateAssumption": "0.25% inclusive, no extra tax",
+    "breakEvenFraction": "5300800/1197",
+    "breakEvenDecimal": "4428.40434419381787802840434419381787802840434",
+    "net4430": "13256775/2",
+    "net4420": "6613425",
+    "BEIValidity": "NOT_ASSERTED"
+  },
+  "calendar": {
+    "leap2024Days": 2,
+    "century1900Days": 1,
+    "century2000Days": 2,
+    "workdaysNov2to8WithNov4Holiday": 4,
+    "shift2230to0615Break45": 420,
+    "fuel100km12kmLprice10000Exact": "250000/3",
+    "fuelRounded": 83333,
+    "age20000229to20010227": "0y11m29d using original-month clamp; original #36 copied 30d is inconsistent with chosen policy"
+  },
+  "manualScenarios": {
+    "goldFineGrams": "15/2",
+    "goldCapital": "7520000",
+    "goldPayout": "6720000",
+    "sellerPayout": "175500",
+    "comparisonA": "89500",
+    "comparisonBWithExplicitOther8000": "81500"
+  }
+}
