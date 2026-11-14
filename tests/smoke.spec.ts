@@ -1,3 +1,4 @@
+import { migrationPaths } from '../lib/migration/routes'
 import { supplementalPaths } from '../lib/supplemental/routes'
 import { legacyPaths } from '../lib/legacy/routes'
 import { expect, test } from '@playwright/test'
@@ -176,6 +177,7 @@ test('blocks preview indexing and lists only published URLs', async ({ request }
     '<loc>https://kalkulatorharga.com/kalkulator/lazada</loc>',
     ...legacyPaths.map(path => `<loc>https://kalkulatorharga.com${path}</loc>`),
     ...supplementalPaths.map(path => `<loc>https://kalkulatorharga.com${path}</loc>`),
+    ...migrationPaths.map(path => `<loc>https://kalkulatorharga.com${path}</loc>`),
   ])
 })
 

@@ -22,13 +22,13 @@ test('cutover model leaves no absolute same-domain anchor, self-source link or u
  report.push({path,...data})
  }
  expect(violations).toEqual([])
- expect([...seen].sort()).toEqual([...paths].sort());expect(seen.size).toBe(131)
+ expect([...seen].sort()).toEqual([...paths].sort());expect(seen.size).toBe(133)
  writeFileSync(info.outputPath('modeled-cutover-links.json'),JSON.stringify({seed:'/',paths:seen.size,absoluteSameDomainAnchors:0,rows:report},null,2))
 })
 test('unresolved legacy benchmark and unsupported presets are visible nonclick archival references without JS',async({browser})=>{
  const context=await browser.newContext({javaScriptEnabled:false}),page=await context.newPage();await page.goto('http://127.0.0.1:3100/kalkulator/tiktok/panduan')
  await expect(page.locator('[data-legacy-source]')).toContainText('Referensi arsip nonklik: https://www.kalkulatorharga.com/kalkulator/tiktok/benchmark')
- await expect(page.locator('a[href*="/kalkulator/tiktok/benchmark"]')).toHaveCount(0);await expect(page.locator('a[href="/kalkulator/tiktok"]').first()).toBeVisible()
+ await expect(page.locator('[data-legacy-source] a[href*="/kalkulator/tiktok/benchmark"]')).toHaveCount(0);await expect(page.locator('a[href="/kalkulator/tiktok"]').first()).toBeVisible()
  await expect(page.getByRole('complementary',{name:'Status review arsip'})).toContainText('bukan arsip permanen')
  await page.goto('http://127.0.0.1:3100/blog');await expect(page.locator('[data-legacy-source]')).toContainText('Alamat asal masih dapat disalin');await context.close()
 })

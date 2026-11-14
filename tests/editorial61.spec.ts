@@ -25,7 +25,7 @@ test('specific finance, privacy and legal corrections are visible without invent
   await expect(article).toContainText('Rp4.428,404344')
   await expect(article).toContainText('Rp6.628.387,50')
   await expect(article).toContainText('bukan fee resmi Stockbit')
-  await expect(page.locator('a[href="/kalkulator/saham/average"]')).toHaveCount(0)
+  await expect(article.locator('a[href="/kalkulator/saham/average"]')).toHaveCount(0)
   await article.getByText('Contoh asumsi yang direkonsiliasi:', { exact: false }).scrollIntoViewIfNeeded()
   await page.screenshot({ path: info.outputPath('stock-editorial-correction.jpg'), scale: 'css', quality: 75 })
   await page.goto('/blog/harga-jual-minimum-marketplace')

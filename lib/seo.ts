@@ -1,7 +1,8 @@
+import { releaseConfiguration } from './migration/release'
 import type { Metadata } from 'next'
 import type { PublishedCalculator } from './registry'
 
-export const canonicalOrigin = 'https://kalkulatorharga.com'
+export const canonicalOrigin = releaseConfiguration(process.env).origin
 export const indexable = process.env.SITE_INDEXABLE === 'true' && !['preview', 'development'].includes(process.env.VERCEL_ENV ?? '')
 
 export function pageMetadata(title: string, description: string, path: string): Metadata {

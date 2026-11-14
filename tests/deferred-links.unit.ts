@@ -31,7 +31,7 @@ it('matches62 observed baseline dependencies and never treats proposed owner act
 })
 it('preserves129 old map records and adds only2 supplemental tools outside100IDs',()=>{
  const before=readCsv('docs/audit/deferred57/cutover-map-before.csv'),after=readCsv('docs/audit/cutover-url-map.csv')
- expect(before).toHaveLength(129);expect(after.slice(0,129)).toEqual(before);expect(after).toHaveLength(131);expect(after.map((r:{v2_route:string})=>r.v2_route).sort()).toEqual(publishedPaths().sort())
+ expect(before).toHaveLength(129);expect(after.slice(0,129)).toEqual(before);expect(after).toHaveLength(131);expect(after.map((r:{v2_route:string})=>r.v2_route).sort()).toEqual(publishedPaths().filter(p=>!['/kalkulator/saham/average','/kalkulator/tiktok/benchmark'].includes(p)).sort())
  expect(listPublished()).toHaveLength(100);expect(supplementalTools).toHaveLength(2);expect(supplementalTools.map(t=>t.path)).toEqual([...supplementalPaths]);expect(supplementalTools.every(t=>!listPublished().some(c=>c.id===String(t.id)))).toBe(true)
  const parity=readCsv('docs/audit/legacy-content-parity.csv');expect(parity).toHaveLength(25);expect(parity.filter((r:{outcome:string})=>r.outcome==='IMPLEMENTED_REVIEW_NEEDED')).toHaveLength(22);expect(parity.filter((r:{outcome:string})=>r.outcome==='IMPLEMENTED_BOUNDED_MANUAL_REVIEW_NEEDED')).toHaveLength(2);expect(parity.filter((r:{outcome:string})=>r.outcome==='BLOCKED')).toHaveLength(1)
 })

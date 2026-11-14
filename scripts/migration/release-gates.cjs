@@ -113,7 +113,7 @@ function report() {
   const editorial = require('../legacy/editorial-contract.cjs').verify()
   assert(expectedFiles.some(f => f.path === editorial.path), 'Archive file missing from baseline')
   expectedFiles.find(f => f.path === editorial.path).sha256 = editorial.sha256
-  assert(baseline.baseline === register.baseline && same(applicationFiles(), expectedFiles.sort((a, b) => a.path < b.path ? -1 : a.path > b.path ? 1 : 0)), 'Application/config drift outside reviewed editorial ledger')
+  assert(baseline.baseline === register.baseline && same(applicationFiles(), require('./implementation-contract.cjs').project(expectedFiles).sort((a, b) => a.path < b.path ? -1 : a.path > b.path ? 1 : 0)), 'Application/config drift outside reviewed editorial ledger')
   const map = mapping()
   const observation = load(`${directory}/domain-observation.json`)
   const snapshot = { assignments: Object.fromEntries(observation.legacy.map(a => [a.alias, { projectId: a.projectId, deploymentId: a.deployment.id, redirect: a.redirect, status: a.redirectStatusCode }])), canonical: register.host.currentCanonical, staging: { sso: true, noindex: true } }

@@ -46,3 +46,5 @@ function TiktokSuite() {
 export function CreatorForm({ slug }: { slug: CreatorSlug }) {
   return slug === 'tiktok' ? <TiktokSuite /> : <InteractiveCreator tool={creatorTools[slug]} />
 }
+
+export function BenchmarkForm() { return <InteractiveCreator tool={creatorModes.comparison} /> }

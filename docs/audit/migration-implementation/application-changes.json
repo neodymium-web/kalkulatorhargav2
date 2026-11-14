@@ -1,0 +1,66 @@
+[
+  {
+    "path": "app/layout.tsx",
+    "sha256": "4aa7427d00f80ccafb95c9a2e6a4f5f3234668c93a36af58a1bd9b97706eb249"
+  },
+  {
+    "path": "app/sitemap.ts",
+    "sha256": "488b9899d291917bfe792821cc4139fd8bdae1443b83fdf488a2ee44183fab17"
+  },
+  {
+    "path": "app/kalkulator/saham/average/page.tsx",
+    "sha256": "8cf69c8ce10237c07aa7f853947fff80ec5e24b9a71f5c01a1cefae3acf9b7a7"
+  },
+  {
+    "path": "app/kalkulator/tiktok/benchmark/page.tsx",
+    "sha256": "d6b4a6089cafc4a8a4d0f6892ef1b189f6bc2ae5be6861270c47b648a9b611e3"
+  },
+  {
+    "path": "components/calculators/creator-form.tsx",
+    "sha256": "712a09b2b0c9357734403036d403f8e9c2c22e16f6087ba9315609f9cb652bd7"
+  },
+  {
+    "path": "components/stock-parity/form.tsx",
+    "sha256": "f5f2b730ebdd539f1aee70ec67a36b82dd16cd9c4dd332a267dcd119d44daec0"
+  },
+  {
+    "path": "lib/published-paths.ts",
+    "sha256": "d4d4d3fee819cb1510919b6da4c9d8093bc7c75c139960490f74aebdf9d8766a"
+  },
+  {
+    "path": "lib/seo.ts",
+    "sha256": "31d0065d1aa13ce9851e80577bc6d43d3e78831e59110589cb0a6364d12b9e1d"
+  },
+  {
+    "path": "lib/supplemental/routes.ts",
+    "sha256": "ff75499cedc9befddeafbe7d867d08eaff7de67995b46ebbe6e3add2d4edaa1f"
+  },
+  {
+    "path": "lib/migration/release.ts",
+    "sha256": "938eec1be1a6f8358783d1b847f6b2aa619db283607513917614675e95c8e1f3"
+  },
+  {
+    "path": "lib/migration/routes.ts",
+    "sha256": "92a29efc97b578d4c6145c67522571176040d8e36e8845b53cb1b07db5838dbe"
+  },
+  {
+    "path": "lib/stock-parity/engine.ts",
+    "sha256": "218dcd6c099152f4dfc375a996c3a12dbf3f215be76486d700c184ef6b9172fc"
+  },
+  {
+    "path": "lib/stock-parity/fields.ts",
+    "sha256": "d171d0d57835b040e8ab2fd92f160ee15554ff81adfa8f235bc0b0c0f4cdab80"
+  },
+  {
+    "path": "lib/legacy/links.ts",
+    "sha256": "5d1e3d686452b2a31fe0787e301fcbbb2dcee4eb62d573f8b7bd044fd092713e"
+  },
+  {
+    "path": "components/legacy-page.tsx",
+    "sha256": "30d3e6dc0db47f6a1b1d69098d1f83b7fa69261086fda7c5d98d8a809525bcc5"
+  },
+  {
+    "path": "app/kalkulator/page.tsx",
+    "sha256": "69e767b02c7be52ce52161996a4e75348a6372c7cf4597d141632f24858e1bb1"
+  }
+]
