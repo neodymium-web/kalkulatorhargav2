@@ -15,8 +15,10 @@ export function CalculatorPage({ tool, children, methodology }: {
   const breadcrumbCategory = category.hub ? { name: category.name, path: category.hub } : undefined
   return <div className={`${styles.container} ${styles.page}`}>
     <Breadcrumb category={breadcrumbCategory} current={tool.metadata.title} />
-    <h1>{tool.metadata.title}</h1>
-    <p className={styles.intro}>{tool.metadata.description}</p>
+    <header className={styles.pageHeader}>
+      <h1>{tool.metadata.title}</h1>
+      <p className={styles.intro}>{tool.metadata.description}</p>
+    </header>
     {children}
     <article className={styles.methodology}>{methodology}</article>
     {related.length > 0 && <Directory heading="Kalkulator terkait" tools={related.map(directoryEntry)} />}
