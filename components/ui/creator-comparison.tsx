@@ -1,5 +1,6 @@
 'use client'
 import { useId } from 'react'
+import { scrollTableByKey } from './table-scroll'
 import type { CreatorOutput } from '../../lib/creator-analytics/engines'
 import { formatCreator } from '../../lib/creator-analytics/format'
 import styles from './loan-schedule.module.css'
@@ -12,7 +13,7 @@ export function CreatorComparison({ result }: { result: CreatorOutput }) {
   const caption = useId(), hint = useId()
   return <section className={styles.schedule}>
     <p id={hint} className={styles.hint}>Selisih B−A, bukan ranking. Rasio dibulatkan sendiri dari input eksak. Pembagi nol membuat nilai terkait tidak terdefinisi. Geser tabel pada layar sempit.</p>
-    <div className={styles.scroll} role="region" aria-labelledby={caption} aria-describedby={hint} tabIndex={0}>
+    <div className={styles.scroll} onKeyDown={scrollTableByKey} role="region" aria-labelledby={caption} aria-describedby={hint} tabIndex={0}>
       <table>
         <caption id={caption}>Perbandingan metrik manual A/B</caption>
         <thead><tr><th scope="col">Metrik</th><th scope="col">Akun A</th><th scope="col">Akun B</th><th scope="col">Selisih B−A</th></tr></thead>

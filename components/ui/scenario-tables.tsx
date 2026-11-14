@@ -1,5 +1,6 @@
 'use client'
 import { useId } from 'react'
+import { scrollTableByKey } from './table-scroll'
 import type { ScenarioRow, ComparisonRow, DatedRow } from '../../lib/loan-scenarios/engines'
 import { rupiah } from '../../lib/finance/format'
 import styles from './loan-schedule.module.css'
@@ -12,7 +13,7 @@ function DetailTable({ title, hint, columns, rows, footer }: {
   return <details className={styles.schedule}>
     <summary>{title}</summary>
     <p id={description} className={styles.hint}>{hint} Geser tabel pada layar sempit.</p>
-    <div className={styles.scroll} role="region" aria-labelledby={caption} aria-describedby={description} tabIndex={0}>
+    <div className={styles.scroll} onKeyDown={scrollTableByKey} role="region" aria-labelledby={caption} aria-describedby={description} tabIndex={0}>
       <table>
         <caption id={caption}>{title}</caption>
         <thead><tr>{columns.map(c => <th key={c} scope="col">{c}</th>)}</tr></thead>

@@ -13,7 +13,7 @@ Referensi yang dibaca: [21st.dev](https://21st.dev/) untuk anatomi komponen, [Mo
 - CategoryPage memakai header dan daftar yang sama untuk seluruh hub. Hitungan berasal dari registry; disclosure lengkap tetap SSR/no-JS. Kartu 12 per kelompok tetap dipertahankan.
 - Input menjadi dua kolom hanya jika **lebar panel** minimal 30rem; dropdown top-level panjang memakai lebar penuh. Form/hasil dua kolom pada desktop, urutan DOM mobile tetap form lalu hasil. Hasil tidak sticky. Fieldset dinamis memakai latar pembeda dan fokus yang sudah ada saat tambah/hapus.
 - Primary result diberi jarak dan bobot terkuat; label/rincian lebih tenang. Angka panjang membungkus utuh. Asumsi memiliki pemisah tersendiri. Metodologi dan contoh tetap setelah workspace.
-- Tabel panjang tetap disclosure dengan caption/header, region fokus bergulir, strip baris dan header yang menetap **di dalam region tabel**, bukan overlay halaman.
+- Tabel panjang tetap disclosure dengan caption/header, region fokus bergulir, strip baris dan header yang menetap **di dalam region tabel**, bukan overlay halaman. Fallback keyboard bersama menjamin ArrowLeft/Right menggeser region yang fokus pada WebKit; tidak mengambil tombol dari anak interaktif atau kombinasi modifier. Select tetap native secara semantik, dengan tinggi eksplisit dan indikator CSS agar WebKit memenuhi target sentuh.
 
 ## Perbandingan yang ditinjau
 
@@ -38,6 +38,6 @@ Kontras terhitung: biru #2563EB/putih 5,17:1; border kontrol #64748B/putih 4,76:
 
 Lighthouse Phase C menjalankan enam halaman representatif pada mobile dengan gate performance ≥90/accessibility ≥95 dan menyimpan seluruh report; kegagalan tidak disembunyikan. Lab bukan field CWV atau jaminan performa pengguna. Hasil aktual CI/Preview ditambahkan pada PR setelah selesai, bukan diinventarisasi sebelum dijalankan.
 
-Guard migrasi diperluas **hanya untuk 14 file UI yang disebut eksplisit dan di-hash**, termasuk tiga file dari commit awal PR. Manifest/ledger audit historis dipertahankan; sumber baseline diperiksa melalui Git object. Engine, registry, metadata layout, token lama, canonical/sitemap/robots, archive approvals, domain/DNS/alias/SSO dan konfigurasi cutover tetap dilindungi. Perubahan guard tidak mengubah syarat release; NO-GO tetap mandatory.
+Guard migrasi diperluas **hanya untuk 22 file UI yang disebut eksplisit dan di-hash**, termasuk tiga file dari commit awal PR dan tujuh pemakai fallback scroll bersama. Manifest/ledger audit historis dipertahankan; sumber baseline diperiksa melalui Git object. Engine, registry, metadata layout, token lama, canonical/sitemap/robots, archive approvals, domain/DNS/alias/SSO dan konfigurasi cutover tetap dilindungi. Perubahan guard tidak mengubah syarat release; NO-GO tetap mandatory.
 
 Approval visual owner belum diberikan. Halaman panjang tetap memerlukan gulir; related tools tetap memakai perilaku 12 kartu lama. Select native dapat menyingkat label pilihan panjang saat tertutup pada mobile; pilihan lengkap tersedia ketika dibuka dan label field tetap terlihat. Tidak ada klaim paritas dataset TikTok atau sertifikasi order BEI baru dari pekerjaan desain ini.

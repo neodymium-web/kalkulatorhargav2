@@ -10,6 +10,10 @@ const allowed = [
   'components/ui/calculator.module.css', 'components/ui/controls.module.css',
   'components/ui/layout.module.css', 'components/ui/loan-schedule.module.css',
   'components/ui/structured-form.module.css',
+  'components/ui/table-scroll.ts', 'components/ui/loan-schedule.tsx',
+  'components/ui/scenario-tables.tsx', 'components/ui/everyday-tables.tsx',
+  'components/ui/materials-breakdown.tsx', 'components/ui/cash-flow-breakdown.tsx',
+  'components/ui/holiday-breakdown.tsx', 'components/ui/creator-comparison.tsx',
 ]
 const hash = content => crypto.createHash('sha256').update(content).digest('hex')
 const previous = path => execFileSync('git', ['show', `${baseline}:${path}`])

@@ -33,14 +33,14 @@ for (const width of [320, 375, 768, 1024, 1440]) {
           await scroll.evaluate(n => { n.scrollLeft = 0 })
         }
       }
-      await page.screenshot({ path: info.outputPath(`${name}-${width}.jpg`), fullPage: true, quality: 65, animations: 'disabled' })
+      await page.screenshot({ path: info.outputPath(`${name}-${width}.jpg`), fullPage: true, scale: 'css', quality: 65, animations: 'disabled' })
     }
   })
 }
 
-test('Phase C keyboard, empty search, pagination and 200% text enlargement', async ({ page }) => {
+test('Phase C keyboard, empty search, pagination and 200% text enlargement', async ({ page, browserName }) => {
   await page.goto('/')
-  await page.keyboard.press('Tab')
+  await page.keyboard.press(browserName === 'webkit' ? 'Alt+Tab' : 'Tab')
   const skip = page.getByRole('link', { name: 'Langsung ke konten' })
   await expect(skip).toBeFocused()
   expect(await skip.evaluate(n => getComputedStyle(n).outlineStyle)).not.toBe('none')

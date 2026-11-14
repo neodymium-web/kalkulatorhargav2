@@ -42,8 +42,24 @@
       "sha256": "b6e8d65135919f194992403e5f795ef8bb4744800a0f5fd3784169ef5fb8decd"
     },
     {
+      "path": "components/ui/cash-flow-breakdown.tsx",
+      "sha256": "1e979750f35e605808e0869df9c0f7f28c6a02aa2824f6cbdd296bbcef0efdf0"
+    },
+    {
       "path": "components/ui/controls.module.css",
-      "sha256": "d8bbc5b4a84f703af6d02a4a9e512c048a75053aae31b26cd751fef4cc6298dd"
+      "sha256": "b955d74a9164da1c54f96d6e2beff114f4eb3c8ac64c2c5e60ee4bb31cfe6dce"
+    },
+    {
+      "path": "components/ui/creator-comparison.tsx",
+      "sha256": "334ad6c60e476ca674e5f549d6369e674c900184c7245f896d7f808e9ecdba24"
+    },
+    {
+      "path": "components/ui/everyday-tables.tsx",
+      "sha256": "fbbc9652463d72b063af5859caf12131966797eeb9cb73abf5325fc1041a233b"
+    },
+    {
+      "path": "components/ui/holiday-breakdown.tsx",
+      "sha256": "42ef6cea03309955e301eae2bf173f5234da631ad3fa16903baed472d3a9b636"
     },
     {
       "path": "components/ui/layout.module.css",
@@ -54,8 +70,24 @@
       "sha256": "02b473713f45c27b961afa5e28055e6ed811065e5d8608da27450e8dc9c2eca3"
     },
     {
+      "path": "components/ui/loan-schedule.tsx",
+      "sha256": "a533da388c83730102fc64ba776a0aa12a76b3ee6dc4261254bcde80c956b8fe"
+    },
+    {
+      "path": "components/ui/materials-breakdown.tsx",
+      "sha256": "f2066208b30beb463a563f8c7b71a6a3f33a55ef5f8446dd5bc41bb89a67460e"
+    },
+    {
+      "path": "components/ui/scenario-tables.tsx",
+      "sha256": "7cf536f52cffc28654786a4e237382db54e95e4cf697fc5aa8549611ffdf6535"
+    },
+    {
       "path": "components/ui/structured-form.module.css",
       "sha256": "5d19fb9184bfa897ed3b9aac979e7d1834eebaf7b1609c2bc465d7559b525c2e"
+    },
+    {
+      "path": "components/ui/table-scroll.ts",
+      "sha256": "b85070e39705eb204104eac4f9caaa6670a14b2b31a169f659011591281ec0ba"
     }
   ]
 }
