@@ -1,0 +1,22 @@
+{
+  "baseline": "125e93d240d83ae35f63965289dd87315cb52bcc",
+  "status": "STAGING_REVIEW_ONLY",
+  "files": [
+    {
+      "path": "app/kalkulator/saham/average/page.tsx",
+      "sha256": "de12edff901c04e139e56950da1f22ff525d5772f483948861eb496372084bf7"
+    },
+    {
+      "path": "components/stock-parity/form.tsx",
+      "sha256": "f015459a9957e78a0bab3da5615fd216b8b15c28cba7aeabe9a3882de15f25bb"
+    },
+    {
+      "path": "lib/stock-parity/engine.ts",
+      "sha256": "a21b45e37aa7e612f2d52909acb4bea83a5f4a2e24c27d78052bdb5a9990850d"
+    },
+    {
+      "path": "lib/stock-parity/fields.ts",
+      "sha256": "671c315ddb0fba88f00a8746d3df173d738eb1b831672a5acae1265368203b32"
+    }
+  ]
+}

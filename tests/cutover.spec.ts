@@ -24,7 +24,7 @@ test('security headers favicon robots and proposed legacy redirects remain safe'
  if(path==='/robots.txt')expect(await r.text()).toContain('Disallow: /')
  if(path==='/sitemap.xml')expect([...(await r.text()).matchAll(/<loc>/g)]).toHaveLength(107 + legacyPaths.length + supplementalPaths.length)
  }
- for(const path of ['/kalkulator','/kalkulator/saham/average'])expect((await request.get(path,{maxRedirects:0})).status()).toBe(404)
+ expect((await request.get('/kalkulator',{maxRedirects:0})).status()).toBe(404);expect((await request.get('/kalkulator/saham/average',{maxRedirects:0})).status()).toBe(200)
 })
 test('complete category navigation works without JS and keeps keyboard disclosure and responsive targets',async({browser,isMobile},info)=>{
  const context=await browser.newContext({javaScriptEnabled:false,viewport:{width:isMobile?375:1440,height:900}}),page=await context.newPage();await page.goto('http://127.0.0.1:3100/bisnis')
