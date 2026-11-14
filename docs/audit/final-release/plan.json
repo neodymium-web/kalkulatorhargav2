@@ -1,0 +1,461 @@
+{
+  "schemaVersion": 1,
+  "baseline": "125e93d240d83ae35f63965289dd87315cb52bcc",
+  "scope": "INACTIVE_REVIEW_ONLY",
+  "featureFreeze": true,
+  "runtimeEnabled": false,
+  "executionAuthorized": false,
+  "source": "docs/audit/final-release/source-snapshot.json",
+  "sourceSha256": "c29841c8b14298fa6581336fd49887f7c29790b70e9b91a18b97bb3e75f01483",
+  "futureCanonical": {
+    "origin": "https://www.kalkulatorharga.com",
+    "status": "OWNER_SELECTED_PLANNING_ONLY",
+    "evidence": "https://github.com/neodymium-web/kalkulatorhargav2/issues/60",
+    "activationApproval": null
+  },
+  "manualProductChoices": {
+    "gold": "ACCEPTED_MANUAL_SCOPE_ONLY",
+    "comparison": "ACCEPTED_MANUAL_SCOPE_ONLY",
+    "evidence": "https://github.com/neodymium-web/kalkulatorhargav2/issues/60"
+  },
+  "archives": [
+    {
+      "id": "ARCHIVE-01",
+      "path": "/kalkulator/tiktok/panduan",
+      "status": "PENDING_OWNER_APPROVAL",
+      "approval": null,
+      "editorialEvidence": "docs/audit/editorial61/changes.json",
+      "requiredEvidence": [
+        "authorized reviewer, scope and date",
+        "republication/byline rights",
+        "legal/content/source freshness",
+        "explicit disposition of corrected text and historical provenance"
+      ]
+    },
+    {
+      "id": "ARCHIVE-02",
+      "path": "/biaya-admin-marketplace",
+      "status": "PENDING_OWNER_APPROVAL",
+      "approval": null,
+      "editorialEvidence": "docs/audit/editorial61/changes.json",
+      "requiredEvidence": [
+        "authorized reviewer, scope and date",
+        "republication/byline rights",
+        "legal/content/source freshness",
+        "explicit disposition of corrected text and historical provenance"
+      ]
+    },
+    {
+      "id": "ARCHIVE-03",
+      "path": "/update-tarif",
+      "status": "PENDING_OWNER_APPROVAL",
+      "approval": null,
+      "editorialEvidence": "docs/audit/editorial61/changes.json",
+      "requiredEvidence": [
+        "authorized reviewer, scope and date",
+        "republication/byline rights",
+        "legal/content/source freshness",
+        "explicit disposition of corrected text and historical provenance"
+      ]
+    },
+    {
+      "id": "ARCHIVE-04",
+      "path": "/blog",
+      "status": "PENDING_OWNER_APPROVAL",
+      "approval": null,
+      "editorialEvidence": "docs/audit/editorial61/changes.json",
+      "requiredEvidence": [
+        "authorized reviewer, scope and date",
+        "republication/byline rights",
+        "legal/content/source freshness",
+        "explicit disposition of corrected text and historical provenance"
+      ]
+    },
+    {
+      "id": "ARCHIVE-05",
+      "path": "/metodologi",
+      "status": "PENDING_OWNER_APPROVAL",
+      "approval": null,
+      "editorialEvidence": "docs/audit/editorial61/changes.json",
+      "requiredEvidence": [
+        "authorized reviewer, scope and date",
+        "republication/byline rights",
+        "legal/content/source freshness",
+        "explicit disposition of corrected text and historical provenance"
+      ]
+    },
+    {
+      "id": "ARCHIVE-06",
+      "path": "/redaksi",
+      "status": "PENDING_OWNER_APPROVAL",
+      "approval": null,
+      "editorialEvidence": "docs/audit/editorial61/changes.json",
+      "requiredEvidence": [
+        "authorized reviewer, scope and date",
+        "republication/byline rights",
+        "legal/content/source freshness",
+        "explicit disposition of corrected text and historical provenance"
+      ]
+    },
+    {
+      "id": "ARCHIVE-07",
+      "path": "/kebijakan-editorial",
+      "status": "PENDING_OWNER_APPROVAL",
+      "approval": null,
+      "editorialEvidence": "docs/audit/editorial61/changes.json",
+      "requiredEvidence": [
+        "authorized reviewer, scope and date",
+        "republication/byline rights",
+        "legal/content/source freshness",
+        "explicit disposition of corrected text and historical provenance"
+      ]
+    },
+    {
+      "id": "ARCHIVE-08",
+      "path": "/disclaimer",
+      "status": "PENDING_OWNER_APPROVAL",
+      "approval": null,
+      "editorialEvidence": "docs/audit/editorial61/changes.json",
+      "requiredEvidence": [
+        "authorized reviewer, scope and date",
+        "republication/byline rights",
+        "legal/content/source freshness",
+        "explicit disposition of corrected text and historical provenance"
+      ]
+    },
+    {
+      "id": "ARCHIVE-09",
+      "path": "/blog/menghitung-margin-marketplace",
+      "status": "PENDING_OWNER_APPROVAL",
+      "approval": null,
+      "editorialEvidence": "docs/audit/editorial61/changes.json",
+      "requiredEvidence": [
+        "authorized reviewer, scope and date",
+        "republication/byline rights",
+        "legal/content/source freshness",
+        "explicit disposition of corrected text and historical provenance"
+      ]
+    },
+    {
+      "id": "ARCHIVE-10",
+      "path": "/blog/strategi-naikkan-profit",
+      "status": "PENDING_OWNER_APPROVAL",
+      "approval": null,
+      "editorialEvidence": "docs/audit/editorial61/changes.json",
+      "requiredEvidence": [
+        "authorized reviewer, scope and date",
+        "republication/byline rights",
+        "legal/content/source freshness",
+        "explicit disposition of corrected text and historical provenance"
+      ]
+    },
+    {
+      "id": "ARCHIVE-11",
+      "path": "/blog/biaya-admin-marketplace",
+      "status": "PENDING_OWNER_APPROVAL",
+      "approval": null,
+      "editorialEvidence": "docs/audit/editorial61/changes.json",
+      "requiredEvidence": [
+        "authorized reviewer, scope and date",
+        "republication/byline rights",
+        "legal/content/source freshness",
+        "explicit disposition of corrected text and historical provenance"
+      ]
+    },
+    {
+      "id": "ARCHIVE-12",
+      "path": "/blog/fee-shopee-2026",
+      "status": "PENDING_OWNER_APPROVAL",
+      "approval": null,
+      "editorialEvidence": "docs/audit/editorial61/changes.json",
+      "requiredEvidence": [
+        "authorized reviewer, scope and date",
+        "republication/byline rights",
+        "legal/content/source freshness",
+        "explicit disposition of corrected text and historical provenance"
+      ]
+    },
+    {
+      "id": "ARCHIVE-13",
+      "path": "/blog/lazada-marketplace-vs-lazmall",
+      "status": "PENDING_OWNER_APPROVAL",
+      "approval": null,
+      "editorialEvidence": "docs/audit/editorial61/changes.json",
+      "requiredEvidence": [
+        "authorized reviewer, scope and date",
+        "republication/byline rights",
+        "legal/content/source freshness",
+        "explicit disposition of corrected text and historical provenance"
+      ]
+    },
+    {
+      "id": "ARCHIVE-14",
+      "path": "/blog/pph-22-marketplace",
+      "status": "PENDING_OWNER_APPROVAL",
+      "approval": null,
+      "editorialEvidence": "docs/audit/editorial61/changes.json",
+      "requiredEvidence": [
+        "authorized reviewer, scope and date",
+        "republication/byline rights",
+        "legal/content/source freshness",
+        "explicit disposition of corrected text and historical provenance"
+      ]
+    },
+    {
+      "id": "ARCHIVE-15",
+      "path": "/blog/gratis-ongkir-xtra-shopee-2026",
+      "status": "PENDING_OWNER_APPROVAL",
+      "approval": null,
+      "editorialEvidence": "docs/audit/editorial61/changes.json",
+      "requiredEvidence": [
+        "authorized reviewer, scope and date",
+        "republication/byline rights",
+        "legal/content/source freshness",
+        "explicit disposition of corrected text and historical provenance"
+      ]
+    },
+    {
+      "id": "ARCHIVE-16",
+      "path": "/blog/tokopedia-tiktok-shop-komisi-dinamis",
+      "status": "PENDING_OWNER_APPROVAL",
+      "approval": null,
+      "editorialEvidence": "docs/audit/editorial61/changes.json",
+      "requiredEvidence": [
+        "authorized reviewer, scope and date",
+        "republication/byline rights",
+        "legal/content/source freshness",
+        "explicit disposition of corrected text and historical provenance"
+      ]
+    },
+    {
+      "id": "ARCHIVE-17",
+      "path": "/blog/harga-jual-minimum-marketplace",
+      "status": "PENDING_OWNER_APPROVAL",
+      "approval": null,
+      "editorialEvidence": "docs/audit/editorial61/changes.json",
+      "requiredEvidence": [
+        "authorized reviewer, scope and date",
+        "republication/byline rights",
+        "legal/content/source freshness",
+        "explicit disposition of corrected text and historical provenance"
+      ]
+    },
+    {
+      "id": "ARCHIVE-18",
+      "path": "/blog/kalkulator-vs-spreadsheet",
+      "status": "PENDING_OWNER_APPROVAL",
+      "approval": null,
+      "editorialEvidence": "docs/audit/editorial61/changes.json",
+      "requiredEvidence": [
+        "authorized reviewer, scope and date",
+        "republication/byline rights",
+        "legal/content/source freshness",
+        "explicit disposition of corrected text and historical provenance"
+      ]
+    },
+    {
+      "id": "ARCHIVE-19",
+      "path": "/blog/cek-dana-cair-shopee",
+      "status": "PENDING_OWNER_APPROVAL",
+      "approval": null,
+      "editorialEvidence": "docs/audit/editorial61/changes.json",
+      "requiredEvidence": [
+        "authorized reviewer, scope and date",
+        "republication/byline rights",
+        "legal/content/source freshness",
+        "explicit disposition of corrected text and historical provenance"
+      ]
+    },
+    {
+      "id": "ARCHIVE-20",
+      "path": "/blog/memilih-marketplace-untuk-mulai-jual",
+      "status": "PENDING_OWNER_APPROVAL",
+      "approval": null,
+      "editorialEvidence": "docs/audit/editorial61/changes.json",
+      "requiredEvidence": [
+        "authorized reviewer, scope and date",
+        "republication/byline rights",
+        "legal/content/source freshness",
+        "explicit disposition of corrected text and historical provenance"
+      ]
+    },
+    {
+      "id": "ARCHIVE-21",
+      "path": "/blog/engagement-rate-tiktok-2026",
+      "status": "PENDING_OWNER_APPROVAL",
+      "approval": null,
+      "editorialEvidence": "docs/audit/editorial61/changes.json",
+      "requiredEvidence": [
+        "authorized reviewer, scope and date",
+        "republication/byline rights",
+        "legal/content/source freshness",
+        "explicit disposition of corrected text and historical provenance"
+      ]
+    },
+    {
+      "id": "ARCHIVE-22",
+      "path": "/blog/kalkulator-average-down-saham-harga-rata-rata",
+      "status": "PENDING_OWNER_APPROVAL",
+      "approval": null,
+      "editorialEvidence": "docs/audit/editorial61/changes.json",
+      "requiredEvidence": [
+        "authorized reviewer, scope and date",
+        "republication/byline rights",
+        "legal/content/source freshness",
+        "explicit disposition of corrected text and historical provenance"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "id": "REF-01",
+      "sourcePath": "/blog",
+      "anchorText": "kalkulator utama",
+      "target": "https://www.kalkulatorharga.com/",
+      "status": "PENDING_INTENT_DECISION",
+      "approval": null,
+      "treatment": "NONCLICKABLE_ARCHIVAL_REFERENCE"
+    },
+    {
+      "id": "REF-02",
+      "sourcePath": "/blog/kalkulator-vs-spreadsheet",
+      "anchorText": "Kalkulator fee marketplace",
+      "target": "https://www.kalkulatorharga.com/",
+      "status": "PENDING_INTENT_DECISION",
+      "approval": null,
+      "treatment": "NONCLICKABLE_ARCHIVAL_REFERENCE"
+    },
+    {
+      "id": "REF-03",
+      "sourcePath": "/blog/kalkulator-average-down-saham-harga-rata-rata",
+      "anchorText": "Kalkulator average down saham",
+      "target": "https://www.kalkulatorharga.com/kalkulator/saham/average",
+      "status": "PENDING_INTENT_DECISION",
+      "approval": null,
+      "treatment": "NONCLICKABLE_ARCHIVAL_REFERENCE"
+    },
+    {
+      "id": "REF-04",
+      "sourcePath": "/biaya-admin-marketplace",
+      "anchorText": "Buka kalkulator Tokopedia",
+      "target": "https://www.kalkulatorharga.com/",
+      "status": "PENDING_INTENT_DECISION",
+      "approval": null,
+      "treatment": "NONCLICKABLE_ARCHIVAL_REFERENCE"
+    },
+    {
+      "id": "REF-05",
+      "sourcePath": "/biaya-admin-marketplace",
+      "anchorText": "Hitung profit",
+      "target": "https://www.kalkulatorharga.com/",
+      "status": "PENDING_INTENT_DECISION",
+      "approval": null,
+      "treatment": "NONCLICKABLE_ARCHIVAL_REFERENCE"
+    },
+    {
+      "id": "REF-06",
+      "sourcePath": "/kalkulator/tiktok/panduan",
+      "anchorText": "Benchmark engagement rate TikTok",
+      "target": "https://www.kalkulatorharga.com/kalkulator/tiktok/benchmark",
+      "status": "PENDING_INTENT_DECISION",
+      "approval": null,
+      "treatment": "NONCLICKABLE_ARCHIVAL_REFERENCE"
+    }
+  ],
+  "benchmark": {
+    "path": "/kalkulator/tiktok/benchmark",
+    "currentV2Status": 404,
+    "decision": "RETAIN_FUTURE_URL_RESEARCH_ONLY",
+    "datasetApproval": null,
+    "publicationApproval": null,
+    "retirementApproved": false,
+    "candidateAudit": "Issue60: Crawlora raw data internally reproducible; upstream rights, representativeness, locality and denominator equivalence unresolved. Not a drop-in replacement. No dataset selected.",
+    "requiredEvidence": [
+      "upstream commercial redistribution rights and privacy review",
+      "intent-matching per-account/follower cohort or separately approved changed scope",
+      "period, region, denominator, sampling, quantiles and independent reproducibility",
+      "owner publication approval after SEO review"
+    ]
+  },
+  "stock": {
+    "path": "/kalkulator/saham/average",
+    "currentMainStatus": 404,
+    "disposition": "RETAIN_FUTURE_EXACT_PATH",
+    "parity": "BLOCKED",
+    "frozenPR": {
+      "url": "https://github.com/neodymium-web/kalkulatorhargav2/pull/64",
+      "head": "b46d47d1cfd5a4bb256b0346416e9406e9874bd0",
+      "draft": true,
+      "merged": false,
+      "status": "FROZEN_OUT_OF_SCOPE"
+    },
+    "redirectToWeightedAverage": "REJECTED_NOT_EQUIVALENT",
+    "publicationApproval": null,
+    "requiredEvidence": [
+      "independent BEI-valid price/order-rule verification",
+      "integrated parity acceptance and SEO intent review",
+      "separate owner authorization; PR64 not continued in this task"
+    ]
+  },
+  "seo": {
+    "gsc": {
+      "status": "UNKNOWN",
+      "exports": [],
+      "approval": null
+    },
+    "ga4": {
+      "status": "UNKNOWN",
+      "exports": [],
+      "approval": null
+    },
+    "backlinks": {
+      "status": "UNKNOWN",
+      "exports": [],
+      "approval": null
+    }
+  },
+  "hostRedirect": {
+    "from": "kalkulatorharga.com",
+    "to": "www.kalkulatorharga.com",
+    "proposedStatus": 308,
+    "pathAndQuery": "ONE_HOP_FOR_KNOWN_PATHS_AND_UTM_ONLY",
+    "runtimeEnabled": false,
+    "activationApproval": null
+  },
+  "pathRedirects": [
+    {
+      "source": "/kalkulator",
+      "destination": "/",
+      "status": 301,
+      "decision": "PENDING_INTENT_AND_SEO_REVIEW",
+      "approval": null,
+      "enabled": false
+    },
+    {
+      "source": "/kalkulator/saham/average",
+      "destination": null,
+      "status": null,
+      "decision": "HOLD_EXACT_URL_NO_WEIGHTED_AVERAGE_REDIRECT",
+      "approval": null,
+      "enabled": false
+    }
+  ],
+  "rollback": {
+    "status": "NOT_PLATFORM_REHEARSED",
+    "approvedLegacySHA": null,
+    "approvedLegacyDeployment": null,
+    "approvedCandidateSHA": null,
+    "approvedCandidateDeployment": null,
+    "namedOperator": null,
+    "backupOperator": null,
+    "decisionOwner": null,
+    "window": null,
+    "snapshotTicket": null,
+    "tlsDnsRecoveryEvidence": null,
+    "monitoringBaseline": null,
+    "thresholds": null,
+    "observedRecoveryDuration": null
+  },
+  "productionIndexingApproval": null,
+  "executionApproval": null
+}

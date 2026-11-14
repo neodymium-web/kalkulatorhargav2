@@ -1,68 +1,55 @@
-# Cutover dan rollback: prosedur review, belum diotorisasi
+# Runbook Final Release Gate: belum aktif, cutover NO-GO
 
-Rujukan keputusan: [Migration Release](MIGRATION_RELEASE.md) dan [register](audit/migration-release/register.json). Baseline b8dd6ee. **NO-GO untuk eksekusi.** Simulasi lokal tidak memindahkan domain dan tidak membuktikan rollback platform. Tidak ada perintah mutasi platform pada paket ini.
+Baseline main125e93d. [Plan terkini](audit/final-release/plan.json) dan [status gate](MIGRATION_RELEASE.md) mengikuti Issue #60. www dipilih owner untuk masa depan; canonical aplikasi tetap apex. Tidak ada perintah mutasi pada paket ini. PR #64 dibekukan dan tidak termasuk kandidat release ini.
 
-## Intake yang belum lengkap
+## Pemeriksaan yang boleh dilakukan sekarang
 
-| Isian wajib | Nilai saat ini |
+1. Jalankan `node scripts/migration/final-release.cjs`. Pastikan 180 fingerprint runtime/config identik dengan main125e93d dan Git tree, 131 calon URL nonaktif, 22 approval arsip serta enam referensi tetap tertahan. Tidak memperbaiki fitur untuk mengejar GO.
+2. Jalankan `node scripts/migration/final-release.cjs --require-release`. Exit2/NO-GO adalah hasil yang benar. Tidak ada mode apply. Guard historis tetap dijalankan sebagai regresi, bukan sumber keputusan host terkini.
+3. Model hanya memakai rencana www. Seluruh path sitemap pada host apex diarahkan secara hipotetis satu hop ke www; host www tidak kembali ke apex. Usulan root301 diuji terpisah, tidak dianggap approved. Saham, benchmark, query preset dan path tak terpetakan menghasilkan HOLD, bukan fallback homepage atau approval404.
+4. Injeksi kegagalan setelah host pertama, kedua dan validasi akhir harus memulihkan objek lokal persis. Snapshot model memuat ID dari observasi read-only, bukan snapshot platform yang dibekukan/ditandatangani. SSO/noindex dalam objek adalah invariant yang diwajibkan, bukan hasil tes akses platform baru.
+5. CI penuh menghasilkan artifact final-release/report.json dan commit.json; cocokkan HEAD dengan CI/Preview READY. Tidak ada klaim rollback platform, TLS/DNS, akses operator atau lama recovery dari simulasi ini.
+
+## Intake sebelum instruksi aktivasi baru
+
+| Wajib | Status sekarang / penutup gate |
 | --- | --- |
-| SHA yang disetujui untuk cutover, bukan sekadar head PR | UNKNOWN |
-| Deployment production kandidat yang telah diuji pada SHA tersebut | UNKNOWN; Preview READY bukan production readiness |
-| Legacy project/deployment snapshot | Teramati `prj_OtNkapBGqShbDEludYl1Ea5QoLz9` / `dpl_kk6BZ55DrPg8hrnTovFjgWvkeJiJ`; wajib revalidasi hari eksekusi |
-| Project tujuan | V2 `prj_p1VRZQiOB0BHJrQSC5JS2rDhYoF7`; bukan izin assignment |
-| Hostname lingkup | `kalkulatorharga.com`, `www.kalkulatorharga.com`; arah canonical/redirect approved UNKNOWN |
-| Owner konten/legal/SEO, operator domain, reviewer dan incident commander | UNKNOWN; peran bukan nama orang yang menyetujui |
-| Change ticket / bukti approval / waktu persetujuan | UNKNOWN |
-| Jendela mulai/selesai dan batas keputusan rollback | UNKNOWN |
-| GSC/GA4/backlinks, daftar URL prioritas dan baseline bisnis | UNKNOWN |
-| DNS/registrar/TTL/TLS/config snapshot, hak Move dan recovery operator | UNKNOWN |
-| 22 disposition arsip, benchmark, 6 referensi, manual scope dan 2 redirect | Belum approved; lihat setiap ID register |
-| Perubahan production-only indexing, canonical, domain, alias, DNS yang persis diizinkan | UNKNOWN; tidak ada izin dalam tugas ini |
-| Threshold monitoring/rollback dan reviewer perangkat nyata | UNKNOWN |
+| 22 arsip | PENDING_OWNER_APPROVAL per URL; reviewer berwenang, tanggal, hak teks/byline, legal/sumber/proses dan disposition koreksi/provenance |
+| Benchmark | URL dipertahankan sebagai target; dataset/metode/hak upstream belum approved; main404 bukan retirement |
+| Enam referensi | Nonklik; intent/destination/provenance belum diputuskan |
+| Saham | Exact path/parity belum diterima; PR64 frozen; dilarang weighted-average-only301 |
+| GSC/GA4/backlinks | Ekspor berprovenance, cakupan/filters/timezone/period dan URL prioritas belum diberikan |
+| www | Pilihan owner sudah ada; izin canonical/sitemap/metadata/host308 activation belum ada |
+| Redirect root | Proposal301 belum disahkan per intent/query/SEO; tidak ada mass redirect |
+| Kandidat dan legacy rollback | Exact SHA/deployment/project/team dan kedua host yang disetujui belum ditentukan untuk cutover |
+| Operator / backup / decision owner | Nama, akses dan hak recovery belum diberikan; peran bukan approval |
+| Window dan snapshot | Tiket, waktu, DNS/TTL/TLS/assignment/redirect/env/indexing dan rollback snapshot belum disahkan |
+| Monitoring dan pemulihan | Baseline bisnis/error/404/CWV, threshold, durasi recovery nyata dan batas rollback belum tersedia |
+| Eksekusi | Instruksi owner baru atas exact SHA, lingkup perubahan dan window belum ada |
 
-Jika satu gate wajib belum lengkap, STOP. Isi hanya dengan bukti owner yang nyata; jangan mengisi UNKNOWN dengan hasil inferensi dari public crawl, CI, deployment READY atau hak akses konektor.
+Jika satu saja belum lengkap, STOP. Jangan mengisi nilai dari asumsi, hasil lab, CI, status READY, jumlah sitemap atau izin konektor. Tidak meminta ulang pilihan www atau scope manual yang sudah tersedia.
 
-## Dry-run lokal yang dapat dijalankan sekarang
+## Urutan bersyarat untuk task aktivasi mendatang, bukan izin menjalankan
 
-1. `node scripts/migration/release-gates.cjs` memeriksa fingerprint aplikasi/konfigurasi, overlay 32 path, 131 target, 22 arsip dan 6 instance referensi. Laporan konsistensi PASS tidak mengubah keputusan NO-GO.
-2. `node scripts/migration/release-gates.cjs --require-cutover` harus menghasilkan exit 2. `--apply` ditolak; tidak ada jalur menulis DNS/alias/Vercel.
-3. Unit test menguji kedua hipotesis host, target langsung host+path, query UTM, query preset UNKNOWN, benchmark/unmapped 404, dan loop bila dua arah host digabung. Proposal redirect tetap tidak aktif; URL proposal pada aplikasi saat ini tetap 404.
-4. Injeksi kegagalan sesudah hostname pertama, kedua, dan validasi akhir; inverse journal mengembalikan assignments, redirect dan canonical objek lokal. Assert snapshot sama, staging SSO/noindex tetap, dan snapshot asal tidak dimutasi. Kegagalan parsial adalah kondisi rollback, bukan keadaan layak launch.
-5. CI menghasilkan ulang laporan di `test-results/migration-release/report.json`; manifest `commit.json` mengikat artifact ke head. Hasil ini simulasi logika, bukan pengukuran recovery time, TLS/DNS atau latihan Move di platform.
+1. Bekukan kandidat dan legacy rollback deployment/SHA yang telah direview. Owner mengesahkan seluruh gate dan instruksi perubahan yang persis: dua host, project/team, arah/status redirect, path/query yang approved, perubahan canonical/sitemap/indexing production, apakah DNS/alias perlu disentuh, window, operator dan triggers. Hak merge tidak sama dengan hak cutover.
+2. Operator memverifikasi ulang kondisi aktual kedua host, registrar/DNS/TTL/TLS, redirect dan hak pemulihan. Simpan snapshot aman tanpa token/PII dalam repo. Pastikan legacy deployment tetap tersedia; jangan menghapus sumber sebelum pemulihan terbukti.
+3. Verifikasi prosedur Vercel terkini untuk perpindahan antar-project. Jangan menganggap kedua host dapat dipindahkan atomik. Hentikan jika hanya satu host berubah atau rencana berbeda dari tiket; gunakan jalur pemulihan yang disahkan, bukan improvisasi.
+4. Aktifkan hanya konfigurasi yang diotorisasi pada task tersebut. Pertahankan satu arah apex→www, gabungkan host/path langsung bila disetujui, hindari aturan balik www→apex. Metadata dan sitemap www baru boleh diterapkan setelah izin spesifik. Staging tetap noindex/SSO.
+5. Verifikasi dari jaringan luar: HTTPS/TLS kedua host, status/hop/query tiap disposition yang approved, URL penting dan arsip yang benar-benar approved, canonical/meta/header/robots/sitemap production, tidak ada loop/soft404/5xx, serta smoke sintetis fungsi yang berisiko. Jangan menganggap cache lama sebagai bukti baru.
+6. SEO menjalankan submission/inspection hanya dengan izin; tidak mengirim Change of Address otomatis untuk perubahan www/non-www pada domain yang sama. Catat waktu, keputusan dan bukti aktual. Rencana ini tidak memasang analytics atau menghapus legacy.
 
-## Sebelum jendela yang kelak disetujui
+## Pemulihan yang harus disahkan dan dibuktikan
 
-- Owner menutup tiap gate dengan keputusan, reviewer, tanggal, scope dan bukti. Keputusan benchmark harus menyelesaikan kehilangan URL legacy 200: data berizin yang reproduktif, retirement yang benar-benar disetujui setelah kajian SEO, atau alternatif setara. 404 sekarang tidak dianggap approval removal.
-- SEO menggabungkan ekspor GSC/GA4/backlink dengan overlay dan map; inventaris publik belum menjamin semua indexed URLs tercakup. Review kedua redirect per intent. Tidak mengarahkan artikel/benchmark/preset massal ke homepage.
-- Pilih satu host dan satu arah redirect yang konsisten dengan canonical/sitemap. Opsi www memerlukan perubahan canonical v2 di task baru; opsi apex memerlukan penggantian aturan apex→www lama. Tidak menumpuk aturan dua arah. Verifikasi query/preset yang belum dimodelkan sebelum menyetujuinya.
-- Operator membekukan kandidat dan rollback SHA/deployment, memverifikasi kedua project/team/host, akses dan hak recovery, snapshot assignment/redirect/path/indexing/TLS/DNS/TTL serta cache di change ticket aman. Jangan menyimpan token/PII di repo. Observasi historis bukan snapshot hari perubahan.
-- Pastikan legacy masih dapat dipulihkan, project/deployment tidak dihapus, dan prosedur pemulihan dapat dijalankan operator yang sama pada jendela tersebut. Kemampuan memindah kedua hostname secara atomik belum dibuktikan. Siapkan keputusan gagal setelah satu hostname.
-- Uji kandidat production yang kelak disetujui pada SHA yang sama, termasuk TLS/routing dan production indexing yang benar. Preview tetap SSO/noindex. Jangan membuka Preview untuk menyerupai production.
-- Owner menetapkan threshold berbasis baseline, on-call, jendela rollback dan acceptance perangkat nyata. Tidak ada target trafik atau menit recovery rekaan dalam runbook ini.
+| Trigger | Tindakan bersyarat |
+| --- | --- |
+| Partial host move, TLS gagal, loop, salah project/deployment atau 5xx | STOP; pulihkan kedua assignment dan arah/status redirect sesuai snapshot yang disahkan |
+| Hasil penting salah atau data input terekspos | STOP; kembali ke legacy yang dibekukan dan buka insiden; jangan refactor fitur di jendela cutover |
+| Critical URL hilang, canonical/indexing production salah | STOP dalam batas window owner; pulihkan bila tidak dapat diselesaikan sesuai tiket |
+| Staging terbuka/indexable | STOP; pulihkan proteksi dengan prosedur yang disahkan; jangan membuka staging agar QA lolos |
+| Trafik/error/404/performa berubah | Threshold tetap UNKNOWN sampai baseline dan decision owner tersedia; tidak mengarang persentase atau menit |
 
-## Urutan eksekusi bersyarat: perlu instruksi owner BARU
+Pulihkan kedua host/project/deployment, redirect dan metadata dari snapshot, lalu DNS hanya jika pernah diubah dan pemulihannya diotorisasi. Verifikasi HTTP/TLS, canonical/robots dan URL penting pada setiap host dari luar, catat waktu aktual dan recovery duration. Pemulihan objek JavaScript tidak membuktikan pemulihan platform. Routing rollback tidak mengembalikan data/transaksi baru; nilai konsistensi data secara terpisah bila ada.
 
-Bagian ini hanya urutan untuk direview. Jangan dijalankan berdasarkan PR ini.
+Monitoring sesudah perubahan yang kelak disahkan mencakup segera/24jam/7hari/28hari: error/5xx/404, redirect, GSC indexing/landing-query, GA4 organic dan field CWV bila datanya memadai. Owner menentukan penanggung jawab dan akhir jendela rollback berdasarkan baseline nyata.
 
-1. Cocokkan change ticket dengan SHA, deployment, project, hostnames, arah/status host/path redirect, perubahan DNS/alias/canonical/indexing yang persis diizinkan, operator, window dan rollback. Rekam waktu aktual. STOP bila berbeda atau gate belum ditutup.
-2. Operator memeriksa prosedur Vercel terkini dan lingkungan tujuan. Perpindahan antar-project bukan transfer registrar/team. Dokumentasi primer saat review menyatakan domain ditambahkan pada project tujuan lalu Move Domain dikonfirmasi, tanpa menghapus domain sumber lebih dulu; tinjau seluruh domain terkait yang akan ikut pindah. Jangan mengasumsikan UI lama atau kedua hostname dipindahkan atomik.
-3. Jalankan hanya perubahan yang tertulis pada approval; hapus aturan host berlawanan sebagai bagian paket yang disetujui. Jika hanya satu hostname berhasil, STOP dan gunakan rollback yang telah disiapkan; jangan menebak perubahan tambahan. DNS hanya disentuh bila persis diizinkan dan diperlukan.
-4. Periksa dari jaringan eksternal: TLS tiap host, host/path redirect langsung, query yang disetujui, 131 URL terbit, semua legacy disposition yang approved, canonical/header/meta/robots/sitemap production yang benar, tidak ada soft404/loop/5xx. Verifikasi Preview tetap SSO/noindex. Cek cache HIT/MISS agar tidak membaca versi lama.
-5. Jalankan smoke otomatis sintetis atas alur berisiko dan fitur legacy yang diterima; tidak mengulang audit manual seluruh 100 alat kecuali ada regresi. Periksa console/hidrasi/kebocoran input. Jika salah angka dalam scope, exposure input, atau critical URL hilang, rollback.
-6. SEO hanya melakukan sitemap submission/inspection bila mendapat izin terpisah dan seluruh gate lulus. Perubahan hosting atau www/non-www pada domain yang sama tidak memerlukan Change of Address menurut sumber Google; jangan mengirimnya otomatis. Catat GO/rollback dan waktu aktual.
-
-## Pemulihan bila terjadi kegagalan
-
-| Sinyal | Keputusan | Pemulihan yang harus disiapkan operator |
-| --- | --- | --- |
-| Partial host move, TLS gagal, host salah, loop atau 5xx | STOP segera | Pulihkan kedua assignments dan redirect dari snapshot, bukan hanya hostname terakhir |
-| Salah hasil didukung, injection atau input bocor | STOP segera | Pulihkan release/assignment legacy yang dibekukan; buka insiden dan remediasi terpisah |
-| Critical URL hilang, soft404, canonical salah, production masih noindex | STOP dalam jendela | Pulihkan sesuai snapshot jika tidak dapat diperbaiki dalam batas waktu owner |
-| Staging terbuka/indexable | STOP segera | Jalankan prosedur recovery kontrol akses yang disetujui dan pastikan SSO/noindex pulih; jangan membuka staging untuk melanjutkan QA |
-| Trafik/error/404/CWV memburuk pasca-launch | Threshold UNKNOWN | Owner membandingkan baseline dan memutuskan; tidak menebak ambang persentase atau durasi |
-
-Urutan pemulihan: catat kondisi terakhir tiap host; pulihkan assignments project/deployment legacy, host redirect dan path config dari snapshot yang disetujui; kembalikan DNS hanya jika sempat diubah dan snapshot tersedia; verifikasi TLS, hop/status, canonical/robots, URL kritis dan konten legacy dari jaringan luar. Staging tetap terproteksi. Catat hasil per-host, durasi gangguan dan bukti HTTP aktual. Tombol Move selesai atau objek simulasi sama bukan bukti recovery berhasil. Bila ada perubahan data/transaksi setelah launch, operator harus menilai konsistensinya; inverse routing tidak memulihkan data.
-
-Monitoring segera, 24 jam, 7 hari dan 28 hari: error/5xx/404, redirect, canonical/indexing GSC, organic landing pages/query dan field CWV bila memadai. Owner harus menentukan penanggung jawab dan kapan rollback boleh dihentikan; audit ini tidak memasang analytics atau menghapus legacy.
-
-Sumber primer: [Vercel transfer antar-project](https://vercel.com/docs/domains/working-with-domains/transfer-your-domain), [Google site move](https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes). Diverifikasi 8 November 2026 Asia/Jakarta; verifikasi ulang sebelum tindakan di masa depan. Ini dokumentasi, bukan otorisasi.
+Sumber primer ditinjau pada tugas ini: [Google site move](https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes), [Google canonical](https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls), [Vercel transfer domain antar-project](https://vercel.com/docs/domains/working-with-domains/transfer-your-domain). Dokumen lama tersimpan di riwayat Git. Tidak ada eksekusi production pada tugas ini.
