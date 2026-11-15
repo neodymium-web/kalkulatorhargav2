@@ -1,0 +1,274 @@
+{
+  "source": "OpenSEO read-only Search Console inspect_urls and get_search_console_performance",
+  "capturedOn": "2026-11-15",
+  "reportTimezone": "Asia/Jakarta",
+  "siteUrl": "https://www.kalkulatorharga.com/",
+  "inspectionIsStoredGoogleIndexStateNotLiveTest": true,
+  "results": [
+    {
+      "url": "https://www.kalkulatorharga.com/kalkulator/hpp",
+      "index": {
+        "verdict": "NEUTRAL",
+        "coverageState": "URL is unknown to Google",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED"
+      }
+    },
+    {
+      "url": "https://www.kalkulatorharga.com/kalkulator/emas",
+      "index": {
+        "verdict": "PASS",
+        "coverageState": "Submitted and indexed",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "lastCrawlTime": "2026-10-23T07:00:44Z",
+        "pageFetchState": "SUCCESSFUL",
+        "googleCanonical": "https://www.kalkulatorharga.com/kalkulator/emas",
+        "userCanonical": "https://www.kalkulatorharga.com/kalkulator/emas",
+        "sitemap": [
+          "https://www.kalkulatorharga.com/sitemap.xml"
+        ],
+        "crawledAs": "MOBILE"
+      },
+      "richResults": {
+        "verdict": "PASS",
+        "detectedItems": [
+          {
+            "richResultType": "Breadcrumbs",
+            "items": [
+              {
+                "name": "Unnamed item"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "url": "https://www.kalkulatorharga.com/kalkulator/tiktok",
+      "index": {
+        "verdict": "PASS",
+        "coverageState": "Submitted and indexed",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "lastCrawlTime": "2026-11-06T13:12:58Z",
+        "pageFetchState": "SUCCESSFUL",
+        "googleCanonical": "https://www.kalkulatorharga.com/kalkulator/tiktok",
+        "userCanonical": "https://www.kalkulatorharga.com/kalkulator/tiktok",
+        "sitemap": [
+          "https://www.kalkulatorharga.com/sitemap.xml"
+        ],
+        "referringUrls": [
+          "https://www.kalkulatorharga.com/kalkulator/shopee"
+        ],
+        "crawledAs": "MOBILE"
+      },
+      "richResults": {
+        "verdict": "PASS",
+        "detectedItems": [
+          {
+            "richResultType": "Breadcrumbs",
+            "items": [
+              {
+                "name": "Unnamed item"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "url": "https://www.kalkulatorharga.com/kalkulator/saham/average",
+      "index": {
+        "verdict": "PASS",
+        "coverageState": "Submitted and indexed",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "lastCrawlTime": "2026-10-26T15:25:08Z",
+        "pageFetchState": "SUCCESSFUL",
+        "googleCanonical": "https://www.kalkulatorharga.com/kalkulator/saham/average",
+        "userCanonical": "https://www.kalkulatorharga.com/kalkulator/saham/average",
+        "sitemap": [
+          "https://www.kalkulatorharga.com/sitemap.xml"
+        ],
+        "crawledAs": "MOBILE"
+      },
+      "richResults": {
+        "verdict": "PASS",
+        "detectedItems": [
+          {
+            "richResultType": "Breadcrumbs",
+            "items": [
+              {
+                "name": "Unnamed item"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "url": "https://www.kalkulatorharga.com/kalkulator/tiktok/benchmark",
+      "index": {
+        "verdict": "PASS",
+        "coverageState": "Submitted and indexed",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "lastCrawlTime": "2026-10-25T17:30:41Z",
+        "pageFetchState": "SUCCESSFUL",
+        "googleCanonical": "https://www.kalkulatorharga.com/kalkulator/tiktok/benchmark",
+        "userCanonical": "https://www.kalkulatorharga.com/kalkulator/tiktok/benchmark",
+        "sitemap": [
+          "https://www.kalkulatorharga.com/sitemap.xml"
+        ],
+        "referringUrls": [
+          "https://www.kalkulatorharga.com/sitemap.xml"
+        ],
+        "crawledAs": "MOBILE"
+      },
+      "richResults": {
+        "verdict": "PASS",
+        "detectedItems": [
+          {
+            "richResultType": "Breadcrumbs",
+            "items": [
+              {
+                "name": "Unnamed item"
+              }
+            ]
+          },
+          {
+            "richResultType": "Datasets",
+            "items": [
+              {
+                "name": "Benchmark engagement rate TikTok per tingkat pengikut dan ukuran akun",
+                "issues": [
+                  {
+                    "issueMessage": "Missing field \"license\"",
+                    "severity": "WARNING"
+                  },
+                  {
+                    "issueMessage": "Invalid object type for field \"creator\"",
+                    "severity": "WARNING"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "url": "https://www.kalkulatorharga.com/kalkulator/shopee",
+      "index": {
+        "verdict": "PASS",
+        "coverageState": "Submitted and indexed",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "lastCrawlTime": "2026-10-23T12:26:35Z",
+        "pageFetchState": "SUCCESSFUL",
+        "googleCanonical": "https://www.kalkulatorharga.com/kalkulator/shopee",
+        "userCanonical": "https://www.kalkulatorharga.com/kalkulator/shopee",
+        "referringUrls": [
+          "https://www.kalkulatorharga.com/"
+        ],
+        "crawledAs": "MOBILE"
+      },
+      "richResults": {
+        "verdict": "PASS",
+        "detectedItems": [
+          {
+            "richResultType": "Breadcrumbs",
+            "items": [
+              {
+                "name": "Unnamed item"
+              },
+              {
+                "name": "Unnamed item"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "url": "https://www.kalkulatorharga.com/kalkulator/tiktok-shop",
+      "index": {
+        "verdict": "PASS",
+        "coverageState": "Submitted and indexed",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "lastCrawlTime": "2026-10-20T12:21:29Z",
+        "pageFetchState": "SUCCESSFUL",
+        "googleCanonical": "https://www.kalkulatorharga.com/kalkulator/tiktok-shop",
+        "userCanonical": "https://www.kalkulatorharga.com/kalkulator/tiktok-shop",
+        "sitemap": [
+          "https://www.kalkulatorharga.com/sitemap.xml"
+        ],
+        "referringUrls": [
+          "https://www.kalkulatorharga.com/kalkulator/tiktok"
+        ],
+        "crawledAs": "MOBILE"
+      },
+      "richResults": {
+        "verdict": "PASS",
+        "detectedItems": [
+          {
+            "richResultType": "Breadcrumbs",
+            "items": [
+              {
+                "name": "Unnamed item"
+              },
+              {
+                "name": "Unnamed item"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "performance": {
+    "siteUrl": "https://www.kalkulatorharga.com/",
+    "startDate": "2026-10-16",
+    "endDate": "2026-11-12",
+    "dateTimezone": "America/Los_Angeles (GSC dates)",
+    "dataState": "final",
+    "dimensions": [
+      "page"
+    ],
+    "selectedRows": [
+      {
+        "keys": [
+          "https://www.kalkulatorharga.com/kalkulator/tiktok"
+        ],
+        "clicks": 20,
+        "impressions": 320,
+        "ctr": 0.0625,
+        "position": 8.4
+      },
+      {
+        "keys": [
+          "https://www.kalkulatorharga.com/kalkulator/emas"
+        ],
+        "clicks": 7,
+        "impressions": 1614,
+        "ctr": 0.0043,
+        "position": 8.7
+      },
+      {
+        "keys": [
+          "https://www.kalkulatorharga.com/kalkulator/saham/average"
+        ],
+        "clicks": 2,
+        "impressions": 77,
+        "ctr": 0.026,
+        "position": 16.6
+      }
+    ],
+    "hppHasReturnedRow": false,
+    "missingRowDoesNotProveZeroTraffic": true
+  },
+  "mutations": false
+}

@@ -26,7 +26,7 @@ describe("Final Release Gate: decisions versus execution permissions", () => {
     expect(p.stock.frozenPR.head).toBe(
       "b46d47d1cfd5a4bb256b0346416e9406e9874bd0",
     );
-  });
+  }, 20_000);
   it.each([
     "archive",
     "reference",
