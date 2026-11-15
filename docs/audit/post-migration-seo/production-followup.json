@@ -1,0 +1,927 @@
+{
+  "retrievedAtUtc": "2026-11-15T04:56:57.323251+00:00",
+  "origin": "https://www.kalkulatorharga.com",
+  "purpose": "Read-only follow-up; no application fix deployed by this PR",
+  "googlebotProbeIsUserAgentOnlyNotVerifiedGoogleIP": true,
+  "pages": [
+    {
+      "path": "/kalkulator/tiktok",
+      "samples": [
+        {
+          "agent": "audit default",
+          "hops": [
+            {
+              "url": "https://www.kalkulatorharga.com/kalkulator/tiktok",
+              "status": 200,
+              "tlsVerifyResult": 0,
+              "seconds": 0.395791,
+              "headers": {
+                "accept-ranges": "bytes",
+                "access-control-allow-origin": "*",
+                "age": "20873",
+                "cache-control": "public, max-age=0, must-revalidate",
+                "content-disposition": "inline",
+                "content-security-policy-report-only": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; script-src 'self' 'unsafe-inline' https://vercel.live; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://vercel.com; font-src 'self'; connect-src 'self' https://vercel.live; frame-src https://vercel.live",
+                "content-type": "text/html; charset=utf-8",
+                "date": "Sun, 15 Nov 2026 04:56:52 GMT",
+                "etag": "\"1b8c31ea3e61216c5f31915180de614b\"",
+                "referrer-policy": "strict-origin-when-cross-origin",
+                "server": "Vercel",
+                "strict-transport-security": "max-age=63072000",
+                "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+                "x-content-type-options": "nosniff",
+                "x-matched-path": "/kalkulator/tiktok",
+                "x-nextjs-prerender": "1",
+                "x-nextjs-stale-time": "300",
+                "x-vercel-cache": "HIT",
+                "x-vercel-id": "sin1::kz6sc-1794718612812-44ae296c65be",
+                "content-length": "43539"
+              },
+              "bodySha256": "dd93a7fbb0cd6aa34bdd4b6077c04242d51d0489a5fd9d2ff34e34aaab3049e6"
+            }
+          ],
+          "canonical": [
+            "https://www.kalkulatorharga.com/kalkulator/tiktok"
+          ],
+          "title": [
+            "Kalkulator TikTok Kreator | KalkulatorHarga"
+          ],
+          "h1": [
+            "Kalkulator TikTok Kreator"
+          ],
+          "metaRobots": [
+            "index, follow"
+          ],
+          "schema": [],
+          "errors": []
+        },
+        {
+          "agent": "Googlebot/2.1 (+http://www.google.com/bot.html)",
+          "hops": [
+            {
+              "url": "https://www.kalkulatorharga.com/kalkulator/tiktok",
+              "status": 200,
+              "tlsVerifyResult": 0,
+              "seconds": 0.183855,
+              "headers": {
+                "accept-ranges": "bytes",
+                "access-control-allow-origin": "*",
+                "age": "20873",
+                "cache-control": "public, max-age=0, must-revalidate",
+                "content-disposition": "inline",
+                "content-security-policy-report-only": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; script-src 'self' 'unsafe-inline' https://vercel.live; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://vercel.com; font-src 'self'; connect-src 'self' https://vercel.live; frame-src https://vercel.live",
+                "content-type": "text/html; charset=utf-8",
+                "date": "Sun, 15 Nov 2026 04:56:53 GMT",
+                "etag": "\"1b8c31ea3e61216c5f31915180de614b\"",
+                "referrer-policy": "strict-origin-when-cross-origin",
+                "server": "Vercel",
+                "strict-transport-security": "max-age=63072000",
+                "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+                "x-content-type-options": "nosniff",
+                "x-matched-path": "/kalkulator/tiktok",
+                "x-nextjs-prerender": "1",
+                "x-nextjs-stale-time": "300",
+                "x-vercel-cache": "HIT",
+                "x-vercel-id": "sin1::9gbkh-1794718613135-3d55e466b43f",
+                "content-length": "43539"
+              },
+              "bodySha256": "dd93a7fbb0cd6aa34bdd4b6077c04242d51d0489a5fd9d2ff34e34aaab3049e6"
+            }
+          ],
+          "canonical": [
+            "https://www.kalkulatorharga.com/kalkulator/tiktok"
+          ],
+          "title": [
+            "Kalkulator TikTok Kreator | KalkulatorHarga"
+          ],
+          "h1": [
+            "Kalkulator TikTok Kreator"
+          ],
+          "metaRobots": [
+            "index, follow"
+          ],
+          "schema": [],
+          "errors": []
+        }
+      ]
+    },
+    {
+      "path": "/kalkulator/emas",
+      "samples": [
+        {
+          "agent": "audit default",
+          "hops": [
+            {
+              "url": "https://www.kalkulatorharga.com/kalkulator/emas",
+              "status": 200,
+              "tlsVerifyResult": 0,
+              "seconds": 0.149577,
+              "headers": {
+                "accept-ranges": "bytes",
+                "access-control-allow-origin": "*",
+                "age": "20869",
+                "cache-control": "public, max-age=0, must-revalidate",
+                "content-disposition": "inline",
+                "content-security-policy-report-only": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; script-src 'self' 'unsafe-inline' https://vercel.live; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://vercel.com; font-src 'self'; connect-src 'self' https://vercel.live; frame-src https://vercel.live",
+                "content-type": "text/html; charset=utf-8",
+                "date": "Sun, 15 Nov 2026 04:56:53 GMT",
+                "etag": "\"078c30a5304800903e75f3531fe588a4\"",
+                "referrer-policy": "strict-origin-when-cross-origin",
+                "server": "Vercel",
+                "strict-transport-security": "max-age=63072000",
+                "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+                "x-content-type-options": "nosniff",
+                "x-matched-path": "/kalkulator/emas",
+                "x-nextjs-prerender": "1",
+                "x-nextjs-stale-time": "300",
+                "x-vercel-cache": "HIT",
+                "x-vercel-id": "sin1::qnmb2-1794718613400-153e2fcf0854",
+                "content-length": "23394"
+              },
+              "bodySha256": "eb8114cdcd269e57801b52807df400de66d634cd5227fcdc952ae2d5d4d941bb"
+            }
+          ],
+          "canonical": [
+            "https://www.kalkulatorharga.com/kalkulator/emas"
+          ],
+          "title": [
+            "Kalkulator Emas dengan Harga Manual | KalkulatorHarga"
+          ],
+          "h1": [
+            "Kalkulator emas dengan harga manual"
+          ],
+          "metaRobots": [
+            "index, follow"
+          ],
+          "schema": [],
+          "errors": []
+        },
+        {
+          "agent": "Googlebot/2.1 (+http://www.google.com/bot.html)",
+          "hops": [
+            {
+              "url": "https://www.kalkulatorharga.com/kalkulator/emas",
+              "status": 200,
+              "tlsVerifyResult": 0,
+              "seconds": 0.163294,
+              "headers": {
+                "accept-ranges": "bytes",
+                "access-control-allow-origin": "*",
+                "age": "20869",
+                "cache-control": "public, max-age=0, must-revalidate",
+                "content-disposition": "inline",
+                "content-security-policy-report-only": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; script-src 'self' 'unsafe-inline' https://vercel.live; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://vercel.com; font-src 'self'; connect-src 'self' https://vercel.live; frame-src https://vercel.live",
+                "content-type": "text/html; charset=utf-8",
+                "date": "Sun, 15 Nov 2026 04:56:54 GMT",
+                "etag": "\"078c30a5304800903e75f3531fe588a4\"",
+                "referrer-policy": "strict-origin-when-cross-origin",
+                "server": "Vercel",
+                "strict-transport-security": "max-age=63072000",
+                "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+                "x-content-type-options": "nosniff",
+                "x-matched-path": "/kalkulator/emas",
+                "x-nextjs-prerender": "1",
+                "x-nextjs-stale-time": "300",
+                "x-vercel-cache": "HIT",
+                "x-vercel-id": "sin1::ll6rc-1794718613963-093084d8f4f6",
+                "content-length": "23394"
+              },
+              "bodySha256": "eb8114cdcd269e57801b52807df400de66d634cd5227fcdc952ae2d5d4d941bb"
+            }
+          ],
+          "canonical": [
+            "https://www.kalkulatorharga.com/kalkulator/emas"
+          ],
+          "title": [
+            "Kalkulator Emas dengan Harga Manual | KalkulatorHarga"
+          ],
+          "h1": [
+            "Kalkulator emas dengan harga manual"
+          ],
+          "metaRobots": [
+            "index, follow"
+          ],
+          "schema": [],
+          "errors": []
+        }
+      ]
+    },
+    {
+      "path": "/kalkulator/saham/average",
+      "samples": [
+        {
+          "agent": "audit default",
+          "hops": [
+            {
+              "url": "https://www.kalkulatorharga.com/kalkulator/saham/average",
+              "status": 200,
+              "tlsVerifyResult": 0,
+              "seconds": 0.101316,
+              "headers": {
+                "accept-ranges": "bytes",
+                "access-control-allow-origin": "*",
+                "age": "20963",
+                "cache-control": "public, max-age=0, must-revalidate",
+                "content-disposition": "inline",
+                "content-security-policy-report-only": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; script-src 'self' 'unsafe-inline' https://vercel.live; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://vercel.com; font-src 'self'; connect-src 'self' https://vercel.live; frame-src https://vercel.live",
+                "content-type": "text/html; charset=utf-8",
+                "date": "Sun, 15 Nov 2026 04:56:54 GMT",
+                "etag": "\"e159afaf20d7160aeab77d20190e7b1b\"",
+                "referrer-policy": "strict-origin-when-cross-origin",
+                "server": "Vercel",
+                "strict-transport-security": "max-age=63072000",
+                "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+                "x-content-type-options": "nosniff",
+                "x-matched-path": "/kalkulator/saham/average",
+                "x-nextjs-prerender": "1",
+                "x-nextjs-stale-time": "300",
+                "x-vercel-cache": "HIT",
+                "x-vercel-id": "sin1::ldcwq-1794718614210-12e135e46d4d",
+                "content-length": "26443"
+              },
+              "bodySha256": "40c626881409498d72c6542eee640af03cb076cc8791f9fdb41c77156839016d"
+            }
+          ],
+          "canonical": [
+            "https://www.kalkulatorharga.com/kalkulator/saham/average"
+          ],
+          "title": [
+            "Average Saham, Impas dan Target Lot Manual | KalkulatorHarga"
+          ],
+          "h1": [
+            "Average saham, impas dan target lot"
+          ],
+          "metaRobots": [
+            "index, follow"
+          ],
+          "schema": [
+            {
+              "@context": "https://schema.org",
+              "@type": "WebApplication",
+              "name": "Average saham dan impas manual",
+              "url": "https://www.kalkulatorharga.com/kalkulator/saham/average",
+              "applicationCategory": "UtilitiesApplication",
+              "operatingSystem": "Any",
+              "inLanguage": "id-ID"
+            }
+          ],
+          "errors": []
+        },
+        {
+          "agent": "Googlebot/2.1 (+http://www.google.com/bot.html)",
+          "hops": [
+            {
+              "url": "https://www.kalkulatorharga.com/kalkulator/saham/average",
+              "status": 200,
+              "tlsVerifyResult": 0,
+              "seconds": 0.102029,
+              "headers": {
+                "accept-ranges": "bytes",
+                "access-control-allow-origin": "*",
+                "age": "20963",
+                "cache-control": "public, max-age=0, must-revalidate",
+                "content-disposition": "inline",
+                "content-security-policy-report-only": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; script-src 'self' 'unsafe-inline' https://vercel.live; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://vercel.com; font-src 'self'; connect-src 'self' https://vercel.live; frame-src https://vercel.live",
+                "content-type": "text/html; charset=utf-8",
+                "date": "Sun, 15 Nov 2026 04:56:54 GMT",
+                "etag": "\"e159afaf20d7160aeab77d20190e7b1b\"",
+                "referrer-policy": "strict-origin-when-cross-origin",
+                "server": "Vercel",
+                "strict-transport-security": "max-age=63072000",
+                "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+                "x-content-type-options": "nosniff",
+                "x-matched-path": "/kalkulator/saham/average",
+                "x-nextjs-prerender": "1",
+                "x-nextjs-stale-time": "300",
+                "x-vercel-cache": "HIT",
+                "x-vercel-id": "sin1::lg7xg-1794718614384-fe37b5ad553b",
+                "content-length": "26443"
+              },
+              "bodySha256": "40c626881409498d72c6542eee640af03cb076cc8791f9fdb41c77156839016d"
+            }
+          ],
+          "canonical": [
+            "https://www.kalkulatorharga.com/kalkulator/saham/average"
+          ],
+          "title": [
+            "Average Saham, Impas dan Target Lot Manual | KalkulatorHarga"
+          ],
+          "h1": [
+            "Average saham, impas dan target lot"
+          ],
+          "metaRobots": [
+            "index, follow"
+          ],
+          "schema": [
+            {
+              "@context": "https://schema.org",
+              "@type": "WebApplication",
+              "name": "Average saham dan impas manual",
+              "url": "https://www.kalkulatorharga.com/kalkulator/saham/average",
+              "applicationCategory": "UtilitiesApplication",
+              "operatingSystem": "Any",
+              "inLanguage": "id-ID"
+            }
+          ],
+          "errors": []
+        }
+      ]
+    },
+    {
+      "path": "/kalkulator/tiktok/benchmark",
+      "samples": [
+        {
+          "agent": "audit default",
+          "hops": [
+            {
+              "url": "https://www.kalkulatorharga.com/kalkulator/tiktok/benchmark",
+              "status": 200,
+              "tlsVerifyResult": 0,
+              "seconds": 0.12235,
+              "headers": {
+                "accept-ranges": "bytes",
+                "access-control-allow-origin": "*",
+                "age": "20870",
+                "cache-control": "public, max-age=0, must-revalidate",
+                "content-disposition": "inline",
+                "content-security-policy-report-only": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; script-src 'self' 'unsafe-inline' https://vercel.live; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://vercel.com; font-src 'self'; connect-src 'self' https://vercel.live; frame-src https://vercel.live",
+                "content-type": "text/html; charset=utf-8",
+                "date": "Sun, 15 Nov 2026 04:56:54 GMT",
+                "etag": "\"90c78767ac7f1a1b6d51ca3647e5c900\"",
+                "referrer-policy": "strict-origin-when-cross-origin",
+                "server": "Vercel",
+                "strict-transport-security": "max-age=63072000",
+                "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+                "x-content-type-options": "nosniff",
+                "x-matched-path": "/kalkulator/tiktok/benchmark",
+                "x-nextjs-prerender": "1",
+                "x-nextjs-stale-time": "300",
+                "x-vercel-cache": "HIT",
+                "x-vercel-id": "sin1::zpr6j-1794718614541-a982893299b4",
+                "content-length": "20244"
+              },
+              "bodySha256": "e23092978d1324cfbeae4233f5bf0e9ed651b732918504bf06fb599fa88fe831"
+            }
+          ],
+          "canonical": [
+            "https://www.kalkulatorharga.com/kalkulator/tiktok/benchmark"
+          ],
+          "title": [
+            "Benchmark TikTok: Analisis Engagement Manual | KalkulatorHarga"
+          ],
+          "h1": [
+            "Benchmark TikTok: analisis dan perbandingan manual"
+          ],
+          "metaRobots": [
+            "index, follow"
+          ],
+          "schema": [
+            {
+              "@context": "https://schema.org",
+              "@type": "WebApplication",
+              "name": "Analisis engagement TikTok manual",
+              "url": "https://www.kalkulatorharga.com/kalkulator/tiktok/benchmark",
+              "applicationCategory": "UtilitiesApplication",
+              "operatingSystem": "Any",
+              "inLanguage": "id-ID"
+            }
+          ],
+          "errors": []
+        },
+        {
+          "agent": "Googlebot/2.1 (+http://www.google.com/bot.html)",
+          "hops": [
+            {
+              "url": "https://www.kalkulatorharga.com/kalkulator/tiktok/benchmark",
+              "status": 200,
+              "tlsVerifyResult": 0,
+              "seconds": 0.438584,
+              "headers": {
+                "accept-ranges": "bytes",
+                "access-control-allow-origin": "*",
+                "age": "20870",
+                "cache-control": "public, max-age=0, must-revalidate",
+                "content-disposition": "inline",
+                "content-security-policy-report-only": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; script-src 'self' 'unsafe-inline' https://vercel.live; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://vercel.com; font-src 'self'; connect-src 'self' https://vercel.live; frame-src https://vercel.live",
+                "content-type": "text/html; charset=utf-8",
+                "date": "Sun, 15 Nov 2026 04:56:55 GMT",
+                "etag": "\"90c78767ac7f1a1b6d51ca3647e5c900\"",
+                "referrer-policy": "strict-origin-when-cross-origin",
+                "server": "Vercel",
+                "strict-transport-security": "max-age=63072000",
+                "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+                "x-content-type-options": "nosniff",
+                "x-matched-path": "/kalkulator/tiktok/benchmark",
+                "x-nextjs-prerender": "1",
+                "x-nextjs-stale-time": "300",
+                "x-vercel-cache": "HIT",
+                "x-vercel-id": "sin1::689j8-1794718614824-15e5bd17b20f",
+                "content-length": "20244"
+              },
+              "bodySha256": "e23092978d1324cfbeae4233f5bf0e9ed651b732918504bf06fb599fa88fe831"
+            }
+          ],
+          "canonical": [
+            "https://www.kalkulatorharga.com/kalkulator/tiktok/benchmark"
+          ],
+          "title": [
+            "Benchmark TikTok: Analisis Engagement Manual | KalkulatorHarga"
+          ],
+          "h1": [
+            "Benchmark TikTok: analisis dan perbandingan manual"
+          ],
+          "metaRobots": [
+            "index, follow"
+          ],
+          "schema": [
+            {
+              "@context": "https://schema.org",
+              "@type": "WebApplication",
+              "name": "Analisis engagement TikTok manual",
+              "url": "https://www.kalkulatorharga.com/kalkulator/tiktok/benchmark",
+              "applicationCategory": "UtilitiesApplication",
+              "operatingSystem": "Any",
+              "inLanguage": "id-ID"
+            }
+          ],
+          "errors": []
+        }
+      ]
+    },
+    {
+      "path": "/kalkulator/hpp",
+      "samples": [
+        {
+          "agent": "audit default",
+          "hops": [
+            {
+              "url": "https://www.kalkulatorharga.com/kalkulator/hpp",
+              "status": 200,
+              "tlsVerifyResult": 0,
+              "seconds": 0.336113,
+              "headers": {
+                "accept-ranges": "bytes",
+                "access-control-allow-origin": "*",
+                "age": "20966",
+                "cache-control": "public, max-age=0, must-revalidate",
+                "content-disposition": "inline",
+                "content-security-policy-report-only": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; script-src 'self' 'unsafe-inline' https://vercel.live; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://vercel.com; font-src 'self'; connect-src 'self' https://vercel.live; frame-src https://vercel.live",
+                "content-type": "text/html; charset=utf-8",
+                "date": "Sun, 15 Nov 2026 04:56:55 GMT",
+                "etag": "\"ad620a3bae91e7e4f9778da55e163a3b\"",
+                "referrer-policy": "strict-origin-when-cross-origin",
+                "server": "Vercel",
+                "strict-transport-security": "max-age=63072000",
+                "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+                "x-content-type-options": "nosniff",
+                "x-matched-path": "/kalkulator/hpp",
+                "x-nextjs-prerender": "1",
+                "x-nextjs-stale-time": "300",
+                "x-vercel-cache": "HIT",
+                "x-vercel-id": "sin1::b7njb-1794718615332-b8b2e320a9cc",
+                "content-length": "26811"
+              },
+              "bodySha256": "3dd7b13b30fc681ac385887623068e168c45f2a1fa1a452fa9d7b58ed6633d20"
+            }
+          ],
+          "canonical": [
+            "https://www.kalkulatorharga.com/kalkulator/hpp"
+          ],
+          "title": [
+            "Kalkulator HPP | KalkulatorHarga"
+          ],
+          "h1": [
+            "Kalkulator HPP"
+          ],
+          "metaRobots": [
+            "index, follow"
+          ],
+          "schema": [],
+          "errors": []
+        },
+        {
+          "agent": "Googlebot/2.1 (+http://www.google.com/bot.html)",
+          "hops": [
+            {
+              "url": "https://www.kalkulatorharga.com/kalkulator/hpp",
+              "status": 200,
+              "tlsVerifyResult": 0,
+              "seconds": 0.547034,
+              "headers": {
+                "accept-ranges": "bytes",
+                "access-control-allow-origin": "*",
+                "age": "20966",
+                "cache-control": "public, max-age=0, must-revalidate",
+                "content-disposition": "inline",
+                "content-security-policy-report-only": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; script-src 'self' 'unsafe-inline' https://vercel.live; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://vercel.com; font-src 'self'; connect-src 'self' https://vercel.live; frame-src https://vercel.live",
+                "content-type": "text/html; charset=utf-8",
+                "date": "Sun, 15 Nov 2026 04:56:56 GMT",
+                "etag": "\"ad620a3bae91e7e4f9778da55e163a3b\"",
+                "referrer-policy": "strict-origin-when-cross-origin",
+                "server": "Vercel",
+                "strict-transport-security": "max-age=63072000",
+                "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+                "x-content-type-options": "nosniff",
+                "x-matched-path": "/kalkulator/hpp",
+                "x-nextjs-prerender": "1",
+                "x-nextjs-stale-time": "300",
+                "x-vercel-cache": "HIT",
+                "x-vercel-id": "sin1::7q9n4-1794718616013-dd197339fba6",
+                "content-length": "26811"
+              },
+              "bodySha256": "3dd7b13b30fc681ac385887623068e168c45f2a1fa1a452fa9d7b58ed6633d20"
+            }
+          ],
+          "canonical": [
+            "https://www.kalkulatorharga.com/kalkulator/hpp"
+          ],
+          "title": [
+            "Kalkulator HPP | KalkulatorHarga"
+          ],
+          "h1": [
+            "Kalkulator HPP"
+          ],
+          "metaRobots": [
+            "index, follow"
+          ],
+          "schema": [],
+          "errors": []
+        }
+      ]
+    },
+    {
+      "path": "/kalkulator/shopee",
+      "samples": [
+        {
+          "agent": "audit default",
+          "hops": [
+            {
+              "url": "https://www.kalkulatorharga.com/kalkulator/shopee",
+              "status": 200,
+              "tlsVerifyResult": 0,
+              "seconds": 0.140663,
+              "headers": {
+                "accept-ranges": "bytes",
+                "access-control-allow-origin": "*",
+                "age": "20872",
+                "cache-control": "public, max-age=0, must-revalidate",
+                "content-disposition": "inline",
+                "content-security-policy-report-only": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; script-src 'self' 'unsafe-inline' https://vercel.live; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://vercel.com; font-src 'self'; connect-src 'self' https://vercel.live; frame-src https://vercel.live",
+                "content-type": "text/html; charset=utf-8",
+                "date": "Sun, 15 Nov 2026 04:56:56 GMT",
+                "etag": "\"b27f2c610e3ab5e5b73615d20b520796\"",
+                "referrer-policy": "strict-origin-when-cross-origin",
+                "server": "Vercel",
+                "strict-transport-security": "max-age=63072000",
+                "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+                "x-content-type-options": "nosniff",
+                "x-matched-path": "/kalkulator/shopee",
+                "x-nextjs-prerender": "1",
+                "x-nextjs-stale-time": "300",
+                "x-vercel-cache": "HIT",
+                "x-vercel-id": "sin1::b9bdv-1794718616231-45a907e17ed9",
+                "content-length": "40091"
+              },
+              "bodySha256": "280fa4c3b894b738dfa8f2a7720501cc5ab61c877a3deb012437e3419426d86a"
+            }
+          ],
+          "canonical": [
+            "https://www.kalkulatorharga.com/kalkulator/shopee"
+          ],
+          "title": [
+            "Kalkulator Biaya Admin Shopee (Simulasi Tarif Penjual) | KalkulatorHarga"
+          ],
+          "h1": [
+            "Kalkulator Biaya Admin Shopee (Simulasi Tarif Penjual)"
+          ],
+          "metaRobots": [
+            "index, follow"
+          ],
+          "schema": [],
+          "errors": []
+        },
+        {
+          "agent": "Googlebot/2.1 (+http://www.google.com/bot.html)",
+          "hops": [
+            {
+              "url": "https://www.kalkulatorharga.com/kalkulator/shopee",
+              "status": 200,
+              "tlsVerifyResult": 0,
+              "seconds": 0.133845,
+              "headers": {
+                "accept-ranges": "bytes",
+                "access-control-allow-origin": "*",
+                "age": "20873",
+                "cache-control": "public, max-age=0, must-revalidate",
+                "content-disposition": "inline",
+                "content-security-policy-report-only": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; script-src 'self' 'unsafe-inline' https://vercel.live; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://vercel.com; font-src 'self'; connect-src 'self' https://vercel.live; frame-src https://vercel.live",
+                "content-type": "text/html; charset=utf-8",
+                "date": "Sun, 15 Nov 2026 04:56:56 GMT",
+                "etag": "\"b27f2c610e3ab5e5b73615d20b520796\"",
+                "referrer-policy": "strict-origin-when-cross-origin",
+                "server": "Vercel",
+                "strict-transport-security": "max-age=63072000",
+                "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+                "x-content-type-options": "nosniff",
+                "x-matched-path": "/kalkulator/shopee",
+                "x-nextjs-prerender": "1",
+                "x-nextjs-stale-time": "300",
+                "x-vercel-cache": "HIT",
+                "x-vercel-id": "sin1::hbhvw-1794718616462-7864c18489dc",
+                "content-length": "40091"
+              },
+              "bodySha256": "280fa4c3b894b738dfa8f2a7720501cc5ab61c877a3deb012437e3419426d86a"
+            }
+          ],
+          "canonical": [
+            "https://www.kalkulatorharga.com/kalkulator/shopee"
+          ],
+          "title": [
+            "Kalkulator Biaya Admin Shopee (Simulasi Tarif Penjual) | KalkulatorHarga"
+          ],
+          "h1": [
+            "Kalkulator Biaya Admin Shopee (Simulasi Tarif Penjual)"
+          ],
+          "metaRobots": [
+            "index, follow"
+          ],
+          "schema": [],
+          "errors": []
+        }
+      ]
+    },
+    {
+      "path": "/kalkulator/tiktok-shop",
+      "samples": [
+        {
+          "agent": "audit default",
+          "hops": [
+            {
+              "url": "https://www.kalkulatorharga.com/kalkulator/tiktok-shop",
+              "status": 200,
+              "tlsVerifyResult": 0,
+              "seconds": 0.228297,
+              "headers": {
+                "accept-ranges": "bytes",
+                "access-control-allow-origin": "*",
+                "age": "20873",
+                "cache-control": "public, max-age=0, must-revalidate",
+                "content-disposition": "inline",
+                "content-security-policy-report-only": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; script-src 'self' 'unsafe-inline' https://vercel.live; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://vercel.com; font-src 'self'; connect-src 'self' https://vercel.live; frame-src https://vercel.live",
+                "content-type": "text/html; charset=utf-8",
+                "date": "Sun, 15 Nov 2026 04:56:56 GMT",
+                "etag": "\"65407ea7b9ff7e21d316e7daf5619750\"",
+                "referrer-policy": "strict-origin-when-cross-origin",
+                "server": "Vercel",
+                "strict-transport-security": "max-age=63072000",
+                "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+                "x-content-type-options": "nosniff",
+                "x-matched-path": "/kalkulator/tiktok-shop",
+                "x-nextjs-prerender": "1",
+                "x-nextjs-stale-time": "300",
+                "x-vercel-cache": "HIT",
+                "x-vercel-id": "sin1::lw7c4-1794718616770-0182e1205911",
+                "content-length": "40491"
+              },
+              "bodySha256": "9aa7dd4bfa89f38e34379d13685d9d56ab4b9b3ef84c130275117d45c1090cc8"
+            }
+          ],
+          "canonical": [
+            "https://www.kalkulatorharga.com/kalkulator/tiktok-shop"
+          ],
+          "title": [
+            "Kalkulator Biaya Admin TikTok Shop (Simulasi Tarif Penjual) | KalkulatorHarga"
+          ],
+          "h1": [
+            "Kalkulator Biaya Admin TikTok Shop (Simulasi Tarif Penjual)"
+          ],
+          "metaRobots": [
+            "index, follow"
+          ],
+          "schema": [],
+          "errors": []
+        },
+        {
+          "agent": "Googlebot/2.1 (+http://www.google.com/bot.html)",
+          "hops": [
+            {
+              "url": "https://www.kalkulatorharga.com/kalkulator/tiktok-shop",
+              "status": 200,
+              "tlsVerifyResult": 0,
+              "seconds": 0.118471,
+              "headers": {
+                "accept-ranges": "bytes",
+                "access-control-allow-origin": "*",
+                "age": "20873",
+                "cache-control": "public, max-age=0, must-revalidate",
+                "content-disposition": "inline",
+                "content-security-policy-report-only": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; script-src 'self' 'unsafe-inline' https://vercel.live; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://vercel.com; font-src 'self'; connect-src 'self' https://vercel.live; frame-src https://vercel.live",
+                "content-type": "text/html; charset=utf-8",
+                "date": "Sun, 15 Nov 2026 04:56:57 GMT",
+                "etag": "\"65407ea7b9ff7e21d316e7daf5619750\"",
+                "referrer-policy": "strict-origin-when-cross-origin",
+                "server": "Vercel",
+                "strict-transport-security": "max-age=63072000",
+                "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+                "x-content-type-options": "nosniff",
+                "x-matched-path": "/kalkulator/tiktok-shop",
+                "x-nextjs-prerender": "1",
+                "x-nextjs-stale-time": "300",
+                "x-vercel-cache": "HIT",
+                "x-vercel-id": "sin1::zfzdd-1794718616995-792bd62907a2",
+                "content-length": "40491"
+              },
+              "bodySha256": "9aa7dd4bfa89f38e34379d13685d9d56ab4b9b3ef84c130275117d45c1090cc8"
+            }
+          ],
+          "canonical": [
+            "https://www.kalkulatorharga.com/kalkulator/tiktok-shop"
+          ],
+          "title": [
+            "Kalkulator Biaya Admin TikTok Shop (Simulasi Tarif Penjual) | KalkulatorHarga"
+          ],
+          "h1": [
+            "Kalkulator Biaya Admin TikTok Shop (Simulasi Tarif Penjual)"
+          ],
+          "metaRobots": [
+            "index, follow"
+          ],
+          "schema": [],
+          "errors": []
+        }
+      ]
+    }
+  ],
+  "endpoints": [
+    {
+      "path": "/robots.txt",
+      "url": "https://www.kalkulatorharga.com/robots.txt",
+      "status": 200,
+      "tlsVerifyResult": 0,
+      "seconds": 0.079308,
+      "headers": {
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "*",
+        "age": "20978",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-disposition": "inline; filename=\"robots.txt\"",
+        "content-security-policy-report-only": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; script-src 'self' 'unsafe-inline' https://vercel.live; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://vercel.com; font-src 'self'; connect-src 'self' https://vercel.live; frame-src https://vercel.live",
+        "content-type": "text/plain; charset=utf-8",
+        "date": "Sun, 15 Nov 2026 04:56:57 GMT",
+        "etag": "\"23c25e9e2afdc463c32a6472d570f9f6\"",
+        "last-modified": "Sat, 14 Nov 2026 23:07:18 GMT",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "server": "Vercel",
+        "strict-transport-security": "max-age=63072000",
+        "x-content-type-options": "nosniff",
+        "x-matched-path": "/robots.txt",
+        "x-vercel-cache": "HIT",
+        "x-vercel-id": "sin1::b7njb-1794718617159-d1bb430a7d54",
+        "content-length": "77"
+      },
+      "bodySha256": "0f88aecc08031507714386d9ab3d82d29b63ec70f5f19d8deb8b21334d931157",
+      "body": "User-Agent: *\nAllow: /\n\nSitemap: https://www.kalkulatorharga.com/sitemap.xml\n"
+    },
+    {
+      "path": "/sitemap.xml",
+      "url": "https://www.kalkulatorharga.com/sitemap.xml",
+      "status": 200,
+      "tlsVerifyResult": 0,
+      "seconds": 0.097426,
+      "headers": {
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "*",
+        "age": "20977",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-disposition": "inline; filename=\"sitemap.xml\"",
+        "content-security-policy-report-only": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; script-src 'self' 'unsafe-inline' https://vercel.live; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://vercel.com; font-src 'self'; connect-src 'self' https://vercel.live; frame-src https://vercel.live",
+        "content-type": "application/xml",
+        "date": "Sun, 15 Nov 2026 04:56:57 GMT",
+        "etag": "\"2a92982bd5adb9a0626254fcbaf567c4\"",
+        "last-modified": "Sat, 14 Nov 2026 23:07:19 GMT",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "server": "Vercel",
+        "strict-transport-security": "max-age=63072000",
+        "x-content-type-options": "nosniff",
+        "x-matched-path": "/sitemap.xml",
+        "x-vercel-cache": "HIT",
+        "x-vercel-id": "sin1::q2cmk-1794718617289-71d890733401",
+        "content-length": "8851"
+      },
+      "bodySha256": "679e58865cd2cd47a9446f9fd444f219c800f31aaec6604326a88a28d43287fd",
+      "urls": [
+        "https://www.kalkulatorharga.com/",
+        "https://www.kalkulatorharga.com/bisnis",
+        "https://www.kalkulatorharga.com/marketplace",
+        "https://www.kalkulatorharga.com/keuangan",
+        "https://www.kalkulatorharga.com/pajak",
+        "https://www.kalkulatorharga.com/media-sosial",
+        "https://www.kalkulatorharga.com/sehari-hari",
+        "https://www.kalkulatorharga.com/kalkulator/hpp",
+        "https://www.kalkulatorharga.com/kalkulator/harga-jual",
+        "https://www.kalkulatorharga.com/kalkulator/margin-laba",
+        "https://www.kalkulatorharga.com/kalkulator/markup",
+        "https://www.kalkulatorharga.com/kalkulator/bep",
+        "https://www.kalkulatorharga.com/kalkulator/target-laba",
+        "https://www.kalkulatorharga.com/kalkulator/harga-pokok-penjualan",
+        "https://www.kalkulatorharga.com/kalkulator/yield-bahan",
+        "https://www.kalkulatorharga.com/kalkulator/penyusutan-garis-lurus",
+        "https://www.kalkulatorharga.com/kalkulator/arus-kas",
+        "https://www.kalkulatorharga.com/kalkulator/utilisasi-kapasitas",
+        "https://www.kalkulatorharga.com/kalkulator/perputaran-persediaan",
+        "https://www.kalkulatorharga.com/kalkulator/reorder-point",
+        "https://www.kalkulatorharga.com/kalkulator/runway-kas",
+        "https://www.kalkulatorharga.com/kalkulator/biaya-layanan",
+        "https://www.kalkulatorharga.com/kalkulator/tarif-freelance",
+        "https://www.kalkulatorharga.com/kalkulator/food-cost",
+        "https://www.kalkulatorharga.com/kalkulator/harga-borongan",
+        "https://www.kalkulatorharga.com/kalkulator/eoq",
+        "https://www.kalkulatorharga.com/kalkulator/payback-period",
+        "https://www.kalkulatorharga.com/kalkulator/berat-volumetrik",
+        "https://www.kalkulatorharga.com/kalkulator/roas",
+        "https://www.kalkulatorharga.com/kalkulator/roas-impas",
+        "https://www.kalkulatorharga.com/kalkulator/acos",
+        "https://www.kalkulatorharga.com/kalkulator/konversi-toko",
+        "https://www.kalkulatorharga.com/kalkulator/nilai-pesanan-rata-rata",
+        "https://www.kalkulatorharga.com/kalkulator/promo-seller",
+        "https://www.kalkulatorharga.com/kalkulator/subsidi-ongkir",
+        "https://www.kalkulatorharga.com/kalkulator/biaya-kemasan",
+        "https://www.kalkulatorharga.com/kalkulator/biaya-retur",
+        "https://www.kalkulatorharga.com/kalkulator/kerugian-cod",
+        "https://www.kalkulatorharga.com/kalkulator/bunga-sederhana",
+        "https://www.kalkulatorharga.com/kalkulator/bunga-majemuk",
+        "https://www.kalkulatorharga.com/kalkulator/cicilan-anuitas",
+        "https://www.kalkulatorharga.com/kalkulator/cicilan-flat",
+        "https://www.kalkulatorharga.com/kalkulator/rasio-cicilan",
+        "https://www.kalkulatorharga.com/kalkulator/target-tabungan",
+        "https://www.kalkulatorharga.com/kalkulator/dana-darurat",
+        "https://www.kalkulatorharga.com/kalkulator/deposito",
+        "https://www.kalkulatorharga.com/kalkulator/imbal-hasil-investasi",
+        "https://www.kalkulatorharga.com/kalkulator/cagr",
+        "https://www.kalkulatorharga.com/kalkulator/nilai-kini",
+        "https://www.kalkulatorharga.com/kalkulator/npv",
+        "https://www.kalkulatorharga.com/kalkulator/inflasi",
+        "https://www.kalkulatorharga.com/kalkulator/rata-rata-beli-saham",
+        "https://www.kalkulatorharga.com/kalkulator/untung-rugi-saham",
+        "https://www.kalkulatorharga.com/kalkulator/bunga-efektif-pinjaman",
+        "https://www.kalkulatorharga.com/kalkulator/kpr",
+        "https://www.kalkulatorharga.com/kalkulator/pelunasan-dipercepat",
+        "https://www.kalkulatorharga.com/kalkulator/refinancing",
+        "https://www.kalkulatorharga.com/kalkulator/kurs-mata-uang",
+        "https://www.kalkulatorharga.com/kalkulator/engagement-rate",
+        "https://www.kalkulatorharga.com/kalkulator/pertumbuhan-pengikut",
+        "https://www.kalkulatorharga.com/kalkulator/cpm",
+        "https://www.kalkulatorharga.com/kalkulator/cpc",
+        "https://www.kalkulatorharga.com/kalkulator/cpa",
+        "https://www.kalkulatorharga.com/kalkulator/ctr",
+        "https://www.kalkulatorharga.com/kalkulator/estimasi-youtube",
+        "https://www.kalkulatorharga.com/kalkulator/tiktok",
+        "https://www.kalkulatorharga.com/kalkulator/tarif-endorsement",
+        "https://www.kalkulatorharga.com/kalkulator/waktu-tonton",
+        "https://www.kalkulatorharga.com/kalkulator/diskon",
+        "https://www.kalkulatorharga.com/kalkulator/harga-per-satuan",
+        "https://www.kalkulatorharga.com/kalkulator/bagi-tagihan",
+        "https://www.kalkulatorharga.com/kalkulator/persen",
+        "https://www.kalkulatorharga.com/kalkulator/perubahan-persen",
+        "https://www.kalkulatorharga.com/kalkulator/selisih-tanggal",
+        "https://www.kalkulatorharga.com/kalkulator/hari-kerja",
+        "https://www.kalkulatorharga.com/kalkulator/usia",
+        "https://www.kalkulatorharga.com/kalkulator/durasi-kerja",
+        "https://www.kalkulatorharga.com/kalkulator/konsumsi-bbm",
+        "https://www.kalkulatorharga.com/kalkulator/biaya-listrik",
+        "https://www.kalkulatorharga.com/kalkulator/biaya-air",
+        "https://www.kalkulatorharga.com/kalkulator/kebutuhan-cat",
+        "https://www.kalkulatorharga.com/kalkulator/kebutuhan-keramik",
+        "https://www.kalkulatorharga.com/kalkulator/volume-beton",
+        "https://www.kalkulatorharga.com/kalkulator/skala-denah",
+        "https://www.kalkulatorharga.com/kalkulator/konversi-panjang",
+        "https://www.kalkulatorharga.com/kalkulator/konversi-berat",
+        "https://www.kalkulatorharga.com/kalkulator/konversi-suhu",
+        "https://www.kalkulatorharga.com/kalkulator/kecepatan-rata-rata",
+        "https://www.kalkulatorharga.com/kalkulator/blibli",
+        "https://www.kalkulatorharga.com/kalkulator/harga-jual-marketplace",
+        "https://www.kalkulatorharga.com/kalkulator/banding-biaya-marketplace",
+        "https://www.kalkulatorharga.com/kalkulator/bundel-produk",
+        "https://www.kalkulatorharga.com/kalkulator/stok-cover",
+        "https://www.kalkulatorharga.com/kalkulator/ppn",
+        "https://www.kalkulatorharga.com/kalkulator/pph-23",
+        "https://www.kalkulatorharga.com/kalkulator/pph-4-ayat-2-sewa",
+        "https://www.kalkulatorharga.com/kalkulator/gross-up-pajak",
+        "https://www.kalkulatorharga.com/kalkulator/pph-final-umkm",
+        "https://www.kalkulatorharga.com/kalkulator/pph-21-bulanan",
+        "https://www.kalkulatorharga.com/kalkulator/pph-21-rekonsiliasi",
+        "https://www.kalkulatorharga.com/kalkulator/pajak-impor",
+        "https://www.kalkulatorharga.com/kalkulator/bphtb",
+        "https://www.kalkulatorharga.com/kalkulator/pbb-p2",
+        "https://www.kalkulatorharga.com/kalkulator/shopee",
+        "https://www.kalkulatorharga.com/kalkulator/tiktok-shop",
+        "https://www.kalkulatorharga.com/kalkulator/tokopedia",
+        "https://www.kalkulatorharga.com/kalkulator/lazada",
+        "https://www.kalkulatorharga.com/kalkulator/emas",
+        "https://www.kalkulatorharga.com/bandingkan",
+        "https://www.kalkulatorharga.com/kalkulator/saham/average",
+        "https://www.kalkulatorharga.com/kalkulator/tiktok/benchmark"
+      ]
+    }
+  ]
+}

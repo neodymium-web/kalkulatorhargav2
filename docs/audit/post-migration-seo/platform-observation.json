@@ -1,0 +1,25 @@
+{
+  "capturedOn": "2026-11-15",
+  "operation": "read-only get_domain_project_domains/get_alias",
+  "domains": [
+    {
+      "name": "kalkulatorharga.com",
+      "projectId": "prj_p1VRZQiOB0BHJrQSC5JS2rDhYoF7",
+      "verified": true,
+      "redirect": "www.kalkulatorharga.com",
+      "redirectStatusCode": 308
+    },
+    {
+      "name": "www.kalkulatorharga.com",
+      "projectId": "prj_p1VRZQiOB0BHJrQSC5JS2rDhYoF7",
+      "verified": true,
+      "redirect": null,
+      "redirectStatusCode": null
+    }
+  ],
+  "wwwAlias": {
+    "projectId": "prj_p1VRZQiOB0BHJrQSC5JS2rDhYoF7",
+    "deploymentId": "dpl_A4StKVcTXRPuXzzQLa2Sj3onhrQr"
+  },
+  "changedByThisTask": false
+}

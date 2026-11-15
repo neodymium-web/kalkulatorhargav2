@@ -1,0 +1,1231 @@
+{
+  "schemaVersion": 1,
+  "sourceSHA": "a8744da1e0c2b47fbcc09830e5f23a1d63e01d25",
+  "productionOrigin": "https://www.kalkulatorharga.com",
+  "criticalPaths": [
+    "/kalkulator/tiktok",
+    "/kalkulator/emas",
+    "/kalkulator/saham/average",
+    "/kalkulator/tiktok/benchmark",
+    "/kalkulator/hpp",
+    "/kalkulator/shopee",
+    "/kalkulator/tiktok-shop"
+  ],
+  "sources": [
+    "lib/registry.ts",
+    "lib/published-paths.ts",
+    "lib/migration/routes.ts",
+    "lib/supplemental/routes.ts",
+    "lib/legacy/routes.ts",
+    "lib/legacy/registry.ts",
+    "app/**/page.tsx"
+  ],
+  "rows": [
+    {
+      "path": "/",
+      "canonicalPath": "/",
+      "status": 200,
+      "family": "home-or-hub",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/bisnis",
+      "canonicalPath": "/bisnis",
+      "status": 200,
+      "family": "home-or-hub",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/marketplace",
+      "canonicalPath": "/marketplace",
+      "status": 200,
+      "family": "home-or-hub",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/keuangan",
+      "canonicalPath": "/keuangan",
+      "status": 200,
+      "family": "home-or-hub",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/pajak",
+      "canonicalPath": "/pajak",
+      "status": 200,
+      "family": "home-or-hub",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/media-sosial",
+      "canonicalPath": "/media-sosial",
+      "status": 200,
+      "family": "home-or-hub",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/sehari-hari",
+      "canonicalPath": "/sehari-hari",
+      "status": 200,
+      "family": "home-or-hub",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/hpp",
+      "canonicalPath": "/kalkulator/hpp",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/harga-jual",
+      "canonicalPath": "/kalkulator/harga-jual",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/margin-laba",
+      "canonicalPath": "/kalkulator/margin-laba",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/markup",
+      "canonicalPath": "/kalkulator/markup",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/bep",
+      "canonicalPath": "/kalkulator/bep",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/target-laba",
+      "canonicalPath": "/kalkulator/target-laba",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/harga-pokok-penjualan",
+      "canonicalPath": "/kalkulator/harga-pokok-penjualan",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/yield-bahan",
+      "canonicalPath": "/kalkulator/yield-bahan",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/penyusutan-garis-lurus",
+      "canonicalPath": "/kalkulator/penyusutan-garis-lurus",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/arus-kas",
+      "canonicalPath": "/kalkulator/arus-kas",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/utilisasi-kapasitas",
+      "canonicalPath": "/kalkulator/utilisasi-kapasitas",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/perputaran-persediaan",
+      "canonicalPath": "/kalkulator/perputaran-persediaan",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/reorder-point",
+      "canonicalPath": "/kalkulator/reorder-point",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/runway-kas",
+      "canonicalPath": "/kalkulator/runway-kas",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/biaya-layanan",
+      "canonicalPath": "/kalkulator/biaya-layanan",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/tarif-freelance",
+      "canonicalPath": "/kalkulator/tarif-freelance",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/food-cost",
+      "canonicalPath": "/kalkulator/food-cost",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/harga-borongan",
+      "canonicalPath": "/kalkulator/harga-borongan",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/eoq",
+      "canonicalPath": "/kalkulator/eoq",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/payback-period",
+      "canonicalPath": "/kalkulator/payback-period",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/berat-volumetrik",
+      "canonicalPath": "/kalkulator/berat-volumetrik",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/roas",
+      "canonicalPath": "/kalkulator/roas",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/roas-impas",
+      "canonicalPath": "/kalkulator/roas-impas",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/acos",
+      "canonicalPath": "/kalkulator/acos",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/konversi-toko",
+      "canonicalPath": "/kalkulator/konversi-toko",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/nilai-pesanan-rata-rata",
+      "canonicalPath": "/kalkulator/nilai-pesanan-rata-rata",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/promo-seller",
+      "canonicalPath": "/kalkulator/promo-seller",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/subsidi-ongkir",
+      "canonicalPath": "/kalkulator/subsidi-ongkir",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/biaya-kemasan",
+      "canonicalPath": "/kalkulator/biaya-kemasan",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/biaya-retur",
+      "canonicalPath": "/kalkulator/biaya-retur",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/kerugian-cod",
+      "canonicalPath": "/kalkulator/kerugian-cod",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/bunga-sederhana",
+      "canonicalPath": "/kalkulator/bunga-sederhana",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/bunga-majemuk",
+      "canonicalPath": "/kalkulator/bunga-majemuk",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/cicilan-anuitas",
+      "canonicalPath": "/kalkulator/cicilan-anuitas",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/cicilan-flat",
+      "canonicalPath": "/kalkulator/cicilan-flat",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/rasio-cicilan",
+      "canonicalPath": "/kalkulator/rasio-cicilan",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/target-tabungan",
+      "canonicalPath": "/kalkulator/target-tabungan",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/dana-darurat",
+      "canonicalPath": "/kalkulator/dana-darurat",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/deposito",
+      "canonicalPath": "/kalkulator/deposito",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/imbal-hasil-investasi",
+      "canonicalPath": "/kalkulator/imbal-hasil-investasi",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/cagr",
+      "canonicalPath": "/kalkulator/cagr",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/nilai-kini",
+      "canonicalPath": "/kalkulator/nilai-kini",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/npv",
+      "canonicalPath": "/kalkulator/npv",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/inflasi",
+      "canonicalPath": "/kalkulator/inflasi",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/rata-rata-beli-saham",
+      "canonicalPath": "/kalkulator/rata-rata-beli-saham",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/untung-rugi-saham",
+      "canonicalPath": "/kalkulator/untung-rugi-saham",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/bunga-efektif-pinjaman",
+      "canonicalPath": "/kalkulator/bunga-efektif-pinjaman",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/kpr",
+      "canonicalPath": "/kalkulator/kpr",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/pelunasan-dipercepat",
+      "canonicalPath": "/kalkulator/pelunasan-dipercepat",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/refinancing",
+      "canonicalPath": "/kalkulator/refinancing",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/kurs-mata-uang",
+      "canonicalPath": "/kalkulator/kurs-mata-uang",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/engagement-rate",
+      "canonicalPath": "/kalkulator/engagement-rate",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/pertumbuhan-pengikut",
+      "canonicalPath": "/kalkulator/pertumbuhan-pengikut",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/cpm",
+      "canonicalPath": "/kalkulator/cpm",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/cpc",
+      "canonicalPath": "/kalkulator/cpc",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/cpa",
+      "canonicalPath": "/kalkulator/cpa",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/ctr",
+      "canonicalPath": "/kalkulator/ctr",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/estimasi-youtube",
+      "canonicalPath": "/kalkulator/estimasi-youtube",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/tiktok",
+      "canonicalPath": "/kalkulator/tiktok",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/tarif-endorsement",
+      "canonicalPath": "/kalkulator/tarif-endorsement",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/waktu-tonton",
+      "canonicalPath": "/kalkulator/waktu-tonton",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/diskon",
+      "canonicalPath": "/kalkulator/diskon",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/harga-per-satuan",
+      "canonicalPath": "/kalkulator/harga-per-satuan",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/bagi-tagihan",
+      "canonicalPath": "/kalkulator/bagi-tagihan",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/persen",
+      "canonicalPath": "/kalkulator/persen",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/perubahan-persen",
+      "canonicalPath": "/kalkulator/perubahan-persen",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/selisih-tanggal",
+      "canonicalPath": "/kalkulator/selisih-tanggal",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/hari-kerja",
+      "canonicalPath": "/kalkulator/hari-kerja",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/usia",
+      "canonicalPath": "/kalkulator/usia",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/durasi-kerja",
+      "canonicalPath": "/kalkulator/durasi-kerja",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/konsumsi-bbm",
+      "canonicalPath": "/kalkulator/konsumsi-bbm",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/biaya-listrik",
+      "canonicalPath": "/kalkulator/biaya-listrik",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/biaya-air",
+      "canonicalPath": "/kalkulator/biaya-air",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/kebutuhan-cat",
+      "canonicalPath": "/kalkulator/kebutuhan-cat",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/kebutuhan-keramik",
+      "canonicalPath": "/kalkulator/kebutuhan-keramik",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/volume-beton",
+      "canonicalPath": "/kalkulator/volume-beton",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/skala-denah",
+      "canonicalPath": "/kalkulator/skala-denah",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/konversi-panjang",
+      "canonicalPath": "/kalkulator/konversi-panjang",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/konversi-berat",
+      "canonicalPath": "/kalkulator/konversi-berat",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/konversi-suhu",
+      "canonicalPath": "/kalkulator/konversi-suhu",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/kecepatan-rata-rata",
+      "canonicalPath": "/kalkulator/kecepatan-rata-rata",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/blibli",
+      "canonicalPath": "/kalkulator/blibli",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/harga-jual-marketplace",
+      "canonicalPath": "/kalkulator/harga-jual-marketplace",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/banding-biaya-marketplace",
+      "canonicalPath": "/kalkulator/banding-biaya-marketplace",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/bundel-produk",
+      "canonicalPath": "/kalkulator/bundel-produk",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/stok-cover",
+      "canonicalPath": "/kalkulator/stok-cover",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/ppn",
+      "canonicalPath": "/kalkulator/ppn",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/pph-23",
+      "canonicalPath": "/kalkulator/pph-23",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/pph-4-ayat-2-sewa",
+      "canonicalPath": "/kalkulator/pph-4-ayat-2-sewa",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/gross-up-pajak",
+      "canonicalPath": "/kalkulator/gross-up-pajak",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/pph-final-umkm",
+      "canonicalPath": "/kalkulator/pph-final-umkm",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/pph-21-bulanan",
+      "canonicalPath": "/kalkulator/pph-21-bulanan",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/pph-21-rekonsiliasi",
+      "canonicalPath": "/kalkulator/pph-21-rekonsiliasi",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/pajak-impor",
+      "canonicalPath": "/kalkulator/pajak-impor",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/bphtb",
+      "canonicalPath": "/kalkulator/bphtb",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/pbb-p2",
+      "canonicalPath": "/kalkulator/pbb-p2",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/shopee",
+      "canonicalPath": "/kalkulator/shopee",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/tiktok-shop",
+      "canonicalPath": "/kalkulator/tiktok-shop",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/tokopedia",
+      "canonicalPath": "/kalkulator/tokopedia",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/lazada",
+      "canonicalPath": "/kalkulator/lazada",
+      "status": 200,
+      "family": "calculator",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/tiktok/panduan",
+      "canonicalPath": "/kalkulator/tiktok/panduan",
+      "status": 200,
+      "family": "legacy",
+      "publication": "PENDING_OWNER_APPROVAL",
+      "indexPolicy": "noindex",
+      "sitemap": false
+    },
+    {
+      "path": "/biaya-admin-marketplace",
+      "canonicalPath": "/biaya-admin-marketplace",
+      "status": 200,
+      "family": "legacy",
+      "publication": "PENDING_OWNER_APPROVAL",
+      "indexPolicy": "noindex",
+      "sitemap": false
+    },
+    {
+      "path": "/update-tarif",
+      "canonicalPath": "/update-tarif",
+      "status": 200,
+      "family": "legacy",
+      "publication": "PENDING_OWNER_APPROVAL",
+      "indexPolicy": "noindex",
+      "sitemap": false
+    },
+    {
+      "path": "/blog",
+      "canonicalPath": "/blog",
+      "status": 200,
+      "family": "legacy",
+      "publication": "PENDING_OWNER_APPROVAL",
+      "indexPolicy": "noindex",
+      "sitemap": false
+    },
+    {
+      "path": "/metodologi",
+      "canonicalPath": "/metodologi",
+      "status": 200,
+      "family": "legacy",
+      "publication": "PENDING_OWNER_APPROVAL",
+      "indexPolicy": "noindex",
+      "sitemap": false
+    },
+    {
+      "path": "/redaksi",
+      "canonicalPath": "/redaksi",
+      "status": 200,
+      "family": "legacy",
+      "publication": "PENDING_OWNER_APPROVAL",
+      "indexPolicy": "noindex",
+      "sitemap": false
+    },
+    {
+      "path": "/kebijakan-editorial",
+      "canonicalPath": "/kebijakan-editorial",
+      "status": 200,
+      "family": "legacy",
+      "publication": "PENDING_OWNER_APPROVAL",
+      "indexPolicy": "noindex",
+      "sitemap": false
+    },
+    {
+      "path": "/disclaimer",
+      "canonicalPath": "/disclaimer",
+      "status": 200,
+      "family": "legacy",
+      "publication": "PENDING_OWNER_APPROVAL",
+      "indexPolicy": "noindex",
+      "sitemap": false
+    },
+    {
+      "path": "/blog/menghitung-margin-marketplace",
+      "canonicalPath": "/blog/menghitung-margin-marketplace",
+      "status": 200,
+      "family": "legacy",
+      "publication": "PENDING_OWNER_APPROVAL",
+      "indexPolicy": "noindex",
+      "sitemap": false
+    },
+    {
+      "path": "/blog/strategi-naikkan-profit",
+      "canonicalPath": "/blog/strategi-naikkan-profit",
+      "status": 200,
+      "family": "legacy",
+      "publication": "PENDING_OWNER_APPROVAL",
+      "indexPolicy": "noindex",
+      "sitemap": false
+    },
+    {
+      "path": "/blog/biaya-admin-marketplace",
+      "canonicalPath": "/blog/biaya-admin-marketplace",
+      "status": 200,
+      "family": "legacy",
+      "publication": "PENDING_OWNER_APPROVAL",
+      "indexPolicy": "noindex",
+      "sitemap": false
+    },
+    {
+      "path": "/blog/fee-shopee-2026",
+      "canonicalPath": "/blog/fee-shopee-2026",
+      "status": 200,
+      "family": "legacy",
+      "publication": "PENDING_OWNER_APPROVAL",
+      "indexPolicy": "noindex",
+      "sitemap": false
+    },
+    {
+      "path": "/blog/lazada-marketplace-vs-lazmall",
+      "canonicalPath": "/blog/lazada-marketplace-vs-lazmall",
+      "status": 200,
+      "family": "legacy",
+      "publication": "PENDING_OWNER_APPROVAL",
+      "indexPolicy": "noindex",
+      "sitemap": false
+    },
+    {
+      "path": "/blog/pph-22-marketplace",
+      "canonicalPath": "/blog/pph-22-marketplace",
+      "status": 200,
+      "family": "legacy",
+      "publication": "PENDING_OWNER_APPROVAL",
+      "indexPolicy": "noindex",
+      "sitemap": false
+    },
+    {
+      "path": "/blog/gratis-ongkir-xtra-shopee-2026",
+      "canonicalPath": "/blog/gratis-ongkir-xtra-shopee-2026",
+      "status": 200,
+      "family": "legacy",
+      "publication": "PENDING_OWNER_APPROVAL",
+      "indexPolicy": "noindex",
+      "sitemap": false
+    },
+    {
+      "path": "/blog/tokopedia-tiktok-shop-komisi-dinamis",
+      "canonicalPath": "/blog/tokopedia-tiktok-shop-komisi-dinamis",
+      "status": 200,
+      "family": "legacy",
+      "publication": "PENDING_OWNER_APPROVAL",
+      "indexPolicy": "noindex",
+      "sitemap": false
+    },
+    {
+      "path": "/blog/harga-jual-minimum-marketplace",
+      "canonicalPath": "/blog/harga-jual-minimum-marketplace",
+      "status": 200,
+      "family": "legacy",
+      "publication": "PENDING_OWNER_APPROVAL",
+      "indexPolicy": "noindex",
+      "sitemap": false
+    },
+    {
+      "path": "/blog/kalkulator-vs-spreadsheet",
+      "canonicalPath": "/blog/kalkulator-vs-spreadsheet",
+      "status": 200,
+      "family": "legacy",
+      "publication": "PENDING_OWNER_APPROVAL",
+      "indexPolicy": "noindex",
+      "sitemap": false
+    },
+    {
+      "path": "/blog/cek-dana-cair-shopee",
+      "canonicalPath": "/blog/cek-dana-cair-shopee",
+      "status": 200,
+      "family": "legacy",
+      "publication": "PENDING_OWNER_APPROVAL",
+      "indexPolicy": "noindex",
+      "sitemap": false
+    },
+    {
+      "path": "/blog/memilih-marketplace-untuk-mulai-jual",
+      "canonicalPath": "/blog/memilih-marketplace-untuk-mulai-jual",
+      "status": 200,
+      "family": "legacy",
+      "publication": "PENDING_OWNER_APPROVAL",
+      "indexPolicy": "noindex",
+      "sitemap": false
+    },
+    {
+      "path": "/blog/engagement-rate-tiktok-2026",
+      "canonicalPath": "/blog/engagement-rate-tiktok-2026",
+      "status": 200,
+      "family": "legacy",
+      "publication": "PENDING_OWNER_APPROVAL",
+      "indexPolicy": "noindex",
+      "sitemap": false
+    },
+    {
+      "path": "/blog/kalkulator-average-down-saham-harga-rata-rata",
+      "canonicalPath": "/blog/kalkulator-average-down-saham-harga-rata-rata",
+      "status": 200,
+      "family": "legacy",
+      "publication": "PENDING_OWNER_APPROVAL",
+      "indexPolicy": "noindex",
+      "sitemap": false
+    },
+    {
+      "path": "/kalkulator/emas",
+      "canonicalPath": "/kalkulator/emas",
+      "status": 200,
+      "family": "supplemental-tool",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/bandingkan",
+      "canonicalPath": "/bandingkan",
+      "status": 200,
+      "family": "supplemental-tool",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/saham/average",
+      "canonicalPath": "/kalkulator/saham/average",
+      "status": 200,
+      "family": "migration-tool",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator/tiktok/benchmark",
+      "canonicalPath": "/kalkulator/tiktok/benchmark",
+      "status": 200,
+      "family": "migration-tool",
+      "publication": "published",
+      "indexPolicy": "indexable",
+      "sitemap": true
+    },
+    {
+      "path": "/kalkulator",
+      "canonicalPath": "/",
+      "status": 200,
+      "family": "directory-alias",
+      "publication": "retained",
+      "indexPolicy": "canonicalized",
+      "sitemap": false
+    }
+  ]
+}

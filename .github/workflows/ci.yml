@@ -35,8 +35,12 @@ jobs:
         run: npm run typecheck
       - name: Unit tests
         run: npm test
+      - name: SEO verification parser regression tests
+        run: python3 -m unittest discover -s scripts/post-migration-seo -p 'test_*.py' -v
       - name: Production build
         run: npm run build
+      - name: Local staging SEO HTTP contract (not production evidence)
+        run: node scripts/post-migration-seo/local-contract.mjs
       - name: Install audit browsers
         run: npx playwright install --with-deps chromium webkit
       - name: Browser smoke tests
