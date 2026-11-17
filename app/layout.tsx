@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(canonicalOrigin),
   title: { default: 'KalkulatorHarga', template: '%s | KalkulatorHarga' },
   robots: { index: indexable, follow: indexable },
+  verification: { google: 'lqcG_PxTdOtaVfKB2Ny9eBJO1oZJNAmpOI3IXFqiBko' },
 }
 
 export default function Layout({ children }: { children: React.ReactNode }) {
