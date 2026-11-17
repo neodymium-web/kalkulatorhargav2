@@ -15,7 +15,7 @@ test('Phase C preserves every approved existing token value', () => {
   for (const [name, value] of Object.entries(original)) expect(current[name], name).toBe(value)
 })
 
-test('footer refinement leaves layout SEO metadata unchanged', () => {
+test('layout preserves SEO metadata except the owner-requested Google verification', () => {
   function metadata(source: string) {
     const file = ts.createSourceFile('layout.tsx', source, ts.ScriptTarget.Latest, true, ts.ScriptKind.TSX)
     for (const statement of file.statements) {
@@ -25,7 +25,10 @@ test('footer refinement leaves layout SEO metadata unchanged', () => {
     }
     throw Error('Missing layout metadata')
   }
-  expect(metadata(fs.readFileSync('app/layout.tsx', 'utf8'))).toBe(metadata(previous('app/layout.tsx')))
+  const current = fs.readFileSync('app/layout.tsx', 'utf8')
+  const verification = "  verification: { google: 'lqcG_PxTdOtaVfKB2Ny9eBJO1oZJNAmpOI3IXFqiBko' },\n"
+  expect(current.split(verification)).toHaveLength(2)
+  expect(metadata(current.replace(verification, ''))).toBe(metadata(previous('app/layout.tsx')))
 })
 
 test('table keyboard fallback scrolls only the focused overflowing region without modifiers', () => {
